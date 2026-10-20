@@ -76,7 +76,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Quais vigilâncias a PNVS manda integrar? \nPNVS: politica nacional de vigilancia sanitaria",
-      "verso": "PNVS: politica nacional de vigilancia sanitaria\n\n- As 4 vigilâncias + os laboratórios de saúde pública.\n- Integrar preservando as especificidades de cada uma.",
+      "verso": "**PNVS = Política Nacional de Vigilância em Saúde.**\n\n- Integra as 4 vigilâncias + os laboratórios de saúde pública.\n- Preserva as especificidades de cada uma.\n- A vigilância **sanitária** é só uma das 4 (não é o nome da política).",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -1931,5 +1931,5 @@
       "add": "2026-10-20"
     }
   ],
-  "rev": 1792532056443
+  "rev": 1792540000000
 }
