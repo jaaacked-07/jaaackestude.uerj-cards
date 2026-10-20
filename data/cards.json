@@ -619,9 +619,9 @@
     {
       "id": "figo-colo-01",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
       "verso": "A FIGO estadia pelo quanto o tumor andou para fora do colo: I fica no colo → II sai do útero (vagina alta ou paramétrio) → III chega na vagina baixa, na parede pélvica, no rim (hidronefrose) ou em linfonodos → IV sai da pelve ou invade bexiga/reto.\n\nDesde 2018, exame de imagem e anatomia patológica podem ser usados em qualquer estádio (antes era só clínico), e quando há dúvida fica-se com o estádio menor.",
       "visual": {
@@ -636,9 +636,9 @@
     {
       "id": "figo-colo-02",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Estádio I (restrito ao colo): como se divide?",
       "verso": "IA é o tumor que só aparece no microscópio, separado pela profundidade de invasão. IB é o tumor que invade mais que 5 mm, separado pelo tamanho (2 e 4 cm).\n\nO que muda conduta é o salto IA → IB e, dentro do IB, se passa de 4 cm (IB3), porque aí a cirurgia deixa de ser a primeira opção.",
       "visual": [
@@ -685,9 +685,9 @@
     {
       "id": "figo-colo-03",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "IIA × IIB: qual a diferença e por que importa tanto?",
       "verso": "IIA: o tumor desceu para os 2/3 superiores da vagina, sem paramétrio (IIA1 ≤ 4 cm, IIA2 > 4 cm). IIB: invadiu o paramétrio, sem chegar à parede pélvica.\n\nO paramétrio é o divisor de águas do tratamento: até IIA1 ainda dá para operar (histerectomia radical); a partir do IIB o tratamento é quimiorradiação.",
       "visual": [
@@ -711,9 +711,9 @@
     {
       "id": "figo-colo-04",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
       "verso": "IIIA: vagina no terço inferior. IIIB: parede pélvica e/ou hidronefrose/rim excluso. IIIC: linfonodo positivo, qualquer que seja o tamanho do tumor (IIIC1 pélvico, IIIC2 para-aórtico).\n\nA lógica do IIIB: o ureter passa colado ao paramétrio; se o tumor o obstrui, ele já chegou perto da parede pélvica.",
       "visual": [
@@ -756,9 +756,9 @@
     {
       "id": "figo-colo-05",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Estádio IV: IVA × IVB",
       "verso": "IVA: invasão da mucosa da bexiga ou do reto, comprovada por biópsia. IVB: metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA precisa invadir a mucosa — não basta o tumor encostar no órgão.",
       "pegadinha": "Edema bolhoso da bexiga na cistoscopia NÃO classifica como IVA.",
@@ -774,9 +774,9 @@
     {
       "id": "figo-colo-06",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Câncer de colo: tratamento por estádio",
       "verso": "Quanto mais cedo, mais cirúrgico; a partir de tumor volumoso (> 4 cm) ou paramétrio invadido, o padrão vira quimiorradiação (cisplatina semanal + radioterapia externa + braquiterapia).\n\nQuem deseja gestar e tem doença inicial pode preservar o útero (conização ou traquelectomia radical).",
       "visual": {
@@ -819,9 +819,9 @@
     {
       "id": "figo-colo-q1",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Mulher, 42 anos, carcinoma escamoso de colo com lesão de 3 cm restrita ao colo ao exame. A tomografia mostra hidronefrose à direita, sem outra causa identificada. Segundo a FIGO 2018, o estádio é:",
       "opcoes": [
         "IB2",
@@ -842,9 +842,9 @@
     {
       "id": "figo-colo-q2",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Tumor de colo de 1,8 cm, restrito ao colo, com linfonodo para-aórtico positivo na biópsia. O estádio FIGO 2018 é:",
       "opcoes": [
         "IB1",
@@ -865,9 +865,9 @@
     {
       "id": "figo-colo-q3",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Câncer de colo — estadiamento FIGO",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
       "frente": "Paciente com câncer de colo estádio IIB. Qual o tratamento de escolha?",
       "opcoes": [
         "Histerectomia radical com linfadenectomia pélvica",
@@ -888,9 +888,9 @@
     {
       "id": "figo-sua-01",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "area": "Ginecologia",
+      "tema": "Sangramento uterino",
+      "sub": "Sangramento uterino anormal",
       "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
       "verso": "PALM são as causas ESTRUTURAIS (aparecem no ultrassom, histeroscopia ou biópsia). COEIN são as NÃO estruturais (sem lesão visível).\n\nA classificação existe para padronizar a investigação: primeiro procura lesão (PALM); se não acha, pensa em coagulação, ovulação, endométrio, remédio ou outras causas (COEIN). A paciente pode ter mais de uma letra ao mesmo tempo.",
       "visual": {
@@ -924,9 +924,9 @@
     {
       "id": "figo-sua-02",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "area": "Ginecologia",
+      "tema": "Sangramento uterino",
+      "sub": "Sangramento uterino anormal",
       "frente": "Sangramento uterino em paciente anticoagulada: qual letra do PALM-COEIN?",
       "verso": "I — Iatrogênica. Na revisão FIGO de 2018, o sangramento por anticoagulante (varfarina, rivaroxabana etc.) deixou de ser C e passou para I. Remédios que atrapalham a ovulação (ex.: antidepressivos tricíclicos, fenotiazinas) também saíram de O e foram para I.\n\nC fica para distúrbios de coagulação da própria paciente (ex.: doença de von Willebrand).",
       "visual": {
@@ -953,9 +953,9 @@
     {
       "id": "figo-sua-03",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "area": "Ginecologia",
+      "tema": "Sangramento uterino",
+      "sub": "Sangramento uterino anormal",
       "frente": "Leiomioma: classificação FIGO de 0 a 8",
       "verso": "Os números vão de dentro (cavidade) para fora (serosa). 0–2 são submucosos, os que mais causam sangramento e infertilidade, e são tratados por histeroscopia (melhor no 0 e 1). 3–4 são intramurais e 5–7 subserosos.\n\nO 8 é o mioma fora do miométrio (cervical, parasita). Mioma que atravessa a parede inteira é descrito com dois números: ex. 2–5.",
       "visual": {
@@ -1009,9 +1009,9 @@
     {
       "id": "figo-sua-q1",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "area": "Ginecologia",
+      "tema": "Sangramento uterino",
+      "sub": "Sangramento uterino anormal",
       "frente": "Mulher, 38 anos, em uso de rivaroxabana por trombose venosa profunda, com aumento do fluxo menstrual. Ultrassom e histeroscopia normais. Pela FIGO (revisão 2018), o sangramento é classificado como:",
       "opcoes": [
         "SUA-C (coagulopatia)",
@@ -1032,9 +1032,9 @@
     {
       "id": "mama-birads-01",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS: o que significa cada categoria e qual a conduta?",
       "verso": "O BI-RADS é a forma padronizada de o radiologista dizer o risco de câncer da lesão — e cada número já traz a conduta. Decore a conduta, porque é isso que a prova pergunta.\n\n0 e 3 são os que mais confundem: 0 = exame incompleto (precisa complementar); 3 = provavelmente benigno (segue, não biopsia).",
       "visual": {
@@ -1090,9 +1090,9 @@
     {
       "id": "mama-birads-02",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 3: como é o seguimento?",
       "verso": "Controle de curto intervalo por cerca de 2 anos: imagem em 6 meses (da mama afetada), depois aos 12 e aos 24 meses (bilateral). Se a lesão ficar estável o tempo todo, passa a BI-RADS 2 e volta à rotina.\n\nSe crescer ou mudar de aspecto em qualquer controle, vira BI-RADS 4 e vai para biópsia.",
       "visual": {
@@ -1115,9 +1115,9 @@
     {
       "id": "mama-birads-03",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 4: como se subdivide?",
       "verso": "O 4 cobre um risco muito largo (2 a 95%), por isso foi dividido em A, B e C. Todos vão para biópsia — a subdivisão serve para checar se o resultado da biópsia \"bate\" com a imagem.\n\nSe a imagem é 4C/5 e a biópsia vem benigna, o resultado é discordante: repete a biópsia ou faz retirada cirúrgica.",
       "visual": {
@@ -1148,9 +1148,9 @@
     {
       "id": "mama-nod-01",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo mamário palpável: qual o primeiro exame de imagem conforme a idade?",
       "verso": "Abaixo de 30 anos, ultrassonografia: a mama jovem é densa (a mamografia enxerga pouco) e radiação desnecessária deve ser evitada. A partir dos 40, mamografia diagnóstica + ultrassom. Entre 30 e 39, o ultrassom costuma ser o primeiro, completando com mamografia se necessário.\n\nNódulo palpável é exame DIAGNÓSTICO, não de rastreamento — não espera a faixa etária do rastreio.",
       "visual": {
@@ -1181,9 +1181,9 @@
     {
       "id": "mama-nod-02",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo de mama: o que sugere benignidade e o que sugere malignidade?",
       "verso": "Benigno tende a ser \"organizado\": oval, margens bem definidas, mais largo que alto (paralelo à pele), móvel e fibroelástico — o típico é o fibroadenoma da mulher jovem.\n\nMaligno \"invade\": forma irregular, margens espiculadas ou indistintas, mais alto que largo, sombra acústica posterior, endurecido, fixo, com retração de pele ou mamilo.",
       "visual": [
@@ -1222,9 +1222,9 @@
     {
       "id": "mama-nod-03",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Cisto mamário: simples, complicado e complexo — qual a conduta?",
       "verso": "Cisto simples (anecoico, parede fina, reforço acústico posterior) é benigno: BI-RADS 2, nada a fazer — punção só se doer. Complicado (só ecos internos, sem parte sólida) é BI-RADS 3: controle. Complexo (componente sólido ou septo espesso) é BI-RADS 4: biópsia.\n\nO que manda é a presença de parte SÓLIDA dentro do cisto.",
       "visual": {
@@ -1259,9 +1259,9 @@
     {
       "id": "mama-nod-04",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Qual biópsia usar em cada lesão de mama?",
       "verso": "Nódulo sólido: core biopsy (agulha grossa) guiada por ultrassom — dá histologia, diferencia in situ de invasivo e permite imuno-histoquímica. PAAF dá só citologia: serve para cisto e linfonodo axilar. Microcalcificações: biópsia a vácuo (mamotomia) guiada por estereotaxia.\n\nCirúrgica (excisional) fica para quando há discordância entre imagem e resultado.",
       "visual": {
@@ -1296,9 +1296,9 @@
     {
       "id": "mama-rast-01",
       "tipo": "flash",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Rastreamento do câncer de mama",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Rastreamento do câncer de mama no SUS: quem e a cada quanto tempo?",
       "verso": "Mulheres de 50 a 74 anos: mamografia de rastreamento a cada 2 anos (bienal). De 40 a 49 (e acima de 74), o SUS não restringe a mamografia por demanda, após conversa sobre riscos e benefícios (decisão compartilhada).\n\nMudou em setembro de 2025: antes o limite superior era 69 anos e a faixa de 40–49 dependia de sintoma ou risco.",
       "visual": {
@@ -1330,9 +1330,9 @@
     {
       "id": "mama-q1",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Mulher, 52 anos, assintomática, faz mamografia de rastreamento com laudo BI-RADS 3 (nódulo oval, circunscrito, 8 mm). A conduta é:",
       "opcoes": [
         "Core biopsy guiada por ultrassom",
@@ -1353,9 +1353,9 @@
     {
       "id": "mama-q2",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Mamografia de rastreamento de mulher de 58 anos é laudada como BI-RADS 0. A conduta é:",
       "opcoes": [
         "Repetir a mamografia em 6 meses",
@@ -1376,9 +1376,9 @@
     {
       "id": "mama-q3",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Nódulo mamário e BI-RADS",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Mulher, 23 anos, nota nódulo na mama direita há 2 meses: 2 cm, fibroelástico, móvel, indolor, sem alterações na pele. O exame inicial mais adequado e a hipótese mais provável são:",
       "opcoes": [
         "Mamografia — carcinoma ductal",
@@ -1399,9 +1399,9 @@
     {
       "id": "mama-q4",
       "tipo": "quiz",
-      "area": "Ginecologia e Obstetrícia",
-      "tema": "Ginecologia",
-      "sub": "Rastreamento do câncer de mama",
+      "area": "Ginecologia",
+      "tema": "Mastologia",
+      "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Segundo a recomendação atual do Ministério da Saúde (2025), o rastreamento mamográfico populacional deve ser feito:",
       "opcoes": [
         "Anualmente dos 40 aos 69 anos",

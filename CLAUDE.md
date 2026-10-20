@@ -32,11 +32,12 @@ Ao criar cards novos, **reutilize os nomes de `tema` e `sub` que já existem** n
 ## Organização: grande área → matéria → assunto
 
 Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
-- `area` (grande área), sempre uma destas: **Cirurgia**, **Clínica Médica**, **Ginecologia e Obstetrícia**, **Medicina Preventiva**, **Pediatria**.
+- `area` (grande área), sempre uma destas: **Cirurgia**, **Clínica Médica**, **Ginecologia**, **Obstetrícia**, **Medicina Preventiva**, **Pediatria**. (Ginecologia e Obstetrícia são áreas SEPARADAS desde o primeiro nível.)
 - `tema` (matéria dentro da área). Ex.: Clínica Médica → Cardiologia, Pneumologia, Infectologia, Psiquiatria…; Cirurgia → Abdome agudo, Trauma, Cirurgia vascular…; Medicina Preventiva → Vigilância em Saúde, Atenção Primária, Epidemiologia, SUS…; Pediatria → Neonatologia, Infectologia pediátrica…
-- `sub` (assunto). Ex.: "Câncer de colo — estadiamento FIGO".
+- `sub` (assunto = **baralho**). Baralhos são **abrangentes**: um baralho por doença/tema grande, com tudo dele dentro (quadro, diagnóstico, classificação, conduta). **Nunca** separe por aspecto ("Apendicite — sinais", "Apendicite — diagnóstico" ✗). Exemplos ✓: "Abdome agudo inflamatório — Apendicite", "Câncer de colo do útero", "Mama — nódulo, BI-RADS e rastreamento", "Sofrimento fetal crônico", "Sofrimento fetal agudo — CTG" (tudo de cardiotocografia vai para esse).
+- Ela também cria baralhos vazios pelo app para organizar: estão em `data/progresso.json` → `decks` (`{area, tema, sub}`). **Leia (sem editar) e use esses baralhos** quando o assunto couber neles.
 
-**Ginecologia e Obstetrícia são matérias SEPARADAS** dentro da área "Ginecologia e Obstetrícia": `tema` "Ginecologia" ou "Obstetrícia", nunca "GO". Gestação, parto, puerpério, pré-natal, abortamento e doenças da gravidez → Obstetrícia. O resto (ciclo menstrual, contracepção, climatério, infecções genitais, mama, oncologia ginecológica, uroginecologia) → Ginecologia.
+**Ginecologia e Obstetrícia são ÁREAS separadas** (nunca "GO" nem "Ginecologia e Obstetrícia"). Gestação, parto, puerpério, pré-natal, abortamento, vitalidade fetal e doenças da gravidez → área Obstetrícia (matérias ex.: Pré-natal, Vitalidade fetal, Parto e puerpério, Hemorragias da gestação, Síndromes hipertensivas, Prematuridade e RPMO). O resto → área Ginecologia (matérias ex.: Oncologia ginecológica, Mastologia, Sangramento uterino, Climatério, Infecções genitais, Reprodução humana, Uroginecologia).
 
 **Antes de criar, olhe as áreas/matérias/assuntos que já existem em `data/cards.json` e reutilize os nomes exatos.** Nunca crie variação de um nome existente (acento, sigla, sinônimo, singular/plural). Se ela já tiver renomeado algo, use o nome que está no arquivo.
 

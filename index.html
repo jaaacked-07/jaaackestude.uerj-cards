@@ -228,15 +228,23 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .simrow .vals{display:flex;gap:18px;font-size:13.5px;color:var(--mute)}
 .simrow .vals b{color:var(--ink);font-weight:600}.simrow .vals .pc{color:var(--wine);font-weight:600}
 .simrow .vals .pc.u{color:var(--rose)}
-.chart{background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:14px 12px 8px;margin-bottom:18px}
+.chart{background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:16px 14px 10px;margin-bottom:18px}
+.kpis{display:flex;gap:26px;margin:0 2px 12px}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kpi .kn{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.kpi .kn i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:0}
+.kpi .kv{font-size:26px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .kv small{font-size:14px;color:var(--mute);margin-left:1px;font-weight:500}
+.kpi .kd{font-size:11.5px;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
+.kpi .kd.up{color:var(--ok)}.kpi .kd.dn{color:var(--bad)}
 .chart svg{display:block;width:100%;height:auto}
 .leg{display:flex;gap:16px;justify-content:center;font-size:12px;color:var(--mute);margin-top:4px}
 .leg i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
-.fld{display:grid;grid-template-columns:1fr 1fr 64px;gap:8px;align-items:end;margin-top:6px}
-.fld label{font-size:12px;color:var(--mute)}
-.fld input{width:100%;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:11px 12px;font:inherit;font-size:16px;color:var(--ink);outline:none}
+.fld{display:grid;grid-template-columns:1fr 1fr 78px;gap:10px;align-items:end;margin-top:8px}
+.fld label{font-size:14px;color:var(--mute);display:block;margin-bottom:4px}
+.fld input{width:100%;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:13px 14px;font:inherit;font-size:22px;font-weight:500;color:var(--ink);outline:none;text-align:center}
 .fld input:focus{border-color:var(--rose)}
-.fld .pp{font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--wine);text-align:right;padding-bottom:8px}
+.fld .pp{font-family:Fraunces,Georgia,serif;font-size:28px;color:var(--wine);text-align:right;padding-bottom:10px}
 .fld .pp.u{color:var(--rose)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:7px;padding:10px 10px 12px 22px;background:color-mix(in srgb,var(--card) 15%,var(--bg));border-bottom:1px solid var(--line)}
 .tile{aspect-ratio:1;background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:6px 6px 15px;font-size:9.8px;line-height:1.26;text-align:left;position:relative;overflow:hidden;cursor:pointer;transition:transform .12s}
@@ -247,6 +255,16 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .tile .st{position:absolute;right:5px;bottom:3px;font-size:10px}
 .tile.dim{opacity:.55}
 .tsrch{margin:6px 0 4px}
+.simgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:18px}
+.simtile{aspect-ratio:1;background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:transform .12s}
+.simtile:active{transform:scale(.97)}
+.simtile{justify-content:space-between}
+.simtile .nm{font-size:13.5px;color:var(--mute);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.simtile .k{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.simtile .ln{display:flex;justify-content:space-between;align-items:baseline}
+.simtile .fr{font-size:17px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.simtile .pc{font-size:22px;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.simtile .pc.u{color:var(--rose)}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -284,7 +302,7 @@ const DEV=(()=>{try{let d=localStorage.getItem(LS+'.dev');if(!d){d=Math.random()
 function fixS(){S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.ren.area=S.ren.area||{}; S.edit=S.edit||{}; S.oculto=S.oculto||{};
   S.xpDev=S.xpDev||{}; if(S.xp&&!Object.keys(S.xpDev).length) S.xpDev[DEV]=S.xp;
   S.dias=S.dias||{}; if(S.streak&&S.streak.last&&!Object.keys(S.dias).length) for(let i=0;i<S.streak.n;i++) S.dias[addD(S.streak.last,-i)]=1;
-  S.notasDel=S.notasDel||{}; S.sim=S.sim||[]; S.simDel=S.simDel||{};
+  S.notasDel=S.notasDel||{}; S.sim=S.sim||[]; S.simDel=S.simDel||{}; S.decks=S.decks||[]; S.decksDel=S.decksDel||{};
   if(typeof recalc==='function') recalc();}
 fixS();
 const saveLocal=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
@@ -292,7 +310,7 @@ const save=()=>{saveLocal();if(typeof agendarSync==='function')agendarSync()};
 
 /* ===== Cards ===== */
 let CARDS=[], BYID={}, RAW={}, LASTBASE=[];
-const AREA_PADRAO={'ginecologia':'Ginecologia e Obstetrícia','obstetrícia':'Ginecologia e Obstetrícia','obstetricia':'Ginecologia e Obstetrícia','preventiva':'Medicina Preventiva','medicina preventiva':'Medicina Preventiva','pediatria':'Pediatria','cirurgia':'Cirurgia'};
+const AREA_PADRAO={'ginecologia':'Ginecologia','obstetrícia':'Obstetrícia','obstetricia':'Obstetrícia','preventiva':'Medicina Preventiva','medicina preventiva':'Medicina Preventiva','pediatria':'Pediatria','cirurgia':'Cirurgia'};
 const areaRaw=c=>c.area||AREA_PADRAO[String(c.tema).toLowerCase()]||'Clínica Médica';
 const dArea=c=>S.ren.area[areaRaw(c)]||areaRaw(c);
 const dTema=c=>S.ren.tema[c.tema]||c.tema;
@@ -304,7 +322,7 @@ function setCards(base){
   (S.extra||[]).forEach(c=>m[c.id]=c);
   RAW=m; const out={};
   Object.values(m).forEach(c0=>{ if(oculto(c0)) return;
-    const c={...c0,...(S.edit[c0.id]||{})}; c.area=dArea(c0); c.tema=dTema(c0); c.sub=dSub(c0);
+    const ed=S.edit[c0.id]||{}, c={...c0,...ed}; c.area=ed.area||dArea(c0); c.tema=ed.tema||dTema(c0); c.sub=ed.sub||dSub(c0);
     c.fav = c0.id in S.fav ? !!S.fav[c0.id] : !!c0.fav;
     c.minha = c0.id in S.minha ? S.minha[c0.id] : (c0.minha||'');
     if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
@@ -478,12 +496,13 @@ function pHome(){
 
 const TIPOS={ns:'Não sabia',cf:'Confundi',lr:'Li errado'};
 /* ===== Árvore: grande área → matéria → assunto → cards ===== */
-function arv3(lista){
-  const t={}; lista.forEach(c=>{const A=(t[c.area]=t[c.area]||{}),M=(A[c.tema]=A[c.tema]||{});(M[c.sub]=M[c.sub]||[]).push(c)});
+function arv3(lista,vazios){
+  const t={}; (vazios||[]).forEach(d=>{const A=(t[d.area]=t[d.area]||{}),M=(A[d.tema]=A[d.tema]||{});M[d.sub]=M[d.sub]||[]});
+  lista.forEach(c=>{const A=(t[c.area]=t[c.area]||{}),M=(A[c.tema]=A[c.tema]||{});(M[c.sub]=M[c.sub]||[]).push(c)});
   return Object.keys(t).sort(abc).map(a=>({a,ms:Object.keys(t[a]).sort(abc).map(m=>({m,subs:Object.keys(t[a][m]).sort(abc).map(su=>({su,cards:t[a][m][su]}))}))}));
 }
 function arvoreHTML(lista,aberto,o){
-  const arv=arv3(lista); if(!arv.length) return '<p class="mute small">Nada encontrado.</p>';
+  const arv=arv3(lista,o.vazios); if(!arv.length) return '<p class="mute small">Nada encontrado.</p>';
   const row=(lv,key,nome,n,ren,open)=>`<div class="rowi ${lv?'lv'+lv:''} ${open?'op':''}" role="button" data-k="${esc(key)}"><span class="chv">▶</span><span class="tx">${esc(nome)}</span><span class="ct">${n}</span>${o.pen?`<span class="pen" ${ren}>✎</span>`:''}</div>`;
   return '<div class="rows">'+arv.map(({a,ms})=>{
     const ka='a:'+a, oa=o.forcar||aberto.has(ka), na=ms.reduce((s,x)=>s+x.subs.reduce((t,y)=>t+y.cards.length,0),0);
@@ -491,14 +510,14 @@ function arvoreHTML(lista,aberto,o){
       const km='m:'+a+'|'+m, om=o.forcar||aberto.has(km), nm=subs.reduce((t,y)=>t+y.cards.length,0);
       return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards})=>{
         const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks);
-        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:'');
+        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(cards.length?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Para trazer cards: ✎ do card → Baralho.</p></div>`):'');
       }).join(''):'');
     }).join(''):'');
   }).join('')+'</div>';
 }
 function ligarArvore(el,aberto,redesenhar){
   el.onclick=e=>{
-    const pn=e.target.closest('[data-ren]'); if(pn){e.stopPropagation();renomear(pn.dataset.ren,pn.dataset.a,pn.dataset.t,pn.dataset.su);return}
+    const pn=e.target.closest('[data-ren]'); if(pn){e.stopPropagation();menuNo(pn.dataset.ren,pn.dataset.a,pn.dataset.t,pn.dataset.su);return}
     const cd=e.target.closest('[data-card]'); if(cd){folhaCard(cd.dataset.card);return}
     const k=e.target.closest('[data-k]'); if(k){const v=k.dataset.k;aberto.has(v)?aberto.delete(v):aberto.add(v);redesenhar()}
   };
@@ -556,7 +575,7 @@ function pEstudar(){
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
     <input class="srch" id="bs" placeholder="Buscar…" value="${esc(DECK.busca)}">
-    <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb})}</div>
+    <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb,vazios:nb?[]:S.decks})}</div>
     ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
   </div>`;
   $('#sT').onclick=escolherTemas;
@@ -617,6 +636,63 @@ function renomear(tipo,area,tema,sub){
     troca(ABERTO,de,para); troca(ABERTO_E,de,para);
     DECK.subs.clear(); save(); reaplicar(); fecharFolha(); toast('Renomeado'); render(); syncEdits();};
 }
+/* ===== Organizar baralhos ===== */
+const cardsDo=(a,t,su)=>CARDS.filter(c=>c.area===a&&c.tema===t&&(su==null||c.sub===su));
+function menuNo(tipo,a,t,su){
+  const nome=tipo==='area'?a:tipo==='tema'?t:su, n=tipo==='area'?CARDS.filter(c=>c.area===a).length:cardsDo(a,t,tipo==='sub'?su:null).length;
+  const op=[['ren','Renomear']];
+  if(tipo==='area') op.push(['novaM','+ Nova matéria nesta área']);
+  if(tipo==='tema') op.push(['novoB','+ Novo baralho nesta matéria']);
+  if(tipo==='sub'&&n) op.push(['mover','Mover todos os cards para outro baralho']);
+  if(tipo==='sub'&&!n) op.push(['apagar','Apagar baralho vazio']);
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:4px">${esc(nome)}</div><p class="mute small" style="margin-bottom:8px">${n} card${n===1?'':'s'}</p>
+    ${op.map(([k,l])=>`<button class="opi" data-op="${k}"><span class="lab" style="${k==='apagar'?'color:var(--bad)':''}">${l}</span></button>`).join('')}
+    <p class="mute small" style="margin-top:14px">Dica: renomear um baralho com o nome de outro que já existe junta os dois.</p>`);
+  document.querySelectorAll('#sheet [data-op]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.op;
+    if(k==='ren') renomear(tipo,a,t,su);
+    if(k==='novoB') pedirNome('Novo baralho em '+t,'Ex.: Abdome agudo inflamatório — Apendicite',v=>criarDeck(a,t,v));
+    if(k==='novaM') pedirNome('Nova matéria em '+a,'Ex.: Obstetrícia',m=>pedirNome('Primeiro baralho de '+m,'Ex.: Sofrimento fetal agudo — CTG',v=>criarDeck(a,m,v)));
+    if(k==='mover') escolherBaralho('Mover '+n+' card'+(n===1?'':'s')+' para…',{area:a,tema:t,sub:su},d=>{ cardsDo(a,t,su).forEach(c=>moverCard(c.id,d)); depoisDeMover(d); });
+    if(k==='apagar'){ S.decks.filter(d=>d.area===a&&d.tema===t&&d.sub===su).forEach(d=>S.decksDel[d.id]=1); S.decks=S.decks.filter(d=>!S.decksDel[d.id]); save(); fecharFolha(); toast('Baralho apagado'); render(); }
+  });
+}
+function pedirNome(tit,ph,cb){
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:12px">${esc(tit)}</div><input class="srch" id="pn" placeholder="${esc(ph)}"><button class="btn" id="pk">Criar</button>`);
+  const i=$('#pn'); setTimeout(()=>i.focus(),200);
+  const ok=()=>{const v=i.value.trim(); if(v) cb(v)}; $('#pk').onclick=ok; i.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ok()}};
+}
+function criarDeck(area,tema,sub){
+  if(!CARDS.some(c=>c.area===area&&c.tema===tema&&c.sub===sub)&&!S.decks.some(d=>d.area===area&&d.tema===tema&&d.sub===sub))
+    S.decks.push({id:Date.now(),area,tema,sub});
+  ABERTO.add('a:'+area); ABERTO.add('m:'+area+'|'+tema); ABERTO.add('s:'+area+'|'+tema+'|'+sub);
+  save(); fecharFolha(); toast('Baralho criado'); render();
+}
+function moverCard(id,d){
+  const r=RAW[id], e={...(S.edit[id]||{})};
+  ['area','tema','sub'].forEach(k=>{ const orig=k==='area'?dArea(r):k==='tema'?dTema(r):dSub(r); if(d[k]!==orig) e[k]=d[k]; else delete e[k]; });
+  if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
+}
+function depoisDeMover(d){
+  S.decks=S.decks.filter(x=>!(x.area===d.area&&x.tema===d.tema&&x.sub===d.sub)||(S.decksDel[x.id]=1,false));
+  ABERTO.add('a:'+d.area); ABERTO.add('m:'+d.area+'|'+d.tema); ABERTO.add('s:'+d.area+'|'+d.tema+'|'+d.sub);
+  save(); reaplicar(); fecharFolha(); toast('Cards movidos'); render(); syncEdits();
+}
+function escolherBaralho(tit,atual,cb){
+  const arv=arv3(CARDS,S.decks); let q='';
+  const desenha=()=>{
+    const n=norm(q.trim());
+    folha(`<div class="serif" style="font-size:21px;margin-bottom:4px">${esc(tit)}</div>
+      <input class="srch tsrch" id="bq" placeholder="Pesquisar baralho…" value="${esc(q)}">
+      ${arv.map(({a,ms})=>ms.map(({m,subs})=>{const ss=subs.filter(x=>!n||norm(a+' '+m+' '+x.su).includes(n)); if(!ss.length) return '';
+        return `<div class="opg"><span>${esc(a)} › ${esc(m)}</span></div>`+ss.map(x=>{const on=atual&&atual.area===a&&atual.tema===m&&atual.sub===x.su;
+          return `<div class="opi rd ${on?'on':''}" role="button" data-d="${esc(JSON.stringify({area:a,tema:m,sub:x.su}))}"><span class="bx">${on?'✓':''}</span><span class="lab">${esc(x.su)}</span><span class="ct">${x.cards.length}</span></div>`}).join('')}).join('')).join('')}`);
+    const bq=$('#bq'); bq.oninput=()=>{q=bq.value;const pos=bq.selectionStart;desenha();$('#sheet').style.animation='none';$('#sheet .pn').style.animation='none';const b2=$('#bq');b2.focus();b2.setSelectionRange(pos,pos)};
+    document.querySelectorAll('#sheet [data-d]').forEach(b=>b.onclick=()=>cb(JSON.parse(b.dataset.d)));
+  };
+  desenha();
+}
+
 function verOcultos(){
   const ids=Object.values(RAW).filter(oculto).map(c=>c.id);
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Cards ocultos</div>${ids.map(id=>`<button class="opi" data-un="${id}"><span class="tx" style="flex:1">${esc(RAW[id].frente)}</span><span class="ct" style="color:var(--wine)">mostrar</span></button>`).join('')}`);
@@ -631,23 +707,36 @@ function folhaCard(id){
 }
 
 /* ===== Editar card ===== */
+const DEST_PENDENTE={};
 function editarCard(id){
   const c=BYID[id], r=RAW[id]; if(!c) return;
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Editar card</div>
+    <div class="tm">Baralho</div><button class="sel" id="eb" style="margin:6px 0 4px"><span class="sv" style="font-size:14px">${esc(c.area)} › ${esc(c.tema)} › ${esc(c.sub)}</span><span class="ch">▾</span></button>
     <div class="tm">Pergunta</div><textarea class="ned" id="ef">${esc(c.frente)}</textarea>
     ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div><textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div><textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
     <div class="tm">Pegadinha (opcional)</div><textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
     <div class="tm">Na UERJ (opcional)</div><textarea class="ned" id="eu" style="min-height:56px">${esc(c.uerj||'')}</textarea>
     <button class="btn" id="es" style="margin-top:16px">Salvar</button>
     <div class="foot">${S.edit[id]?'<button class="link" id="eo">voltar ao original</button>':''}<button class="link" id="eh" style="color:var(--bad)">ocultar card</button></div>`);
+  let dest={area:c.area,tema:c.tema,sub:c.sub};
+  $('#eb').onclick=()=>{
+    const vals={ef:$('#ef').value,ep:$('#ep').value,eu:$('#eu').value,ev:$('#ev')?$('#ev').value:null,ops:[...document.querySelectorAll('[data-op]')].map(t=>t.value)};
+    escolherBaralho('Mover para o baralho…',dest,d=>{ dest=d; DEST_PENDENTE[id]=d; editarCard(id); const b=$('#eb .sv'); b.textContent=d.area+' › '+d.tema+' › '+d.sub;
+      $('#ef').value=vals.ef;$('#ep').value=vals.ep;$('#eu').value=vals.eu;if(vals.ev!=null)$('#ev').value=vals.ev;document.querySelectorAll('[data-op]').forEach((t,i)=>t.value=vals.ops[i]);
+      DEST_PENDENTE[id]=d; });
+  };
+  if(DEST_PENDENTE[id]) dest=DEST_PENDENTE[id];
   $('#es').onclick=()=>{
     const e={}, f=$('#ef').value.trim(), pg=$('#ep').value.trim();
+    ['area','tema','sub'].forEach(k=>{ const orig=k==='area'?dArea(r):k==='tema'?dTema(r):dSub(r); if(dest[k]!==orig) e[k]=dest[k]; });
+    delete DEST_PENDENTE[id];
     if(f&&f!==r.frente) e.frente=f;
     if(c.tipo==='quiz'){const ops=[...document.querySelectorAll('[data-op]')].map((t,i)=>t.value.trim()||r.opcoes[i]); if(ops.some((o,i)=>o!==r.opcoes[i])) e.opcoes=ops;}
     else {const v=$('#ev').value.trim(); if(v&&v!==r.verso) e.verso=v;}
     if(pg!==(r.pegadinha||'')) e.pegadinha=pg;
     const ue=$('#eu').value.trim(); if(ue!==(r.uerj||'')) e.uerj=ue;
     if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
+    if(e.area||e.tema||e.sub){ S.decks=S.decks.filter(x=>!(x.area===dest.area&&x.tema===dest.tema&&x.sub===dest.sub)||(S.decksDel[x.id]=1,false)); }
     save(); reaplicar(); fecharFolha(); toast('Card atualizado'); depoisDeEditar(id); syncEdits();
   };
   const eo=$('#eo'); if(eo) eo.remove();
@@ -714,12 +803,12 @@ async function syncEdits(){
   try{
     const novo=await ghModF(GH_CARDS,d=>{
       d.cards.forEach(c=>{
-        const k=c.tema+'|'+c.sub;
-        if(snap.edit[c.id]) Object.assign(c,snap.edit[c.id]);
-        if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
-        const ar=areaRaw(c); if(snap.ren.area[ar]) c.area=snap.ren.area[ar]; else if(!c.area) c.area=ar;
+        const k=c.tema+'|'+c.sub, ar=areaRaw(c);
+        if(snap.ren.area[ar]) c.area=snap.ren.area[ar]; else if(!c.area) c.area=ar;
         if(snap.ren.sub[k]) c.sub=snap.ren.sub[k];
         if(snap.ren.tema[c.tema]) c.tema=snap.ren.tema[c.tema];
+        if(snap.edit[c.id]) Object.assign(c,snap.edit[c.id]);
+        if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
         [['fav',v=>!!v],['oculto',v=>!!v],['minha',v=>v||'']].forEach(([f,cv])=>{ if(c.id in snap[f]){const v=cv(snap[f][c.id]); if(v) c[f]=v; else delete c[f];} });
       });
       d.rev=Date.now();
@@ -767,12 +856,13 @@ async function syncNotas(){
 /* ===== Sincronizar progresso entre aparelhos ===== */
 const GH_PROG=GH_API.replace('notas.json','progresso.json');
 const notasSync=()=>S.notas.map(n=>n.imgs?{...n,imgs:n.imgs.filter(i=>i.path).map(i=>({path:i.path}))}:n);
-const progSnap=()=>({sim:S.sim,simDel:S.simDel,srs:S.srs,xpDev:S.xpDev,dias:S.dias,notas:notasSync(),notasDel:S.notasDel,plan:S.plan,hoje:S.hoje,extra:S.extra});
+const progSnap=()=>({decks:S.decks,decksDel:S.decksDel,sim:S.sim,simDel:S.simDel,srs:S.srs,xpDev:S.xpDev,dias:S.dias,notas:notasSync(),notasDel:S.notasDel,plan:S.plan,hoje:S.hoje,extra:S.extra});
 function mergeProg(R){
   if(!R) return false; const antes=JSON.stringify(progSnap());
   for(const id in R.srs||{}){const a=S.srs[id],b=R.srs[id]; if(!a||(b.t||0)>(a.t||0)) S.srs[id]=b;}
   for(const d in R.xpDev||{}) S.xpDev[d]=Math.max(S.xpDev[d]||0,R.xpDev[d]);
-  Object.assign(S.dias,R.dias||{}); Object.assign(S.notasDel,R.notasDel||{}); Object.assign(S.simDel,R.simDel||{});
+  Object.assign(S.dias,R.dias||{}); Object.assign(S.notasDel,R.notasDel||{}); Object.assign(S.simDel,R.simDel||{}); Object.assign(S.decksDel,R.decksDel||{});
+  { const m={}; [...S.decks,...(R.decks||[])].forEach(x=>{m[x.id]=x}); S.decks=Object.values(m).filter(x=>!S.decksDel[x.id]); }
   { const m={}; [...S.sim,...(R.sim||[])].forEach(x=>{const o=m[x.id]; if(!o||(x.u||0)>(o.u||0)) m[x.id]=x;}); S.sim=Object.values(m).filter(x=>!S.simDel[x.id]).sort((a,b)=>a.id-b.id); }
   const m={}; [...S.notas,...(R.notas||[])].forEach(n=>{const o=m[n.id]; if(!o){m[n.id]={...n};return} const k=(n.u||n.id)>(o.u||o.id)?{...n}:o; k.env=!!(o.env||n.env); m[n.id]=k;});
   S.notas=Object.values(m).filter(n=>!S.notasDel[n.id]).sort((a,b)=>a.id-b.id);
@@ -913,19 +1003,26 @@ async function addImgsRasc(files){
 const pc=(a,t)=>t?Math.round(a/t*100):null;
 const dBR=d=>d.split('-').reverse().map((x,i)=>i===2?x.slice(2):x).join('/');
 function grafico(L){
-  if(L.length<2) return `<div class="chart"><p class="mute small" style="text-align:center;padding:18px 0">O gráfico aparece a partir do 2º simulado.</p></div>`;
-  const vs=L.flatMap(s=>[s.g,s.u]).filter(v=>v!=null), lo=Math.max(0,Math.floor((Math.min(...vs)-10)/10)*10);
-  const W=320,H=130,px=22,py=16, x=i=>px+i*(W-2*px)/(L.length-1), y=v=>py+(100-v)*(H-2*py)/(100-lo);
-  const lastG=(L.filter(s=>s.g!=null).slice(-1)[0]||{}).g, lastU=(L.filter(s=>s.u!=null).slice(-1)[0]||{}).u;
-  const linha=(k,cor,tr)=>{const pts=L.map((s,i)=>[i,s[k]]).filter(p=>p[1]!=null); if(!pts.length) return '';
-    const last=pts[pts.length-1];
-    return `<polyline fill="none" stroke="${cor}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" ${tr?'stroke-dasharray="5 5"':''} points="${pts.map(p=>x(p[0])+','+y(p[1])).join(' ')}"/>`+
-      pts.map(p=>`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="3.5" fill="${cor}"/>`).join('')+
-      `<text x="${Math.min(x(last[0]),W-14)}" y="${(k==='u'&&lastG!=null&&lastU<=lastG)||(k==='g'&&lastU!=null&&lastG<lastU)?y(last[1])+17:y(last[1])-9}" font-size="11" font-weight="600" fill="${cor}" text-anchor="middle">${last[1]}%</text>`;};
-  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}">
-    ${[...new Set([lo,Math.round((lo+100)/2/10)*10,100])].map(v=>`<line x1="${px}" x2="${W-px}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/><text x="2" y="${y(v)+4}" font-size="9" fill="var(--mute)">${v}</text>`).join('')}
-    ${linha('g','var(--wine)')}${linha('u','var(--rose)',true)}
-  </svg><div class="leg"><span><i style="background:var(--wine)"></i>Simulado</span><span><i style="background:var(--rose)"></i>UERJ</span></div></div>`;
+  const ult=k=>L.filter(s=>s[k]!=null), dl=k=>{const a=ult(k);return a.length>1?a[a.length-1][k]-a[a.length-2][k]:null};
+  const head=(k,nome,cor)=>{const a=ult(k); if(!a.length) return ''; const v=a[a.length-1][k], d=dl(k);
+    return `<div class="kpi"><span class="kn"><i style="background:${cor}"></i>${nome}</span><span class="kv">${v}<small>%</small></span>${d!=null?`<span class="kd ${d>0?'up':d<0?'dn':''}">${d>0?'▲':d<0?'▼':'•'} ${Math.abs(d)} p.p.</span>`:''}</div>`};
+  const topo=`<div class="kpis">${head('g','Simulado','var(--wine)')}${head('u','UERJ','var(--rose)')}</div>`;
+  if(L.length<2) return `<div class="chart">${topo}<p class="mute small" style="text-align:center;padding:10px 0 6px">A curva de evolução aparece a partir do 2º simulado.</p></div>`;
+  const vs=L.flatMap(s=>[s.g,s.u]).filter(v=>v!=null), lo=Math.max(0,Math.floor((Math.min(...vs)-10)/10)*10), hi=100;
+  const W=320,H=150,pl=8,pr=30,pt=10,pb=22, x=i=>pl+i*(W-pl-pr)/(L.length-1), y=v=>pt+(hi-v)*(H-pt-pb)/(hi-lo);
+  const ticks=[lo,Math.round((lo+hi)/2/5)*5,hi];
+  const serie=(k,cor,area)=>{const pts=L.map((s,i)=>[i,s[k]]).filter(p=>p[1]!=null); if(!pts.length) return '';
+    const d=pts.map((p,i)=>(i?'L':'M')+x(p[0]).toFixed(1)+' '+y(p[1]).toFixed(1)).join(' ');
+    const fill=area&&pts.length>1?`<path d="${d} L${x(pts[pts.length-1][0]).toFixed(1)} ${y(lo)} L${x(pts[0][0]).toFixed(1)} ${y(lo)} Z" fill="url(#gArea)"/>`:'';
+    return fill+`<path d="${d}" fill="none" stroke="${cor}" stroke-width="${area?1.8:1.4}" stroke-linejoin="round" stroke-linecap="round"/>`+
+      pts.map((p,i)=>`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="${i===pts.length-1?3.2:2}" fill="var(--card)" stroke="${cor}" stroke-width="1.5"/>`).join('');};
+  const passo=Math.ceil(L.length/8);
+  return `<div class="chart">${topo}<svg viewBox="0 0 ${W} ${H}" font-family="Inter,system-ui,sans-serif">
+    <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--wine)" stop-opacity=".16"/><stop offset="1" stop-color="var(--wine)" stop-opacity="0"/></linearGradient></defs>
+    ${ticks.map(v=>`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1" ${v===lo?'':'stroke-dasharray="2 4"'}/><text x="${W-pr+6}" y="${y(v)+3}" font-size="9" fill="var(--mute)">${v}%</text>`).join('')}
+    ${L.map((s,i)=>i%passo&&i!==L.length-1?'':`<text x="${x(i)}" y="${H-6}" font-size="9" fill="var(--mute)" text-anchor="middle">S${i+1}</text>`).join('')}
+    ${serie('u','var(--rose)')}${serie('g','var(--wine)',true)}
+  </svg></div>`;
 }
 function pPct(){
   const L=S.sim.map(x=>({...x,g:pc(x.ac,x.tot),u:pc(x.uac,x.utot)}));
@@ -933,9 +1030,10 @@ function pPct(){
     <h2 class="serif">Porcentagem</h2>
     ${grafico(L)}
     <button class="btn" id="addS">Adicionar simulado</button>
-    ${L.length?`<div class="rows" style="margin-top:18px">${L.slice().reverse().map(x=>`<button class="simrow" data-sid="${x.id}">
+    ${L.length?`<div class="simgrid">${L.slice().reverse().map(x=>`<button class="simtile" data-sid="${x.id}">
       <div class="nm">${esc(x.nome)}</div>
-      <div class="vals"><span>Simulado <b>${x.tot?x.ac+'/'+x.tot:'—'}</b> ${x.g!=null?`<span class="pc">${x.g}%</span>`:''}</span><span>UERJ <b>${x.utot?x.uac+'/'+x.utot:'—'}</b> ${x.u!=null?`<span class="pc u">${x.u}%</span>`:''}</span></div>
+      <div class="blk"><div class="k">Simulado</div><div class="ln"><span class="fr">${x.tot?x.ac+'/'+x.tot:'—'}</span><span class="pc">${x.g!=null?x.g+'%':''}</span></div></div>
+      <div class="blk"><div class="k">UERJ</div><div class="ln"><span class="fr">${x.utot?x.uac+'/'+x.utot:'—'}</span><span class="pc u">${x.u!=null?x.u+'%':''}</span></div></div>
     </button>`).join('')}</div>`:`<div class="empty"><div class="serif">Nenhum simulado ainda</div>Adicione o primeiro para acompanhar sua evolução.</div>`}
   </div>`;
   $('#addS').onclick=()=>{
@@ -948,8 +1046,8 @@ function pPct(){
 function editarSim(id,novo){
   const x=S.sim.find(s=>s.id===id); if(!x) return;
   const campo=(k1,k2,cls,tit)=>`<div class="tm" style="margin-top:16px">${tit}</div><div class="fld">
-      <div><label>Questões</label><input inputmode="numeric" id="${k1}" value="${x[k1]||''}"></div>
       <div><label>Acertos</label><input inputmode="numeric" id="${k2}" value="${x[k2]||''}"></div>
+      <div><label>Questões</label><input inputmode="numeric" id="${k1}" value="${x[k1]||''}"></div>
       <div class="pp ${cls}" id="p_${k1}">${pc(x[k2],x[k1])!=null?pc(x[k2],x[k1])+'%':'—'}</div></div>`;
   folha(`<input class="srch" id="sn" value="${esc(x.nome)}" style="font-family:Fraunces,Georgia,serif;font-size:19px">
     ${campo('tot','ac','','Simulado (total)')}${campo('utot','uac','u','Só questões da UERJ')}
@@ -957,8 +1055,8 @@ function editarSim(id,novo){
     <div class="foot"><button class="link" id="sd" style="color:var(--bad)">apagar simulado</button></div>`);
   const num=k=>Math.max(0,parseInt(($('#'+k).value||'').replace(/\D/g,''))||0);
   const upd=()=>[['tot','ac'],['utot','uac']].forEach(([t,a])=>{const T=num(t),A=num(a),el=$('#p_'+t); el.textContent=T?Math.round(Math.min(A,T)/T*100)+'%':'—';});
-  ['tot','ac','utot','uac'].forEach(k=>{$('#'+k).oninput=upd; $('#'+k).onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('#ss').click()}}});
-  if(novo) setTimeout(()=>$('#tot').focus(),250);
+  ['ac','tot','uac','utot'].forEach(k=>{$('#'+k).oninput=upd; $('#'+k).onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('#ss').click()}}});
+  if(novo) setTimeout(()=>$('#ac').focus(),250);
   $('#ss').onclick=()=>{
     const T=num('tot'),A=num('ac'),UT=num('utot'),UA=num('uac');
     if(A>T||UA>UT){toast('Acertos não podem passar do total de questões');return}
