@@ -1,0 +1,256 @@
+{
+  "versao": "2026-10-20",
+  "cards": [
+    {
+      "id": "pnvs-01", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "PNVS: as 9 diretrizes em palavras-chave",
+      "verso": "Não decore o texto inteiro — decore a palavra-chave de cada uma.",
+      "visual": {"tipo": "tabela", "cab": ["", "Palavra-chave"], "linhas": [
+        ["I", "Pactuar entre as 3 esferas (respeitando o locorregional)"],
+        ["II", "Ações individuais OU coletivas · 4 vigilâncias · todos os pontos de atenção"],
+        ["III", "Integralidade · VS em toda a RAS · APS coordenadora"],
+        ["IV", "Integrar as vigilâncias + laboratórios de saúde pública"],
+        ["V", "Cooperação técnico-científica nacional e internacional"],
+        ["VI", "Gestão de risco"],
+        ["VII", "Emergências em saúde pública · RSI"],
+        ["VIII", "Produzir evidências (análise da situação de saúde)"],
+        ["IX", "Avaliar impacto de novas tecnologias"]
+      ]},
+      "fonte": "Resolução CNS 588/2018", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-02", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "PNVS: as ações de vigilância são só coletivas? Em quais pontos de atenção acontecem?",
+      "verso": "Individuais OU coletivas, em TODOS os pontos de atenção.",
+      "pegadinha": "Alternativa que diz \"apenas coletivas\" ou \"apenas na APS\" está errada.",
+      "fonte": "Resolução CNS 588/2018 (diretriz II)", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-03", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "Quais vigilâncias a PNVS manda integrar?",
+      "verso": "As 4 vigilâncias + os laboratórios de saúde pública — preservando as especificidades de cada uma.",
+      "visual": {"tipo": "grupos", "grupos": [
+        {"t": "4 vigilâncias", "itens": ["Epidemiológica", "Sanitária", "Saúde ambiental", "Saúde do trabalhador(a)"]},
+        {"t": "+ junto", "itens": ["Laboratórios de saúde pública"]}
+      ]},
+      "pegadinha": "Integrar NÃO é fundir: as especificidades são preservadas.",
+      "fonte": "Resolução CNS 588/2018 (diretriz IV)", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-04", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "PNVS: qual nível de atenção é a coordenadora do cuidado?",
+      "verso": "A Atenção Primária. A vigilância entra em toda a RAS, em especial na APS.",
+      "fonte": "Resolução CNS 588/2018 (diretriz III)", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-05", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "Emergências em saúde pública: a PNVS manda observar qual documento?",
+      "verso": "O Regulamento Sanitário Internacional (RSI).",
+      "fonte": "Resolução CNS 588/2018 (diretriz VII)", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-06", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "Gestão de risco na PNVS: quais as etapas?",
+      "verso": "Identificar → planejar → intervir → regular → comunicar → monitorar.",
+      "visual": {"tipo": "fluxo", "passos": ["Identificação", "Planejamento", "Intervenção", "Regulação", "Comunicação", "Monitoramento"]},
+      "fonte": "Resolução CNS 588/2018 (diretriz VI)", "add": "2026-10-20"
+    },
+    {
+      "id": "pnvs-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "PNVS",
+      "frente": "Sobre as diretrizes da Política Nacional de Vigilância em Saúde, é INCORRETO afirmar:",
+      "opcoes": [
+        "As ações de vigilância devem estar inseridas em toda a Rede de Atenção, em especial na APS, coordenadora do cuidado.",
+        "As ações de vigilância são restritas a intervenções coletivas, executadas pela vigilância epidemiológica.",
+        "Na resposta às emergências em saúde pública, deve-se observar o Regulamento Sanitário Internacional.",
+        "Cabe avaliar o impacto de novas tecnologias e serviços para prevenir riscos e eventos adversos."
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Correta — diretriz III.",
+        "Incorreta (gabarito): as ações são individuais OU coletivas e envolvem as 4 vigilâncias, em todos os pontos de atenção.",
+        "Correta — diretriz VII.",
+        "Correta — diretriz IX."
+      ],
+      "fonte": "Resolução CNS 588/2018", "add": "2026-10-20"
+    },
+
+    {
+      "id": "icsap-01", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "frente": "Qual a premissa das Internações por Condições Sensíveis à APS (ICSAP)?",
+      "verso": "APS oportuna e de boa qualidade evita a internação — ou reduz sua frequência — nessas condições.",
+      "fonte": "Lista brasileira de ICSAP (Portaria SAS/MS 221/2008)", "add": "2026-10-20"
+    },
+    {
+      "id": "icsap-02", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "frente": "Para que serve a lista brasileira de ICSAP?",
+      "verso": "Indicador indireto da APS.",
+      "visual": {"tipo": "lista", "itens": [
+        "Comparar o desempenho de serviços de saúde",
+        "Avaliar efeitos de políticas de saúde",
+        "Analisar resolutividade, qualidade e acesso da APS",
+        "!Exige fonte de dados válida e confiável"
+      ]},
+      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+    },
+    {
+      "id": "icsap-03", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "frente": "Quais são as condições sensíveis à APS? (agrupe para lembrar)",
+      "verso": "Pense: \"se o posto funcionasse bem, essa pessoa não internaria\".",
+      "visual": {"tipo": "grupos", "grupos": [
+        {"t": "Infecções", "itens": ["Imunizáveis / evitáveis", "Gastroenterites", "Ouvido, nariz e garganta", "Pneumonias bacterianas", "Rim e ITU", "Pele e subcutâneo", "DIP"]},
+        {"t": "Respiratórias crônicas", "itens": ["Asma", "Vias aéreas inferiores (DPOC/bronquite)"]},
+        {"t": "Cardiometabólicas", "itens": ["Hipertensão", "Angina", "Insuficiência cardíaca", "Doença cerebrovascular", "Diabetes"]},
+        {"t": "Outras", "itens": ["Anemia", "Deficiências nutricionais", "Epilepsias", "Úlcera gastrintestinal", "Pré-natal e parto"]}
+      ]},
+      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+    },
+    {
+      "id": "icsap-04", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
+      "verso": "Epilepsia, úlcera gastrintestinal, angina, insuficiência cardíaca, AVC (doença cerebrovascular) e DIP.",
+      "pegadinha": "A banca coloca essas como distratores achando que você vai excluir. Elas entram!",
+      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+    },
+    {
+      "id": "icsap-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "ICSAP",
+      "frente": "Qual das condições abaixo NÃO faz parte da lista brasileira de internações por condições sensíveis à Atenção Primária?",
+      "opcoes": ["Epilepsia", "Úlcera gastrintestinal", "Apendicite aguda", "Doença inflamatória pélvica"],
+      "certa": 2,
+      "comentarios": [
+        "Está na lista (epilepsias).",
+        "Está na lista.",
+        "Gabarito: apendicite é cirúrgica e não é evitável pela APS.",
+        "Está na lista (DIP)."
+      ],
+      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+    },
+
+    {
+      "id": "apend-01", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
+      "verso": "Posição do apêndice → sinal que aparece.",
+      "visual": {"tipo": "tabela", "cab": ["Sinal", "Como", "Sugere"], "linhas": [
+        ["Psoas", "Extensão da coxa D (paciente em decúbito lateral E)", "Retrocecal"],
+        ["Obturador", "Quadril e joelho fletidos a 90° + rotação interna da coxa D", "Pélvica"],
+        ["Rovsing", "Palpar FIE → dói na FID", "Irritação peritoneal"],
+        ["Dunphy", "Tossir → dói na FID", "Irritação peritoneal"],
+        ["Blumberg", "Descompressão brusca dolorosa no ponto de McBurney", "Peritonite localizada"]
+      ]},
+      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+    },
+    {
+      "id": "apend-02", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "frente": "Apendicite RETROCECAL: qual o sinal mais associado?",
+      "verso": "Sinal do Psoas — o apêndice inflamado encosta no músculo psoas, e estender a coxa direita estira o músculo e dói.",
+      "pegadinha": "No retrocecal, a dor pode ir para o flanco/lombar e os sinais peritoneais anteriores (Blumberg) podem ser fracos.",
+      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+    },
+    {
+      "id": "apend-03", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "frente": "Apendicite PÉLVICA: qual o sinal mais associado?",
+      "verso": "Sinal do Obturador — rotação interna da coxa direita com quadril e joelho fletidos a 90°.",
+      "visual": {"tipo": "vs", "a": {"t": "Retrocecal", "itens": ["Psoas", "Extensão da coxa"]}, "b": {"t": "Pélvica", "itens": ["Obturador", "Rotação interna"]}},
+      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+    },
+    {
+      "id": "apend-04", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "frente": "Rovsing × Dunphy: qual é qual?",
+      "verso": "Rovsing: palpo a FIE e dói a FID. Dunphy: a dor na FID piora ao tossir. Os dois indicam irritação peritoneal — nenhum define a posição.",
+      "visual": {"tipo": "vs", "a": {"t": "Rovsing", "itens": ["Palpa FIE", "Dói FID"]}, "b": {"t": "Dunphy", "itens": ["Tosse", "Dói FID"]}},
+      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+    },
+    {
+      "id": "apend-q1", "tipo": "quiz", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "frente": "Na apendicite aguda com apêndice em posição retrocecal, o sinal mais comumente observado é:",
+      "opcoes": ["Rovsing", "Psoas", "Obturador", "Dunphy"],
+      "certa": 1,
+      "comentarios": [
+        "Dor na FID ao palpar a FIE: irritação peritoneal, não aponta a posição retrocecal.",
+        "Gabarito: extensão da coxa direita estira o psoas, vizinho do apêndice retrocecal.",
+        "Rotação interna da coxa fletida: sugere apêndice pélvico.",
+        "Dor na FID à tosse: irritação peritoneal geral, inespecífico."
+      ],
+      "fonte": "Questão UERJ", "add": "2026-10-20"
+    },
+
+    {
+      "id": "notif-01", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
+      "verso": "Os acidentes + tétano + violência sexual e tentativa de suicídio.",
+      "visual": {"tipo": "lista", "itens": [
+        "Acidente de trabalho",
+        "Acidente por animal peçonhento",
+        "Acidente por animal potencialmente transmissor da raiva",
+        "Tétano (acidental e neonatal)",
+        "Violência sexual e tentativa de suicídio"
+      ]},
+      "pegadinha": "Acidente de trabalho com exposição a material biológico é SEMANAL, não imediato.",
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    },
+    {
+      "id": "notif-02", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
+      "verso": "Doenças de transmissão respiratória/bacteriana graves + Chagas aguda + Zika em gestante + varicela grave.",
+      "visual": {"tipo": "lista", "itens": [
+        "Coqueluche",
+        "Difteria",
+        "Doença de Chagas aguda",
+        "Doença invasiva por Haemophilus influenzae",
+        "Doença meningocócica e outras meningites",
+        "Zika em gestante",
+        "Varicela — caso grave internado ou óbito"
+      ]},
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    },
+    {
+      "id": "notif-03", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Lógica para lembrar quem vai até o Ministério (SMS + SES + MS)",
+      "verso": "Se ameaça o país (risco de surto, doença eliminada/rara, emergência, óbito de arbovirose) → vai até o MS.",
+      "visual": {"tipo": "grupos", "grupos": [
+        {"t": "Eliminadas / raras", "itens": ["Sarampo", "Rubéola", "Síndrome da rubéola congênita", "Pólio selvagem", "Paralisia flácida aguda", "Raiva humana", "Peste", "Cólera", "Botulismo"]},
+        {"t": "Arboviroses", "itens": ["Febre amarela", "Óbito por dengue", "Chikungunya em área sem transmissão", "Óbito suspeito de chikungunya ou Zika", "Febre do Nilo", "Febre maculosa", "Hantavirose", "Malária fora da Amazônia"]},
+        {"t": "Emergências", "itens": ["ESP — ameaça à saúde pública", "Influenza por novo subtipo", "SRAG por coronavírus", "Febres hemorrágicas (Ebola, Marburg, Lassa…)", "Bioterrorismo (antraz, tularemia, varíola)", "Mpox"]},
+        {"t": "Outros", "itens": ["Evento adverso grave/óbito pós-vacina", "Câncer relacionado ao trabalho", "SIM-P / SIM-A (covid)"]}
+      ]},
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    },
+    {
+      "id": "notif-04", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Dengue, chikungunya e malária: quando é imediata e quando é semanal?",
+      "verso": "Casos comuns = semanal. Só fica imediata (até o MS) a situação de alarme.",
+      "visual": {"tipo": "tabela", "cab": ["", "Semanal", "Imediata (MS)"], "linhas": [
+        ["Dengue", "Casos", "Óbitos"],
+        ["Chikungunya", "Casos", "Área sem transmissão · óbito"],
+        ["Malária", "Região amazônica", "Fora da Amazônia"]
+      ]},
+      "pegadinha": "\"Caso de dengue = notificação imediata\" está ERRADO.",
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    },
+    {
+      "id": "notif-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Qual dos agravos abaixo é de notificação imediata APENAS para a Secretaria Municipal de Saúde?",
+      "opcoes": ["Coqueluche", "Tentativa de suicídio", "Febre amarela", "Doença meningocócica"],
+      "certa": 1,
+      "comentarios": [
+        "SMS + SES.",
+        "Gabarito: violência sexual e tentativa de suicídio → só SMS.",
+        "SMS + SES + MS.",
+        "SMS + SES."
+      ],
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    },
+    {
+      "id": "notif-q2", "tipo": "quiz", "tema": "Preventiva", "sub": "Notificação imediata",
+      "frente": "Paciente com dengue clássica, sem sinais de alarme, atendido na UBS. A notificação deve ser:",
+      "opcoes": ["Imediata à SMS, SES e MS", "Imediata apenas à SMS", "Semanal", "Dispensada, pois não há gravidade"],
+      "certa": 2,
+      "comentarios": [
+        "Só os óbitos por dengue vão imediatamente até o MS.",
+        "Não há essa categoria para dengue.",
+        "Gabarito: casos de dengue são de notificação semanal.",
+        "Dengue é de notificação compulsória — sempre notifica."
+      ],
+      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+    }
+  ]
+}

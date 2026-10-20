@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FBF7F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1416" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="UERJ Cards">
+<title>UERJ Cards</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F2;--card:#FFFFFF;--ink:#2A1E21;--mute:#8C7F80;--line:#EFE6DD;
+  --wine:#7A2E3B;--wine-soft:#F5E9EA;--rose:#C9967A;--rose-soft:#F7EEE7;
+  --ok:#3F7D5C;--ok-soft:#E7F2EB;--bad:#B4443F;--bad-soft:#F8E8E6;--mid:#B7822F;--mid-soft:#F8F0E2;
+  --r:18px;--shadow:0 1px 2px rgba(60,30,30,.04),0 8px 24px rgba(60,30,30,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1B1416;--card:#251C1F;--ink:#F3EAE4;--mute:#A6989A;--line:#3A2E31;
+  --wine:#E3A3AE;--wine-soft:#3A2429;--rose:#D9AE93;--rose-soft:#33282A;
+  --ok:#8CCBA6;--ok-soft:#203229;--bad:#EE9A94;--bad-soft:#3A2321;--mid:#E3BC78;--mid-soft:#3A3020;
+  --shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.25);
+}}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;min-height:100%}
+body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+textarea{font:inherit;color:inherit}
+.wrap{max-width:520px;margin:0 auto;padding:20px 16px}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.01em}
+.mute{color:var(--mute)}
+.small{font-size:13px}
+.hide{display:none!important}
+
+/* home */
+.hello{font-size:15px;color:var(--mute);margin:8px 0 2px}
+.count{font-size:44px;line-height:1.1}
+.count small{display:block;font:500 14px Inter,sans-serif;color:var(--mute);margin-top:6px;letter-spacing:0}
+.ringbox{display:flex;justify-content:center;margin:34px 0 26px}
+.ring{position:relative;width:188px;height:188px}
+.ring svg{transform:rotate(-90deg)}
+.ring .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .n{font-size:40px;line-height:1}
+.ring .l{font-size:13px;color:var(--mute);margin-top:6px}
+.btn{display:block;width:100%;padding:17px;border-radius:16px;background:var(--wine);color:#fff;font-weight:600;font-size:17px;box-shadow:var(--shadow);transition:transform .12s}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.ghost){color:#1B1416}}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--wine);box-shadow:none;border:1.5px solid var(--line);font-weight:500;font-size:15px;padding:13px}
+.stats{display:flex;justify-content:center;gap:26px;margin-top:22px;font-size:14px;color:var(--mute)}
+.stats b{color:var(--ink);font-weight:600}
+.linkrow{text-align:center;margin-top:28px}
+.link{color:var(--mute);font-size:14px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.done{text-align:center;padding:6px 0 4px}
+.done .serif{font-size:22px}
+
+/* nav */
+nav{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 0 calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:8px;z-index:5}
+nav button{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;color:var(--mute);padding:6px 22px;border-radius:12px;position:relative}
+nav button.on{color:var(--wine)}
+nav svg{width:24px;height:24px}
+.dot{position:absolute;top:4px;right:18px;min-width:8px;height:8px;border-radius:8px;background:var(--bad)}
+
+/* session */
+.sess{position:fixed;inset:0;background:var(--bg);z-index:10;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
+.sbar{display:flex;align-items:center;gap:14px;padding:14px 16px;max-width:520px;width:100%;margin:0 auto}
+.sbar .x{width:32px;height:32px;display:grid;place-items:center;color:var(--mute);border-radius:10px}
+.prog{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--wine);border-radius:6px;transition:width .35s ease}
+.combo{font-size:13px;color:var(--rose);font-weight:600;min-width:34px;text-align:right}
+.sbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sbody .wrap{padding-top:6px;padding-bottom:140px}
+.tag{font-size:12px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.q{font-size:23px;line-height:1.3}
+.ans{margin-top:22px;animation:up .28s ease}
+.ans p{font-size:17px}
+@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.pega{margin-top:16px;background:var(--mid-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.pega b{color:var(--mid)}
+.src{margin-top:14px;font-size:12px;color:var(--mute)}
+.sfoot{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(14px + env(safe-area-inset-bottom));background:var(--bg);box-shadow:0 -10px 20px -12px rgba(60,30,30,.18)}
+.sfoot:empty,.sfoot .in:empty{box-shadow:none}
+.sfoot .in{max-width:520px;margin:0 auto}
+.rate{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.rate button{padding:15px 6px;border-radius:14px;font-weight:600;font-size:15px}
+.r0{background:var(--bad-soft);color:var(--bad)}.r1{background:var(--mid-soft);color:var(--mid)}.r2{background:var(--ok-soft);color:var(--ok)}
+.why{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:12px;animation:up .2s ease}
+.why span{font-size:12.5px;color:var(--mute);width:100%;text-align:center}
+.chip{padding:8px 13px;border-radius:20px;border:1.5px solid var(--line);font-size:14px}
+.chip.on{border-color:var(--wine);background:var(--wine-soft);color:var(--wine)}
+
+/* quiz */
+.opts{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;padding:14px 15px;border-radius:14px;background:var(--card);box-shadow:var(--shadow);font-size:16px;display:flex;gap:12px;align-items:flex-start;transition:background .2s}
+.opt .k{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--mute)}
+.opt .c{display:block;font-size:14px;color:var(--mute);margin-top:6px}
+.opt.ok{background:var(--ok-soft)}.opt.ok .k{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.bad{background:var(--bad-soft)}.opt.bad .k{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt[disabled]{cursor:default}
+
+/* visuals */
+.vis{margin-top:18px}
+table.t{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;font-size:14px}
+.t th{text-align:left;font-weight:600;font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding:10px 12px;border-bottom:1px solid var(--line)}
+.t td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.t tr:last-child td{border-bottom:0}
+.t td:first-child{font-weight:600;color:var(--wine)}
+.flow{display:flex;flex-direction:column;align-items:center;gap:0}
+.fn{background:var(--card);box-shadow:var(--shadow);border-radius:12px;padding:9px 16px;font-size:14.5px;text-align:center;min-width:60%}
+.fr{display:flex;gap:8px;width:100%;justify-content:center}.fr .fn{min-width:0;flex:1}
+.fa{width:2px;height:16px;background:var(--rose);position:relative;margin:2px 0 6px}
+.fa:after{content:"";position:absolute;bottom:-5px;left:-4px;border:5px solid transparent;border-top-color:var(--rose)}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch}
+.vs .s{background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:14px;text-align:center}
+.vs .s h4{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;color:var(--wine);margin-bottom:6px}
+.vs .s div{font-size:14px}
+.vs .o{align-self:center;font-size:12px;color:var(--mute);font-weight:600}
+.li{background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:6px 14px}
+.li div{padding:9px 0 9px 18px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+.li div:last-child{border-bottom:0}
+.li div:before{content:"";position:absolute;left:2px;top:17px;width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.li div.hl{color:var(--wine);font-weight:600}.li div.hl:before{background:var(--wine)}
+.grp{display:flex;flex-direction:column;gap:12px}
+.grp .g h5{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;margin-bottom:7px}
+.grp .g .cs{display:flex;flex-wrap:wrap;gap:6px}
+.grp .g .cs span{background:var(--rose-soft);border-radius:10px;padding:5px 10px;font-size:14px}
+
+/* end */
+.end{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.end .big{font-size:34px;margin:14px 0 6px}
+.end .xp{font-size:15px;color:var(--rose);font-weight:600;margin-top:16px}
+.end .row{display:flex;gap:28px;margin:26px 0 34px;font-size:14px;color:var(--mute)}
+.end .row b{display:block;font-size:22px;color:var(--ink);font-family:Fraunces,Georgia,serif;font-weight:500}
+.end .btn{max-width:320px}
+.lvl{font-size:13px;background:var(--wine-soft);color:var(--wine);border-radius:20px;padding:5px 12px;margin-top:12px;font-weight:600}
+canvas#cf{position:fixed;inset:0;pointer-events:none;z-index:30}
+
+/* pages */
+h2.serif{font-size:28px;margin:6px 0 18px}
+.empty{text-align:center;padding:50px 10px;color:var(--mute)}
+.empty .serif{font-size:20px;color:var(--ink);margin-bottom:6px}
+.bars{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.bar{display:grid;grid-template-columns:96px 1fr 26px;gap:10px;align-items:center;font-size:14px}
+.bar .b{height:8px;background:var(--line);border-radius:8px;overflow:hidden}.bar .b i{display:block;height:100%;background:var(--bad);border-radius:8px}
+.bar .v{text-align:right;color:var(--mute);font-size:13px}
+.sec{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;margin:22px 0 8px}
+.rows{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.rowi{display:flex;align-items:center;gap:12px;padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;width:100%;font-size:15px}
+.rowi:last-child{border-bottom:0}
+.rowi .tx{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rowi .pill{font-size:12px;border-radius:10px;padding:2px 8px;background:var(--bad-soft);color:var(--bad);flex:none}
+.rowi .pill.ok{background:var(--ok-soft);color:var(--ok)}
+.rowi.dim{opacity:.55}
+textarea.note{width:100%;min-height:150px;border:1.5px solid var(--line);background:var(--card);border-radius:16px;padding:14px;font-size:15px;resize:vertical;outline:none}
+textarea.note:focus{border-color:var(--rose)}
+.nt{padding:13px 15px;border-bottom:1px solid var(--line);font-size:14.5px}
+.nt:last-child{border-bottom:0}
+.nt .d{font-size:12px;color:var(--mute);margin-bottom:3px;display:flex;justify-content:space-between}
+.nt .p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.foot{margin-top:34px;display:flex;justify-content:center;gap:18px}
+
+/* sheet */
+.sheet{position:fixed;inset:0;z-index:15;background:rgba(20,10,12,.35);display:flex;align-items:flex-end;justify-content:center;animation:fd .2s}
+@keyframes fd{from{opacity:0}}
+.sheet .pn{background:var(--bg);width:100%;max-width:560px;max-height:88vh;overflow-y:auto;border-radius:22px 22px 0 0;padding:22px 16px calc(24px + env(safe-area-inset-bottom));animation:up .25s ease}
+.sheet .grab{width:40px;height:4px;border-radius:4px;background:var(--line);margin:-8px auto 16px}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<nav id="nav">
+  <button data-p="home" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="13" height="15" rx="2.5"/><path d="M8 3h10a2 2 0 0 1 2 2v12"/></svg>Hoje</button>
+  <button data-p="erros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M9 11h6M9 15h4"/></svg>Erros<i class="dot hide" id="dotE"></i></button>
+  <button data-p="anotar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>Anotar</button>
+</nav>
+<canvas id="cf"></canvas>
+
+<script>
+/* ===== Config ===== */
+const NOME='Jacke';
+const PROVA='2026-11-01';
+const VESPERA='2026-10-31';
+const CAP_TOTAL=30, CAP_REV=22, CAP_NOVOS=15;
+const LS='uerjcards.v1';
+
+/* ===== Datas ===== */
+const pad=n=>String(n).padStart(2,'0');
+const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const hoje=()=>iso(new Date());
+const addD=(s,n)=>{const d=new Date(s+'T12:00:00');d.setDate(d.getDate()+n);return iso(d)};
+const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/864e5);
+
+/* ===== Estado ===== */
+let S;
+try{S=JSON.parse(localStorage.getItem(LS))||{}}catch(e){S={}}
+S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null;
+const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
+
+/* ===== Cards ===== */
+let CARDS=[], BYID={};
+function setCards(base){
+  const m={};
+  (base||[]).forEach(c=>m[c.id]=c);
+  (S.extra||[]).forEach(c=>m[c.id]=c);
+  CARDS=Object.values(m); BYID=m;
+}
+async function carregar(){
+  let base=null;
+  try{base=JSON.parse(localStorage.getItem(LS+'.cache'))}catch(e){}
+  if(base) setCards(base.cards);
+  try{
+    const r=await fetch('data/cards.json?t='+Date.now(),{cache:'no-store'});
+    if(r.ok){const j=await r.json(); localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}
+  }catch(e){}
+  if(!CARDS.length && !base) setCards([]);
+}
+
+/* ===== Agenda (curta até a prova) ===== */
+const ANTES=[1,2,3,5,6];   // dias por caixa antes da prova
+const DEPOIS=[1,3,7,14,30];
+function proximo(box){
+  const h=hoje(), lad=h<PROVA?ANTES:DEPOIS;
+  let d=addD(h,lad[Math.min(box,lad.length-1)]);
+  if(h<VESPERA && d>VESPERA){ d = (box%2? addD(VESPERA,-1):VESPERA); if(d<=h) d=VESPERA; }
+  return d;
+}
+function rating(id,r,tipoErro){
+  const s=S.srs[id]||{box:0,seen:0,wrong:0};
+  s.seen++; s.last=hoje(); s.lr=r;
+  if(r===0){s.box=0; s.wrong++; if(tipoErro) s.et=tipoErro; s.due=addD(hoje(),1);}
+  else if(r===1){s.box=Math.max(0,Math.min(s.box,1)); s.due=addD(hoje(),1);}
+  else {s.box=Math.min(s.box+1,4); s.due=proximo(s.box);}
+  S.srs[id]=s;
+}
+function novos(){return CARDS.filter(c=>!S.srs[c.id])}
+function vencidos(){
+  const h=hoje();
+  return CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].due<=h)
+    .sort((a,b)=>(S.srs[b.id].lr===0)-(S.srs[a.id].lr===0)||S.srs[a.id].due.localeCompare(S.srs[b.id].due));
+}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
+function montarPlano(){
+  const h=hoje();
+  if(S.plan&&S.plan.date===h){
+    // cards que chegaram hoje entram no plano, respeitando o teto
+    const no=new Set(S.plan.ids), nvp=S.plan.nv||0;
+    const vaga=Math.min(CAP_NOVOS-nvp, CAP_TOTAL-S.plan.ids.length);
+    if(vaga>0){const add=novos().filter(c=>!no.has(c.id)).slice(0,vaga).map(c=>c.id); if(add.length){S.plan.ids.push(...add);S.plan.nv=nvp+add.length;save()}}
+    return;
+  }
+  const rev=shuffle(vencidos().slice(0,CAP_REV)).map(c=>c.id);
+  const nv=novos().slice(0,Math.min(CAP_NOVOS,CAP_TOTAL-rev.length)).map(c=>c.id);
+  S.plan={date:h,ids:[...nv,...rev],done:[],nv:nv.length};
+  save();
+}
+function pendentes(){return S.plan.ids.filter(id=>BYID[id]&&!S.plan.done.includes(id))}
+function extrasDisponiveis(){
+  const no=new Set(S.plan.ids);
+  return novos().filter(c=>!no.has(c.id)).length + vencidos().filter(c=>!no.has(c.id)).length;
+}
+function adicionarMais(n){
+  const no=new Set(S.plan.ids);
+  const add=[...novos(),...vencidos()].filter(c=>!no.has(c.id)).slice(0,n).map(c=>c.id);
+  S.plan.ids.push(...add); save(); return add;
+}
+
+/* ===== Recompensa ===== */
+const nivel=xp=>Math.floor(Math.sqrt(xp/60))+1;
+function marcarStreak(){
+  const h=hoje(), st=S.streak;
+  if(st.last===h) return;
+  st.n = st.last===addD(h,-1)? st.n+1 : 1; st.last=h;
+}
+const FRASES=['Mais um dia no bolso.','Constância ganha prova.','Seu eu do dia 01/11 agradece.','Feito. Pode descansar sem culpa.','Isso é o que separa aprovado de quase.','Cada card é uma questão a mais certa.'];
+
+/* ===== Util ===== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)}
+const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
+
+/* ===== Visuais ===== */
+function visual(v){
+  if(!v) return '';
+  if(v.tipo==='tabela') return `<div class="vis"><table class="t">${v.cab&&v.cab.some(x=>x)?'<tr>'+v.cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map(c=>`<td>${esc(c)}</td>`).join('')+'</tr>').join('')}</table></div>`;
+  if(v.tipo==='fluxo') return `<div class="vis flow">${v.passos.map((p,i)=>(i?'<div class="fa"></div>':'')+(Array.isArray(p)?`<div class="fr">${p.map(x=>`<div class="fn">${esc(x)}</div>`).join('')}</div>`:`<div class="fn">${esc(p)}</div>`)).join('')}</div>`;
+  if(v.tipo==='vs') return `<div class="vis vs"><div class="s"><h4>${esc(v.a.t)}</h4>${v.a.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div><div class="o">×</div><div class="s"><h4>${esc(v.b.t)}</h4>${v.b.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`;
+  if(v.tipo==='lista') return `<div class="vis li">${v.itens.map(x=>x[0]==='!'?`<div class="hl">${esc(x.slice(1))}</div>`:`<div>${esc(x)}</div>`).join('')}</div>`;
+  if(v.tipo==='grupos') return `<div class="vis grp">${v.grupos.map(g=>`<div class="g"><h5>${esc(g.t)}</h5><div class="cs">${g.itens.map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`).join('')}</div>`;
+  return '';
+}
+function cardCompleto(c){
+  let h=`<div class="tag">${esc(c.tema)} · ${esc(c.sub)}</div><div class="q serif">${esc(c.frente)}</div>`;
+  if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${esc((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
+  else h+=`<div class="ans"><p>${esc(c.verso)}</p>${visual(c.visual)}</div>`;
+  if(c.pegadinha) h+=`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`;
+  if(c.fonte) h+=`<div class="src">${esc(c.fonte)}</div>`;
+  return h;
+}
+
+/* ===== Páginas ===== */
+let PAG='home';
+function ir(p){PAG=p;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));render();window.scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>ir(b.dataset.p));
+
+function render(){
+  montarPlano();
+  const e=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong&&S.srs[c.id].box<3).length;
+  $('#dotE').classList.toggle('hide',!e);
+  ({home:pHome,erros:pErros,anotar:pAnotar,todos:pTodos})[PAG]();
+}
+
+function pHome(){
+  const h=hoje(), falta=diff(h,PROVA);
+  const tot=S.plan.ids.filter(id=>BYID[id]).length, pend=pendentes().length, feito=tot-pend;
+  const pct=tot?feito/tot:1, R=82, C=2*Math.PI*R;
+  const cont = falta>1?`<div class="count serif">${falta} dias<small>para a UERJ · 01/11</small></div>`
+    : falta===1?`<div class="count serif">Amanhã<small>Revisão leve hoje. Durma bem.</small></div>`
+    : falta===0?`<div class="count serif">É hoje.<small>Boa prova, ${NOME}. Você estudou pra isso.</small></div>`
+    : `<div class="count serif">Prova feita<small>Os cards continuam aqui quando quiser.</small></div>`;
+  const ext=extrasDisponiveis();
+  let acao;
+  if(!CARDS.length) acao=`<div class="empty"><div class="serif">Ainda sem cards</div>Manda seus comentários pro Claude que eles aparecem aqui.</div>`;
+  else if(pend) acao=`<button class="btn" id="go">${feito?'Continuar':'Começar'} · ${pend}</button>`;
+  else acao=`<div class="done"><div class="serif">Feito por hoje ✓</div><p class="mute small" style="margin-top:4px">Volte amanhã — a revisão já está agendada.</p></div>${ext?`<button class="btn ghost" id="mais" style="margin-top:18px">+ ${Math.min(10,ext)} cards extras (opcional)</button>`:''}`;
+  $('#app').innerHTML=`<div class="wrap">
+    <div class="hello">Oi, ${NOME}</div>${cont}
+    <div class="ringbox"><div class="ring">
+      <svg width="188" height="188"><circle cx="94" cy="94" r="${R}" fill="none" stroke="var(--line)" stroke-width="10"/>
+      <circle cx="94" cy="94" r="${R}" fill="none" stroke="var(--wine)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}" style="transition:stroke-dashoffset .6s ease"/></svg>
+      <div class="in"><div class="n serif">${feito}<span class="mute" style="font-size:22px">/${tot}</span></div><div class="l">hoje</div></div>
+    </div></div>
+    ${acao}
+    <div class="stats">${(()=>{const n=S.streak.last&&diff(S.streak.last,h)<=1?S.streak.n:0;return `<span>🔥 <b>${n}</b> ${n===1?'dia':'dias'}</span>`})()}<span>✦ nível <b>${nivel(S.xp)}</b></span><span><b>${S.xp}</b> XP</span></div>
+    <div class="linkrow"><button class="link" id="todos">ver todos os cards</button></div>
+  </div>`;
+  const g=$('#go'); if(g) g.onclick=()=>sessao(pendentes(),'dia');
+  const m=$('#mais'); if(m) m.onclick=()=>{adicionarMais(10);sessao(pendentes(),'dia')};
+  $('#todos').onclick=()=>ir('todos');
+}
+
+const TIPOS={ns:'Não sabia',cf:'Confundi',lr:'Li errado'};
+function pErros(){
+  const err=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
+  if(!err.length){$('#app').innerHTML=`<div class="wrap"><h2 class="serif">Caderno de erros</h2><div class="empty"><div class="serif">Nenhum erro ainda</div>Quando você errar um card, ele aparece aqui sozinho.</div></div>`;return}
+  const fracos=err.filter(c=>S.srs[c.id].box<3);
+  const cont={ns:0,cf:0,lr:0}; err.forEach(c=>{const t=S.srs[c.id].et;if(t)cont[t]++});
+  const mx=Math.max(1,...Object.values(cont));
+  const por={}; err.forEach(c=>{(por[c.sub]=por[c.sub]||[]).push(c)});
+  const subs=Object.keys(por).sort((a,b)=>por[b].length-por[a].length);
+  const temTipo=Object.values(cont).some(v=>v);
+  $('#app').innerHTML=`<div class="wrap">
+    <h2 class="serif">Caderno de erros</h2>
+    ${fracos.length?`<button class="btn" id="rev">Revisar ${fracos.length} ${fracos.length>1?'fracos':'fraco'}</button>`:`<div class="done"><div class="serif">Tudo dominado ✓</div></div>`}
+    ${temTipo?`<div class="sec">Por que eu erro</div><div class="bars">${Object.keys(TIPOS).map(k=>`<div class="bar"><span>${TIPOS[k]}</span><span class="b"><i style="width:${cont[k]/mx*100}%"></i></span><span class="v">${cont[k]}</span></div>`).join('')}</div>`:''}
+    ${subs.map(s=>`<div class="sec">${esc(s)}</div><div class="rows">${por[s].map(c=>{const x=S.srs[c.id],ok=x.box>=3;return `<button class="rowi ${ok?'dim':''}" data-id="${c.id}"><span class="tx">${esc(c.frente)}</span><span class="pill ${ok?'ok':''}">${ok?'dominado':x.wrong+'×'}</span></button>`}).join('')}</div>`).join('')}
+  </div>`;
+  const r=$('#rev'); if(r) r.onclick=()=>sessao(shuffle(fracos.map(c=>c.id)),'erros');
+  document.querySelectorAll('.rowi').forEach(b=>b.onclick=()=>folha(cardCompleto(BYID[b.dataset.id])));
+}
+
+function pTodos(){
+  const por={}; CARDS.forEach(c=>{(por[c.tema+' · '+c.sub]=por[c.tema+' · '+c.sub]||[]).push(c)});
+  $('#app').innerHTML=`<div class="wrap"><h2 class="serif">Todos os cards</h2>
+    <p class="mute small">${CARDS.length} cards</p>
+    ${Object.keys(por).map(s=>`<div class="sec">${esc(s)}</div><div class="rows">${por[s].map(c=>`<button class="rowi" data-id="${c.id}"><span class="tx">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</button>`).join('')}</div>`).join('')}
+    <div class="linkrow"><button class="link" id="volta">voltar</button></div></div>`;
+  document.querySelectorAll('.rowi').forEach(b=>b.onclick=()=>folha(cardCompleto(BYID[b.dataset.id])));
+  $('#volta').onclick=()=>ir('home');
+}
+
+function pAnotar(){
+  const pend=S.notas.filter(n=>!n.env);
+  $('#app').innerHTML=`<div class="wrap">
+    <h2 class="serif">Anotar</h2>
+    <textarea class="note" id="tx" placeholder="Cole aqui o comentário da questão ou escreva o que quiser lembrar…"></textarea>
+    <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
+    ${pend.length?`<div class="sec">Para mandar ao Claude · ${pend.length}</div>
+      <button class="btn ghost" id="cp">Copiar ${pend.length>1?'todas':''} e marcar como enviada${pend.length>1?'s':''}</button>
+      <p class="mute small" style="text-align:center;margin-top:8px">Depois é só colar no chat — os cards aparecem aqui sozinhos.</p>`:''}
+    ${S.notas.length?`<div class="sec">Anotações</div><div class="rows">${S.notas.slice().reverse().map(n=>`<div class="nt" data-id="${n.id}"><div class="d"><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span><span>${n.env?'enviada ✓':'pendente'}</span></div><div class="p">${esc(n.t)}</div></div>`).join('')}</div>`:''}
+    <div class="foot"><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
+  </div>`;
+  $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();toast('Guardado');pAnotar()};
+  const cp=$('#cp'); if(cp) cp.onclick=async()=>{
+    const txt='Comentários para virar cards (UERJ Cards):\n\n'+pend.map((n,i)=>`${i+1}. ${n.t}`).join('\n\n---\n\n');
+    try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
+    pend.forEach(n=>n.env=true);save();toast('Copiado! Cole no chat do Claude.');pAnotar();
+  };
+  document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
+    const n=S.notas.find(x=>x.id==el.dataset.id);
+    folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><p style="white-space:pre-wrap">${esc(n.t)}</p>
+      <div class="foot"><button class="link" id="tg">${n.env?'marcar como pendente':'marcar como enviada'}</button><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
+    $('#tg').onclick=()=>{n.env=!n.env;save();fecharFolha();pAnotar()};
+    $('#del').onclick=()=>{if(confirm('Apagar esta anotação?')){S.notas=S.notas.filter(x=>x!==n);save();fecharFolha();pAnotar()}};
+  });
+  $('#imp').onclick=()=>{
+    folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Importar cards</div><p class="mute small" style="margin-bottom:10px">Só use se o Claude te mandar um bloco de cards pra colar.</p><textarea class="note" id="ij"></textarea><button class="btn" id="ib" style="margin-top:12px">Importar</button>`);
+    $('#ib').onclick=()=>{try{const j=JSON.parse($('#ij').value);const arr=Array.isArray(j)?j:j.cards;if(!Array.isArray(arr))throw 0;const ids=new Set(S.extra.map(c=>c.id));arr.forEach(c=>{if(c.id&&c.frente){if(ids.has(c.id))S.extra=S.extra.filter(x=>x.id!==c.id);S.extra.push(c)}});save();setCards(Object.values(BYID).filter(c=>!S.extra.find(x=>x.id===c.id)));fecharFolha();toast(arr.length+' cards importados');render()}catch(e){toast('Não reconheci esse bloco')}};
+  };
+  $('#bk').onclick=()=>{
+    folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Backup do progresso</div><p class="mute small" style="margin-bottom:12px">Pra levar seu progresso pra outro aparelho.</p>
+      <button class="btn ghost" id="bx">Copiar meu progresso</button>
+      <textarea class="note" id="bt" style="margin-top:14px;min-height:90px" placeholder="…ou cole aqui um progresso copiado"></textarea>
+      <button class="btn" id="bi" style="margin-top:10px">Restaurar</button>`);
+    $('#bx').onclick=async()=>{const t=JSON.stringify(S);try{await navigator.clipboard.writeText(t);toast('Copiado')}catch(e){$('#bt').value=t}};
+    $('#bi').onclick=()=>{try{const j=JSON.parse($('#bt').value);if(!j.srs)throw 0;if(!confirm('Substituir o progresso deste aparelho?'))return;S=j;save();fecharFolha();toast('Restaurado');render()}catch(e){toast('Backup inválido')}};
+  };
+}
+
+/* ===== Folha ===== */
+function folha(html){
+  fecharFolha();
+  const d=document.createElement('div');d.className='sheet';d.id='sheet';
+  d.innerHTML=`<div class="pn"><div class="grab"></div>${html}</div>`;
+  d.onclick=e=>{if(e.target===d)fecharFolha()};
+  document.body.appendChild(d);
+}
+function fecharFolha(){const s=$('#sheet');if(s)s.remove()}
+
+/* ===== Sessão ===== */
+let SS=null, CFSTOP=false;
+function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f.offsetHeight+40)+'px'}
+new MutationObserver(()=>ajustaPe()).observe(document.body,{childList:true,subtree:true});
+function sessao(ids,modo){
+  ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
+  SS={fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set()};
+  const el=document.createElement('div');el.className='sess';el.id='sess';
+  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="prog"><i id="pg"></i></div><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
+  document.body.appendChild(el); document.body.style.overflow='hidden';
+  $('#sx').onclick=sair;
+  proximoCard();
+}
+function sair(){const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render()}
+function barra(){$('#pg').style.width=(SS.feitos/SS.total*100)+'%';$('#cb').textContent=SS.combo>=3?'×'+SS.combo:''}
+function proximoCard(){
+  barra();
+  if(!SS.fila.length) return fim();
+  const c=BYID[SS.fila[0]];
+  $('#sb').scrollTop=0;
+  const w=$('#sw'), f=$('#sf');
+  w.innerHTML=`<div class="tag">${esc(c.tema)} · ${esc(c.sub)}</div><div class="q serif">${esc(c.frente)}</div><div id="ar"></div>`;
+  if(c.tipo==='quiz'){
+    $('#ar').innerHTML=`<div class="opts">${c.opcoes.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c hide">${esc((c.comentarios||[])[i]||'')}</span></span></button>`).join('')}</div>`;
+    f.innerHTML='';
+    document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      const i=+b.dataset.i, ok=i===c.certa;
+      document.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;x.querySelector('.c').classList.remove('hide');if(j===c.certa)x.classList.add('ok');else if(j===i)x.classList.add('bad')});
+      vib(ok?12:[20,40,20]);
+      if(c.pegadinha) $('#ar').insertAdjacentHTML('beforeend',`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`);
+      if(ok) f.innerHTML=`<button class="btn" id="nx">Continuar</button>`, $('#nx').onclick=()=>responder(c,2);
+      else pedirMotivo(c);
+    });
+  } else {
+    f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
+    $('#sh').onclick=()=>{
+      $('#ar').innerHTML=`<div class="ans"><p>${esc(c.verso)}</p>${visual(c.visual)}${c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:''}</div>`;
+      f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
+      f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
+    };
+  }
+}
+function pedirMotivo(c){
+  const f=$('#sf');
+  f.innerHTML=`<div class="why"><span>Por quê? (opcional)</span>${Object.keys(TIPOS).map(k=>`<button class="chip" data-t="${k}">${TIPOS[k]}</button>`).join('')}</div><button class="btn" id="nx">Continuar</button>`;
+  let t=null;
+  f.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{t=b.dataset.t;f.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b))});
+  $('#nx').onclick=()=>responder(c,0,t);
+}
+function responder(c,r,t){
+  const id=SS.fila.shift();
+  const repetido=SS.repetidos.has(id);
+  if(!repetido) rating(id,r,t);
+  if(r===0 && !repetido){SS.repetidos.add(id); SS.fila.splice(Math.min(3,SS.fila.length),0,id); SS.total++;}
+  SS.feitos++;
+  const ganho = r===2?10:r===1?6:3;
+  SS.xp+=ganho; S.xp+=ganho;
+  if(r===2){SS.combo++;SS.acertos++;SS.maxCombo=Math.max(SS.maxCombo,SS.combo)} else SS.combo=0;
+  if(SS.modo==='dia' && S.plan && !S.plan.done.includes(id) && !(r===0&&!repetido)) S.plan.done.push(id);
+  save(); proximoCard();
+}
+function fim(){
+  const lvAntes=nivel(S.xp-SS.xp);
+  const diaFeito = SS.modo==='dia' && !pendentes().length;
+  if(diaFeito){ S.xp+=20; SS.xp+=20; marcarStreak(); }
+  save();
+  const lv=nivel(S.xp);
+  const e=document.createElement('div');e.className='end';e.id='end';
+  e.innerHTML=`<div style="font-size:44px">${diaFeito?'🌷':'✓'}</div>
+    <div class="big serif">${diaFeito?'Pendências do dia feitas':'Rodada concluída'}</div>
+    <p class="mute">${FRASES[Math.random()*FRASES.length|0]}</p>
+    <div class="xp">+${SS.xp} XP${diaFeito?' · bônus do dia incluso':''}</div>
+    ${lv>lvAntes?`<div class="lvl">Subiu para o nível ${lv} ✦</div>`:''}
+    <div class="row"><span><b>${SS.acertos}</b>sabia</span><span><b>🔥 ${S.streak.n||0}</b>${S.streak.n===1?'dia':'dias'}</span><span><b>×${SS.maxCombo}</b>combo</span></div>
+    <button class="btn" id="ok">Fechar</button>`;
+  document.body.appendChild(e);
+  confete(diaFeito?140:60);
+  $('#ok').onclick=()=>{CFSTOP=true;e.remove();sair()};
+}
+
+/* ===== Confete ===== */
+function confete(n){
+  const cv=$('#cf'),ctx=cv.getContext('2d'),W=cv.width=innerWidth,H=cv.height=innerHeight;
+  const cor=['#7A2E3B','#C9967A','#E8C4B0','#D98C9A','#B7822F'];
+  const p=Array.from({length:n},()=>({x:W/2+(Math.random()-.5)*80,y:H*.38,vx:(Math.random()-.5)*11,vy:-Math.random()*11-4,s:Math.random()*6+4,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:cor[Math.random()*cor.length|0]}));
+  let t=0;CFSTOP=false;(function f(){if(CFSTOP){ctx.clearRect(0,0,W,H);return}ctx.clearRect(0,0,W,H);p.forEach(q=>{q.vy+=.32;q.vx*=.99;q.x+=q.vx;q.y+=q.vy;q.r+=q.vr;ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.r);ctx.fillStyle=q.c;ctx.fillRect(-q.s/2,-q.s/4,q.s,q.s/2);ctx.restore()});if(++t<120)requestAnimationFrame(f);else ctx.clearRect(0,0,W,H)})();
+}
+
+/* ===== Início ===== */
+carregar().then(render);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render)}});
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
