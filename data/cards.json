@@ -294,7 +294,7 @@
       "tipo": "flash",
       "area": "Cirurgia",
       "tema": "Abdome agudo",
-      "sub": "Apendicite — sinais",
+      "sub": "Inflamatório - Apendicite",
       "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
       "verso": "Posição do apêndice → sinal que aparece.",
       "visual": {
@@ -340,7 +340,7 @@
       "tipo": "flash",
       "area": "Cirurgia",
       "tema": "Abdome agudo",
-      "sub": "Apendicite — sinais",
+      "sub": "Inflamatório - Apendicite",
       "frente": "Apendicite RETROCECAL: qual o sinal mais associado?",
       "verso": "Sinal do Psoas — o apêndice inflamado encosta no músculo psoas, e estender a coxa direita estira o músculo e dói.",
       "pegadinha": "No retrocecal, a dor pode ir para o flanco/lombar e os sinais peritoneais anteriores (Blumberg) podem ser fracos.",
@@ -352,7 +352,7 @@
       "tipo": "flash",
       "area": "Cirurgia",
       "tema": "Abdome agudo",
-      "sub": "Apendicite — sinais",
+      "sub": "Inflamatório - Apendicite",
       "frente": "Apendicite PÉLVICA: qual o sinal mais associado?",
       "verso": "Sinal do Obturador — rotação interna da coxa direita com quadril e joelho fletidos a 90°.",
       "visual": {
@@ -380,7 +380,7 @@
       "tipo": "flash",
       "area": "Cirurgia",
       "tema": "Abdome agudo",
-      "sub": "Apendicite — sinais",
+      "sub": "Inflamatório - Apendicite",
       "frente": "Rovsing × Dunphy: qual é qual?",
       "verso": "Rovsing: palpo a FIE e dói a FID. Dunphy: a dor na FID piora ao tossir. Os dois indicam irritação peritoneal — nenhum define a posição.",
       "visual": {
@@ -408,7 +408,7 @@
       "tipo": "quiz",
       "area": "Cirurgia",
       "tema": "Abdome agudo",
-      "sub": "Apendicite — sinais",
+      "sub": "Inflamatório - Apendicite",
       "frente": "Na apendicite aguda com apêndice em posição retrocecal, o sinal mais comumente observado é:",
       "opcoes": [
         "Rovsing",
@@ -1420,5 +1420,5 @@
       "add": "2026-10-20"
     }
   ],
-  "rev": 1792529642187
+  "rev": 1792532056443
 }
