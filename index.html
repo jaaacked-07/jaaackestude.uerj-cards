@@ -238,6 +238,7 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .kpi .kv{font-size:26px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
 .kpi .kv small{font-size:14px;color:var(--mute);margin-left:1px;font-weight:500}
 .kpi .kd{font-size:11.5px;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
+.kpi .kd .kvs{color:var(--mute);font-weight:500}
 .kpi .kd.up{color:var(--ok)}.kpi .kd.dn{color:var(--bad)}
 .chart svg{display:block;width:100%;height:auto}
 .leg{display:flex;gap:16px;justify-content:center;font-size:12px;color:var(--mute);margin-top:4px}
@@ -260,10 +261,11 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .simgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:18px}
 .simtile{aspect-ratio:1;background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:transform .12s}
 .simtile:active{transform:scale(.97)}
-.simtile{justify-content:space-between}
+.simtile{justify-content:space-between;text-align:center;align-items:center}
 .simtile .nm{font-size:13.5px;color:var(--mute);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
 .simtile .k{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
-.simtile .ln{display:flex;justify-content:space-between;align-items:baseline}
+.simtile .ln{display:flex;justify-content:center;align-items:baseline;gap:10px}
+.simtile .blk{width:100%}
 .simtile .fr{font-size:17px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 .simtile .pc{font-size:22px;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .simtile .pc.u{color:var(--rose)}
@@ -1148,7 +1150,7 @@ const dBR=d=>d.split('-').reverse().map((x,i)=>i===2?x.slice(2):x).join('/');
 function grafico(L){
   const ult=k=>L.filter(s=>s[k]!=null), dl=k=>{const a=ult(k);return a.length>1?a[a.length-1][k]-a[a.length-2][k]:null};
   const head=(k,nome,cor)=>{const a=ult(k); if(!a.length) return ''; const v=a[a.length-1][k], d=dl(k);
-    return `<div class="kpi"><span class="kn"><i style="background:${cor}"></i>${nome}</span><span class="kv">${v}<small>%</small></span>${d!=null?`<span class="kd ${d>0?'up':d<0?'dn':''}">${d>0?'▲':d<0?'▼':'•'} ${Math.abs(d)} p.p.</span>`:''}</div>`};
+    return `<div class="kpi"><span class="kn"><i style="background:${cor}"></i>${nome}</span><span class="kv">${v}<small>%</small></span>${d!=null?`<span class="kd ${d>0?'up':d<0?'dn':''}">${d>0?'▲':d<0?'▼':'•'} ${Math.abs(d)} p.p. <span class="kvs">vs. anterior</span></span>`:''}</div>`};
   const topo=`<div class="kpis">${head('g','Simulado','var(--wine)')}${head('u','UERJ','var(--rose)')}</div>`;
   if(L.length<2) return `<div class="chart">${topo}<p class="mute small" style="text-align:center;padding:10px 0 6px">A curva de evolução aparece a partir do 2º simulado.</p></div>`;
   const vs=L.flatMap(s=>[s.g,s.u]).filter(v=>v!=null), lo=Math.max(0,Math.floor((Math.min(...vs)-10)/10)*10), hi=100;
@@ -1173,7 +1175,7 @@ function pPct(){
     <h2 class="serif">Porcentagem</h2>
     ${grafico(L)}
     <button class="btn" id="addS">Adicionar simulado</button>
-    ${L.length?`<div class="simgrid">${L.slice().reverse().map(x=>`<button class="simtile" data-sid="${x.id}">
+    ${L.length?`<div class="simgrid">${L.map(x=>`<button class="simtile" data-sid="${x.id}">
       <div class="nm">${esc(x.nome)}</div>
       <div class="blk"><div class="k">Simulado</div><div class="ln"><span class="fr">${x.tot?x.ac+'/'+x.tot:'—'}</span><span class="pc">${x.g!=null?x.g+'%':''}</span></div></div>
       <div class="blk"><div class="k">UERJ</div><div class="ln"><span class="fr">${x.utot?x.uac+'/'+x.utot:'—'}</span><span class="pc u">${x.u!=null?x.u+'%':''}</span></div></div>
