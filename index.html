@@ -276,11 +276,16 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .alvo{outline:2px dashed var(--wine);outline-offset:-3px;background:var(--wine-soft)!important}
 .arrastando{opacity:.35}
 .dragghost{position:fixed;z-index:60;pointer-events:none;background:var(--wine);color:#fff;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.25);transform:translate(-50%,-140%);max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nt{position:relative;padding-left:48px!important}
+.nt.selmode{position:relative;padding-left:48px!important;cursor:pointer}
 .nt .ck{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:12px;color:#fff;background:var(--card)}
 .nt.sel .ck{background:var(--wine);border-color:var(--wine)}
 .nt.sel{background:var(--wine-soft)}
-.nt .nb.cp{color:var(--mid)}.nt .nb.ok{color:var(--ok)}
+.nt .nb.pill{display:inline-block;padding:3px 9px;border-radius:8px;font-size:11px;letter-spacing:.04em}
+.nt .nb.cp{background:var(--mid-soft);color:var(--mid)}
+.nt .nb.ok{background:var(--ok-soft);color:var(--ok)}
+.sech{display:flex;align-items:center;justify-content:space-between;margin:22px 0 8px}
+.minib{font-size:12.5px;font-weight:600;color:var(--wine);background:var(--wine-soft);padding:6px 11px;border-radius:9px}
+.selbar{position:sticky;bottom:calc(84px + env(safe-area-inset-bottom));margin-top:14px;z-index:3}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -483,7 +488,9 @@ function render(){
   montarPlano();
   const e=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong&&S.srs[c.id].box<3).length;
   $('#dotE').classList.toggle('hide',!e);
+  const y=scrollY;
   ({home:pHome,estudar:pEstudar,erros:pErros,pct:pPct,anotar:pAnotar})[PAG]();
+  if(scrollY!==y) scrollTo(0,y);
 }
 
 function pHome(){
@@ -1217,7 +1224,7 @@ const tecladoFisico=()=>{try{return matchMedia('(pointer:fine)').matches}catch(e
 function focarNota(){
   const t=$('#tx'); if(!t||PAG!=='anotar'||$('#sheet')||SS||!tecladoFisico()) return;
   if(document.activeElement===t) return;
-  t.focus(); const n=t.value.length; t.setSelectionRange(n,n);
+  t.focus({preventScroll:true}); const n=t.value.length; t.setSelectionRange(n,n);
 }
 addEventListener('focus',()=>{setTimeout(focarNota,0);setTimeout(focarNota,150)});
 addEventListener('pageshow',()=>setTimeout(focarNota,50));
@@ -1237,12 +1244,13 @@ document.addEventListener('keydown',e=>{
   }
 },true);
 document.addEventListener('visibilitychange',()=>{ if(!document.hidden) setTimeout(focarNota,50); });
-const SELN=new Set();
+const SELN=new Set(); let MODO_SEL=false;
 function pAnotar(){
+  const Y0=scrollY;
   const tx0=$('#tx'), draft=tx0?tx0.value:rascunho(), foc=tx0&&document.activeElement===tx0, sel=tx0?[tx0.selectionStart,tx0.selectionEnd]:null;
-  const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env);
-  const est=n=>n.manual?(n.pronto?'✓ cards prontos — confirme':'copiada · aguardando cards'):n.env?'✓ enviada':tk?'enviando…':'não enviada';
-  const item=n=>`<div class="nt ${SELN.has(n.id)?'sel':''}" data-id="${n.id}"><span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span><div class="d"><span class="nb ${n.manual?(n.pronto?'ok':'cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" alt=""></div>`).join('')}</div>`:''}</div>`;
+  const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env), man=lista.filter(n=>n.manual), resto=lista.filter(n=>!n.manual);
+  const est=n=>n.manual?(n.pronto?'Cards feitos ✓':'Aguardando cards'):n.env?'✓ enviada':tk?'enviando…':'não enviada';
+  const item=n=>`<div class="nt ${MODO_SEL&&!n.manual?'selmode':''} ${SELN.has(n.id)?'sel':''}" data-id="${n.id}">${MODO_SEL&&!n.manual?`<span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span>`:''}<div class="d"><span class="nb ${n.manual?(n.pronto?'pill ok':'pill cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" alt=""></div>`).join('')}</div>`:''}</div>`;
   const ri=rascImgs();
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
@@ -1251,13 +1259,14 @@ function pAnotar(){
     <button class="addimg" id="ai">+ imagem</button><input type="file" id="fi" accept="image/*" multiple hidden>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
     <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Toque em "conectar" (lá embaixo) para as anotações irem sozinhas.'}</p>
-    ${lista.length?`<div class="sec">Aguardando cards · ${lista.length}</div><div class="rows">${lista.map(item).join('')}</div>`:''}
-    ${SELN.size?`<button class="btn" id="cpC" style="margin-top:14px">Copiar para o Claude (${SELN.size})</button>`:lista.length?`<p class="mute small" style="text-align:center;margin-top:10px">Marque o círculo das anotações para mandar agora pelo chat.</p>`:''}
-    ${S.notas.some(n=>n.manual)?`<button class="btn ghost" id="cfC" style="margin-top:10px">Confirmar cards feitos (${S.notas.filter(n=>n.manual).length})</button>`:''}
+    ${man.length?`<div class="sech"><span class="sec" style="margin:0">No Claude · ${man.length}</span><button class="minib" id="cfC">Confirmar feitos</button></div><div class="rows">${man.map(item).join('')}</div>`:''}
+    ${resto.length?`<div class="sech"><span class="sec" style="margin:0">Bloco de notas · ${resto.length}</span>${MODO_SEL?`<button class="minib" id="selX">Cancelar</button>`:`<button class="minib" id="selO">Selecionar para o Claude</button>`}</div><div class="rows">${resto.map(item).join('')}</div>`:''}
+    ${MODO_SEL?`<div class="selbar"><button class="btn" id="cpC" ${SELN.size?'':'disabled style="opacity:.45"'}>Copiar para o Claude (<span id="nSel">${SELN.size}</span>)</button></div>`:''}
     <div class="foot"><button class="link" id="gh">${tk?'sincronização ✓':'conectar'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#tx').value=draft;
-  if(foc&&sel) { $('#tx').focus(); $('#tx').setSelectionRange(sel[0],sel[1]); } else focarNota();
+  if(foc&&sel) { $('#tx').focus({preventScroll:true}); $('#tx').setSelectionRange(sel[0],sel[1]); } else focarNota();
+  if(scrollY!==Y0) scrollTo(0,Y0);
   $('#tx').oninput=e=>setRasc(e.target.value);
   $('#tx').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); $('#sv').click(); } };
   $('#sv').onclick=()=>{const t=$('#tx').value.trim(), im=rascImgs(); if(!t&&!im.length)return;
@@ -1267,7 +1276,10 @@ function pAnotar(){
   $('#ai').onclick=()=>$('#fi').click();
   $('#fi').onchange=e=>addImgsRasc([...e.target.files]);
   document.querySelectorAll('[data-rmi]').forEach(b=>b.onclick=()=>{const a=rascImgs();a.splice(+b.dataset.rmi,1);setRascImgs(a);pAnotar()});
-  document.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{e.stopPropagation();const id=+b.dataset.ck;SELN.has(id)?SELN.delete(id):SELN.add(id);pAnotar()});
+  const togSel=id=>{ SELN.has(id)?SELN.delete(id):SELN.add(id); const el=document.querySelector(`.nt[data-id="${id}"]`); el.classList.toggle('sel',SELN.has(id)); el.querySelector('.ck').textContent=SELN.has(id)?'✓':''; const b=$('#cpC'); $('#nSel').textContent=SELN.size; b.disabled=!SELN.size; b.style.opacity=SELN.size?'':'.45'; };
+  document.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{e.stopPropagation();togSel(+b.dataset.ck)});
+  const selO=$('#selO'); if(selO) selO.onclick=()=>{MODO_SEL=true;SELN.clear();pAnotar()};
+  const selX=$('#selX'); if(selX) selX.onclick=()=>{MODO_SEL=false;SELN.clear();pAnotar()};
   const cpC=$('#cpC'); if(cpC) cpC.onclick=async()=>{
     const sel=S.notas.filter(n=>SELN.has(n.id));
     await enviarPendentes(true);
@@ -1277,7 +1289,7 @@ Repositório jaaacked-07/jaaackestude.uerj-cards · siga o CLAUDE.md (seção "P
 `+sel.map((n,i)=>`━━━━━━ ANOTAÇÃO ${i+1} · id ${n.id} ━━━━━━
 ${n.t}${n.imgs&&n.imgs.length?'\nImagens: '+n.imgs.map(x=>x.path||'(imagem ainda não enviada)').join(', '):''}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
     try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
-    sel.forEach(n=>{n.manual=true;n.pronto=false;n.u=Date.now()}); SELN.clear(); save(); pAnotar();
+    sel.forEach(n=>{n.manual=true;n.pronto=false;n.u=Date.now()}); SELN.clear(); MODO_SEL=false; save(); pAnotar(); scrollTo({top:0,behavior:'smooth'});
     toast('Copiado! Cole no chat de cards do Claude.');
     if(tk){ try{ await ghMod(d=>{ d.pendentes.forEach(p=>{ if(sel.some(n=>String(n.id)===String(p.id))) p.manual=true; }); }); }catch(e){} }
   };
@@ -1289,6 +1301,7 @@ ${n.t}${n.imgs&&n.imgs.length?'\nImagens: '+n.imgs.map(x=>x.path||'(imagem ainda
     if(tk){ try{ await ghMod(d=>{ d.pendentes=d.pendentes.filter(p=>!ids.has(String(p.id))); ids.forEach(i=>{ if(!d.processadas.map(String).includes(i)) d.processadas.push(+i); }); d.processadas=d.processadas.slice(-300); }); }catch(e){} }
   };
   document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
+    if(el.classList.contains('selmode')){ togSel(+el.dataset.id); return; }
     const n=S.notas.find(x=>x.id==el.dataset.id);
     folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>${n.imgs&&n.imgs.length?`<div class="nfull">${n.imgs.map(i=>`<img src="${esc(srcImg(i))}" alt="">`).join('')}</div>`:''}
       <button class="btn" id="ns" style="margin-top:12px">Salvar</button>
