@@ -182,6 +182,25 @@ textarea.note:focus{border-color:var(--rose)}
 .srch{width:100%;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:11px 13px;font:inherit;font-size:15px;color:var(--ink);outline:none;margin-bottom:10px}
 .nb{font-size:11.5px;font-weight:600;color:var(--wine);text-transform:uppercase;letter-spacing:.05em}
 details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:22px;list-style:none}
+.sel{width:100%;display:flex;align-items:center;gap:10px;background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:13px 15px;text-align:left;margin-bottom:10px}
+.sel .sl{font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:600;width:92px;flex:none}
+.sel .sv{flex:1;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sel .ch{color:var(--mute);font-size:13px}
+.opi{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);text-align:left;font-size:15.5px;width:100%}
+.opi .bx{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line);display:grid;place-items:center;flex:none;font-size:13px;color:#fff}
+.opi.rd .bx{border-radius:50%}
+.opi.on .bx{background:var(--wine);border-color:var(--wine)}
+.opi .ct{margin-left:auto;color:var(--mute);font-size:13px}
+.opg{display:flex;justify-content:space-between;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;margin:18px 0 0}
+.opg button{font-size:12px;color:var(--wine);text-transform:none;letter-spacing:0;font-weight:500}
+.tacts{float:right;display:flex;gap:2px;margin-top:-5px}
+.tacts .star{float:none;margin:0}
+.pen{color:var(--mute);font-size:15px;padding:2px 6px;opacity:.75}
+.rowi .ct{color:var(--mute);font-size:13px;flex:none}
+.rowi .chv{color:var(--mute);font-size:12px;flex:none;transition:transform .2s}
+.rowi.op .chv{transform:rotate(90deg)}
+.lv1{padding-left:30px!important;background:color-mix(in srgb,var(--card) 55%,var(--bg))}
+.lv2{padding-left:44px!important;font-size:14.5px!important;background:color-mix(in srgb,var(--card) 30%,var(--bg))}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -213,17 +232,26 @@ const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/8
 /* ===== Estado ===== */
 let S;
 try{S=JSON.parse(localStorage.getItem(LS))||{}}catch(e){S={}}
-S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{};
+function fixS(){S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.edit=S.edit||{}; S.oculto=S.oculto||{};}
+fixS();
 const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
 
 /* ===== Cards ===== */
-let CARDS=[], BYID={};
+let CARDS=[], BYID={}, RAW={}, LASTBASE=[];
+const dTema=c=>S.ren.tema[c.tema]||c.tema;
+const dSub=c=>S.ren.sub[c.tema+'|'+c.sub]||c.sub;
 function setCards(base){
+  LASTBASE=base||[];
   const m={};
-  (base||[]).forEach(c=>m[c.id]=c);
+  LASTBASE.forEach(c=>m[c.id]=c);
   (S.extra||[]).forEach(c=>m[c.id]=c);
-  CARDS=Object.values(m); BYID=m;
+  RAW=m; const out={};
+  Object.values(m).forEach(c0=>{ if(S.oculto[c0.id]) return;
+    const c={...c0,...(S.edit[c0.id]||{})}; c.tema=dTema(c0); c.sub=dSub(c0); out[c.id]=c; });
+  CARDS=Object.values(out); BYID=out;
 }
+const reaplicar=()=>setCards(LASTBASE);
+const abc=(a,b)=>a.localeCompare(b,'pt',{sensitivity:'base'});
 async function carregar(){
   let base=null;
   try{base=JSON.parse(localStorage.getItem(LS+'.cache'))}catch(e){}
@@ -380,43 +408,97 @@ function pErros(){
 
 /* ===== Estudar (baralho livre) ===== */
 const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:''};
+const ABERTO=new Set();
+const kSub=c=>c.tema+'|'+c.sub;
+const FILTROS={todos:'Todos',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 function deckPool(){
-  let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(c.sub));
+  let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
   if(DECK.filtro==='fav') p=p.filter(c=>S.fav[c.id]);
   if(DECK.filtro==='novos') p=p.filter(c=>!S.srs[c.id]);
   return p;
 }
+function arvore(lista){
+  const t={}; lista.forEach(c=>{((t[c.tema]=t[c.tema]||{})[c.sub]=t[c.tema][c.sub]||[]).push(c)});
+  return Object.keys(t).sort(abc).map(m=>({m,subs:Object.keys(t[m]).sort(abc).map(su=>({su,cards:t[m][su]}))}));
+}
+const norm=x=>String(x).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
 function pEstudar(){
-  const temas={}; CARDS.forEach(c=>{(temas[c.tema]=temas[c.tema]||[]); if(!temas[c.tema].includes(c.sub)) temas[c.tema].push(c.sub)});
+  [...DECK.subs].forEach(k=>{if(!CARDS.some(c=>kSub(c)===k))DECK.subs.delete(k)});
   const pool=deckPool(), n=DECK.qtd?Math.min(DECK.qtd,pool.length):pool.length;
-  const F={todos:'Todos',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
-  const nb=DECK.busca.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-  const lista=CARDS.filter(c=>!nb||(c.frente+' '+c.sub+' '+(c.verso||'')).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').includes(nb));
-  const por={}; lista.forEach(c=>{(por[c.tema+' · '+c.sub]=por[c.tema+' · '+c.sub]||[]).push(c)});
+  const sel=[...DECK.subs].map(k=>k.split('|')[1]);
+  const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
+  const nb=norm(DECK.busca.trim());
+  const arv=arvore(nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+(c.verso||'')).includes(nb)):CARDS);
+  const linha=c=>`<div class="rowi lv2" role="button" data-card="${c.id}"><span class="tx">${S.fav[c.id]?'⭐ ':''}${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</div>`;
+  const ocultos=Object.keys(S.oculto).filter(id=>RAW[id]).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
-    <p class="mute small" style="margin-top:-10px;margin-bottom:6px">Monte seu baralho — não mexe nas pendências de hoje.</p>
-    <div class="sec">Temas</div>
-    <div class="chips"><button class="chip ${!DECK.subs.size?'on':''}" data-all>Tudo</button></div>
-    ${Object.keys(temas).map(t=>`<div class="tm">${esc(t)}</div><div class="chips">${temas[t].map(su=>`<button class="chip ${DECK.subs.has(su)?'on':''}" data-sub="${esc(su)}">${esc(su)}</button>`).join('')}</div>`).join('')}
-    <div class="sec">Quais cards</div>
-    <div class="chips">${Object.keys(F).map(k=>`<button class="chip ${DECK.filtro===k?'on':''}" data-f="${k}">${F[k]}</button>`).join('')}</div>
-    <div class="sec">Quantos</div>
-    <div class="chips">${[10,20,0].map(q=>`<button class="chip ${DECK.qtd===q?'on':''}" data-q="${q}">${q||'Todos'}</button>`).join('')}</div>
-    <button class="btn" id="dk" style="margin-top:22px" ${n?'':'disabled style="margin-top:22px;opacity:.45"'}>${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
+    <p class="mute small" style="margin-top:-10px;margin-bottom:16px">Monte seu baralho — não mexe nas pendências de hoje.</p>
+    <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
+    <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
+    <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
+    <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
     <input class="srch" id="bs" placeholder="Buscar…" value="${esc(DECK.busca)}">
-    <div id="lst">${Object.keys(por).map(su=>`<div class="tm">${esc(su)}</div><div class="rows">${por[su].map(c=>`<button class="rowi" data-id="${c.id}"><span class="tx">${S.fav[c.id]?'⭐ ':''}${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</button>`).join('')}</div>`).join('')||'<p class="mute small">Nada encontrado.</p>'}</div>
+    <div id="lst">${arv.length?`<div class="rows">${arv.map(({m,subs})=>{
+        const om=nb||ABERTO.has('m:'+m), tot=subs.reduce((a,x)=>a+x.cards.length,0);
+        return `<div class="rowi ${om?'op':''}" role="button" data-m="${esc(m)}"><span class="chv">▶</span><span class="tx">${esc(m)}</span><span class="ct">${tot}</span><span class="pen" data-ren="tema" data-t="${esc(m)}">✎</span></div>`+
+        (om?subs.map(({su,cards})=>{const k=m+'|'+su, os=nb||ABERTO.has('s:'+k);
+          return `<div class="rowi lv1 ${os?'op':''}" role="button" data-s="${esc(k)}"><span class="chv">▶</span><span class="tx">${esc(su)}</span><span class="ct">${cards.length}</span><span class="pen" data-ren="sub" data-t="${esc(m)}" data-su="${esc(su)}">✎</span></div>`+(os?cards.map(linha).join(''):'')}).join(''):'');
+      }).join('')}</div>`:'<p class="mute small">Nada encontrado.</p>'}</div>
+    ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
   </div>`;
-  document.querySelectorAll('[data-all]').forEach(b=>b.onclick=()=>{DECK.subs.clear();pEstudar()});
-  document.querySelectorAll('[data-sub]').forEach(b=>b.onclick=()=>{const v=b.dataset.sub;DECK.subs.has(v)?DECK.subs.delete(v):DECK.subs.add(v);pEstudar()});
-  document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{DECK.filtro=b.dataset.f;pEstudar()});
-  document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{DECK.qtd=+b.dataset.q;pEstudar()});
-  const dk=$('#dk'); if(n) dk.onclick=()=>sessao(shuffle(pool.map(c=>c.id)).slice(0,n),'livre');
-  const bs=$('#bs'); bs.oninput=()=>{DECK.busca=bs.value;const pos=bs.selectionStart;pEstudar();const nb2=$('#bs');nb2.focus();nb2.setSelectionRange(pos,pos)};
-  document.querySelectorAll('#lst .rowi').forEach(b=>b.onclick=()=>folhaCard(b.dataset.id));
+  $('#sT').onclick=escolherTemas;
+  $('#sF').onclick=()=>escolha('Quais cards',Object.keys(FILTROS).map(k=>({v:k,t:FILTROS[k]})),DECK.filtro,v=>{DECK.filtro=v;pEstudar()});
+  $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
+  if(n) $('#dk').onclick=()=>sessao(shuffle(pool.map(c=>c.id)).slice(0,n),'livre');
+  const bs=$('#bs'); bs.oninput=()=>{DECK.busca=bs.value;const pos=bs.selectionStart;pEstudar();const b2=$('#bs');b2.focus();b2.setSelectionRange(pos,pos)};
+  $('#lst').onclick=e=>{
+    const pn=e.target.closest('[data-ren]'); if(pn){renomear(pn.dataset.ren,pn.dataset.t,pn.dataset.su);return}
+    const cd=e.target.closest('[data-card]'); if(cd){folhaCard(cd.dataset.card);return}
+    const sb=e.target.closest('[data-s]'); if(sb){const k='s:'+sb.dataset.s;ABERTO.has(k)?ABERTO.delete(k):ABERTO.add(k);pEstudar();return}
+    const mt=e.target.closest('[data-m]'); if(mt){const k='m:'+mt.dataset.m;ABERTO.has(k)?ABERTO.delete(k):ABERTO.add(k);pEstudar()}
+  };
+  const oc=$('#oc'); if(oc) oc.onclick=verOcultos;
+}
+function escolherTemas(){
+  const arv=arvore(CARDS); const tmp=new Set(DECK.subs);
+  const desenha=()=>{
+    folha(`<div class="serif" style="font-size:21px;margin-bottom:4px">Temas</div>
+      <button class="opi ${!tmp.size?'on':''}" data-tudo><span class="bx">${!tmp.size?'✓':''}</span>Tudo</button>
+      ${arv.map(({m,subs})=>{const ks=subs.map(x=>m+'|'+x.su), todos=ks.every(k=>tmp.has(k));
+        return `<div class="opg"><span>${esc(m)}</span><button data-mt="${esc(m)}">${todos?'desmarcar':'marcar todos'}</button></div>`+
+        subs.map(({su,cards})=>{const k=m+'|'+su,on=tmp.has(k);return `<button class="opi ${on?'on':''}" data-k="${esc(k)}"><span class="bx">${on?'✓':''}</span>${esc(su)}<span class="ct">${cards.length}</span></button>`}).join('')}).join('')}
+      <button class="btn" id="tp" style="margin-top:18px">Pronto</button>`);
+    const pn=$('#sheet .pn'); 
+    $('#sheet').querySelector('[data-tudo]').onclick=()=>{tmp.clear();redesenha()};
+    $('#sheet').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const k=b.dataset.k;tmp.has(k)?tmp.delete(k):tmp.add(k);redesenha()});
+    $('#sheet').querySelectorAll('[data-mt]').forEach(b=>b.onclick=()=>{const m=b.dataset.mt,ks=arv.find(x=>x.m===m).subs.map(x=>m+'|'+x.su),todos=ks.every(k=>tmp.has(k));ks.forEach(k=>todos?tmp.delete(k):tmp.add(k));redesenha()});
+    $('#tp').onclick=()=>{DECK.subs=new Set(tmp);fecharFolha();pEstudar()};
+    return pn;
+  };
+  const redesenha=()=>{const y=$('#sheet .pn').scrollTop;desenha();$('#sheet .pn').scrollTop=y;$('#sheet').style.animation='none';$('#sheet .pn').style.animation='none'};
+  desenha();
+}
+function renomear(tipo,tema,sub){
+  const atual=tipo==='tema'?tema:sub;
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:12px">Renomear ${tipo==='tema'?'matéria':'assunto'}</div>
+    <input class="srch" id="rn" value="${esc(atual)}"><button class="btn" id="rs">Salvar</button>`);
+  const i=$('#rn'); i.focus(); i.select();
+  $('#rs').onclick=()=>{const v=i.value.trim(); if(!v||v===atual){fecharFolha();return}
+    Object.values(RAW).forEach(c=>{const dt=dTema(c),ds=dSub(c);
+      if(tipo==='tema'&&dt===tema) S.ren.tema[c.tema]=v;
+      if(tipo==='sub'&&dt===tema&&ds===sub) S.ren.sub[c.tema+'|'+c.sub]=v;});
+    if(tipo==='tema'){ if(ABERTO.has('m:'+tema)) ABERTO.add('m:'+v); [...ABERTO].forEach(k=>{if(k.startsWith('s:'+tema+'|')) ABERTO.add('s:'+v+'|'+k.slice(3+tema.length))}); }
+    else if(ABERTO.has('s:'+tema+'|'+sub)) ABERTO.add('s:'+tema+'|'+v);
+    DECK.subs.clear(); save(); reaplicar(); fecharFolha(); toast('Renomeado'); render();};
+}
+function verOcultos(){
+  const ids=Object.keys(S.oculto).filter(id=>RAW[id]);
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Cards ocultos</div>${ids.map(id=>`<button class="opi" data-un="${id}"><span class="tx" style="flex:1">${esc(RAW[id].frente)}</span><span class="ct" style="color:var(--wine)">mostrar</span></button>`).join('')}`);
+  document.querySelectorAll('[data-un]').forEach(b=>b.onclick=()=>{delete S.oculto[b.dataset.un];save();reaplicar();toast('Card de volta');fecharFolha();render()});
 }
 
 /* card na folha: resposta só ao tocar */
@@ -426,13 +508,37 @@ function folhaCard(id){
   $('#fv').onclick=()=>{folha(cardCompleto(c))};
 }
 
+/* ===== Editar card ===== */
+function editarCard(id){
+  const c=BYID[id], r=RAW[id]; if(!c) return;
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Editar card</div>
+    <div class="tm">Pergunta</div><textarea class="ned" id="ef">${esc(c.frente)}</textarea>
+    ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div><textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div><textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
+    <div class="tm">Pegadinha (opcional)</div><textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
+    <button class="btn" id="es" style="margin-top:16px">Salvar</button>
+    <div class="foot">${S.edit[id]?'<button class="link" id="eo">voltar ao original</button>':''}<button class="link" id="eh" style="color:var(--bad)">ocultar card</button></div>`);
+  $('#es').onclick=()=>{
+    const e={}, f=$('#ef').value.trim(), pg=$('#ep').value.trim();
+    if(f&&f!==r.frente) e.frente=f;
+    if(c.tipo==='quiz'){const ops=[...document.querySelectorAll('[data-op]')].map((t,i)=>t.value.trim()||r.opcoes[i]); if(ops.some((o,i)=>o!==r.opcoes[i])) e.opcoes=ops;}
+    else {const v=$('#ev').value.trim(); if(v&&v!==r.verso) e.verso=v;}
+    if(pg!==(r.pegadinha||'')) e.pegadinha=pg;
+    if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
+    save(); reaplicar(); fecharFolha(); toast('Card atualizado'); depoisDeEditar(id);
+  };
+  const eo=$('#eo'); if(eo) eo.onclick=()=>{delete S.edit[id];save();reaplicar();fecharFolha();toast('Original de volta');depoisDeEditar(id)};
+  $('#eh').onclick=async()=>{ if(await confirmar('Ocultar este card?','Ocultar','Ele sai das revisões. Dá pra mostrar de novo em Estudar.')){S.oculto[id]=1;save();reaplicar();if(SS){SS.fila=SS.fila.filter(x=>x!==id);proximoCard()}else render();toast('Card oculto')} };
+}
+function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else render(); }
+
 /* ===== Favorito e anotação pessoal no card ===== */
-function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<button class="star ${S.fav[c.id]?'on':''}" data-star="${c.id}" aria-label="Favoritar">${S.fav[c.id]?'★':'☆'}</button></div>`}
+function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${S.fav[c.id]?'on':''}" data-star="${c.id}" aria-label="Favoritar">${S.fav[c.id]?'★':'☆'}</button></span></div>`}
 function minhaHTML(id){
   const t=S.minha[id];
   return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">editar anotação</button>`:`<button class="addn" data-ed="${id}">+ adicionar texto ao card</button>`}</div>`;
 }
 document.addEventListener('click',e=>{
+  const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star;S.fav[id]=!S.fav[id];if(!S.fav[id])delete S.fav[id];save();st.classList.toggle('on',!!S.fav[id]);st.textContent=S.fav[id]?'★':'☆';vib(8);return}
   const ed=e.target.closest('[data-ed]');
@@ -464,18 +570,25 @@ async function ghPut(tk,data,sha){
   const r=await fetch(GH_API,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify(body)});
   if(!r.ok) throw new Error(r.status);
 }
-async function enviarGH(pend){
+async function ghMod(fn){
   const tk=ghTok();
   for(let i=0;i<2;i++){
-    try{
-      const {sha,data}=await ghGet(tk);
-      const ja=new Set(data.pendentes.map(n=>n.id));
-      pend.forEach(n=>{if(!ja.has(n.id)) data.pendentes.push({id:n.id,d:n.d,t:n.t})});
-      await ghPut(tk,data,sha); return true;
-    }catch(e){ if(i) throw e; }
+    try{const {sha,data}=await ghGet(tk); fn(data); await ghPut(tk,data,sha); return true;}
+    catch(e){ if(i) throw e; }
   }
 }
+let ENVIANDO=false;
+async function enviarPendentes(silencioso){
+  const pend=S.notas.filter(n=>!n.env);
+  if(!ghTok()||!pend.length||ENVIANDO) return; ENVIANDO=true;
+  try{
+    await ghMod(d=>{const ja=new Set(d.pendentes.map(n=>String(n.id)));pend.forEach(n=>{if(!ja.has(String(n.id)))d.pendentes.push({id:n.id,d:n.d,t:n.t})})});
+    pend.forEach(n=>n.env=true); save();
+  }catch(e){ if(!silencioso) toast(String(e.message)==='401'?'Chave do GitHub inválida ou vencida':'Sem internet — envio quando voltar'); }
+  ENVIANDO=false; if(PAG==='anotar'&&!$('#sheet')&&!SS) pAnotar();
+}
 async function syncNotas(){
+  await enviarPendentes(true);
   if(!S.notas.some(n=>n.env)) return;
   let proc=null;
   try{
@@ -491,40 +604,35 @@ async function syncNotas(){
 
 /* ===== Anotar (bloco de notas) ===== */
 function pAnotar(){
-  const pend=S.notas.filter(n=>!n.env), env=S.notas.filter(n=>n.env);
-  const tk=ghTok();
-  const item=(n,i)=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'Aguardando cards':'Questão '+(i+1)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
+  const draft=$('#tx')?$('#tx').value:'';
+  const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env);
+  const item=n=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'✓ enviada':tk?'enviando…':'não enviada'}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
     <textarea class="note" id="tx" placeholder="Anote o erro desta questão (o que caiu, o que você marcou, o comentário…)"></textarea>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
-    <p class="mute small" style="text-align:center;margin-top:8px">Cada "Guardar" vira um bloco separado. Anote quantas questões quiser.</p>
-    ${pend.length?`<div class="sec">Bloco de notas · ${pend.length}</div><div class="rows">${pend.map(item).join('')}</div>
-      <button class="btn ghost" id="cp" style="margin-top:16px">Enviar pro Claude (${pend.length})</button>
-      <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Vai direto pro Claude. Os cards chegam por volta de 12h30 e 21h30.':'Copia tudo separado por questão. Depois é só colar no chat.'}</p>`:''}
-    ${env.length?`<details class="sent"><summary>Aguardando cards · ${env.length} ›</summary><div class="rows" style="margin-top:10px">${env.slice().reverse().map(item).join('')}</div></details>`:''}
+    <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Conecte o GitHub (lá embaixo) para as anotações irem sozinhas.'}</p>
+    ${lista.length?`<div class="sec">Aguardando cards · ${lista.length}</div><div class="rows">${lista.map(item).join('')}</div>`:''}
+    ${!tk&&naoEnv.length?`<button class="btn ghost" id="cp" style="margin-top:16px">Copiar para colar no chat (${naoEnv.length})</button>`:''}
     <div class="foot"><button class="link" id="gh">${tk?'GitHub conectado ✓':'conectar GitHub'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
-  $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();toast('Guardado');pAnotar()};
+  $('#tx').value=draft;
+  $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();$('#tx').value='';toast('Guardado');pAnotar();enviarPendentes()};
   const cp=$('#cp'); if(cp) cp.onclick=async()=>{
-    if(tk){
-      cp.disabled=true; cp.textContent='Enviando…';
-      try{await enviarGH(pend);pend.forEach(n=>n.env=true);save();toast('Enviado! Os cards chegam por volta de 12h30 e 21h30.');pAnotar()}
-      catch(e){cp.disabled=false;cp.textContent='Tentar de novo';toast(String(e.message)==='401'?'Chave do GitHub inválida ou vencida':'Sem conexão — tente de novo')}
-      return;
-    }
-    const txt='UERJ Cards — comentários para virar cards ('+pend.length+(pend.length>1?' questões':' questão')+')\n\n'+pend.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
+    const txt='UERJ Cards — comentários para virar cards ('+naoEnv.length+(naoEnv.length>1?' questões':' questão')+')\n\n'+naoEnv.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
     try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
-    pend.forEach(n=>n.env=true);save();toast('Copiado! Cole no chat do Claude.');pAnotar();
+    naoEnv.forEach(n=>n.env=true);save();toast('Copiado! Cole no chat do Claude.');pAnotar();
   };
   document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
     const n=S.notas.find(x=>x.id==el.dataset.id);
     folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>
       <button class="btn" id="ns" style="margin-top:12px">Salvar</button>
-      <div class="foot"><button class="link" id="tg">${n.env?'voltar pro bloco de notas':'marcar como enviada'}</button><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
-    $('#ns').onclick=()=>{const t=$('#ne').value.trim();if(t){n.t=t;save()}fecharFolha();pAnotar()};
-    $('#tg').onclick=()=>{n.env=!n.env;save();fecharFolha();pAnotar()};
-    $('#del').onclick=()=>{if(confirm('Apagar esta anotação?')){S.notas=S.notas.filter(x=>x!==n);save();fecharFolha();pAnotar()}};
+      <div class="foot"><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
+    $('#ns').onclick=async()=>{const t=$('#ne').value.trim();fecharFolha();if(!t||t===n.t)return;n.t=t;save();pAnotar();
+      if(n.env&&tk){try{await ghMod(d=>{const x=d.pendentes.find(p=>String(p.id)===String(n.id));if(x)x.t=t})}catch(e){toast('Sem internet — tente editar de novo depois')}}};
+    $('#del').onclick=async()=>{ if(!(await confirmar('Apagar esta anotação?','Apagar')))return;
+      S.notas=S.notas.filter(x=>x!==n);save();pAnotar();
+      if(n.env&&tk){try{await ghMod(d=>{d.pendentes=d.pendentes.filter(p=>String(p.id)!==String(n.id))})}catch(e){}} };
   });
   $('#gh').onclick=()=>{
     folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Conectar GitHub</div>
@@ -539,7 +647,7 @@ function pAnotar(){
   };
   $('#imp').onclick=()=>{
     folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Importar cards</div><p class="mute small" style="margin-bottom:10px">Só use se o Claude te mandar um bloco de cards pra colar.</p><textarea class="note" id="ij"></textarea><button class="btn" id="ib" style="margin-top:12px">Importar</button>`);
-    $('#ib').onclick=()=>{try{const j=JSON.parse($('#ij').value);const arr=Array.isArray(j)?j:j.cards;if(!Array.isArray(arr))throw 0;const ids=new Set(S.extra.map(c=>c.id));arr.forEach(c=>{if(c.id&&c.frente){if(ids.has(c.id))S.extra=S.extra.filter(x=>x.id!==c.id);S.extra.push(c)}});save();setCards(Object.values(BYID).filter(c=>!S.extra.find(x=>x.id===c.id)));fecharFolha();toast(arr.length+' cards importados');render()}catch(e){toast('Não reconheci esse bloco')}};
+    $('#ib').onclick=()=>{try{const j=JSON.parse($('#ij').value);const arr=Array.isArray(j)?j:j.cards;if(!Array.isArray(arr))throw 0;const ids=new Set(S.extra.map(c=>c.id));arr.forEach(c=>{if(c.id&&c.frente){if(ids.has(c.id))S.extra=S.extra.filter(x=>x.id!==c.id);S.extra.push(c)}});save();reaplicar();fecharFolha();toast(arr.length+' cards importados');render()}catch(e){toast('Não reconheci esse bloco')}};
   };
   $('#bk').onclick=()=>{
     folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Backup do progresso</div><p class="mute small" style="margin-bottom:12px">Pra levar seu progresso pra outro aparelho.</p>
@@ -547,8 +655,19 @@ function pAnotar(){
       <textarea class="note" id="bt" style="margin-top:14px;min-height:90px" placeholder="…ou cole aqui um progresso copiado"></textarea>
       <button class="btn" id="bi" style="margin-top:10px">Restaurar</button>`);
     $('#bx').onclick=async()=>{const t=JSON.stringify(S);try{await navigator.clipboard.writeText(t);toast('Copiado')}catch(e){$('#bt').value=t}};
-    $('#bi').onclick=()=>{try{const j=JSON.parse($('#bt').value);if(!j.srs)throw 0;if(!confirm('Substituir o progresso deste aparelho?'))return;S=j;save();fecharFolha();toast('Restaurado');render()}catch(e){toast('Backup inválido')}};
+    $('#bi').onclick=()=>{try{const j=JSON.parse($('#bt').value);if(!j.srs)throw 0;confirmar('Substituir o progresso deste aparelho?','Substituir').then(ok=>{if(!ok)return;S=j;fixS();save();reaplicar();toast('Restaurado');render()})}catch(e){toast('Backup inválido')}};
   };
+}
+
+/* ===== Diálogos no visual do app ===== */
+function confirmar(msg,ok='Confirmar',sub=''){return new Promise(res=>{
+  folha(`<div class="serif" style="font-size:21px">${esc(msg)}</div>${sub?`<p class="mute small" style="margin-top:6px">${esc(sub)}</p>`:''}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px"><button class="btn ghost" id="cn">Cancelar</button><button class="btn" id="cy" style="background:var(--bad)">${esc(ok)}</button></div>`);
+  $('#cn').onclick=()=>{fecharFolha();res(false)}; $('#cy').onclick=()=>{fecharFolha();res(true)};
+})}
+function escolha(titulo,opcoes,atual,cb){
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">${esc(titulo)}</div>${opcoes.map(o=>`<button class="opi rd ${o.v===atual?'on':''}" data-v="${o.v}"><span class="bx">${o.v===atual?'✓':''}</span>${esc(o.t)}</button>`).join('')}`);
+  document.querySelectorAll('#sheet .opi').forEach(b=>b.onclick=()=>{fecharFolha();cb(b.dataset.v)});
 }
 
 /* ===== Folha ===== */
