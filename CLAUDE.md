@@ -57,7 +57,14 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - As questões `quiz` devem imitar o estilo UERJ: caso clínico curto, 4 alternativas (A–D), uma pegadinha plausível entre os distratores.
 - Corrigir o que a anotação tiver de errado; conferir fatos duvidosos (portarias, doses, classificações) na fonte oficial vigente antes de escrever.
 - Frente curta e objetiva.
-- **Verso direto, mas BEM EXPLICADO:** comece com a resposta em uma frase e depois explique o porquê (mecanismo, lógica, como a banca cobra) em 2–4 frases. Pode usar parágrafos separados por linha em branco (`\n\n`).
+- **Verso direto, mas BEM EXPLICADO e SEMPRE ESTRUTURADO** (ela não suporta texto corrido, uma frase atrás da outra):
+  - 1ª linha: a resposta direta, com o termo-chave em `**negrito**`.
+  - Linha em branco (`\n\n`) e depois a explicação em **tópicos** (linhas começando com `- `), uma ideia por linha.
+  - Mudou de assunto/definição dentro do card (ex.: "Por quê:", "Conduta:", "Via:") → nova linha em branco + rótulo curto + tópicos.
+  - Cada item de classificação em sua própria linha: `- **IIA** → ...` / `- **IIB** → ...`.
+  - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque. Nunca junte várias definições numa frase só.
+  - Exemplo:
+    `**Sinal do Psoas.**\n\n- O apêndice retrocecal encosta no psoas.\n- Estender a coxa direita estira o músculo → dói.`
 - **Sempre que possível, uma ilustração** em `visual`. Só deixe sem quando não houver nada visual que ajude. Layout limpo: a Jacke é visual e se cansa com excesso.
 - **IMAGEM REAL TEM PRIORIDADE** sobre desenho: achado de exame, foto clínica, peça, lâmina, radiografia, ECG, anatomia, dermatologia, sinais semiológicos etc. → use `{"tipo":"img"}` com imagem real. **Não desenhe em SVG algo que existe como imagem real.**
 - Tabela, fluxograma, comparação (`vs`), lista e grupos você pode e deve criar. SVG só para esquema conceitual que não existe como foto (ex.: mapa de estadiamento).

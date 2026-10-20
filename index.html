@@ -145,7 +145,12 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;background:var(--ca
 .nfull img{max-width:100%;max-height:260px;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:var(--shadow)}
 .addimg{display:block;margin:10px auto 0;font-size:13.5px;color:var(--rose);font-weight:500}
 .vcap{font-size:12.5px;color:var(--mute);padding:8px 12px}
-.ans p+p{margin-top:10px}
+.ans p+p{margin-top:6px}
+.ans .blq+.blq{margin-top:14px}
+.ans ul{margin:6px 0 0;padding-left:20px}
+.ans li{margin:5px 0;font-size:16px;line-height:1.45}
+.ans li::marker{color:var(--rose)}
+.ans strong,.pega strong,.uerj strong,.opt strong{font-weight:600;color:var(--wine)}
 
 /* end */
 .end{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
@@ -463,8 +468,14 @@ function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());con
 const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 
 /* ===== Visuais ===== */
-const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${esc(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:'');
-const paras=t=>String(t||'').split(/\n\s*\n/).map(x=>`<p>${esc(x.trim())}</p>`).join('');
+const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
+/* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
+const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+const inlBr=t=>String(t||'').split('\n').map(x=>inl(x.trim())).filter(Boolean).join('<br>');
+const paras=t=>String(t||'').split(/\n\s*\n/).map(b=>{
+  let h='',ul=[]; const flush=()=>{ if(ul.length){ h+='<ul>'+ul.map(x=>'<li>'+inl(x)+'</li>').join('')+'</ul>'; ul=[]; } };
+  b.split('\n').map(x=>x.trim()).filter(Boolean).forEach(x=>{ if(/^[-•]\s+/.test(x)) ul.push(x.replace(/^[-•]\s+/,'')); else { flush(); h+='<p>'+inl(x)+'</p>'; } });
+  flush(); return '<div class="blq">'+h+'</div>'; }).join('');
 function visual(v){
   if(!v) return '';
   if(Array.isArray(v)) return v.map(visual).join('');
@@ -479,7 +490,7 @@ function visual(v){
 }
 function cardCompleto(c){
   let h=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div>`;
-  if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${esc((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
+  if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${inlBr((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
   else h+=`<div class="ans">${paras(c.verso)}${visual(c.visual)}</div>`;
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
@@ -870,6 +881,7 @@ function editarCard(id){
   const c=BYID[id], r=RAW[id]; if(!c) return;
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Editar card</div>
     <div class="tm">Baralho</div><button class="sel" id="eb" style="margin:6px 0 4px"><span class="sv" style="font-size:14px">${esc(c.area)} › ${esc(c.tema)} › ${esc(c.sub)}</span><span class="ch">▾</span></button>
+    <p class="mute small" style="margin-top:4px">Formatação: cada linha = uma linha · "- " no começo = tópico · **texto** = destaque</p>
     <div class="tm">Pergunta</div><textarea class="ned" id="ef">${esc(c.frente)}</textarea>
     ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div><textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div><textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
     <div class="tm">Pegadinha (opcional)</div><textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
@@ -1380,7 +1392,7 @@ function proximoCard(){
   const w=$('#sw'), f=$('#sf');
   w.innerHTML=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div><div id="ar"></div>`;
   if(c.tipo==='quiz'){
-    $('#ar').innerHTML=`<div class="opts">${c.opcoes.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c hide">${esc((c.comentarios||[])[i]||'')}</span></span></button>`).join('')}</div>`;
+    $('#ar').innerHTML=`<div class="opts">${c.opcoes.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c hide">${inlBr((c.comentarios||[])[i]||'')}</span></span></button>`).join('')}</div>`;
     f.innerHTML='';
     document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
       const i=+b.dataset.i, ok=i===c.certa;

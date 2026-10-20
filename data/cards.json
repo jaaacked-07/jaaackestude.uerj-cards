@@ -8,7 +8,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: as 9 diretrizes em palavras-chave",
-      "verso": "Não decore o texto inteiro — decore a palavra-chave de cada uma.",
+      "verso": "Não decore o texto inteiro: decore a **palavra-chave** de cada diretriz (tabela abaixo).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -64,7 +64,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: as ações de vigilância são só coletivas? Em quais pontos de atenção acontecem?",
-      "verso": "Individuais OU coletivas, em TODOS os pontos de atenção.",
+      "verso": "**Individuais OU coletivas**, em **TODOS** os pontos de atenção.\n\n- Não são só coletivas.\n- Não ficam só na APS: a vigilância está em toda a Rede de Atenção.",
       "pegadinha": "Alternativa que diz \"apenas coletivas\" ou \"apenas na APS\" está errada.",
       "fonte": "Resolução CNS 588/2018 (diretriz II)",
       "add": "2026-10-20"
@@ -76,7 +76,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Quais vigilâncias a PNVS manda integrar? \nPNVS: politica nacional de vigilancia sanitaria",
-      "verso": "As 4 vigilâncias + os laboratórios de saúde pública — preservando as especificidades de cada uma.",
+      "verso": "PNVS: politica nacional de vigilancia sanitaria\n\n- As 4 vigilâncias + os laboratórios de saúde pública.\n- Integrar preservando as especificidades de cada uma.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -108,7 +108,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: qual nível de atenção é a coordenadora do cuidado?",
-      "verso": "A Atenção Primária. A vigilância entra em toda a RAS, em especial na APS.",
+      "verso": "**Atenção Primária (APS).**\n\n- A vigilância entra em toda a Rede de Atenção à Saúde.\n- Em especial na APS, que é a coordenadora do cuidado.",
       "fonte": "Resolução CNS 588/2018 (diretriz III)",
       "add": "2026-10-20"
     },
@@ -119,7 +119,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Emergências em saúde pública: a PNVS manda observar qual documento?",
-      "verso": "O Regulamento Sanitário Internacional (RSI).",
+      "verso": "**Regulamento Sanitário Internacional (RSI).**",
       "fonte": "Resolução CNS 588/2018 (diretriz VII)",
       "add": "2026-10-20"
     },
@@ -130,7 +130,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Gestão de risco na PNVS: quais as etapas?",
-      "verso": "Identificar → planejar → intervir → regular → comunicar → monitorar.",
+      "verso": "Identificar → Planejar → Intervir → Regular → Comunicar → Monitorar.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -175,7 +175,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Qual a premissa das Internações por Condições Sensíveis à APS (ICSAP)?",
-      "verso": "APS oportuna e de boa qualidade evita a internação — ou reduz sua frequência — nessas condições.",
+      "verso": "**APS oportuna e de boa qualidade evita a internação** (ou reduz sua frequência) nessas condições.\n\n- Por isso a ICSAP alta sugere APS falhando.",
       "fonte": "Lista brasileira de ICSAP (Portaria SAS/MS 221/2008)",
       "add": "2026-10-20"
     },
@@ -186,7 +186,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Para que serve a lista brasileira de ICSAP?",
-      "verso": "Indicador indireto da APS.",
+      "verso": "É um **indicador indireto da qualidade da APS**.\n\n- Usos na tabela abaixo.\n- Só vale se a fonte de dados for confiável.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -206,7 +206,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais são as condições sensíveis à APS? (agrupe para lembrar)",
-      "verso": "Pense: \"se o posto funcionasse bem, essa pessoa não internaria\".",
+      "verso": "Pense: **\"se o posto funcionasse bem, essa pessoa não internaria\"**.\n\n- Os grupos abaixo ajudam a lembrar a lista.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -261,7 +261,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
-      "verso": "Epilepsia, úlcera gastrintestinal, angina, insuficiência cardíaca, AVC (doença cerebrovascular) e DIP.",
+      "verso": "Todas estas ESTÃO na lista:\n\n- Epilepsia\n- Úlcera gastrintestinal\n- Angina\n- Insuficiência cardíaca\n- AVC (doença cerebrovascular)\n- DIP",
       "pegadinha": "A banca coloca essas como distratores achando que você vai excluir. Elas entram!",
       "fonte": "Portaria SAS/MS 221/2008",
       "add": "2026-10-20"
@@ -296,7 +296,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
-      "verso": "Posição do apêndice → sinal que aparece.",
+      "verso": "Cada sinal aponta uma **posição do apêndice** ou só **irritação peritoneal** (tabela abaixo).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -342,7 +342,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Apendicite RETROCECAL: qual o sinal mais associado?",
-      "verso": "Sinal do Psoas — o apêndice inflamado encosta no músculo psoas, e estender a coxa direita estira o músculo e dói.",
+      "verso": "**Sinal do Psoas.**\n\n- O apêndice retrocecal fica encostado no músculo psoas.\n- Estender a coxa direita estira o psoas → dói.",
       "pegadinha": "No retrocecal, a dor pode ir para o flanco/lombar e os sinais peritoneais anteriores (Blumberg) podem ser fracos.",
       "fonte": "Comentário da questão UERJ",
       "add": "2026-10-20"
@@ -354,7 +354,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Apendicite PÉLVICA: qual o sinal mais associado?",
-      "verso": "Sinal do Obturador — rotação interna da coxa direita com quadril e joelho fletidos a 90°.",
+      "verso": "**Sinal do Obturador.**\n\n- Como pesquisar: quadril e joelho fletidos a 90° + rotação interna da coxa direita.\n- O apêndice pélvico encosta no músculo obturador interno.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -382,7 +382,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Rovsing × Dunphy: qual é qual?",
-      "verso": "Rovsing: palpo a FIE e dói a FID. Dunphy: a dor na FID piora ao tossir. Os dois indicam irritação peritoneal — nenhum define a posição.",
+      "verso": "**Rovsing:** palpo a FIE → dói a FID.\n**Dunphy:** a dor na FID piora ao tossir.\n\n- Os dois indicam irritação peritoneal.\n- Nenhum define a posição do apêndice.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -433,7 +433,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
-      "verso": "Os acidentes + tétano + violência sexual e tentativa de suicídio.",
+      "verso": "**Só SMS (município):**\n\n- Acidentes (trabalho, animal peçonhento, animal com risco de raiva)\n- Tétano (acidental e neonatal)\n- Violência sexual e tentativa de suicídio",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -455,7 +455,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
-      "verso": "Doenças de transmissão respiratória/bacteriana graves + Chagas aguda + Zika em gestante + varicela grave.",
+      "verso": "**SMS + SES (sem o MS):**\n\n- Doenças bacterianas/respiratórias graves (coqueluche, difteria, meningites, Haemophilus)\n- Chagas aguda\n- Zika em gestante\n- Varicela grave ou óbito",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -478,7 +478,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Lógica para lembrar quem vai até o Ministério (SMS + SES + MS)",
-      "verso": "Se ameaça o país (risco de surto, doença eliminada/rara, emergência, óbito de arbovirose) → vai até o MS.",
+      "verso": "**Ameaça o país → vai até o Ministério.**\n\n- Risco de surto ou emergência\n- Doença eliminada ou rara\n- Óbito por arbovirose\n- Bioterrorismo",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -540,7 +540,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Dengue, chikungunya e malária: quando é imediata e quando é semanal?",
-      "verso": "Casos comuns = semanal. Só fica imediata (até o MS) a situação de alarme.",
+      "verso": "**Casos comuns = semanal.**\n**Situação de alarme = imediata (até o MS).**\n\n- Dengue: só o óbito é imediato.\n- Chikungunya: imediata em área sem transmissão ou óbito.\n- Malária: imediata fora da Amazônia.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -623,7 +623,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
-      "verso": "A FIGO estadia pelo quanto o tumor andou para fora do colo: I fica no colo → II sai do útero (vagina alta ou paramétrio) → III chega na vagina baixa, na parede pélvica, no rim (hidronefrose) ou em linfonodos → IV sai da pelve ou invade bexiga/reto.\n\nDesde 2018, exame de imagem e anatomia patológica podem ser usados em qualquer estádio (antes era só clínico), e quando há dúvida fica-se com o estádio menor.",
+      "verso": "A FIGO estadia pelo **quanto o tumor andou para fora do colo**:\n\n- **I** → fica no colo\n- **II** → sai do útero (vagina alta ou paramétrio)\n- **III** → vagina baixa, parede pélvica, rim (hidronefrose) ou linfonodos\n- **IV** → sai da pelve ou invade bexiga/reto\n\nDesde 2018:\n- Imagem e patologia podem ser usadas em qualquer estádio (antes era só clínico).\n- Na dúvida, fica-se com o estádio menor.",
       "visual": {
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 292\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<rect x=\"6\" y=\"40\" width=\"9\" height=\"200\" rx=\"4\" fill=\"var(--mute)\" opacity=\".45\"/><rect x=\"325\" y=\"40\" width=\"9\" height=\"200\" rx=\"4\" fill=\"var(--mute)\" opacity=\".45\"/>\n\n<rect x=\"22\" y=\"122\" width=\"126\" height=\"40\" rx=\"18\" fill=\"var(--rose-soft)\"/><rect x=\"192\" y=\"122\" width=\"126\" height=\"40\" rx=\"18\" fill=\"var(--rose-soft)\"/>\n<text x=\"85\" y=\"139\" font-size=\"12\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">IIB</text><text x=\"85\" y=\"153\" font-size=\"9.5\" fill=\"var(--mute)\" text-anchor=\"middle\">paramétrio</text>\n<text x=\"255\" y=\"139\" font-size=\"12\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">IIB</text><text x=\"255\" y=\"153\" font-size=\"9.5\" fill=\"var(--mute)\" text-anchor=\"middle\">paramétrio</text>\n<path d=\"M118 42 Q170 18 222 42 Q240 86 206 122 L134 122 Q100 86 118 42Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/>\n<text x=\"170\" y=\"82\" font-size=\"10\" fill=\"var(--mute)\" text-anchor=\"middle\">corpo uterino</text>\n<rect x=\"147\" y=\"118\" width=\"46\" height=\"44\" rx=\"9\" fill=\"var(--wine)\"/>\n<text x=\"170\" y=\"145\" font-size=\"15\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">I</text>\n<rect x=\"155\" y=\"162\" width=\"30\" height=\"62\" fill=\"var(--rose)\" opacity=\".75\"/>\n<rect x=\"155\" y=\"224\" width=\"30\" height=\"30\" rx=\"4\" fill=\"var(--rose)\" opacity=\".35\"/>\n<rect x=\"155\" y=\"162\" width=\"30\" height=\"92\" rx=\"4\" fill=\"none\" stroke=\"var(--mute)\" stroke-width=\"1.2\"/>\n<line x1=\"187\" y1=\"190\" x2=\"214\" y2=\"190\" stroke=\"var(--mute)\"/><text x=\"217\" y=\"187\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIA</text><text x=\"217\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">2/3 superiores</text><text x=\"217\" y=\"212\" font-size=\"9.5\" fill=\"var(--mute)\">da vagina</text>\n<line x1=\"187\" y1=\"240\" x2=\"214\" y2=\"240\" stroke=\"var(--mute)\"/><text x=\"217\" y=\"237\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIA</text><text x=\"217\" y=\"250\" font-size=\"9.5\" fill=\"var(--mute)\">1/3 inferior</text><text x=\"217\" y=\"262\" font-size=\"9.5\" fill=\"var(--mute)\">da vagina</text>\n<line x1=\"17\" y1=\"66\" x2=\"26\" y2=\"66\" stroke=\"var(--mute)\"/><text x=\"29\" y=\"70\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIB</text><text x=\"22\" y=\"84\" font-size=\"9.5\" fill=\"var(--mute)\">parede pélvica</text><text x=\"22\" y=\"96\" font-size=\"9.5\" fill=\"var(--mute)\">ou hidronefrose</text>\n<circle cx=\"34\" cy=\"186\" r=\"5\" fill=\"var(--mid)\"/><circle cx=\"46\" cy=\"199\" r=\"5\" fill=\"var(--mid)\"/>\n<text x=\"58\" y=\"190\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIC1</text><text x=\"58\" y=\"203\" font-size=\"9.5\" fill=\"var(--mute)\">linfonodos</text><text x=\"58\" y=\"215\" font-size=\"9.5\" fill=\"var(--mute)\">pélvicos</text>\n<circle cx=\"140\" cy=\"12\" r=\"5\" fill=\"var(--mid)\"/><circle cx=\"154\" cy=\"12\" r=\"5\" fill=\"var(--mid)\"/>\n<text x=\"166\" y=\"10\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIC2</text><text x=\"166\" y=\"23\" font-size=\"9.5\" fill=\"var(--mute)\">para-aórticos</text>\n<text x=\"10\" y=\"286\" font-size=\"10\" fill=\"var(--ink)\"><tspan font-weight=\"700\" fill=\"var(--wine)\">IVA</tspan> mucosa de bexiga/reto (biópsia) · <tspan font-weight=\"700\" fill=\"var(--wine)\">IVB</tspan> à distância</text>\n</svg>",
@@ -640,7 +640,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio I (restrito ao colo): como se divide?",
-      "verso": "IA é o tumor que só aparece no microscópio, separado pela profundidade de invasão. IB é o tumor que invade mais que 5 mm, separado pelo tamanho (2 e 4 cm).\n\nO que muda conduta é o salto IA → IB e, dentro do IB, se passa de 4 cm (IB3), porque aí a cirurgia deixa de ser a primeira opção.",
+      "verso": "- **IA** → tumor só visto no microscópio; separado pela **profundidade** de invasão.\n- **IB** → invade > 5 mm; separado pelo **tamanho** (2 e 4 cm).\n\nO que muda conduta:\n- O salto IA → IB.\n- Passar de 4 cm (IB3): a cirurgia deixa de ser a primeira opção.",
       "visual": [
         {
           "tipo": "tabela",
@@ -689,7 +689,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "IIA × IIB: qual a diferença e por que importa tanto?",
-      "verso": "IIA: o tumor desceu para os 2/3 superiores da vagina, sem paramétrio (IIA1 ≤ 4 cm, IIA2 > 4 cm). IIB: invadiu o paramétrio, sem chegar à parede pélvica.\n\nO paramétrio é o divisor de águas do tratamento: até IIA1 ainda dá para operar (histerectomia radical); a partir do IIB o tratamento é quimiorradiação.",
+      "verso": "- **IIA** → 2/3 superiores da vagina, **sem** paramétrio (IIA1 ≤ 4 cm · IIA2 > 4 cm).\n- **IIB** → **paramétrio invadido**, sem chegar à parede pélvica.\n\nPor que importa:\n- O paramétrio é o divisor de águas do tratamento.\n- Até IIA1 → ainda dá para operar (histerectomia radical).\n- A partir do IIB → quimiorradiação.",
       "visual": [
         {
           "tipo": "img",
@@ -715,7 +715,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
-      "verso": "IIIA: vagina no terço inferior. IIIB: parede pélvica e/ou hidronefrose/rim excluso. IIIC: linfonodo positivo, qualquer que seja o tamanho do tumor (IIIC1 pélvico, IIIC2 para-aórtico).\n\nA lógica do IIIB: o ureter passa colado ao paramétrio; se o tumor o obstrui, ele já chegou perto da parede pélvica.",
+      "verso": "- **IIIA** → terço inferior da vagina.\n- **IIIB** → parede pélvica e/ou hidronefrose (rim excluso).\n- **IIIC** → linfonodo positivo, qualquer tamanho do tumor (IIIC1 pélvico · IIIC2 para-aórtico).\n\nLógica do IIIB:\n- O ureter passa colado ao paramétrio.\n- Se o tumor o obstrui, já chegou perto da parede pélvica.",
       "visual": [
         {
           "tipo": "tabela",
@@ -760,7 +760,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio IV: IVA × IVB",
-      "verso": "IVA: invasão da mucosa da bexiga ou do reto, comprovada por biópsia. IVB: metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA precisa invadir a mucosa — não basta o tumor encostar no órgão.",
+      "verso": "- **IVA** → invasão da **mucosa** da bexiga ou do reto, comprovada por biópsia.\n- **IVB** → metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA:\n- Precisa invadir a mucosa.\n- Não basta o tumor encostar no órgão.",
       "pegadinha": "Edema bolhoso da bexiga na cistoscopia NÃO classifica como IVA.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20",
@@ -778,7 +778,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Câncer de colo: tratamento por estádio",
-      "verso": "Quanto mais cedo, mais cirúrgico; a partir de tumor volumoso (> 4 cm) ou paramétrio invadido, o padrão vira quimiorradiação (cisplatina semanal + radioterapia externa + braquiterapia).\n\nQuem deseja gestar e tem doença inicial pode preservar o útero (conização ou traquelectomia radical).",
+      "verso": "**Quanto mais cedo, mais cirúrgico.**\n\n- Tumor > 4 cm ou paramétrio invadido → quimiorradiação (cisplatina semanal + RT externa + braquiterapia).\n- Doença inicial e desejo de gestar → pode preservar o útero (conização ou traquelectomia radical).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -892,7 +892,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
-      "verso": "PALM são as causas ESTRUTURAIS (aparecem no ultrassom, histeroscopia ou biópsia). COEIN são as NÃO estruturais (sem lesão visível).\n\nA classificação existe para padronizar a investigação: primeiro procura lesão (PALM); se não acha, pensa em coagulação, ovulação, endométrio, remédio ou outras causas (COEIN). A paciente pode ter mais de uma letra ao mesmo tempo.",
+      "verso": "- **PALM** → causas **estruturais** (aparecem no ultrassom, histeroscopia ou biópsia).\n- **COEIN** → causas **não estruturais** (sem lesão visível).\n\nComo usar:\n- Primeiro procure lesão (PALM).\n- Se não achar, pense em coagulação, ovulação, endométrio, remédio ou outras (COEIN).\n- A paciente pode ter mais de uma letra ao mesmo tempo.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -928,7 +928,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Sangramento uterino em paciente anticoagulada: qual letra do PALM-COEIN?",
-      "verso": "I — Iatrogênica. Na revisão FIGO de 2018, o sangramento por anticoagulante (varfarina, rivaroxabana etc.) deixou de ser C e passou para I. Remédios que atrapalham a ovulação (ex.: antidepressivos tricíclicos, fenotiazinas) também saíram de O e foram para I.\n\nC fica para distúrbios de coagulação da própria paciente (ex.: doença de von Willebrand).",
+      "verso": "**I — Iatrogênica.**\n\nRevisão FIGO 2018:\n- Anticoagulante (varfarina, rivaroxabana…) saiu de C e foi para I.\n- Remédios que atrapalham a ovulação (tricíclicos, fenotiazinas) saíram de O e foram para I.\n\n**C** fica para distúrbio de coagulação da própria paciente (ex.: von Willebrand).",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -957,7 +957,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Leiomioma: classificação FIGO de 0 a 8",
-      "verso": "Os números vão de dentro (cavidade) para fora (serosa). 0–2 são submucosos, os que mais causam sangramento e infertilidade, e são tratados por histeroscopia (melhor no 0 e 1). 3–4 são intramurais e 5–7 subserosos.\n\nO 8 é o mioma fora do miométrio (cervical, parasita). Mioma que atravessa a parede inteira é descrito com dois números: ex. 2–5.",
+      "verso": "Os números vão **de dentro (cavidade) para fora (serosa)**.\n\n- **0–2** → submucosos: mais sangramento e infertilidade; tratados por histeroscopia (melhor no 0 e 1).\n- **3–4** → intramurais.\n- **5–7** → subserosos.\n- **8** → fora do miométrio (cervical, parasita).\n\nMioma que atravessa a parede inteira recebe dois números (ex.: 2–5).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1036,7 +1036,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS: o que significa cada categoria e qual a conduta?",
-      "verso": "O BI-RADS é a forma padronizada de o radiologista dizer o risco de câncer da lesão — e cada número já traz a conduta. Decore a conduta, porque é isso que a prova pergunta.\n\n0 e 3 são os que mais confundem: 0 = exame incompleto (precisa complementar); 3 = provavelmente benigno (segue, não biopsia).",
+      "verso": "Cada número do BI-RADS **já traz a conduta**. Decore a conduta: é isso que a prova pergunta.\n\nOs que mais confundem:\n- **0** → exame incompleto: complementar agora.\n- **3** → provavelmente benigno: seguir, não biopsiar.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1094,7 +1094,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 3: como é o seguimento?",
-      "verso": "Controle de curto intervalo por cerca de 2 anos: imagem em 6 meses (da mama afetada), depois aos 12 e aos 24 meses (bilateral). Se a lesão ficar estável o tempo todo, passa a BI-RADS 2 e volta à rotina.\n\nSe crescer ou mudar de aspecto em qualquer controle, vira BI-RADS 4 e vai para biópsia.",
+      "verso": "**Controle de curto intervalo por ~2 anos.**\n\n- 6 meses → mama afetada\n- 12 meses → bilateral\n- 24 meses → bilateral\n\nResultado:\n- Estável o tempo todo → vira BI-RADS 2 (rotina).\n- Cresceu ou mudou → vira BI-RADS 4 (biópsia).",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1119,7 +1119,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 4: como se subdivide?",
-      "verso": "O 4 cobre um risco muito largo (2 a 95%), por isso foi dividido em A, B e C. Todos vão para biópsia — a subdivisão serve para checar se o resultado da biópsia \"bate\" com a imagem.\n\nSe a imagem é 4C/5 e a biópsia vem benigna, o resultado é discordante: repete a biópsia ou faz retirada cirúrgica.",
+      "verso": "O 4 cobre um risco muito largo (2–95%), por isso foi dividido em **A, B e C**.\n\n- **Todos vão para biópsia.**\n- A subdivisão serve para checar se a biópsia \"bate\" com a imagem.\n\nImagem 4C/5 + biópsia benigna = **discordância** → nova biópsia ou retirada cirúrgica.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1152,7 +1152,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo mamário palpável: qual o primeiro exame de imagem conforme a idade?",
-      "verso": "Abaixo de 30 anos, ultrassonografia: a mama jovem é densa (a mamografia enxerga pouco) e radiação desnecessária deve ser evitada. A partir dos 40, mamografia diagnóstica + ultrassom. Entre 30 e 39, o ultrassom costuma ser o primeiro, completando com mamografia se necessário.\n\nNódulo palpável é exame DIAGNÓSTICO, não de rastreamento — não espera a faixa etária do rastreio.",
+      "verso": "- **< 30 anos** → ultrassom (mama densa; evitar radiação).\n- **30–39 anos** → ultrassom primeiro, mamografia se necessário.\n- **≥ 40 anos** → mamografia diagnóstica + ultrassom.\n\nNódulo palpável é exame **diagnóstico**, não de rastreamento: não espera a faixa etária do rastreio.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1185,7 +1185,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo de mama: o que sugere benignidade e o que sugere malignidade?",
-      "verso": "Benigno tende a ser \"organizado\": oval, margens bem definidas, mais largo que alto (paralelo à pele), móvel e fibroelástico — o típico é o fibroadenoma da mulher jovem.\n\nMaligno \"invade\": forma irregular, margens espiculadas ou indistintas, mais alto que largo, sombra acústica posterior, endurecido, fixo, com retração de pele ou mamilo.",
+      "verso": "**Benigno é \"organizado\":**\n- Oval, margens bem definidas\n- Mais largo que alto (paralelo à pele)\n- Móvel e fibroelástico\n- Típico: fibroadenoma da mulher jovem\n\n**Maligno \"invade\":**\n- Irregular, margens espiculadas ou indistintas\n- Mais alto que largo, sombra acústica posterior\n- Endurecido, fixo, retração de pele ou mamilo",
       "visual": [
         {
           "tipo": "vs",
@@ -1226,7 +1226,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Cisto mamário: simples, complicado e complexo — qual a conduta?",
-      "verso": "Cisto simples (anecoico, parede fina, reforço acústico posterior) é benigno: BI-RADS 2, nada a fazer — punção só se doer. Complicado (só ecos internos, sem parte sólida) é BI-RADS 3: controle. Complexo (componente sólido ou septo espesso) é BI-RADS 4: biópsia.\n\nO que manda é a presença de parte SÓLIDA dentro do cisto.",
+      "verso": "O que manda é a presença de **parte SÓLIDA** dentro do cisto.\n\n- **Simples** (anecoico, parede fina, reforço posterior) → BI-RADS 2: nada a fazer; punção só se doer.\n- **Complicado** (só ecos internos) → BI-RADS 3: controle.\n- **Complexo** (componente sólido ou septo espesso) → BI-RADS 4: biópsia.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1263,7 +1263,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Qual biópsia usar em cada lesão de mama?",
-      "verso": "Nódulo sólido: core biopsy (agulha grossa) guiada por ultrassom — dá histologia, diferencia in situ de invasivo e permite imuno-histoquímica. PAAF dá só citologia: serve para cisto e linfonodo axilar. Microcalcificações: biópsia a vácuo (mamotomia) guiada por estereotaxia.\n\nCirúrgica (excisional) fica para quando há discordância entre imagem e resultado.",
+      "verso": "- **Nódulo sólido** → core biopsy guiada por USG (histologia, diferencia in situ × invasivo, permite imuno-histoquímica).\n- **Cisto / linfonodo axilar** → PAAF (só citologia).\n- **Microcalcificações** → biópsia a vácuo (mamotomia) por estereotaxia.\n- **Discordância imagem × resultado** → biópsia cirúrgica.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1300,7 +1300,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Rastreamento do câncer de mama no SUS: quem e a cada quanto tempo?",
-      "verso": "Mulheres de 50 a 74 anos: mamografia de rastreamento a cada 2 anos (bienal). De 40 a 49 (e acima de 74), o SUS não restringe a mamografia por demanda, após conversa sobre riscos e benefícios (decisão compartilhada).\n\nMudou em setembro de 2025: antes o limite superior era 69 anos e a faixa de 40–49 dependia de sintoma ou risco.",
+      "verso": "**Ministério da Saúde (set/2025):**\n\n- **50–74 anos** → mamografia a cada 2 anos.\n- **40–49 e > 74 anos** → por demanda, com decisão compartilhada (riscos × benefícios).\n\nO que mudou: antes o limite era 69 anos e a faixa de 40–49 dependia de sintoma ou risco.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1426,7 +1426,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quais são os parâmetros de uma CTG normal (tranquilizadora)?",
-      "verso": "Linha de base 110–160 bpm, variabilidade moderada (6–25 bpm), presença de acelerações e ausência de desacelerações.\n\nA variabilidade é o melhor marcador de oxigenação do SNC fetal: variabilidade preservada praticamente exclui acidemia naquele momento. Aceleração = subida ≥ 15 bpm por ≥ 15 s (a partir de 32 semanas); feto \"reativo\" tem ≥ 2 acelerações em 20 min.",
+      "verso": "**CTG normal (tranquilizadora):**\n\n- Linha de base 110–160 bpm\n- Variabilidade moderada (6–25 bpm)\n- Acelerações presentes\n- Sem desacelerações\n\nPor quê:\n- A **variabilidade** é o melhor marcador de oxigenação do SNC fetal: preservada, praticamente exclui acidemia naquele momento.\n- Aceleração = subida ≥ 15 bpm por ≥ 15 s (a partir de 32 semanas).\n- Feto **reativo** = ≥ 2 acelerações em 20 min.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1469,7 +1469,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Diferencie DIP I, DIP II e DIP III (umbilical): causa e relação com a contração.",
-      "verso": "DIP I (precoce) = compressão do polo cefálico; DIP II (tardia) = insuficiência uteroplacentária/hipoxemia; DIP III (variável) = compressão do cordão.\n\nDIP I é reflexo vagal: começa e termina junto com a contração, nadir coincide com o pico (imagem em espelho) — fisiológica. DIP II tem decalagem: o nadir vem DEPOIS do pico da contração (> 20 s), porque o feto só sente a queda de O2 após o pico de compressão do espaço interviloso. DIP III tem forma variável (em V/W, queda e recuperação abruptas) e não guarda relação fixa com a contração.",
+      "verso": "- **DIP I (precoce)** → compressão do polo cefálico\n- **DIP II (tardia)** → insuficiência uteroplacentária / hipoxemia\n- **DIP III (variável)** → compressão do cordão\n\nRelação com a contração:\n- **DIP I:** reflexo vagal; começa e termina junto com a contração (em espelho) — fisiológica.\n- **DIP II:** nadir **depois** do pico da contração (> 20 s); o feto só sente a queda de O2 após o pico.\n- **DIP III:** forma variável (V/W), queda e recuperação abruptas; sem relação fixa com a contração.",
       "visual": [
         {
           "tipo": "svg",
@@ -1524,7 +1524,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quando a DIP umbilical (variável) é desfavorável?",
-      "verso": "Quando há sinais de hipóxia associada: recuperação lenta, queda > 60 bpm ou duração > 60 s, perda da variabilidade, ausência de \"ombros\", overshoot (taquicardia após a dip) ou forma bifásica (em W).\n\nA DIP III típica tem \"ombros\" (pequenas acelerações antes e depois, por compressão só da veia umbilical) e recupera rápido — o feto está compensando. Quando os ombros somem e a recuperação fica lenta, a compressão está levando a acidemia.",
+      "verso": "**É desfavorável quando há sinais de hipóxia:**\n\n- Recuperação lenta\n- Queda > 60 bpm ou duração > 60 s\n- Perda da variabilidade\n- Ausência de \"ombros\"\n- Overshoot (taquicardia após a DIP)\n- Forma bifásica (em W)\n\nPor quê:\n- A DIP III típica tem \"ombros\" e recupera rápido: o feto está compensando.\n- Sem ombros e com recuperação lenta, a compressão está levando à acidemia.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -1557,7 +1557,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Classificação da CTG intraparto em 3 categorias (NICHD/ACOG): o que é Categoria I, II e III?",
-      "verso": "Categoria I = normal; Categoria III = anormal (alto risco de acidemia); Categoria II = tudo que não é I nem III (indeterminada).\n\nCategoria III exige variabilidade AUSENTE associada a DIP II recorrentes, DIP III recorrentes ou bradicardia — ou padrão sinusoidal. Por isso a variabilidade é a chave: sem ela ausente (ou sinusoidal), nunca é categoria III.",
+      "verso": "- **Categoria I** → normal\n- **Categoria II** → indeterminada (tudo que não é I nem III)\n- **Categoria III** → anormal, alto risco de acidemia\n\nCategoria III exige:\n- Variabilidade **ausente** + (DIP II recorrentes, DIP III recorrentes ou bradicardia)\n- OU padrão sinusoidal\n\nSem variabilidade ausente (ou sinusoidal), **nunca** é categoria III.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1594,7 +1594,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Conduta diante de CTG categoria III / sofrimento fetal agudo intraparto",
-      "verso": "Reanimação intraútero imediata e, se não houver melhora rápida, parto pela via mais rápida e segura.\n\nAs medidas corrigem a causa da hipóxia: decúbito lateral esquerdo (descomprime cava/aorta), suspender ocitocina e tratar taquissistolia (tocolítico agudo se necessário), corrigir hipotensão materna (hidratação; vasopressor pós-analgesia), toque vaginal para afastar prolapso de cordão. Período expulsivo com critérios → fórceps/vácuo; senão → cesárea.",
+      "verso": "**Reanimação intraútero imediata.** Sem melhora rápida → parto pela via mais rápida e segura.\n\nMedidas (corrigem a causa):\n- Decúbito lateral esquerdo (descomprime cava/aorta)\n- Suspender ocitocina; tratar taquissistolia (tocolítico agudo se preciso)\n- Corrigir hipotensão materna (hidratação; vasopressor pós-analgesia)\n- Toque vaginal para afastar prolapso de cordão\n\nVia de parto:\n- Período expulsivo com critérios → fórceps ou vácuo\n- Senão → cesárea",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1623,7 +1623,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Causas de alteração da linha de base e da variabilidade (taquicardia, bradicardia, padrão sinusoidal, variabilidade reduzida)",
-      "verso": "Cada alteração aponta para um grupo de causas — muitas não são hipóxia.\n\nTaquicardia: febre materna/corioamnionite (principal), hipertireoidismo, drogas beta-agonistas, anemia/hipóxia fetal inicial. Bradicardia: hipotensão materna, taquissistolia, prolapso de cordão, DPP, rotura uterina, BAV congênito (lúpus/anti-Ro). Variabilidade reduzida: sono fetal, opioides, sulfato de magnésio, prematuridade, acidemia. Sinusoidal: anemia fetal grave.",
+      "verso": "Cada alteração aponta um grupo de causas — **muitas não são hipóxia**.\n\n- **Taquicardia** → febre materna/corioamnionite (principal), hipertireoidismo, beta-agonistas, anemia/hipóxia inicial\n- **Bradicardia** → hipotensão materna, taquissistolia, prolapso de cordão, DPP, rotura uterina, BAV congênito (lúpus/anti-Ro)\n- **Variabilidade reduzida** → sono fetal, opioides, sulfato de magnésio, prematuridade, acidemia\n- **Sinusoidal** → anemia fetal grave",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -1721,7 +1721,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "O que é sofrimento fetal crônico e quais são as principais causas?",
-      "verso": "É a hipoxemia fetal de instalação lenta por insuficiência placentária, que leva à restrição de crescimento, oligodrâmnio e redistribuição do fluxo (centralização).\n\nA placenta perde área funcional (vasculopatia), o feto reduz o crescimento e desvia sangue para cérebro, coração e suprarrenais, poupando rins e intestino — por isso cai a diurese fetal e surge oligodrâmnio. Causas: síndromes hipertensivas (principal), diabetes com vasculopatia, LES/SAAF, nefropatia, tabagismo, gestação prolongada.",
+      "verso": "**Hipoxemia fetal de instalação lenta por insuficiência placentária.**\n\nO que acontece:\n- Restrição de crescimento\n- Redistribuição do fluxo (centralização): cérebro, coração e suprarrenais são poupados\n- Rins recebem menos sangue → cai a diurese → **oligodrâmnio**\n\nCausas:\n- Síndromes hipertensivas (principal)\n- Diabetes com vasculopatia\n- LES / SAAF, nefropatia\n- Tabagismo\n- Gestação prolongada",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1746,7 +1746,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Perfil biofísico fetal (Manning): parâmetros, pontuação e interpretação",
-      "verso": "5 parâmetros, 0 ou 2 pontos cada: CTG, movimentos respiratórios, movimentos corpóreos, tônus e volume de líquido amniótico. 8–10 normal; 6 duvidoso; ≤ 4 anormal.\n\nOs 4 primeiros são marcadores AGUDOS (dependem do SNC no momento do exame); o líquido amniótico é o marcador CRÔNICO. Na hipóxia, as atividades somem na ordem inversa em que surgiram na embriologia: a última a surgir (reatividade da FCF) é a primeira a desaparecer, e o tônus (primeiro a surgir) é o último.",
+      "verso": "**5 parâmetros, 0 ou 2 pontos cada:**\n\n- CTG\n- Movimentos respiratórios\n- Movimentos corpóreos\n- Tônus\n- Volume de líquido amniótico\n\nInterpretação: **8–10** normal · **6** duvidoso · **≤ 4** anormal.\n\nPor quê:\n- Os 4 primeiros são marcadores **agudos** (dependem do SNC no momento).\n- O líquido é o marcador **crônico**.\n- Na hipóxia, somem na ordem inversa da embriologia: a reatividade (última a surgir) some primeiro; o tônus (primeiro) some por último.",
       "visual": [
         {
           "tipo": "tabela",
@@ -1804,7 +1804,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Dopplervelocimetria no sofrimento fetal crônico: qual a sequência de alterações?",
-      "verso": "Artéria umbilical com resistência aumentada → centralização (vasodilatação da cerebral média) → diástole zero → diástole reversa → ducto venoso alterado.\n\nA umbilical reflete a placenta: quanto maior a resistência placentária, menor o fluxo diastólico, até zerar ou inverter. A cerebral média reage dilatando (poupa o cérebro) — relação umbilical/cerebral > 1 (ou índice cerebroplacentário < 1) define centralização. O ducto venoso (onda \"a\" ausente ou reversa) mostra falência cardíaca e acidemia: é o marcador mais tardio e mais grave.",
+      "verso": "**Sequência de piora:**\n\n- Artéria umbilical com resistência aumentada\n- Centralização (cerebral média dilata)\n- Diástole zero\n- Diástole reversa\n- Ducto venoso alterado\n\nO que cada um mostra:\n- **Umbilical** → reflete a placenta; quanto mais resistência, menos fluxo diastólico.\n- **Cerebral média** → dilata para poupar o cérebro; relação U/C > 1 (ou ICP < 1) = centralização.\n- **Ducto venoso** (onda \"a\" ausente/reversa) → falência cardíaca e acidemia: o mais tardio e grave.",
       "visual": [
         {
           "tipo": "svg",
@@ -1848,7 +1848,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Conduta (momento do parto) no feto com insuficiência placentária conforme o Doppler",
-      "verso": "Quanto pior o Doppler, mais cedo se interrompe — mas antes de 34 semanas sempre com corticoide, e antes de ~32 semanas com sulfato de magnésio para neuroproteção.\n\nReferência usada pela FEBRASGO (baseada no protocolo de Barcelona): resistência aumentada/centralização → parto com 37 semanas; diástole zero → 34 semanas; diástole reversa → 30 semanas; ducto venoso alterado (onda a ausente/reversa) → a partir da viabilidade (~26 semanas). Via: diástole zero/reversa ou DV alterado → cesárea; nas formas leves, indução é possível com monitorização contínua.",
+      "verso": "**Quanto pior o Doppler, mais cedo se interrompe.**\n- < 34 semanas → corticoide.\n- < ~32 semanas → sulfato de magnésio (neuroproteção).\n\nMomento do parto (FEBRASGO / protocolo de Barcelona):\n- Resistência aumentada / centralização → **37 semanas**\n- Diástole zero → **34 semanas**\n- Diástole reversa → **30 semanas**\n- Ducto venoso alterado → a partir da viabilidade (**~26 semanas**)\n\nVia:\n- Diástole zero/reversa ou DV alterado → cesárea\n- Formas leves → indução possível, com monitorização contínua",
       "visual": {
         "tipo": "tabela",
         "cab": [
