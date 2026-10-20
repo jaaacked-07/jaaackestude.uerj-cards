@@ -130,6 +130,12 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;background:var(--ca
 .grp .g h5{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;margin-bottom:7px}
 .grp .g .cs{display:flex;flex-wrap:wrap;gap:6px}
 .grp .g .cs span{background:var(--rose-soft);border-radius:10px;padding:5px 10px;font-size:14px}
+.vsvg{background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:12px}
+.vsvg svg{display:block;width:100%;height:auto}
+.vimg{background:var(--card);box-shadow:var(--shadow);border-radius:14px;overflow:hidden}
+.vimg img{display:block;width:100%;height:auto}
+.vcap{font-size:12.5px;color:var(--mute);padding:8px 12px}
+.ans p+p{margin-top:10px}
 
 /* end */
 .end{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
@@ -342,8 +348,12 @@ function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());con
 const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 
 /* ===== Visuais ===== */
+const paras=t=>String(t||'').split(/\n\s*\n/).map(x=>`<p>${esc(x.trim())}</p>`).join('');
 function visual(v){
   if(!v) return '';
+  if(Array.isArray(v)) return v.map(visual).join('');
+  if(v.tipo==='svg') return `<div class="vis vsvg">${v.svg}${v.legenda?`<div class="vcap" style="padding:8px 2px 0">${esc(v.legenda)}</div>`:''}</div>`;
+  if(v.tipo==='img') return `<div class="vis vimg"><img src="${esc(v.src)}" alt="${esc(v.legenda||'')}" loading="lazy" onerror="this.parentNode.style.display='none'">${v.legenda||v.fonte?`<div class="vcap">${esc(v.legenda||'')}${v.fonte?` · ${esc(v.fonte)}`:''}</div>`:''}</div>`;
   if(v.tipo==='tabela') return `<div class="vis"><table class="t">${v.cab&&v.cab.some(x=>x)?'<tr>'+v.cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map(c=>`<td>${esc(c)}</td>`).join('')+'</tr>').join('')}</table></div>`;
   if(v.tipo==='fluxo') return `<div class="vis flow">${v.passos.map((p,i)=>(i?'<div class="fa"></div>':'')+(Array.isArray(p)?`<div class="fr">${p.map(x=>`<div class="fn">${esc(x)}</div>`).join('')}</div>`:`<div class="fn">${esc(p)}</div>`)).join('')}</div>`;
   if(v.tipo==='vs') return `<div class="vis vs"><div class="s"><h4>${esc(v.a.t)}</h4>${v.a.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div><div class="o">×</div><div class="s"><h4>${esc(v.b.t)}</h4>${v.b.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`;
@@ -354,7 +364,7 @@ function visual(v){
 function cardCompleto(c){
   let h=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div>`;
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${esc((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
-  else h+=`<div class="ans"><p>${esc(c.verso)}</p>${visual(c.visual)}</div>`;
+  else h+=`<div class="ans">${paras(c.verso)}${visual(c.visual)}</div>`;
   h+=minhaHTML(c.id);
   if(c.pegadinha) h+=`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`;
   if(c.fonte) h+=`<div class="src">${esc(c.fonte)}</div>`;
@@ -776,7 +786,7 @@ function pAnotar(){
   const item=n=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'✓ enviada':tk?'enviando…':'não enviada'}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
-    <textarea class="note" id="tx" placeholder="Anote o erro desta questão (o que caiu, o que você marcou, o comentário…)"></textarea>
+    <textarea class="note" id="tx" placeholder="Anote o erro desta questão… (Enter guarda · Shift+Enter pula linha)"></textarea>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
     <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Toque em "conectar" (lá embaixo) para as anotações irem sozinhas.'}</p>
     ${lista.length?`<div class="sec">Aguardando cards · ${lista.length}</div><div class="rows">${lista.map(item).join('')}</div>`:''}
@@ -784,6 +794,7 @@ function pAnotar(){
     <div class="foot"><button class="link" id="gh">${tk?'sincronização ✓':'conectar'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#tx').value=draft;
+  $('#tx').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); $('#sv').click(); } };
   $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();$('#tx').value='';toast('Guardado');pAnotar();enviarPendentes()};
   const cp=$('#cp'); if(cp) cp.onclick=async()=>{
     const txt='UERJ Cards — comentários para virar cards ('+naoEnv.length+(naoEnv.length>1?' questões':' questão')+')\n\n'+naoEnv.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
@@ -873,7 +884,7 @@ function proximoCard(){
   } else {
     f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
     $('#sh').onclick=()=>{
-      $('#ar').innerHTML=`<div class="ans"><p>${esc(c.verso)}</p>${visual(c.visual)}${c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:''}${minhaHTML(c.id)}</div>`;
+      $('#ar').innerHTML=`<div class="ans">${paras(c.verso)}${visual(c.visual)}${c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:''}${minhaHTML(c.id)}</div>`;
       f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };

@@ -2,61 +2,148 @@
   "versao": "2026-10-20",
   "cards": [
     {
-      "id": "pnvs-01", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-01",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "PNVS: as 9 diretrizes em palavras-chave",
       "verso": "Não decore o texto inteiro — decore a palavra-chave de cada uma.",
-      "visual": {"tipo": "tabela", "cab": ["", "Palavra-chave"], "linhas": [
-        ["I", "Pactuar entre as 3 esferas (respeitando o locorregional)"],
-        ["II", "Ações individuais OU coletivas · 4 vigilâncias · todos os pontos de atenção"],
-        ["III", "Integralidade · VS em toda a RAS · APS coordenadora"],
-        ["IV", "Integrar as vigilâncias + laboratórios de saúde pública"],
-        ["V", "Cooperação técnico-científica nacional e internacional"],
-        ["VI", "Gestão de risco"],
-        ["VII", "Emergências em saúde pública · RSI"],
-        ["VIII", "Produzir evidências (análise da situação de saúde)"],
-        ["IX", "Avaliar impacto de novas tecnologias"]
-      ]},
-      "fonte": "Resolução CNS 588/2018", "add": "2026-10-20"
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Palavra-chave"
+        ],
+        "linhas": [
+          [
+            "I",
+            "Pactuar entre as 3 esferas (respeitando o locorregional)"
+          ],
+          [
+            "II",
+            "Ações individuais OU coletivas · 4 vigilâncias · todos os pontos de atenção"
+          ],
+          [
+            "III",
+            "Integralidade · VS em toda a RAS · APS coordenadora"
+          ],
+          [
+            "IV",
+            "Integrar as vigilâncias + laboratórios de saúde pública"
+          ],
+          [
+            "V",
+            "Cooperação técnico-científica nacional e internacional"
+          ],
+          [
+            "VI",
+            "Gestão de risco"
+          ],
+          [
+            "VII",
+            "Emergências em saúde pública · RSI"
+          ],
+          [
+            "VIII",
+            "Produzir evidências (análise da situação de saúde)"
+          ],
+          [
+            "IX",
+            "Avaliar impacto de novas tecnologias"
+          ]
+        ]
+      },
+      "fonte": "Resolução CNS 588/2018",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-02", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-02",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "PNVS: as ações de vigilância são só coletivas? Em quais pontos de atenção acontecem?",
       "verso": "Individuais OU coletivas, em TODOS os pontos de atenção.",
       "pegadinha": "Alternativa que diz \"apenas coletivas\" ou \"apenas na APS\" está errada.",
-      "fonte": "Resolução CNS 588/2018 (diretriz II)", "add": "2026-10-20"
+      "fonte": "Resolução CNS 588/2018 (diretriz II)",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-03", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-03",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "Quais vigilâncias a PNVS manda integrar?",
       "verso": "As 4 vigilâncias + os laboratórios de saúde pública — preservando as especificidades de cada uma.",
-      "visual": {"tipo": "grupos", "grupos": [
-        {"t": "4 vigilâncias", "itens": ["Epidemiológica", "Sanitária", "Saúde ambiental", "Saúde do trabalhador(a)"]},
-        {"t": "+ junto", "itens": ["Laboratórios de saúde pública"]}
-      ]},
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "4 vigilâncias",
+            "itens": [
+              "Epidemiológica",
+              "Sanitária",
+              "Saúde ambiental",
+              "Saúde do trabalhador(a)"
+            ]
+          },
+          {
+            "t": "+ junto",
+            "itens": [
+              "Laboratórios de saúde pública"
+            ]
+          }
+        ]
+      },
       "pegadinha": "Integrar NÃO é fundir: as especificidades são preservadas.",
-      "fonte": "Resolução CNS 588/2018 (diretriz IV)", "add": "2026-10-20"
+      "fonte": "Resolução CNS 588/2018 (diretriz IV)",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-04", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-04",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "PNVS: qual nível de atenção é a coordenadora do cuidado?",
       "verso": "A Atenção Primária. A vigilância entra em toda a RAS, em especial na APS.",
-      "fonte": "Resolução CNS 588/2018 (diretriz III)", "add": "2026-10-20"
+      "fonte": "Resolução CNS 588/2018 (diretriz III)",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-05", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-05",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "Emergências em saúde pública: a PNVS manda observar qual documento?",
       "verso": "O Regulamento Sanitário Internacional (RSI).",
-      "fonte": "Resolução CNS 588/2018 (diretriz VII)", "add": "2026-10-20"
+      "fonte": "Resolução CNS 588/2018 (diretriz VII)",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-06", "tipo": "flash", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-06",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "Gestão de risco na PNVS: quais as etapas?",
       "verso": "Identificar → planejar → intervir → regular → comunicar → monitorar.",
-      "visual": {"tipo": "fluxo", "passos": ["Identificação", "Planejamento", "Intervenção", "Regulação", "Comunicação", "Monitoramento"]},
-      "fonte": "Resolução CNS 588/2018 (diretriz VI)", "add": "2026-10-20"
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Identificação",
+          "Planejamento",
+          "Intervenção",
+          "Regulação",
+          "Comunicação",
+          "Monitoramento"
+        ]
+      },
+      "fonte": "Resolução CNS 588/2018 (diretriz VI)",
+      "add": "2026-10-20"
     },
     {
-      "id": "pnvs-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "PNVS",
+      "id": "pnvs-q1",
+      "tipo": "quiz",
+      "tema": "Preventiva",
+      "sub": "PNVS",
       "frente": "Sobre as diretrizes da Política Nacional de Vigilância em Saúde, é INCORRETO afirmar:",
       "opcoes": [
         "As ações de vigilância devem estar inseridas em toda a Rede de Atenção, em especial na APS, coordenadora do cuidado.",
@@ -71,50 +158,115 @@
         "Correta — diretriz VII.",
         "Correta — diretriz IX."
       ],
-      "fonte": "Resolução CNS 588/2018", "add": "2026-10-20"
+      "fonte": "Resolução CNS 588/2018",
+      "add": "2026-10-20"
     },
-
     {
-      "id": "icsap-01", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "id": "icsap-01",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "ICSAP",
       "frente": "Qual a premissa das Internações por Condições Sensíveis à APS (ICSAP)?",
       "verso": "APS oportuna e de boa qualidade evita a internação — ou reduz sua frequência — nessas condições.",
-      "fonte": "Lista brasileira de ICSAP (Portaria SAS/MS 221/2008)", "add": "2026-10-20"
+      "fonte": "Lista brasileira de ICSAP (Portaria SAS/MS 221/2008)",
+      "add": "2026-10-20"
     },
     {
-      "id": "icsap-02", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "id": "icsap-02",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "ICSAP",
       "frente": "Para que serve a lista brasileira de ICSAP?",
       "verso": "Indicador indireto da APS.",
-      "visual": {"tipo": "lista", "itens": [
-        "Comparar o desempenho de serviços de saúde",
-        "Avaliar efeitos de políticas de saúde",
-        "Analisar resolutividade, qualidade e acesso da APS",
-        "!Exige fonte de dados válida e confiável"
-      ]},
-      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Comparar o desempenho de serviços de saúde",
+          "Avaliar efeitos de políticas de saúde",
+          "Analisar resolutividade, qualidade e acesso da APS",
+          "!Exige fonte de dados válida e confiável"
+        ]
+      },
+      "fonte": "Portaria SAS/MS 221/2008",
+      "add": "2026-10-20"
     },
     {
-      "id": "icsap-03", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "id": "icsap-03",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "ICSAP",
       "frente": "Quais são as condições sensíveis à APS? (agrupe para lembrar)",
       "verso": "Pense: \"se o posto funcionasse bem, essa pessoa não internaria\".",
-      "visual": {"tipo": "grupos", "grupos": [
-        {"t": "Infecções", "itens": ["Imunizáveis / evitáveis", "Gastroenterites", "Ouvido, nariz e garganta", "Pneumonias bacterianas", "Rim e ITU", "Pele e subcutâneo", "DIP"]},
-        {"t": "Respiratórias crônicas", "itens": ["Asma", "Vias aéreas inferiores (DPOC/bronquite)"]},
-        {"t": "Cardiometabólicas", "itens": ["Hipertensão", "Angina", "Insuficiência cardíaca", "Doença cerebrovascular", "Diabetes"]},
-        {"t": "Outras", "itens": ["Anemia", "Deficiências nutricionais", "Epilepsias", "Úlcera gastrintestinal", "Pré-natal e parto"]}
-      ]},
-      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Infecções",
+            "itens": [
+              "Imunizáveis / evitáveis",
+              "Gastroenterites",
+              "Ouvido, nariz e garganta",
+              "Pneumonias bacterianas",
+              "Rim e ITU",
+              "Pele e subcutâneo",
+              "DIP"
+            ]
+          },
+          {
+            "t": "Respiratórias crônicas",
+            "itens": [
+              "Asma",
+              "Vias aéreas inferiores (DPOC/bronquite)"
+            ]
+          },
+          {
+            "t": "Cardiometabólicas",
+            "itens": [
+              "Hipertensão",
+              "Angina",
+              "Insuficiência cardíaca",
+              "Doença cerebrovascular",
+              "Diabetes"
+            ]
+          },
+          {
+            "t": "Outras",
+            "itens": [
+              "Anemia",
+              "Deficiências nutricionais",
+              "Epilepsias",
+              "Úlcera gastrintestinal",
+              "Pré-natal e parto"
+            ]
+          }
+        ]
+      },
+      "fonte": "Portaria SAS/MS 221/2008",
+      "add": "2026-10-20"
     },
     {
-      "id": "icsap-04", "tipo": "flash", "tema": "Preventiva", "sub": "ICSAP",
+      "id": "icsap-04",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "ICSAP",
       "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
       "verso": "Epilepsia, úlcera gastrintestinal, angina, insuficiência cardíaca, AVC (doença cerebrovascular) e DIP.",
       "pegadinha": "A banca coloca essas como distratores achando que você vai excluir. Elas entram!",
-      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+      "fonte": "Portaria SAS/MS 221/2008",
+      "add": "2026-10-20"
     },
     {
-      "id": "icsap-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "ICSAP",
+      "id": "icsap-q1",
+      "tipo": "quiz",
+      "tema": "Preventiva",
+      "sub": "ICSAP",
       "frente": "Qual das condições abaixo NÃO faz parte da lista brasileira de internações por condições sensíveis à Atenção Primária?",
-      "opcoes": ["Epilepsia", "Úlcera gastrintestinal", "Apendicite aguda", "Doença inflamatória pélvica"],
+      "opcoes": [
+        "Epilepsia",
+        "Úlcera gastrintestinal",
+        "Apendicite aguda",
+        "Doença inflamatória pélvica"
+      ],
       "certa": 2,
       "comentarios": [
         "Está na lista (epilepsias).",
@@ -122,47 +274,131 @@
         "Gabarito: apendicite é cirúrgica e não é evitável pela APS.",
         "Está na lista (DIP)."
       ],
-      "fonte": "Portaria SAS/MS 221/2008", "add": "2026-10-20"
+      "fonte": "Portaria SAS/MS 221/2008",
+      "add": "2026-10-20"
     },
-
     {
-      "id": "apend-01", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "id": "apend-01",
+      "tipo": "flash",
+      "tema": "Cirurgia",
+      "sub": "Apendicite — sinais",
       "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
       "verso": "Posição do apêndice → sinal que aparece.",
-      "visual": {"tipo": "tabela", "cab": ["Sinal", "Como", "Sugere"], "linhas": [
-        ["Psoas", "Extensão da coxa D (paciente em decúbito lateral E)", "Retrocecal"],
-        ["Obturador", "Quadril e joelho fletidos a 90° + rotação interna da coxa D", "Pélvica"],
-        ["Rovsing", "Palpar FIE → dói na FID", "Irritação peritoneal"],
-        ["Dunphy", "Tossir → dói na FID", "Irritação peritoneal"],
-        ["Blumberg", "Descompressão brusca dolorosa no ponto de McBurney", "Peritonite localizada"]
-      ]},
-      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "Como",
+          "Sugere"
+        ],
+        "linhas": [
+          [
+            "Psoas",
+            "Extensão da coxa D (paciente em decúbito lateral E)",
+            "Retrocecal"
+          ],
+          [
+            "Obturador",
+            "Quadril e joelho fletidos a 90° + rotação interna da coxa D",
+            "Pélvica"
+          ],
+          [
+            "Rovsing",
+            "Palpar FIE → dói na FID",
+            "Irritação peritoneal"
+          ],
+          [
+            "Dunphy",
+            "Tossir → dói na FID",
+            "Irritação peritoneal"
+          ],
+          [
+            "Blumberg",
+            "Descompressão brusca dolorosa no ponto de McBurney",
+            "Peritonite localizada"
+          ]
+        ]
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-20"
     },
     {
-      "id": "apend-02", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "id": "apend-02",
+      "tipo": "flash",
+      "tema": "Cirurgia",
+      "sub": "Apendicite — sinais",
       "frente": "Apendicite RETROCECAL: qual o sinal mais associado?",
       "verso": "Sinal do Psoas — o apêndice inflamado encosta no músculo psoas, e estender a coxa direita estira o músculo e dói.",
       "pegadinha": "No retrocecal, a dor pode ir para o flanco/lombar e os sinais peritoneais anteriores (Blumberg) podem ser fracos.",
-      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-20"
     },
     {
-      "id": "apend-03", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "id": "apend-03",
+      "tipo": "flash",
+      "tema": "Cirurgia",
+      "sub": "Apendicite — sinais",
       "frente": "Apendicite PÉLVICA: qual o sinal mais associado?",
       "verso": "Sinal do Obturador — rotação interna da coxa direita com quadril e joelho fletidos a 90°.",
-      "visual": {"tipo": "vs", "a": {"t": "Retrocecal", "itens": ["Psoas", "Extensão da coxa"]}, "b": {"t": "Pélvica", "itens": ["Obturador", "Rotação interna"]}},
-      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Retrocecal",
+          "itens": [
+            "Psoas",
+            "Extensão da coxa"
+          ]
+        },
+        "b": {
+          "t": "Pélvica",
+          "itens": [
+            "Obturador",
+            "Rotação interna"
+          ]
+        }
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-20"
     },
     {
-      "id": "apend-04", "tipo": "flash", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "id": "apend-04",
+      "tipo": "flash",
+      "tema": "Cirurgia",
+      "sub": "Apendicite — sinais",
       "frente": "Rovsing × Dunphy: qual é qual?",
       "verso": "Rovsing: palpo a FIE e dói a FID. Dunphy: a dor na FID piora ao tossir. Os dois indicam irritação peritoneal — nenhum define a posição.",
-      "visual": {"tipo": "vs", "a": {"t": "Rovsing", "itens": ["Palpa FIE", "Dói FID"]}, "b": {"t": "Dunphy", "itens": ["Tosse", "Dói FID"]}},
-      "fonte": "Comentário da questão UERJ", "add": "2026-10-20"
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Rovsing",
+          "itens": [
+            "Palpa FIE",
+            "Dói FID"
+          ]
+        },
+        "b": {
+          "t": "Dunphy",
+          "itens": [
+            "Tosse",
+            "Dói FID"
+          ]
+        }
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-20"
     },
     {
-      "id": "apend-q1", "tipo": "quiz", "tema": "Cirurgia", "sub": "Apendicite — sinais",
+      "id": "apend-q1",
+      "tipo": "quiz",
+      "tema": "Cirurgia",
+      "sub": "Apendicite — sinais",
       "frente": "Na apendicite aguda com apêndice em posição retrocecal, o sinal mais comumente observado é:",
-      "opcoes": ["Rovsing", "Psoas", "Obturador", "Dunphy"],
+      "opcoes": [
+        "Rovsing",
+        "Psoas",
+        "Obturador",
+        "Dunphy"
+      ],
       "certa": 1,
       "comentarios": [
         "Dor na FID ao palpar a FIE: irritação peritoneal, não aponta a posição retrocecal.",
@@ -170,66 +406,161 @@
         "Rotação interna da coxa fletida: sugere apêndice pélvico.",
         "Dor na FID à tosse: irritação peritoneal geral, inespecífico."
       ],
-      "fonte": "Questão UERJ", "add": "2026-10-20"
+      "fonte": "Questão UERJ",
+      "add": "2026-10-20"
     },
-
     {
-      "id": "notif-01", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-01",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
       "verso": "Os acidentes + tétano + violência sexual e tentativa de suicídio.",
-      "visual": {"tipo": "lista", "itens": [
-        "Acidente de trabalho",
-        "Acidente por animal peçonhento",
-        "Acidente por animal potencialmente transmissor da raiva",
-        "Tétano (acidental e neonatal)",
-        "Violência sexual e tentativa de suicídio"
-      ]},
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Acidente de trabalho",
+          "Acidente por animal peçonhento",
+          "Acidente por animal potencialmente transmissor da raiva",
+          "Tétano (acidental e neonatal)",
+          "Violência sexual e tentativa de suicídio"
+        ]
+      },
       "pegadinha": "Acidente de trabalho com exposição a material biológico é SEMANAL, não imediato.",
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
     },
     {
-      "id": "notif-02", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-02",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
       "verso": "Doenças de transmissão respiratória/bacteriana graves + Chagas aguda + Zika em gestante + varicela grave.",
-      "visual": {"tipo": "lista", "itens": [
-        "Coqueluche",
-        "Difteria",
-        "Doença de Chagas aguda",
-        "Doença invasiva por Haemophilus influenzae",
-        "Doença meningocócica e outras meningites",
-        "Zika em gestante",
-        "Varicela — caso grave internado ou óbito"
-      ]},
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Coqueluche",
+          "Difteria",
+          "Doença de Chagas aguda",
+          "Doença invasiva por Haemophilus influenzae",
+          "Doença meningocócica e outras meningites",
+          "Zika em gestante",
+          "Varicela — caso grave internado ou óbito"
+        ]
+      },
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
     },
     {
-      "id": "notif-03", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-03",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Lógica para lembrar quem vai até o Ministério (SMS + SES + MS)",
       "verso": "Se ameaça o país (risco de surto, doença eliminada/rara, emergência, óbito de arbovirose) → vai até o MS.",
-      "visual": {"tipo": "grupos", "grupos": [
-        {"t": "Eliminadas / raras", "itens": ["Sarampo", "Rubéola", "Síndrome da rubéola congênita", "Pólio selvagem", "Paralisia flácida aguda", "Raiva humana", "Peste", "Cólera", "Botulismo"]},
-        {"t": "Arboviroses", "itens": ["Febre amarela", "Óbito por dengue", "Chikungunya em área sem transmissão", "Óbito suspeito de chikungunya ou Zika", "Febre do Nilo", "Febre maculosa", "Hantavirose", "Malária fora da Amazônia"]},
-        {"t": "Emergências", "itens": ["ESP — ameaça à saúde pública", "Influenza por novo subtipo", "SRAG por coronavírus", "Febres hemorrágicas (Ebola, Marburg, Lassa…)", "Bioterrorismo (antraz, tularemia, varíola)", "Mpox"]},
-        {"t": "Outros", "itens": ["Evento adverso grave/óbito pós-vacina", "Câncer relacionado ao trabalho", "SIM-P / SIM-A (covid)"]}
-      ]},
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Eliminadas / raras",
+            "itens": [
+              "Sarampo",
+              "Rubéola",
+              "Síndrome da rubéola congênita",
+              "Pólio selvagem",
+              "Paralisia flácida aguda",
+              "Raiva humana",
+              "Peste",
+              "Cólera",
+              "Botulismo"
+            ]
+          },
+          {
+            "t": "Arboviroses",
+            "itens": [
+              "Febre amarela",
+              "Óbito por dengue",
+              "Chikungunya em área sem transmissão",
+              "Óbito suspeito de chikungunya ou Zika",
+              "Febre do Nilo",
+              "Febre maculosa",
+              "Hantavirose",
+              "Malária fora da Amazônia"
+            ]
+          },
+          {
+            "t": "Emergências",
+            "itens": [
+              "ESP — ameaça à saúde pública",
+              "Influenza por novo subtipo",
+              "SRAG por coronavírus",
+              "Febres hemorrágicas (Ebola, Marburg, Lassa…)",
+              "Bioterrorismo (antraz, tularemia, varíola)",
+              "Mpox"
+            ]
+          },
+          {
+            "t": "Outros",
+            "itens": [
+              "Evento adverso grave/óbito pós-vacina",
+              "Câncer relacionado ao trabalho",
+              "SIM-P / SIM-A (covid)"
+            ]
+          }
+        ]
+      },
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
     },
     {
-      "id": "notif-04", "tipo": "flash", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-04",
+      "tipo": "flash",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Dengue, chikungunya e malária: quando é imediata e quando é semanal?",
       "verso": "Casos comuns = semanal. Só fica imediata (até o MS) a situação de alarme.",
-      "visual": {"tipo": "tabela", "cab": ["", "Semanal", "Imediata (MS)"], "linhas": [
-        ["Dengue", "Casos", "Óbitos"],
-        ["Chikungunya", "Casos", "Área sem transmissão · óbito"],
-        ["Malária", "Região amazônica", "Fora da Amazônia"]
-      ]},
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Semanal",
+          "Imediata (MS)"
+        ],
+        "linhas": [
+          [
+            "Dengue",
+            "Casos",
+            "Óbitos"
+          ],
+          [
+            "Chikungunya",
+            "Casos",
+            "Área sem transmissão · óbito"
+          ],
+          [
+            "Malária",
+            "Região amazônica",
+            "Fora da Amazônia"
+          ]
+        ]
+      },
       "pegadinha": "\"Caso de dengue = notificação imediata\" está ERRADO.",
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
     },
     {
-      "id": "notif-q1", "tipo": "quiz", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-q1",
+      "tipo": "quiz",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Qual dos agravos abaixo é de notificação imediata APENAS para a Secretaria Municipal de Saúde?",
-      "opcoes": ["Coqueluche", "Tentativa de suicídio", "Febre amarela", "Doença meningocócica"],
+      "opcoes": [
+        "Coqueluche",
+        "Tentativa de suicídio",
+        "Febre amarela",
+        "Doença meningocócica"
+      ],
       "certa": 1,
       "comentarios": [
         "SMS + SES.",
@@ -237,12 +568,21 @@
         "SMS + SES + MS.",
         "SMS + SES."
       ],
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
     },
     {
-      "id": "notif-q2", "tipo": "quiz", "tema": "Preventiva", "sub": "Notificação imediata",
+      "id": "notif-q2",
+      "tipo": "quiz",
+      "tema": "Preventiva",
+      "sub": "Notificação imediata",
       "frente": "Paciente com dengue clássica, sem sinais de alarme, atendido na UBS. A notificação deve ser:",
-      "opcoes": ["Imediata à SMS, SES e MS", "Imediata apenas à SMS", "Semanal", "Dispensada, pois não há gravidade"],
+      "opcoes": [
+        "Imediata à SMS, SES e MS",
+        "Imediata apenas à SMS",
+        "Semanal",
+        "Dispensada, pois não há gravidade"
+      ],
       "certa": 2,
       "comentarios": [
         "Só os óbitos por dengue vão imediatamente até o MS.",
@@ -250,7 +590,388 @@
         "Gabarito: casos de dengue são de notificação semanal.",
         "Dengue é de notificação compulsória — sempre notifica."
       ],
-      "fonte": "Portaria GM/MS 217/2023", "add": "2026-10-20"
+      "fonte": "Portaria GM/MS 217/2023",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-01",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
+      "verso": "A FIGO estadia pelo quanto o tumor andou para fora do colo: I fica no colo → II sai do útero (vagina alta ou paramétrio) → III chega na vagina baixa, na parede pélvica, no rim (hidronefrose) ou em linfonodos → IV sai da pelve ou invade bexiga/reto.\n\nDesde 2018, exame de imagem e anatomia patológica podem ser usados em qualquer estádio (antes era só clínico), e quando há dúvida fica-se com o estádio menor.",
+      "visual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 292\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<rect x=\"6\" y=\"40\" width=\"9\" height=\"200\" rx=\"4\" fill=\"var(--mute)\" opacity=\".45\"/><rect x=\"325\" y=\"40\" width=\"9\" height=\"200\" rx=\"4\" fill=\"var(--mute)\" opacity=\".45\"/>\n\n<rect x=\"22\" y=\"122\" width=\"126\" height=\"40\" rx=\"18\" fill=\"var(--rose-soft)\"/><rect x=\"192\" y=\"122\" width=\"126\" height=\"40\" rx=\"18\" fill=\"var(--rose-soft)\"/>\n<text x=\"85\" y=\"139\" font-size=\"12\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">IIB</text><text x=\"85\" y=\"153\" font-size=\"9.5\" fill=\"var(--mute)\" text-anchor=\"middle\">paramétrio</text>\n<text x=\"255\" y=\"139\" font-size=\"12\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">IIB</text><text x=\"255\" y=\"153\" font-size=\"9.5\" fill=\"var(--mute)\" text-anchor=\"middle\">paramétrio</text>\n<path d=\"M118 42 Q170 18 222 42 Q240 86 206 122 L134 122 Q100 86 118 42Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/>\n<text x=\"170\" y=\"82\" font-size=\"10\" fill=\"var(--mute)\" text-anchor=\"middle\">corpo uterino</text>\n<rect x=\"147\" y=\"118\" width=\"46\" height=\"44\" rx=\"9\" fill=\"var(--wine)\"/>\n<text x=\"170\" y=\"145\" font-size=\"15\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">I</text>\n<rect x=\"155\" y=\"162\" width=\"30\" height=\"62\" fill=\"var(--rose)\" opacity=\".75\"/>\n<rect x=\"155\" y=\"224\" width=\"30\" height=\"30\" rx=\"4\" fill=\"var(--rose)\" opacity=\".35\"/>\n<rect x=\"155\" y=\"162\" width=\"30\" height=\"92\" rx=\"4\" fill=\"none\" stroke=\"var(--mute)\" stroke-width=\"1.2\"/>\n<line x1=\"187\" y1=\"190\" x2=\"214\" y2=\"190\" stroke=\"var(--mute)\"/><text x=\"217\" y=\"187\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIA</text><text x=\"217\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">2/3 superiores</text><text x=\"217\" y=\"212\" font-size=\"9.5\" fill=\"var(--mute)\">da vagina</text>\n<line x1=\"187\" y1=\"240\" x2=\"214\" y2=\"240\" stroke=\"var(--mute)\"/><text x=\"217\" y=\"237\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIA</text><text x=\"217\" y=\"250\" font-size=\"9.5\" fill=\"var(--mute)\">1/3 inferior</text><text x=\"217\" y=\"262\" font-size=\"9.5\" fill=\"var(--mute)\">da vagina</text>\n<line x1=\"17\" y1=\"66\" x2=\"26\" y2=\"66\" stroke=\"var(--mute)\"/><text x=\"29\" y=\"70\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIB</text><text x=\"22\" y=\"84\" font-size=\"9.5\" fill=\"var(--mute)\">parede pélvica</text><text x=\"22\" y=\"96\" font-size=\"9.5\" fill=\"var(--mute)\">ou hidronefrose</text>\n<circle cx=\"34\" cy=\"186\" r=\"5\" fill=\"var(--mid)\"/><circle cx=\"46\" cy=\"199\" r=\"5\" fill=\"var(--mid)\"/>\n<text x=\"58\" y=\"190\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIC1</text><text x=\"58\" y=\"203\" font-size=\"9.5\" fill=\"var(--mute)\">linfonodos</text><text x=\"58\" y=\"215\" font-size=\"9.5\" fill=\"var(--mute)\">pélvicos</text>\n<circle cx=\"140\" cy=\"12\" r=\"5\" fill=\"var(--mid)\"/><circle cx=\"154\" cy=\"12\" r=\"5\" fill=\"var(--mid)\"/>\n<text x=\"166\" y=\"10\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\">IIIC2</text><text x=\"166\" y=\"23\" font-size=\"9.5\" fill=\"var(--mute)\">para-aórticos</text>\n<text x=\"10\" y=\"286\" font-size=\"10\" fill=\"var(--ink)\"><tspan font-weight=\"700\" fill=\"var(--wine)\">IVA</tspan> mucosa de bexiga/reto (biópsia) · <tspan font-weight=\"700\" fill=\"var(--wine)\">IVB</tspan> à distância</text>\n</svg>",
+        "legenda": "Mapa dos estádios — vista frontal da pelve."
+      },
+      "fonte": "FIGO 2018 (Int J Gynaecol Obstet)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-02",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Estádio I (restrito ao colo): como se divide?",
+      "verso": "IA é o tumor que só aparece no microscópio, separado pela profundidade de invasão. IB é o tumor que invade mais que 5 mm, separado pelo tamanho (2 e 4 cm).\n\nO que muda conduta é o salto IA → IB e, dentro do IB, se passa de 4 cm (IB3), porque aí a cirurgia deixa de ser a primeira opção.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Estádio",
+          "Critério"
+        ],
+        "linhas": [
+          [
+            "IA1",
+            "Microscópico · invasão até 3 mm"
+          ],
+          [
+            "IA2",
+            "Microscópico · invasão de 3 a 5 mm"
+          ],
+          [
+            "IB1",
+            "Invasão > 5 mm · tumor ≤ 2 cm"
+          ],
+          [
+            "IB2",
+            "Tumor > 2 e ≤ 4 cm"
+          ],
+          [
+            "IB3",
+            "Tumor > 4 cm"
+          ]
+        ]
+      },
+      "pegadinha": "A FIGO 2018 tirou a extensão lateral do estádio IA (só profundidade conta), e invasão linfovascular NÃO muda o estádio.",
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-03",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "IIA × IIB: qual a diferença e por que importa tanto?",
+      "verso": "IIA: o tumor desceu para os 2/3 superiores da vagina, sem paramétrio (IIA1 ≤ 4 cm, IIA2 > 4 cm). IIB: invadiu o paramétrio, sem chegar à parede pélvica.\n\nO paramétrio é o divisor de águas do tratamento: até IIA1 ainda dá para operar (histerectomia radical); a partir do IIB o tratamento é quimiorradiação.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "IIA",
+          "itens": [
+            "Vagina 2/3 superiores",
+            "Paramétrio livre",
+            "Ainda cirúrgico (IIA1)"
+          ]
+        },
+        "b": {
+          "t": "IIB",
+          "itens": [
+            "Paramétrio invadido",
+            "Sem parede pélvica",
+            "Quimiorradiação"
+          ]
+        }
+      },
+      "pegadinha": "\"Paramétrio comprometido\" na questão = IIB e = NÃO operar.",
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-04",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
+      "verso": "IIIA: vagina no terço inferior. IIIB: parede pélvica e/ou hidronefrose/rim excluso. IIIC: linfonodo positivo, qualquer que seja o tamanho do tumor (IIIC1 pélvico, IIIC2 para-aórtico).\n\nA lógica do IIIB: o ureter passa colado ao paramétrio; se o tumor o obstrui, ele já chegou perto da parede pélvica.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Estádio",
+          "Critério"
+        ],
+        "linhas": [
+          [
+            "IIIA",
+            "1/3 inferior da vagina"
+          ],
+          [
+            "IIIB",
+            "Parede pélvica e/ou hidronefrose ou rim não funcionante"
+          ],
+          [
+            "IIIC1",
+            "Linfonodos pélvicos"
+          ],
+          [
+            "IIIC2",
+            "Linfonodos para-aórticos"
+          ]
+        ]
+      },
+      "pegadinha": "Hidronefrose sem outra causa = IIIB mesmo com tumor pequeno. Linfonodo positivo = IIIC mesmo com tumor de 1 cm. Anota-se \"r\" (achado de imagem) ou \"p\" (confirmado na patologia): IIIC1r, IIIC1p.",
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-05",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Estádio IV: IVA × IVB",
+      "verso": "IVA: invasão da mucosa da bexiga ou do reto, comprovada por biópsia. IVB: metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA precisa invadir a mucosa — não basta o tumor encostar no órgão.",
+      "pegadinha": "Edema bolhoso da bexiga na cistoscopia NÃO classifica como IVA.",
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-06",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Câncer de colo: tratamento por estádio",
+      "verso": "Quanto mais cedo, mais cirúrgico; a partir de tumor volumoso (> 4 cm) ou paramétrio invadido, o padrão vira quimiorradiação (cisplatina semanal + radioterapia externa + braquiterapia).\n\nQuem deseja gestar e tem doença inicial pode preservar o útero (conização ou traquelectomia radical).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Estádio",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "IA1 sem invasão linfovascular",
+            "Conização (quer gestar) ou histerectomia simples"
+          ],
+          [
+            "IA1 com invasão linfovascular · IA2",
+            "Histerectomia radical modificada + linfonodos pélvicos (ou traquelectomia radical)"
+          ],
+          [
+            "IB1 · IB2 · IIA1",
+            "Histerectomia radical + linfadenectomia pélvica (alternativa: quimiorradiação)"
+          ],
+          [
+            "IB3 · IIA2",
+            "Quimiorradiação"
+          ],
+          [
+            "IIB a IVA",
+            "Quimiorradiação + braquiterapia"
+          ],
+          [
+            "IVB",
+            "Quimioterapia sistêmica paliativa"
+          ]
+        ]
+      },
+      "fonte": "FIGO 2018 / NCCN",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-q1",
+      "tipo": "quiz",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Mulher, 42 anos, carcinoma escamoso de colo com lesão de 3 cm restrita ao colo ao exame. A tomografia mostra hidronefrose à direita, sem outra causa identificada. Segundo a FIGO 2018, o estádio é:",
+      "opcoes": [
+        "IB2",
+        "IIB",
+        "IIIB",
+        "IVA"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Seria IB2 pelo tamanho, mas a hidronefrose sobe o estádio.",
+        "Paramétrio não foi descrito; e hidronefrose já é III.",
+        "Gabarito: hidronefrose ou rim não funcionante sem outra causa = IIIB, independentemente do tamanho.",
+        "IVA exige invasão de mucosa de bexiga ou reto comprovada por biópsia."
+      ],
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-q2",
+      "tipo": "quiz",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Tumor de colo de 1,8 cm, restrito ao colo, com linfonodo para-aórtico positivo na biópsia. O estádio FIGO 2018 é:",
+      "opcoes": [
+        "IB1",
+        "IIIC1p",
+        "IIIC2p",
+        "IVB"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Seria IB1 pelo tamanho, mas linfonodo positivo muda para IIIC.",
+        "IIIC1 é linfonodo pélvico.",
+        "Gabarito: para-aórtico = IIIC2; confirmado na patologia = \"p\".",
+        "Linfonodo para-aórtico não é metástase à distância na FIGO 2018."
+      ],
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-colo-q3",
+      "tipo": "quiz",
+      "tema": "Ginecologia",
+      "sub": "Câncer de colo — estadiamento FIGO",
+      "frente": "Paciente com câncer de colo estádio IIB. Qual o tratamento de escolha?",
+      "opcoes": [
+        "Histerectomia radical com linfadenectomia pélvica",
+        "Conização com margens livres",
+        "Quimiorradiação com cisplatina e braquiterapia",
+        "Quimioterapia paliativa exclusiva"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Cirurgia vai até IIA1; com paramétrio invadido não se opera.",
+        "Conização é para IA1.",
+        "Gabarito: a partir do IIB o padrão é quimiorradiação (cisplatina + RT externa + braquiterapia).",
+        "Paliativa exclusiva é para IVB."
+      ],
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-sua-01",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
+      "verso": "PALM são as causas ESTRUTURAIS (aparecem no ultrassom, histeroscopia ou biópsia). COEIN são as NÃO estruturais (sem lesão visível).\n\nA classificação existe para padronizar a investigação: primeiro procura lesão (PALM); se não acha, pensa em coagulação, ovulação, endométrio, remédio ou outras causas (COEIN). A paciente pode ter mais de uma letra ao mesmo tempo.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "PALM · estruturais",
+            "itens": [
+              "P · Pólipo",
+              "A · Adenomiose",
+              "L · Leiomioma",
+              "M · Malignidade e hiperplasia"
+            ]
+          },
+          {
+            "t": "COEIN · não estruturais",
+            "itens": [
+              "C · Coagulopatia",
+              "O · disfunção Ovulatória",
+              "E · Endometrial",
+              "I · Iatrogênica",
+              "N · Não classificada"
+            ]
+          }
+        ]
+      },
+      "fonte": "FIGO 2011, revisada em 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-sua-02",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "frente": "Sangramento uterino em paciente anticoagulada: qual letra do PALM-COEIN?",
+      "verso": "I — Iatrogênica. Na revisão FIGO de 2018, o sangramento por anticoagulante (varfarina, rivaroxabana etc.) deixou de ser C e passou para I. Remédios que atrapalham a ovulação (ex.: antidepressivos tricíclicos, fenotiazinas) também saíram de O e foram para I.\n\nC fica para distúrbios de coagulação da própria paciente (ex.: doença de von Willebrand).",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "C · Coagulopatia",
+          "itens": [
+            "Doença da paciente",
+            "Ex.: von Willebrand"
+          ]
+        },
+        "b": {
+          "t": "I · Iatrogênica",
+          "itens": [
+            "Causada por remédio",
+            "Anticoagulante, DIU, hormônio"
+          ]
+        }
+      },
+      "pegadinha": "Muita apostila antiga ainda põe anticoagulante em C. Pela FIGO 2018, é I.",
+      "fonte": "FIGO 2018 (Munro et al., Int J Gynaecol Obstet)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-sua-03",
+      "tipo": "flash",
+      "tema": "Ginecologia",
+      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "frente": "Leiomioma: classificação FIGO de 0 a 8",
+      "verso": "Os números vão de dentro (cavidade) para fora (serosa). 0–2 são submucosos, os que mais causam sangramento e infertilidade, e são tratados por histeroscopia (melhor no 0 e 1). 3–4 são intramurais e 5–7 subserosos.\n\nO 8 é o mioma fora do miométrio (cervical, parasita). Mioma que atravessa a parede inteira é descrito com dois números: ex. 2–5.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Tipo",
+          "Onde está"
+        ],
+        "linhas": [
+          [
+            "0",
+            "Pediculado dentro da cavidade"
+          ],
+          [
+            "1",
+            "Submucoso, < 50% intramural"
+          ],
+          [
+            "2",
+            "Submucoso, ≥ 50% intramural"
+          ],
+          [
+            "3",
+            "Intramural, encostando no endométrio"
+          ],
+          [
+            "4",
+            "Totalmente intramural"
+          ],
+          [
+            "5",
+            "Subseroso, ≥ 50% intramural"
+          ],
+          [
+            "6",
+            "Subseroso, < 50% intramural"
+          ],
+          [
+            "7",
+            "Subseroso pediculado"
+          ],
+          [
+            "8",
+            "Outros (cervical, parasita)"
+          ]
+        ]
+      },
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "figo-sua-q1",
+      "tipo": "quiz",
+      "tema": "Ginecologia",
+      "sub": "Sangramento uterino anormal — PALM-COEIN",
+      "frente": "Mulher, 38 anos, em uso de rivaroxabana por trombose venosa profunda, com aumento do fluxo menstrual. Ultrassom e histeroscopia normais. Pela FIGO (revisão 2018), o sangramento é classificado como:",
+      "opcoes": [
+        "SUA-C (coagulopatia)",
+        "SUA-O (ovulatória)",
+        "SUA-I (iatrogênica)",
+        "SUA-N (não classificada)"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Era assim até 2018; hoje C é para distúrbio de coagulação da paciente.",
+        "Ela não tem disfunção ovulatória descrita.",
+        "Gabarito: anticoagulante = causa iatrogênica (revisão FIGO 2018).",
+        "N é para causas raras ou mal definidas (ex.: malformação arteriovenosa, istmocele)."
+      ],
+      "fonte": "FIGO 2018",
+      "add": "2026-10-20"
     }
   ]
 }

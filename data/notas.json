@@ -1,11 +1,6 @@
 {
   "pendentes": [
     {
-      "id": 1792528528241,
-      "d": "2026-10-20",
-      "t": "Classificação FIGO"
-    },
-    {
       "id": 1792528968889,
       "d": "2026-10-20",
       "t": "Estadiamento CA Endometrio"
@@ -16,5 +11,7 @@
       "t": "Nodulo mamário, BIRADS, acompanhamento, seguimento"
     }
   ],
-  "processadas": []
+  "processadas": [
+    1792528528241
+  ]
 }
