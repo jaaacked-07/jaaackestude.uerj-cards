@@ -273,7 +273,12 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 #lst .rows{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .alvo{outline:2px dashed var(--wine);outline-offset:-3px;background:var(--wine-soft)!important}
 .arrastando{opacity:.35}
-.ghost{position:fixed;z-index:60;pointer-events:none;background:var(--wine);color:#fff;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.25);transform:translate(-50%,-140%);max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dragghost{position:fixed;z-index:60;pointer-events:none;background:var(--wine);color:#fff;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.25);transform:translate(-50%,-140%);max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nt{position:relative;padding-left:48px!important}
+.nt .ck{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:12px;color:#fff;background:var(--card)}
+.nt.sel .ck{background:var(--wine);border-color:var(--wine)}
+.nt.sel{background:var(--wine-soft)}
+.nt .nb.cp{color:var(--mid)}.nt .nb.ok{color:var(--ok)}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -735,7 +740,7 @@ function iniciarDrag(st){
     if(st.cy<90) scrollBy(0,-(90-st.cy)/4); else if(st.cy>b) scrollBy(0,(st.cy-b)/4); },16);
   st.ativo=true; vib(15); st.src.classList.add('arrastando');
   const nome=st.src.dataset.card?(BYID[st.src.dataset.card]||{}).frente:parseK(st.src.dataset.k).p.slice(-1)[0];
-  st.g=document.createElement('div'); st.g.className='ghost'; st.g.textContent=nome; document.body.appendChild(st.g);
+  st.g=document.createElement('div'); st.g.className='dragghost'; st.g.textContent=nome; document.body.appendChild(st.g);
   st.g.style.left=st.x+'px'; st.g.style.top=st.y+'px';
 }
 addEventListener('pointermove',e=>{
@@ -985,8 +990,10 @@ async function syncNotas(){
   }catch(e){}
   if(!proc) return;
   const ps=new Set(proc.map(String)), antes=S.notas.length;
-  S.notas=S.notas.filter(n=>{const x=n.env&&ps.has(String(n.id)); if(x) S.notasDel[n.id]=1; return !x});
-  if(S.notas.length<antes){save();toast('Seus cards novos chegaram ✓');if(!SS)render()}
+  let prontos=0;
+  S.notas.forEach(n=>{ if(n.manual&&!n.pronto&&ps.has(String(n.id))){ n.pronto=true; n.u=Date.now(); prontos++; } });
+  S.notas=S.notas.filter(n=>{const x=!n.manual&&n.env&&ps.has(String(n.id)); if(x) S.notasDel[n.id]=1; return !x});
+  if(S.notas.length<antes||prontos){save();toast(prontos?'Cards das anotações copiadas prontos ✓':'Seus cards novos chegaram ✓');if(!SS)render()}
 }
 
 /* ===== Sincronizar progresso entre aparelhos ===== */
@@ -1228,10 +1235,12 @@ document.addEventListener('keydown',e=>{
   }
 },true);
 document.addEventListener('visibilitychange',()=>{ if(!document.hidden) setTimeout(focarNota,50); });
+const SELN=new Set();
 function pAnotar(){
   const tx0=$('#tx'), draft=tx0?tx0.value:rascunho(), foc=tx0&&document.activeElement===tx0, sel=tx0?[tx0.selectionStart,tx0.selectionEnd]:null;
   const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env);
-  const item=n=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'✓ enviada':tk?'enviando…':'não enviada'}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" alt=""></div>`).join('')}</div>`:''}</div>`;
+  const est=n=>n.manual?(n.pronto?'✓ cards prontos — confirme':'copiada · aguardando cards'):n.env?'✓ enviada':tk?'enviando…':'não enviada';
+  const item=n=>`<div class="nt ${SELN.has(n.id)?'sel':''}" data-id="${n.id}"><span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span><div class="d"><span class="nb ${n.manual?(n.pronto?'ok':'cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" alt=""></div>`).join('')}</div>`:''}</div>`;
   const ri=rascImgs();
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
@@ -1241,7 +1250,8 @@ function pAnotar(){
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
     <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Toque em "conectar" (lá embaixo) para as anotações irem sozinhas.'}</p>
     ${lista.length?`<div class="sec">Aguardando cards · ${lista.length}</div><div class="rows">${lista.map(item).join('')}</div>`:''}
-    ${!tk&&naoEnv.length?`<button class="btn ghost" id="cp" style="margin-top:16px">Copiar para colar no chat (${naoEnv.length})</button>`:''}
+    ${SELN.size?`<button class="btn" id="cpC" style="margin-top:14px">Copiar para o Claude (${SELN.size})</button>`:lista.length?`<p class="mute small" style="text-align:center;margin-top:10px">Marque o círculo das anotações para mandar agora pelo chat.</p>`:''}
+    ${S.notas.some(n=>n.manual)?`<button class="btn ghost" id="cfC" style="margin-top:10px">Confirmar cards feitos (${S.notas.filter(n=>n.manual).length})</button>`:''}
     <div class="foot"><button class="link" id="gh">${tk?'sincronização ✓':'conectar'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#tx').value=draft;
@@ -1255,10 +1265,26 @@ function pAnotar(){
   $('#ai').onclick=()=>$('#fi').click();
   $('#fi').onchange=e=>addImgsRasc([...e.target.files]);
   document.querySelectorAll('[data-rmi]').forEach(b=>b.onclick=()=>{const a=rascImgs();a.splice(+b.dataset.rmi,1);setRascImgs(a);pAnotar()});
-  const cp=$('#cp'); if(cp) cp.onclick=async()=>{
-    const txt='UERJ Cards — comentários para virar cards ('+naoEnv.length+(naoEnv.length>1?' questões':' questão')+')\n\n'+naoEnv.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
+  document.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{e.stopPropagation();const id=+b.dataset.ck;SELN.has(id)?SELN.delete(id):SELN.add(id);pAnotar()});
+  const cpC=$('#cpC'); if(cpC) cpC.onclick=async()=>{
+    const sel=S.notas.filter(n=>SELN.has(n.id));
+    await enviarPendentes(true);
+    const txt=`Fazer cards agora — UERJ Cards (${sel.length} ${sel.length>1?'anotações':'anotação'})
+Repositório jaaacked-07/jaaackestude.uerj-cards · siga o CLAUDE.md (seção "Pedido manual pelo chat") · ids: ${sel.map(n=>n.id).join(', ')}
+
+`+sel.map((n,i)=>`━━━━━━ ANOTAÇÃO ${i+1} · id ${n.id} ━━━━━━
+${n.t}${n.imgs&&n.imgs.length?'\nImagens: '+n.imgs.map(x=>x.path||'(imagem ainda não enviada)').join(', '):''}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
     try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
-    naoEnv.forEach(n=>n.env=true);save();toast('Copiado! Cole no chat do Claude.');pAnotar();
+    sel.forEach(n=>{n.manual=true;n.pronto=false;n.u=Date.now()}); SELN.clear(); save(); pAnotar();
+    toast('Copiado! Cole no chat de cards do Claude.');
+    if(tk){ try{ await ghMod(d=>{ d.pendentes.forEach(p=>{ if(sel.some(n=>String(n.id)===String(p.id))) p.manual=true; }); }); }catch(e){} }
+  };
+  const cfC=$('#cfC'); if(cfC) cfC.onclick=async()=>{
+    const man=S.notas.filter(n=>n.manual), prontas=man.filter(n=>n.pronto).length;
+    if(!(await confirmar(`Os cards de ${man.length} ${man.length>1?'anotações':'anotação'} foram feitos?`,'Sim, remover',prontas<man.length?`${man.length-prontas} ainda não ${man.length-prontas>1?'apareceram':'apareceu'} como pronta no app. Só confirme se você viu os cards.`:'Elas saem do bloco de notas.'))) return;
+    const ids=new Set(man.map(n=>String(n.id)));
+    man.forEach(n=>S.notasDel[n.id]=1); S.notas=S.notas.filter(n=>!n.manual); save(); pAnotar(); toast('Anotações removidas');
+    if(tk){ try{ await ghMod(d=>{ d.pendentes=d.pendentes.filter(p=>!ids.has(String(p.id))); ids.forEach(i=>{ if(!d.processadas.map(String).includes(i)) d.processadas.push(+i); }); d.processadas=d.processadas.slice(-300); }); }catch(e){} }
   };
   document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
     const n=S.notas.find(x=>x.id==el.dataset.id);

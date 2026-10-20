@@ -11,7 +11,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 
 ## Rotina: transformar anotações em cards
 
-1. Ler `data/notas.json`. Se `pendentes` estiver vazio, **parar sem commitar nada**.
+1. Ler `data/notas.json`. **Ignore as anotações com `"manual": true`** (ela já mandou pelo chat). Se não sobrar nenhuma pendente, **parar sem commitar nada**.
 2. Para cada anotação pendente, criar cards (normalmente 2–5 por questão/tema; mais se a anotação cobrir vários temas — separe por tema).
    - **Sem repetição:** antes de criar, procure em `data/cards.json` se o conteúdo já existe (mesmo assunto/mesma pergunta). Se já existe, NÃO crie de novo — crie só o que for novo (um detalhe, uma pegadinha, outro ângulo). Se a anotação não acrescenta nada, não crie card.
    - **Anotação curta** (só o nome do tema, ex.: "Classificação FIGO"): cubra o tema completo do jeito que ele cai em prova, deixando claro no card qual classificação é.
@@ -22,6 +22,15 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 Anotações podem trazer imagens (`imgs`: caminhos como `data/img/1792...-0.jpg` no repositório — são prints que a Jacke colou). Abra cada imagem (Read) para entender o que ela anotou. Se a imagem for útil no card (questão, achado, tabela da prova), use-a direto: `{"tipo":"img","src":"data/img/...jpg","legenda":"..."}`.
 
 Se uma anotação for ilegível ou não tiver conteúdo médico, ainda assim mova-a para `processadas` (não deixe travada) e não invente card.
+
+## Pedido manual pelo chat
+
+Às vezes ela cola no chat um texto que começa com **"Fazer cards agora — UERJ Cards"**, com as anotações e os `ids`. Nesse caso:
+1. Anexe e clone `jaaacked-07/jaaackestude.uerj-cards` (add_repo com access "push"), faça `git pull`.
+2. Crie os cards dessas anotações seguindo todas as regras deste arquivo (se houver imagens em `data/img/...`, abra-as).
+3. Em `data/notas.json`, mova esses `ids` para `processadas` e tire-os de `pendentes`.
+4. Valide os JSONs, commit, `git pull --rebase origin main`, push.
+5. Responda curto: quantos cards, em quais baralhos, e correções importantes. Diga que ela já pode tocar em **"Confirmar cards feitos"** no app (as anotações só somem quando ela confirma).
 
 ## Campos que o app grava (não mexer)
 
