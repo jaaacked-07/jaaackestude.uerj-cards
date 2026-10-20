@@ -725,24 +725,24 @@ async function abrirConexao(){
   const tk=ghTok(), ch=await buscarChave();
   if(tk){
     folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Sincronização ativa ✓</div>
-      <p class="mute small" style="margin-bottom:14px">${ch?'Para conectar outro aparelho, abra o app nele e digite a senha do app.':'Crie a senha do app: nos outros aparelhos você só vai digitar ela.'}</p>
-      <input class="srch" id="ns1" type="password" autocomplete="new-password" placeholder="${ch?'Nova senha do app':'Senha do app'} (mín. 8)">
-      <button class="btn ${ch?'ghost':''}" id="nsb">${ch?'Trocar senha do app':'Criar senha do app'}</button>
+      <p class="mute small" style="margin-bottom:14px">${ch?'Para conectar outro aparelho, abra o app nele e digite seu usuário.':'Crie seu usuário: nos outros aparelhos você só vai digitar ele.'}</p>
+      <input class="srch" id="ns1" type="text" autocapitalize="none" spellcheck="false" placeholder="${ch?'Novo usuário':'Usuário'}">
+      <button class="btn ${ch?'ghost':''}" id="nsb">${ch?'Trocar usuário':'Criar usuário'}</button>
       <div class="foot"><button class="link" id="gx" style="color:var(--bad)">desconectar este aparelho</button></div>`);
-    $('#nsb').onclick=async()=>{const v=$('#ns1').value; if(v.length<8){toast('Use pelo menos 8 caracteres');return} $('#nsb').textContent='Salvando…';
-      try{await salvarChaveCifrada(tk,v);fecharFolha();toast('Senha atualizada ✓')}catch(e){$('#nsb').textContent=ch?'Trocar senha do app':'Criar senha do app';toast(erroChave(e))}};
-    $('#gx').onclick=async()=>{if(!(await confirmar('Desconectar este aparelho?','Desconectar','Ele para de sincronizar até você digitar a senha de novo.')))return;localStorage.removeItem(LS+'.gh');toast('Desconectado');render()};
+    $('#nsb').onclick=async()=>{const v=$('#ns1').value; if(v.trim().length<4){toast('Usuário muito curto');return} $('#nsb').textContent='Salvando…';
+      try{await salvarChaveCifrada(tk,v.trim().toLowerCase());fecharFolha();toast('Usuário salvo ✓')}catch(e){$('#nsb').textContent=ch?'Trocar usuário':'Criar usuário';toast(erroChave(e))}};
+    $('#gx').onclick=async()=>{if(!(await confirmar('Desconectar este aparelho?','Desconectar','Ele para de sincronizar até você digitar o usuário de novo.')))return;localStorage.removeItem(LS+'.gh');toast('Desconectado');render()};
     return;
   }
   if(ch){
     folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Entrar</div>
-      <p class="mute small" style="margin-bottom:14px">Digite a senha do app para sincronizar este aparelho.</p>
-      <input class="srch" id="sp" type="password" placeholder="Senha do app">
+      <p class="mute small" style="margin-bottom:14px">Digite seu usuário para sincronizar este aparelho.</p>
+      <input class="srch" id="sp" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Usuário">
       <button class="btn" id="se">Entrar</button>
       <div class="foot"><button class="link" id="sk">usar a chave do GitHub</button></div>`);
     const go=async()=>{const v=$('#sp').value; if(!v)return; $('#se').textContent='Entrando…';
-      try{const t=await decifrar(ch,v); localStorage.setItem(LS+'.gh',t); depoisDeConectar()}
-      catch(e){$('#se').textContent='Entrar';toast('Senha incorreta')}};
+      try{const t=await decifrar(ch,v.trim().toLowerCase()); localStorage.setItem(LS+'.gh',t); depoisDeConectar()}
+      catch(e){$('#se').textContent='Entrar';toast('Usuário incorreto')}};
     $('#se').onclick=go; $('#sp').onkeydown=e=>{if(e.key==='Enter')go()};
     $('#sk').onclick=()=>formChave();
     return;
@@ -751,14 +751,14 @@ async function abrirConexao(){
 }
 function formChave(){
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Conectar</div>
-    <p class="mute small" style="margin-bottom:12px">Cole a chave do GitHub (começa com github_pat_) e crie uma senha do app. Nos outros aparelhos você só vai precisar da senha.</p>
+    <p class="mute small" style="margin-bottom:12px">Cole a chave do GitHub (começa com github_pat_) e crie seu usuário. Nos outros aparelhos você só vai precisar dele.</p>
     <input class="srch" id="gt" type="password" autocomplete="off" placeholder="github_pat_…">
-    <input class="srch" id="gp" type="password" autocomplete="new-password" placeholder="Senha do app (mín. 8)">
+    <input class="srch" id="gp" type="text" autocapitalize="none" spellcheck="false" placeholder="Usuário">
     <button class="btn" id="gs">Conectar</button>`);
   $('#gs').onclick=async()=>{const v=$('#gt').value.trim(), pw=$('#gp').value; if(!v)return;
-    if(pw.length<8){toast('Senha do app: pelo menos 8 caracteres');return}
+    if(pw.trim().length<4){toast('Usuário muito curto');return}
     $('#gs').textContent='Conectando…';
-    try{await ghGet(v); await salvarChaveCifrada(v,pw); localStorage.setItem(LS+'.gh',v); depoisDeConectar()}
+    try{await ghGet(v); await salvarChaveCifrada(v,pw.trim().toLowerCase()); localStorage.setItem(LS+'.gh',v); depoisDeConectar()}
     catch(e){$('#gs').textContent='Conectar';toast(erroChave(e))}};
 }
 async function convidarEntrar(){

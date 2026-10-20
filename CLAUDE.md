@@ -7,7 +7,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 - `data/cards.json` — todos os cards. O app lê esse arquivo toda vez que abre.
 - `data/notas.json` — anotações que a Jacke guarda no app (vão sozinhas para cá).
 - `data/progresso.json` — progresso dela sincronizado entre aparelhos. **Nunca editar.**
-- `data/chave.json` — acesso do app criptografado com a senha dela. **Nunca editar nem apagar.**
+- `data/chave.json` — acesso do app criptografado com o usuário dela. **Nunca editar nem apagar.**
 
 ## Rotina: transformar anotações em cards
 
