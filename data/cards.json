@@ -4,7 +4,8 @@
     {
       "id": "pnvs-01",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: as 9 diretrizes em palavras-chave",
       "verso": "Não decore o texto inteiro — decore a palavra-chave de cada uma.",
@@ -59,7 +60,8 @@
     {
       "id": "pnvs-02",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: as ações de vigilância são só coletivas? Em quais pontos de atenção acontecem?",
       "verso": "Individuais OU coletivas, em TODOS os pontos de atenção.",
@@ -70,7 +72,8 @@
     {
       "id": "pnvs-03",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Quais vigilâncias a PNVS manda integrar? \nPNVS: politica nacional de vigilancia sanitaria",
       "verso": "As 4 vigilâncias + os laboratórios de saúde pública — preservando as especificidades de cada uma.",
@@ -101,7 +104,8 @@
     {
       "id": "pnvs-04",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: qual nível de atenção é a coordenadora do cuidado?",
       "verso": "A Atenção Primária. A vigilância entra em toda a RAS, em especial na APS.",
@@ -111,7 +115,8 @@
     {
       "id": "pnvs-05",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Emergências em saúde pública: a PNVS manda observar qual documento?",
       "verso": "O Regulamento Sanitário Internacional (RSI).",
@@ -121,7 +126,8 @@
     {
       "id": "pnvs-06",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Gestão de risco na PNVS: quais as etapas?",
       "verso": "Identificar → planejar → intervir → regular → comunicar → monitorar.",
@@ -142,7 +148,8 @@
     {
       "id": "pnvs-q1",
       "tipo": "quiz",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Sobre as diretrizes da Política Nacional de Vigilância em Saúde, é INCORRETO afirmar:",
       "opcoes": [
@@ -164,7 +171,8 @@
     {
       "id": "icsap-01",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Qual a premissa das Internações por Condições Sensíveis à APS (ICSAP)?",
       "verso": "APS oportuna e de boa qualidade evita a internação — ou reduz sua frequência — nessas condições.",
@@ -174,7 +182,8 @@
     {
       "id": "icsap-02",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Para que serve a lista brasileira de ICSAP?",
       "verso": "Indicador indireto da APS.",
@@ -193,7 +202,8 @@
     {
       "id": "icsap-03",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais são as condições sensíveis à APS? (agrupe para lembrar)",
       "verso": "Pense: \"se o posto funcionasse bem, essa pessoa não internaria\".",
@@ -247,7 +257,8 @@
     {
       "id": "icsap-04",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
       "verso": "Epilepsia, úlcera gastrintestinal, angina, insuficiência cardíaca, AVC (doença cerebrovascular) e DIP.",
@@ -258,7 +269,8 @@
     {
       "id": "icsap-q1",
       "tipo": "quiz",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Qual das condições abaixo NÃO faz parte da lista brasileira de internações por condições sensíveis à Atenção Primária?",
       "opcoes": [
@@ -280,7 +292,8 @@
     {
       "id": "apend-01",
       "tipo": "flash",
-      "tema": "Cirurgia",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
       "sub": "Apendicite — sinais",
       "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
       "verso": "Posição do apêndice → sinal que aparece.",
@@ -325,7 +338,8 @@
     {
       "id": "apend-02",
       "tipo": "flash",
-      "tema": "Cirurgia",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
       "sub": "Apendicite — sinais",
       "frente": "Apendicite RETROCECAL: qual o sinal mais associado?",
       "verso": "Sinal do Psoas — o apêndice inflamado encosta no músculo psoas, e estender a coxa direita estira o músculo e dói.",
@@ -336,7 +350,8 @@
     {
       "id": "apend-03",
       "tipo": "flash",
-      "tema": "Cirurgia",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
       "sub": "Apendicite — sinais",
       "frente": "Apendicite PÉLVICA: qual o sinal mais associado?",
       "verso": "Sinal do Obturador — rotação interna da coxa direita com quadril e joelho fletidos a 90°.",
@@ -363,7 +378,8 @@
     {
       "id": "apend-04",
       "tipo": "flash",
-      "tema": "Cirurgia",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
       "sub": "Apendicite — sinais",
       "frente": "Rovsing × Dunphy: qual é qual?",
       "verso": "Rovsing: palpo a FIE e dói a FID. Dunphy: a dor na FID piora ao tossir. Os dois indicam irritação peritoneal — nenhum define a posição.",
@@ -390,7 +406,8 @@
     {
       "id": "apend-q1",
       "tipo": "quiz",
-      "tema": "Cirurgia",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
       "sub": "Apendicite — sinais",
       "frente": "Na apendicite aguda com apêndice em posição retrocecal, o sinal mais comumente observado é:",
       "opcoes": [
@@ -412,7 +429,8 @@
     {
       "id": "notif-01",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
       "verso": "Os acidentes + tétano + violência sexual e tentativa de suicídio.",
@@ -433,7 +451,8 @@
     {
       "id": "notif-02",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
       "verso": "Doenças de transmissão respiratória/bacteriana graves + Chagas aguda + Zika em gestante + varicela grave.",
@@ -455,7 +474,8 @@
     {
       "id": "notif-03",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Lógica para lembrar quem vai até o Ministério (SMS + SES + MS)",
       "verso": "Se ameaça o país (risco de surto, doença eliminada/rara, emergência, óbito de arbovirose) → vai até o MS.",
@@ -516,7 +536,8 @@
     {
       "id": "notif-04",
       "tipo": "flash",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Dengue, chikungunya e malária: quando é imediata e quando é semanal?",
       "verso": "Casos comuns = semanal. Só fica imediata (até o MS) a situação de alarme.",
@@ -552,7 +573,8 @@
     {
       "id": "notif-q1",
       "tipo": "quiz",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Qual dos agravos abaixo é de notificação imediata APENAS para a Secretaria Municipal de Saúde?",
       "opcoes": [
@@ -574,7 +596,8 @@
     {
       "id": "notif-q2",
       "tipo": "quiz",
-      "tema": "Preventiva",
+      "area": "Medicina Preventiva",
+      "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Paciente com dengue clássica, sem sinais de alarme, atendido na UBS. A notificação deve ser:",
       "opcoes": [
@@ -596,6 +619,7 @@
     {
       "id": "figo-colo-01",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
@@ -612,39 +636,48 @@
     {
       "id": "figo-colo-02",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Estádio I (restrito ao colo): como se divide?",
       "verso": "IA é o tumor que só aparece no microscópio, separado pela profundidade de invasão. IB é o tumor que invade mais que 5 mm, separado pelo tamanho (2 e 4 cm).\n\nO que muda conduta é o salto IA → IB e, dentro do IB, se passa de 4 cm (IB3), porque aí a cirurgia deixa de ser a primeira opção.",
-      "visual": {
-        "tipo": "tabela",
-        "cab": [
-          "Estádio",
-          "Critério"
-        ],
-        "linhas": [
-          [
-            "IA1",
-            "Microscópico · invasão até 3 mm"
+      "visual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Estádio",
+            "Critério"
           ],
-          [
-            "IA2",
-            "Microscópico · invasão de 3 a 5 mm"
-          ],
-          [
-            "IB1",
-            "Invasão > 5 mm · tumor ≤ 2 cm"
-          ],
-          [
-            "IB2",
-            "Tumor > 2 e ≤ 4 cm"
-          ],
-          [
-            "IB3",
-            "Tumor > 4 cm"
+          "linhas": [
+            [
+              "IA1",
+              "Microscópico · invasão até 3 mm"
+            ],
+            [
+              "IA2",
+              "Microscópico · invasão de 3 a 5 mm"
+            ],
+            [
+              "IB1",
+              "Invasão > 5 mm · tumor ≤ 2 cm"
+            ],
+            [
+              "IB2",
+              "Tumor > 2 e ≤ 4 cm"
+            ],
+            [
+              "IB3",
+              "Tumor > 4 cm"
+            ]
           ]
-        ]
-      },
+        },
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Diagram_showing_stage_1B_cervical_cancer_CRUK_203.svg/600px-Diagram_showing_stage_1B_cervical_cancer_CRUK_203.svg.png",
+          "legenda": "Estádio IB: tumor visível, ainda restrito ao colo.",
+          "fonte": "Cancer Research UK · CC BY-SA 4.0 · Wikimedia Commons"
+        }
+      ],
       "pegadinha": "A FIGO 2018 tirou a extensão lateral do estádio IA (só profundidade conta), e invasão linfovascular NÃO muda o estádio.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20"
@@ -652,29 +685,25 @@
     {
       "id": "figo-colo-03",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "IIA × IIB: qual a diferença e por que importa tanto?",
       "verso": "IIA: o tumor desceu para os 2/3 superiores da vagina, sem paramétrio (IIA1 ≤ 4 cm, IIA2 > 4 cm). IIB: invadiu o paramétrio, sem chegar à parede pélvica.\n\nO paramétrio é o divisor de águas do tratamento: até IIA1 ainda dá para operar (histerectomia radical); a partir do IIB o tratamento é quimiorradiação.",
-      "visual": {
-        "tipo": "vs",
-        "a": {
-          "t": "IIA",
-          "itens": [
-            "Vagina 2/3 superiores",
-            "Paramétrio livre",
-            "Ainda cirúrgico (IIA1)"
-          ]
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Diagram_showing_stage_2A_cervical_cancer_CRUK_212.svg/600px-Diagram_showing_stage_2A_cervical_cancer_CRUK_212.svg.png",
+          "legenda": "IIA: desce para a parte alta da vagina.",
+          "fonte": "Cancer Research UK · CC BY-SA 4.0 · Wikimedia Commons"
         },
-        "b": {
-          "t": "IIB",
-          "itens": [
-            "Paramétrio invadido",
-            "Sem parede pélvica",
-            "Quimiorradiação"
-          ]
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Diagram_showing_stage_2B_cervical_cancer_CRUK_216.svg/600px-Diagram_showing_stage_2B_cervical_cancer_CRUK_216.svg.png",
+          "legenda": "IIB: invade o paramétrio (tecido ao lado do colo).",
+          "fonte": "Cancer Research UK · CC BY-SA 4.0 · Wikimedia Commons"
         }
-      },
+      ],
       "pegadinha": "\"Paramétrio comprometido\" na questão = IIB e = NÃO operar.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20"
@@ -682,35 +711,44 @@
     {
       "id": "figo-colo-04",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
       "verso": "IIIA: vagina no terço inferior. IIIB: parede pélvica e/ou hidronefrose/rim excluso. IIIC: linfonodo positivo, qualquer que seja o tamanho do tumor (IIIC1 pélvico, IIIC2 para-aórtico).\n\nA lógica do IIIB: o ureter passa colado ao paramétrio; se o tumor o obstrui, ele já chegou perto da parede pélvica.",
-      "visual": {
-        "tipo": "tabela",
-        "cab": [
-          "Estádio",
-          "Critério"
-        ],
-        "linhas": [
-          [
-            "IIIA",
-            "1/3 inferior da vagina"
+      "visual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Estádio",
+            "Critério"
           ],
-          [
-            "IIIB",
-            "Parede pélvica e/ou hidronefrose ou rim não funcionante"
-          ],
-          [
-            "IIIC1",
-            "Linfonodos pélvicos"
-          ],
-          [
-            "IIIC2",
-            "Linfonodos para-aórticos"
+          "linhas": [
+            [
+              "IIIA",
+              "1/3 inferior da vagina"
+            ],
+            [
+              "IIIB",
+              "Parede pélvica e/ou hidronefrose ou rim não funcionante"
+            ],
+            [
+              "IIIC1",
+              "Linfonodos pélvicos"
+            ],
+            [
+              "IIIC2",
+              "Linfonodos para-aórticos"
+            ]
           ]
-        ]
-      },
+        },
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Diagram_showing_stage_3B_cervical_cancer_CRUK_226.svg/600px-Diagram_showing_stage_3B_cervical_cancer_CRUK_226.svg.png",
+          "legenda": "IIIB: chega à parede pélvica / obstrui o ureter.",
+          "fonte": "Cancer Research UK · CC BY-SA 4.0 · Wikimedia Commons"
+        }
+      ],
       "pegadinha": "Hidronefrose sem outra causa = IIIB mesmo com tumor pequeno. Linfonodo positivo = IIIC mesmo com tumor de 1 cm. Anota-se \"r\" (achado de imagem) ou \"p\" (confirmado na patologia): IIIC1r, IIIC1p.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20"
@@ -718,17 +756,25 @@
     {
       "id": "figo-colo-05",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Estádio IV: IVA × IVB",
       "verso": "IVA: invasão da mucosa da bexiga ou do reto, comprovada por biópsia. IVB: metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA precisa invadir a mucosa — não basta o tumor encostar no órgão.",
       "pegadinha": "Edema bolhoso da bexiga na cistoscopia NÃO classifica como IVA.",
       "fonte": "FIGO 2018",
-      "add": "2026-10-20"
+      "add": "2026-10-20",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Diagram_showing_stage_4A_cervical_cancer_CRUK_236.svg/600px-Diagram_showing_stage_4A_cervical_cancer_CRUK_236.svg.png",
+        "legenda": "IVA: invade bexiga ou reto.",
+        "fonte": "Cancer Research UK · CC BY-SA 4.0 · Wikimedia Commons"
+      }
     },
     {
       "id": "figo-colo-06",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Câncer de colo: tratamento por estádio",
@@ -773,6 +819,7 @@
     {
       "id": "figo-colo-q1",
       "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Mulher, 42 anos, carcinoma escamoso de colo com lesão de 3 cm restrita ao colo ao exame. A tomografia mostra hidronefrose à direita, sem outra causa identificada. Segundo a FIGO 2018, o estádio é:",
@@ -795,6 +842,7 @@
     {
       "id": "figo-colo-q2",
       "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Tumor de colo de 1,8 cm, restrito ao colo, com linfonodo para-aórtico positivo na biópsia. O estádio FIGO 2018 é:",
@@ -817,6 +865,7 @@
     {
       "id": "figo-colo-q3",
       "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Câncer de colo — estadiamento FIGO",
       "frente": "Paciente com câncer de colo estádio IIB. Qual o tratamento de escolha?",
@@ -839,6 +888,7 @@
     {
       "id": "figo-sua-01",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Sangramento uterino anormal — PALM-COEIN",
       "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
@@ -874,6 +924,7 @@
     {
       "id": "figo-sua-02",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Sangramento uterino anormal — PALM-COEIN",
       "frente": "Sangramento uterino em paciente anticoagulada: qual letra do PALM-COEIN?",
@@ -902,6 +953,7 @@
     {
       "id": "figo-sua-03",
       "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Sangramento uterino anormal — PALM-COEIN",
       "frente": "Leiomioma: classificação FIGO de 0 a 8",
@@ -957,6 +1009,7 @@
     {
       "id": "figo-sua-q1",
       "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
       "tema": "Ginecologia",
       "sub": "Sangramento uterino anormal — PALM-COEIN",
       "frente": "Mulher, 38 anos, em uso de rivaroxabana por trombose venosa profunda, com aumento do fluxo menstrual. Ultrassom e histeroscopia normais. Pela FIGO (revisão 2018), o sangramento é classificado como:",
