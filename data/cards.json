@@ -1418,6 +1418,517 @@
       ],
       "fonte": "Nota Técnica MS/INCA nº 626/2025",
       "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Quais são os parâmetros de uma CTG normal (tranquilizadora)?",
+      "verso": "Linha de base 110–160 bpm, variabilidade moderada (6–25 bpm), presença de acelerações e ausência de desacelerações.\n\nA variabilidade é o melhor marcador de oxigenação do SNC fetal: variabilidade preservada praticamente exclui acidemia naquele momento. Aceleração = subida ≥ 15 bpm por ≥ 15 s (a partir de 32 semanas); feto \"reativo\" tem ≥ 2 acelerações em 20 min.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Parâmetro",
+          "Normal",
+          "Alterado"
+        ],
+        "linhas": [
+          [
+            "Linha de base",
+            "110–160 bpm",
+            "< 110 bradicardia · > 160 taquicardia"
+          ],
+          [
+            "Variabilidade",
+            "6–25 bpm (moderada)",
+            "Ausente (indetectável) · mínima (≤ 5) · marcada (> 25)"
+          ],
+          [
+            "Acelerações",
+            "≥ 15 bpm × 15 s (≥ 32 sem)",
+            "Ausentes por > 40 min (após estímulo)"
+          ],
+          [
+            "Desacelerações",
+            "Ausentes ou DIP I",
+            "DIP II recorrente · DIP III desfavorável · prolongada"
+          ]
+        ]
+      },
+      "pegadinha": "Antes de 32 semanas a aceleração vale com 10 bpm × 10 s. E ausência de acelerações isolada NÃO é sofrimento: o feto pode estar em sono (até ~40 min) — faça estímulo sonoro antes de concluir.",
+      "uerj": "Costuma vir como caso clínico com o traçado descrito em palavras: identifique cada parâmetro antes de olhar as alternativas.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-02",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Diferencie DIP I, DIP II e DIP III (umbilical): causa e relação com a contração.",
+      "verso": "DIP I (precoce) = compressão do polo cefálico; DIP II (tardia) = insuficiência uteroplacentária/hipoxemia; DIP III (variável) = compressão do cordão.\n\nDIP I é reflexo vagal: começa e termina junto com a contração, nadir coincide com o pico (imagem em espelho) — fisiológica. DIP II tem decalagem: o nadir vem DEPOIS do pico da contração (> 20 s), porque o feto só sente a queda de O2 após o pico de compressão do espaço interviloso. DIP III tem forma variável (em V/W, queda e recuperação abruptas) e não guarda relação fixa com a contração.",
+      "visual": [
+        {
+          "tipo": "svg",
+          "svg": "<svg viewBox=\"0 0 590 215\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"95\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">DIP I — precoce</text><text x=\"95\" y=\"32\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">compressão do polo cefálico</text><rect x=\"5\" y=\"40\" width=\"180\" height=\"150\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"12\" y=\"54\" font-size=\"9\" fill=\"var(--mute)\">FCF</text><text x=\"12\" y=\"132\" font-size=\"9\" fill=\"var(--mute)\">Contração</text><path d=\"M15 70 L50 70 Q95 108 140 70 L175 70\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.5\"/><path d=\"M15 180 L50 180 Q95 120 140 180 L175 180\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"2\"/><line x1=\"95\" y1=\"62\" x2=\"95\" y2=\"182\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><text x=\"295\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">DIP II — tardia</text><text x=\"295\" y=\"32\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">insuficiência uteroplacentária</text><rect x=\"205\" y=\"40\" width=\"180\" height=\"150\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"212\" y=\"54\" font-size=\"9\" fill=\"var(--mute)\">FCF</text><text x=\"212\" y=\"132\" font-size=\"9\" fill=\"var(--mute)\">Contração</text><path d=\"M215 70 L285 70 Q325 108 365 70 L375 70\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.5\"/><path d=\"M215 180 L250 180 Q295 120 340 180 L375 180\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"2\"/><line x1=\"295\" y1=\"62\" x2=\"295\" y2=\"182\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><text x=\"495\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">DIP III — variável</text><text x=\"495\" y=\"32\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">compressão do cordão</text><rect x=\"405\" y=\"40\" width=\"180\" height=\"150\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"412\" y=\"54\" font-size=\"9\" fill=\"var(--mute)\">FCF</text><text x=\"412\" y=\"132\" font-size=\"9\" fill=\"var(--mute)\">Contração</text><path d=\"M415 70 L440 70 L446 64 L454 112 L464 112 L470 64 L476 70 L575 70\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.5\"/><path d=\"M415 180 L465 180 Q510 120 555 180 L575 180\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"2\"/><line x1=\"510\" y1=\"62\" x2=\"510\" y2=\"182\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><text x=\"295\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">Linha tracejada = pico da contração</text></svg>",
+          "legenda": "Esquema: posição do nadir da FCF em relação ao pico da contração"
+        },
+        {
+          "tipo": "tabela",
+          "cab": [
+            "",
+            "DIP I",
+            "DIP II",
+            "DIP III"
+          ],
+          "linhas": [
+            [
+              "Mecanismo",
+              "Compressão cefálica → vagal",
+              "Hipoxemia (insuf. uteroplacentária)",
+              "Compressão funicular"
+            ],
+            [
+              "Relação c/ contração",
+              "Coincide (espelho)",
+              "Nadir após o pico (decalagem)",
+              "Variável/independente"
+            ],
+            [
+              "Formato",
+              "Gradual, simétrico",
+              "Gradual, recuperação lenta",
+              "Abrupto (V/W)"
+            ],
+            [
+              "Significado",
+              "Benigna",
+              "Hipóxia — preocupante se recorrente",
+              "Depende dos sinais de gravidade"
+            ]
+          ]
+        }
+      ],
+      "pegadinha": "O que define DIP II não é a profundidade, é o TEMPO: queda pequena mas com nadir após o pico da contração, recorrente, já é desaceleração tardia.",
+      "uerj": "Pergunta clássica: \"o nadir ocorre X segundos após o pico da contração\" → DIP II.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-03",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Quando a DIP umbilical (variável) é desfavorável?",
+      "verso": "Quando há sinais de hipóxia associada: recuperação lenta, queda > 60 bpm ou duração > 60 s, perda da variabilidade, ausência de \"ombros\", overshoot (taquicardia após a dip) ou forma bifásica (em W).\n\nA DIP III típica tem \"ombros\" (pequenas acelerações antes e depois, por compressão só da veia umbilical) e recupera rápido — o feto está compensando. Quando os ombros somem e a recuperação fica lenta, a compressão está levando a acidemia.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "DIP III favorável",
+          "itens": [
+            "Com ombros",
+            "Queda e recuperação rápidas",
+            "Variabilidade preservada",
+            "Duração < 60 s"
+          ]
+        },
+        "b": {
+          "t": "DIP III desfavorável",
+          "itens": [
+            "!Sem ombros / overshoot",
+            "!Recuperação lenta, bifásica (W)",
+            "!Variabilidade reduzida/ausente",
+            "!Queda > 60 bpm ou > 60 s"
+          ]
+        }
+      },
+      "pegadinha": "Oligodrâmnio e circular de cordão favorecem DIP III. Conduta inicial: mudar decúbito; não é indicação automática de cesárea.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-04",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Classificação da CTG intraparto em 3 categorias (NICHD/ACOG): o que é Categoria I, II e III?",
+      "verso": "Categoria I = normal; Categoria III = anormal (alto risco de acidemia); Categoria II = tudo que não é I nem III (indeterminada).\n\nCategoria III exige variabilidade AUSENTE associada a DIP II recorrentes, DIP III recorrentes ou bradicardia — ou padrão sinusoidal. Por isso a variabilidade é a chave: sem ela ausente (ou sinusoidal), nunca é categoria III.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Categoria",
+          "Critérios",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "I — normal",
+            "LB 110–160 + variab. moderada + sem DIP II/III (aceleração e DIP I podem estar presentes)",
+            "Seguimento de rotina"
+          ],
+          [
+            "II — indeterminada",
+            "Qualquer padrão fora de I e III (ex.: taquicardia, variab. mínima, DIP III recorrente com variab. preservada)",
+            "Reanimação intraútero, vigilância, reavaliar"
+          ],
+          [
+            "III — anormal",
+            "Variab. AUSENTE + (DIP II recorrente ou DIP III recorrente ou bradicardia) · OU padrão sinusoidal",
+            "Reanimação intraútero + preparar parto imediato"
+          ]
+        ]
+      },
+      "pegadinha": "Bradicardia com variabilidade preservada é categoria II, não III.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-05",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Conduta diante de CTG categoria III / sofrimento fetal agudo intraparto",
+      "verso": "Reanimação intraútero imediata e, se não houver melhora rápida, parto pela via mais rápida e segura.\n\nAs medidas corrigem a causa da hipóxia: decúbito lateral esquerdo (descomprime cava/aorta), suspender ocitocina e tratar taquissistolia (tocolítico agudo se necessário), corrigir hipotensão materna (hidratação; vasopressor pós-analgesia), toque vaginal para afastar prolapso de cordão. Período expulsivo com critérios → fórceps/vácuo; senão → cesárea.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "CTG categoria III (ou II preocupante)",
+          "Reanimação intraútero: DLE · suspender ocitocina · hidratar/corrigir hipotensão · toque (prolapso?) · tocólise se taquissistolia",
+          "Reavaliar o traçado",
+          [
+            "Normalizou → manter vigilância contínua",
+            "Persiste → parto imediato"
+          ],
+          [
+            "Dilatação total + critérios → fórceps/vácuo",
+            "Fora disso → cesárea"
+          ]
+        ]
+      },
+      "pegadinha": "Oxigênio materno de rotina não tem benefício comprovado, e bicarbonato não faz parte da conduta. A causa mais comum e corrigível no intraparto é a taquissistolia por ocitocina.",
+      "uerj": "Costuma cobrar a PRIMEIRA conduta — quase sempre medidas de reanimação intraútero antes de \"cesárea de urgência\".",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-06",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Causas de alteração da linha de base e da variabilidade (taquicardia, bradicardia, padrão sinusoidal, variabilidade reduzida)",
+      "verso": "Cada alteração aponta para um grupo de causas — muitas não são hipóxia.\n\nTaquicardia: febre materna/corioamnionite (principal), hipertireoidismo, drogas beta-agonistas, anemia/hipóxia fetal inicial. Bradicardia: hipotensão materna, taquissistolia, prolapso de cordão, DPP, rotura uterina, BAV congênito (lúpus/anti-Ro). Variabilidade reduzida: sono fetal, opioides, sulfato de magnésio, prematuridade, acidemia. Sinusoidal: anemia fetal grave.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Taquicardia > 160",
+            "itens": [
+              "Febre / corioamnionite",
+              "Beta-agonistas, atropina",
+              "Hipertireoidismo",
+              "Hipóxia inicial"
+            ]
+          },
+          {
+            "t": "Bradicardia < 110",
+            "itens": [
+              "Hipotensão materna (analgesia)",
+              "Taquissistolia",
+              "Prolapso de cordão · DPP · rotura uterina",
+              "BAV congênito (anti-Ro)"
+            ]
+          },
+          {
+            "t": "Variabilidade ↓",
+            "itens": [
+              "Sono fetal (≤ 40 min)",
+              "Opioide · MgSO4 · benzodiazepínico",
+              "Prematuridade",
+              "!Acidemia"
+            ]
+          },
+          {
+            "t": "Padrão sinusoidal",
+            "itens": [
+              "!Anemia fetal grave: aloimunização Rh, vasa prévia rota, hemorragia feto-materna"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Variabilidade reduzida em gestante que acabou de receber sulfato de magnésio ou opioide é efeito de droga, não sofrimento fetal.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Primigesta, 39 semanas, fase ativa (7 cm) em uso de ocitocina. Dinâmica: 6 contrações em 10 minutos. A CTG mostra linha de base 145 bpm, variabilidade de 4 bpm e desacelerações recorrentes cujo nadir ocorre cerca de 30 segundos após o pico de cada contração. A primeira conduta é:",
+      "opcoes": [
+        "Manter a ocitocina e reavaliar em 30 minutos, pois trata-se de DIP cefálica",
+        "Suspender a ocitocina, decúbito lateral esquerdo, hidratação venosa e reavaliar o traçado",
+        "Amnioinfusão, por se tratar de compressão funicular",
+        "Cesariana imediata, por se tratar de CTG categoria III"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "DIP cefálica tem nadir coincidente com o pico da contração; aqui há decalagem.",
+        "Gabarito: DIP II (tardia) com taquissistolia por ocitocina e variabilidade mínima (categoria II). Primeiro corrige-se a causa com reanimação intraútero.",
+        "Amnioinfusão é para DIP III de repetição; o padrão descrito é de DIP II.",
+        "Não é categoria III: a variabilidade é mínima (4 bpm), não ausente. E mesmo na III, a reanimação intraútero começa junto com o preparo para o parto."
+      ],
+      "pegadinha": "Variabilidade \"mínima\" ≠ \"ausente\": só a ausente entra na categoria III.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfa-q2",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Gestante de 38 semanas em trabalho de parto com bolsa rota há 18 horas. Temperatura 38,4 °C. CTG: linha de base de 175 bpm, variabilidade moderada, acelerações presentes, sem desacelerações. A principal hipótese para a alteração é:",
+      "opcoes": [
+        "Hipóxia fetal grave, com indicação de cesárea imediata",
+        "Corioamnionite",
+        "Anemia fetal",
+        "Bloqueio atrioventricular fetal"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Variabilidade moderada e acelerações presentes falam contra acidemia; não há indicação de cesárea pelo traçado.",
+        "Gabarito: febre materna + bolsa rota prolongada → corioamnionite é a causa mais comum de taquicardia fetal. Tratar com antibiótico; não indica cesárea por si só.",
+        "Anemia fetal grave dá padrão sinusoidal.",
+        "BAV causa bradicardia fixa, não taquicardia."
+      ],
+      "pegadinha": "Taquicardia isolada com variabilidade preservada é categoria II: investigue a causa materna antes de pensar em hipóxia.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 (NICHD 2008)",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "O que é sofrimento fetal crônico e quais são as principais causas?",
+      "verso": "É a hipoxemia fetal de instalação lenta por insuficiência placentária, que leva à restrição de crescimento, oligodrâmnio e redistribuição do fluxo (centralização).\n\nA placenta perde área funcional (vasculopatia), o feto reduz o crescimento e desvia sangue para cérebro, coração e suprarrenais, poupando rins e intestino — por isso cai a diurese fetal e surge oligodrâmnio. Causas: síndromes hipertensivas (principal), diabetes com vasculopatia, LES/SAAF, nefropatia, tabagismo, gestação prolongada.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Insuficiência placentária (HAS/pré-eclâmpsia, DM vasculopata, LES/SAAF, tabagismo, pós-datismo)",
+          "Hipoxemia fetal crônica",
+          "Centralização: ↑ fluxo cérebro/coração/suprarrenal · ↓ fluxo renal",
+          [
+            "Restrição de crescimento",
+            "Oligodrâmnio (↓ diurese)"
+          ],
+          "Descompensação: ducto venoso alterado → acidemia → óbito"
+        ]
+      },
+      "pegadinha": "Oligodrâmnio é marcador de hipóxia CRÔNICA; a CTG é marcador de hipóxia AGUDA.",
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-02",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "Perfil biofísico fetal (Manning): parâmetros, pontuação e interpretação",
+      "verso": "5 parâmetros, 0 ou 2 pontos cada: CTG, movimentos respiratórios, movimentos corpóreos, tônus e volume de líquido amniótico. 8–10 normal; 6 duvidoso; ≤ 4 anormal.\n\nOs 4 primeiros são marcadores AGUDOS (dependem do SNC no momento do exame); o líquido amniótico é o marcador CRÔNICO. Na hipóxia, as atividades somem na ordem inversa em que surgiram na embriologia: a última a surgir (reatividade da FCF) é a primeira a desaparecer, e o tônus (primeiro a surgir) é o último.",
+      "visual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Parâmetro",
+            "Normal (2 pontos)",
+            "Marcador"
+          ],
+          "linhas": [
+            [
+              "CTG",
+              "Reativa",
+              "Agudo"
+            ],
+            [
+              "Movimentos respiratórios",
+              "≥ 1 episódio ≥ 30 s em 30 min",
+              "Agudo"
+            ],
+            [
+              "Movimentos corpóreos",
+              "≥ 3 em 30 min",
+              "Agudo"
+            ],
+            [
+              "Tônus",
+              "≥ 1 extensão + flexão",
+              "Agudo"
+            ],
+            [
+              "Líquido amniótico",
+              "Maior bolsão ≥ 2 cm",
+              "!Crônico"
+            ]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Ordem de DESAPARECIMENTO na hipóxia:",
+            "1º FCF reativa → 2º movimentos respiratórios → 3º movimentos corpóreos → 4º tônus (último)",
+            "!Tônus ausente = hipóxia grave"
+          ]
+        }
+      ],
+      "pegadinha": "Mesmo com escore 8/10, oligodrâmnio (LA = 0) muda a conduta: indica investigação/resolução conforme a idade gestacional.",
+      "uerj": "Gosta de perguntar qual parâmetro é crônico (LA) e qual some primeiro (FCF/CTG) ou por último (tônus).",
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-03",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "Dopplervelocimetria no sofrimento fetal crônico: qual a sequência de alterações?",
+      "verso": "Artéria umbilical com resistência aumentada → centralização (vasodilatação da cerebral média) → diástole zero → diástole reversa → ducto venoso alterado.\n\nA umbilical reflete a placenta: quanto maior a resistência placentária, menor o fluxo diastólico, até zerar ou inverter. A cerebral média reage dilatando (poupa o cérebro) — relação umbilical/cerebral > 1 (ou índice cerebroplacentário < 1) define centralização. O ducto venoso (onda \"a\" ausente ou reversa) mostra falência cardíaca e acidemia: é o marcador mais tardio e mais grave.",
+      "visual": [
+        {
+          "tipo": "svg",
+          "svg": "<svg viewBox=\"0 0 560 175\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"90\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">Normal</text><text x=\"90\" y=\"31\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">diástole positiva</text><rect x=\"5\" y=\"38\" width=\"170\" height=\"120\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><line x1=\"12\" y1=\"120\" x2=\"168\" y2=\"120\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><path d=\"M15 90 L23 55 L33 78 Q45 90 65 90 L73 55 L83 78 Q95 90 115 90 L123 55 L133 78 Q145 90 165 90\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.2\"/><text x=\"165\" y=\"133\" text-anchor=\"end\" font-size=\"9\" fill=\"var(--mute)\">linha zero</text><text x=\"280\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">Diástole zero</text><text x=\"280\" y=\"31\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">↑ resistência placentária</text><rect x=\"195\" y=\"38\" width=\"170\" height=\"120\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><line x1=\"202\" y1=\"120\" x2=\"358\" y2=\"120\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><path d=\"M205 120 L213 55 L223 108 Q235 120 255 120 L263 55 L273 108 Q285 120 305 120 L313 55 L323 108 Q335 120 355 120\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.2\"/><text x=\"355\" y=\"133\" text-anchor=\"end\" font-size=\"9\" fill=\"var(--mute)\">linha zero</text><text x=\"470\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\">Diástole reversa</text><text x=\"470\" y=\"31\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--mute)\">fluxo volta na diástole</text><rect x=\"385\" y=\"38\" width=\"170\" height=\"120\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><line x1=\"392\" y1=\"120\" x2=\"548\" y2=\"120\" stroke=\"var(--mute)\" stroke-dasharray=\"3 3\"/><path d=\"M395 142 L403 55 L413 112 Q419 142 429 146 Q437 120 445 120 L453 55 L463 112 Q469 142 479 146 Q487 120 495 120 L503 55 L513 112 Q519 142 529 146 Q537 120 545 120\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2.2\"/><text x=\"545\" y=\"133\" text-anchor=\"end\" font-size=\"9\" fill=\"var(--mute)\">linha zero</text></svg>",
+          "legenda": "Esquema da onda da artéria umbilical: piora progressiva do fluxo diastólico"
+        },
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Vaso",
+            "Alteração",
+            "Significa"
+          ],
+          "linhas": [
+            [
+              "Artéria umbilical",
+              "IP > p95 → diástole zero → reversa",
+              "Insuficiência placentária progressiva"
+            ],
+            [
+              "Cerebral média",
+              "IP ↓ (vasodilatação); índice cerebroplacentário < 1",
+              "Centralização (hipoxemia)"
+            ],
+            [
+              "Ducto venoso",
+              "IP > p95; onda a ausente/reversa",
+              "!Descompensação cardíaca, acidemia — mais grave"
+            ]
+          ]
+        }
+      ],
+      "pegadinha": "Centralização sozinha é adaptação, não descompensação. O sinal de descompensação é o ducto venoso.",
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-04",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "Conduta (momento do parto) no feto com insuficiência placentária conforme o Doppler",
+      "verso": "Quanto pior o Doppler, mais cedo se interrompe — mas antes de 34 semanas sempre com corticoide, e antes de ~32 semanas com sulfato de magnésio para neuroproteção.\n\nReferência usada pela FEBRASGO (baseada no protocolo de Barcelona): resistência aumentada/centralização → parto com 37 semanas; diástole zero → 34 semanas; diástole reversa → 30 semanas; ducto venoso alterado (onda a ausente/reversa) → a partir da viabilidade (~26 semanas). Via: diástole zero/reversa ou DV alterado → cesárea; nas formas leves, indução é possível com monitorização contínua.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Achado",
+          "Interromper com",
+          "Via"
+        ],
+        "linhas": [
+          [
+            "AU IP > p95 ou centralização (diástole +)",
+            "37 semanas",
+            "Indução possível (monitorizada)"
+          ],
+          [
+            "Diástole zero",
+            "34 semanas",
+            "Cesárea"
+          ],
+          [
+            "Diástole reversa",
+            "30 semanas",
+            "Cesárea"
+          ],
+          [
+            "Ducto venoso: onda a ausente/reversa ou CTG/PBF anormal",
+            "Viabilidade (~26 sem), após corticoide",
+            "Cesárea"
+          ]
+        ]
+      },
+      "pegadinha": "Os cortes de idade gestacional variam entre protocolos; a lógica cobrada é a escalada (umbilical → zero → reversa → ducto venoso) e o uso de corticoide < 34 semanas.",
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "Gestante de 31 semanas, pré-eclâmpsia, feto com peso estimado abaixo do percentil 3. Doppler: artéria umbilical com diástole reversa; ducto venoso com onda \"a\" positiva; perfil biofísico 8/10. A conduta mais adequada é:",
+      "opcoes": [
+        "Manter a gestação com Doppler semanal até 34 semanas",
+        "Corticoide, sulfato de magnésio para neuroproteção e interrupção por cesariana",
+        "Indução do parto com misoprostol",
+        "Aguardar alteração do ducto venoso para interromper"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Diástole reversa na umbilical a partir de ~30 semanas indica interrupção; esperar até 34 é para diástole zero.",
+        "Gabarito: diástole reversa ≥ 30 semanas → interromper. Corticoide (< 34 sem) e MgSO4 para neuroproteção (< 32 sem); via alta pela gravidade.",
+        "Feto com diástole reversa não tolera as contrações de uma indução: a via é cesárea.",
+        "Esperar o ducto venoso só se justifica muito longe do termo (< 30 sem); com 31 semanas, o risco de óbito supera o da prematuridade."
+      ],
+      "pegadinha": "Perfil biofísico normal não \"anula\" um Doppler com diástole reversa.",
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "sfc-q2",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal crônico",
+      "frente": "No perfil biofísico fetal, o parâmetro que reflete hipóxia crônica e o primeiro a desaparecer na hipóxia aguda são, respectivamente:",
+      "opcoes": [
+        "Tônus fetal e movimentos respiratórios",
+        "Volume de líquido amniótico e reatividade da FCF (CTG)",
+        "Movimentos corpóreos e tônus fetal",
+        "Volume de líquido amniótico e tônus fetal"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "O tônus é marcador agudo e é o ÚLTIMO a desaparecer.",
+        "Gabarito: LA é o marcador crônico (redistribuição de fluxo renal); a reatividade da FCF é a última a surgir e a primeira a sumir.",
+        "Ambos são agudos; o tônus é o último a sumir.",
+        "O LA está certo, mas o tônus é o último a desaparecer, não o primeiro."
+      ],
+      "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
+      "add": "2026-10-20"
     }
   ],
   "rev": 1792532056443

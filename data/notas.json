@@ -31,18 +31,6 @@
       "t": "Uma paciente de 37 semanas e 5 dias é admitida com quadro de ruptura prematura de membranas ovulares, com líquido tinto de mecônio. A cardiotocografia apresenta linha de base normal (entre 110 e 160 bpm), variabilidade moderada (entre 6 e 25 bpm), acelerações transitórias presentes e uma desaceleração variável isolada (DIP III). O DIP Ill está associado à compressão funicular, que pode ocorrer com mais facilidade nos casos de oligodramnia (seja por causa patológica ou mesmo na RPMO). A presença de variabilidade moderada e acelerações transitórias falam a favor do bem estar fetal, afastando a hipótese de asfixia. A hipertensão arterial crônica isolada não justifica a ocorrência do\nDIP III. A compressão do polo cefálico está relacionada ao DIP I, que é uma desaceleração do tipo precoce, coincidente com a contração uterina fisiológica nos estádios mais avançados do trabalho de parto, diferentemente do que foi colocado na questão (a paciente está com 2 cm). Além disso, o DIP I tende a acontecer na maior parte das contrações. A presença de líquido meconial pode estar associada a sofrimento fetal agudo, mas, nesse caso, as desacelerações provavelmente seriam tardias (DIP II) ou variáveis recorrentes, associadas à diminuição ou ausência de variabilidade ou alteração da linha de base (taquicardia ou bradicardia). Vale a pena lembrar que a presença de mecônio, isoladamente, não é sinônimo de sofrimento fetal e nem é uma indicação absoluta de cesariana.\nResposta: letra D."
     },
     {
-      "id": 1792530560328,
-      "d": "2026-10-20",
-      "t": "Sofrimento fetal agudo\nCardiotocografia",
-      "manual": true
-    },
-    {
-      "id": 1792530566074,
-      "d": "2026-10-20",
-      "t": "Sofrimento Fetal cronico",
-      "manual": true
-    },
-    {
       "id": 1792530577088,
       "d": "2026-10-20",
       "t": "Uma paciente com quadro de RPMO com 29 semanas foi mantida em conduta expectante até 34 semanas, quando então foi indicada indução do trabalho de parto. Já haviam sido administradas ampicilina e azitromicina, que são antibióticos para aumentar o tempo de latência entre a RPMO e o parto, corticoterapia com betametasona para aceleração da maturidade pulmonar fetal e sulfato de magnésio para neuroproteção fetal. A única medicação que deve ser repetida é a ampicilina, que nesse contexto será utilizada como profilaxia para GBS, visto que se trata de um parto pré-termo com bolsa rota prolongada (maior que 18 horas). Outras opções para profilaxia são penicilina cristalina, clindamicina e vancomicina, mas não a azitromicina.\nA corticoterapia é recomendada pela maioria das referências para partos que ocorrerão antes de 34 semanas e o sulfato de magnésio é recomendado para partos que ocorrerão com menos de 32 semanas."
@@ -95,6 +83,8 @@
   ],
   "processadas": [
     1792528528241,
-    1792529105511
+    1792529105511,
+    1792530560328,
+    1792530566074
   ]
 }
