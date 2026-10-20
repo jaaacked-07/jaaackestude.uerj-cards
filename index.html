@@ -246,11 +246,16 @@ function setCards(base){
   LASTBASE.forEach(c=>m[c.id]=c);
   (S.extra||[]).forEach(c=>m[c.id]=c);
   RAW=m; const out={};
-  Object.values(m).forEach(c0=>{ if(S.oculto[c0.id]) return;
-    const c={...c0,...(S.edit[c0.id]||{})}; c.tema=dTema(c0); c.sub=dSub(c0); out[c.id]=c; });
+  Object.values(m).forEach(c0=>{ if(oculto(c0)) return;
+    const c={...c0,...(S.edit[c0.id]||{})}; c.tema=dTema(c0); c.sub=dSub(c0);
+    c.fav = c0.id in S.fav ? !!S.fav[c0.id] : !!c0.fav;
+    c.minha = c0.id in S.minha ? S.minha[c0.id] : (c0.minha||'');
+    if(!c.pegadinha) delete c.pegadinha;
+    out[c.id]=c; });
   CARDS=Object.values(out); BYID=out;
 }
 const reaplicar=()=>setCards(LASTBASE);
+const oculto=c0=>c0.id in S.oculto ? !!S.oculto[c0.id] : !!c0.oculto;
 const abc=(a,b)=>a.localeCompare(b,'pt',{sensitivity:'base'});
 async function carregar(){
   let base=null;
@@ -258,7 +263,7 @@ async function carregar(){
   if(base) setCards(base.cards);
   try{
     const r=await fetch('data/cards.json?t='+Date.now(),{cache:'no-store'});
-    if(r.ok){const j=await r.json(); localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}
+    if(r.ok){const j=await r.json(); if((j.rev||0)>=((base&&base.rev)||0)){localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}}
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
 }
@@ -415,7 +420,7 @@ function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
-  if(DECK.filtro==='fav') p=p.filter(c=>S.fav[c.id]);
+  if(DECK.filtro==='fav') p=p.filter(c=>c.fav);
   if(DECK.filtro==='novos') p=p.filter(c=>!S.srs[c.id]);
   return p;
 }
@@ -431,8 +436,8 @@ function pEstudar(){
   const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
   const nb=norm(DECK.busca.trim());
   const arv=arvore(nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+(c.verso||'')).includes(nb)):CARDS);
-  const linha=c=>`<div class="rowi lv2" role="button" data-card="${c.id}"><span class="tx">${S.fav[c.id]?'⭐ ':''}${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</div>`;
-  const ocultos=Object.keys(S.oculto).filter(id=>RAW[id]).length;
+  const linha=c=>`<div class="rowi lv2" role="button" data-card="${c.id}"><span class="tx">${c.fav?'⭐ ':''}${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</div>`;
+  const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
     <p class="mute small" style="margin-top:-10px;margin-bottom:16px">Monte seu baralho — não mexe nas pendências de hoje.</p>
@@ -493,12 +498,12 @@ function renomear(tipo,tema,sub){
       if(tipo==='sub'&&dt===tema&&ds===sub) S.ren.sub[c.tema+'|'+c.sub]=v;});
     if(tipo==='tema'){ if(ABERTO.has('m:'+tema)) ABERTO.add('m:'+v); [...ABERTO].forEach(k=>{if(k.startsWith('s:'+tema+'|')) ABERTO.add('s:'+v+'|'+k.slice(3+tema.length))}); }
     else if(ABERTO.has('s:'+tema+'|'+sub)) ABERTO.add('s:'+tema+'|'+v);
-    DECK.subs.clear(); save(); reaplicar(); fecharFolha(); toast('Renomeado'); render();};
+    DECK.subs.clear(); save(); reaplicar(); fecharFolha(); toast('Renomeado'); render(); syncEdits();};
 }
 function verOcultos(){
-  const ids=Object.keys(S.oculto).filter(id=>RAW[id]);
+  const ids=Object.values(RAW).filter(oculto).map(c=>c.id);
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Cards ocultos</div>${ids.map(id=>`<button class="opi" data-un="${id}"><span class="tx" style="flex:1">${esc(RAW[id].frente)}</span><span class="ct" style="color:var(--wine)">mostrar</span></button>`).join('')}`);
-  document.querySelectorAll('[data-un]').forEach(b=>b.onclick=()=>{delete S.oculto[b.dataset.un];save();reaplicar();toast('Card de volta');fecharFolha();render()});
+  document.querySelectorAll('[data-un]').forEach(b=>b.onclick=()=>{S.oculto[b.dataset.un]=false;save();reaplicar();syncEdits();toast('Card de volta');fecharFolha();render()});
 }
 
 /* card na folha: resposta só ao tocar */
@@ -524,30 +529,30 @@ function editarCard(id){
     else {const v=$('#ev').value.trim(); if(v&&v!==r.verso) e.verso=v;}
     if(pg!==(r.pegadinha||'')) e.pegadinha=pg;
     if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
-    save(); reaplicar(); fecharFolha(); toast('Card atualizado'); depoisDeEditar(id);
+    save(); reaplicar(); fecharFolha(); toast('Card atualizado'); depoisDeEditar(id); syncEdits();
   };
-  const eo=$('#eo'); if(eo) eo.onclick=()=>{delete S.edit[id];save();reaplicar();fecharFolha();toast('Original de volta');depoisDeEditar(id)};
-  $('#eh').onclick=async()=>{ if(await confirmar('Ocultar este card?','Ocultar','Ele sai das revisões. Dá pra mostrar de novo em Estudar.')){S.oculto[id]=1;save();reaplicar();if(SS){SS.fila=SS.fila.filter(x=>x!==id);proximoCard()}else render();toast('Card oculto')} };
+  const eo=$('#eo'); if(eo) eo.remove();
+  $('#eh').onclick=async()=>{ if(await confirmar('Ocultar este card?','Ocultar','Ele sai das revisões. Dá pra mostrar de novo em Estudar.')){S.oculto[id]=true;save();reaplicar();syncEdits();if(SS){SS.fila=SS.fila.filter(x=>x!==id);proximoCard()}else render();toast('Card oculto')} };
 }
 function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else render(); }
 
 /* ===== Favorito e anotação pessoal no card ===== */
-function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${S.fav[c.id]?'on':''}" data-star="${c.id}" aria-label="Favoritar">${S.fav[c.id]?'★':'☆'}</button></span></div>`}
+function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 function minhaHTML(id){
-  const t=S.minha[id];
+  const t=(BYID[id]||{}).minha;
   return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">editar anotação</button>`:`<button class="addn" data-ed="${id}">+ adicionar texto ao card</button>`}</div>`;
 }
 document.addEventListener('click',e=>{
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
-  if(st){const id=st.dataset.star;S.fav[id]=!S.fav[id];if(!S.fav[id])delete S.fav[id];save();st.classList.toggle('on',!!S.fav[id]);st.textContent=S.fav[id]?'★':'☆';vib(8);return}
+  if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const ed=e.target.closest('[data-ed]');
   if(ed){const id=ed.dataset.ed,box=ed.closest('.mbx');
-    box.innerHTML=`<div class="mine"><div class="mh">Minha anotação</div><textarea class="ned" placeholder="Escreva como se fosse parte do card…">${esc(S.minha[id]||'')}</textarea><button class="addn" data-sv="${id}">salvar</button></div>`;
+    box.innerHTML=`<div class="mine"><div class="mh">Minha anotação</div><textarea class="ned" placeholder="Escreva como se fosse parte do card…">${esc((BYID[id]||{}).minha||'')}</textarea><button class="addn" data-sv="${id}">salvar</button></div>`;
     box.querySelector('textarea').focus();return}
   const sv=e.target.closest('[data-sv]');
   if(sv){const id=sv.dataset.sv,box=sv.closest('.mbx'),t=box.querySelector('textarea').value.trim();
-    if(t)S.minha[id]=t;else delete S.minha[id];save();box.outerHTML=minhaHTML(id);toast('Salvo no card')}
+    S.minha[id]=t;save();reaplicar();box.outerHTML=minhaHTML(id);toast('Salvo no card');syncEdits()}
 });
 
 /* ===== Envio automático pro GitHub ===== */
@@ -569,6 +574,42 @@ async function ghPut(tk,data,sha){
   if(sha) body.sha=sha;
   const r=await fetch(GH_API,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify(body)});
   if(!r.ok) throw new Error(r.status);
+}
+const GH_CARDS=GH_API.replace('notas.json','cards.json');
+async function ghModF(url,fn){
+  const tk=ghTok();
+  for(let i=0;i<2;i++){
+    try{
+      const r=await fetch(url+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'}); if(!r.ok) throw new Error(r.status);
+      const j=await r.json(); const d=JSON.parse(dec(j.content)); fn(d);
+      const w=await fetch(url,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify({message:'Edições feitas no app',content:enc(JSON.stringify(d,null,2)+'\n'),branch:'main',sha:j.sha})});
+      if(!w.ok) throw new Error(w.status); return d;
+    }catch(e){ if(i) throw e; }
+  }
+}
+let SYNC=false;
+const temOverride=()=>['edit','fav','minha','oculto'].some(k=>Object.keys(S[k]).length)||Object.keys(S.ren.tema).length||Object.keys(S.ren.sub).length;
+async function syncEdits(){
+  if(!ghTok()||SYNC||!temOverride()) return; SYNC=true;
+  const snap=JSON.parse(JSON.stringify({edit:S.edit,fav:S.fav,minha:S.minha,oculto:S.oculto,ren:S.ren}));
+  try{
+    const novo=await ghModF(GH_CARDS,d=>{
+      d.cards.forEach(c=>{
+        const k=c.tema+'|'+c.sub;
+        if(snap.edit[c.id]) Object.assign(c,snap.edit[c.id]);
+        if(!c.pegadinha) delete c.pegadinha;
+        if(snap.ren.sub[k]) c.sub=snap.ren.sub[k];
+        if(snap.ren.tema[c.tema]) c.tema=snap.ren.tema[c.tema];
+        [['fav',v=>!!v],['oculto',v=>!!v],['minha',v=>v||'']].forEach(([f,cv])=>{ if(c.id in snap[f]){const v=cv(snap[f][c.id]); if(v) c[f]=v; else delete c[f];} });
+      });
+      d.rev=Date.now();
+    });
+    const noRepo=new Set(novo.cards.map(c=>c.id)), igual=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+    ['edit','fav','minha','oculto'].forEach(f=>Object.keys(snap[f]).forEach(id=>{ if(noRepo.has(id)&&igual(S[f][id],snap[f][id])) delete S[f][id]; }));
+    ['tema','sub'].forEach(f=>Object.keys(snap.ren[f]).forEach(k=>{ if(S.ren[f][k]===snap.ren[f][k]) delete S.ren[f][k]; }));
+    localStorage.setItem(LS+'.cache',JSON.stringify(novo)); save(); setCards(novo.cards);
+  }catch(e){}
+  SYNC=false;
 }
 async function ghMod(fn){
   const tk=ghTok();
@@ -769,8 +810,8 @@ function confete(n){
 }
 
 /* ===== Início ===== */
-carregar().then(render).then(syncNotas);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncNotas)}});
+carregar().then(render).then(syncNotas).then(syncEdits);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncNotas).then(syncEdits)}});
 if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
 </body>
