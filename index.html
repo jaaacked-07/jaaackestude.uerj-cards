@@ -694,6 +694,81 @@ async function syncProg(){
 const Extras=()=>S.extra&&S.extra.length;
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&PMUDOU) syncProg(); });
 
+/* ===== Chave criptografada com a senha do app ===== */
+const GH_CHAVE=GH_API.replace('notas.json','chave.json');
+const b64u=u=>btoa(String.fromCharCode(...new Uint8Array(u)));
+const ub64=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
+async function derivar(senha,salt,iter){
+  const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:iter,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
+}
+async function cifrar(tok,senha){
+  const salt=crypto.getRandomValues(new Uint8Array(16)), iv=crypto.getRandomValues(new Uint8Array(12)), iter=310000;
+  const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv},await derivar(senha,salt,iter),new TextEncoder().encode(tok));
+  return {v:1,iter,salt:b64u(salt),iv:b64u(iv),ct:b64u(ct)};
+}
+async function decifrar(o,senha){
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:ub64(o.iv)},await derivar(senha,ub64(o.salt),o.iter),ub64(o.ct));
+  return new TextDecoder().decode(pt);
+}
+async function salvarChaveCifrada(tok,senha){
+  const obj=await cifrar(tok,senha);
+  const g=await fetch(GH_CHAVE+'?ref=main&t='+Date.now(),{headers:ghH(tok),cache:'no-store'});
+  const sha=g.ok?(await g.json()).sha:null;
+  const w=await fetch(GH_CHAVE,{method:'PUT',headers:{...ghH(tok),'Content-Type':'application/json'},body:JSON.stringify({message:'Chave protegida por senha',content:enc(JSON.stringify(obj)),branch:'main',...(sha?{sha}:{})})});
+  if(!w.ok) throw new Error(w.status);
+}
+async function buscarChave(){try{const r=await fetch('data/chave.json?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}
+const erroChave=e=>['401','403','404'].includes(String(e.message))?'Chave sem acesso a esse repositório':'Sem conexão — tente de novo';
+function depoisDeConectar(){fecharFolha();toast('Sincronizando ✓');render();syncProg().then(syncNotas).then(syncEdits)}
+async function abrirConexao(){
+  const tk=ghTok(), ch=await buscarChave();
+  if(tk){
+    folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Sincronização ativa ✓</div>
+      <p class="mute small" style="margin-bottom:14px">${ch?'Para conectar outro aparelho, abra o app nele e digite a senha do app.':'Crie a senha do app: nos outros aparelhos você só vai digitar ela.'}</p>
+      <input class="srch" id="ns1" type="password" autocomplete="new-password" placeholder="${ch?'Nova senha do app':'Senha do app'} (mín. 8)">
+      <button class="btn ${ch?'ghost':''}" id="nsb">${ch?'Trocar senha do app':'Criar senha do app'}</button>
+      <div class="foot"><button class="link" id="gx" style="color:var(--bad)">desconectar este aparelho</button></div>`);
+    $('#nsb').onclick=async()=>{const v=$('#ns1').value; if(v.length<8){toast('Use pelo menos 8 caracteres');return} $('#nsb').textContent='Salvando…';
+      try{await salvarChaveCifrada(tk,v);fecharFolha();toast('Senha atualizada ✓')}catch(e){$('#nsb').textContent=ch?'Trocar senha do app':'Criar senha do app';toast(erroChave(e))}};
+    $('#gx').onclick=async()=>{if(!(await confirmar('Desconectar este aparelho?','Desconectar','Ele para de sincronizar até você digitar a senha de novo.')))return;localStorage.removeItem(LS+'.gh');toast('Desconectado');render()};
+    return;
+  }
+  if(ch){
+    folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Entrar</div>
+      <p class="mute small" style="margin-bottom:14px">Digite a senha do app para sincronizar este aparelho.</p>
+      <input class="srch" id="sp" type="password" placeholder="Senha do app">
+      <button class="btn" id="se">Entrar</button>
+      <div class="foot"><button class="link" id="sk">usar a chave do GitHub</button></div>`);
+    const go=async()=>{const v=$('#sp').value; if(!v)return; $('#se').textContent='Entrando…';
+      try{const t=await decifrar(ch,v); localStorage.setItem(LS+'.gh',t); depoisDeConectar()}
+      catch(e){$('#se').textContent='Entrar';toast('Senha incorreta')}};
+    $('#se').onclick=go; $('#sp').onkeydown=e=>{if(e.key==='Enter')go()};
+    $('#sk').onclick=()=>formChave();
+    return;
+  }
+  formChave();
+}
+function formChave(){
+  folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Conectar</div>
+    <p class="mute small" style="margin-bottom:12px">Cole a chave do GitHub (começa com github_pat_) e crie uma senha do app. Nos outros aparelhos você só vai precisar da senha.</p>
+    <input class="srch" id="gt" type="password" autocomplete="off" placeholder="github_pat_…">
+    <input class="srch" id="gp" type="password" autocomplete="new-password" placeholder="Senha do app (mín. 8)">
+    <button class="btn" id="gs">Conectar</button>`);
+  $('#gs').onclick=async()=>{const v=$('#gt').value.trim(), pw=$('#gp').value; if(!v)return;
+    if(pw.length<8){toast('Senha do app: pelo menos 8 caracteres');return}
+    $('#gs').textContent='Conectando…';
+    try{await ghGet(v); await salvarChaveCifrada(v,pw); localStorage.setItem(LS+'.gh',v); depoisDeConectar()}
+    catch(e){$('#gs').textContent='Conectar';toast(erroChave(e))}};
+}
+async function convidarEntrar(){
+  if(ghTok()||sessionStorage.getItem('uerj.pulou')) return;
+  const ch=await buscarChave(); if(!ch||SS||$('#sheet')) return;
+  await abrirConexao();
+  const pn=$('#sheet .foot'); if(pn) pn.insertAdjacentHTML('afterbegin','<button class="link" id="pl">agora não</button>');
+  const pl=$('#pl'); if(pl) pl.onclick=()=>{sessionStorage.setItem('uerj.pulou','1');fecharFolha()};
+}
+
 /* ===== Anotar (bloco de notas) ===== */
 function pAnotar(){
   const draft=$('#tx')?$('#tx').value:'';
@@ -703,10 +778,10 @@ function pAnotar(){
     <h2 class="serif">Anotar</h2>
     <textarea class="note" id="tx" placeholder="Anote o erro desta questão (o que caiu, o que você marcou, o comentário…)"></textarea>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
-    <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Conecte o GitHub (lá embaixo) para as anotações irem sozinhas.'}</p>
+    <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Cada anotação vai sozinha pro Claude. Os cards chegam por volta de 12h30 e 21h30 e ela some daqui.':'Toque em "conectar" (lá embaixo) para as anotações irem sozinhas.'}</p>
     ${lista.length?`<div class="sec">Aguardando cards · ${lista.length}</div><div class="rows">${lista.map(item).join('')}</div>`:''}
     ${!tk&&naoEnv.length?`<button class="btn ghost" id="cp" style="margin-top:16px">Copiar para colar no chat (${naoEnv.length})</button>`:''}
-    <div class="foot"><button class="link" id="gh">${tk?'GitHub conectado ✓':'conectar GitHub'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
+    <div class="foot"><button class="link" id="gh">${tk?'sincronização ✓':'conectar'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#tx').value=draft;
   $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();$('#tx').value='';toast('Guardado');pAnotar();enviarPendentes()};
@@ -726,17 +801,7 @@ function pAnotar(){
       S.notasDel[n.id]=1; S.notas=S.notas.filter(x=>x!==n);save();pAnotar();
       if(n.env&&tk){try{await ghMod(d=>{d.pendentes=d.pendentes.filter(p=>String(p.id)!==String(n.id))})}catch(e){}} };
   });
-  $('#gh').onclick=()=>{
-    folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Conectar GitHub</div>
-      <p class="mute small" style="margin-bottom:12px">Cole a chave (começa com github_pat_). Ela fica salva só neste aparelho.</p>
-      <input class="srch" id="gt" type="password" autocomplete="off" placeholder="github_pat_…" value="${esc(ghTok())}">
-      <button class="btn" id="gs">Salvar e testar</button>
-      ${ghTok()?'<div class="foot"><button class="link" id="gx" style="color:var(--bad)">desconectar</button></div>':''}`);
-    $('#gs').onclick=async()=>{const v=$('#gt').value.trim();if(!v)return;$('#gs').textContent='Testando…';
-      try{await ghGet(v);localStorage.setItem(LS+'.gh',v);fecharFolha();toast('Conectado ✓');pAnotar()}
-      catch(e){$('#gs').textContent='Salvar e testar';toast(String(e.message)==='401'||String(e.message)==='403'||String(e.message)==='404'?'Chave sem acesso a esse repositório':'Sem conexão — tente de novo')}};
-    const gx=$('#gx'); if(gx) gx.onclick=()=>{localStorage.removeItem(LS+'.gh');fecharFolha();toast('Desconectado');pAnotar()};
-  };
+  $('#gh').onclick=abrirConexao;
   $('#imp').onclick=()=>{
     folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Importar cards</div><p class="mute small" style="margin-bottom:10px">Só use se o Claude te mandar um bloco de cards pra colar.</p><textarea class="note" id="ij"></textarea><button class="btn" id="ib" style="margin-top:12px">Importar</button>`);
     $('#ib').onclick=()=>{try{const j=JSON.parse($('#ij').value);const arr=Array.isArray(j)?j:j.cards;if(!Array.isArray(arr))throw 0;const ids=new Set(S.extra.map(c=>c.id));arr.forEach(c=>{if(c.id&&c.frente){if(ids.has(c.id))S.extra=S.extra.filter(x=>x.id!==c.id);S.extra.push(c)}});save();reaplicar();fecharFolha();toast(arr.length+' cards importados');render()}catch(e){toast('Não reconheci esse bloco')}};
@@ -861,7 +926,7 @@ function confete(n){
 }
 
 /* ===== Início ===== */
-carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits);
+carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits).then(convidarEntrar);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits)}});
 if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>

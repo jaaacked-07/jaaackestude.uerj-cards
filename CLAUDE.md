@@ -7,6 +7,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 - `data/cards.json` — todos os cards. O app lê esse arquivo toda vez que abre.
 - `data/notas.json` — anotações que a Jacke guarda no app (vão sozinhas para cá).
 - `data/progresso.json` — progresso dela sincronizado entre aparelhos. **Nunca editar.**
+- `data/chave.json` — acesso do app criptografado com a senha dela. **Nunca editar nem apagar.**
 
 ## Rotina: transformar anotações em cards
 
@@ -24,6 +25,11 @@ A Jacke edita, renomeia, favorita e oculta cards pelo app, e isso é gravado dir
 `fav`, `oculto`, `minha` (texto dela no card) e `rev` (no topo do arquivo). Nunca altere nem remova esses campos, e nunca desfaça edições que ela fez em `frente`/`verso`/`tema`/`sub`.
 Ao criar cards novos, **reutilize os nomes de `tema` e `sub` que já existem** no arquivo quando o assunto for o mesmo (ela pode ter renomeado).
 
+## Matérias (`tema`)
+
+Use sempre uma destas, escritas exatamente assim: **Cirurgia**, **Clínica Médica**, **Ginecologia**, **Obstetrícia**, **Pediatria**, **Preventiva**, **Psiquiatria**.
+**Ginecologia e Obstetrícia são matérias SEPARADAS** — nunca use "GO" nem "Ginecologia e Obstetrícia". Gestação, parto, puerpério, pré-natal, abortamento e doenças da gravidez → Obstetrícia. Tudo fora do ciclo gravídico-puerperal (ciclo menstrual, contracepção, climatério, infecções genitais, mama, oncologia ginecológica, uroginecologia) → Ginecologia. Se ela já tiver renomeado uma matéria, use o nome que está no arquivo.
+
 ## Qualidade do conteúdo
 
 - Português do Brasil, linguagem direta, foco em **acertar questão de prova** (UERJ, ENARE, SES-RJ).
@@ -39,7 +45,7 @@ Ao criar cards novos, **reutilize os nomes de `tema` e `sub` que já existem** n
 {
   "id": "tema-curto-07",            // único
   "tipo": "flash",                  // "flash" ou "quiz"
-  "tema": "Preventiva",             // grande área: Clínica, Cirurgia, Pediatria, GO, Preventiva, Psiquiatria…
+  "tema": "Preventiva",             // matéria (ver lista abaixo)
   "sub": "Notificação imediata",    // assunto (vira filtro no app)
   "frente": "Pergunta",
   "verso": "Resposta curta",        // só flash
