@@ -238,6 +238,15 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .fld input:focus{border-color:var(--rose)}
 .fld .pp{font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--wine);text-align:right;padding-bottom:8px}
 .fld .pp.u{color:var(--rose)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:7px;padding:10px 10px 12px 22px;background:color-mix(in srgb,var(--card) 15%,var(--bg));border-bottom:1px solid var(--line)}
+.tile{aspect-ratio:1;background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:6px 6px 15px;font-size:9.8px;line-height:1.26;text-align:left;position:relative;overflow:hidden;cursor:pointer;transition:transform .12s}
+.tile:active{transform:scale(.96)}
+.tile .tt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tile .bd{position:absolute;left:7px;bottom:5px;font-size:9px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--ok)}
+.tile .bd.e{color:var(--bad)}.tile .bd.ok{color:var(--ok)}
+.tile .st{position:absolute;right:5px;bottom:3px;font-size:10px}
+.tile.dim{opacity:.55}
+.tsrch{margin:6px 0 4px}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -482,7 +491,7 @@ function arvoreHTML(lista,aberto,o){
       const km='m:'+a+'|'+m, om=o.forcar||aberto.has(km), nm=subs.reduce((t,y)=>t+y.cards.length,0);
       return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards})=>{
         const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks);
-        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?cards.map(o.linha).join(''):'');
+        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:'');
       }).join(''):'');
     }).join(''):'');
   }).join('')+'</div>';
@@ -503,13 +512,13 @@ function pErros(){
   const fracos=err.filter(c=>S.srs[c.id].box<3);
   const cont={ns:0,cf:0,lr:0}; err.forEach(c=>{const t=S.srs[c.id].et;if(t)cont[t]++});
   const mx=Math.max(1,...Object.values(cont)), temTipo=Object.values(cont).some(v=>v);
-  const linha=c=>{const x=S.srs[c.id],ok=x.box>=3;return `<div class="rowi lv3 ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tx">${esc(c.frente)}</span><span class="pill ${ok?'ok':''}">${ok?'dominado':x.wrong+'×'}</span></div>`};
+  const tile=c=>{const x=S.srs[c.id],ok=x.box>=3;return `<div class="tile ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span><span class="bd ${ok?'ok':'e'}">${ok?'dominado':'errou '+x.wrong+'×'}</span></div>`};
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Caderno de erros</h2>
     ${fracos.length?`<button class="btn" id="rev">Revisar ${fracos.length} ${fracos.length>1?'fracos':'fraco'}</button>`:`<div class="done"><div class="serif">Tudo dominado ✓</div></div>`}
     ${temTipo?`<div class="sec">Por que eu erro</div><div class="bars">${Object.keys(TIPOS).map(k=>`<div class="bar"><span>${TIPOS[k]}</span><span class="b"><i style="width:${cont[k]/mx*100}%"></i></span><span class="v">${cont[k]}</span></div>`).join('')}</div>`:''}
     <div class="sec">Onde eu erro</div>
-    <div id="lstE">${arvoreHTML(err,ABERTO_E,{linha})}</div>
+    <div id="lstE">${arvoreHTML(err,ABERTO_E,{tile})}</div>
   </div>`;
   const r=$('#rev'); if(r) r.onclick=()=>sessao(shuffle(fracos.map(c=>c.id)),'erros');
   ligarArvore($('#lstE'),ABERTO_E,pErros);
@@ -536,7 +545,7 @@ function pEstudar(){
   const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
   const nb=norm(DECK.busca.trim());
   const lista=nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+c.area+' '+(c.verso||'')).includes(nb)):CARDS;
-  const linha=c=>`<div class="rowi lv3" role="button" data-card="${c.id}"><span class="tx">${c.fav?'⭐ ':''}${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="pill ok">quiz</span>':''}</div>`;
+  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
   const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
@@ -547,7 +556,7 @@ function pEstudar(){
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
     <input class="srch" id="bs" placeholder="Buscar…" value="${esc(DECK.busca)}">
-    <div id="lst">${arvoreHTML(lista,ABERTO,{linha,pen:true,forcar:!!nb})}</div>
+    <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb})}</div>
     ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
   </div>`;
   $('#sT').onclick=escolherTemas;
@@ -560,22 +569,27 @@ function pEstudar(){
 }
 /* Seletor de temas: grande área → matéria → assunto, abrindo conforme toca */
 function escolherTemas(){
-  const arv=arv3(CARDS), tmp=new Set(DECK.subs), ab=new Set();
+  const arv0=arv3(CARDS), tmp=new Set(DECK.subs), ab=new Set(); let q='', arv=arv0;
+  const filtrar=()=>{ const n=norm(q.trim()); arv=!n?arv0:arv0.map(({a,ms})=>({a,ms:ms.map(({m,subs})=>({m,subs:subs.filter(x=>norm(a+' '+m+' '+x.su).includes(n))})).filter(x=>x.subs.length)})).filter(x=>x.ms.length); };
   const kA=a=>arv.find(x=>x.a===a).ms.flatMap(m=>m.subs.map(x=>a+'|'+m.m+'|'+x.su));
   const kM=(a,m)=>arv.find(x=>x.a===a).ms.find(x=>x.m===m).subs.map(x=>a+'|'+m+'|'+x.su);
+  const aberto=k=>!!q.trim()||ab.has(k);
   const est=ks=>{const n=ks.filter(k=>tmp.has(k)).length;return n===0?['','']:n===ks.length?['on','✓']:['parc','–']};
   const tog=ks=>{const todos=ks.every(k=>tmp.has(k));ks.forEach(k=>todos?tmp.delete(k):tmp.add(k))};
   const desenha=()=>{
     folha(`<div class="serif" style="font-size:21px;margin-bottom:4px">Temas</div>
+      <input class="srch tsrch" id="tq" placeholder="Pesquisar área, matéria ou assunto…" value="${esc(q)}">
+      ${!arv.length?'<p class="mute small" style="padding:10px 2px">Nada encontrado.</p>':''}
       <div class="opi ${!tmp.size?'on':''}" data-tudo role="button"><span class="bx">${!tmp.size?'✓':''}</span><span class="lab">Tudo</span></div>
-      ${arv.map(({a,ms})=>{const [ca,ta]=est(kA(a)), oa=ab.has(a);
+      ${arv.map(({a,ms})=>{const [ca,ta]=est(kA(a)), oa=aberto(a);
         return `<div class="opi ${ca==='on'?'on':''} ${oa?'op':''}"><span class="bx ${ca==='parc'?'parc':''}" data-ca="${esc(a)}" role="button">${ta}</span><span class="lab" data-xa="${esc(a)}" role="button"><span class="chv">▶</span>${esc(a)}</span></div>`+
-        (oa?ms.map(({m,subs})=>{const [cm,tm]=est(kM(a,m)), om=ab.has(a+'|'+m);
+        (oa?ms.map(({m,subs})=>{const [cm,tm]=est(kM(a,m)), om=aberto(a+'|'+m);
           return `<div class="opi l1 ${cm==='on'?'on':''} ${om?'op':''}"><span class="bx ${cm==='parc'?'parc':''}" data-cm="${esc(a+'|'+m)}" role="button">${tm}</span><span class="lab" data-xm="${esc(a+'|'+m)}" role="button"><span class="chv">▶</span>${esc(m)}</span></div>`+
           (om?subs.map(({su,cards})=>{const k=a+'|'+m+'|'+su,on=tmp.has(k);return `<div class="opi l2 ${on?'on':''}" data-k="${esc(k)}" role="button"><span class="bx">${on?'✓':''}</span><span class="lab">${esc(su)}</span><span class="ct">${cards.length}</span></div>`}).join(''):'');
         }).join(''):'');}).join('')}
       <button class="btn" id="tp" style="margin-top:18px">Pronto</button>`);
     const sh=$('#sheet');
+    const tq=$('#tq'); tq.oninput=()=>{q=tq.value;const pos=tq.selectionStart;filtrar();re();const t2=$('#tq');t2.focus();t2.setSelectionRange(pos,pos)};
     sh.querySelector('[data-tudo]').onclick=()=>{tmp.clear();re()};
     sh.querySelectorAll('[data-ca]').forEach(b=>b.onclick=()=>{tog(kA(b.dataset.ca));re()});
     sh.querySelectorAll('[data-cm]').forEach(b=>b.onclick=()=>{const [a,m]=b.dataset.cm.split('|');tog(kM(a,m));re()});

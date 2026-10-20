@@ -1028,6 +1028,396 @@
       ],
       "fonte": "FIGO 2018",
       "add": "2026-10-20"
+    },
+    {
+      "id": "mama-birads-01",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "BI-RADS: o que significa cada categoria e qual a conduta?",
+      "verso": "O BI-RADS é a forma padronizada de o radiologista dizer o risco de câncer da lesão — e cada número já traz a conduta. Decore a conduta, porque é isso que a prova pergunta.\n\n0 e 3 são os que mais confundem: 0 = exame incompleto (precisa complementar); 3 = provavelmente benigno (segue, não biopsia).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Cat.",
+          "Significa",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "0",
+            "Incompleto",
+            "Complementar (incidências, USG, exames antigos)"
+          ],
+          [
+            "1",
+            "Negativo",
+            "Rotina"
+          ],
+          [
+            "2",
+            "Achado benigno",
+            "Rotina"
+          ],
+          [
+            "3",
+            "Provavelmente benigno (≤ 2%)",
+            "Controle em 6 meses"
+          ],
+          [
+            "4",
+            "Suspeito (2–95%)",
+            "Biópsia"
+          ],
+          [
+            "5",
+            "Altamente suspeito (≥ 95%)",
+            "Biópsia"
+          ],
+          [
+            "6",
+            "Câncer já comprovado",
+            "Tratamento"
+          ]
+        ]
+      },
+      "pegadinha": "BI-RADS 3 NÃO é biópsia (é seguimento). BI-RADS 0 NÃO é repetir em 6 meses (é completar agora).",
+      "uerj": "Em geral vem como caso: o laudo traz o BI-RADS e a pergunta é a conduta.",
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-birads-02",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "BI-RADS 3: como é o seguimento?",
+      "verso": "Controle de curto intervalo por cerca de 2 anos: imagem em 6 meses (da mama afetada), depois aos 12 e aos 24 meses (bilateral). Se a lesão ficar estável o tempo todo, passa a BI-RADS 2 e volta à rotina.\n\nSe crescer ou mudar de aspecto em qualquer controle, vira BI-RADS 4 e vai para biópsia.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "BI-RADS 3",
+          "Controle em 6 meses",
+          "Controle em 12 meses",
+          "Controle em 24 meses",
+          [
+            "Estável → BI-RADS 2 (rotina)",
+            "Mudou → BI-RADS 4 (biópsia)"
+          ]
+        ]
+      },
+      "pegadinha": "Exceções em que se pode biopsiar mesmo sendo BI-RADS 3: paciente muito ansiosa, sem condições de seguir o controle, ou planejando gestação/tratamento que atrapalhe o seguimento.",
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-birads-03",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "BI-RADS 4: como se subdivide?",
+      "verso": "O 4 cobre um risco muito largo (2 a 95%), por isso foi dividido em A, B e C. Todos vão para biópsia — a subdivisão serve para checar se o resultado da biópsia \"bate\" com a imagem.\n\nSe a imagem é 4C/5 e a biópsia vem benigna, o resultado é discordante: repete a biópsia ou faz retirada cirúrgica.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Risco de câncer"
+        ],
+        "linhas": [
+          [
+            "4A",
+            "2–10% (baixa suspeita)"
+          ],
+          [
+            "4B",
+            "10–50% (moderada)"
+          ],
+          [
+            "4C",
+            "50–95% (alta)"
+          ]
+        ]
+      },
+      "pegadinha": "Biópsia benigna em lesão BI-RADS 5 = discordância radiopatológica. Não se dá alta: nova biópsia ou exérese.",
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-nod-01",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Nódulo mamário palpável: qual o primeiro exame de imagem conforme a idade?",
+      "verso": "Abaixo de 30 anos, ultrassonografia: a mama jovem é densa (a mamografia enxerga pouco) e radiação desnecessária deve ser evitada. A partir dos 40, mamografia diagnóstica + ultrassom. Entre 30 e 39, o ultrassom costuma ser o primeiro, completando com mamografia se necessário.\n\nNódulo palpável é exame DIAGNÓSTICO, não de rastreamento — não espera a faixa etária do rastreio.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Idade",
+          "Primeiro exame"
+        ],
+        "linhas": [
+          [
+            "< 30 anos",
+            "Ultrassonografia"
+          ],
+          [
+            "30–39 anos",
+            "Ultrassonografia (± mamografia)"
+          ],
+          [
+            "≥ 40 anos",
+            "Mamografia diagnóstica + ultrassonografia"
+          ]
+        ]
+      },
+      "pegadinha": "Jovem com nódulo palpável: pedir mamografia como primeiro exame costuma ser a alternativa errada.",
+      "fonte": "ACR Appropriateness Criteria — palpable breast mass",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-nod-02",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Nódulo de mama: o que sugere benignidade e o que sugere malignidade?",
+      "verso": "Benigno tende a ser \"organizado\": oval, margens bem definidas, mais largo que alto (paralelo à pele), móvel e fibroelástico — o típico é o fibroadenoma da mulher jovem.\n\nMaligno \"invade\": forma irregular, margens espiculadas ou indistintas, mais alto que largo, sombra acústica posterior, endurecido, fixo, com retração de pele ou mamilo.",
+      "visual": [
+        {
+          "tipo": "vs",
+          "a": {
+            "t": "Benigno",
+            "itens": [
+              "Oval / circunscrito",
+              "Mais largo que alto",
+              "Móvel, elástico",
+              "Ex.: fibroadenoma"
+            ]
+          },
+          "b": {
+            "t": "Suspeito",
+            "itens": [
+              "Irregular / espiculado",
+              "Mais alto que largo",
+              "Sombra acústica",
+              "Duro, fixo, retração"
+            ]
+          }
+        },
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mammo_breast_cancer.jpg/600px-Mammo_breast_cancer.jpg",
+          "legenda": "Mamografia: mama normal (esq.) × mama com câncer (dir.), massa densa e irregular.",
+          "fonte": "Wikimedia Commons · domínio público (NCI)"
+        }
+      ],
+      "uerj": "Costuma descrever o nódulo no enunciado e pedir a hipótese mais provável ou a conduta.",
+      "fonte": "ACR BI-RADS — léxico de ultrassom",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-nod-03",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Cisto mamário: simples, complicado e complexo — qual a conduta?",
+      "verso": "Cisto simples (anecoico, parede fina, reforço acústico posterior) é benigno: BI-RADS 2, nada a fazer — punção só se doer. Complicado (só ecos internos, sem parte sólida) é BI-RADS 3: controle. Complexo (componente sólido ou septo espesso) é BI-RADS 4: biópsia.\n\nO que manda é a presença de parte SÓLIDA dentro do cisto.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Cisto",
+          "BI-RADS",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "Simples",
+            "2",
+            "Nada (PAAF se sintomático)"
+          ],
+          [
+            "Complicado",
+            "3",
+            "Controle em 6 meses"
+          ],
+          [
+            "Complexo (sólido-cístico)",
+            "4",
+            "Biópsia"
+          ]
+        ]
+      },
+      "pegadinha": "Na punção: líquido sanguinolento ou massa que não some após esvaziar → investigar (citologia/biópsia).",
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-nod-04",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Qual biópsia usar em cada lesão de mama?",
+      "verso": "Nódulo sólido: core biopsy (agulha grossa) guiada por ultrassom — dá histologia, diferencia in situ de invasivo e permite imuno-histoquímica. PAAF dá só citologia: serve para cisto e linfonodo axilar. Microcalcificações: biópsia a vácuo (mamotomia) guiada por estereotaxia.\n\nCirúrgica (excisional) fica para quando há discordância entre imagem e resultado.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Lesão",
+          "Método"
+        ],
+        "linhas": [
+          [
+            "Nódulo sólido",
+            "Core biopsy guiada por USG"
+          ],
+          [
+            "Microcalcificações",
+            "Vácuo (mamotomia) por estereotaxia"
+          ],
+          [
+            "Cisto / linfonodo axilar",
+            "PAAF"
+          ],
+          [
+            "Resultado discordante",
+            "Biópsia cirúrgica"
+          ]
+        ]
+      },
+      "pegadinha": "PAAF não diferencia carcinoma in situ de invasivo — por isso não é a escolha para nódulo sólido suspeito.",
+      "fonte": "Consenso SBM / CBR",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-rast-01",
+      "tipo": "flash",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Rastreamento do câncer de mama",
+      "frente": "Rastreamento do câncer de mama no SUS: quem e a cada quanto tempo?",
+      "verso": "Mulheres de 50 a 74 anos: mamografia de rastreamento a cada 2 anos (bienal). De 40 a 49 (e acima de 74), o SUS não restringe a mamografia por demanda, após conversa sobre riscos e benefícios (decisão compartilhada).\n\nMudou em setembro de 2025: antes o limite superior era 69 anos e a faixa de 40–49 dependia de sintoma ou risco.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Faixa",
+          "Recomendação (MS/INCA 2025)"
+        ],
+        "linhas": [
+          [
+            "40–49 anos",
+            "Por demanda, decisão compartilhada"
+          ],
+          [
+            "50–74 anos",
+            "Mamografia a cada 2 anos"
+          ],
+          [
+            "> 74 anos",
+            "Por demanda, decisão compartilhada"
+          ]
+        ]
+      },
+      "pegadinha": "SBM, CBR e FEBRASGO recomendam mamografia ANUAL a partir dos 40. Leia se a questão pergunta pelo Ministério da Saúde ou pelas sociedades.",
+      "uerj": "Questões de Preventiva/Gineco costumam cobrar a recomendação do Ministério da Saúde — atenção à faixa nova (até 74).",
+      "fonte": "Nota Técnica MS/INCA nº 626/2025",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-q1",
+      "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Mulher, 52 anos, assintomática, faz mamografia de rastreamento com laudo BI-RADS 3 (nódulo oval, circunscrito, 8 mm). A conduta é:",
+      "opcoes": [
+        "Core biopsy guiada por ultrassom",
+        "Nova mamografia em 6 meses",
+        "Mamografia de rotina em 2 anos",
+        "Ressonância magnética das mamas"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Biópsia é para BI-RADS 4 e 5.",
+        "Gabarito: BI-RADS 3 = controle de curto intervalo (6 meses, depois 12 e 24).",
+        "Rotina é para BI-RADS 1 e 2.",
+        "RM não é o passo indicado para BI-RADS 3."
+      ],
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-q2",
+      "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Mamografia de rastreamento de mulher de 58 anos é laudada como BI-RADS 0. A conduta é:",
+      "opcoes": [
+        "Repetir a mamografia em 6 meses",
+        "Biópsia por estereotaxia",
+        "Complementar a avaliação com incidências adicionais e/ou ultrassom",
+        "Considerar o exame normal e manter o rastreamento"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Repetir em 6 meses é BI-RADS 3.",
+        "Sem lesão caracterizada, não há indicação de biópsia.",
+        "Gabarito: BI-RADS 0 = incompleto — compressão localizada, magnificação, ultrassom ou comparação com exames anteriores.",
+        "BI-RADS 0 não é negativo."
+      ],
+      "fonte": "ACR BI-RADS, 5ª ed.",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-q3",
+      "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Nódulo mamário e BI-RADS",
+      "frente": "Mulher, 23 anos, nota nódulo na mama direita há 2 meses: 2 cm, fibroelástico, móvel, indolor, sem alterações na pele. O exame inicial mais adequado e a hipótese mais provável são:",
+      "opcoes": [
+        "Mamografia — carcinoma ductal",
+        "Ultrassonografia — fibroadenoma",
+        "Ressonância — tumor filoides",
+        "Ultrassonografia — cisto complexo"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Em jovem, mamografia não é o primeiro exame, e o quadro é benigno.",
+        "Gabarito: jovem + nódulo móvel e elástico = fibroadenoma; ultrassom é o primeiro exame abaixo dos 30 anos.",
+        "Filoides costuma ser maior e de crescimento rápido; RM não é inicial.",
+        "O exame clínico descreve nódulo sólido típico, não cisto."
+      ],
+      "fonte": "ACR Appropriateness Criteria",
+      "add": "2026-10-20"
+    },
+    {
+      "id": "mama-q4",
+      "tipo": "quiz",
+      "area": "Ginecologia e Obstetrícia",
+      "tema": "Ginecologia",
+      "sub": "Rastreamento do câncer de mama",
+      "frente": "Segundo a recomendação atual do Ministério da Saúde (2025), o rastreamento mamográfico populacional deve ser feito:",
+      "opcoes": [
+        "Anualmente dos 40 aos 69 anos",
+        "A cada 2 anos dos 50 aos 69 anos",
+        "A cada 2 anos dos 50 aos 74 anos",
+        "Anualmente a partir dos 50 anos, sem limite de idade"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Anual a partir dos 40 é a recomendação das sociedades (SBM/CBR/FEBRASGO).",
+        "Era a recomendação anterior — o limite subiu para 74.",
+        "Gabarito: bienal, 50 a 74 anos (40–49 e > 74: por demanda, com decisão compartilhada).",
+        "Não é anual nem sem limite."
+      ],
+      "fonte": "Nota Técnica MS/INCA nº 626/2025",
+      "add": "2026-10-20"
     }
   ],
   "rev": 1792529642187
