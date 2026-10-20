@@ -5,7 +5,8 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 
 - `index.html` — app inteiro (não mexer ao gerar cards).
 - `data/cards.json` — todos os cards. O app lê esse arquivo toda vez que abre.
-- `data/notas.json` — anotações que a Jacke envia pelo botão "Enviar pro Claude".
+- `data/notas.json` — anotações que a Jacke guarda no app (vão sozinhas para cá).
+- `data/progresso.json` — progresso dela sincronizado entre aparelhos. **Nunca editar.**
 
 ## Rotina: transformar anotações em cards
 

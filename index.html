@@ -232,9 +232,15 @@ const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/8
 /* ===== Estado ===== */
 let S;
 try{S=JSON.parse(localStorage.getItem(LS))||{}}catch(e){S={}}
-function fixS(){S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.edit=S.edit||{}; S.oculto=S.oculto||{};}
+const DEV=(()=>{try{let d=localStorage.getItem(LS+'.dev');if(!d){d=Math.random().toString(36).slice(2,10);localStorage.setItem(LS+'.dev',d)}return d}catch(e){return 'x'}})();
+function fixS(){S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.edit=S.edit||{}; S.oculto=S.oculto||{};
+  S.xpDev=S.xpDev||{}; if(S.xp&&!Object.keys(S.xpDev).length) S.xpDev[DEV]=S.xp;
+  S.dias=S.dias||{}; if(S.streak&&S.streak.last&&!Object.keys(S.dias).length) for(let i=0;i<S.streak.n;i++) S.dias[addD(S.streak.last,-i)]=1;
+  S.notasDel=S.notasDel||{};
+  if(typeof recalc==='function') recalc();}
 fixS();
-const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
+const saveLocal=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
+const save=()=>{saveLocal();if(typeof agendarSync==='function')agendarSync()};
 
 /* ===== Cards ===== */
 let CARDS=[], BYID={}, RAW={}, LASTBASE=[];
@@ -279,7 +285,7 @@ function proximo(box){
 }
 function rating(id,r,tipoErro){
   const s=S.srs[id]||{box:0,seen:0,wrong:0};
-  s.seen++; s.last=hoje(); s.lr=r;
+  s.seen++; s.last=hoje(); s.lr=r; s.t=Date.now();
   if(r===0){s.box=0; s.wrong++; if(tipoErro) s.et=tipoErro; s.due=addD(hoje(),1);}
   else if(r===1){s.box=Math.max(0,Math.min(s.box,1)); s.due=addD(hoje(),1);}
   else {s.box=Math.min(s.box+1,4); s.due=proximo(s.box);}
@@ -319,10 +325,13 @@ function adicionarMais(n){
 
 /* ===== Recompensa ===== */
 const nivel=xp=>Math.floor(Math.sqrt(xp/60))+1;
-function marcarStreak(){
-  const h=hoje(), st=S.streak;
-  if(st.last===h) return;
-  st.n = st.last===addD(h,-1)? st.n+1 : 1; st.last=h;
+function marcarStreak(){ S.dias[hoje()]=1; recalc(); }
+function addXP(n){ S.xpDev[DEV]=(S.xpDev[DEV]||0)+n; recalc(); }
+function recalc(){
+  S.xp=Object.values(S.xpDev||{}).reduce((a,b)=>a+b,0);
+  const ds=Object.keys(S.dias||{}).sort(); const last=ds[ds.length-1]||null; let n=0;
+  if(last){ n=1; while(S.dias[addD(last,-n)]) n++; }
+  S.streak={n,last};
 }
 const FRASES=['Mais um dia no bolso.','Constância ganha prova.','Seu eu do dia 01/11 agradece.','Feito. Pode descansar sem culpa.','Isso é o que separa aprovado de quase.','Cada card é uma questão a mais certa.'];
 
@@ -639,9 +648,51 @@ async function syncNotas(){
   }catch(e){}
   if(!proc) return;
   const ps=new Set(proc.map(String)), antes=S.notas.length;
-  S.notas=S.notas.filter(n=>!(n.env&&ps.has(String(n.id))));
+  S.notas=S.notas.filter(n=>{const x=n.env&&ps.has(String(n.id)); if(x) S.notasDel[n.id]=1; return !x});
   if(S.notas.length<antes){save();toast('Seus cards novos chegaram ✓');if(!SS)render()}
 }
+
+/* ===== Sincronizar progresso entre aparelhos ===== */
+const GH_PROG=GH_API.replace('notas.json','progresso.json');
+const progSnap=()=>({srs:S.srs,xpDev:S.xpDev,dias:S.dias,notas:S.notas,notasDel:S.notasDel,plan:S.plan,extra:S.extra});
+function mergeProg(R){
+  if(!R) return false; const antes=JSON.stringify(progSnap());
+  for(const id in R.srs||{}){const a=S.srs[id],b=R.srs[id]; if(!a||(b.t||0)>(a.t||0)) S.srs[id]=b;}
+  for(const d in R.xpDev||{}) S.xpDev[d]=Math.max(S.xpDev[d]||0,R.xpDev[d]);
+  Object.assign(S.dias,R.dias||{}); Object.assign(S.notasDel,R.notasDel||{});
+  const m={}; [...S.notas,...(R.notas||[])].forEach(n=>{const o=m[n.id]; if(!o){m[n.id]={...n};return} const k=(n.u||n.id)>(o.u||o.id)?{...n}:o; k.env=!!(o.env||n.env); m[n.id]=k;});
+  S.notas=Object.values(m).filter(n=>!S.notasDel[n.id]).sort((a,b)=>a.id-b.id);
+  if(R.plan){ if(!S.plan||R.plan.date>S.plan.date) S.plan=R.plan;
+    else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0);} }
+  const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>ex[c.id]=c); S.extra=Object.values(ex);
+  recalc();
+  return JSON.stringify(progSnap())!==antes;
+}
+let PSYNC=false, PTIMER=null, PMUDOU=false;
+function agendarSync(){ PMUDOU=true; clearTimeout(PTIMER); if(!SS) PTIMER=setTimeout(syncProg,4000); }
+async function syncProg(){
+  clearTimeout(PTIMER);
+  const tk=ghTok(); if(!tk||PSYNC||SS) return; PSYNC=true;
+  for(let i=0;i<2;i++){
+    try{
+      const r=await fetch(GH_PROG+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'});
+      let sha=null,Rm=null;
+      if(r.ok){const j=await r.json(); sha=j.sha; Rm=JSON.parse(dec(j.content));} else if(r.status!==404) throw new Error(r.status);
+      const mudou=mergeProg(Rm); saveLocal(); if(Extras()) reaplicar();
+      const corpo=JSON.stringify(progSnap());
+      if(!Rm||corpo!==JSON.stringify(Rm)){
+        const w=await fetch(GH_PROG,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify({message:'Progresso',content:enc(corpo),branch:'main',...(sha?{sha}:{})})});
+        if(!w.ok) throw new Error(w.status);
+      }
+      PMUDOU=false;
+      if(mudou&&!SS&&!$('#sheet')) render();
+      break;
+    }catch(e){ if(i) break; }
+  }
+  PSYNC=false;
+}
+const Extras=()=>S.extra&&S.extra.length;
+document.addEventListener('visibilitychange',()=>{ if(document.hidden&&PMUDOU) syncProg(); });
 
 /* ===== Anotar (bloco de notas) ===== */
 function pAnotar(){
@@ -669,10 +720,10 @@ function pAnotar(){
     folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>
       <button class="btn" id="ns" style="margin-top:12px">Salvar</button>
       <div class="foot"><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
-    $('#ns').onclick=async()=>{const t=$('#ne').value.trim();fecharFolha();if(!t||t===n.t)return;n.t=t;save();pAnotar();
+    $('#ns').onclick=async()=>{const t=$('#ne').value.trim();fecharFolha();if(!t||t===n.t)return;n.t=t;n.u=Date.now();save();pAnotar();
       if(n.env&&tk){try{await ghMod(d=>{const x=d.pendentes.find(p=>String(p.id)===String(n.id));if(x)x.t=t})}catch(e){toast('Sem internet — tente editar de novo depois')}}};
     $('#del').onclick=async()=>{ if(!(await confirmar('Apagar esta anotação?','Apagar')))return;
-      S.notas=S.notas.filter(x=>x!==n);save();pAnotar();
+      S.notasDel[n.id]=1; S.notas=S.notas.filter(x=>x!==n);save();pAnotar();
       if(n.env&&tk){try{await ghMod(d=>{d.pendentes=d.pendentes.filter(p=>String(p.id)!==String(n.id))})}catch(e){}} };
   });
   $('#gh').onclick=()=>{
@@ -734,7 +785,7 @@ function sessao(ids,modo){
   $('#sx').onclick=sair;
   proximoCard();
 }
-function sair(){const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render()}
+function sair(){const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render();syncProg()}
 function barra(){$('#pg').style.width=(SS.feitos/SS.total*100)+'%';$('#cb').textContent=SS.combo>=3?'×'+SS.combo:''}
 function proximoCard(){
   barra();
@@ -777,7 +828,7 @@ function responder(c,r,t){
   if(r===0 && !repetido){SS.repetidos.add(id); SS.fila.splice(Math.min(3,SS.fila.length),0,id); SS.total++;}
   SS.feitos++;
   const ganho = r===2?10:r===1?6:3;
-  SS.xp+=ganho; S.xp+=ganho;
+  SS.xp+=ganho; addXP(ganho);
   if(r===2){SS.combo++;if(!repetido)SS.acertos++;SS.maxCombo=Math.max(SS.maxCombo,SS.combo)} else SS.combo=0;
   if(SS.modo==='dia' && S.plan && !S.plan.done.includes(id) && !(r===0&&!repetido)) S.plan.done.push(id);
   save(); proximoCard();
@@ -785,7 +836,7 @@ function responder(c,r,t){
 function fim(){
   const lvAntes=nivel(S.xp-SS.xp);
   const diaFeito = SS.modo==='dia' && !pendentes().length;
-  if(diaFeito){ S.xp+=20; SS.xp+=20; marcarStreak(); }
+  if(diaFeito){ addXP(20); SS.xp+=20; marcarStreak(); }
   save();
   const lv=nivel(S.xp);
   const e=document.createElement('div');e.className='end';e.id='end';
@@ -810,8 +861,8 @@ function confete(n){
 }
 
 /* ===== Início ===== */
-carregar().then(render).then(syncNotas).then(syncEdits);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncNotas).then(syncEdits)}});
+carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits)}});
 if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
 </body>
