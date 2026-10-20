@@ -72,7 +72,7 @@
       "tipo": "flash",
       "tema": "Preventiva",
       "sub": "PNVS",
-      "frente": "Quais vigilâncias a PNVS manda integrar?",
+      "frente": "Quais vigilâncias a PNVS manda integrar? \nPNVS: politica nacional de vigilancia sanitaria",
       "verso": "As 4 vigilâncias + os laboratórios de saúde pública — preservando as especificidades de cada uma.",
       "visual": {
         "tipo": "grupos",
@@ -976,5 +976,6 @@
       "fonte": "FIGO 2018",
       "add": "2026-10-20"
     }
-  ]
+  ],
+  "rev": 1792529642187
 }
