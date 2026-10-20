@@ -444,10 +444,56 @@ document.addEventListener('click',e=>{
     if(t)S.minha[id]=t;else delete S.minha[id];save();box.outerHTML=minhaHTML(id);toast('Salvo no card')}
 });
 
+/* ===== Envio automático pro GitHub ===== */
+const GH_API='https://api.github.com/repos/jaaacked-07/jaaackestude.uerj-cards/contents/data/notas.json';
+const ghTok=()=>{try{return localStorage.getItem(LS+'.gh')||''}catch(e){return ''}};
+const enc=t=>btoa(unescape(encodeURIComponent(t)));
+const dec=b=>decodeURIComponent(escape(atob(b.replace(/\n/g,''))));
+const ghH=tk=>({Authorization:'Bearer '+tk,Accept:'application/vnd.github+json'});
+async function ghGet(tk){
+  const r=await fetch(GH_API+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'});
+  if(r.status===404) return {sha:null,data:{pendentes:[],processadas:[]}};
+  if(!r.ok) throw new Error(r.status);
+  const j=await r.json(); const d=JSON.parse(dec(j.content));
+  d.pendentes=d.pendentes||[]; d.processadas=d.processadas||[];
+  return {sha:j.sha,data:d};
+}
+async function ghPut(tk,data,sha){
+  const body={message:'Anotações novas do app',content:enc(JSON.stringify(data,null,2)+'\n'),branch:'main'};
+  if(sha) body.sha=sha;
+  const r=await fetch(GH_API,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(!r.ok) throw new Error(r.status);
+}
+async function enviarGH(pend){
+  const tk=ghTok();
+  for(let i=0;i<2;i++){
+    try{
+      const {sha,data}=await ghGet(tk);
+      const ja=new Set(data.pendentes.map(n=>n.id));
+      pend.forEach(n=>{if(!ja.has(n.id)) data.pendentes.push({id:n.id,d:n.d,t:n.t})});
+      await ghPut(tk,data,sha); return true;
+    }catch(e){ if(i) throw e; }
+  }
+}
+async function syncNotas(){
+  if(!S.notas.some(n=>n.env)) return;
+  let proc=null;
+  try{
+    const tk=ghTok();
+    if(tk){proc=(await ghGet(tk)).data.processadas}
+    else{const r=await fetch('data/notas.json?t='+Date.now(),{cache:'no-store'}); if(r.ok) proc=(await r.json()).processadas}
+  }catch(e){}
+  if(!proc) return;
+  const ps=new Set(proc.map(String)), antes=S.notas.length;
+  S.notas=S.notas.filter(n=>!(n.env&&ps.has(String(n.id))));
+  if(S.notas.length<antes){save();toast('Seus cards novos chegaram ✓');if(!SS)render()}
+}
+
 /* ===== Anotar (bloco de notas) ===== */
 function pAnotar(){
   const pend=S.notas.filter(n=>!n.env), env=S.notas.filter(n=>n.env);
-  const item=(n,i)=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'Enviada':'Questão '+(i+1)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
+  const tk=ghTok();
+  const item=(n,i)=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'Aguardando cards':'Questão '+(i+1)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
     <textarea class="note" id="tx" placeholder="Anote o erro desta questão (o que caiu, o que você marcou, o comentário…)"></textarea>
@@ -455,12 +501,18 @@ function pAnotar(){
     <p class="mute small" style="text-align:center;margin-top:8px">Cada "Guardar" vira um bloco separado. Anote quantas questões quiser.</p>
     ${pend.length?`<div class="sec">Bloco de notas · ${pend.length}</div><div class="rows">${pend.map(item).join('')}</div>
       <button class="btn ghost" id="cp" style="margin-top:16px">Enviar pro Claude (${pend.length})</button>
-      <p class="mute small" style="text-align:center;margin-top:8px">Copia tudo separado por questão. Depois é só colar no chat.</p>`:''}
-    ${env.length?`<details class="sent"><summary>Já enviadas · ${env.length} ›</summary><div class="rows" style="margin-top:10px">${env.slice().reverse().map(item).join('')}</div></details>`:''}
-    <div class="foot"><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
+      <p class="mute small" style="text-align:center;margin-top:8px">${tk?'Vai direto pro Claude. Os cards chegam por volta de 12h30 e 21h30.':'Copia tudo separado por questão. Depois é só colar no chat.'}</p>`:''}
+    ${env.length?`<details class="sent"><summary>Aguardando cards · ${env.length} ›</summary><div class="rows" style="margin-top:10px">${env.slice().reverse().map(item).join('')}</div></details>`:''}
+    <div class="foot"><button class="link" id="gh">${tk?'GitHub conectado ✓':'conectar GitHub'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();toast('Guardado');pAnotar()};
   const cp=$('#cp'); if(cp) cp.onclick=async()=>{
+    if(tk){
+      cp.disabled=true; cp.textContent='Enviando…';
+      try{await enviarGH(pend);pend.forEach(n=>n.env=true);save();toast('Enviado! Os cards chegam por volta de 12h30 e 21h30.');pAnotar()}
+      catch(e){cp.disabled=false;cp.textContent='Tentar de novo';toast(String(e.message)==='401'?'Chave do GitHub inválida ou vencida':'Sem conexão — tente de novo')}
+      return;
+    }
     const txt='UERJ Cards — comentários para virar cards ('+pend.length+(pend.length>1?' questões':' questão')+')\n\n'+pend.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
     try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
     pend.forEach(n=>n.env=true);save();toast('Copiado! Cole no chat do Claude.');pAnotar();
@@ -474,6 +526,17 @@ function pAnotar(){
     $('#tg').onclick=()=>{n.env=!n.env;save();fecharFolha();pAnotar()};
     $('#del').onclick=()=>{if(confirm('Apagar esta anotação?')){S.notas=S.notas.filter(x=>x!==n);save();fecharFolha();pAnotar()}};
   });
+  $('#gh').onclick=()=>{
+    folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Conectar GitHub</div>
+      <p class="mute small" style="margin-bottom:12px">Cole a chave (começa com github_pat_). Ela fica salva só neste aparelho.</p>
+      <input class="srch" id="gt" type="password" autocomplete="off" placeholder="github_pat_…" value="${esc(ghTok())}">
+      <button class="btn" id="gs">Salvar e testar</button>
+      ${ghTok()?'<div class="foot"><button class="link" id="gx" style="color:var(--bad)">desconectar</button></div>':''}`);
+    $('#gs').onclick=async()=>{const v=$('#gt').value.trim();if(!v)return;$('#gs').textContent='Testando…';
+      try{await ghGet(v);localStorage.setItem(LS+'.gh',v);fecharFolha();toast('Conectado ✓');pAnotar()}
+      catch(e){$('#gs').textContent='Salvar e testar';toast(String(e.message)==='401'||String(e.message)==='403'||String(e.message)==='404'?'Chave sem acesso a esse repositório':'Sem conexão — tente de novo')}};
+    const gx=$('#gx'); if(gx) gx.onclick=()=>{localStorage.removeItem(LS+'.gh');fecharFolha();toast('Desconectado');pAnotar()};
+  };
   $('#imp').onclick=()=>{
     folha(`<div class="serif" style="font-size:20px;margin-bottom:10px">Importar cards</div><p class="mute small" style="margin-bottom:10px">Só use se o Claude te mandar um bloco de cards pra colar.</p><textarea class="note" id="ij"></textarea><button class="btn" id="ib" style="margin-top:12px">Importar</button>`);
     $('#ib').onclick=()=>{try{const j=JSON.parse($('#ij').value);const arr=Array.isArray(j)?j:j.cards;if(!Array.isArray(arr))throw 0;const ids=new Set(S.extra.map(c=>c.id));arr.forEach(c=>{if(c.id&&c.frente){if(ids.has(c.id))S.extra=S.extra.filter(x=>x.id!==c.id);S.extra.push(c)}});save();setCards(Object.values(BYID).filter(c=>!S.extra.find(x=>x.id===c.id)));fecharFolha();toast(arr.length+' cards importados');render()}catch(e){toast('Não reconheci esse bloco')}};
@@ -587,8 +650,8 @@ function confete(n){
 }
 
 /* ===== Início ===== */
-carregar().then(render);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render)}});
+carregar().then(render).then(syncNotas);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncNotas)}});
 if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
 </body>
