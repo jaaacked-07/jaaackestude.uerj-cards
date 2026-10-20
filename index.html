@@ -265,6 +265,13 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .simtile .fr{font-size:17px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 .simtile .pc{font-size:22px;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .simtile .pc.u{color:var(--rose)}
+.acts{display:flex;gap:0;flex:none}
+.acts .pen{padding:4px 7px}
+.rowi .inl{flex:1;min-width:0;border:1.5px solid var(--rose);background:var(--card);border-radius:9px;padding:6px 9px;font:inherit;font-size:15px;color:var(--ink);outline:none}
+#lst .rows{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.alvo{outline:2px dashed var(--wine);outline-offset:-3px;background:var(--wine-soft)!important}
+.arrastando{opacity:.35}
+.ghost{position:fixed;z-index:60;pointer-events:none;background:var(--wine);color:#fff;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.25);transform:translate(-50%,-140%);max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:40;animation:up .2s}
 </style>
 </head>
@@ -497,27 +504,33 @@ function pHome(){
 const TIPOS={ns:'Não sabia',cf:'Confundi',lr:'Li errado'};
 /* ===== Árvore: grande área → matéria → assunto → cards ===== */
 function arv3(lista,vazios){
-  const t={}; (vazios||[]).forEach(d=>{const A=(t[d.area]=t[d.area]||{}),M=(A[d.tema]=A[d.tema]||{});M[d.sub]=M[d.sub]||[]});
+  const t={}; (vazios||[]).forEach(d=>{const A=(t[d.area]=t[d.area]||{}),M=(A[d.tema]=A[d.tema]||{}); if(d.sub!=null) M[d.sub]=M[d.sub]||[]});
   lista.forEach(c=>{const A=(t[c.area]=t[c.area]||{}),M=(A[c.tema]=A[c.tema]||{});(M[c.sub]=M[c.sub]||[]).push(c)});
   return Object.keys(t).sort(abc).map(a=>({a,ms:Object.keys(t[a]).sort(abc).map(m=>({m,subs:Object.keys(t[a][m]).sort(abc).map(su=>({su,cards:t[a][m][su]}))}))}));
 }
 function arvoreHTML(lista,aberto,o){
   const arv=arv3(lista,o.vazios); if(!arv.length) return '<p class="mute small">Nada encontrado.</p>';
-  const row=(lv,key,nome,n,ren,open)=>`<div class="rowi ${lv?'lv'+lv:''} ${open?'op':''}" role="button" data-k="${esc(key)}"><span class="chv">▶</span><span class="tx">${esc(nome)}</span><span class="ct">${n}</span>${o.pen?`<span class="pen" ${ren}>✎</span>`:''}</div>`;
+  const row=(lv,key,nome,n,ren,open)=>`<div class="rowi ${lv?'lv'+lv:''} ${open?'op':''}" role="button" data-k="${esc(key)}"><span class="chv">▶</span><span class="tx">${esc(nome)}</span><span class="ct">${n}</span>${o.pen?`<span class="acts">${lv<2?`<span class="pen" data-add title="${lv?'Novo baralho':'Nova matéria'}">＋</span>`:''}${lv===2&&!n?'<span class="pen" data-del title="Apagar baralho vazio">×</span>':''}<span class="pen" data-ren title="Renomear">✎</span></span>`:''}</div>`;
   return '<div class="rows">'+arv.map(({a,ms})=>{
     const ka='a:'+a, oa=o.forcar||aberto.has(ka), na=ms.reduce((s,x)=>s+x.subs.reduce((t,y)=>t+y.cards.length,0),0);
     return row(0,ka,a,na,`data-ren="area" data-a="${esc(a)}"`,oa)+(oa?ms.map(({m,subs})=>{
       const km='m:'+a+'|'+m, om=o.forcar||aberto.has(km), nm=subs.reduce((t,y)=>t+y.cards.length,0);
       return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards})=>{
         const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks);
-        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(cards.length?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Para trazer cards: ✎ do card → Baralho.</p></div>`):'');
+        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(cards.length?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Arraste cards ou baralhos para cá.</p></div>`):'');
       }).join(''):'');
     }).join(''):'');
   }).join('')+'</div>';
 }
 function ligarArvore(el,aberto,redesenhar){
   el.onclick=e=>{
-    const pn=e.target.closest('[data-ren]'); if(pn){e.stopPropagation();menuNo(pn.dataset.ren,pn.dataset.a,pn.dataset.t,pn.dataset.su);return}
+    if(SUPRIME_CLICK){SUPRIME_CLICK=false;return}
+    if(e.target.closest('input')) return;
+    const ac=e.target.closest('[data-ren],[data-add],[data-del]');
+    if(ac){e.stopPropagation(); const r=ac.closest('[data-k]'), k=r.dataset.k;
+      if(ac.hasAttribute('data-ren')) renomearInline(r,k);
+      else if(ac.hasAttribute('data-add')) adicionarInline(r,k);
+      else apagarDeckVazio(k); return}
     const cd=e.target.closest('[data-card]'); if(cd){folhaCard(cd.dataset.card);return}
     const k=e.target.closest('[data-k]'); if(k){const v=k.dataset.k;aberto.has(v)?aberto.delete(v):aberto.add(v);redesenhar()}
   };
@@ -575,6 +588,7 @@ function pEstudar(){
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
+    <p class="mute small" style="margin:-2px 0 10px">Segure e arraste para reorganizar · ✎ renomeia · ＋ cria</p>
     <input class="srch" id="bs" placeholder="Buscar…" value="${esc(DECK.busca)}">
     <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb,vazios:nb?[]:S.decks})}</div>
     ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
@@ -584,7 +598,7 @@ function pEstudar(){
   $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
   if(n) $('#dk').onclick=()=>sessao(shuffle(pool.map(c=>c.id)).slice(0,n),'livre');
   const bs=$('#bs'); bs.oninput=()=>{DECK.busca=bs.value;const pos=bs.selectionStart;pEstudar();const b2=$('#bs');b2.focus();b2.setSelectionRange(pos,pos)};
-  ligarArvore($('#lst'),ABERTO,pEstudar);
+  ligarArvore($('#lst'),ABERTO,pEstudar); ligarDrag($('#lst'));
   const oc=$('#oc'); if(oc) oc.onclick=verOcultos;
 }
 /* Seletor de temas: grande área → matéria → assunto, abrindo conforme toca */
@@ -637,7 +651,123 @@ function renomear(tipo,area,tema,sub){
     troca(ABERTO,de,para); troca(ABERTO_E,de,para);
     DECK.subs.clear(); save(); reaplicar(); fecharFolha(); toast('Renomeado'); render(); syncEdits();};
 }
-/* ===== Organizar baralhos ===== */
+/* ===== Organizar baralhos (inline + arrastar) ===== */
+const parseK=k=>({t:k[0],p:k.slice(2).split('|')});
+const normN=x=>norm(x).replace(/[^a-z0-9]+/g,' ').trim();
+function noGrupo(x,tipo,a,t,su){return x.area===a&&(tipo==='area'||x.tema===t)&&(tipo!=='sub'||x.sub===su)}
+function aplicarDestino(tipo,a,t,su,fn){
+  CARDS.filter(c=>noGrupo(c,tipo,a,t,su)).forEach(c=>moverCard(c.id,fn(c)));
+  S.decks.forEach(d=>{ if(noGrupo(d,tipo,a,t,su)) { const n=fn(d); d.area=n.area; d.tema=n.tema; if(d.sub!=null) d.sub=n.sub; } });
+}
+function arrumarDecks(){
+  reaplicar(); const vistos=new Set();
+  S.decks=S.decks.filter(d=>{
+    const k=d.area+'|'+d.tema+'|'+(d.sub??''), temCard=CARDS.some(c=>c.area===d.area&&c.tema===d.tema&&(d.sub==null||c.sub===d.sub));
+    const temDeck=d.sub==null&&S.decks.some(x=>x!==d&&x.area===d.area&&x.tema===d.tema&&x.sub!=null);
+    if(vistos.has(k)||temCard||temDeck){S.decksDel[d.id]=1;return false} vistos.add(k); return true;});
+}
+function concluirOrg(msg){ DECK.subs.clear(); arrumarDecks(); save(); toast(msg); render(); syncEdits(); }
+function abrir(...ks){ks.forEach(k=>ABERTO.add(k))}
+/* encaixe: baralho novo cujo nome contém o de outro baralho da mesma matéria absorve o conteúdo dele;
+   se o nome começa com o nome de uma matéria existente da área, o baralho vai para dentro dela */
+function encaixar(a,t,novo){
+  const nn=normN(novo); let alvoT=t;
+  const mats=[...new Set([...CARDS.filter(c=>c.area===a).map(c=>c.tema),...S.decks.filter(d=>d.area===a).map(d=>d.tema)])];
+  const m=mats.filter(x=>nn.startsWith(normN(x)+' ')||nn===normN(x)).sort((x,y)=>y.length-x.length)[0]; if(m) alvoT=m;
+  const decks=[...new Set([...CARDS.filter(c=>c.area===a&&c.tema===alvoT).map(c=>c.sub),...S.decks.filter(d=>d.area===a&&d.tema===alvoT&&d.sub!=null).map(d=>d.sub)])];
+  const absorvidos=decks.filter(su=>su!==novo&&normN(su).length>=4&&nn.includes(normN(su)));
+  absorvidos.forEach(su=>aplicarDestino('sub',a,alvoT,su,()=>({area:a,tema:alvoT,sub:novo})));
+  return {tema:alvoT,absorvidos};
+}
+function renomearInline(row,k){
+  const {t,p}=parseK(k), atual=p[p.length-1], tx=row.querySelector('.tx');
+  const i=document.createElement('input'); i.className='inl'; i.value=atual; tx.replaceWith(i); i.focus(); i.select();
+  let feito=false;
+  const salvar=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(!v||v===atual){render();return}
+    const tipo=t==='a'?'area':t==='m'?'tema':'sub', [a,tm,su]=p;
+    const fn=tipo==='area'?x=>({area:v,tema:x.tema,sub:x.sub}):tipo==='tema'?x=>({area:a,tema:v,sub:x.sub}):x=>({area:a,tema:tm,sub:v});
+    aplicarDestino(tipo,a,tm,su,fn);
+    let msg='Renomeado';
+    if(tipo==='sub'){ reaplicar(); const r=encaixar(a,tm,v); if(r.tema!==tm) aplicarDestino('sub',a,tm,v,()=>({area:a,tema:r.tema,sub:v})); if(r.absorvidos.length) msg='Juntei: '+r.absorvidos.join(', '); abrir('a:'+a,'m:'+a+'|'+r.tema,'s:'+a+'|'+r.tema+'|'+v); }
+    else if(tipo==='tema') abrir('a:'+a,'m:'+a+'|'+v); else abrir('a:'+v);
+    concluirOrg(msg);
+  };
+  i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();salvar()} if(e.key==='Escape'){feito=true;render()} };
+  i.onblur=salvar; i.onclick=e=>e.stopPropagation();
+}
+function adicionarInline(row,k){
+  const {t,p}=parseK(k), a=p[0], tm=p[1], lv=t==='a'?1:2;
+  ABERTO.add(k); 
+  const r=document.createElement('div'); r.className='rowi lv'+lv;
+  r.innerHTML=`<span class="chv">＋</span><input class="inl" placeholder="${t==='a'?'Nome da nova matéria':'Nome do novo baralho'}">`;
+  row.after(r); const i=r.querySelector('input'); i.focus(); let feito=false;
+  const salvar=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(!v){r.remove();return}
+    if(t==='a'){ S.decks.push({id:Date.now(),area:a,tema:v}); abrir('a:'+a,'m:'+a+'|'+v); concluirOrg('Matéria criada'); return; }
+    const res=encaixar(a,tm,v);
+    if(!CARDS.some(c=>c.area===a&&c.tema===res.tema&&c.sub===v)) S.decks.push({id:Date.now(),area:a,tema:res.tema,sub:v});
+    abrir('a:'+a,'m:'+a+'|'+res.tema,'s:'+a+'|'+res.tema+'|'+v);
+    concluirOrg(res.absorvidos.length?'Juntei: '+res.absorvidos.join(', '):'Baralho criado');
+  };
+  i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();salvar()} if(e.key==='Escape'){feito=true;r.remove()} };
+  i.onblur=salvar; i.onclick=e=>e.stopPropagation();
+}
+function apagarDeckVazio(k){ const {p}=parseK(k); S.decks.filter(d=>d.area===p[0]&&d.tema===p[1]&&d.sub===p[2]).forEach(d=>S.decksDel[d.id]=1); S.decks=S.decks.filter(d=>!S.decksDel[d.id]); save(); toast('Baralho apagado'); render(); }
+/* arrastar: segure (toque) ou clique e arraste (mouse) */
+let DRAG=null, SUPRIME_CLICK=false;
+document.addEventListener('touchmove',e=>{ if(DRAG&&DRAG.ativo) e.preventDefault(); },{passive:false});
+function ligarDrag(el){
+  el.onpointerdown=e=>{
+    if(e.button>0||e.target.closest('input,.pen')) return;
+    const src=e.target.closest('[data-card],[data-k^="s:"],[data-k^="m:"]'); if(!src) return;
+    const st={src,x:e.clientX,y:e.clientY,ativo:false,toque:e.pointerType!=='mouse'};
+    if(st.toque) st.timer=setTimeout(()=>iniciarDrag(st),380);
+    DRAG=st;
+  };
+}
+function iniciarDrag(st){
+  st.cx=st.x; st.cy=st.y;
+  st.scr=setInterval(()=>{ if(DRAG!==st) return clearInterval(st.scr); const b=innerHeight-90;
+    if(st.cy<90) scrollBy(0,-(90-st.cy)/4); else if(st.cy>b) scrollBy(0,(st.cy-b)/4); },16);
+  st.ativo=true; vib(15); st.src.classList.add('arrastando');
+  const nome=st.src.dataset.card?(BYID[st.src.dataset.card]||{}).frente:parseK(st.src.dataset.k).p.slice(-1)[0];
+  st.g=document.createElement('div'); st.g.className='ghost'; st.g.textContent=nome; document.body.appendChild(st.g);
+  st.g.style.left=st.x+'px'; st.g.style.top=st.y+'px';
+}
+addEventListener('pointermove',e=>{
+  const st=DRAG; if(!st) return;
+  const d=Math.hypot(e.clientX-st.x,e.clientY-st.y);
+  if(!st.ativo){ if(st.toque){ if(d>8){clearTimeout(st.timer);DRAG=null} } else if(d>6) iniciarDrag(st); if(!st.ativo) return; }
+  st.g.style.left=e.clientX+'px'; st.g.style.top=e.clientY+'px'; st.cx=e.clientX; st.cy=e.clientY;
+  const el=document.elementFromPoint(e.clientX,e.clientY), alvo=el&&el.closest('#lst [data-k]');
+  if(st.alvo&&st.alvo!==alvo) st.alvo.classList.remove('alvo');
+  st.alvo=alvo&&alvo!==st.src&&podeSoltar(st.src,alvo)?alvo:null; if(st.alvo) st.alvo.classList.add('alvo');
+});
+addEventListener('pointerup',()=>{ const st=DRAG; DRAG=null; if(!st) return; clearTimeout(st.timer); clearInterval(st.scr); if(!st.ativo) return;
+  SUPRIME_CLICK=true; setTimeout(()=>SUPRIME_CLICK=false,350);
+  st.g.remove(); st.src.classList.remove('arrastando'); if(st.alvo){ st.alvo.classList.remove('alvo'); soltar(st.src,st.alvo); } });
+addEventListener('pointercancel',()=>{ const st=DRAG; DRAG=null; if(st){clearTimeout(st.timer); clearInterval(st.scr); if(st.g) st.g.remove(); st.src.classList.remove('arrastando'); if(st.alvo) st.alvo.classList.remove('alvo');} });
+function podeSoltar(src,alvo){
+  const at=alvo.dataset.k[0];
+  if(src.dataset.card) return at==='s';
+  const st=src.dataset.k[0];
+  if(st==='s') return at==='s'||at==='m';
+  if(st==='m') return at==='m'||at==='a';
+  return false;
+}
+function soltar(src,alvo){
+  const A=parseK(alvo.dataset.k);
+  if(src.dataset.card){ const [a,t,su]=A.p; moverCard(src.dataset.card,{area:a,tema:t,sub:su}); abrir('s:'+A.p.join('|')); concluirOrg('Card movido para '+su); return; }
+  const S0=parseK(src.dataset.k);
+  if(S0.t==='s'){ const [a,t,su]=S0.p;
+    if(A.t==='s'){ const [a2,t2,s2]=A.p; aplicarDestino('sub',a,t,su,()=>({area:a2,tema:t2,sub:s2})); abrir('a:'+a2,'m:'+a2+'|'+t2,'s:'+A.p.join('|')); concluirOrg('Juntado em '+s2); }
+    else { const [a2,t2]=A.p; aplicarDestino('sub',a,t,su,()=>({area:a2,tema:t2,sub:su})); abrir('a:'+a2,'m:'+a2+'|'+t2); concluirOrg('Movido para '+t2); }
+    return; }
+  if(S0.t==='m'){ const [a,t]=S0.p;
+    if(A.t==='m'){ const [a2,t2]=A.p; aplicarDestino('tema',a,t,null,x=>({area:a2,tema:t2,sub:x.sub})); abrir('a:'+a2,'m:'+a2+'|'+t2); concluirOrg('Juntado em '+t2); }
+    else { const a2=A.p[0]; aplicarDestino('tema',a,t,null,x=>({area:a2,tema:t,sub:x.sub})); abrir('a:'+a2,'m:'+a2+'|'+t); concluirOrg('Movido para '+a2); }
+  }
+}
+/* ===== (menu antigo de baralhos) ===== */
 const cardsDo=(a,t,su)=>CARDS.filter(c=>c.area===a&&c.tema===t&&(su==null||c.sub===su));
 function menuNo(tipo,a,t,su){
   const nome=tipo==='area'?a:tipo==='tema'?t:su, n=tipo==='area'?CARDS.filter(c=>c.area===a).length:cardsDo(a,t,tipo==='sub'?su:null).length;
