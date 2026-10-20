@@ -216,6 +216,8 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .rowi .chv{color:var(--mute);font-size:12px;flex:none;transition:transform .2s}
 .rowi.op .chv{transform:rotate(90deg)}
 .lv1{padding-left:30px!important;background:color-mix(in srgb,var(--card) 55%,var(--bg))}
+.rowi.lv1 .tx{font-weight:600;color:var(--wine);letter-spacing:.005em}
+.rowi.lv1 .tx:before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--rose);margin-right:9px;vertical-align:2px}
 .lv2{padding-left:44px!important;background:color-mix(in srgb,var(--card) 30%,var(--bg))}
 .lv3{padding-left:58px!important;font-size:14.5px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
 .opi.l1{padding-left:24px}.opi.l2{padding-left:48px}
@@ -318,6 +320,9 @@ const save=()=>{saveLocal();if(typeof agendarSync==='function')agendarSync()};
 /* ===== Cards ===== */
 let CARDS=[], BYID={}, RAW={}, LASTBASE=[];
 const AREA_PADRAO={'ginecologia':'Ginecologia','obstetrícia':'Obstetrícia','obstetricia':'Obstetrícia','preventiva':'Medicina Preventiva','medicina preventiva':'Medicina Preventiva','pediatria':'Pediatria','cirurgia':'Cirurgia'};
+/* sub-áreas fixas: aparecem sempre, mesmo sem cards */
+const MATERIAS_FIXAS={'Clínica Médica':['Cardiologia','Dermatologia','Endocrinologia','Gastroenterologia','Hematologia','Infectologia','Nefrologia','Neurologia','Pneumologia','Psiquiatria','Reumatologia']};
+const fixasVazias=()=>Object.entries(MATERIAS_FIXAS).flatMap(([area,ms])=>ms.map(tema=>({area,tema})));
 const areaRaw=c=>c.area||AREA_PADRAO[String(c.tema).toLowerCase()]||'Clínica Médica';
 const dArea=c=>S.ren.area[areaRaw(c)]||areaRaw(c);
 const dTema=c=>S.ren.tema[c.tema]||c.tema;
@@ -590,7 +595,7 @@ function pEstudar(){
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
     <p class="mute small" style="margin:-2px 0 10px">Segure e arraste para reorganizar · ✎ renomeia · ＋ cria</p>
     <input class="srch" id="bs" placeholder="Buscar…" value="${esc(DECK.busca)}">
-    <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb,vazios:nb?[]:S.decks})}</div>
+    <div id="lst">${arvoreHTML(lista,ABERTO,{tile,pen:true,forcar:!!nb,vazios:nb?[]:[...S.decks,...fixasVazias()]})}</div>
     ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
   </div>`;
   $('#sT').onclick=escolherTemas;
