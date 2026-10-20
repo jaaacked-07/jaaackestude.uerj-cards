@@ -547,9 +547,10 @@ function pErros(){
 const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:''};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
-const FILTROS={todos:'Todos',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
+const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
+  if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
   if(DECK.filtro==='fav') p=p.filter(c=>c.fav);
@@ -568,7 +569,7 @@ function pEstudar(){
   const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
-    <p class="mute small" style="margin-top:-10px;margin-bottom:16px">Monte seu baralho — não mexe nas pendências de hoje.</p>
+    <p class="mute small" style="margin-top:-10px;margin-bottom:16px">Monte seu baralho — o que você estudar aqui também entra na revisão programada.</p>
     <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
     <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
@@ -1221,14 +1222,14 @@ function pedirMotivo(c){
 function responder(c,r,t){
   const id=SS.fila.shift();
   const repetido=SS.repetidos.has(id);
-  if(!repetido && !(SS.modo==='livre' && r>0 && S.srs[id])) rating(id,r,t);
+  if(!repetido) rating(id,r,t);   // todo card estudado, em qualquer modo, entra na revisão programada
   if(r===0 && !repetido){SS.repetidos.add(id); SS.fila.splice(Math.min(3,SS.fila.length),0,id); SS.total++;}
   SS.feitos++;
   if(!repetido && contarHoje(id)) SS.meta=true;
   const ganho = r===2?10:r===1?6:3;
   SS.xp+=ganho; addXP(ganho);
   if(r===2){SS.combo++;if(!repetido)SS.acertos++;SS.maxCombo=Math.max(SS.maxCombo,SS.combo)} else SS.combo=0;
-  if(SS.modo==='dia' && S.plan && !S.plan.done.includes(id)) S.plan.done.push(id);
+  if(S.plan && S.plan.ids.includes(id) && !S.plan.done.includes(id)) S.plan.done.push(id);
   save(); proximoCard();
 }
 function fim(){
