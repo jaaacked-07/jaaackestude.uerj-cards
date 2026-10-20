@@ -33,12 +33,14 @@
     {
       "id": 1792530560328,
       "d": "2026-10-20",
-      "t": "Sofrimento fetal agudo\nCardiotocografia"
+      "t": "Sofrimento fetal agudo\nCardiotocografia",
+      "manual": true
     },
     {
       "id": 1792530566074,
       "d": "2026-10-20",
-      "t": "Sofrimento Fetal cronico"
+      "t": "Sofrimento Fetal cronico",
+      "manual": true
     },
     {
       "id": 1792530577088,
