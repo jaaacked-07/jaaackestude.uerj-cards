@@ -83,6 +83,8 @@ nav svg{width:24px;height:24px}
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pega{margin-top:16px;background:var(--mid-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 .pega b{color:var(--mid)}
+.uerj{margin-top:12px;background:var(--wine-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.uerj b{color:var(--wine)}
 .src{margin-top:14px;font-size:12px;color:var(--mute)}
 .sfoot{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(14px + env(safe-area-inset-bottom));background:var(--bg);box-shadow:0 -10px 20px -12px rgba(60,30,30,.18)}
 .sfoot:empty,.sfoot .in:empty{box-shadow:none}
@@ -262,7 +264,7 @@ function setCards(base){
     const c={...c0,...(S.edit[c0.id]||{})}; c.tema=dTema(c0); c.sub=dSub(c0);
     c.fav = c0.id in S.fav ? !!S.fav[c0.id] : !!c0.fav;
     c.minha = c0.id in S.minha ? S.minha[c0.id] : (c0.minha||'');
-    if(!c.pegadinha) delete c.pegadinha;
+    if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
     out[c.id]=c; });
   CARDS=Object.values(out); BYID=out;
 }
@@ -348,6 +350,7 @@ function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());con
 const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 
 /* ===== Visuais ===== */
+const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${esc(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:'');
 const paras=t=>String(t||'').split(/\n\s*\n/).map(x=>`<p>${esc(x.trim())}</p>`).join('');
 function visual(v){
   if(!v) return '';
@@ -366,7 +369,7 @@ function cardCompleto(c){
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${esc((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
   else h+=`<div class="ans">${paras(c.verso)}${visual(c.visual)}</div>`;
   h+=minhaHTML(c.id);
-  if(c.pegadinha) h+=`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`;
+  h+=extrasUERJ(c);
   if(c.fonte) h+=`<div class="src">${esc(c.fonte)}</div>`;
   return h;
 }
@@ -539,6 +542,7 @@ function editarCard(id){
     <div class="tm">Pergunta</div><textarea class="ned" id="ef">${esc(c.frente)}</textarea>
     ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div><textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div><textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
     <div class="tm">Pegadinha (opcional)</div><textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
+    <div class="tm">Na UERJ (opcional)</div><textarea class="ned" id="eu" style="min-height:56px">${esc(c.uerj||'')}</textarea>
     <button class="btn" id="es" style="margin-top:16px">Salvar</button>
     <div class="foot">${S.edit[id]?'<button class="link" id="eo">voltar ao original</button>':''}<button class="link" id="eh" style="color:var(--bad)">ocultar card</button></div>`);
   $('#es').onclick=()=>{
@@ -547,6 +551,7 @@ function editarCard(id){
     if(c.tipo==='quiz'){const ops=[...document.querySelectorAll('[data-op]')].map((t,i)=>t.value.trim()||r.opcoes[i]); if(ops.some((o,i)=>o!==r.opcoes[i])) e.opcoes=ops;}
     else {const v=$('#ev').value.trim(); if(v&&v!==r.verso) e.verso=v;}
     if(pg!==(r.pegadinha||'')) e.pegadinha=pg;
+    const ue=$('#eu').value.trim(); if(ue!==(r.uerj||'')) e.uerj=ue;
     if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
     save(); reaplicar(); fecharFolha(); toast('Card atualizado'); depoisDeEditar(id); syncEdits();
   };
@@ -616,7 +621,7 @@ async function syncEdits(){
       d.cards.forEach(c=>{
         const k=c.tema+'|'+c.sub;
         if(snap.edit[c.id]) Object.assign(c,snap.edit[c.id]);
-        if(!c.pegadinha) delete c.pegadinha;
+        if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
         if(snap.ren.sub[k]) c.sub=snap.ren.sub[k];
         if(snap.ren.tema[c.tema]) c.tema=snap.ren.tema[c.tema];
         [['fav',v=>!!v],['oculto',v=>!!v],['minha',v=>v||'']].forEach(([f,cv])=>{ if(c.id in snap[f]){const v=cv(snap[f][c.id]); if(v) c[f]=v; else delete c[f];} });
@@ -780,8 +785,18 @@ async function convidarEntrar(){
 }
 
 /* ===== Anotar (bloco de notas) ===== */
+const rascunho=()=>{try{return localStorage.getItem(LS+'.rasc')||''}catch(e){return ''}};
+const setRasc=v=>{try{localStorage.setItem(LS+'.rasc',v)}catch(e){}};
+const tecladoFisico=()=>{try{return matchMedia('(pointer:fine)').matches}catch(e){return false}};
+function focarNota(){
+  const t=$('#tx'); if(!t||PAG!=='anotar'||$('#sheet')||SS||!tecladoFisico()) return;
+  if(document.activeElement===t) return;
+  t.focus(); const n=t.value.length; t.setSelectionRange(n,n);
+}
+addEventListener('focus',()=>setTimeout(focarNota,0));
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden) setTimeout(focarNota,50); });
 function pAnotar(){
-  const draft=$('#tx')?$('#tx').value:'';
+  const tx0=$('#tx'), draft=tx0?tx0.value:rascunho(), foc=tx0&&document.activeElement===tx0, sel=tx0?[tx0.selectionStart,tx0.selectionEnd]:null;
   const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env);
   const item=n=>`<div class="nt" data-id="${n.id}"><div class="d"><span class="nb">${n.env?'✓ enviada':tk?'enviando…':'não enviada'}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div></div>`;
   $('#app').innerHTML=`<div class="wrap">
@@ -794,8 +809,10 @@ function pAnotar(){
     <div class="foot"><button class="link" id="gh">${tk?'sincronização ✓':'conectar'}</button><button class="link" id="imp">importar cards</button><button class="link" id="bk">backup</button></div>
   </div>`;
   $('#tx').value=draft;
+  if(foc&&sel) { $('#tx').focus(); $('#tx').setSelectionRange(sel[0],sel[1]); } else focarNota();
+  $('#tx').oninput=e=>setRasc(e.target.value);
   $('#tx').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); $('#sv').click(); } };
-  $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();$('#tx').value='';toast('Guardado');pAnotar();enviarPendentes()};
+  $('#sv').onclick=()=>{const t=$('#tx').value.trim();if(!t)return;S.notas.push({id:Date.now(),d:hoje(),t,env:false});save();$('#tx').value='';setRasc('');toast('Guardado');pAnotar();enviarPendentes()};
   const cp=$('#cp'); if(cp) cp.onclick=async()=>{
     const txt='UERJ Cards — comentários para virar cards ('+naoEnv.length+(naoEnv.length>1?' questões':' questão')+')\n\n'+naoEnv.map((n,i)=>`━━━━━━ QUESTÃO ${i+1} ━━━━━━\n${n.t}`).join('\n\n')+'\n\n━━━━━━ FIM ━━━━━━';
     try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
@@ -846,7 +863,7 @@ function folha(html){
   d.onclick=e=>{if(e.target===d)fecharFolha()};
   document.body.appendChild(d);
 }
-function fecharFolha(){const s=$('#sheet');if(s)s.remove()}
+function fecharFolha(){const s=$('#sheet');if(s)s.remove();setTimeout(focarNota,0)}
 
 /* ===== Sessão ===== */
 let SS=null, CFSTOP=false;
@@ -877,14 +894,14 @@ function proximoCard(){
       const i=+b.dataset.i, ok=i===c.certa;
       document.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;x.querySelector('.c').classList.remove('hide');if(j===c.certa)x.classList.add('ok');else if(j===i)x.classList.add('bad')});
       vib(ok?12:[20,40,20]);
-      $('#ar').insertAdjacentHTML('beforeend',(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:'')+minhaHTML(c.id));
+      $('#ar').insertAdjacentHTML('beforeend',extrasUERJ(c)+minhaHTML(c.id));
       if(ok) f.innerHTML=`<button class="btn" id="nx">Continuar</button>`, $('#nx').onclick=()=>responder(c,2);
       else pedirMotivo(c);
     });
   } else {
     f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
     $('#sh').onclick=()=>{
-      $('#ar').innerHTML=`<div class="ans">${paras(c.verso)}${visual(c.visual)}${c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${esc(c.pegadinha)}</div>`:''}${minhaHTML(c.id)}</div>`;
+      $('#ar').innerHTML=`<div class="ans">${paras(c.verso)}${visual(c.visual)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
       f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };

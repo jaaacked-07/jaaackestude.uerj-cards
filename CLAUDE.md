@@ -34,7 +34,9 @@ Use sempre uma destas, escritas exatamente assim: **Cirurgia**, **Clínica Médi
 
 ## Qualidade do conteúdo
 
-- Português do Brasil, linguagem direta, foco em **acertar questão de prova** (UERJ, ENARE, SES-RJ).
+- **FOCO NA PROVA DA UERJ.** Escreva pensando em como a UERJ cobra o tema (recorte, nível de detalhe, tipo de enunciado). Português do Brasil, linguagem direta.
+- **Sempre que der:** `pegadinha` (o detalhe que derruba) e `uerj` (o que a UERJ costuma cobrar daquele tema — ex.: "cobra mais caso clínico com conduta do que o nome do estádio"). Para saber o que a UERJ cobra, use o histórico de provas (o app Foco UERJ dela está no repositório jaaacked-07/jaaackestude.prevalenciaUERJ, se estiver acessível) e o seu conhecimento das provas; não invente frequência que não conhece.
+- As questões `quiz` devem imitar o estilo UERJ: caso clínico curto, 4 alternativas (A–D), uma pegadinha plausível entre os distratores.
 - Corrigir o que a anotação tiver de errado; conferir fatos duvidosos (portarias, doses, classificações) na fonte oficial vigente antes de escrever.
 - Frente curta e objetiva.
 - **Verso direto, mas BEM EXPLICADO:** comece com a resposta em uma frase e depois explique o porquê (mecanismo, lógica, como a banca cobra) em 2–4 frases. Pode usar parágrafos separados por linha em branco (`\n\n`).
@@ -56,7 +58,8 @@ Use sempre uma destas, escritas exatamente assim: **Cirurgia**, **Clínica Médi
   "certa": 1,                       // só quiz (índice 0-based)
   "comentarios": ["...", "...", "...", "..."], // só quiz, um por alternativa
   "visual": { ... },                // opcional
-  "pegadinha": "texto",             // opcional
+  "pegadinha": "texto",             // opcional (use sempre que der)
+  "uerj": "como a UERJ cobra isso",  // opcional (use sempre que der)
   "fonte": "Portaria X / comentário UERJ",
   "add": "AAAA-MM-DD"               // data de hoje
 }
