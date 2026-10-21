@@ -734,7 +734,8 @@
       "pegadinha": "\"Paramétrio comprometido\" na questão = IIB e = NÃO operar.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20",
-      "contexto": "**Câncer de colo = causado por HPV oncogênico persistente (16 e 18 são os principais).**\n\nLesões precursoras:\n- **LSIL** (NIC I) → costuma regredir\n- **HSIL** (NIC II/III) → precursora real; trata (EZT/conização)\n\nRastreamento (25–64 anos):\n- **Citologia** → a cada 3 anos, após 2 anuais negativas\n- **Teste DNA-HPV** (em implantação no SUS) → a cada 5 anos se negativo; HPV 16/18 → colposcopia; outros tipos → citologia reflexa\n\nCitologias alteradas (conduta inicial):\n- ASC-US → repetir em 6 meses (≥ 30 anos) ou 12 meses (25–29); < 25 anos → 3 anos\n- LSIL → repetir em 6 meses (≥ 25 anos); < 25 anos → 3 anos\n- ASC-H / HSIL / AGC → colposcopia\n\nEstadiamento e tratamento:\n- FIGO 2018: clínico + imagem/patologia\n- Até IIA1 → cirurgia · IIB em diante → quimiorradiação\n\nComo cai:\n- Conduta diante de citologia alterada e estadiamento em caso clínico."
+      "contexto": "**Câncer de colo = causado por HPV oncogênico persistente (16 e 18 são os principais).**\n\nLesões precursoras:\n- **LSIL** (NIC I) → costuma regredir\n- **HSIL** (NIC II/III) → precursora real; trata (EZT/conização)\n\nRastreamento (25–64 anos):\n- **Citologia** → a cada 3 anos, após 2 anuais negativas\n- **Teste DNA-HPV** (em implantação no SUS) → a cada 5 anos se negativo; HPV 16/18 → colposcopia; outros tipos → citologia reflexa\n\nCitologias alteradas (conduta inicial):\n- ASC-US → repetir em 6 meses (≥ 30 anos) ou 12 meses (25–29); < 25 anos → 3 anos\n- LSIL → repetir em 6 meses (≥ 25 anos); < 25 anos → 3 anos\n- ASC-H / HSIL / AGC → colposcopia\n\nEstadiamento e tratamento:\n- FIGO 2018: clínico + imagem/patologia\n- Até IIA1 → cirurgia · IIB em diante → quimiorradiação\n\nComo cai:\n- Conduta diante de citologia alterada e estadiamento em caso clínico.",
+      "minha": "PARAMÉTRIO INVADIDO (II B):\n- nao da mais p operar (histerec)\n- tto é QUIMIOT"
     },
     {
       "id": "figo-colo-04",
@@ -3547,5 +3548,5 @@
       "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nFormas:\n- **IgE mediada** → reação em minutos (urticária, vômitos, anafilaxia)\n- **Não IgE** → horas/dias (proctocolite com sangue nas fezes, FPIES, enteropatia)\n\nDiagnóstico:\n- Exclusão + teste de provocação oral (padrão-ouro)\n- IgE/prick só ajudam na forma IgE mediada\n\nTratamento:\n- Em aleitamento → manter AM e excluir leite da dieta da mãe\n- Sem AM → fórmula extensamente hidrolisada; aminoácidos nos casos graves\n- Soja só > 6 meses, forma IgE\n\nPrognóstico:\n- Maioria tolera até 3–5 anos\n\nComo cai:\n- Lactente em AM com sangue nas fezes → proctocolite → manter AM."
     }
   ],
-  "rev": 1792546942111
+  "rev": 1792547893222
 }
