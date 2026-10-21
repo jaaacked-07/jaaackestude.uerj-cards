@@ -71,6 +71,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
   - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque. Nunca junte várias definições numa frase só.
   - Exemplo:
     `**Sinal do Psoas.**\n\n- O apêndice retrocecal encosta no psoas.\n- Estender a coxa direita estira o músculo → dói.`
+- **ESCORES SEMPRE DESTRINCHADOS.** Nunca só cite um escore/classificação com pontuação (Alvarado, Apgar, Manning, Glasgow, Bishop, Silverman, Wells, CURB-65, Child-Pugh etc.). Sempre que um escore aparecer (no verso ou no contexto), mostre: cada item, quantos pontos vale, o total e a interpretação/conduta por faixa — em tabela (`Item | Pontos`) + faixas em tópicos. Se o baralho ainda não tem um card do escore, crie um.
 - **Nada repetido entre verso e tabela/visual.** Se a tabela (ou lista, fluxo, vs) já mostra os itens, o verso traz só a resposta direta e o que a tabela NÃO tem (o porquê, a lógica, a pegadinha). Se não precisa de explicação teórica, o verso fica só com a 1ª linha e a tabela faz o resto. Se o verso é mais completo que o visual, tire o visual.
 - **Sempre que possível, uma ilustração** em `visual`. Só deixe sem quando não houver nada visual que ajude. Layout limpo: a Jacke é visual e se cansa com excesso.
 - **IMAGEM REAL TEM PRIORIDADE** sobre desenho: achado de exame, foto clínica, peça, lâmina, radiografia, ECG, anatomia, dermatologia, sinais semiológicos etc. → use `{"tipo":"img"}` com imagem real. **Não desenhe em SVG algo que existe como imagem real.**
