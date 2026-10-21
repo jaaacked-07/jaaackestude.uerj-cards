@@ -727,7 +727,8 @@
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 236\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"10\" y=\"18\" width=\"90\" height=\"44\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"55\" y=\"38\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">SMS</text><text x=\"55\" y=\"53\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">município</text><rect x=\"125\" y=\"18\" width=\"90\" height=\"44\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"170\" y=\"38\" font-size=\"13\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">SES</text><text x=\"170\" y=\"53\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">estado</text><rect x=\"240\" y=\"18\" width=\"90\" height=\"44\" rx=\"10\" fill=\"var(--wine)\" stroke=\"var(--rose)\"/><text x=\"285\" y=\"38\" font-size=\"13\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">MS</text><text x=\"285\" y=\"53\" font-size=\"9\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">Ministério</text><path d=\"M100 40 H125 M215 40 H240\" stroke=\"var(--rose)\" stroke-width=\"2\"/><rect x=\"10\" y=\"78\" width=\"90\" height=\"8\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"12\" y=\"100\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"start\">Só SMS</text><text x=\"12\" y=\"113\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">acidentes, tétano, violência</text><rect x=\"10\" y=\"124\" width=\"205\" height=\"8\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"12\" y=\"146\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"start\">SMS + SES</text><text x=\"12\" y=\"159\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">coqueluche, difteria, meningites, Chagas agudo</text><rect x=\"10\" y=\"170\" width=\"320\" height=\"8\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"12\" y=\"192\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"start\">SMS + SES + MS</text><text x=\"12\" y=\"205\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">eliminadas/raras, óbitos por arbovirose, emergências</text><text x=\"170\" y=\"226\" font-size=\"10\" font-weight=\"600\" fill=\"var(--wine)\" text-anchor=\"middle\">Imediata = até 24 h, pelo meio mais rápido</text></svg>",
         "legenda": "Até onde vai a notificação imediata: quanto maior a ameaça, mais longe ela sobe."
-      }
+      },
+      "fav": true
     },
     {
       "id": "notif-04",
@@ -4190,5 +4191,5 @@
       }
     }
   ],
-  "rev": 1792610306646
+  "rev": 1792610808707
 }
