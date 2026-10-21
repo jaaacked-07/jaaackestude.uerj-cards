@@ -52,6 +52,11 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 
 ## Qualidade do conteúdo
 
+- **SEMPRE INFORMAÇÕES ATUALIZADAS E BIBLIOGRAFIA DA UERJ.** Antes de escrever, confira o conteúdo na versão **vigente** das fontes:
+  - a bibliografia/conteúdo programático do edital da UERJ/CEPUERJ em vigor (página oficial: https://www.cepuerj.uerj.br — Residência Médica 2027), quando o edital trouxer;
+  - os livros-texto de referência que a UERJ usa e as diretrizes/protocolos brasileiros atuais (Ministério da Saúde/PCDT, FEBRASGO, SBP, SBC, SBD, SBEM, Diretrizes AMB etc.) e internacionais quando forem o padrão (ex.: FIGO, ACOG, GOLD, GINA, KDIGO, ADA).
+  - Se uma diretriz mudou (nova portaria, nova classificação, nova meta), use a versão nova e, se a mudança for cobrável, cite em `pegadinha` o que mudou. Coloque em `fonte` o nome e o ano da fonte usada.
+  - Nunca invente fonte, ano, portaria ou referência. Na dúvida, pesquise (WebSearch) antes de afirmar.
 - **FOCO NA PROVA DA UERJ.** Escreva pensando em como a UERJ cobra o tema (recorte, nível de detalhe, tipo de enunciado). Português do Brasil, linguagem direta.
 - **Sempre que der:** `pegadinha` (o detalhe que derruba) e `uerj` (o que a UERJ costuma cobrar daquele tema — ex.: "cobra mais caso clínico com conduta do que o nome do estádio"). Para saber o que a UERJ cobra, use o histórico de provas (o app Foco UERJ dela está no repositório jaaacked-07/jaaackestude.prevalenciaUERJ, se estiver acessível) e o seu conhecimento das provas; não invente frequência que não conhece.
 - As questões `quiz` devem imitar o estilo UERJ: caso clínico curto, 4 alternativas (A–D), uma pegadinha plausível entre os distratores.
@@ -62,6 +67,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
   - Linha em branco (`\n\n`) e depois a explicação em **tópicos** (linhas começando com `- `), uma ideia por linha.
   - Mudou de assunto/definição dentro do card (ex.: "Por quê:", "Conduta:", "Via:") → nova linha em branco + rótulo curto + tópicos.
   - Cada item de classificação em sua própria linha: `- **IIA** → ...` / `- **IIB** → ...`.
+  - Detalhe de um item → subtópico recuado com 2 espaços: `  - IIA1 → ≤ 4 cm`. Nunca separe itens com `·` na mesma linha.
   - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque. Nunca junte várias definições numa frase só.
   - Exemplo:
     `**Sinal do Psoas.**\n\n- O apêndice retrocecal encosta no psoas.\n- Estender a coxa direita estira o músculo → dói.`
@@ -78,6 +84,8 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 - Ex.: pergunta sobre DIP tardia → o contexto explica a CTG inteira (linha de base, variabilidade, acelerações, tipos de DIP, categorias, conduta).
 - **Um contexto por baralho**: todos os cards do mesmo baralho recebem o MESMO texto. Se o baralho já tem contexto, reutilize (pode ampliar com o que faltar e atualizar em todos os cards do baralho).
 - Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), curto (cabe numa tela), terminando com **`Como cai:`** (como a UERJ cobra).
+- **Hierarquia obrigatória também no contexto** (igual ao verso): rótulo do bloco numa linha terminando em `:`; cada item numa linha própria `- **termo** → explicação`; detalhes de um item como subtópico recuado (`  - ` com 2 espaços).
+- **Nunca** junte vários itens numa linha com `·`, `;` ou `/` (✗ `- 0 → completar · 1/2 → rotina · 3 → controle`). Uma ideia por linha.
 - O app mostra no fim da explicação, sem destaque. Não use mais o campo `resumo`.
 
 ## Formato de um card
