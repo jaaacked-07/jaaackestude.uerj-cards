@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#FBF7F2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1B1416" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,6 +31,14 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;min-height:100%}
 body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
+/* tela fixa: sem rolagem/zoom para os lados (só rola na vertical) */
+html,body{overflow-x:hidden;max-width:100%;overscroll-behavior-x:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:pan-y}
+.sess,.sbody,.end,.sheet{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+img,svg,table,.vis{max-width:100%}
+/* iOS dá zoom (e a tela fica andando) em campo com letra < 16px */
+input,textarea,select{font-size:16px!important}
+.fld input{font-size:22px!important}
+#sn{font-size:19px!important}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 textarea{font:inherit;color:inherit}
 .wrap{max-width:520px;margin:0 auto;padding:20px 16px}
