@@ -71,6 +71,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
   - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque. Nunca junte várias definições numa frase só.
   - Exemplo:
     `**Sinal do Psoas.**\n\n- O apêndice retrocecal encosta no psoas.\n- Estender a coxa direita estira o músculo → dói.`
+- **Nada repetido entre verso e tabela/visual.** Se a tabela (ou lista, fluxo, vs) já mostra os itens, o verso traz só a resposta direta e o que a tabela NÃO tem (o porquê, a lógica, a pegadinha). Se não precisa de explicação teórica, o verso fica só com a 1ª linha e a tabela faz o resto. Se o verso é mais completo que o visual, tire o visual.
 - **Sempre que possível, uma ilustração** em `visual`. Só deixe sem quando não houver nada visual que ajude. Layout limpo: a Jacke é visual e se cansa com excesso.
 - **IMAGEM REAL TEM PRIORIDADE** sobre desenho: achado de exame, foto clínica, peça, lâmina, radiografia, ECG, anatomia, dermatologia, sinais semiológicos etc. → use `{"tipo":"img"}` com imagem real. **Não desenhe em SVG algo que existe como imagem real.**
 - Tabela, fluxograma, comparação (`vs`), lista e grupos você pode e deve criar. SVG só para esquema conceitual que não existe como foto (ex.: mapa de estadiamento).

@@ -135,7 +135,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Gestão de risco na PNVS: quais as etapas?",
-      "verso": "Identificar → Planejar → Intervir → Regular → Comunicar → Monitorar.",
+      "verso": "**6 etapas, nesta ordem** (fluxo abaixo).",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -194,7 +194,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Para que serve a lista brasileira de ICSAP?",
-      "verso": "É um **indicador indireto da qualidade da APS**.\n\n- Usos na tabela abaixo.\n- Só vale se a fonte de dados for confiável.",
+      "verso": "É um **indicador indireto da qualidade da APS**.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -215,7 +215,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais são as condições sensíveis à APS? (agrupe para lembrar)",
-      "verso": "Pense: **\"se o posto funcionasse bem, essa pessoa não internaria\"**.\n\n- Os grupos abaixo ajudam a lembrar a lista.",
+      "verso": "Pense: **\"se o posto funcionasse bem, essa pessoa não internaria\"**.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -398,7 +398,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Rovsing × Dunphy: qual é qual?",
-      "verso": "**Rovsing:** palpo a FIE → dói a FID.\n**Dunphy:** a dor na FID piora ao tossir.\n\n- Os dois indicam irritação peritoneal.\n- Nenhum define a posição do apêndice.",
+      "verso": "- Os dois indicam **irritação peritoneal**.\n- Nenhum define a posição do apêndice.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -451,7 +451,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
-      "verso": "**Só para o município (SMS).**\n\n- Lógica: agravos de resposta local — acidentes, tétano e violência.\n- Lista completa abaixo.",
+      "verso": "**Só para o município (SMS).**\n\n- Lógica: agravos de resposta local — acidentes, tétano e violência.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -474,7 +474,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
-      "verso": "**SMS + SES (sem o MS).**\n\n- Lógica: doenças graves que exigem ação regional rápida (bloqueio, quimioprofilaxia).\n- Lista completa abaixo.",
+      "verso": "**SMS + SES (sem o MS).**\n\n- Lógica: doenças graves que exigem ação regional rápida (bloqueio, quimioprofilaxia).",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -498,7 +498,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Lógica para lembrar quem vai até o Ministério (SMS + SES + MS)",
-      "verso": "**Ameaça o país → vai até o Ministério.**\n\n- Risco de surto ou emergência\n- Doença eliminada ou rara\n- Óbito por arbovirose\n- Bioterrorismo",
+      "verso": "**Ameaça o país → vai até o Ministério.**",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -561,7 +561,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Dengue, chikungunya e malária: quando é imediata e quando é semanal?",
-      "verso": "**Casos comuns = semanal.**\n**Situação de alarme = imediata (até o MS).**\n\n- Dengue: só o óbito é imediato.\n- Chikungunya: imediata em área sem transmissão ou óbito.\n- Malária: imediata fora da Amazônia.",
+      "verso": "**Casos comuns = semanal.**\n**Situação de alarme = imediata (até o MS).**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -666,7 +666,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio I (restrito ao colo): como se divide?",
-      "verso": "- **IA** → tumor só visto no microscópio; separado pela **profundidade** de invasão.\n- **IB** → invade > 5 mm; separado pelo **tamanho** (2 e 4 cm).\n\nO que muda conduta:\n- O salto IA → IB.\n- Passar de 4 cm (IB3): a cirurgia deixa de ser a primeira opção.",
+      "verso": "**IA** se divide pela **profundidade** de invasão; **IB**, pelo **tamanho** do tumor.\n\nO que muda conduta:\n- O salto IA → IB.\n- Passar de 4 cm (IB3): a cirurgia deixa de ser a primeira opção.",
       "visual": [
         {
           "tipo": "tabela",
@@ -744,7 +744,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
-      "verso": "- **IIIA** → terço inferior da vagina.\n- **IIIB** → parede pélvica e/ou hidronefrose (rim excluso).\n- **IIIC** → linfonodo positivo, qualquer tamanho do tumor\n  - IIIC1 → pélvico\n  - IIIC2 → para-aórtico\n\nLógica do IIIB:\n- O ureter passa colado ao paramétrio.\n- Se o tumor o obstrui, já chegou perto da parede pélvica.",
+      "verso": "Lógica do IIIB:\n- O ureter passa colado ao paramétrio.\n- Se o tumor o obstrui, já chegou perto da parede pélvica.",
       "visual": [
         {
           "tipo": "tabela",
@@ -927,7 +927,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
-      "verso": "- **PALM** → causas **estruturais** (aparecem no ultrassom, histeroscopia ou biópsia).\n- **COEIN** → causas **não estruturais** (sem lesão visível).\n\nComo usar:\n- Primeiro procure lesão (PALM).\n- Se não achar, pense em coagulação, ovulação, endométrio, remédio ou outras (COEIN).\n- A paciente pode ter mais de uma letra ao mesmo tempo.",
+      "verso": "Como usar:\n- Primeiro procure lesão (**PALM**): aparece no ultrassom, histeroscopia ou biópsia.\n- Se não achar, pense nas causas sem lesão visível (**COEIN**).\n- A paciente pode ter mais de uma letra ao mesmo tempo.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -994,7 +994,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Leiomioma: classificação FIGO de 0 a 8",
-      "verso": "Os números vão **de dentro (cavidade) para fora (serosa)**.\n\n- **0–2** → submucosos: mais sangramento e infertilidade; tratados por histeroscopia (melhor no 0 e 1).\n- **3–4** → intramurais.\n- **5–7** → subserosos.\n- **8** → fora do miométrio (cervical, parasita).\n\nMioma que atravessa a parede inteira recebe dois números (ex.: 2–5).",
+      "verso": "Os números vão **de dentro (cavidade) para fora (serosa)**.\n\n- **0–2 (submucosos)** → mais sangramento e infertilidade; tratados por histeroscopia (melhor no 0 e 1).\n- Mioma que atravessa a parede inteira recebe dois números (ex.: 2–5).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1075,7 +1075,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS: o que significa cada categoria e qual a conduta?",
-      "verso": "Cada número do BI-RADS **já traz a conduta**. Decore a conduta: é isso que a prova pergunta.\n\nOs que mais confundem:\n- **0** → exame incompleto: complementar agora.\n- **3** → provavelmente benigno: seguir, não biopsiar.",
+      "verso": "Cada número do BI-RADS **já traz a conduta**. Decore a conduta: é isso que a prova pergunta.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1134,7 +1134,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 3: como é o seguimento?",
-      "verso": "**Controle de curto intervalo por ~2 anos.**\n\n- 6 meses → mama afetada\n- 12 meses → bilateral\n- 24 meses → bilateral\n\nResultado:\n- Estável o tempo todo → vira BI-RADS 2 (rotina).\n- Cresceu ou mudou → vira BI-RADS 4 (biópsia).",
+      "verso": "**Controle de curto intervalo por ~2 anos.**",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1194,7 +1194,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo mamário palpável: qual o primeiro exame de imagem conforme a idade?",
-      "verso": "- **< 30 anos** → ultrassom (mama densa; evitar radiação).\n- **30–39 anos** → ultrassom primeiro, mamografia se necessário.\n- **≥ 40 anos** → mamografia diagnóstica + ultrassom.\n\nNódulo palpável é exame **diagnóstico**, não de rastreamento: não espera a faixa etária do rastreio.",
+      "verso": "Nódulo palpável é exame **diagnóstico**, não de rastreamento: não espera a faixa etária do rastreio.\n\n- < 30 anos → USG porque a mama é densa e evita radiação.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1228,7 +1228,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Nódulo de mama: o que sugere benignidade e o que sugere malignidade?",
-      "verso": "**Benigno é \"organizado\":**\n- Oval, margens bem definidas\n- Mais largo que alto (paralelo à pele)\n- Móvel e fibroelástico\n- Típico: fibroadenoma da mulher jovem\n\n**Maligno \"invade\":**\n- Irregular, margens espiculadas ou indistintas\n- Mais alto que largo, sombra acústica posterior\n- Endurecido, fixo, retração de pele ou mamilo",
+      "verso": "**Benigno é \"organizado\"; maligno \"invade\".**",
       "visual": [
         {
           "tipo": "vs",
@@ -1270,7 +1270,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Cisto mamário: simples, complicado e complexo — qual a conduta?",
-      "verso": "O que manda é a presença de **parte SÓLIDA** dentro do cisto.\n\n- **Simples** (anecoico, parede fina, reforço posterior) → BI-RADS 2: nada a fazer; punção só se doer.\n- **Complicado** (só ecos internos) → BI-RADS 3: controle.\n- **Complexo** (componente sólido ou septo espesso) → BI-RADS 4: biópsia.",
+      "verso": "O que manda é a presença de **parte SÓLIDA** dentro do cisto.\n\nComo reconhecer no USG:\n- **Simples** → anecoico, parede fina, reforço acústico posterior\n- **Complicado** → ecos internos, sem parte sólida\n- **Complexo** → componente sólido ou septo espesso",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1308,7 +1308,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Qual biópsia usar em cada lesão de mama?",
-      "verso": "- **Nódulo sólido** → core biopsy guiada por USG (histologia, diferencia in situ × invasivo, permite imuno-histoquímica).\n- **Cisto / linfonodo axilar** → PAAF (só citologia).\n- **Microcalcificações** → biópsia a vácuo (mamotomia) por estereotaxia.\n- **Discordância imagem × resultado** → biópsia cirúrgica.",
+      "verso": "Por quê:\n- **Core biopsy** → dá histologia: diferencia in situ × invasivo e permite imuno-histoquímica.\n- **PAAF** → só citologia.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1346,7 +1346,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Rastreamento do câncer de mama no SUS: quem e a cada quanto tempo?",
-      "verso": "**Ministério da Saúde (set/2025):**\n\n- **50–74 anos** → mamografia a cada 2 anos.\n- **40–49 e > 74 anos** → por demanda, com decisão compartilhada (riscos × benefícios).\n\nO que mudou: antes o limite era 69 anos e a faixa de 40–49 dependia de sintoma ou risco.",
+      "verso": "**Ministério da Saúde (set/2025): mamografia a cada 2 anos dos 50 aos 74 anos.**\n\nO que mudou:\n- Antes o limite era 69 anos.\n- A faixa de 40–49 dependia de sintoma ou risco; agora é por demanda, com decisão compartilhada.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1477,7 +1477,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quais são os parâmetros de uma CTG normal (tranquilizadora)?",
-      "verso": "**CTG normal (tranquilizadora):**\n\n- Linha de base 110–160 bpm\n- Variabilidade moderada (6–25 bpm)\n- Acelerações presentes\n- Sem desacelerações\n\nPor quê:\n- A **variabilidade** é o melhor marcador de oxigenação do SNC fetal: preservada, praticamente exclui acidemia naquele momento.\n- Aceleração = subida ≥ 15 bpm por ≥ 15 s (a partir de 32 semanas).\n- Feto **reativo** = ≥ 2 acelerações em 20 min.",
+      "verso": "**CTG normal = tranquilizadora** (parâmetros na tabela).\n\nPor quê:\n- A **variabilidade** é o melhor marcador de oxigenação do SNC fetal: preservada, praticamente exclui acidemia naquele momento.\n- Feto **reativo** = ≥ 2 acelerações em 20 min.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1521,7 +1521,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Diferencie DIP I, DIP II e DIP III (umbilical): causa e relação com a contração.",
-      "verso": "- **DIP I (precoce)** → compressão do polo cefálico\n- **DIP II (tardia)** → insuficiência uteroplacentária / hipoxemia\n- **DIP III (variável)** → compressão do cordão\n\nRelação com a contração:\n- **DIP I:** reflexo vagal; começa e termina junto com a contração (em espelho) — fisiológica.\n- **DIP II:** nadir **depois** do pico da contração (> 20 s); o feto só sente a queda de O2 após o pico.\n- **DIP III:** forma variável (V/W), queda e recuperação abruptas; sem relação fixa com a contração.",
+      "verso": "Por que a DIP II vem atrasada:\n- O feto só sente a queda de O2 **depois** do pico da contração (decalagem > 20 s).\n\nDIP I:\n- Reflexo vagal: começa e termina com a contração (em espelho) — fisiológica.",
       "visual": [
         {
           "tipo": "svg",
@@ -1577,7 +1577,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quando a DIP umbilical (variável) é desfavorável?",
-      "verso": "**É desfavorável quando há sinais de hipóxia:**\n\n- Recuperação lenta\n- Queda > 60 bpm ou duração > 60 s\n- Perda da variabilidade\n- Ausência de \"ombros\"\n- Overshoot (taquicardia após a DIP)\n- Forma bifásica (em W)\n\nPor quê:\n- A DIP III típica tem \"ombros\" e recupera rápido: o feto está compensando.\n- Sem ombros e com recuperação lenta, a compressão está levando à acidemia.",
+      "verso": "**É desfavorável quando há sinais de hipóxia** (tabela).\n\nPor quê:\n- A DIP III típica tem \"ombros\" e recupera rápido: o feto está compensando.\n- Sem ombros e com recuperação lenta, a compressão está levando à acidemia.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -1611,7 +1611,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Classificação da CTG intraparto em 3 categorias (NICHD/ACOG): o que é Categoria I, II e III?",
-      "verso": "- **Categoria I** → normal\n- **Categoria II** → indeterminada (tudo que não é I nem III)\n- **Categoria III** → anormal, alto risco de acidemia\n\nCategoria III exige:\n- Variabilidade **ausente** + (DIP II recorrentes, DIP III recorrentes ou bradicardia)\n- OU padrão sinusoidal\n\nSem variabilidade ausente (ou sinusoidal), **nunca** é categoria III.",
+      "verso": "**Sem variabilidade ausente (ou padrão sinusoidal), nunca é categoria III.**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1649,7 +1649,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Conduta diante de CTG categoria III / sofrimento fetal agudo intraparto",
-      "verso": "**Reanimação intraútero imediata.** Sem melhora rápida → parto pela via mais rápida e segura.\n\nMedidas (corrigem a causa):\n- Decúbito lateral esquerdo (descomprime cava/aorta)\n- Suspender ocitocina; tratar taquissistolia (tocolítico agudo se preciso)\n- Corrigir hipotensão materna (hidratação; vasopressor pós-analgesia)\n- Toque vaginal para afastar prolapso de cordão\n\nVia de parto:\n- Período expulsivo com critérios → fórceps ou vácuo\n- Senão → cesárea",
+      "verso": "**Reanimação intraútero imediata.** Sem melhora rápida → parto pela via mais rápida e segura.\n\nMedidas (corrigem a causa):\n- Decúbito lateral esquerdo (descomprime cava/aorta)\n- Suspender ocitocina; tratar taquissistolia (tocolítico agudo se preciso)\n- Corrigir hipotensão materna (hidratação; vasopressor pós-analgesia)\n- Toque vaginal para afastar prolapso de cordão",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1679,7 +1679,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Causas de alteração da linha de base e da variabilidade (taquicardia, bradicardia, padrão sinusoidal, variabilidade reduzida)",
-      "verso": "Cada alteração aponta um grupo de causas — **muitas não são hipóxia**.\n\n- **Taquicardia** → febre materna/corioamnionite (principal), hipertireoidismo, beta-agonistas, anemia/hipóxia inicial\n- **Bradicardia** → hipotensão materna, taquissistolia, prolapso de cordão, DPP, rotura uterina, BAV congênito (lúpus/anti-Ro)\n- **Variabilidade reduzida** → sono fetal, opioides, sulfato de magnésio, prematuridade, acidemia\n- **Sinusoidal** → anemia fetal grave",
+      "verso": "Cada alteração aponta um grupo de causas — **muitas não são hipóxia**.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -1780,7 +1780,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "O que é sofrimento fetal crônico e quais são as principais causas?",
-      "verso": "**Hipoxemia fetal de instalação lenta por insuficiência placentária.**\n\nO que acontece:\n- Restrição de crescimento\n- Redistribuição do fluxo (centralização): cérebro, coração e suprarrenais são poupados\n- Rins recebem menos sangue → cai a diurese → **oligodrâmnio**\n\nCausas:\n- Síndromes hipertensivas (principal)\n- Diabetes com vasculopatia\n- LES / SAAF, nefropatia\n- Tabagismo\n- Gestação prolongada",
+      "verso": "**Hipoxemia fetal de instalação lenta por insuficiência placentária.**\n\n- Causa principal: **síndromes hipertensivas**.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1806,7 +1806,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Perfil biofísico fetal (Manning): parâmetros, pontuação e interpretação",
-      "verso": "**5 parâmetros, 0 ou 2 pontos cada:**\n\n- CTG\n- Movimentos respiratórios\n- Movimentos corpóreos\n- Tônus\n- Volume de líquido amniótico\n\nInterpretação:\n- **8–10** → normal\n- **6** → duvidoso\n- **≤ 4** → anormal\n\nPor quê:\n- Os 4 primeiros são marcadores **agudos** (dependem do SNC no momento).\n- O líquido é o marcador **crônico**.\n- Na hipóxia, somem na ordem inversa da embriologia: a reatividade (última a surgir) some primeiro; o tônus (primeiro) some por último.",
+      "verso": "**5 parâmetros, 0 ou 2 pontos cada** (tabela).\n\nInterpretação:\n- **8–10** → normal\n- **6** → duvidoso\n- **≤ 4** → anormal\n\nPor quê:\n- Os 4 primeiros dependem do SNC **no momento** (agudos).\n- O líquido reflete semanas de perfusão renal (crônico).",
       "visual": [
         {
           "tipo": "tabela",
@@ -1865,7 +1865,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Dopplervelocimetria no sofrimento fetal crônico: qual a sequência de alterações?",
-      "verso": "**Sequência de piora:**\n\n- Artéria umbilical com resistência aumentada\n- Centralização (cerebral média dilata)\n- Diástole zero\n- Diástole reversa\n- Ducto venoso alterado\n\nO que cada um mostra:\n- **Umbilical** → reflete a placenta; quanto mais resistência, menos fluxo diastólico.\n- **Cerebral média** → dilata para poupar o cérebro; relação U/C > 1 (ou ICP < 1) = centralização.\n- **Ducto venoso** (onda \"a\" ausente/reversa) → falência cardíaca e acidemia: o mais tardio e grave.",
+      "verso": "**Sequência de piora:**\n\n- Artéria umbilical com resistência aumentada\n- Centralização (cerebral média dilata)\n- Diástole zero\n- Diástole reversa\n- Ducto venoso alterado (o mais tardio e grave)",
       "visual": [
         {
           "tipo": "svg",
@@ -1910,7 +1910,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Conduta (momento do parto) no feto com insuficiência placentária conforme o Doppler",
-      "verso": "**Quanto pior o Doppler, mais cedo se interrompe.**\n- < 34 semanas → corticoide.\n- < ~32 semanas → sulfato de magnésio (neuroproteção).\n\nMomento do parto (FEBRASGO / protocolo de Barcelona):\n- Resistência aumentada / centralização → **37 semanas**\n- Diástole zero → **34 semanas**\n- Diástole reversa → **30 semanas**\n- Ducto venoso alterado → a partir da viabilidade (**~26 semanas**)\n\nVia:\n- Diástole zero/reversa ou DV alterado → cesárea\n- Formas leves → indução possível, com monitorização contínua",
+      "verso": "**Quanto pior o Doppler, mais cedo se interrompe** (FEBRASGO / protocolo de Barcelona).\n\nAntes do parto:\n- < 34 semanas → corticoide.\n- < ~32 semanas → sulfato de magnésio (neuroproteção).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2033,7 +2033,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de endométrio",
       "frente": "Estadiamento FIGO 2009 do câncer de endométrio (o mais cobrado): estádios I e II",
-      "verso": "**I = restrito ao corpo; II = invade o estroma cervical.**\n\n- **IA** → invasão miometrial **< 50%** (ou nenhuma)\n- **IB** → invasão miometrial **≥ 50%**\n- **II** → invade o **estroma** do colo, sem sair do útero\n\nAtenção:\n- Acometer só as glândulas endocervicais (mucosa) = continua estádio I.",
+      "verso": "**I = restrito ao corpo; II = invade o estroma cervical.**\n\nAtenção:\n- Acometer só as glândulas endocervicais (mucosa) = continua estádio I.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2067,7 +2067,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de endométrio",
       "frente": "Estadiamento FIGO 2009 do câncer de endométrio: estádios III e IV",
-      "verso": "**III = extensão local/regional; IV = bexiga/reto ou distância.**\n\n- **IIIA** → serosa do útero e/ou anexos\n- **IIIB** → vagina e/ou paramétrio\n- **IIIC1** → linfonodos **pélvicos**\n- **IIIC2** → linfonodos **para-aórticos**\n- **IVA** → mucosa da bexiga e/ou do intestino\n- **IVB** → metástase à distância (inclui intra-abdominal e linfonodo inguinal)",
+      "verso": "**III = extensão local/regional; IV = bexiga/reto ou distância.**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2176,7 +2176,7 @@
       "tema": "Climatério",
       "sub": "Osteoporose e densitometria",
       "frente": "Diagnóstico densitométrico de osteoporose na pós-menopausa (T-score)",
-      "verso": "**T-score ≤ -2,5 = osteoporose.**\n\n- **≥ -1,0** → normal\n- **entre -1,0 e -2,5** → osteopenia (baixa massa óssea)\n- **≤ -2,5** → osteoporose\n- **≤ -2,5 + fratura por fragilidade** → osteoporose estabelecida (grave)\n\nComo ler:\n- Sítios: coluna lombar (L1–L4), colo do fêmur e fêmur total.\n- Vale o **menor** T-score entre eles.\n- Rádio 33% só se não der para usar coluna/fêmur (ex.: hiperparatireoidismo, obesidade extrema).",
+      "verso": "**T-score ≤ -2,5 = osteoporose.**\n\nComo ler:\n- Sítios: coluna lombar (L1–L4), colo do fêmur e fêmur total.\n- Vale o **menor** T-score entre eles.\n- Rádio 33% só se não der para usar coluna/fêmur (ex.: hiperparatireoidismo, obesidade extrema).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2214,7 +2214,7 @@
       "tema": "Climatério",
       "sub": "Osteoporose e densitometria",
       "frente": "T-score × Z-score: quando usar cada um?",
-      "verso": "**T-score compara com o adulto jovem; Z-score compara com a mesma idade.**\n\nT-score:\n- Mulher na **pós-menopausa** e homem **≥ 50 anos**.\n\nZ-score:\n- Mulher na **pré-menopausa**, homem < 50 anos e crianças.\n- **Z ≤ -2,0** → \"abaixo do esperado para a idade\" (não se usa o termo osteoporose só pela densitometria).\n\nNa pós-menopausa:\n- **Z ≤ -2,0** mesmo com T típico → investigar **causa secundária de osteoporose** (corticoide, álcool, hipertireoidismo, hiperparatireoidismo, má absorção, hipogonadismo, mieloma).",
+      "verso": "**T-score compara com o adulto jovem; Z-score compara com a mesma idade.**\n\n- Z ≤ -2,0 na pré-menopausa → \"abaixo do esperado para a idade\" (não se diz osteoporose só pela densitometria).\n\nNa pós-menopausa:\n- **Z ≤ -2,0** mesmo com T típico → investigar **causa secundária de osteoporose** (corticoide, álcool, hipertireoidismo, hiperparatireoidismo, má absorção, hipogonadismo, mieloma).",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -2247,17 +2247,6 @@
       "sub": "Osteoporose e densitometria",
       "frente": "Indicações de densitometria óssea (DXA)",
       "verso": "**Toda mulher ≥ 65 anos e homem ≥ 70 anos.**\n\nAntes dessa idade, se houver fator de risco:\n- Pós-menopausa < 65 anos com fator de risco\n- Fratura por fragilidade na vida adulta\n- Uso de glicocorticoide (≥ 5 mg/dia de prednisona por ≥ 3 meses)\n- Doença ou remédio que causa perda óssea (AR, hipogonadismo, hiperparatireoidismo, inibidor de aromatase, má absorção)\n- Menopausa precoce\n- Monitorar tratamento\n\nFatores de risco que pesam:\n- Baixo peso (IMC < 19–20), tabagismo, álcool ≥ 3 doses/dia, fratura de quadril em pai/mãe, quedas.",
-      "visual": {
-        "tipo": "lista",
-        "itens": [
-          "!Mulher ≥ 65 anos · homem ≥ 70 anos",
-          "Pós-menopausa < 65 anos com fator de risco",
-          "Fratura por fragilidade",
-          "Corticoide ≥ 3 meses",
-          "Doença/remédio que reduz massa óssea",
-          "Monitorar tratamento"
-        ]
-      },
       "pegadinha": "Não há indicação de densitometria de rotina na perimenopausa sem fator de risco.",
       "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
       "add": "2026-10-21",
@@ -2474,7 +2463,7 @@
       "tema": "Reprodução humana",
       "sub": "Infertilidade e reserva ovariana",
       "frente": "AMH alto e AMH baixo: o que sugerem?",
-      "verso": "**AMH acompanha o número de folículos pequenos.**\n\n- **AMH baixo** → reserva ovariana diminuída; má resposta à estimulação (FIV).\n- **AMH alto** → muitos folículos antrais → **SOP**; risco de **síndrome de hiperestímulo ovariano** na FIV.\n\nFatores que alteram o valor:\n- Anticoncepcional hormonal e gestação → reduzem temporariamente.\n- Obesidade → valores um pouco menores.",
+      "verso": "**AMH acompanha o número de folículos pequenos.**\n\nFatores que alteram o valor:\n- Anticoncepcional hormonal e gestação → reduzem temporariamente.\n- Obesidade → valores um pouco menores.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -2711,7 +2700,7 @@
       "tema": "Parto e puerpério",
       "sub": "Lacerações perineais",
       "frente": "Classificação das lacerações perineais (1º a 4º grau)",
-      "verso": "**O divisor é o esfíncter anal: 3º grau em diante = lesão do esfíncter.**\n\n- **1º grau** → pele do períneo e/ou mucosa vaginal\n- **2º grau** → músculos do períneo (bulbocavernoso/bulboesponjoso, transverso superficial; pode chegar ao levantador), **sem** esfíncter\n- **3º grau** → esfíncter anal:\n- **3a** → < 50% do esfíncter externo\n- **3b** → > 50% do esfíncter externo\n- **3c** → esfíncter externo **e** interno\n- **4º grau** → esfíncter + **mucosa retal** (epitélio anorretal)",
+      "verso": "**O divisor é o esfíncter anal: 3º grau em diante = lesão do esfíncter.**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2807,7 +2796,7 @@
       "tema": "Nutrologia pediátrica",
       "sub": "Anemia ferropriva e suplementação de ferro",
       "frente": "Suplementação profilática de ferro no lactente a termo saudável (SBP 2026)",
-      "verso": "**Dose fixa de 10–12,5 mg/dia de ferro elementar, em 2 ciclos de 3 meses.**\n\n- **1º ciclo** → 6 a 9 meses\n- **Pausa** → 9 a 12 meses\n- **2º ciclo** → 12 a 15 meses\n\nVale para:\n- Termo, peso adequado, sem fatores de risco — em aleitamento materno ou não.\n\nMudou em relação à SBP 2021:\n- Antes: **1 mg/kg/dia contínuo** dos 6 aos 24 meses (ou desde os 3 meses se fator de risco).\n- Agora: dose fixa, em ciclos; alinhada com o Ministério da Saúde.",
+      "verso": "**Dose fixa de 10–12,5 mg/dia de ferro elementar, em 2 ciclos de 3 meses.**\n\nVale para:\n- Termo, peso adequado, sem fatores de risco — em aleitamento materno ou não.\n\nMudou em relação à SBP 2021:\n- Antes: **1 mg/kg/dia contínuo** dos 6 aos 24 meses (ou desde os 3 meses se fator de risco).\n- Agora: dose fixa, em ciclos; alinhada com o Ministério da Saúde.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2842,7 +2831,7 @@
       "tema": "Nutrologia pediátrica",
       "sub": "Anemia ferropriva e suplementação de ferro",
       "frente": "Ferro profilático no prematuro e no RN de baixo peso",
-      "verso": "**Começa com 30 dias de vida; dose pelo peso de nascimento até 1 ano; depois 1 mg/kg/dia até 2 anos.**\n\n- **1.500–2.500 g** (e termo < 2.500 g) → **2 mg/kg/dia**\n- **1.000–1.500 g** → **3 mg/kg/dia**\n- **< 1.000 g** → **4 mg/kg/dia**\n- **12 a 24 meses** → **1 mg/kg/dia**\n\nObservação:\n- Prematuro que recebeu muitas transfusões (> 100 mL de concentrado de hemácias) → avaliar individualmente o início.\n- Esse esquema NÃO mudou na atualização de 2026.",
+      "verso": "**Começa com 30 dias de vida; dose pelo peso de nascimento até 1 ano; depois 1 mg/kg/dia até 2 anos.**\n\nObservação:\n- Prematuro que recebeu muitas transfusões (> 100 mL de concentrado de hemácias) → avaliar individualmente o início.\n- Esse esquema NÃO mudou na atualização de 2026.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2929,7 +2918,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Crescimento e baixa estatura",
       "frente": "Velocidade de crescimento normal por idade",
-      "verso": "**1º ano: ~25 cm; depois desacelera.**\n\n- **0–1 ano** → ~25 cm/ano (≈15 cm no 1º semestre)\n- **1–2 anos** → ~12 cm/ano\n- **2–3 anos** → ~8 cm/ano\n- **3 anos até a puberdade** → 5–7 cm/ano\n- **Estirão puberal** → meninas ~8–9 cm/ano; meninos ~10–12 cm/ano\n\nAlerta:\n- **< 4–5 cm/ano** entre 3 anos e a puberdade → investigar.\n- Queda de canal (cruzar 2 linhas de percentil) após os 2–3 anos → investigar.",
+      "verso": "**1º ano: ~25 cm; depois desacelera.**\n\n- **Estirão puberal** → meninas ~8–9 cm/ano; meninos ~10–12 cm/ano\n\nAlerta:\n- **< 4–5 cm/ano** entre 3 anos e a puberdade → investigar.\n- Queda de canal (cruzar 2 linhas de percentil) após os 2–3 anos → investigar.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2967,14 +2956,6 @@
       "sub": "Crescimento e baixa estatura",
       "frente": "Baixa estatura: definição e alvo genético",
       "verso": "**Estatura < percentil 3 (ou escore z < -2) para idade e sexo.**\n\nTambém investigar:\n- Velocidade de crescimento baixa\n- Queda de canal\n- Estatura muito abaixo do alvo genético\n\nAlvo genético (estatura-alvo):\n- **Menino** → (altura do pai + altura da mãe **+ 13**) ÷ 2\n- **Menina** → (altura do pai + altura da mãe **− 13**) ÷ 2\n- Faixa normal → alvo **± 8,5 cm** (≈ 2 DP)",
-      "visual": {
-        "tipo": "lista",
-        "itens": [
-          "!Menino: (pai + mãe + 13) ÷ 2",
-          "!Menina: (pai + mãe − 13) ÷ 2",
-          "Canal familiar: alvo ± 8,5 cm"
-        ]
-      },
       "pegadinha": "Criança no p3 mas dentro do alvo familiar e com velocidade normal → provavelmente variante normal.",
       "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
       "add": "2026-10-21",
@@ -2987,7 +2968,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Crescimento e baixa estatura",
       "frente": "Baixa estatura familiar × retardo constitucional do crescimento e puberdade (RCCP)",
-      "verso": "**A idade óssea separa as duas.**\n\n- **Familiar** → pais baixos, idade óssea = idade cronológica, puberdade na época normal, altura final baixa (dentro do alvo).\n- **RCCP** → pais de altura normal (pai/mãe com puberdade tardia), idade óssea **atrasada**, puberdade tardia, altura final **normal**.\n\nNas duas:\n- Velocidade de crescimento normal e criança saudável → não precisam de tratamento.",
+      "verso": "**A idade óssea separa as duas.**\n\nNas duas:\n- Velocidade de crescimento normal e criança saudável → não precisam de tratamento.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -3093,7 +3074,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Desenvolvimento neuropsicomotor — marcos",
       "frente": "Marcos da linguagem por idade",
-      "verso": "**Aos 2 anos: ~50 palavras e frases de 2 palavras. Aos 3 anos: frases de 3 ou mais palavras.**\n\n- **2 meses** → sorriso social, vocaliza (sons guturais)\n- **6 meses** → balbucio\n- **9 meses** → \"mamã/papá\" sem significado, entende \"não\"\n- **12 meses** → 1–3 palavras com significado\n- **18 meses** → ~10–20 palavras\n- **24 meses** → ~50 palavras, frases de 2 palavras, metade da fala inteligível\n- **3 anos** → frases de 3+ palavras, faz perguntas, ~75% inteligível\n- **3,5–4 anos** → ~1.000 palavras ou mais, frases de 3–5 palavras, conceitos (grande/pequeno, muito/pouco), nomeia objetos do dia a dia; 4 anos: fala quase 100% inteligível, conta histórias",
+      "verso": "**Aos 2 anos: ~50 palavras e frases de 2 palavras. Aos 3 anos: frases de 3 ou mais palavras.**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -3102,8 +3083,20 @@
         ],
         "linhas": [
           [
+            "2 m",
+            "Sorriso social, vocaliza (sons guturais)"
+          ],
+          [
+            "6 m",
+            "Balbucio"
+          ],
+          [
+            "9 m",
+            "\"Mamã/papá\" sem significado, entende \"não\""
+          ],
+          [
             "12 m",
-            "1–3 palavras"
+            "1–3 palavras com significado"
           ],
           [
             "18 m",
@@ -3111,15 +3104,15 @@
           ],
           [
             "24 m",
-            "~50 palavras · frases de 2"
+            "~50 palavras, frases de 2, metade inteligível"
           ],
           [
             "3 anos",
-            "Frases de 3+ · perguntas"
+            "Frases de 3+, faz perguntas, ~75% inteligível"
           ],
           [
             "3,5–4 anos",
-            "~1.000 palavras · frases 3–5 · conceitos"
+            "~1.000 palavras, frases de 3–5, conceitos; 4 anos: ~100% inteligível, conta histórias"
           ]
         ]
       },
@@ -3309,7 +3302,7 @@
       "tema": "Imunizações",
       "sub": "Profilaxia da raiva humana",
       "frente": "Raiva: acidente leve × grave",
-      "verso": "**Grave = local perigoso, ferida profunda/múltipla ou contato com mucosa.**\n\nGrave:\n- Cabeça, face, pescoço, mãos, polpas digitais, planta dos pés\n- Ferimentos profundos, múltiplos ou extensos\n- Lambedura de **mucosas** ou de pele com lesão profunda\n- Ferimento profundo por unha de animal\n- **Qualquer** agressão por **morcego** ou mamífero silvestre\n\nLeve:\n- Superficial e pouco extenso, em tronco ou membros (exceto mãos e pés)\n- Lambedura de pele com lesão superficial\n\nSem indicação (contato indireto):\n- Tocar/alimentar o animal, lambedura em pele íntegra → só lavar.",
+      "verso": "**Grave = local perigoso, ferida profunda/múltipla ou contato com mucosa.**\n\nSem indicação (contato indireto):\n- Tocar/alimentar o animal, lambedura em pele íntegra → só lavar.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -3323,9 +3316,10 @@
         "b": {
           "t": "Grave",
           "itens": [
-            "Cabeça, face, pescoço, mãos, pés",
+            "Cabeça, face, pescoço, mãos, polpas digitais, planta dos pés",
             "Profundo, múltiplo, extenso",
-            "Lambedura de mucosa",
+            "Lambedura de mucosa (ou pele com lesão profunda)",
+            "Ferimento profundo por unha de animal",
             "Morcego / silvestre (sempre)"
           ]
         }
@@ -3341,7 +3335,7 @@
       "tema": "Imunizações",
       "sub": "Profilaxia da raiva humana",
       "frente": "Profilaxia pós-exposição da raiva: conduta pelo animal",
-      "verso": "**Cão ou gato observável → observar 10 dias, SEM vacina (leve ou grave).**\n\n- Animal saudável em 10 dias → encerra.\n- Animal adoece, morre ou some → inicia a profilaxia.\n\nCão/gato não observável, desaparecido, morto ou com sinais de raiva:\n- **Leve** → vacina (4 doses).\n- **Grave** → vacina + soro (SAR) ou imunoglobulina (IGHAR).\n\nMorcego e silvestres (macaco, sagui, raposa, quati, capivara):\n- **Sempre grave** → soro/IGHAR + vacina, mesmo se domiciliado.\n\nHerbívoros (boi, cavalo, porco, cabra):\n- Avaliar caso a caso (tipo de contato e risco local).\n\nRoedores urbanos e coelho:\n- Baixo risco → em geral não indica.",
+      "verso": "**Cão ou gato observável → observar 10 dias, SEM vacina (leve ou grave).**\n\n- Animal saudável em 10 dias → encerra.\n- Animal adoece, morre ou some → inicia a profilaxia.\n\nOutros animais:\n- **Herbívoros** (boi, cavalo, porco, cabra) → avaliar caso a caso.\n- **Roedores urbanos e coelho** → baixo risco; em geral não indica.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -3441,33 +3435,6 @@
       "sub": "Alergia à proteína do leite de vaca (APLV)",
       "frente": "APLV: formas clínicas (IgE, não IgE e mistas)",
       "verso": "**O mecanismo define o tempo dos sintomas e os exames úteis.**\n\n- **IgE mediada** (minutos até 2 h) → urticária, angioedema, vômitos imediatos, broncoespasmo, **anafilaxia**.\n- **Não IgE** (horas a dias):\n- **Proctocolite alérgica** → lactente em bom estado, em aleitamento materno, com **sangue e muco nas fezes**.\n- **Enterocolite induzida por proteína (FPIES)** → vômitos repetidos 1–4 h após ingestão, palidez, letargia, pode chocar.\n- Enteropatia → diarreia, má absorção, baixo ganho de peso.\n- **Mistas** → esofagite eosinofílica, dermatite atópica.",
-      "visual": {
-        "tipo": "grupos",
-        "grupos": [
-          {
-            "t": "IgE (rápida)",
-            "itens": [
-              "Urticária / angioedema",
-              "Anafilaxia"
-            ]
-          },
-          {
-            "t": "Não IgE (tardia)",
-            "itens": [
-              "Proctocolite (sangue nas fezes)",
-              "FPIES (vômitos + letargia)",
-              "Enteropatia"
-            ]
-          },
-          {
-            "t": "Mista",
-            "itens": [
-              "Esofagite eosinofílica",
-              "Dermatite atópica"
-            ]
-          }
-        ]
-      },
       "pegadinha": "Lactente em aleitamento EXCLUSIVO pode ter APLV: a proteína do leite que a mãe toma passa para o leite materno.",
       "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
       "add": "2026-10-21",
@@ -3493,18 +3460,6 @@
       "sub": "Alergia à proteína do leite de vaca (APLV)",
       "frente": "Tratamento da APLV: o que dar ao lactente?",
       "verso": "**Em aleitamento materno: manter a amamentação e tirar leite e derivados da dieta da MÃE.**\n\n- Mãe em dieta de exclusão → repor **cálcio** (~1.000 mg/dia) e vitamina D.\n\nSem aleitamento materno:\n- **Fórmula extensamente hidrolisada (FEH)** → 1ª escolha na maioria dos casos.\n- **Fórmula de aminoácidos** → anafilaxia, esofagite eosinofílica, FPIES grave, falha da FEH, má absorção grave.\n- **Fórmula de soja** → só > 6 meses, forma IgE, sem sintomas gastrointestinais.\n\nNão usar:\n- Fórmula parcialmente hidrolisada (\"HA\"), leite de cabra/outros mamíferos (reação cruzada), fórmula \"sem lactose\".",
-      "visual": {
-        "tipo": "fluxo",
-        "passos": [
-          "Lactente com APLV",
-          [
-            "Mama no peito → manter AM + dieta materna sem leite (+ cálcio)",
-            "Não mama → FEH",
-            "Grave/anafilaxia/EoE/falha → aminoácidos",
-            "> 6 m, IgE, sem sintoma GI → soja (opção)"
-          ]
-        ]
-      },
       "pegadinha": "APLV ≠ intolerância à lactose: fórmula sem lactose ainda tem a proteína do leite.",
       "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
       "add": "2026-10-21",
@@ -3548,5 +3503,5 @@
       "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nFormas:\n- **IgE mediada** → reação em minutos (urticária, vômitos, anafilaxia)\n- **Não IgE** → horas/dias (proctocolite com sangue nas fezes, FPIES, enteropatia)\n\nDiagnóstico:\n- Exclusão + teste de provocação oral (padrão-ouro)\n- IgE/prick só ajudam na forma IgE mediada\n\nTratamento:\n- Em aleitamento → manter AM e excluir leite da dieta da mãe\n- Sem AM → fórmula extensamente hidrolisada; aminoácidos nos casos graves\n- Soja só > 6 meses, forma IgE\n\nPrognóstico:\n- Maioria tolera até 3–5 anos\n\nComo cai:\n- Lactente em AM com sangue nas fezes → proctocolite → manter AM."
     }
   ],
-  "rev": 1792548230995
+  "rev": 1792548831016
 }
