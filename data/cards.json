@@ -632,7 +632,8 @@
       },
       "fonte": "FIGO 2018 (Int J Gynaecol Obstet)",
       "add": "2026-10-20",
-      "uerj": "Em prova de residência (UERJ inclusive), o estadiamento quase sempre vem dentro de um caso clínico: a questão dá um achado (TC, exame, biópsia) e pede o estádio ou a conduta. Treine o raciocínio achado → estádio → tratamento."
+      "uerj": "Em prova de residência (UERJ inclusive), o estadiamento quase sempre vem dentro de um caso clínico: a questão dá um achado (TC, exame, biópsia) e pede o estádio ou a conduta. Treine o raciocínio achado → estádio → tratamento.",
+      "minha": "I - COLO DO UTERO\n\nII - SAI DO UTERO:\n-> IIA: 2/3 sup da vagina\n-> IIB: paramétrio\n\nIII - OUTROS:\n-> IIIA: 1/3 inferior da vagina\n-> IIIB: parede pélvica ou hidronefrose\n-> IIIC1: linfonodos pelvicos\n-> IIIC2: linfonodos para-aorticos\n\nIV: SAI DA PELVE ou INVADE BEXIGA/RETO:\n-> IV A: mucosa de bexiga/reto (biópsia)\n-> IV B: à distancia"
     },
     {
       "id": "figo-colo-02",
@@ -3425,5 +3426,5 @@
       "add": "2026-10-21"
     }
   ],
-  "rev": 1792546120386
+  "rev": 1792546942111
 }
