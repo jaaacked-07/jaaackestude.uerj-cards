@@ -88,8 +88,8 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 - **Hierarquia obrigatória também no contexto** (igual ao verso): rótulo do bloco numa linha terminando em `:`; cada item numa linha própria `- **termo** → explicação`; detalhes de um item como subtópico recuado (`  - ` com 2 espaços).
 - **Nunca** junte vários itens numa linha com `·`, `;` ou `/` (✗ `- 0 → completar · 1/2 → rotina · 3 → controle`). Uma ideia por linha.
 - O app mostra no fim da explicação, num quadro próprio. Não use mais o campo `resumo`.
-- Imagem/esquema do tema inteiro (ex.: mapa dos estádios) vai em **`ctxvisual`** (mesmo formato de `visual`, igual em todos os cards do baralho) e aparece dentro do contexto.
-- Blocos que começam com "Minha anotação" são texto dela: nunca apague nem reescreva.
+- **Todo baralho tem `ctxvisual`** (imagens/ilustrações SEMPRE que der, no contexto e no card): imagem real do tema quando existir; senão um esquema SVG que ilustre (não uma tabela que repita o texto). Mesmo formato de `visual`, igual em todos os cards do baralho; aparece dentro do contexto. Baralho novo → crie o `ctxvisual`; baralho existente → reutilize.
+- **Não copie as anotações dela (`minha`) para o contexto**, a não ser que ela peça. Blocos que já existem começando com "Minha anotação" são texto dela: nunca apague nem reescreva.
 
 ## Formato de um card
 
