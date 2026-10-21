@@ -434,7 +434,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
-      "verso": "**Só SMS (município):**\n\n- Acidentes (trabalho, animal peçonhento, animal com risco de raiva)\n- Tétano (acidental e neonatal)\n- Violência sexual e tentativa de suicídio",
+      "verso": "**Só para o município (SMS).**\n\n- Lógica: agravos de resposta local — acidentes, tétano e violência.\n- Lista completa abaixo.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -456,7 +456,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
-      "verso": "**SMS + SES (sem o MS):**\n\n- Doenças bacterianas/respiratórias graves (coqueluche, difteria, meningites, Haemophilus)\n- Chagas aguda\n- Zika em gestante\n- Varicela grave ou óbito",
+      "verso": "**SMS + SES (sem o MS).**\n\n- Lógica: doenças graves que exigem ação regional rápida (bloqueio, quimioprofilaxia).\n- Lista completa abaixo.",
       "visual": {
         "tipo": "lista",
         "itens": [

@@ -73,6 +73,7 @@ nav svg{width:24px;height:24px}
 .sbar .x{width:32px;height:32px;display:grid;place-items:center;color:var(--mute);border-radius:10px}
 .prog{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
 .prog i{display:block;height:100%;background:var(--wine);border-radius:6px;transition:width .35s ease}
+.pcount{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
 .combo{font-size:13px;color:var(--rose);font-weight:600;min-width:34px;text-align:right}
 .sbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sbody .wrap{padding-top:6px;padding-bottom:140px}
@@ -595,10 +596,22 @@ function pErros(){
 }
 
 /* ===== Estudar (baralho livre) ===== */
-const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:''};
+const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
+const ORDENS={aleat:'Aleatória',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
 const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
+function ordenar(pool){
+  const pos=new Map(CARDS.map((c,i)=>[c.id,i])), P=c=>S.srs[c.id]||{};
+  const L=pool.slice(), o=DECK.ordem;
+  if(o==='aleat') return shuffle(L);
+  if(o==='antigo') return L.sort((a,b)=>(a.add||'').localeCompare(b.add||'')||pos.get(a.id)-pos.get(b.id));
+  if(o==='novo') return L.sort((a,b)=>(b.add||'').localeCompare(a.add||'')||pos.get(b.id)-pos.get(a.id));
+  if(o==='errados') return L.sort((a,b)=>(P(b).wrong||0)-(P(a).wrong||0)||Math.random()-.5);
+  if(o==='fracos') return L.sort((a,b)=>(P(a).box||0)-(P(b).box||0)||(P(a).ease||2.5)-(P(b).ease||2.5));
+  if(o==='assunto') return L.sort((a,b)=>abc(a.area+a.tema+a.sub,b.area+b.tema+b.sub)||pos.get(a.id)-pos.get(b.id));
+  return L;
+}
 function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
   if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
@@ -624,6 +637,7 @@ function pEstudar(){
     <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
     <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
+    <button class="sel" id="sO"><span class="sl">Ordem</span><span class="sv">${ORDENS[DECK.ordem]}</span><span class="ch">▾</span></button>
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
     <div class="sec" style="margin-top:34px">Todos os cards · ${CARDS.length}</div>
     <p class="mute small" style="margin:-2px 0 10px">Segure e arraste para reorganizar · ✎ renomeia · ＋ cria</p>
@@ -634,7 +648,8 @@ function pEstudar(){
   $('#sT').onclick=escolherTemas;
   $('#sF').onclick=()=>escolha('Quais cards',Object.keys(FILTROS).map(k=>({v:k,t:FILTROS[k]})),DECK.filtro,v=>{DECK.filtro=v;pEstudar()});
   $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
-  if(n) $('#dk').onclick=()=>sessao(shuffle(pool.map(c=>c.id)).slice(0,n),'livre');
+  $('#sO').onclick=()=>escolha('Ordem dos cards',Object.keys(ORDENS).map(k=>({v:k,t:ORDENS[k]})),DECK.ordem,v=>{DECK.ordem=v;pEstudar()});
+  if(n) $('#dk').onclick=()=>sessao(ordenar(pool).slice(0,n).map(c=>c.id),'livre');
   const bs=$('#bs'); bs.oninput=()=>{DECK.busca=bs.value;const pos=bs.selectionStart;pEstudar();const b2=$('#bs');b2.focus();b2.setSelectionRange(pos,pos)};
   ligarArvore($('#lst'),ABERTO,pEstudar); ligarDrag($('#lst'));
   const oc=$('#oc'); if(oc) oc.onclick=verOcultos;
@@ -918,8 +933,12 @@ function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else r
 function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 function minhaHTML(id){
   const t=(BYID[id]||{}).minha;
-  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">editar anotação</button>`:`<button class="addn" data-ed="${id}">+ adicionar texto ao card</button>`}</div>`;
+  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">Editar card</button>`:`<button class="addn" data-ed="${id}">Editar card</button>`}</div>`;
 }
+document.addEventListener('keydown',e=>{
+  const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.mbx')) return;
+  if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); const b=t.closest('.mbx').querySelector('[data-sv]'); if(b) b.click(); }
+});
 document.addEventListener('click',e=>{
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
@@ -1377,13 +1396,19 @@ function sessao(ids,modo){
   ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
   SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set()};
   const el=document.createElement('div');el.className='sess';el.id='sess';
-  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="prog"><i id="pg"></i></div><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
+  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
   document.body.appendChild(el); document.body.style.overflow='hidden';
   $('#sx').onclick=sair;
   proximoCard();
 }
 function sair(){const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render();syncProg()}
-function barra(){$('#pg').style.width=(SS.feitos/SS.total*100)+'%';$('#cb').textContent=SS.combo>=3?'×'+SS.combo:''}
+function barra(){
+  let f,t;
+  if(SS.modo==='dia'&&S.plan){ const ids=S.plan.ids.filter(id=>BYID[id]); t=ids.length; f=ids.filter(id=>S.plan.done.includes(id)).length; }
+  else { t=SS.total; f=SS.feitos; }
+  $('#pg').style.width=(t?f/t*100:0)+'%'; $('#pc').textContent=f+'/'+t;
+  $('#cb').textContent=SS.combo>=3?'×'+SS.combo:'';
+}
 function proximoCard(){
   barra();
   if(!SS.fila.length) return fim();
@@ -1496,14 +1521,25 @@ function marcarSelecao(c){
 }
 function apagarMarca(){
   const mk=MARCA_ALVO; if(!mk) return; const z=mk.closest('.hlz'), id=z.dataset.hl, m=S.marks[id]; if(!m) return;
-  m.l.splice(+mk.dataset.mi,1); m.u=Date.now(); save(); remarcar(id); toast('Destaque apagado');
+  m.l.splice(+mk.dataset.mi,1); m.u=Date.now(); save(); remarcar(id); vib(8);
 }
 document.addEventListener('click',e=>{
   const mk=e.target.closest('mark.hl');
-  if(mk&&getSelection().isCollapsed){ MARCA_ALVO=mk; mostrarFerr(mk.getBoundingClientRect(),true); return; }
+  if(mk&&getSelection().isCollapsed){ e.preventDefault(); e.stopPropagation(); MARCA_ALVO=mk; apagarMarca(); esconderFerr(); return; }
   if(HLT&&!e.target.closest('.hltool')&&getSelection().isCollapsed) esconderFerr();
 },true);
 addEventListener('scroll',()=>{ if(HLT&&HLT.style.display!=='none'&&!HLR) esconderFerr(); },{passive:true});
+
+/* ===== Atalhos (PC) durante a rodada ===== */
+document.addEventListener('keydown',e=>{
+  if(!SS||$('#sheet')||$('#end')||e.ctrlKey||e.metaKey||e.altKey) return;
+  const a=document.activeElement; if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return;
+  const k=e.key.toLowerCase();
+  if(e.key===' '||e.code==='Space'){ const b=$('#sh')||$('#nx'); if(b){ e.preventDefault(); b.click(); } return; }
+  if(k==='e'){ e.preventDefault(); if($('#sh')) $('#sh').click(); const ed=document.querySelector('#ar [data-ed]'); if(ed) ed.click(); return; }
+  if(['1','2','3'].includes(k)){ const r=document.querySelector(`.rate [data-r="${+k-1}"]`); if(r){ e.preventDefault(); r.click(); } return; }
+  if(['a','b','c','d','e'].includes(k)&&k!=='e'){ const o=document.querySelector(`.opt[data-i="${'abcd'.indexOf(k)}"]:not([disabled])`); if(o){ e.preventDefault(); o.click(); } }
+});
 
 /* ===== Confete ===== */
 function confete(n){
