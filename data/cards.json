@@ -373,7 +373,8 @@
         }
       },
       "fonte": "Comentário da questão UERJ",
-      "add": "2026-10-20"
+      "add": "2026-10-20",
+      "minha": "PO -> PPPélvico: sinal do OOObturador\nRP -> RRRetrocecal: sinal do PPPsoas (psssoasss -> esssstender a perna)"
     },
     {
       "id": "apend-04",
@@ -3424,5 +3425,5 @@
       "add": "2026-10-21"
     }
   ],
-  "rev": 1792540000000
+  "rev": 1792546120386
 }
