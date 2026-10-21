@@ -1,5 +1,5 @@
 {
-  "versao": "2026-10-20",
+  "versao": "2026-10-21",
   "cards": [
     {
       "id": "pnvs-01",
@@ -1929,6 +1929,1499 @@
       ],
       "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
       "add": "2026-10-20"
+    },
+    {
+      "id": "endom-01",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "Câncer de endométrio: como é feito o estadiamento?",
+      "verso": "**Estadiamento CIRÚRGICO (FIGO).**\n\n- Diferente do colo do útero, que é clínico (+ imagem).\n- Cirurgia: histerectomia total + salpingo-ooforectomia bilateral + avaliação linfonodal (linfonodo sentinela ou linfadenectomia pélvica ± para-aórtica).\n- Inventário da cavidade; biópsias se houver doença peritoneal.\n\nPor quê:\n- Só a peça mostra a profundidade de invasão miometrial, o estroma cervical, os anexos e os linfonodos.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Colo do útero",
+          "itens": [
+            "Estadiamento clínico + imagem (FIGO 2018)",
+            "Pode usar TC/RM/PET e patologia"
+          ]
+        },
+        "b": {
+          "t": "Endométrio",
+          "itens": [
+            "Estadiamento cirúrgico",
+            "HT + SOB + linfonodos"
+          ]
+        }
+      },
+      "pegadinha": "Citologia peritoneal positiva NÃO muda o estádio (saiu na FIGO 2009) — deve só ser registrada.",
+      "uerj": "Cobra a lógica cirúrgica e a diferença para o colo; costuma dar o laudo da peça e pedir o estádio.",
+      "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "endom-02",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "Estadiamento FIGO 2009 do câncer de endométrio (o mais cobrado): estádios I e II",
+      "verso": "**I = restrito ao corpo; II = invade o estroma cervical.**\n\n- **IA** → invasão miometrial **< 50%** (ou nenhuma)\n- **IB** → invasão miometrial **≥ 50%**\n- **II** → invade o **estroma** do colo, sem sair do útero\n\nAtenção:\n- Acometer só as glândulas endocervicais (mucosa) = continua estádio I.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Estádio",
+          "Critério (FIGO 2009)"
+        ],
+        "linhas": [
+          [
+            "IA",
+            "Miométrio < 50%"
+          ],
+          [
+            "IB",
+            "Miométrio ≥ 50%"
+          ],
+          [
+            "II",
+            "Estroma cervical"
+          ]
+        ]
+      },
+      "pegadinha": "Glândula endocervical ≠ estroma cervical: só o estroma faz estádio II.",
+      "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "endom-03",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "Estadiamento FIGO 2009 do câncer de endométrio: estádios III e IV",
+      "verso": "**III = extensão local/regional; IV = bexiga/reto ou distância.**\n\n- **IIIA** → serosa do útero e/ou anexos\n- **IIIB** → vagina e/ou paramétrio\n- **IIIC1** → linfonodos **pélvicos**\n- **IIIC2** → linfonodos **para-aórticos**\n- **IVA** → mucosa da bexiga e/ou do intestino\n- **IVB** → metástase à distância (inclui intra-abdominal e linfonodo inguinal)",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Estádio",
+          "Critério (FIGO 2009)"
+        ],
+        "linhas": [
+          [
+            "IIIA",
+            "Serosa / anexos"
+          ],
+          [
+            "IIIB",
+            "Vagina / paramétrio"
+          ],
+          [
+            "IIIC1",
+            "Linfonodo pélvico"
+          ],
+          [
+            "IIIC2",
+            "Linfonodo para-aórtico"
+          ],
+          [
+            "IVA",
+            "Mucosa de bexiga / intestino"
+          ],
+          [
+            "IVB",
+            "Distância, intra-abdominal, inguinal"
+          ]
+        ]
+      },
+      "pegadinha": "Linfonodo INGUINAL ou implante peritoneal no abdome = IVB (não é IIIC).",
+      "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "endom-04",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "O que mudou na FIGO 2023 do câncer de endométrio?",
+      "verso": "**Entram o tipo histológico, a invasão linfovascular (LVSI) e a classificação molecular.**\n\n- Histologia **não agressiva** = endometrioide grau 1–2.\n- Histologia **agressiva** = endometrioide grau 3, seroso, células claras, carcinossarcoma, indiferenciado.\n\nExemplos de mudança:\n- **IC** → histologia agressiva restrita a pólipo/endométrio.\n- **IIB** → LVSI extensa (histologia não agressiva).\n- **IIC** → histologia agressiva com qualquer invasão miometrial.\n- **IIIA1** anexo · **IIIA2** serosa · **IIIB2** peritônio pélvico.\n- **IVC** → metástase à distância (IVB passou a ser peritônio abdominal).\n\nMolecular (estádios I–II):\n- **POLE mutado** → IAm (melhor prognóstico).\n- **p53 anormal** com invasão miometrial → IICm (pior).",
+      "pegadinha": "Questões antigas e muitas atuais ainda usam a FIGO 2009 — leia o enunciado para ver qual classificação ele pede.",
+      "uerj": "Se a questão não citar 2023, responda pela FIGO 2009.",
+      "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "endom-05",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "Câncer de endométrio: tipos, fatores de risco e quadro clínico",
+      "verso": "**Sangramento pós-menopausa é o sinal de alerta.**\n\n- **Tipo I (endometrioide)** → estrogênio-dependente, mais comum, melhor prognóstico.\n- **Tipo II (seroso, células claras)** → não depende de estrogênio, mulher mais idosa e magra, agressivo.\n\nFatores de risco (excesso de estrogênio sem progesterona):\n- Obesidade, nuliparidade, menarca precoce/menopausa tardia\n- SOP/anovulação, terapia estrogênica isolada, tamoxifeno\n- Diabetes, síndrome de Lynch\n\nProteção:\n- Anticoncepcional oral combinado, DIU de levonorgestrel, tabagismo (só epidemiologicamente!)",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Sangramento pós-menopausa",
+          "USG TV: espessura endometrial",
+          [
+            "≤ 4 mm → baixo risco (seguir)",
+            "> 4 mm ou sangramento persistente → biópsia (histeroscopia)"
+          ]
+        ]
+      },
+      "pegadinha": "Tamoxifeno é antiestrogênico na mama, mas AGONISTA no endométrio → aumenta risco.",
+      "fonte": "FEBRASGO — Câncer do endométrio / FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "endom-q1",
+      "tipo": "quiz",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de endométrio",
+      "frente": "Mulher, 63 anos, obesa, com adenocarcinoma endometrioide grau 1. Na cirurgia, a peça mostra invasão de 70% do miométrio e acometimento das glândulas endocervicais, sem invasão do estroma cervical. Linfonodos pélvicos e para-aórticos negativos; citologia peritoneal positiva. Pela FIGO 2009, o estádio é:",
+      "opcoes": [
+        "IA",
+        "IB",
+        "II",
+        "IIIA"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: invasão ≥ 50% do miométrio já é IB.",
+        "Gabarito: invasão miometrial ≥ 50% restrita ao corpo = IB. Glândula endocervical não conta e citologia peritoneal não muda o estádio.",
+        "Errado: para estádio II é preciso invadir o ESTROMA cervical, não só as glândulas.",
+        "Errado: citologia peritoneal positiva não faz IIIA na FIGO 2009 (IIIA = serosa ou anexos)."
+      ],
+      "pegadinha": "Duas armadilhas juntas: glândula endocervical e citologia peritoneal positiva.",
+      "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "osteo-01",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Climatério",
+      "sub": "Osteoporose e densitometria",
+      "frente": "Diagnóstico densitométrico de osteoporose na pós-menopausa (T-score)",
+      "verso": "**T-score ≤ -2,5 = osteoporose.**\n\n- **≥ -1,0** → normal\n- **entre -1,0 e -2,5** → osteopenia (baixa massa óssea)\n- **≤ -2,5** → osteoporose\n- **≤ -2,5 + fratura por fragilidade** → osteoporose estabelecida (grave)\n\nComo ler:\n- Sítios: coluna lombar (L1–L4), colo do fêmur e fêmur total.\n- Vale o **menor** T-score entre eles.\n- Rádio 33% só se não der para usar coluna/fêmur (ex.: hiperparatireoidismo, obesidade extrema).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "T-score",
+          "Diagnóstico"
+        ],
+        "linhas": [
+          [
+            "≥ -1,0",
+            "Normal"
+          ],
+          [
+            "-1,0 a -2,5",
+            "Osteopenia"
+          ],
+          [
+            "≤ -2,5",
+            "Osteoporose"
+          ],
+          [
+            "≤ -2,5 + fratura",
+            "Osteoporose grave"
+          ]
+        ]
+      },
+      "pegadinha": "Fratura de fragilidade de quadril ou vértebra = osteoporose CLÍNICA, mesmo com T-score normal.",
+      "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "osteo-02",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Climatério",
+      "sub": "Osteoporose e densitometria",
+      "frente": "T-score × Z-score: quando usar cada um?",
+      "verso": "**T-score compara com o adulto jovem; Z-score compara com a mesma idade.**\n\nT-score:\n- Mulher na **pós-menopausa** e homem **≥ 50 anos**.\n\nZ-score:\n- Mulher na **pré-menopausa**, homem < 50 anos e crianças.\n- **Z ≤ -2,0** → \"abaixo do esperado para a idade\" (não se usa o termo osteoporose só pela densitometria).\n\nNa pós-menopausa:\n- **Z ≤ -2,0** mesmo com T típico → investigar **causa secundária de osteoporose** (corticoide, álcool, hipertireoidismo, hiperparatireoidismo, má absorção, hipogonadismo, mieloma).",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "T-score",
+          "itens": [
+            "Referência: adulto jovem (pico de massa óssea)",
+            "Pós-menopausa e homem ≥ 50 a",
+            "≤ -2,5 = osteoporose"
+          ]
+        },
+        "b": {
+          "t": "Z-score",
+          "itens": [
+            "Referência: mesma idade e sexo",
+            "Pré-menopausa, < 50 a, crianças",
+            "≤ -2,0 = abaixo do esperado → causa secundária"
+          ]
+        }
+      },
+      "pegadinha": "A anotação dizia \"causas secundárias de menopausa\" — o certo é causas secundárias de OSTEOPOROSE.",
+      "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "osteo-03",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Climatério",
+      "sub": "Osteoporose e densitometria",
+      "frente": "Indicações de densitometria óssea (DXA)",
+      "verso": "**Toda mulher ≥ 65 anos e homem ≥ 70 anos.**\n\nAntes dessa idade, se houver fator de risco:\n- Pós-menopausa < 65 anos com fator de risco\n- Fratura por fragilidade na vida adulta\n- Uso de glicocorticoide (≥ 5 mg/dia de prednisona por ≥ 3 meses)\n- Doença ou remédio que causa perda óssea (AR, hipogonadismo, hiperparatireoidismo, inibidor de aromatase, má absorção)\n- Menopausa precoce\n- Monitorar tratamento\n\nFatores de risco que pesam:\n- Baixo peso (IMC < 19–20), tabagismo, álcool ≥ 3 doses/dia, fratura de quadril em pai/mãe, quedas.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Mulher ≥ 65 anos · homem ≥ 70 anos",
+          "Pós-menopausa < 65 anos com fator de risco",
+          "Fratura por fragilidade",
+          "Corticoide ≥ 3 meses",
+          "Doença/remédio que reduz massa óssea",
+          "Monitorar tratamento"
+        ]
+      },
+      "pegadinha": "Não há indicação de densitometria de rotina na perimenopausa sem fator de risco.",
+      "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "osteo-04",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Climatério",
+      "sub": "Osteoporose e densitometria",
+      "frente": "Fisiopatologia: por que a falta de estrogênio causa osteoporose? (RANK / RANKL / OPG)",
+      "verso": "**Sem estrogênio: ↑ RANKL e ↓ osteoprotegerina → mais osteoclastos → mais reabsorção.**\n\nQuem é quem:\n- **RANKL** → produzido pelo **osteoblasto**; liga-se ao **RANK** do precursor do osteoclasto → forma e ativa osteoclastos.\n- **Osteoprotegerina (OPG)** → também do osteoblasto; é um **receptor \"isca\" (chamariz)** que se liga ao RANKL e impede a ligação ao RANK.\n- **Estrogênio** → aumenta OPG e reduz RANKL (freia a reabsorção).\n\nLigação com o tratamento:\n- **Denosumabe** = anticorpo anti-RANKL (age como uma OPG).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Menopausa: ↓ estrogênio",
+          "↓ OPG e ↑ RANKL (osteoblasto)",
+          "RANKL liga no RANK do pré-osteoclasto",
+          "↑ osteoclastos → reabsorção > formação",
+          "Perda óssea (trabecular primeiro: vértebra, punho)"
+        ]
+      },
+      "pegadinha": "O RANK fica no osteoCLASTO; quem produz RANKL e OPG é o osteoBLASTO.",
+      "fonte": "Fisiologia óssea / FEBRASGO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "osteo-q1",
+      "tipo": "quiz",
+      "area": "Ginecologia",
+      "tema": "Climatério",
+      "sub": "Osteoporose e densitometria",
+      "frente": "Mulher, 58 anos, menopausa aos 50, sem uso de medicações. Densitometria: T-score de -2,7 em colo do fêmur e Z-score de -2,3. Sem fraturas prévias. A conduta e a interpretação corretas são:",
+      "opcoes": [
+        "Osteopenia; repetir o exame em 2 anos.",
+        "Osteoporose; investigar causas secundárias antes/junto do tratamento.",
+        "Baixa massa óssea para a idade; o diagnóstico de osteoporose exige fratura.",
+        "Osteoporose grave; iniciar teriparatida."
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: T ≤ -2,5 já é osteoporose.",
+        "Gabarito: T ≤ -2,5 na pós-menopausa = osteoporose; Z ≤ -2,0 indica perda maior que a esperada para a idade → pesquisar causa secundária.",
+        "Errado: \"abaixo do esperado para a idade\" é linguagem do Z-score para pré-menopausa; na pós-menopausa usa-se o T-score.",
+        "Errado: osteoporose grave/estabelecida exige fratura por fragilidade."
+      ],
+      "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "agc-01",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
+      "frente": "Citologia com células glandulares atípicas (AGC): qual a conduta inicial?",
+      "verso": "**Colposcopia + nova citologia (com atenção ao canal) + USG TV se ≥ 35 anos.**\n\n- Vale para AGC \"possivelmente não neoplásicas\" **e** \"não se pode afastar lesão de alto grau\" (mesma conduta).\n- Vale para qualquer idade (inclusive < 25 anos).\n- USG TV também abaixo de 35 se houver sangramento anormal ou anovulação crônica.\n- USG TV anormal → estudo anatomopatológico do endométrio.\n\nPor quê:\n- Atipia glandular pode vir do canal cervical (adenocarcinoma) **ou do endométrio**.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Citologia: AGC",
+          "Colposcopia + nova citologia (canal) + USG TV (≥ 35 a)",
+          [
+            "Lesão na colposcopia → biópsia",
+            "Colposcopia normal → aguardar nova citologia e USG TV"
+          ]
+        ]
+      },
+      "pegadinha": "AGC NUNCA é \"repetir citologia em 6 meses\" isoladamente: vai direto para colposcopia.",
+      "fonte": "INCA — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero (2016)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "agc-02",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
+      "frente": "AGC com colposcopia normal: e depois?",
+      "verso": "**Depende da nova citologia e da avaliação endometrial.**\n\n- Nova citologia com **lesão escamosa** → conduzir conforme a nova lesão.\n- **Persiste AGC** (ou AIS) sem achado colposcópico nem endometrial → **conização (EZT tipo 3)** para ver o canal.\n- USG TV anormal → biópsia de endométrio.\n- Tudo normal → citologia semestral na atenção secundária; após **2 negativas seguidas**, volta ao rastreamento trienal.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "AGC + colposcopia normal",
+          "Resultado da nova citologia e USG TV",
+          [
+            "AGC persiste → conização (tipo 3)",
+            "Endométrio alterado → biópsia endometrial",
+            "Normais → citologia 6/6 meses × 2"
+          ]
+        ]
+      },
+      "uerj": "Cai como caso: AGC → colposcopia normal → \"qual a conduta?\" (resposta: nova citologia + USG TV).",
+      "fonte": "INCA — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero (2016)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "agc-q1",
+      "tipo": "quiz",
+      "area": "Ginecologia",
+      "tema": "Oncologia ginecológica",
+      "sub": "Câncer de colo do útero",
+      "frente": "Mulher, 42 anos, citologia: células glandulares atípicas de significado indeterminado, em que não se pode afastar lesão de alto grau. Colposcopia satisfatória e sem alterações. A conduta adequada é:",
+      "opcoes": [
+        "Repetir a citologia em 6 meses.",
+        "Conização imediata.",
+        "Nova citologia com atenção ao canal cervical e ultrassonografia transvaginal.",
+        "Teste de DNA-HPV e retorno ao rastreamento trienal se negativo."
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errado: repetir em 6 meses é conduta de ASC-US/LSIL em situações específicas, não de AGC.",
+        "Errado: a conização fica para AGC persistente sem achado colposcópico/endometrial.",
+        "Gabarito: diretriz brasileira — nova citologia (canal) e avaliação endometrial por USG TV em > 35 anos.",
+        "Errado: o HPV não exclui lesão glandular de endométrio; não é a conduta da diretriz."
+      ],
+      "pegadinha": "Lembrar que a origem pode ser endometrial — por isso a USG TV.",
+      "fonte": "INCA — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero (2016)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "resov-01",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Reprodução humana",
+      "sub": "Infertilidade e reserva ovariana",
+      "frente": "Fatores de risco para diminuição da reserva ovariana",
+      "verso": "**Idade é o principal (queda acelerada após 35 anos).**\n\n- Cirurgia ovariana prévia (**cistectomia de endometrioma**, ooforectomia parcial)\n- Endometriose (endometriomas)\n- Quimioterapia (sobretudo **alquilantes**, ex.: ciclofosfamida) e radioterapia pélvica\n- **Tabagismo** (antecipa a menopausa em 1–2 anos)\n- História familiar de menopausa precoce\n- Genéticas: **pré-mutação do FMR1** (X frágil), Turner (mosaico)\n- Doenças autoimunes (insuficiência ovariana autoimune)\n- Embolização de artérias uterinas / cirurgia pélvica extensa",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Tempo",
+            "itens": [
+              "Idade > 35 anos"
+            ]
+          },
+          {
+            "t": "Agressão ao ovário",
+            "itens": [
+              "Cirurgia ovariana / endometrioma",
+              "Quimio (alquilantes) e radioterapia",
+              "Tabagismo"
+            ]
+          },
+          {
+            "t": "Constituição",
+            "itens": [
+              "Menopausa precoce na família",
+              "Pré-mutação FMR1, Turner",
+              "Autoimunidade"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Anticoncepcional oral NÃO reduz a reserva — só baixa temporariamente o valor do AMH.",
+      "fonte": "FEBRASGO — Avaliação da reserva ovariana / ASRM Committee Opinion 2020 (Testing and interpreting measures of ovarian reserve)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "resov-02",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Reprodução humana",
+      "sub": "Infertilidade e reserva ovariana",
+      "frente": "Marcadores de reserva ovariana: quais são e quando dosar?",
+      "verso": "**Hormônio antimülleriano (AMH): pode ser dosado em QUALQUER fase do ciclo.**\n\n- **AMH** → produzido pelas células da granulosa dos folículos pré-antrais e antrais pequenos; varia pouco no ciclo.\n- **Contagem de folículos antrais (CFA)** → USG TV no início da fase folicular.\n- **FSH basal** → dosar no **2º–4º dia** do ciclo (alto = reserva baixa).\n- **Estradiol** → só junto com o FSH: estradiol alto no 3º dia suprime o FSH e mascara reserva baixa.\n- **Progesterona** → não avalia reserva; avalia ovulação (meio da fase lútea, ~21º–24º dia).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Marcador",
+          "Quando",
+          "Reserva baixa"
+        ],
+        "linhas": [
+          [
+            "AMH",
+            "Qualquer dia",
+            "Baixo (< ~1 ng/mL)"
+          ],
+          [
+            "CFA (USG TV)",
+            "Fase folicular inicial",
+            "< 5–7 folículos"
+          ],
+          [
+            "FSH",
+            "2º–4º dia",
+            "> 10 UI/L"
+          ],
+          [
+            "Estradiol",
+            "Com o FSH, 3º dia",
+            "Alto (> 60–80 pg/mL)"
+          ]
+        ]
+      },
+      "pegadinha": "AMH e CFA predizem RESPOSTA à estimulação ovariana, mas NÃO predizem a chance de gravidez espontânea.",
+      "fonte": "FEBRASGO — Avaliação da reserva ovariana / ASRM Committee Opinion 2020 (Testing and interpreting measures of ovarian reserve)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "resov-03",
+      "tipo": "flash",
+      "area": "Ginecologia",
+      "tema": "Reprodução humana",
+      "sub": "Infertilidade e reserva ovariana",
+      "frente": "AMH alto e AMH baixo: o que sugerem?",
+      "verso": "**AMH acompanha o número de folículos pequenos.**\n\n- **AMH baixo** → reserva ovariana diminuída; má resposta à estimulação (FIV).\n- **AMH alto** → muitos folículos antrais → **SOP**; risco de **síndrome de hiperestímulo ovariano** na FIV.\n\nFatores que alteram o valor:\n- Anticoncepcional hormonal e gestação → reduzem temporariamente.\n- Obesidade → valores um pouco menores.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "AMH baixo",
+          "itens": [
+            "Reserva diminuída",
+            "Má resposta na FIV",
+            "Idade avançada, cirurgia ovariana, quimio"
+          ]
+        },
+        "b": {
+          "t": "AMH alto",
+          "itens": [
+            "SOP",
+            "Risco de hiperestímulo",
+            "Boa resposta à estimulação"
+          ]
+        }
+      },
+      "fonte": "FEBRASGO — Avaliação da reserva ovariana / ASRM Committee Opinion 2020 (Testing and interpreting measures of ovarian reserve)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "resov-q1",
+      "tipo": "quiz",
+      "area": "Ginecologia",
+      "tema": "Reprodução humana",
+      "sub": "Infertilidade e reserva ovariana",
+      "frente": "Mulher de 34 anos deseja congelar óvulos e pergunta qual exame avalia sua reserva ovariana e pode ser colhido em qualquer fase do ciclo menstrual. A resposta é:",
+      "opcoes": [
+        "Estradiol sérico",
+        "Progesterona sérica",
+        "Hormônio antimülleriano",
+        "FSH sérico"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errado: estradiol isolado não avalia reserva; usa-se junto ao FSH no 3º dia.",
+        "Errado: progesterona avalia ovulação, no meio da fase lútea.",
+        "Gabarito: o AMH varia pouco no ciclo e se correlaciona com a contagem de folículos antrais.",
+        "Errado: FSH avalia reserva, mas precisa ser colhido no início do ciclo (2º–4º dia)."
+      ],
+      "pegadinha": "FSH também avalia reserva — o detalhe que derruba é \"em qualquer fase do ciclo\".",
+      "fonte": "FEBRASGO — Avaliação da reserva ovariana / ASRM Committee Opinion 2020 (Testing and interpreting measures of ovarian reserve)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "sfa-07",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Por que a RPMO e o oligodrâmnio favorecem DIP III (desaceleração variável)?",
+      "verso": "**Menos líquido = cordão sem proteção → compressão funicular.**\n\n- O líquido amniótico funciona como amortecedor do cordão.\n- Com a bolsa rota ou oligodrâmnio, a contração comprime o cordão → DIP III.\n\nQuando é tranquilizadora:\n- DIP III isolada com variabilidade moderada e acelerações presentes → bem-estar fetal (afasta acidemia).\n\nConduta se as DIP III forem recorrentes:\n- Mudar decúbito, hidratar, suspender ocitocina; considerar amnioinfusão.",
+      "pegadinha": "DIP III isolada tira a CTG da Categoria I (vira II), mas com variabilidade moderada e acelerações não indica sofrimento.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 / MS — Diretriz Nacional de Assistência ao Parto Normal",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "sfa-08",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Líquido meconial significa sofrimento fetal?",
+      "verso": "**Não. Mecônio isolado NÃO é sinônimo de sofrimento fetal nem indica cesárea.**\n\n- Comum no termo/pós-termo (maturidade do trato digestivo).\n- Pede **monitorização contínua** da FCF.\n\nSugere sofrimento quando vem com:\n- DIP II (tardias) ou DIP III recorrentes/desfavoráveis\n- Variabilidade reduzida ou ausente\n- Taquicardia ou bradicardia na linha de base\n\nNo RN:\n- Não se faz aspiração traqueal de rotina (ver Reanimação neonatal).",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Mecônio + CTG normal",
+          "itens": [
+            "Monitorização contínua",
+            "Parto pela via obstétrica"
+          ]
+        },
+        "b": {
+          "t": "Mecônio + CTG alterada",
+          "itens": [
+            "DIP II / variabilidade ausente",
+            "Reanimação intraútero → parto rápido"
+          ]
+        }
+      },
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 / MS — Diretriz Nacional de Assistência ao Parto Normal",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "sfa-q3",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Vitalidade fetal",
+      "sub": "Sofrimento fetal agudo — CTG",
+      "frente": "Gestante de 37 semanas e 5 dias, com rotura de membranas e líquido tinto de mecônio, colo com 2 cm. CTG: linha de base 140 bpm, variabilidade de 12 bpm, acelerações transitórias presentes e uma desaceleração variável isolada. A explicação mais provável para a desaceleração é:",
+      "opcoes": [
+        "Compressão do polo cefálico",
+        "Insuficiência uteroplacentária com asfixia fetal",
+        "Hipertensão arterial crônica materna",
+        "Compressão do cordão umbilical favorecida pela rotura das membranas"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Errado: compressão cefálica dá DIP I (precoce), espelhando a contração, no período mais avançado do trabalho de parto e em quase todas as contrações.",
+        "Errado: variabilidade moderada e acelerações afastam asfixia; a insuficiência placentária gera DIP II.",
+        "Errado: HAS crônica isolada não explica uma DIP III.",
+        "Gabarito: DIP III = compressão funicular, mais fácil com bolsa rota/oligodrâmnio."
+      ],
+      "pegadinha": "O mecônio no enunciado é o distrator para você marcar asfixia.",
+      "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 / MS — Diretriz Nacional de Assistência ao Parto Normal",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rpmo-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Prematuridade e RPMO",
+      "sub": "RPMO — rotura prematura de membranas ovulares",
+      "frente": "RPMO pré-termo (24 a < 34 semanas) sem infecção: qual a conduta?",
+      "verso": "**Conduta expectante internada até 34 semanas.**\n\n- **Corticoide** (betametasona 12 mg IM 24/24 h, 2 doses)\n- **Antibiótico de latência** (prolonga o tempo até o parto e reduz infecção)\n- **Sulfato de magnésio** se o parto for ocorrer **< 32 semanas** (neuroproteção)\n- Profilaxia para GBS quando entrar em trabalho de parto\n- Vigiar infecção (febre, taquicardia materna/fetal, leucocitose, dor uterina)\n- Evitar toque vaginal\n- **Sem tocólise**\n\nInterromper:\n- Com **34 semanas** (MS/FEBRASGO) ou antes se infecção, sofrimento fetal, descolamento ou trabalho de parto.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "RPMO confirmada (exame especular)",
+          "Infecção, sofrimento fetal ou TP?",
+          [
+            "Sim → interromper (via obstétrica)",
+            "Não e < 34 sem → expectante: corticoide + ATB latência ± MgSO4",
+            "≥ 34 sem → interromper (indução)"
+          ]
+        ]
+      },
+      "pegadinha": "Corioamnionite indica PARTO, não cesárea: a via é obstétrica.",
+      "uerj": "Cobra o que repetir/fazer no momento do parto e os limites de idade gestacional de cada medicação.",
+      "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rpmo-02",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Prematuridade e RPMO",
+      "sub": "RPMO — rotura prematura de membranas ovulares",
+      "frente": "Antibiótico de latência na RPMO: esquema e para que serve",
+      "verso": "**Ampicilina + azitromicina (macrolídeo).**\n\n- **Ampicilina** 2 g EV 6/6 h por 48 h → depois **amoxicilina** 500 mg VO 8/8 h por 5 dias\n- **Azitromicina** 1 g VO dose única\n- Total de 7 dias\n\nPara que serve:\n- Aumentar o período de latência e reduzir corioamnionite e morbidade neonatal.\n\nNão usar:\n- **Amoxicilina-clavulanato** → associado a enterocolite necrosante.",
+      "pegadinha": "Antibiótico de latência ≠ profilaxia do GBS: são indicações diferentes.",
+      "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rpmo-03",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Prematuridade e RPMO",
+      "sub": "RPMO — rotura prematura de membranas ovulares",
+      "frente": "Na hora do parto da paciente com RPMO pré-termo: o que repetir/fazer?",
+      "verso": "**Só a profilaxia do estreptococo do grupo B (GBS) intraparto.**\n\n- Indicação: parto **pré-termo** com GBS desconhecido; bolsa rota ≥ 18 h e febre intraparto também indicam.\n- Opções: **penicilina G cristalina** (5 milhões UI → 2,5–3 milhões UI 4/4 h) ou **ampicilina** (2 g → 1 g 4/4 h).\n- Alergia: cefazolina (baixo risco), clindamicina (se sensível) ou vancomicina.\n- **Azitromicina NÃO serve** para GBS.\n\nNão repetir:\n- **Corticoide** → indicado < 34 semanas (ciclo de resgate só se < 34 sem e ≥ 7–14 dias do primeiro).\n- **Sulfato de magnésio** → só < 32 semanas.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Medicação",
+          "Limite / regra"
+        ],
+        "linhas": [
+          [
+            "Corticoide",
+            "24 a < 34 semanas"
+          ],
+          [
+            "MgSO4 (neuroproteção)",
+            "< 32 semanas"
+          ],
+          [
+            "ATB de latência",
+            "Expectante < 34 semanas"
+          ],
+          [
+            "Profilaxia GBS",
+            "No trabalho de parto/indução"
+          ]
+        ]
+      },
+      "pegadinha": "A banca dá a lista de remédios já feitos e pergunta qual repetir: só o antibiótico para GBS.",
+      "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rpmo-04",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Prematuridade e RPMO",
+      "sub": "RPMO — rotura prematura de membranas ovulares",
+      "frente": "Como diagnosticar RPMO?",
+      "verso": "**Clínico: exame especular com saída de líquido pelo orifício do colo.**\n\nSe houver dúvida:\n- Teste do **pH** (nitrazina): líquido amniótico é alcalino (pH > 6,5).\n- **Cristalização** em folha de samambaia.\n- Testes imunocromatográficos: **PAMG-1** (AmniSure) e **IGFBP-1**.\n- USG com oligodrâmnio apoia, mas não confirma.\n\nEvitar:\n- Toque vaginal (aumenta infecção e encurta a latência).",
+      "pegadinha": "Sangue, sêmen, vaginose e urina alcalinizam o pH → falso-positivo da nitrazina.",
+      "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rpmo-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Prematuridade e RPMO",
+      "sub": "RPMO — rotura prematura de membranas ovulares",
+      "frente": "Gestante com RPMO às 29 semanas recebeu ampicilina e azitromicina, betametasona e sulfato de magnésio. Mantida em conduta expectante, com 34 semanas é indicada a indução do parto. Qual medicação deve ser repetida agora?",
+      "opcoes": [
+        "Betametasona",
+        "Sulfato de magnésio",
+        "Azitromicina",
+        "Ampicilina"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Errado: o corticoide é indicado para partos < 34 semanas.",
+        "Errado: a neuroproteção com MgSO4 é para partos < 32 semanas.",
+        "Errado: azitromicina fez parte da latência e não cobre o GBS.",
+        "Gabarito: ampicilina (ou penicilina) como profilaxia do GBS no parto pré-termo com bolsa rota prolongada."
+      ],
+      "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "lacer-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Lacerações perineais",
+      "frente": "Classificação das lacerações perineais (1º a 4º grau)",
+      "verso": "**O divisor é o esfíncter anal: 3º grau em diante = lesão do esfíncter.**\n\n- **1º grau** → pele do períneo e/ou mucosa vaginal\n- **2º grau** → músculos do períneo (bulbocavernoso/bulboesponjoso, transverso superficial; pode chegar ao levantador), **sem** esfíncter\n- **3º grau** → esfíncter anal:\n- **3a** → < 50% do esfíncter externo\n- **3b** → > 50% do esfíncter externo\n- **3c** → esfíncter externo **e** interno\n- **4º grau** → esfíncter + **mucosa retal** (epitélio anorretal)",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau",
+          "Estrutura lesada"
+        ],
+        "linhas": [
+          [
+            "1º",
+            "Pele / mucosa vaginal"
+          ],
+          [
+            "2º",
+            "Músculos do períneo (sem esfíncter)"
+          ],
+          [
+            "3a",
+            "< 50% esfíncter externo"
+          ],
+          [
+            "3b",
+            "> 50% esfíncter externo"
+          ],
+          [
+            "3c",
+            "Esfíncter externo + interno"
+          ],
+          [
+            "4º",
+            "+ mucosa retal"
+          ]
+        ]
+      },
+      "pegadinha": "Na dúvida entre dois graus, classifique no MAIOR. Botoeira na mucosa retal com esfíncter íntegro não é 4º grau (é fístula/lesão isolada).",
+      "fonte": "RCOG Green-top Guideline 29 (lesão obstétrica do esfíncter anal) / FEBRASGO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "lacer-02",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Lacerações perineais",
+      "frente": "Lacerações de 3º e 4º grau: fatores de risco e conduta",
+      "verso": "**Reparo no centro cirúrgico, com boa analgesia, por profissional experiente.**\n\nFatores de risco:\n- Primiparidade, macrossomia (> 4 kg), parto instrumental (**fórcipe** > vácuo)\n- Episiotomia **mediana**, distocia de ombro, occipito-posterior, período expulsivo prolongado\n\nConduta:\n- Esfíncter externo: sutura término-terminal ou sobreposição; interno: término-terminal.\n- Antibiótico (ex.: cefalosporina + metronidazol) e laxativo/emoliente fecal.\n- Fisioterapia do assoalho pélvico; seguimento por incontinência anal.",
+      "pegadinha": "Episiotomia mediolateral (≥ 60° da linha média) PROTEGE do 3º/4º grau; a mediana aumenta o risco.",
+      "fonte": "RCOG Green-top Guideline 29 (lesão obstétrica do esfíncter anal) / FEBRASGO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "lacer-03",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Lacerações perineais",
+      "frente": "Músculos do levantador do ânus e relação com as lacerações",
+      "verso": "**Levantador do ânus = puborretal + pubococcígeo + iliococcígeo.**\n\n- **Pubococcígeo** → porção medial e cefálica; lesado nas lacerações extensas de 2º grau.\n- **Iliococcígeo** → porção mais posterior; as fibras de cada lado se unem na linha média entre o ânus e o cóccix.\n- **Puborretal** → alça em volta do reto (continência).\n\nNa questão comentada (gabarito B):\n- Lacerações de 3º/4º grau aumentam o risco de lesão do levantador, incluindo o **iliococcígeo**.\n- Bulbocavernoso e transverso superficial → típicos do 2º grau.",
+      "pegadinha": "Questão de detalhe anatômico: priorize saber que bulbocavernoso e transverso superficial = 2º grau; esfíncter = 3º/4º.",
+      "fonte": "Comentário da questão / anatomia do assoalho pélvico",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "lacer-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Lacerações perineais",
+      "frente": "Após parto com fórcipe, a revisão do canal mostra lesão de toda a espessura do esfíncter anal externo e de parte do esfíncter interno, com mucosa retal íntegra. A classificação é:",
+      "opcoes": [
+        "2º grau",
+        "3b",
+        "3c",
+        "4º grau"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errado: 2º grau não atinge o esfíncter.",
+        "Errado: 3b é > 50% do esfíncter EXTERNO apenas.",
+        "Gabarito: esfíncter externo + interno = 3c.",
+        "Errado: 4º grau exige lesão da mucosa retal."
+      ],
+      "fonte": "RCOG Green-top Guideline 29 (lesão obstétrica do esfíncter anal) / FEBRASGO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "ferro-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Nutrologia pediátrica",
+      "sub": "Anemia ferropriva e suplementação de ferro",
+      "frente": "Suplementação profilática de ferro no lactente a termo saudável (SBP 2026)",
+      "verso": "**Dose fixa de 10–12,5 mg/dia de ferro elementar, em 2 ciclos de 3 meses.**\n\n- **1º ciclo** → 6 a 9 meses\n- **Pausa** → 9 a 12 meses\n- **2º ciclo** → 12 a 15 meses\n\nVale para:\n- Termo, peso adequado, sem fatores de risco — em aleitamento materno ou não.\n\nMudou em relação à SBP 2021:\n- Antes: **1 mg/kg/dia contínuo** dos 6 aos 24 meses (ou desde os 3 meses se fator de risco).\n- Agora: dose fixa, em ciclos; alinhada com o Ministério da Saúde.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Idade",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "6–9 meses",
+            "10–12,5 mg/dia"
+          ],
+          [
+            "9–12 meses",
+            "Pausa"
+          ],
+          [
+            "12–15 meses",
+            "10–12,5 mg/dia"
+          ]
+        ]
+      },
+      "pegadinha": "Questões feitas antes de 2026 usam o esquema antigo (1 mg/kg/dia dos 6 aos 24 meses). Veja o ano da prova.",
+      "uerj": "Prova de 2026 pode cobrar a atualização; confira se as alternativas falam em mg/kg (antigo) ou dose fixa em ciclos (novo).",
+      "fonte": "SBP — Recomendações para o tratamento e prevenção da deficiência de ferro e anemia ferropriva em lactentes, atualização 2026 (mar/2026)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "ferro-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Nutrologia pediátrica",
+      "sub": "Anemia ferropriva e suplementação de ferro",
+      "frente": "Ferro profilático no prematuro e no RN de baixo peso",
+      "verso": "**Começa com 30 dias de vida; dose pelo peso de nascimento até 1 ano; depois 1 mg/kg/dia até 2 anos.**\n\n- **1.500–2.500 g** (e termo < 2.500 g) → **2 mg/kg/dia**\n- **1.000–1.500 g** → **3 mg/kg/dia**\n- **< 1.000 g** → **4 mg/kg/dia**\n- **12 a 24 meses** → **1 mg/kg/dia**\n\nObservação:\n- Prematuro que recebeu muitas transfusões (> 100 mL de concentrado de hemácias) → avaliar individualmente o início.\n- Esse esquema NÃO mudou na atualização de 2026.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Peso ao nascer",
+          "1º ano (início aos 30 dias)",
+          "2º ano"
+        ],
+        "linhas": [
+          [
+            "1.500–2.500 g",
+            "2 mg/kg/dia",
+            "1 mg/kg/dia"
+          ],
+          [
+            "1.000–1.500 g",
+            "3 mg/kg/dia",
+            "1 mg/kg/dia"
+          ],
+          [
+            "< 1.000 g",
+            "4 mg/kg/dia",
+            "1 mg/kg/dia"
+          ]
+        ]
+      },
+      "fonte": "SBP — Recomendações para o tratamento e prevenção da deficiência de ferro e anemia ferropriva em lactentes, atualização 2026 (mar/2026) / SBP 2021",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "ferro-03",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Nutrologia pediátrica",
+      "sub": "Anemia ferropriva e suplementação de ferro",
+      "frente": "Tratamento da anemia ferropriva na criança",
+      "verso": "**3 a 6 mg/kg/dia de ferro elementar por 3 a 6 meses.**\n\n- Hemograma em **30–45 dias**: Hb deve subir **≥ 1 g/dL**.\n- Primeira resposta: reticulocitose em 5–10 dias.\n- Manter até repor estoques (ferritina normal), não só até normalizar a Hb.\n\nSem resposta:\n- Adesão, dose, perda oculta (sangue), inflamação, má absorção (doença celíaca), diagnóstico errado (talassemia).\n\nRastreio:\n- SBP 2026 **não recomenda** exame de rotina em criança saudável com crescimento e alimentação adequados.",
+      "pegadinha": "Parar o ferro quando a Hb normaliza é erro: o objetivo é repor os estoques.",
+      "fonte": "SBP — Recomendações para o tratamento e prevenção da deficiência de ferro e anemia ferropriva em lactentes, atualização 2026 (mar/2026)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "ferro-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Nutrologia pediátrica",
+      "sub": "Anemia ferropriva e suplementação de ferro",
+      "frente": "Lactente de 6 meses, nascido a termo com 3.300 g, em aleitamento materno e iniciando alimentação complementar, sem fatores de risco. Segundo a atualização 2026 da SBP, a profilaxia de ferro deve ser:",
+      "opcoes": [
+        "1 mg/kg/dia de ferro elementar, contínuo, até 24 meses",
+        "10 a 12,5 mg/dia de ferro elementar por 3 meses, pausa de 3 meses e novo ciclo aos 12 meses",
+        "Desnecessária, pois está em aleitamento materno",
+        "2 mg/kg/dia a partir de 30 dias até 1 ano"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: era o esquema da SBP 2021 (substituído em 2026).",
+        "Gabarito: dois ciclos de 3 meses (6–9 e 12–15 meses) com dose fixa.",
+        "Errado: o leite materno não supre o ferro após os 6 meses; a profilaxia é universal.",
+        "Errado: esquema do prematuro/baixo peso."
+      ],
+      "fonte": "SBP — Recomendações para o tratamento e prevenção da deficiência de ferro e anemia ferropriva em lactentes, atualização 2026 (mar/2026)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Peso × estatura: qual reflete agravo agudo e qual reflete agravo crônico?",
+      "verso": "**Peso = agudo (sensível e rápido); estatura = crônico.**\n\n- Diarreia, IVAS → a criança perde peso e recupera logo depois.\n- Doença crônica / desnutrição prolongada → compromete a estatura.\n\nCrescimento depende de:\n- **Fatores intrínsecos** → genéticos (alvo genético, ausência de anomalias cromossômicas), hormonais.\n- **Fatores extrínsecos** → alimentação, estímulos biopsicossociais, doenças crônicas.\n\nVariação normal:\n- É heterogênea: p10 e p90 podem ser igualmente normais → por isso se usam curvas.",
+      "pegadinha": "O crescimento depende da INTERAÇÃO entre fatores intrínsecos e extrínsecos (não só da genética).",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Velocidade de crescimento normal por idade",
+      "verso": "**1º ano: ~25 cm; depois desacelera.**\n\n- **0–1 ano** → ~25 cm/ano (≈15 cm no 1º semestre)\n- **1–2 anos** → ~12 cm/ano\n- **2–3 anos** → ~8 cm/ano\n- **3 anos até a puberdade** → 5–7 cm/ano\n- **Estirão puberal** → meninas ~8–9 cm/ano; meninos ~10–12 cm/ano\n\nAlerta:\n- **< 4–5 cm/ano** entre 3 anos e a puberdade → investigar.\n- Queda de canal (cruzar 2 linhas de percentil) após os 2–3 anos → investigar.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Idade",
+          "Velocidade"
+        ],
+        "linhas": [
+          [
+            "0–1 ano",
+            "~25 cm/ano"
+          ],
+          [
+            "1–2 anos",
+            "~12 cm/ano"
+          ],
+          [
+            "2–3 anos",
+            "~8 cm/ano"
+          ],
+          [
+            "3 anos → puberdade",
+            "5–7 cm/ano"
+          ]
+        ]
+      },
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-03",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Baixa estatura: definição e alvo genético",
+      "verso": "**Estatura < percentil 3 (ou escore z < -2) para idade e sexo.**\n\nTambém investigar:\n- Velocidade de crescimento baixa\n- Queda de canal\n- Estatura muito abaixo do alvo genético\n\nAlvo genético (estatura-alvo):\n- **Menino** → (altura do pai + altura da mãe **+ 13**) ÷ 2\n- **Menina** → (altura do pai + altura da mãe **− 13**) ÷ 2\n- Faixa normal → alvo **± 8,5 cm** (≈ 2 DP)",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Menino: (pai + mãe + 13) ÷ 2",
+          "!Menina: (pai + mãe − 13) ÷ 2",
+          "Canal familiar: alvo ± 8,5 cm"
+        ]
+      },
+      "pegadinha": "Criança no p3 mas dentro do alvo familiar e com velocidade normal → provavelmente variante normal.",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-04",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Baixa estatura familiar × retardo constitucional do crescimento e puberdade (RCCP)",
+      "verso": "**A idade óssea separa as duas.**\n\n- **Familiar** → pais baixos, idade óssea = idade cronológica, puberdade na época normal, altura final baixa (dentro do alvo).\n- **RCCP** → pais de altura normal (pai/mãe com puberdade tardia), idade óssea **atrasada**, puberdade tardia, altura final **normal**.\n\nNas duas:\n- Velocidade de crescimento normal e criança saudável → não precisam de tratamento.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Baixa estatura familiar",
+          "itens": [
+            "Pais baixos",
+            "IO = IC",
+            "Puberdade normal",
+            "Altura final baixa (= alvo)"
+          ]
+        },
+        "b": {
+          "t": "RCCP",
+          "itens": [
+            "História de puberdade tardia nos pais",
+            "IO atrasada",
+            "Puberdade tardia",
+            "Altura final normal"
+          ]
+        }
+      },
+      "pegadinha": "Idade óssea atrasada NÃO é exclusiva do RCCP: também aparece em causas endócrinas e desnutrição.",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-05",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Causas patológicas de baixa estatura: como raciocinar?",
+      "verso": "**Primeiro: proporcionada ou desproporcionada?**\n\nDesproporcionada:\n- Displasias esqueléticas (acondroplasia), raquitismo.\n\nProporcionada pré-natal:\n- PIG sem recuperação até 2–4 anos, síndromes (Turner, Silver-Russell, Noonan, Prader-Willi).\n\nProporcionada pós-natal:\n- Desnutrição e doenças crônicas (celíaca, DII, renal, cardiopatia) → **peso cai antes** da altura.\n- Endócrinas (hipotireoidismo, deficiência de GH, Cushing) → **altura cai com peso preservado** ou excesso de peso.\n\nNa menina com baixa estatura sem causa:\n- Pedir **cariótipo** (Turner).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Baixa estatura",
+          "Proporções corporais",
+          [
+            "Desproporcionada → displasia óssea / raquitismo",
+            "Proporcionada → pré-natal (PIG, síndromes) ou pós-natal"
+          ],
+          "Pós-natal: peso caiu primeiro? → nutricional/crônica · altura caiu com peso ok → endócrina"
+        ]
+      },
+      "pegadinha": "Criança baixa e GORDINHA → pense em causa endócrina (hipotireoidismo, Cushing, deficiência de GH).",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Menino de 12 anos, saudável, estatura no percentil 3, velocidade de crescimento de 5 cm/ano e sem sinais puberais. Pai com 1,75 m e mãe com 1,63 m; o pai relata ter entrado na puberdade aos 16 anos. Idade óssea de 10 anos. O diagnóstico mais provável é:",
+      "opcoes": [
+        "Baixa estatura familiar",
+        "Retardo constitucional do crescimento e da puberdade",
+        "Deficiência de hormônio do crescimento",
+        "Hipotireoidismo adquirido"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: na familiar os pais são baixos e a idade óssea é igual à cronológica.",
+        "Gabarito: pais com altura normal, puberdade tardia no pai, IO atrasada e velocidade normal.",
+        "Errado: deficiência de GH tem velocidade de crescimento baixa e costuma ter excesso de peso relativo.",
+        "Errado: hipotireoidismo também reduz a velocidade e dá outros sinais (ganho de peso, constipação, bradicardia)."
+      ],
+      "pegadinha": "Alvo do menino = (175 + 163 + 13) ÷ 2 ≈ 175,5 cm → a criança está abaixo do canal familiar, mas com IO atrasada e velocidade normal.",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "dnpm-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Desenvolvimento neuropsicomotor — marcos",
+      "frente": "Princípios do desenvolvimento neuropsicomotor",
+      "verso": "**Sentido crânio-caudal e próximo-distal.**\n\n- **Crânio-caudal** → primeiro sustenta a cabeça, depois senta, depois anda.\n- **Próximo-distal** → controla ombro e braço antes da mão e dos dedos (pinça).\n- Do **geral para o específico** e do **simples para o complexo**.\n- Sequência é fixa; o ritmo varia de criança para criança.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Sustenta a cabeça (~3 m)",
+          "Senta sem apoio (~6 m)",
+          "Engatinha / fica de pé com apoio (~9 m)",
+          "Anda sem apoio (~12–15 m)"
+        ]
+      },
+      "pegadinha": "A banca inverte: \"desenvolvimento no sentido caudo-cranial\" está ERRADO.",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "dnpm-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Desenvolvimento neuropsicomotor — marcos",
+      "frente": "Marcos da linguagem por idade",
+      "verso": "**Aos 2 anos: ~50 palavras e frases de 2 palavras. Aos 3 anos: frases de 3 ou mais palavras.**\n\n- **2 meses** → sorriso social, vocaliza (sons guturais)\n- **6 meses** → balbucio\n- **9 meses** → \"mamã/papá\" sem significado, entende \"não\"\n- **12 meses** → 1–3 palavras com significado\n- **18 meses** → ~10–20 palavras\n- **24 meses** → ~50 palavras, frases de 2 palavras, metade da fala inteligível\n- **3 anos** → frases de 3+ palavras, faz perguntas, ~75% inteligível\n- **3,5–4 anos** → ~1.000 palavras ou mais, frases de 3–5 palavras, conceitos (grande/pequeno, muito/pouco), nomeia objetos do dia a dia; 4 anos: fala quase 100% inteligível, conta histórias",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Idade",
+          "Marco"
+        ],
+        "linhas": [
+          [
+            "12 m",
+            "1–3 palavras"
+          ],
+          [
+            "18 m",
+            "~10–20 palavras"
+          ],
+          [
+            "24 m",
+            "~50 palavras · frases de 2"
+          ],
+          [
+            "3 anos",
+            "Frases de 3+ · perguntas"
+          ],
+          [
+            "3,5–4 anos",
+            "~1.000 palavras · frases 3–5 · conceitos"
+          ]
+        ]
+      },
+      "pegadinha": "Criança de 3 anos e meio que fala \"cerca de 50 palavras\" está ATRASADA (isso é marco dos 2 anos).",
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "dnpm-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Desenvolvimento neuropsicomotor — marcos",
+      "frente": "Criança de 3 anos e 6 meses em consulta de puericultura. Qual dos achados abaixo NÃO é esperado para a idade?",
+      "opcoes": [
+        "Faz perguntas simples sobre o ambiente",
+        "Compreende conceitos como grande/pequeno e muito/pouco",
+        "Nomeia objetos do dia a dia, como alimentos e roupas",
+        "Vocabulário de cerca de 50 palavras, com frases de 2 palavras"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Esperado: fazer perguntas é típico a partir dos 3 anos.",
+        "Esperado: conceitos básicos fazem parte dessa faixa.",
+        "Esperado: nomeia objetos comuns e partes do corpo.",
+        "Gabarito: 50 palavras e frases de 2 palavras é marco dos 2 anos; aos 3,5 anos espera-se ~1.000 palavras e frases de 3–5."
+      ],
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "cresc-q2",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Crescimento e desenvolvimento",
+      "sub": "Crescimento e baixa estatura",
+      "frente": "Sobre crescimento e desenvolvimento, assinale a afirmativa correta:",
+      "opcoes": [
+        "O crescimento depende exclusivamente de fatores genéticos.",
+        "Crianças da mesma idade devem ter estaturas semelhantes para serem consideradas normais.",
+        "O peso é mais sensível a agravos agudos; a estatura reflete agravos crônicos.",
+        "O desenvolvimento motor ocorre no sentido caudo-cranial."
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errado: depende da interação de fatores intrínsecos e extrínsecos.",
+        "Errado: a variação é heterogênea; p10 e p90 podem ser normais.",
+        "Gabarito: diarreia e IVAS reduzem peso; doença crônica compromete a estatura.",
+        "Errado: é crânio-caudal (cabeça → tronco → membros inferiores)."
+      ],
+      "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rean-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "RN ≥ 34 semanas ao nascer: as 3 perguntas e o clampeamento do cordão",
+      "verso": "**Gestação ≥ 34 semanas? Respira ou chora? Tônus em flexão?**\n\n- **Sim às três (boa vitalidade)** → clampeamento **≥ 60 s** (1–3 min), contato pele a pele, secar, manter aquecido.\n- **Não respira / hipotônico** → estímulo tátil (~15 s), de preferência **antes de clampear**.\n- Começou a respirar → clampeamento tardio.\n- Não respondeu → clampeamento **imediato** e mesa de reanimação (2026: a **ordenha** do cordão é opção — ~20 cm, 3 vezes, antes de clampear).\n\nNovidade 2026:\n- Antes (2022) o RN sem boa vitalidade ia direto para clampeamento imediato.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "≥ 34 sem · respira/chora · tônus bom?",
+          [
+            "Sim → clampear ≥ 60 s + pele a pele",
+            "Não → estímulo tátil ~15 s antes de clampear"
+          ],
+          "Não respondeu → clampear (ou ordenhar) e levar à mesa → passos iniciais → VPP no Minuto de Ouro"
+        ]
+      },
+      "uerj": "Pediatria da UERJ cobra o fluxograma: indicação de VPP, massagem e adrenalina com números.",
+      "fonte": "SBP — Diretrizes de Reanimação do RN ≥ 34 semanas em sala de parto (2026, ciclo 2026–2030; base ILCOR 2025) / SBP 2022",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rean-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "VPP no RN ≥ 34 semanas: quando e como",
+      "verso": "**FC < 100 bpm, apneia ou respiração irregular → VPP em até 60 s (Minuto de Ouro).**\n\n- **FiO2 inicial 21%** (ar ambiente); ajustar ~20% a cada 30 s pela SatO2.\n- **30–60 ventilações/min** (\"ventila, solta, solta\").\n- Ventilador manual em T: fluxo ~10 L/min, **PIP 20–30**, **PEEP 5** cmH2O, máximo 40.\n- FC: **monitor cardíaco de 3 derivações** assim que indicar VPP.\n- Oxímetro no **pulso direito** (pré-ductal).\n\nInterface:\n- Máscara facial; **máscara laríngea** é alternativa em RN ≥ 2.000 g (não usar durante massagem).\n\nMecônio:\n- Não aspirar traqueia de rotina; se não respira, VPP no primeiro minuto mesmo com mecônio.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Minuto de vida",
+          "SatO2 pré-ductal alvo"
+        ],
+        "linhas": [
+          [
+            "2",
+            "65–70%"
+          ],
+          [
+            "3",
+            "70–75%"
+          ],
+          [
+            "4",
+            "75–80%"
+          ],
+          [
+            "5",
+            "80–85%"
+          ],
+          [
+            "5–10",
+            "85–95%"
+          ]
+        ]
+      },
+      "pegadinha": "RN ≥ 34 sem começa com ar ambiente (21%); < 34 sem começa com 30%. O 100% fica para a massagem.",
+      "fonte": "SBP — Diretrizes de Reanimação do RN ≥ 34 semanas em sala de parto (2026, ciclo 2026–2030; base ILCOR 2025) / SBP 2022",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rean-03",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "Massagem cardíaca e medicações na reanimação neonatal",
+      "verso": "**FC < 60 bpm após 30 s de VPP efetiva com cânula (ou máscara laríngea) → massagem.**\n\nMassagem:\n- Técnica dos **2 polegares** no terço inferior do esterno, 1/3 do diâmetro AP.\n- **3:1** (90 compressões + 30 ventilações/min), **O2 a 100%**.\n- Reavaliar FC após **60 s**.\n\nAdrenalina (FC < 60 após 60 s de massagem + VPP):\n- **EV (veia umbilical)**: **0,02 mg/kg** (faixa 0,01–0,03) = 0,2 mL/kg da solução 0,1 mg/mL; repetir a cada 3–5 min.\n- **Endotraqueal**: 0,05–0,1 mg/kg, **dose única** enquanto obtém acesso venoso.\n\nVolume:\n- SF 0,9% **10 mL/kg** em 5–10 min se suspeita de hipovolemia (perda de sangue, palidez, pulsos fracos).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "VPP efetiva 30 s (com cânula)",
+          "FC < 60?",
+          "Massagem 3:1 + O2 100% por 60 s",
+          "FC < 60?",
+          "Adrenalina EV 0,02 mg/kg (repetir 3–5 min) ± SF 10 mL/kg"
+        ]
+      },
+      "pegadinha": "A via preferida da adrenalina é a VEIA UMBILICAL; a traqueal é dose única e maior (0,05–0,1 mg/kg).",
+      "fonte": "SBP — Diretrizes de Reanimação do RN ≥ 34 semanas em sala de parto (2026, ciclo 2026–2030; base ILCOR 2025) / SBP 2022",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rean-04",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "Passos iniciais e temperatura na sala de parto",
+      "verso": "**Manter normotermia: 36,5–37,5 °C.**\n\n- Sala de parto **23–25 °C**.\n- Mesa com calor radiante, secar, retirar campos úmidos, posicionar a cabeça em leve extensão.\n- Aspirar boca e narinas **só se houver obstrução**.\n- Passos iniciais em até **30 s**, para começar a VPP dentro do Minuto de Ouro se indicada.\n\nDepois dos passos iniciais, avaliar:\n- **FC** e **respiração** (não usar a cor para decidir).",
+      "pegadinha": "Aspiração de vias aéreas de rotina NÃO é recomendada.",
+      "fonte": "SBP — Diretrizes de Reanimação do RN ≥ 34 semanas em sala de parto (2026, ciclo 2026–2030; base ILCOR 2025) / SBP 2022",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "rean-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "RN de 39 semanas nasce hipotônico e em apneia, com líquido meconial espesso. Não responde ao estímulo tátil. Após clampeamento e passos iniciais, permanece em apneia com FC de 80 bpm. A conduta é:",
+      "opcoes": [
+        "Laringoscopia e aspiração traqueal antes de ventilar",
+        "VPP com máscara facial em ar ambiente (FiO2 21%)",
+        "VPP com O2 a 100%",
+        "Massagem cardíaca associada à VPP"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: aspiração traqueal de rotina não é recomendada, mesmo com mecônio espesso; atrasa a VPP.",
+        "Gabarito: apneia/FC < 100 → VPP no Minuto de Ouro, iniciando com 21% no RN ≥ 34 semanas.",
+        "Errado: O2 a 100% é para a massagem cardíaca.",
+        "Errado: massagem só se FC < 60 após VPP efetiva."
+      ],
+      "fonte": "SBP — Diretrizes de Reanimação do RN ≥ 34 semanas em sala de parto (2026, ciclo 2026–2030; base ILCOR 2025) / SBP 2022",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "raiva-01",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Imunizações",
+      "sub": "Profilaxia da raiva humana",
+      "frente": "Raiva: acidente leve × grave",
+      "verso": "**Grave = local perigoso, ferida profunda/múltipla ou contato com mucosa.**\n\nGrave:\n- Cabeça, face, pescoço, mãos, polpas digitais, planta dos pés\n- Ferimentos profundos, múltiplos ou extensos\n- Lambedura de **mucosas** ou de pele com lesão profunda\n- Ferimento profundo por unha de animal\n- **Qualquer** agressão por **morcego** ou mamífero silvestre\n\nLeve:\n- Superficial e pouco extenso, em tronco ou membros (exceto mãos e pés)\n- Lambedura de pele com lesão superficial\n\nSem indicação (contato indireto):\n- Tocar/alimentar o animal, lambedura em pele íntegra → só lavar.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Leve",
+          "itens": [
+            "Superficial, pouco extenso",
+            "Tronco e membros (não mãos/pés)",
+            "Lambedura de pele com lesão superficial"
+          ]
+        },
+        "b": {
+          "t": "Grave",
+          "itens": [
+            "Cabeça, face, pescoço, mãos, pés",
+            "Profundo, múltiplo, extenso",
+            "Lambedura de mucosa",
+            "Morcego / silvestre (sempre)"
+          ]
+        }
+      },
+      "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "raiva-02",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Imunizações",
+      "sub": "Profilaxia da raiva humana",
+      "frente": "Profilaxia pós-exposição da raiva: conduta pelo animal",
+      "verso": "**Cão ou gato observável → observar 10 dias, SEM vacina (leve ou grave).**\n\n- Animal saudável em 10 dias → encerra.\n- Animal adoece, morre ou some → inicia a profilaxia.\n\nCão/gato não observável, desaparecido, morto ou com sinais de raiva:\n- **Leve** → vacina (4 doses).\n- **Grave** → vacina + soro (SAR) ou imunoglobulina (IGHAR).\n\nMorcego e silvestres (macaco, sagui, raposa, quati, capivara):\n- **Sempre grave** → soro/IGHAR + vacina, mesmo se domiciliado.\n\nHerbívoros (boi, cavalo, porco, cabra):\n- Avaliar caso a caso (tipo de contato e risco local).\n\nRoedores urbanos e coelho:\n- Baixo risco → em geral não indica.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Animal",
+          "Leve",
+          "Grave"
+        ],
+        "linhas": [
+          [
+            "Cão/gato observável",
+            "Observar 10 dias",
+            "Observar 10 dias"
+          ],
+          [
+            "Cão/gato não observável/suspeito",
+            "Vacina 4 doses",
+            "Vacina + soro"
+          ],
+          [
+            "Morcego / silvestre",
+            "Vacina + soro",
+            "Vacina + soro"
+          ]
+        ]
+      },
+      "pegadinha": "Mordida grave de cão observável: NÃO vacina de imediato — observa 10 dias.",
+      "uerj": "Caso clínico com tipo de animal + local da lesão pedindo a conduta exata.",
+      "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "raiva-03",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Imunizações",
+      "sub": "Profilaxia da raiva humana",
+      "frente": "Raiva: esquema de vacina e soro na pós-exposição",
+      "verso": "**Vacina: 4 doses nos dias 0, 3, 7 e 14.**\n\n- **IM** → frasco inteiro no deltoide (vasto lateral da coxa em < 2 anos). **Nunca no glúteo.**\n- **ID** → 0,2 mL por dia (0,1 mL em 2 sítios), preferida em grandes centros.\n- Faltou? **Não reinicia**: aplica no dia em que voltar e mantém os intervalos.\n\nSoro/imunoglobulina (acidentes graves):\n- **SAR 40 UI/kg** ou **IGHAR 20 UI/kg**.\n- Infiltrar o máximo possível **dentro e ao redor das lesões**; o resto IM em outro grupo muscular (não o da vacina).\n- Até **7 dias** após a 1ª dose da vacina; depois disso, não fazer.\n\nSempre:\n- Lavar a ferida com água e sabão; avaliar tétano.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Vacina: dias 0 · 3 · 7 · 14",
+          "SAR 40 UI/kg · IGHAR 20 UI/kg",
+          "Soro: infiltrar a ferida, até 7 dias da 1ª dose",
+          "Pré-exposição: dias 0 e 7",
+          "Reexposição pós-esquema completo: dias 0 e 3, sem soro"
+        ]
+      },
+      "pegadinha": "O esquema antigo de 5 doses (0, 3, 7, 14, 28) não vale mais: hoje são 4 doses.",
+      "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "raiva-04",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Imunizações",
+      "sub": "Profilaxia da raiva humana",
+      "frente": "Raiva: reexposição e pré-exposição",
+      "verso": "**Quem já tem esquema completo NÃO recebe soro.**\n\nReexposição:\n- Pré-exposição completa → vacina dias **0 e 3**.\n- Pós-exposição completa há **≤ 90 dias** → nada.\n- Pós-exposição (≥ 2 doses) há **> 90 dias** → vacina dias **0 e 3**.\n- Esquema incompleto → completar as doses que faltam (1 dose só = desconsiderar).\n\nPré-exposição (veterinários, biólogos, laboratório de raiva, espeleólogos):\n- **2 doses: dias 0 e 7** (IM ou ID).",
+      "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "raiva-q1",
+      "tipo": "quiz",
+      "area": "Medicina Preventiva",
+      "tema": "Imunizações",
+      "sub": "Profilaxia da raiva humana",
+      "frente": "Homem, 30 anos, mordido na mão por um cão do vizinho, sadio e que pode ser observado. Ferimento profundo. Qual a conduta antirrábica?",
+      "opcoes": [
+        "Soro antirrábico + vacina nos dias 0, 3, 7 e 14",
+        "Vacina nos dias 0, 3, 7 e 14",
+        "Lavar a ferida e observar o cão por 10 dias, sem iniciar profilaxia",
+        "Vacina nos dias 0 e 3 e observar o cão"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errado: seria a conduta se o cão não fosse observável (ou suspeito) com acidente grave.",
+        "Errado: vacina isolada é para acidente leve com animal não observável.",
+        "Gabarito: cão/gato sadio e observável → observar 10 dias, mesmo em acidente grave; se adoecer/morrer/sumir, iniciar vacina + soro.",
+        "Errado: esquema de 2 doses é de reexposição."
+      ],
+      "pegadinha": "A gravidade (mão, profundo) é o distrator: com cão observável, primeiro observa.",
+      "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aplv-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "APLV: formas clínicas (IgE, não IgE e mistas)",
+      "verso": "**O mecanismo define o tempo dos sintomas e os exames úteis.**\n\n- **IgE mediada** (minutos até 2 h) → urticária, angioedema, vômitos imediatos, broncoespasmo, **anafilaxia**.\n- **Não IgE** (horas a dias):\n- **Proctocolite alérgica** → lactente em bom estado, em aleitamento materno, com **sangue e muco nas fezes**.\n- **Enterocolite induzida por proteína (FPIES)** → vômitos repetidos 1–4 h após ingestão, palidez, letargia, pode chocar.\n- Enteropatia → diarreia, má absorção, baixo ganho de peso.\n- **Mistas** → esofagite eosinofílica, dermatite atópica.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "IgE (rápida)",
+            "itens": [
+              "Urticária / angioedema",
+              "Anafilaxia"
+            ]
+          },
+          {
+            "t": "Não IgE (tardia)",
+            "itens": [
+              "Proctocolite (sangue nas fezes)",
+              "FPIES (vômitos + letargia)",
+              "Enteropatia"
+            ]
+          },
+          {
+            "t": "Mista",
+            "itens": [
+              "Esofagite eosinofílica",
+              "Dermatite atópica"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Lactente em aleitamento EXCLUSIVO pode ter APLV: a proteína do leite que a mãe toma passa para o leite materno.",
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aplv-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Como diagnosticar APLV?",
+      "verso": "**Dieta de exclusão + teste de provocação oral (padrão-ouro).**\n\n- Exclusão por 2–4 semanas (até 6 semanas em formas não IgE) → melhora → reexposição → sintomas voltam = confirma.\n- **IgE específica / prick test** → só ajudam na forma IgE mediada; positivo indica sensibilização, **não confirma** alergia.\n- Nas formas não IgE, os testes de IgE são **negativos** — o diagnóstico é clínico (exclusão e provocação).\n\nNão fazer a provocação em casa se:\n- Houve anafilaxia ou FPIES → teste em ambiente hospitalar.",
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aplv-03",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Tratamento da APLV: o que dar ao lactente?",
+      "verso": "**Em aleitamento materno: manter a amamentação e tirar leite e derivados da dieta da MÃE.**\n\n- Mãe em dieta de exclusão → repor **cálcio** (~1.000 mg/dia) e vitamina D.\n\nSem aleitamento materno:\n- **Fórmula extensamente hidrolisada (FEH)** → 1ª escolha na maioria dos casos.\n- **Fórmula de aminoácidos** → anafilaxia, esofagite eosinofílica, FPIES grave, falha da FEH, má absorção grave.\n- **Fórmula de soja** → só > 6 meses, forma IgE, sem sintomas gastrointestinais.\n\nNão usar:\n- Fórmula parcialmente hidrolisada (\"HA\"), leite de cabra/outros mamíferos (reação cruzada), fórmula \"sem lactose\".",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Lactente com APLV",
+          [
+            "Mama no peito → manter AM + dieta materna sem leite (+ cálcio)",
+            "Não mama → FEH",
+            "Grave/anafilaxia/EoE/falha → aminoácidos",
+            "> 6 m, IgE, sem sintoma GI → soja (opção)"
+          ]
+        ]
+      },
+      "pegadinha": "APLV ≠ intolerância à lactose: fórmula sem lactose ainda tem a proteína do leite.",
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aplv-04",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "APLV: prognóstico e reintrodução",
+      "verso": "**A maioria adquire tolerância até 3–5 anos (formas não IgE mais cedo).**\n\n- Reavaliar com **teste de provocação** após 6–12 meses de exclusão.\n- Proctocolite → costuma resolver até 1 ano.\n- Formas IgE com IgE muito alta e anafilaxia → persistem mais.\n- Pode-se reintroduzir pela \"escada do leite\" (leite assado/cozido primeiro), conforme orientação do especialista.",
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aplv-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Lactente de 2 meses, em aleitamento materno exclusivo, ativo e ganhando peso, apresenta fezes com rajas de sangue e muco há 1 semana. Exame físico normal. A conduta mais adequada é:",
+      "opcoes": [
+        "Suspender o aleitamento materno e iniciar fórmula de aminoácidos",
+        "Manter o aleitamento materno e orientar dieta materna isenta de leite de vaca e derivados",
+        "Trocar o aleitamento por fórmula de soja",
+        "Dosar IgE específica para proteínas do leite antes de qualquer mudança"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errado: não se suspende o aleitamento materno.",
+        "Gabarito: proctocolite alérgica — manter AM e excluir leite da dieta da mãe (com reposição de cálcio).",
+        "Errado: soja não é indicada < 6 meses nem nas formas gastrointestinais.",
+        "Errado: na forma não IgE a IgE específica é negativa; o diagnóstico é clínico."
+      ],
+      "pegadinha": "O bebê está bem e ganhando peso — o detalhe que aponta proctocolite (forma benigna).",
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-21"
     }
   ],
   "rev": 1792540000000
