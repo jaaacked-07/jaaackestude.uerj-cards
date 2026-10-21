@@ -148,6 +148,8 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;background:var(--ca
 .vcap{font-size:12.5px;color:var(--mute);padding:8px 12px}
 .ans p+p{margin-top:6px}
 .ans .blq+.blq{margin-top:14px}
+.ctx{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.ctxh{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);font-weight:600;margin-bottom:8px}
 .ans ul{margin:6px 0 0;padding-left:20px}
 .ans li{margin:5px 0;font-size:16px;line-height:1.45}
 .ans li::marker{color:var(--rose)}
@@ -263,8 +265,6 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .tile .bd.e{color:var(--bad)}.tile .bd.ok{color:var(--ok)}
 .tile .st{position:absolute;right:5px;bottom:3px;font-size:10px}
 .tile.dim{opacity:.55}
-.tile.res{background:var(--wine-soft);box-shadow:none;border:1.5px solid color-mix(in srgb,var(--wine) 25%,transparent)}
-.tile .bd.r{color:var(--wine)}
 .tsrch{margin:6px 0 4px}
 .simgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:18px}
 .simtile{aspect-ratio:1;background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:transform .12s}
@@ -471,6 +471,7 @@ function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());con
 const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 
 /* ===== Visuais ===== */
+const ctxHTML=c=>c.contexto?`<div class="ctx"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}</div>`:'';
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -495,6 +496,7 @@ function cardCompleto(c){
   let h=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div>`;
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${inlBr((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
   else h+=`<div class="ans">${paras(c.verso)}${visual(c.visual)}</div>`;
+  h+=`<div class="ans">${ctxHTML(c)}</div>`;
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
   if(c.fonte) h+=`<div class="src">${esc(c.fonte)}</div>`;
@@ -558,7 +560,6 @@ function arvoreHTML(lista,aberto,o){
       const km='m:'+a+'|'+m, om=o.forcar||aberto.has(km), nm=subs.reduce((t,y)=>t+y.cards.length,0);
       return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards})=>{
         const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks);
-        cards=cards.slice().sort((x,y)=>(y.resumo?1:0)-(x.resumo?1:0));
         return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(cards.length?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Arraste cards ou baralhos para cá.</p></div>`):'');
       }).join(''):'');
     }).join(''):'');
@@ -632,7 +633,7 @@ function pEstudar(){
   const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
   const nb=norm(DECK.busca.trim());
   const lista=nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+c.area+' '+(c.verso||'')).includes(nb)):CARDS;
-  const tile=c=>`<div class="tile ${c.resumo?'res':''}" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente.replace(/^Resumo\s*[—-]\s*/,''))}</span>${c.resumo?'<span class="bd r">resumo</span>':c.tipo==='quiz'?'<span class="bd">quiz</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
+  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
   const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
@@ -933,7 +934,7 @@ function editarCard(id){
 function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else render(); }
 
 /* ===== Favorito e anotação pessoal no card ===== */
-function tagHTML(c){return `<div class="tag">${c.resumo?'<span style="color:var(--wine);font-weight:600">Resumo · </span>':''}${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
+function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 function minhaHTML(id){
   const t=(BYID[id]||{}).minha;
   return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">Editar card</button>`:`<button class="addn" data-ed="${id}">Editar card</button>`}</div>`;
@@ -1426,14 +1427,14 @@ function proximoCard(){
       const i=+b.dataset.i, ok=i===c.certa;
       document.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;x.querySelector('.c').classList.remove('hide');if(j===c.certa)x.classList.add('ok');else if(j===i)x.classList.add('bad')});
       vib(ok?12:[20,40,20]);
-      $('#ar').insertAdjacentHTML('beforeend',extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
+      $('#ar').insertAdjacentHTML('beforeend',`<div class="ans">${ctxHTML(c)}</div>`+extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
       if(ok) f.innerHTML=`<button class="btn" id="nx">Continuar</button>`, $('#nx').onclick=()=>responder(c,2);
       else pedirMotivo(c);
     });
   } else {
     f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
     $('#sh').onclick=()=>{
-      $('#ar').innerHTML=`<div class="ans hlz" data-hl="${c.id}">${paras(c.verso)}${visual(c.visual)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
+      $('#ar').innerHTML=`<div class="ans hlz" data-hl="${c.id}">${paras(c.verso)}${visual(c.visual)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
       f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };

@@ -71,18 +71,14 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - Use `pegadinha` para o ponto que a banca usa para derrubar.
 - Inclua pelo menos 1 `quiz` (estilo prova, 4 alternativas, comentário para cada uma) por tema quando a anotação vier de uma questão.
 
-## Card de Resumo (foco UERJ)
+## Contexto do tema (em TODO card)
 
-Quando for necessário — tema novo no app, tema amplo, ou tema que ainda não tem visão geral no baralho — crie **1 card de resumo** além dos cards normais:
-- `"resumo": true`, `"tipo": "flash"`, mesmo `area`/`tema`/`sub` do baralho.
-- `frente`: `"Resumo — <tema>"`.
-- `verso` estruturado e CURTO (cabe numa tela), nesta ordem:
-  - `**O que é:**` 1–2 tópicos
-  - `**Como a UERJ cobra:**` 2–3 tópicos (tipo de enunciado, recorte mais cobrado)
-  - `**Pontos-chave:**` 3–5 tópicos (o que precisa saber para acertar)
-  - `**Não confunda:**` 1–2 tópicos (as pegadinhas)
-- Com `visual` sempre que der (imagem real primeiro; senão tabela/fluxo).
-- Não crie resumo repetido: se o baralho já tem um card com `"resumo": true`, só atualize se ela pedir.
+Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para ela se contextualizar — não só do detalhe que a pergunta cobra.
+- Ex.: pergunta sobre notificação imediata → o contexto explica notificação compulsória como um todo (o que é, prazos imediata × semanal, exemplos de semanais e imediatas, para quem notificar).
+- Ex.: pergunta sobre DIP tardia → o contexto explica a CTG inteira (linha de base, variabilidade, acelerações, tipos de DIP, categorias, conduta).
+- **Um contexto por baralho**: todos os cards do mesmo baralho recebem o MESMO texto. Se o baralho já tem contexto, reutilize (pode ampliar com o que faltar e atualizar em todos os cards do baralho).
+- Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), curto (cabe numa tela), terminando com **`Como cai:`** (como a UERJ cobra).
+- O app mostra no fim da explicação, sem destaque. Não use mais o campo `resumo`.
 
 ## Formato de um card
 
@@ -101,6 +97,7 @@ Quando for necessário — tema novo no app, tema amplo, ou tema que ainda não 
   "visual": { ... },                // opcional
   "pegadinha": "texto",             // opcional (use sempre que der)
   "uerj": "como a UERJ cobra isso",  // opcional (use sempre que der)
+  "contexto": "resumo do tema amplo",  // obrigatório (igual para o baralho todo)
   "fonte": "Portaria X / comentário UERJ",
   "add": "AAAA-MM-DD"               // data de hoje
 }
