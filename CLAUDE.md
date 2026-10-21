@@ -87,7 +87,9 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 - Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), curto (cabe numa tela), terminando com **`Como cai:`** (como a UERJ cobra).
 - **Hierarquia obrigatória também no contexto** (igual ao verso): rótulo do bloco numa linha terminando em `:`; cada item numa linha própria `- **termo** → explicação`; detalhes de um item como subtópico recuado (`  - ` com 2 espaços).
 - **Nunca** junte vários itens numa linha com `·`, `;` ou `/` (✗ `- 0 → completar · 1/2 → rotina · 3 → controle`). Uma ideia por linha.
-- O app mostra no fim da explicação, sem destaque. Não use mais o campo `resumo`.
+- O app mostra no fim da explicação, num quadro próprio. Não use mais o campo `resumo`.
+- Imagem/esquema do tema inteiro (ex.: mapa dos estádios) vai em **`ctxvisual`** (mesmo formato de `visual`, igual em todos os cards do baralho) e aparece dentro do contexto.
+- Blocos que começam com "Minha anotação" são texto dela: nunca apague nem reescreva.
 
 ## Formato de um card
 
