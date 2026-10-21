@@ -2877,7 +2877,8 @@
       "uerj": "Prova de 2026 pode cobrar a atualização; confira se as alternativas falam em mg/kg (antigo) ou dose fixa em ciclos (novo).",
       "fonte": "SBP — Recomendações para o tratamento e prevenção da deficiência de ferro e anemia ferropriva em lactentes, atualização 2026 (mar/2026)",
       "add": "2026-10-21",
-      "contexto": "**Anemia ferropriva = a anemia mais comum da infância (pico 6–24 meses).**\n\nPor que nessa idade:\n- Estoque do nascimento acaba por volta dos 6 meses\n- Crescimento rápido + dieta pobre em ferro (leite de vaca precoce)\n\nPrevenção:\n- Clampeamento tardio do cordão, aleitamento materno\n- Suplementação profilática (termo: ciclos com dose fixa; prematuro/baixo peso: mg/kg a partir de 30 dias)\n\nDiagnóstico:\n- Hb baixa, microcitose (VCM ↓), RDW ↑, ferritina ↓\n\nTratamento:\n- 3–6 mg/kg/dia de ferro elementar por 3–6 meses\n- Resposta: reticulocitose em 5–10 dias; Hb sobe ≥ 1 g/dL em 30 dias\n\nComo cai:\n- Esquema de profilaxia por idade/peso e resposta esperada ao tratamento."
+      "contexto": "**Anemia ferropriva = a anemia mais comum da infância (pico 6–24 meses).**\n\nPor que nessa idade:\n- Estoque do nascimento acaba por volta dos 6 meses\n- Crescimento rápido + dieta pobre em ferro (leite de vaca precoce)\n\nPrevenção:\n- Clampeamento tardio do cordão, aleitamento materno\n- Suplementação profilática (termo: ciclos com dose fixa; prematuro/baixo peso: mg/kg a partir de 30 dias)\n\nDiagnóstico:\n- Hb baixa, microcitose (VCM ↓), RDW ↑, ferritina ↓\n\nTratamento:\n- 3–6 mg/kg/dia de ferro elementar por 3–6 meses\n- Resposta: reticulocitose em 5–10 dias; Hb sobe ≥ 1 g/dL em 30 dias\n\nComo cai:\n- Esquema de profilaxia por idade/peso e resposta esperada ao tratamento.",
+      "fav": true
     },
     {
       "id": "ferro-02",
@@ -3558,5 +3559,5 @@
       "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nFormas:\n- **IgE mediada** → reação em minutos (urticária, vômitos, anafilaxia)\n- **Não IgE** → horas/dias (proctocolite com sangue nas fezes, FPIES, enteropatia)\n\nDiagnóstico:\n- Exclusão + teste de provocação oral (padrão-ouro)\n- IgE/prick só ajudam na forma IgE mediada\n\nTratamento:\n- Em aleitamento → manter AM e excluir leite da dieta da mãe\n- Sem AM → fórmula extensamente hidrolisada; aminoácidos nos casos graves\n- Soja só > 6 meses, forma IgE\n\nPrognóstico:\n- Maioria tolera até 3–5 anos\n\nComo cai:\n- Lactente em AM com sangue nas fezes → proctocolite → manter AM."
     }
   ],
-  "rev": 1792548964797
+  "rev": 1792548992869
 }
