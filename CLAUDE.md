@@ -71,6 +71,19 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - Use `pegadinha` para o ponto que a banca usa para derrubar.
 - Inclua pelo menos 1 `quiz` (estilo prova, 4 alternativas, comentário para cada uma) por tema quando a anotação vier de uma questão.
 
+## Card de Resumo (foco UERJ)
+
+Quando for necessário — tema novo no app, tema amplo, ou tema que ainda não tem visão geral no baralho — crie **1 card de resumo** além dos cards normais:
+- `"resumo": true`, `"tipo": "flash"`, mesmo `area`/`tema`/`sub` do baralho.
+- `frente`: `"Resumo — <tema>"`.
+- `verso` estruturado e CURTO (cabe numa tela), nesta ordem:
+  - `**O que é:**` 1–2 tópicos
+  - `**Como a UERJ cobra:**` 2–3 tópicos (tipo de enunciado, recorte mais cobrado)
+  - `**Pontos-chave:**` 3–5 tópicos (o que precisa saber para acertar)
+  - `**Não confunda:**` 1–2 tópicos (as pegadinhas)
+- Com `visual` sempre que der (imagem real primeiro; senão tabela/fluxo).
+- Não crie resumo repetido: se o baralho já tem um card com `"resumo": true`, só atualize se ela pedir.
+
 ## Formato de um card
 
 ```json
