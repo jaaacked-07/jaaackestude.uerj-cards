@@ -390,6 +390,7 @@ async function carregar(){
     if(r.ok){const j=await r.json(); if((j.rev||0)>=((base&&base.rev)||0)){localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}}
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
+  migrarMarcasCtx();
 }
 
 /* ===== Revisão estilo Anki, comprimida até a prova ===== */
@@ -465,6 +466,18 @@ function contarHoje(id){
 const nivel=xp=>Math.floor(Math.sqrt(xp/60))+1;
 function marcarStreak(){ S.dias[hoje()]=1; recalc(); }
 function addXP(n){ S.xpDev[DEV]=(S.xpDev[DEV]||0)+n; recalc(); }
+/* marcações antigas feitas no contexto (gravadas no card) passam para o contexto */
+function migrarMarcasCtx(){
+  if(!S.marks||!CARDS.length) return; let mudou=false;
+  const pl=t=>String(t||'').replace(/\*\*/g,'');
+  CARDS.forEach(c=>{ const m=S.marks[c.id]; if(!c.contexto||!m||!m.l||!m.l.length) return;
+    const ctx=pl(c.contexto), resto=pl([c.frente,c.verso,c.uerj,c.pegadinha,...(c.opcoes||[]),...(c.comentarios||[]),S.minha&&S.minha[c.id]].join('\n'));
+    const vai=m.l.filter(x=>ctx.includes(x.t)&&!resto.includes(x.t)); if(!vai.length) return;
+    const k=ctxKey(c), d=S.marks[k]||(S.marks[k]={l:[]});
+    vai.forEach(x=>{ if(!d.l.some(y=>y.t===x.t)) d.l.push(x); });
+    m.l=m.l.filter(x=>!vai.includes(x)); m.u=d.u=Date.now(); mudou=true; });
+  if(mudou) save();
+}
 function recalc(){
   S.xp=Object.values(S.xpDev||{}).reduce((a,b)=>a+b,0);
   const ds=Object.keys(S.dias||{}).sort(); const last=ds[ds.length-1]||null; let n=0;
@@ -480,7 +493,9 @@ function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());con
 const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 
 /* ===== Visuais ===== */
-const ctxHTML=c=>c.contexto?`<div class="ctx"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}</div>`:'';
+/* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
+const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
+const ctxHTML=c=>c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}</div>`:'';
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -1083,7 +1098,7 @@ function mergeProg(R){
     else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0);} }
   if(R.ret&&(!S.ret||(R.ret.t||0)>(S.ret.t||0))) S.ret=R.ret;
   const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>ex[c.id]=c); S.extra=Object.values(ex);
-  recalc();
+  recalc(); migrarMarcasCtx();
   return JSON.stringify(progSnap())!==antes;
 }
 let PSYNC=false, PTIMER=null, PMUDOU=false;
@@ -1502,8 +1517,8 @@ function fim(){
 }
 
 /* ===== Marca-texto ===== */
-function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
-function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>m.replaceWith(...m.childNodes)); z.normalize(); }
+function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
+function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>{ if(m.closest('.hlz')===z) m.replaceWith(...m.childNodes); }); z.normalize(); }
 function aplicarMarcas(z){
   const m=S.marks[z.dataset.hl]; if(!m||!m.l) return;
   m.l.forEach((x,i)=>{ const w=zonaTextos(z); let n;

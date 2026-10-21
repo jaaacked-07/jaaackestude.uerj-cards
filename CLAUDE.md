@@ -82,7 +82,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para ela se contextualizar — não só do detalhe que a pergunta cobra.
 - Ex.: pergunta sobre notificação imediata → o contexto explica notificação compulsória como um todo (o que é, prazos imediata × semanal, exemplos de semanais e imediatas, para quem notificar).
 - Ex.: pergunta sobre DIP tardia → o contexto explica a CTG inteira (linha de base, variabilidade, acelerações, tipos de DIP, categorias, conduta).
-- **Um contexto por baralho**: todos os cards do mesmo baralho recebem o MESMO texto. Se o baralho já tem contexto, reutilize (pode ampliar com o que faltar e atualizar em todos os cards do baralho).
+- **Um contexto por baralho**: todos os cards do mesmo baralho recebem o MESMO texto. As marcações (marca-texto) dela no contexto ficam presas à **1ª linha** do contexto: ao ampliar um contexto existente, **nunca mude a 1ª linha** (só acrescente/edite as de baixo), senão ela perde as marcações. Se o baralho já tem contexto, reutilize (pode ampliar com o que faltar e atualizar em todos os cards do baralho).
 - Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), curto (cabe numa tela), terminando com **`Como cai:`** (como a UERJ cobra).
 - **Hierarquia obrigatória também no contexto** (igual ao verso): rótulo do bloco numa linha terminando em `:`; cada item numa linha própria `- **termo** → explicação`; detalhes de um item como subtópico recuado (`  - ` com 2 espaços).
 - **Nunca** junte vários itens numa linha com `·`, `;` ou `/` (✗ `- 0 → completar · 1/2 → rotina · 3 → controle`). Uma ideia por linha.
