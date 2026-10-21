@@ -151,7 +151,8 @@
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 240\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"6\" y=\"6\" width=\"328\" height=\"228\" rx=\"16\" fill=\"none\" stroke=\"var(--line)\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"170\" y=\"24\" font-size=\"10\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">REDE DE ATENÇÃO — todos os pontos</text><rect x=\"20\" y=\"40\" width=\"120\" height=\"50\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"80\" y=\"61\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Epidemiológica</text><text x=\"80\" y=\"77\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">doenças e agravos</text><rect x=\"200\" y=\"40\" width=\"120\" height=\"50\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"260\" y=\"61\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Sanitária</text><text x=\"260\" y=\"77\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">produtos e serviços</text><rect x=\"20\" y=\"150\" width=\"120\" height=\"50\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"80\" y=\"171\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Ambiental</text><text x=\"80\" y=\"187\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">água, ar, solo, vetores</text><rect x=\"200\" y=\"150\" width=\"120\" height=\"50\" rx=\"10\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"260\" y=\"171\" font-size=\"11.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Saúde do</text><text x=\"260\" y=\"187\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">trabalhador</text><line x1=\"140\" y1=\"72\" x2=\"150\" y2=\"100\" stroke=\"var(--rose)\"/><line x1=\"200\" y1=\"72\" x2=\"190\" y2=\"100\" stroke=\"var(--rose)\"/><line x1=\"140\" y1=\"166\" x2=\"150\" y2=\"140\" stroke=\"var(--rose)\"/><line x1=\"200\" y1=\"166\" x2=\"190\" y2=\"140\" stroke=\"var(--rose)\"/><circle cx=\"170\" cy=\"120\" r=\"30\" fill=\"var(--wine)\"/><text x=\"170\" y=\"118\" font-size=\"12\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">APS</text><text x=\"170\" y=\"132\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">coordena</text><text x=\"170\" y=\"222\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">+ laboratórios de saúde pública integrados</text></svg>",
         "legenda": "As 4 vigilâncias integradas, em toda a rede, com a APS coordenando o cuidado."
-      }
+      },
+      "minha": "4 vigilâncias (ESSA):\n- EEEpidemiologica\n- SSSanitaria\n- SSSaúde do trabalhador\n- AAAmbiental"
     },
     {
       "id": "pnvs-06",
@@ -4189,5 +4190,5 @@
       }
     }
   ],
-  "rev": 1792610230108
+  "rev": 1792610306646
 }
