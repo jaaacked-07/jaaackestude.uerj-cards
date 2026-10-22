@@ -4193,6 +4193,2203 @@
         "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"15\" y1=\"120\" x2=\"325\" y2=\"120\" stroke=\"var(--mute)\"/><line x1=\"15\" y1=\"114\" x2=\"15\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"15\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">minutos</text><line x1=\"110\" y1=\"114\" x2=\"110\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"110\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">2 h</text><line x1=\"210\" y1=\"114\" x2=\"210\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"210\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">horas</text><line x1=\"325\" y1=\"114\" x2=\"325\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"325\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">dias</text><rect x=\"15\" y=\"20\" width=\"95\" height=\"34\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"62\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">IgE mediada</text><text x=\"62\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">urticária, anafilaxia</text><rect x=\"130\" y=\"20\" width=\"195\" height=\"34\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"227\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Não IgE</text><text x=\"227\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--ink)\" text-anchor=\"middle\">proctocolite, FPIES, enteropatia</text><rect x=\"15\" y=\"64\" width=\"310\" height=\"34\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"170\" y=\"79\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Mista</text><text x=\"170\" y=\"92\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">esofagite eosinofílica, dermatite atópica</text></svg>",
         "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
       }
+    },
+    {
+      "id": "tt-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Quais lesões torácicas matam na avaliação primária (ABCDE) e precisam ser tratadas na hora?",
+      "verso": "**Obstrução de via aérea, pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço, tórax instável com contusão pulmonar e tamponamento cardíaco.**\n\nSão diagnósticos CLÍNICOS: não se espera radiografia para tratar. Cada uma compromete diretamente a ventilação (B) ou o débito cardíaco (C), e a correção é um procedimento à beira do leito.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Lesão",
+          "Pista clínica",
+          "Conduta imediata"
+        ],
+        "linhas": [
+          [
+            "Pneumotórax hipertensivo",
+            "Choque + MV abolido + timpanismo + desvio de traqueia + turgência jugular",
+            "Descompressão (agulha/dedo) → drenagem"
+          ],
+          [
+            "Pneumotórax aberto",
+            "Ferida torácica aspirativa (≥ 2/3 do diâmetro da traqueia)",
+            "Curativo de 3 pontas → dreno longe da ferida"
+          ],
+          [
+            "Hemotórax maciço",
+            "Choque + MV abolido + MACICEZ",
+            "Drenagem + reposição; toracotomia se critério"
+          ],
+          [
+            "Tamponamento",
+            "Tríade de Beck + FAST pericárdico +",
+            "Toracotomia/janela; pericardiocentese só como ponte"
+          ],
+          [
+            "Tórax instável + contusão",
+            "Respiração paradoxal + hipoxemia",
+            "O2, analgesia, IOT se insuficiência"
+          ]
+        ]
+      },
+      "pegadinha": "Pneumotórax hipertensivo × hemotórax maciço: os dois dão choque e MV abolido — o que separa é a PERCUSSÃO (timpanismo × macicez).",
+      "uerj": "Cobra o diagnóstico pelo exame físico do caso e a primeira conduta, não o exame de imagem.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Pneumotórax hipertensivo: diagnóstico e onde descomprimir (adulto × criança)",
+      "verso": "**Diagnóstico clínico → descompressão imediata: no adulto, 4º/5º espaço intercostal entre as linhas axilares anterior e média; na criança, 2º espaço intercostal na linha hemiclavicular. Depois, drenagem em selo d'água.**\n\nO ar entra e não sai (mecanismo valvular), colaba o pulmão, desvia o mediastino e dobra as veias cavas → cai o retorno venoso e o paciente entra em choque obstrutivo. O ATLS 10ª ed. mudou o local no adulto porque a parede no 2º EIC é espessa demais para a agulha.",
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pneumothorax_CXR.jpg/600px-Pneumothorax_CXR.jpg",
+          "legenda": "Pneumotórax à esquerda com desvio da traqueia e do coração para o lado oposto — padrão hipertensivo (na prática, não se espera o RX para tratar)",
+          "fonte": "Wikimedia Commons · Clinical Cases · CC BY-SA 2.5"
+        },
+        {
+          "tipo": "vs",
+          "a": {
+            "t": "Adulto (ATLS 10)",
+            "itens": [
+              "4º–5º EIC",
+              "Entre axilar anterior e média",
+              "Agulha longa ou toracostomia digital"
+            ]
+          },
+          "b": {
+            "t": "Criança",
+            "itens": [
+              "2º EIC",
+              "Linha hemiclavicular"
+            ]
+          }
+        }
+      ],
+      "pegadinha": "Muitas questões antigas ainda trazem \"2º EIC linha hemiclavicular\" para adulto. Hoje (ATLS 10) é 4º/5º EIC; se só houver a opção antiga, ela pode ser o gabarito.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Hemotórax maciço: definição e critérios de toracotomia",
+      "verso": "**Hemotórax maciço = ≥ 1.500 mL drenados de imediato (ou > 1/3 da volemia). Toracotomia se saída imediata ≥ 1.500 mL ou drenagem contínua > 200 mL/h por 2–4 h, ou necessidade persistente de transfusão.**\n\nA drenagem (dreno no 5º EIC, entre linhas axilares anterior e média) é diagnóstica e terapêutica: o débito do dreno mede o sangramento que continua. Reposição volêmica junto com a drenagem (idealmente hemocomponentes, autotransfusão se disponível).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Choque + MV abolido + macicez",
+          "Acesso calibroso + hemocomponentes + drenagem torácica (5º EIC)",
+          [
+            "Saída ≥ 1.500 mL de imediato",
+            "> 200 mL/h por 2–4 h",
+            "Instabilidade/transfusão contínua"
+          ],
+          "Toracotomia"
+        ]
+      },
+      "pegadinha": "Hemotórax pequeno (< 300 mL) pode ser só observado; hemotórax residual retido → videotoracoscopia precoce (3–7 dias) para evitar empiema/encarceramento.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Tórax instável: definição e o que realmente causa a insuficiência respiratória",
+      "verso": "**Fratura de ≥ 2 costelas adjacentes em ≥ 2 pontos cada → segmento que se move de forma paradoxal. A hipoxemia vem principalmente da CONTUSÃO PULMONAR subjacente, não do movimento paradoxal.**\n\nA contusão causa hemorragia intra-alveolar, edema e inflamação → alvéolos perfundidos e não ventilados (aumento do shunt) → hipoxemia. A dor ainda reduz a expansão e a tosse (atelectasia). Tratamento: O2, analgesia potente (incluindo bloqueios/peridural), fisioterapia, hidratação cuidadosa (sem hipervolemia) e VNI/IOT se insuficiência respiratória; fixação cirúrgica das costelas em casos selecionados.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pulmonary_contusion_CT_arrow.jpg/600px-Pulmonary_contusion_CT_arrow.jpg",
+        "legenda": "TC de tórax: contusão pulmonar (seta vermelha) junto a fratura de costela (seta azul)",
+        "fonte": "Wikimedia Commons · LearningRadiology.com · CC BY-SA 3.0"
+      },
+      "pegadinha": "A contusão pulmonar costuma PIORAR nas primeiras 24–72 h e a radiografia inicial pode subestimá-la. Não se estabiliza o tórax com enfaixamento compressivo.",
+      "uerj": "Pergunta clássica (e da sua anotação): o principal responsável pela disfunção respiratória do tórax instável é a contusão pulmonar.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-05",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Tamponamento cardíaco traumático: sinais e conduta",
+      "verso": "**Tríade de Beck (hipotensão, abafamento de bulhas, turgência jugular) + FAST com líquido pericárdico → toracotomia/janela pericárdica. Pericardiocentese só como medida temporária quando não há cirurgião.**\n\nO sangue no saco pericárdico inelástico impede o enchimento diastólico (choque obstrutivo). Outros sinais: pulso paradoxal (queda > 10 mmHg da PAS na inspiração), sinal de Kussmaul, AESP. Em trauma penetrante, o sangue coagula — a agulha frequentemente não resolve.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Tamponamento",
+          "itens": [
+            "Turgência jugular",
+            "Bulhas abafadas",
+            "MV presente bilateral",
+            "Traqueia central",
+            "FAST pericárdico +"
+          ]
+        },
+        "b": {
+          "t": "Pneumotórax hipertensivo",
+          "itens": [
+            "Turgência jugular",
+            "Bulhas normais",
+            "MV abolido de um lado",
+            "Traqueia desviada",
+            "Timpanismo"
+          ]
+        }
+      },
+      "pegadinha": "Em paciente hipovolêmico a turgência jugular pode estar AUSENTE — a tríade completa é rara.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-06",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Lesões da avaliação secundária no trauma torácico: como reconhecer no RX/TC",
+      "verso": "**Lesão de aorta, lesão traqueobrônquica, rotura de diafragma, contusão miocárdica, pneumotórax simples e hemotórax simples.**\n\nSão potencialmente letais, mas dão tempo de investigar. A pista vem do mecanismo (desaceleração brusca → aorta; trauma fechado à esquerda → diafragma) e de achados específicos na imagem.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Lesão",
+          "Pista",
+          "Confirmação/conduta"
+        ],
+        "linhas": [
+          [
+            "Aorta (istmo, após a subclávia E)",
+            "Mediastino alargado (> 8 cm), apagamento do botão aórtico, desvio da traqueia/SNG à direita, capuz apical, fratura de 1ª/2ª costela",
+            "Angio-TC; controle de FC/PA; reparo endovascular"
+          ],
+          [
+            "Traqueobrônquica",
+            "Pneumotórax que NÃO expande e borbulha muito após drenagem; enfisema subcutâneo extenso",
+            "Broncoscopia; às vezes 2º dreno e IOT seletiva"
+          ],
+          [
+            "Diafragma (mais à E)",
+            "SNG/alças no tórax, cúpula elevada/irregular",
+            "Laparoscopia/laparotomia"
+          ],
+          [
+            "Contusão miocárdica",
+            "Arritmias, BRD, alteração de ECG",
+            "ECG + monitorização; troponina"
+          ]
+        ]
+      },
+      "pegadinha": "Pneumotórax persistente com grande escape aéreo após drenagem = pense em lesão traqueobrônquica.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Homem, 30 anos, colisão moto × carro. FR 34 irpm, SatO2 86%, PA 80 × 50 mmHg, FC 130 bpm. Murmúrio vesicular abolido e MACICEZ à percussão no hemitórax direito; jugulares colabadas; traqueia central. A conduta imediata é:",
+      "opcoes": [
+        "Punção com agulha no 2º espaço intercostal direito",
+        "Drenagem torácica à direita com reposição volêmica, avaliando o débito do dreno",
+        "Pericardiocentese de alívio",
+        "Radiografia de tórax antes de qualquer procedimento"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Punção é para pneumotórax hipertensivo (timpanismo, jugulares túrgidas).",
+        "Gabarito: hemotórax maciço (choque + MV abolido + macicez + jugulares colabadas). Drena e repõe; ≥ 1.500 mL de imediato ou > 200 mL/h → toracotomia.",
+        "Tamponamento cursa com jugulares túrgidas e MV preservado.",
+        "Lesões da avaliação primária são tratadas pelo diagnóstico clínico, sem esperar imagem."
+      ],
+      "pegadinha": "Percussão + jugulares definem o diagnóstico.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tt-q2",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma torácico",
+      "frente": "Mulher, 45 anos, queda de altura com fraturas de 4ª a 7ª costelas esquerdas em dois pontos cada, com movimento paradoxal. Evolui com SatO2 88% em ar ambiente. O principal mecanismo da hipoxemia é:",
+      "opcoes": [
+        "Movimento paradoxal do segmento, que impede a ventilação do pulmão",
+        "Contusão pulmonar subjacente, com aumento do shunt intrapulmonar",
+        "Dor torácica que impede a expansão pulmonar",
+        "Pneumotórax oculto obrigatório nesse tipo de trauma"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Era a explicação antiga (\"pendelluft\"); hoje se sabe que o movimento paradoxal pesa pouco.",
+        "Gabarito: hemorragia e edema alveolar → áreas perfundidas e não ventiladas → shunt → hipoxemia.",
+        "A dor contribui (hipoventilação, atelectasia), mas não é o principal.",
+        "Pneumotórax pode coexistir, mas não é obrigatório nem o mecanismo principal."
+      ],
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Trauma abdominal CONTUSO: algoritmo pela estabilidade hemodinâmica",
+      "verso": "**Instável + FAST positivo → laparotomia. Instável + FAST negativo → procurar outra fonte de choque (tórax, pelve, ossos longos, externo) ou LPD. Estável → TC com contraste.**\n\nO FAST procura líquido livre (sangue) em 4 janelas: hepatorrenal (Morison), esplenorrenal, pelve e pericárdio. Ele não diz qual órgão sangra nem vê bem retroperitônio e víscera oca — por isso o estável vai para TC.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Trauma abdominal contuso",
+          [
+            "Instável",
+            "Estável"
+          ],
+          [
+            "FAST + → laparotomia · FAST − → outra fonte / LPD",
+            "TC de abdome com contraste → conduta por achado"
+          ]
+        ]
+      },
+      "pegadinha": "TC é para paciente ESTÁVEL. Mandar o instável para a TC é o distrator clássico.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Trauma abdominal PENETRANTE: arma de fogo × arma branca",
+      "verso": "**Arma de fogo no abdome → laparotomia na grande maioria (alta chance de lesão visceral). Arma branca: laparotomia se instabilidade, peritonite ou evisceração; se estável e sem esses sinais → exploração da ferida/observação com exames seriados (ou TC/laparoscopia).**\n\nA faca lesa só o que toca; o projétil transfere muita energia e faz trajetos imprevisíveis. Por isso a arma branca permite conduta seletiva.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Indicações de laparotomia",
+            "itens": [
+              "!Instabilidade hemodinâmica com suspeita abdominal",
+              "!Peritonite",
+              "!Evisceração",
+              "Pneumoperitônio",
+              "FAF que penetra a cavidade",
+              "Sangue na SNG/reto/urina no penetrante",
+              "Lesão diafragmática"
+            ]
+          },
+          {
+            "t": "Conduta seletiva possível",
+            "itens": [
+              "Arma branca, estável, sem peritonite",
+              "Ferida de flanco/dorso: TC com triplo contraste",
+              "Exame físico seriado 24 h"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Evisceração de omento após facada já indica laparotomia, mesmo com paciente estável.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Tratamento não operatório (TNO) de baço e fígado: qual o critério principal?",
+      "verso": "**Estabilidade hemodinâmica — não o grau da lesão.** Lesão esplênica ou hepática de qualquer grau em paciente estável, sem peritonite e sem outra indicação de laparotomia pode ser tratada sem cirurgia.\n\nExige ambiente com monitorização (UTI), exames seriados (Hb, exame físico) e cirurgia disponível 24 h. Extravasamento de contraste (\"blush\") na TC → angioembolização. Instabilidade durante o TNO → laparotomia.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Pré-requisito: estabilidade hemodinâmica",
+          "Sem peritonite / sem outra lesão cirúrgica",
+          "TC com contraste para graduar",
+          "Blush → angioembolização",
+          "Falha (instabilidade, queda de Hb) → cirurgia",
+          "Pós-esplenectomia: vacinas (pneumo, meningo, Hib)"
+        ]
+      },
+      "pegadinha": "Lesão grau IV/V com paciente estável ainda pode ir para TNO; grau baixo com paciente instável vai para cirurgia.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Sinal do cinto de segurança: quais lesões procurar?",
+      "verso": "**Lesão de víscera oca (principalmente intestino delgado e mesentério), pâncreas/duodeno e fratura de Chance (flexão-distração de L1–L2).**\n\nO cinto abdominal comprime as vísceras contra a coluna na desaceleração. A TC inicial pode ser normal ou mostrar só líquido livre sem lesão de órgão sólido — esse achado em homem com sinal do cinto deve levantar suspeita de lesão de víscera oca.",
+      "pegadinha": "Líquido livre SEM lesão de órgão sólido na TC = suspeita de lesão de víscera oca/mesentério.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-05",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Cirurgia de controle de danos: quando e qual o objetivo?",
+      "verso": "**No paciente que entra na \"tríade letal\" (hipotermia, acidose, coagulopatia): laparotomia abreviada para controlar sangramento e contaminação, peritoneostomia, UTI para corrigir a fisiologia e reabordagem programada em 24–48 h.**\n\nInsistir na reconstrução definitiva em paciente frio, acidótico e coagulopata aumenta a mortalidade. Na UTI: reaquecer, transfundir em proporção 1:1:1, corrigir acidose. Risco: síndrome compartimental abdominal (pressão intra-abdominal > 20 mmHg + nova disfunção orgânica, medida pela bexiga) → descompressão.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Tríade letal: hipotermia + acidose + coagulopatia",
+          "1) Laparotomia abreviada: hemostasia + controle da contaminação + peritoneostomia",
+          "2) UTI: reaquecer, transfusão 1:1:1, corrigir acidose",
+          "3) Reabordagem em 24–48 h: reparo definitivo"
+        ]
+      },
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tab-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Trauma abdominal",
+      "frente": "Homem, 25 anos, vítima de colisão automobilística. PA 78 × 40 mmHg, FC 140 bpm após 1 L de cristaloide e início de hemocomponentes. Tórax sem alterações na radiografia, pelve estável. FAST com líquido no espaço hepatorrenal. A conduta é:",
+      "opcoes": [
+        "TC de abdome com contraste para graduar a lesão",
+        "Laparotomia exploradora",
+        "Lavado peritoneal diagnóstico para confirmar",
+        "Arteriografia com embolização hepática"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "TC só para paciente estável.",
+        "Gabarito: trauma contuso, instável e FAST positivo → laparotomia.",
+        "O FAST já mostrou sangue; LPD não acrescenta e atrasa.",
+        "Angioembolização é para paciente estável com blush."
+      ],
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Hematoma EXTRADURAL (epidural): vaso, imagem e quadro clássico",
+      "verso": "**Sangramento arterial (artéria meníngea média) por fratura temporal, entre o osso e a dura. Na TC: lesão hiperdensa BICONVEXA (lente), que não cruza as suturas. Quadro clássico: intervalo lúcido.**\n\nA dura é aderida às suturas, por isso o sangue não as ultrapassa e fica \"abaulado\". O intervalo lúcido (perde a consciência, recupera, depois piora) aparece em cerca de 1/3 dos casos. Com cirurgia precoce, o prognóstico é bom, porque geralmente há pouca lesão do parênquima.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Epidural_hematoma_arrow.png",
+        "legenda": "TC de crânio: hematoma extradural biconvexo (seta)",
+        "fonte": "Wikimedia Commons · Jfdwolff / Delldot · CC BY-SA 3.0"
+      },
+      "pegadinha": "Na TC o lado direito da imagem é o lado ESQUERDO do paciente.",
+      "fonte": "ATLS 10ª ed. (ACS) / Brain Trauma Foundation",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Hematoma SUBDURAL agudo × crônico",
+      "verso": "**Rotura de veias-ponte (venoso), entre a dura e a aracnoide. Na TC: lesão em CRESCENTE (côncavo-convexa), que cruza as suturas.**\n\nÉ o hematoma pós-traumático mais comum. O agudo tem prognóstico pior que o extradural porque costuma vir com lesão do parênquima. O crônico aparece em idosos, alcoolistas e anticoagulados (atrofia cerebral estira as veias), com trauma leve ou esquecido, semanas antes; fica hipodenso na TC e se manifesta como confusão, cefaleia, déficit focal ou \"demência\" de evolução rápida.",
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Trauma_subdural_arrows.jpg/600px-Trauma_subdural_arrows.jpg",
+          "legenda": "TC: hematoma subdural agudo em crescente (seta simples) com desvio da linha média (seta dupla)",
+          "fonte": "Wikimedia Commons · Glitzy queen00 · Domínio público"
+        },
+        {
+          "tipo": "vs",
+          "a": {
+            "t": "Extradural",
+            "itens": [
+              "Arterial (meníngea média)",
+              "Biconvexo",
+              "NÃO cruza suturas",
+              "Intervalo lúcido",
+              "Melhor prognóstico"
+            ]
+          },
+          "b": {
+            "t": "Subdural",
+            "itens": [
+              "Venoso (veias-ponte)",
+              "Crescente",
+              "Cruza suturas",
+              "Idoso, etilista, anticoagulado",
+              "Pior prognóstico (agudo)"
+            ]
+          }
+        }
+      ],
+      "pegadinha": "O subdural cruza as SUTURAS, mas não ultrapassa a foice nem o tentório (reflexões da dura).",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Lesão axonal difusa (LAD): mecanismo, quadro e exame",
+      "verso": "**Cisalhamento dos axônios por aceleração-desaceleração com rotação (colisão em alta velocidade). Coma profundo desde o impacto, DESPROPORCIONAL a uma TC normal ou quase normal. A RM (T2*/SWI, FLAIR, difusão) é mais sensível.**\n\nAs micro-hemorragias ficam na transição córtico-subcortical, no corpo caloso e no tronco. Não há hematoma para drenar: o tratamento é neurointensivo (controle da PIC, evitar hipóxia e hipotensão). Prognóstico ruim, com sequelas frequentes.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Diffuse_axonal_injury-_cMRT_nach_3_Tagen.jpg/600px-Diffuse_axonal_injury-_cMRT_nach_3_Tagen.jpg",
+        "legenda": "RM na lesão axonal difusa (acidente de moto): micro-hemorragia perto do corpo caloso, mais visível em T2*",
+        "fonte": "Wikimedia Commons · Hellerhoff · CC BY-SA 3.0"
+      },
+      "pegadinha": "\"Coma + TC sem lesão expansiva\" após acidente de alta energia = LAD. Não é indicação de craniotomia.",
+      "uerj": "Costuma descrever o mecanismo (automobilístico), o rebaixamento e a imagem com pequenos focos hemorrágicos para você diferenciar dos hematomas.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Hemorragia subaracnoide TRAUMÁTICA",
+      "verso": "**Sangue nos sulcos e cisternas após trauma — o trauma é a causa MAIS COMUM de HSA. Vem da rotura de pequenos vasos corticais (piais).**\n\nClínica: cefaleia, rigidez de nuca, rebaixamento. Em geral não é cirúrgica; o risco é a hidrocefalia e o vasoespasmo. Se o sangue estiver concentrado nas cisternas da base sem trauma compatível, pense em aneurisma roto (que pode ter causado a queda).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Lesão",
+          "Local",
+          "Imagem",
+          "Origem"
+        ],
+        "linhas": [
+          [
+            "Extradural",
+            "Osso–dura",
+            "Biconvexo, não cruza suturas",
+            "Artéria meníngea média"
+          ],
+          [
+            "Subdural",
+            "Dura–aracnoide",
+            "Crescente, cruza suturas",
+            "Veias-ponte"
+          ],
+          [
+            "HSA traumática",
+            "Espaço subaracnoide",
+            "Sangue em sulcos/cisternas",
+            "Vasos corticais"
+          ],
+          [
+            "LAD",
+            "Intra-axial",
+            "TC normal/micro-hemorragias; RM melhor",
+            "Cisalhamento axonal"
+          ]
+        ]
+      },
+      "pegadinha": "Sua anotação dizia \"ruptura de veias no espaço subaracnoide\": o mais preciso é rotura de pequenos vasos corticais/piais.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-05",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Quando operar um hematoma extradural ou subdural agudo?",
+      "verso": "**Extradural: volume > 30 mL, qualquer que seja o Glasgow. Subdural agudo: espessura > 10 mm ou desvio da linha média > 5 mm, qualquer que seja o Glasgow. Em ambos: Glasgow ≤ 8 com anisocoria ou piora neurológica.**\n\nA cirurgia é craniotomia ampla com drenagem do hematoma e hemostasia, o mais precocemente possível — o prognóstico depende do tempo até a descompressão. Extradural pequeno (< 30 mL, < 15 mm de espessura, desvio < 5 mm, Glasgow > 8 sem déficit focal) pode ser observado com TC seriada.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Hematoma",
+          "Operar se"
+        ],
+        "linhas": [
+          [
+            "Extradural",
+            "> 30 mL (qualquer Glasgow) · Glasgow ≤ 8 + anisocoria"
+          ],
+          [
+            "Subdural agudo",
+            "> 10 mm de espessura ou desvio > 5 mm (qualquer Glasgow) · Glasgow ≤ 8 com queda ≥ 2 pontos, anisocoria ou PIC > 20"
+          ],
+          [
+            "Observação possível",
+            "Extradural < 30 mL, < 15 mm, desvio < 5 mm, Glasgow > 8, sem déficit focal"
+          ]
+        ]
+      },
+      "pegadinha": "O tratamento é craniotomia; trepanação (\"burr hole\") é para o subdural CRÔNICO ou situação sem neurocirurgião.",
+      "fonte": "Brain Trauma Foundation — Surgical Management of TBI",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-06",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Glasgow e medidas para hipertensão intracraniana no TCE grave",
+      "verso": "**TCE leve 13–15, moderado 9–12, grave 3–8 (Glasgow ≤ 8 → IOT). Prevenção da lesão secundária: evitar hipóxia e hipotensão, cabeceira a 30°, normocapnia (PaCO2 35–40), osmoterapia (manitol ou salina hipertônica) se sinais de herniação.**\n\nA lesão secundária (hipóxia, hipotensão, HIC) piora muito o prognóstico — às vezes mais que a lesão primária. Hiperventilação só por pouco tempo, como ponte na herniação, porque a vasoconstrição causa isquemia.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Componente",
+          "Pontuação"
+        ],
+        "linhas": [
+          [
+            "Abertura ocular",
+            "1–4"
+          ],
+          [
+            "Resposta verbal",
+            "1–5"
+          ],
+          [
+            "Resposta motora",
+            "1–6"
+          ],
+          [
+            "Reatividade pupilar (Glasgow-P)",
+            "Subtrai 0–2"
+          ]
+        ]
+      },
+      "pegadinha": "Hiperventilação profilática é erro. Corticoide não é usado no TCE.",
+      "fonte": "ATLS 10ª ed. (ACS) / Brain Trauma Foundation",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Homem, 22 anos, atingido por bastão na região temporal esquerda. Perdeu a consciência por 2 minutos, recuperou e conversava normalmente. Duas horas depois, cefaleia intensa, vômitos e Glasgow 9 com midríase à esquerda. A TC mostra lesão hiperdensa biconvexa temporal esquerda com desvio da linha média de 7 mm. A conduta é:",
+      "opcoes": [
+        "Manitol e observação com TC em 6 horas",
+        "Craniotomia de urgência para drenagem do hematoma",
+        "Trepanação para drenagem do hematoma subdural",
+        "Corticoide em dose alta e monitorização da PIC"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Manitol serve como ponte, não como tratamento definitivo de hematoma expansivo.",
+        "Gabarito: hematoma extradural (intervalo lúcido + lente biconvexa) com anisocoria e desvio → craniotomia o mais rápido possível.",
+        "Não é subdural (seria crescente) e trepanação não é o tratamento padrão do extradural agudo.",
+        "Corticoide não tem papel no TCE."
+      ],
+      "pegadinha": "Intervalo lúcido + imagem biconvexa = extradural.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tce-q2",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "TCE",
+      "frente": "Motociclista, 19 anos, colisão em alta velocidade. Glasgow 6 desde o local do acidente, pupilas isocóricas. TC de crânio sem hematomas ou desvio de linha média. RM mostra pequenos focos hemorrágicos no corpo caloso e na transição córtico-subcortical. O diagnóstico mais provável é:",
+      "opcoes": [
+        "Hematoma subdural agudo",
+        "Lesão axonal difusa",
+        "Hemorragia subaracnoide aneurismática",
+        "Concussão cerebral"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "O subdural seria visível na TC como crescente.",
+        "Gabarito: coma desproporcional à TC + micro-hemorragias no corpo caloso em trauma de aceleração-desaceleração.",
+        "Não há história de cefaleia súbita nem sangue em cisternas.",
+        "Concussão é disfunção transitória, sem coma prolongado nem lesão na RM."
+      ],
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "queim-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Queimaduras",
+      "frente": "Profundidade das queimaduras: como diferenciar cada grau",
+      "verso": "**1º grau: só epiderme (eritema, sem bolha). 2º superficial: bolhas, leito rosado, úmido e MUITO doloroso. 2º profundo: leito pálido/mosqueado, menos dor. 3º grau: branco nacarado ou escuro, seco, endurecido e INDOLOR.**\n\nA dor depende das terminações nervosas da derme: preservadas no 2º superficial, destruídas no 3º grau. O 2º superficial cicatriza em 2–3 semanas sem sequela; 2º profundo e 3º grau precisam de desbridamento e enxerto.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau",
+          "Aspecto",
+          "Dor",
+          "Evolução"
+        ],
+        "linhas": [
+          [
+            "1º",
+            "Eritema, sem bolha",
+            "Sim",
+            "Cura em dias — NÃO entra no cálculo da SCQ"
+          ],
+          [
+            "2º superficial",
+            "Bolhas, rosado, úmido",
+            "Intensa",
+            "2–3 semanas, sem cicatriz"
+          ],
+          [
+            "2º profundo",
+            "Pálido, menos úmido",
+            "Menor",
+            "Cicatriz; pode precisar de enxerto"
+          ],
+          [
+            "3º",
+            "Branco/marrom, seco, \"couro\", vasos trombosados",
+            "Indolor",
+            "Enxerto"
+          ]
+        ]
+      },
+      "pegadinha": "Queimadura de 1º grau (ex.: solar) não entra no cálculo da superfície queimada nem da hidratação.",
+      "fonte": "Ministério da Saúde — Cartilha para tratamento de emergência das queimaduras / ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "queim-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Queimaduras",
+      "frente": "Superfície corporal queimada (SCQ) e hidratação: regra dos nove e fórmula",
+      "verso": "**Regra dos nove (adulto): cabeça 9%, cada membro superior 9%, tronco anterior 18%, tronco posterior 18%, cada membro inferior 18%, períneo 1%. Hidratação com Ringer lactato: Parkland = 4 mL × peso × %SCQ (ATLS 10ª ed.: 2 mL no adulto, 3 mL na criança, 4 mL na queimadura elétrica). Metade nas primeiras 8 h contadas da QUEIMADURA; metade nas 16 h seguintes.**\n\nIndicação de hidratação venosa: SCQ > 20% no adulto ou > 10% na criança (2º e 3º graus). O alvo é a diurese: 0,5 mL/kg/h no adulto, 1 mL/kg/h na criança ≤ 30 kg e 1–1,5 mL/kg/h na elétrica (mioglobinúria). Na criança, usa-se Lund-Browder (cabeça proporcionalmente maior). Palma da mão do paciente ≈ 1%.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Wallace_rule_of_nines-en.svg/600px-Wallace_rule_of_nines-en.svg.png",
+        "legenda": "Regra dos nove de Wallace (adulto)",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 3.0"
+      },
+      "pegadinha": "As 8 h começam na hora da queimadura, não da chegada ao hospital. A fórmula é só o ponto de partida: ajuste pela diurese.",
+      "uerj": "Gosta de caso com cálculo da SCQ e do volume das primeiras 8 h.",
+      "fonte": "ATLS 10ª ed. (ACS) / MS — Cartilha de queimaduras",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "queim-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Queimaduras",
+      "frente": "Curativo e cuidados locais da queimadura",
+      "verso": "**Limpar com água corrente e degermante (clorexidina), remover tecido desvitalizado e flictenas de forma estéril e fazer curativo oclusivo com sulfadiazina de prata 1% (ou vaselina estéril). Profilaxia antitetânica conforme a vacinação.**\n\nA limpeza retira contaminantes; o tecido morto é meio de cultura. A sulfadiazina é antimicrobiana tópica. Antibiótico sistêmico profilático NÃO está indicado — só se houver infecção. Queimadura circunferencial de 3º grau em tórax ou membro pode exigir escarotomia (restrição ventilatória/síndrome compartimental).",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Interromper a queimadura; água corrente em temperatura ambiente (nunca gelo)",
+          "Limpeza com degermante",
+          "Desbridar tecido desvitalizado e flictenas (estéril)",
+          "Sulfadiazina de prata 1% + curativo oclusivo",
+          "Analgesia + profilaxia do tétano",
+          "!Sem antibiótico sistêmico profilático",
+          "Circunferencial de 3º grau → escarotomia"
+        ]
+      },
+      "pegadinha": "Violência (agressão por queimadura) → notificação compulsória no SINAN; violência sexual e tentativa de suicídio são de notificação IMEDIATA (24 h) ao município.",
+      "fonte": "MS — Cartilha para tratamento de emergência das queimaduras",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "queim-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Queimaduras",
+      "frente": "Lesão inalatória e critérios de encaminhamento a centro de queimados",
+      "verso": "**Sinais de lesão inalatória (queimadura facial, vibrissas chamuscadas, escarro carbonáceo, rouquidão/estridor, incêndio em ambiente fechado) → IOT precoce, antes que o edema feche a via aérea. Intoxicação por CO → O2 a 100%; por cianeto → hidroxocobalamina.**\n\nA oximetria de pulso fica falsamente normal na intoxicação por CO (a carboxi-hemoglobina é lida como oxi-hemoglobina) — dosar carboxi-hemoglobina.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Encaminhar a centro de queimados",
+            "itens": [
+              "2º grau > 20% (adulto) / > 10% (criança)",
+              "3º grau > 10% (adulto) / > 5% (criança)",
+              "Face, mãos, pés, genitália, períneo, grandes articulações",
+              "Elétrica, química, inalatória",
+              "Trauma associado ou comorbidade grave"
+            ]
+          },
+          {
+            "t": "Sinais de via aérea em risco",
+            "itens": [
+              "!Estridor, rouquidão",
+              "Escarro carbonáceo",
+              "Queimadura de face/vibrissas",
+              "Ambiente fechado"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "SatO2 normal não exclui intoxicação por CO.",
+      "fonte": "ATLS 10ª ed. (ACS) / MS",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "queim-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Queimaduras",
+      "frente": "Homem, 70 kg, sofre queimadura de 2º e 3º graus em todo o tronco anterior e em todo o membro superior direito às 8h. Chega ao hospital às 10h. Pela fórmula de Parkland (4 mL/kg/%SCQ), quanto deve receber até as 16h?",
+      "opcoes": [
+        "7.560 mL nas próximas 8 horas",
+        "3.780 mL nas próximas 8 horas, contadas da chegada",
+        "3.780 mL nas próximas 6 horas",
+        "1.890 mL nas próximas 6 horas"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "7.560 mL é o volume total de 24 h.",
+        "O volume está certo, mas as 8 h contam da queimadura, não da chegada.",
+        "Gabarito: SCQ = 18 + 9 = 27%. 4 × 70 × 27 = 7.560 mL/24 h; metade (3.780 mL) nas 8 h após a queimadura (8h–16h). Como chegou às 10h, recebe 3.780 mL nas 6 h restantes.",
+        "1.890 mL é só 1/4 do total."
+      ],
+      "pegadinha": "O tempo conta da QUEIMADURA.",
+      "fonte": "ATLS 10ª ed. (ACS)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hh-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Esôfago e estômago",
+      "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
+      "frente": "Tipos de hérnia de hiato (I a IV)",
+      "verso": "**I — deslizamento: a junção esofagogástrica (JEG) sobe para o tórax (~90–95%). II — paraesofágica pura: JEG no lugar, fundo gástrico sobe ao lado do esôfago. III — mista: JEG e fundo sobem. IV — outro órgão além do estômago (cólon, baço, omento).**\n\nO tipo I se relaciona à DRGE (perde-se a barreira antirrefluxo). Os tipos II–IV têm risco de volvo gástrico, encarceramento e estrangulamento — por isso são cirúrgicos quando sintomáticos.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hiatus_hernia.svg/600px-Hiatus_hernia.svg.png",
+        "legenda": "A: normal · B: pré-estágio · C: hérnia por deslizamento (tipo I) · D: paraesofágica (tipo II)",
+        "fonte": "Wikimedia Commons · Mysid · CC0"
+      },
+      "pegadinha": "Tríade de Borchardt (dor epigástrica, ânsia sem vômito, impossibilidade de passar SNG) = volvo gástrico agudo na hérnia paraesofágica → emergência.",
+      "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hh-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Esôfago e estômago",
+      "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
+      "frente": "Quando operar a hérnia de hiato e a DRGE?",
+      "verso": "**Tipo I: só quando a DRGE tem indicação cirúrgica — refratária ou dependente de IBP (ou desejo de parar o remédio), complicações (esofagite grave, estenose, Barrett), sintomas extraesofágicos com refluxo comprovado. Tipos II–IV: cirurgia se sintomáticos (emergência se volvo/estrangulamento).**\n\nAntes de operar: EDA, pHmetria de 24 h (confirma refluxo se a EDA não mostra esofagite) e esofagomanometria (afasta acalasia e dismotilidade grave, que mudam a técnica).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Indicação cirúrgica",
+          "EDA + pHmetria 24 h + manometria",
+          [
+            "Motilidade normal → Nissen (360°)",
+            "Dismotilidade importante → fundoplicatura parcial (Toupet 270°)",
+            "Acalasia → Heller + Dor (180°)"
+          ]
+        ]
+      },
+      "pegadinha": "A manometria não confirma o refluxo — ela serve para escolher a técnica e excluir acalasia. Quem confirma é a pHmetria.",
+      "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hh-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Esôfago e estômago",
+      "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
+      "frente": "Fundoplicaturas: Nissen × Toupet × Dor",
+      "verso": "**Nissen: total, 360°, posterior. Toupet: parcial, 270°, posterior. Dor: parcial, 180°, anterior (usada após a miotomia de Heller na acalasia).**\n\nQuanto mais completa a válvula, mais eficaz contra o refluxo, mas maior o risco de disfagia — por isso as parciais ficam para quem tem motilidade esofágica ruim.",
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Nissen_fundoplication.png",
+          "legenda": "Fundoplicatura de Nissen: fundo gástrico envolvendo 360° do esôfago distal",
+          "fonte": "Wikimedia Commons · James P. Gray, M.D. · Domínio público"
+        },
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Técnica",
+            "Graus",
+            "Posição",
+            "Quando"
+          ],
+          "linhas": [
+            [
+              "Nissen",
+              "360°",
+              "Posterior",
+              "Padrão com motilidade normal"
+            ],
+            [
+              "Toupet",
+              "270°",
+              "Posterior",
+              "Dismotilidade"
+            ],
+            [
+              "Dor",
+              "180°",
+              "Anterior",
+              "Com Heller (acalasia)"
+            ],
+            [
+              "Lind",
+              "300°",
+              "Posterior",
+              "Variante"
+            ]
+          ]
+        }
+      ],
+      "pegadinha": "\"Nissen = 360°\" é a pergunta mais direta (gabarito da sua questão).",
+      "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hh-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Esôfago e estômago",
+      "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
+      "frente": "Passos técnicos da hiatoplastia com fundoplicatura de Nissen e suas complicações",
+      "verso": "**Reduzir e ressecar o saco herniário → mobilizar o esôfago até ter 2–3 cm intra-abdominais → fechar os pilares (hiatoplastia/crurorrafia, ± tela) → mobilizar o fundo (vasos gástricos curtos) → passá-lo por trás do esôfago → válvula 360° curta e frouxa (\"floppy\"), calibrada com sonda.**\n\nVálvula apertada ou longa → disfagia. Outras complicações: síndrome \"gas-bloat\" (não consegue eructar/vomitar, distensão), lesão vagal, recidiva da hérnia e deslizamento da válvula (\"slipped Nissen\").",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "1. Redução e excisão do saco herniário",
+          "2. Esôfago intra-abdominal ≥ 2–3 cm",
+          "3. Hiatoplastia (± tela)",
+          "4. Liberação do fundo (vasos gástricos curtos)",
+          "5. Fundo passado por trás do esôfago",
+          "!6. Válvula 360°, curta e frouxa, fixada"
+        ]
+      },
+      "pegadinha": "Disfagia transitória nas primeiras semanas é comum; persistente → válvula apertada/longa ou dismotilidade não diagnosticada.",
+      "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hh-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Esôfago e estômago",
+      "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
+      "frente": "Paciente com DRGE dependente de IBP e hérnia hiatal por deslizamento, com manometria esofágica normal, será submetido a fundoplicatura de Nissen videolaparoscópica. A válvula antirrefluxo nessa técnica envolve:",
+      "opcoes": [
+        "360° do esôfago distal",
+        "270° do esôfago distal, por via posterior",
+        "180° do esôfago distal, por via anterior",
+        "90° do esôfago distal, com fixação ao ângulo de His"
+      ],
+      "certa": 0,
+      "comentarios": [
+        "Gabarito: Nissen é a fundoplicatura total (360°).",
+        "É a de Toupet, parcial, usada na dismotilidade.",
+        "É a de Dor, anterior, usada após a miotomia de Heller.",
+        "Não corresponde a uma técnica padrão."
+      ],
+      "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Quem precisa de terapia nutricional ANTES da cirurgia e por quanto tempo?",
+      "verso": "**Desnutrido grave candidato a cirurgia de grande porte: terapia nutricional por 7–14 dias antes da operação (mesmo que precise adiar a cirurgia).**\n\nCritérios de risco nutricional grave (ESPEN): perda de peso > 10–15% em 6 meses, IMC < 18,5 kg/m², avaliação subjetiva global C ou albumina < 3 g/dL sem disfunção hepática/renal. Triagem: NRS-2002 ≥ 3 = risco nutricional. A desnutrição aumenta deiscência, infecção e mortalidade.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Perda de peso > 10–15% em 6 meses",
+          "IMC < 18,5",
+          "ASG C",
+          "Albumina < 3 g/dL",
+          "!→ Terapia nutricional 7–14 dias antes da cirurgia"
+        ]
+      },
+      "pegadinha": "O gabarito da questão anotada usava \"5–7 dias em doença maligna e 2–3 semanas em benigna\" — referência de livro-texto. A diretriz atual (ESPEN/ACERTO) fala em 7–14 dias. Na prova, procure a alternativa que segue o mesmo raciocínio.",
+      "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Qual via de suporte nutricional escolher? Sonda ou ostomia?",
+      "verso": "**Oral > enteral > parenteral. Enteral sempre que o TGI funcionar; parenteral se o TGI não puder ser usado ou se a enteral não atingir > 50–60% das necessidades em cerca de 7 dias. Sonda se a previsão for < 4–6 semanas; ostomia (gastro/jejunostomia) se for mais longa.**\n\nA parenteral pode ser usada antes e depois da cirurgia quando bem indicada, mas tem mais complicações (infecção de cateter, distúrbios metabólicos, colestase) e não mantém o trofismo intestinal.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Pode comer? → via oral (± suplemento)",
+          "Não pode, mas o TGI funciona → enteral",
+          [
+            "< 4–6 semanas → sonda (nasogástrica/nasoentérica)",
+            "> 4–6 semanas → gastrostomia/jejunostomia"
+          ],
+          "TGI não funciona ou enteral insuficiente → parenteral"
+        ]
+      },
+      "pegadinha": "Sonda pós-pilórica (nasoentérica) se há risco de aspiração ou gastroparesia.",
+      "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Por que a nutrição ENTERAL é preferida no doente grave/operado?",
+      "verso": "**Porque mantém o trofismo intestinal: preserva a altura das vilosidades, o tecido linfoide (GALT) e a produção de IgA secretória, reduzindo a translocação bacteriana.**\n\nO enterócito se nutre do conteúdo da luz. Sem alimento no intestino, a mucosa atrofia, a barreira se rompe e bactérias/endotoxinas passam para a circulação → mais infecção. Por isso se inicia a enteral precocemente (24–48 h), assim que houver estabilidade hemodinâmica.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Enteral",
+          "itens": [
+            "Trofismo da mucosa",
+            "Mantém GALT e IgA",
+            "Menos infecção",
+            "Mais barata e fisiológica"
+          ]
+        },
+        "b": {
+          "t": "Parenteral",
+          "itens": [
+            "Atrofia da mucosa",
+            "Translocação bacteriana",
+            "Infecção de cateter",
+            "Hiperglicemia, colestase"
+          ]
+        }
+      },
+      "pegadinha": "Choque com vasopressor em escalada: adiar/reduzir a enteral (risco de isquemia intestinal). Estabilizou → iniciar.",
+      "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Imunonutrição: o que é e para quem?",
+      "verso": "**Fórmulas com arginina, ácidos graxos ômega-3 e nucleotídeos, iniciadas 5–7 dias antes e mantidas 5–7 dias após a cirurgia, em grandes cirurgias oncológicas do aparelho digestivo e de cabeça e pescoço, sobretudo em desnutridos.**\n\nMelhoram a resposta imune e reduzem complicações infecciosas nesses grupos. Outros cenários citados nas questões: politrauma grave, SDRA e sepse leve.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Indicações",
+            "itens": [
+              "Grandes cirurgias do aparelho digestivo (esôfago, estômago, pâncreas, vias biliares)",
+              "Grandes cirurgias de cabeça e pescoço",
+              "Desnutrição grave",
+              "Politrauma grave",
+              "SDRA, sepse leve"
+            ]
+          },
+          {
+            "t": "Evitar",
+            "itens": [
+              "!Sepse grave / instabilidade hemodinâmica (arginina pode piorar)"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Afirmar que a imunonutrição \"não tem benefício comprovado\" foi o distrator da sua questão — ela tem benefício nos grupos selecionados.",
+      "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-05",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Jejum pré-operatório abreviado e realimentação precoce (ACERTO/ERAS)",
+      "verso": "**Sólidos até 6–8 h antes; líquidos claros com carboidrato (maltodextrina 12,5%) até 2 h antes da anestesia. Realimentação no mesmo dia ou em até 24 h após a cirurgia, inclusive após anastomoses digestivas.**\n\nO jejum prolongado aumenta a resistência à insulina e o catabolismo. O carboidrato pré-operatório reduz a resposta metabólica ao trauma, a sede e a ansiedade. Exceções: obstrução intestinal, gastroparesia, emergências.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "O quê",
+          "Até quanto antes"
+        ],
+        "linhas": [
+          [
+            "Sólidos/refeição",
+            "6–8 h"
+          ],
+          [
+            "Líquidos claros com carboidrato",
+            "2 h"
+          ],
+          [
+            "Pós-operatório",
+            "Dieta oral/enteral em ≤ 24 h"
+          ]
+        ]
+      },
+      "pegadinha": "\"Jejum desde a meia-noite\" é conduta ultrapassada.",
+      "fonte": "Projeto ACERTO / ERAS Society",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-06",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Síndrome de realimentação: quem tem risco e como prevenir",
+      "verso": "**Desnutrido grave que recebe nutrição rápida demais: queda de fósforo (principal), potássio e magnésio, com risco de arritmia, insuficiência respiratória e cardíaca. Prevenção: começar devagar (cerca de 10–20 kcal/kg/dia), dar tiamina antes e repor eletrólitos.**\n\nCom a oferta de glicose, a insulina sobe e leva fósforo, potássio e magnésio para dentro das células, esvaziando o plasma.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Hipofosfatemia",
+          "Hipocalemia",
+          "Hipomagnesemia",
+          "Deficiência de tiamina (Wernicke)",
+          "Sobrecarga de volume"
+        ]
+      },
+      "pegadinha": "Alto risco: IMC < 16, perda > 15% do peso, ingestão mínima há > 10 dias, etilistas.",
+      "fonte": "NICE / ASPEN",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "nutri-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Nutrição perioperatória",
+      "frente": "Paciente em UTI após múltiplas laparotomias, hemodinamicamente estável há 24 h, com trato gastrointestinal funcionante. A melhor forma de evitar atrofia da mucosa intestinal, preservar o tecido linfoide intestinal e a produção de IgA é:",
+      "opcoes": [
+        "Nutrição parenteral total por cateter central",
+        "Nutrição enteral",
+        "Glutamina venosa isolada",
+        "Manter jejum até o retorno completo do trânsito intestinal"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "A parenteral nutre o paciente, mas não o enterócito: a mucosa atrofia.",
+        "Gabarito: a enteral mantém vilosidades, GALT e IgA secretória e reduz a translocação bacteriana.",
+        "Glutamina isolada não substitui a presença de nutrientes na luz.",
+        "Esperar o trânsito completo é desnecessário e piora o trofismo."
+      ],
+      "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "atbp-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Antibioticoprofilaxia cirúrgica",
+      "frente": "Classificação da ferida operatória e quando fazer antibioticoprofilaxia",
+      "verso": "**Limpa → profilaxia só se houver prótese/implante ou se a infecção for catastrófica. Potencialmente contaminada e contaminada → profilaxia. Infectada (suja) → não é profilaxia, é TRATAMENTO.**\n\nO que define a classe é a abertura de tratos colonizados (respiratório, digestivo, geniturinário) e o grau de contaminação durante a cirurgia.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Classe",
+          "Definição",
+          "Exemplo",
+          "ATB"
+        ],
+        "linhas": [
+          [
+            "Limpa",
+            "Não abre tratos colonizados",
+            "Tireoidectomia, herniorrafia",
+            "Só com prótese/tela ou alto risco"
+          ],
+          [
+            "Potencialmente contaminada",
+            "Abre trato de forma controlada",
+            "Colecistectomia, gastrectomia, histerectomia",
+            "Profilaxia"
+          ],
+          [
+            "Contaminada",
+            "Extravasamento GI grosseiro, inflamação aguda sem pus, ferida traumática recente",
+            "Apendicectomia não perfurada",
+            "Profilaxia"
+          ],
+          [
+            "Infectada",
+            "Pus, víscera perfurada, ferida traumática antiga",
+            "Apendicite perfurada, peritonite",
+            "Terapêutica"
+          ]
+        ]
+      },
+      "pegadinha": "Apendicite PERFURADA não é profilaxia — é antibioticoterapia terapêutica.",
+      "fonte": "ASHP/IDSA/SIS/SHEA 2013 / CDC 2017 (prevenção de infecção do sítio cirúrgico)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "atbp-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Antibioticoprofilaxia cirúrgica",
+      "frente": "Antibioticoprofilaxia: qual droga, quando dar, quando repetir e por quanto tempo?",
+      "verso": "**Cefazolina 2 g IV (3 g se ≥ 120 kg) até 60 min antes da incisão; repetir a cada 4 h de cirurgia ou se a perda sanguínea passar de 1.500 mL; dose única ou no máximo 24 h.**\n\nO objetivo é ter nível tecidual alto no momento da incisão e durante a cirurgia — antibiótico depois do fechamento não reduz infecção e aumenta resistência e C. difficile. Vancomicina e fluoroquinolonas começam até 120 min antes (infusão longa). Cirurgia colorretal/apendicectomia: cefazolina + metronidazol (ou cefoxitina).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Item",
+          "Regra"
+        ],
+        "linhas": [
+          [
+            "Droga padrão",
+            "Cefazolina 2 g (3 g se ≥ 120 kg)"
+          ],
+          [
+            "Colorretal",
+            "Cefazolina + metronidazol ou cefoxitina"
+          ],
+          [
+            "Alergia grave a betalactâmico",
+            "Clindamicina ou vancomicina (± gentamicina)"
+          ],
+          [
+            "Quando",
+            "≤ 60 min antes da incisão (vanco/quinolona ≤ 120 min)"
+          ],
+          [
+            "Repique",
+            "A cada 4 h (cefazolina) ou perda > 1.500 mL"
+          ],
+          [
+            "Duração",
+            "Dose única / máximo 24 h"
+          ]
+        ]
+      },
+      "pegadinha": "\"Manter o antibiótico até retirar o dreno\" é erro clássico.",
+      "uerj": "Costuma testar o momento (até 60 min antes da incisão) e a duração (≤ 24 h).",
+      "fonte": "ASHP/IDSA/SIS/SHEA 2013 / CDC 2017 (prevenção de infecção do sítio cirúrgico)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "atbp-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Antibioticoprofilaxia cirúrgica",
+      "frente": "Medidas que reduzem infecção do sítio cirúrgico (além do antibiótico)",
+      "verso": "**Banho pré-operatório, tricotomia só se necessária (com tricotomizador, logo antes da cirurgia — nunca lâmina), antissepsia da pele com clorexidina alcoólica, controle glicêmico (< 200 mg/dL), normotermia, parar de fumar e tratar infecções à distância antes de cirurgia eletiva.**\n\nA lâmina causa microlesões que são colonizadas; a hiperglicemia e a hipotermia prejudicam neutrófilos e perfusão tecidual.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Banho na véspera/no dia",
+          "!Tricotomia só se necessária, com tricotomizador, imediatamente antes",
+          "Clorexidina alcoólica na pele",
+          "Glicemia < 200 mg/dL",
+          "Normotermia",
+          "Cessar tabagismo (idealmente ≥ 4 semanas)"
+        ]
+      },
+      "fonte": "CDC 2017 / OMS 2016",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "atbp-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Antibioticoprofilaxia cirúrgica",
+      "frente": "Paciente de 50 anos fará colecistectomia aberta eletiva. Sobre a antibioticoprofilaxia, é correto:",
+      "opcoes": [
+        "Iniciar cefazolina na indução anestésica, até 60 minutos antes da incisão, sem necessidade de manter no pós-operatório",
+        "Iniciar ceftriaxona na véspera e manter por 7 dias",
+        "Não há indicação, pois a cirurgia é limpa",
+        "Iniciar cefazolina após o fechamento da pele e manter enquanto houver dreno"
+      ],
+      "certa": 0,
+      "comentarios": [
+        "Gabarito: cirurgia potencialmente contaminada; cefazolina até 60 min antes da incisão, dose única/≤ 24 h.",
+        "Profilaxia não começa na véspera nem dura 7 dias.",
+        "Abrir a via biliar a classifica como potencialmente contaminada, não limpa.",
+        "Após o fechamento não há benefício; dreno não prolonga a profilaxia."
+      ],
+      "fonte": "ASHP/IDSA/SIS/SHEA 2013 / CDC 2017 (prevenção de infecção do sítio cirúrgico)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "preop-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Avaliação e cuidados pré-operatórios",
+      "frente": "Exames pré-operatórios: quando pedir?",
+      "verso": "**Paciente assintomático em cirurgia de baixo risco → não precisa de exames de rotina. Os exames são guiados pela história, exame físico e porte da cirurgia.**\n\nExames de rotina sem indicação não reduzem complicações; geram resultados falso-positivos, atrasos e custo.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Exame",
+          "Pedir quando"
+        ],
+        "linhas": [
+          [
+            "Hemograma",
+            "Cirurgia com perda sanguínea esperada, suspeita de anemia"
+          ],
+          [
+            "Creatinina/eletrólitos",
+            "DRC, DM, HAS, diurético/IECA, contraste, cirurgia de grande porte"
+          ],
+          [
+            "Coagulograma",
+            "Anticoagulante, hepatopatia, história de sangramento"
+          ],
+          [
+            "ECG",
+            "Doença cardiovascular conhecida ou fatores de risco em cirurgia de risco intermediário/alto"
+          ],
+          [
+            "RX de tórax",
+            "Doença cardiopulmonar ativa ou suspeita"
+          ],
+          [
+            "β-hCG",
+            "Mulher em idade fértil com possibilidade de gravidez"
+          ],
+          [
+            "Glicemia/HbA1c",
+            "DM ou alto risco"
+          ]
+        ]
+      },
+      "pegadinha": "Idade sozinha não é indicação de bateria de exames.",
+      "fonte": "Diretriz de Avaliação Cardiovascular Perioperatória SBC 2024 / ACC-AHA 2024 / ASA",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "preop-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Avaliação e cuidados pré-operatórios",
+      "frente": "Classificação ASA e índice de Lee (RCRI)",
+      "verso": "**ASA estima o estado físico (I a VI; \"E\" se emergência). Lee estima risco cardíaco com 6 itens: cirurgia de alto risco (intraperitoneal, intratorácica, vascular suprainguinal), doença coronariana, insuficiência cardíaca, doença cerebrovascular, DM em uso de insulina e creatinina > 2 mg/dL.**\n\nCom Lee ≥ 2 (ou risco elevado por outra calculadora), avalia-se a capacidade funcional: ≥ 4 METs (subir dois lances de escada sem sintomas) → operar; < 4 METs ou desconhecida → considerar teste não invasivo SOMENTE se o resultado mudar a conduta.",
+      "visual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "ASA",
+            "Estado"
+          ],
+          "linhas": [
+            [
+              "I",
+              "Saudável"
+            ],
+            [
+              "II",
+              "Doença sistêmica leve (HAS/DM controlados, tabagista, IMC 30–40, gestante)"
+            ],
+            [
+              "III",
+              "Doença sistêmica grave (DM/HAS mal controlados, DPOC, IMC ≥ 40, IAM > 3 meses)"
+            ],
+            [
+              "IV",
+              "Ameaça constante à vida (IAM/AVC < 3 meses, sepse)"
+            ],
+            [
+              "V",
+              "Moribundo, não sobrevive sem a cirurgia"
+            ],
+            [
+              "VI",
+              "Morte encefálica — doador"
+            ]
+          ]
+        },
+        {
+          "tipo": "fluxo",
+          "passos": [
+            "Cirurgia de emergência? → operar",
+            "Risco baixo (Lee 0–1) → operar",
+            "Risco elevado → capacidade funcional",
+            [
+              "≥ 4 METs → operar",
+              "< 4 METs → teste não invasivo só se mudar conduta"
+            ]
+          ]
+        }
+      ],
+      "pegadinha": "Gestante é ASA II. Obesidade mórbida (IMC ≥ 40) é ASA III.",
+      "fonte": "Diretriz de Avaliação Cardiovascular Perioperatória SBC 2024 / ACC-AHA 2024 / ASA",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "preop-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Avaliação e cuidados pré-operatórios",
+      "frente": "Medicações no pré-operatório: o que manter e o que suspender",
+      "verso": "**Manter: betabloqueador, estatina, a maioria dos anti-hipertensivos, corticoide (com dose de estresse se uso crônico) e, em geral, o AAS. Suspender: clopidogrel/ticagrelor 5 dias, prasugrel 7 dias, varfarina 5 dias (INR < 1,5), anticoagulantes diretos 24–72 h (conforme função renal e risco de sangramento), iSGLT2 3–4 dias, metformina no dia.**\n\nSuspender betabloqueador de uso crônico causa rebote (isquemia, taquicardia). O AAS é mantido na maioria, especialmente com stent coronariano; suspende-se (7 dias) em neurocirurgia, RTU de próstata e cirurgias de câmara posterior do olho. Ponte com heparina só para varfarina em alto risco trombótico (ex.: prótese mecânica mitral).",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Manter",
+          "itens": [
+            "Betabloqueador",
+            "Estatina",
+            "AAS (maioria; obrigatório com stent recente)",
+            "Corticoide (± dose de estresse)",
+            "Anti-hipertensivos (IECA/BRA: avaliar suspender 24 h)"
+          ]
+        },
+        "b": {
+          "t": "Suspender",
+          "itens": [
+            "Clopidogrel/ticagrelor: 5 d · prasugrel: 7 d",
+            "Varfarina: 5 d (INR < 1,5)",
+            "DOAC: 24–72 h, sem ponte",
+            "iSGLT2: 3–4 d (cetoacidose euglicêmica)",
+            "Metformina: no dia",
+            "ACO/TRH: 4–6 sem se alto risco de TEV"
+          ]
+        }
+      },
+      "pegadinha": "Não se faz ponte com heparina para anticoagulante direto (DOAC).",
+      "fonte": "Diretriz de Avaliação Cardiovascular Perioperatória SBC 2024 / ACC-AHA 2024 / ASA",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "preop-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Avaliação e cuidados pré-operatórios",
+      "frente": "Homem, 68 anos, hipertenso e diabético em uso de metformina, losartana, atenolol e sinvastatina, com stent farmacológico coronariano há 3 anos em uso de AAS. Fará herniorrafia inguinal eletiva. Assintomático, sobe 3 lances de escada sem sintomas. Qual a conduta?",
+      "opcoes": [
+        "Suspender o atenolol 7 dias antes",
+        "Solicitar cintilografia miocárdica antes da cirurgia",
+        "Manter atenolol, sinvastatina e AAS; suspender a metformina no dia da cirurgia",
+        "Suspender o AAS 7 dias antes e fazer ponte com enoxaparina"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Suspender betabloqueador crônico causa rebote isquêmico.",
+        "Capacidade funcional ≥ 4 METs e cirurgia de baixo risco: teste não invasivo não muda conduta.",
+        "Gabarito: mantém betabloqueador, estatina e AAS (stent); metformina suspensa no dia.",
+        "AAS deve ser mantido em portador de stent; ponte com heparina não substitui antiagregante."
+      ],
+      "fonte": "Diretriz de Avaliação Cardiovascular Perioperatória SBC 2024 / ACC-AHA 2024 / ASA",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-01",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "O que é a Avaliação Geriátrica Ampla (AGA) e quais domínios avalia?",
+      "verso": "**Avaliação multidimensional e interdisciplinar do idoso, centrada na FUNCIONALIDADE, para montar um plano de cuidados — não para diagnosticar uma doença específica.**\n\nAvalia funcionalidade (AVD e AIVD), cognição, humor, mobilidade/quedas, nutrição, visão/audição, continência, medicações (polifarmácia) e suporte social/cuidador. É mais útil no idoso frágil ou em risco.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Domínio",
+          "Instrumento"
+        ],
+        "linhas": [
+          [
+            "AVD básicas",
+            "Katz"
+          ],
+          [
+            "AVD instrumentais",
+            "Lawton"
+          ],
+          [
+            "Cognição",
+            "Mini-Mental (corte por escolaridade), Mini-Cog, teste do relógio, fluência verbal"
+          ],
+          [
+            "Humor",
+            "Escala de Depressão Geriátrica (GDS-15: > 5 sugere depressão)"
+          ],
+          [
+            "Mobilidade/quedas",
+            "Timed Up and Go (TUG), velocidade de marcha"
+          ],
+          [
+            "Nutrição",
+            "Mini Avaliação Nutricional (MAN), circunferência da panturrilha"
+          ],
+          [
+            "Rastreio de vulnerabilidade (MS)",
+            "IVCF-20"
+          ]
+        ]
+      },
+      "pegadinha": "O Mini-Mental é RASTREIO e o ponto de corte depende da escolaridade — não diagnostica demência sozinho.",
+      "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-02",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "Katz × Lawton: AVD básicas × instrumentais",
+      "verso": "**Katz avalia AVD básicas (autocuidado): banho, vestir-se, higiene pessoal/ir ao banheiro, transferência, continência e alimentação. Lawton avalia AVD instrumentais (vida independente na comunidade): usar telefone, fazer compras, cuidar das finanças, tomar remédios, usar transporte, preparar refeições, tarefas domésticas.**\n\nAs instrumentais são perdidas primeiro (exigem mais cognição) — são marcador precoce de declínio. Nas básicas, a perda segue a ordem inversa da aquisição na infância: o banho é o primeiro a ser perdido e a alimentação a última.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Katz — básicas",
+          "itens": [
+            "Banho (1ª a perder)",
+            "Vestir",
+            "Higiene/banheiro",
+            "Transferência",
+            "Continência",
+            "Alimentação (última)"
+          ]
+        },
+        "b": {
+          "t": "Lawton — instrumentais",
+          "itens": [
+            "Telefone",
+            "Compras",
+            "Finanças",
+            "Medicações",
+            "Transporte",
+            "Refeições",
+            "Tarefas domésticas"
+          ]
+        }
+      },
+      "pegadinha": "\"Administrar os próprios remédios\" é AIVD (Lawton), não AVD básica.",
+      "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-03",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "Fragilidade: critérios de Fried e IVCF-20",
+      "verso": "**Fenótipo de Fried (5 critérios): perda de peso não intencional, exaustão autorrelatada, fraqueza (força de preensão baixa), lentidão da marcha e baixa atividade física. ≥ 3 = frágil; 1–2 = pré-frágil; 0 = robusto.**\n\nFragilidade é redução da reserva fisiológica que deixa o idoso vulnerável a quedas, hospitalização, incapacidade e morte. Na APS brasileira, o MS usa o IVCF-20 (0–6 robusto, 7–14 em risco de fragilização, ≥ 15 frágil).",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "Perda de peso não intencional",
+          "Exaustão",
+          "Fraqueza (preensão)",
+          "Marcha lenta",
+          "Baixa atividade física",
+          "!≥ 3 = frágil · 1–2 = pré-frágil"
+        ]
+      },
+      "fonte": "Fried et al., 2001 / MS — IVCF-20",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-04",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "Polifarmácia e cascata de prescrição",
+      "verso": "**Polifarmácia = uso regular de 5 ou mais medicamentos. Cascata de prescrição = um efeito adverso é interpretado como nova doença e tratado com outro remédio.**\n\nOs idosos têm mais efeitos adversos por mudanças na farmacocinética (menos água corporal, mais gordura, menor depuração renal) e na farmacodinâmica, além de interações. Antes de acrescentar um remédio para um sintoma novo, pergunte se ele não é efeito de outro.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Remédio",
+          "Efeito adverso",
+          "\"Tratado\" com"
+        ],
+        "linhas": [
+          [
+            "Anlodipino",
+            "Edema de membros inferiores",
+            "Diurético"
+          ],
+          [
+            "Metoclopramida",
+            "Parkinsonismo",
+            "Levodopa"
+          ],
+          [
+            "AINE",
+            "Aumento da PA",
+            "Anti-hipertensivo"
+          ],
+          [
+            "IECA",
+            "Tosse",
+            "Antitussígeno"
+          ],
+          [
+            "Anticolinérgico",
+            "Constipação, retenção urinária",
+            "Laxante, alfabloqueador"
+          ]
+        ]
+      },
+      "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-05",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "Como manejar a polifarmácia: Beers, STOPP/START e desprescrição",
+      "verso": "**Revisar todos os medicamentos periodicamente (inclusive fitoterápicos e automedicação), usar critérios de Beers e STOPP/START para identificar medicamentos inapropriados e omissões, e desprescrever de forma gradual — um medicamento de cada vez, começando pelos de maior risco.**\n\nBenzodiazepínicos, antidepressivos, betabloqueadores e IBP devem ser retirados devagar (abstinência/rebote). Simplificar horários e envolver o cuidador melhora a adesão.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Beers — evitar no idoso",
+            "itens": [
+              "!Benzodiazepínicos e \"drogas Z\" (quedas, delirium)",
+              "!Anticolinérgicos fortes: difenidramina, prometazina, hidroxizina, amitriptilina, oxibutinina",
+              "Sulfonilureias (hipoglicemia) — glibenclamida principalmente",
+              "AINE de uso crônico",
+              "IBP > 8 semanas sem indicação",
+              "Relaxantes musculares (ciclobenzaprina, carisoprodol)",
+              "Metoclopramida",
+              "Antipsicóticos para comportamento na demência"
+            ]
+          },
+          {
+            "t": "Passos da desprescrição",
+            "itens": [
+              "Lista completa (\"sacola de remédios\")",
+              "Indicação atual de cada um?",
+              "Priorizar os de maior risco",
+              "Retirar um de cada vez, gradualmente",
+              "Monitorar sintomas"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "STOPP aponta o que retirar; START aponta o que está FALTANDO (ex.: estatina, vitamina D, anticoagulação na FA).",
+      "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aga-q1",
+      "tipo": "quiz",
+      "area": "Medicina Preventiva",
+      "tema": "Saúde do idoso",
+      "sub": "Avaliação geriátrica ampla e polifarmácia",
+      "frente": "Idosa, 82 anos, em uso de 9 medicamentos, entre eles diazepam, amitriptilina, glibenclamida e omeprazol há 3 anos. Teve duas quedas no último mês. A conduta mais adequada em relação à polifarmácia é:",
+      "opcoes": [
+        "Suspender todos os medicamentos ao mesmo tempo e reintroduzir os essenciais",
+        "Revisar a lista, priorizar a retirada gradual dos medicamentos potencialmente inapropriados ligados às quedas, como diazepam e amitriptilina",
+        "Acrescentar vitamina D e manter o esquema, já que as quedas são esperadas na idade",
+        "Trocar o diazepam por clonazepam, de meia-vida menor"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Retirada abrupta causa abstinência e rebote; desprescrição é gradual.",
+        "Gabarito: BZD e anticolinérgicos (Beers) aumentam o risco de quedas; desprescrever um de cada vez.",
+        "Queda não é \"normal da idade\"; o esquema tem causas modificáveis.",
+        "Trocar um BZD por outro mantém o risco."
+      ],
+      "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aa-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Os 5 tipos de abdome agudo e o exemplo clássico de cada um",
+      "verso": "**Inflamatório, obstrutivo, perfurativo, vascular (isquêmico) e hemorrágico.**\n\nClassificar pelo mecanismo direciona o exame e a conduta: o inflamatório tende a evoluir em horas a dias com febre e dor localizada; o perfurativo começa súbito e com peritonite difusa; o vascular dá dor desproporcional ao exame físico.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Tipo",
+          "Exemplos",
+          "Pista"
+        ],
+        "linhas": [
+          [
+            "Inflamatório",
+            "Apendicite, colecistite, diverticulite, pancreatite",
+            "Dor progressiva + febre + leucocitose"
+          ],
+          [
+            "Obstrutivo",
+            "Bridas, hérnia encarcerada, neoplasia, volvo",
+            "Cólica + vômitos + distensão + parada de eliminação"
+          ],
+          [
+            "Perfurativo",
+            "Úlcera péptica perfurada, diverticulite perfurada",
+            "Dor súbita, abdome em tábua, pneumoperitônio"
+          ],
+          [
+            "Vascular",
+            "Isquemia mesentérica",
+            "Dor desproporcional ao exame, FA, lactato alto"
+          ],
+          [
+            "Hemorrágico",
+            "Gravidez ectópica rota, aneurisma roto",
+            "Dor + choque"
+          ]
+        ]
+      },
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aa-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Pneumoperitônio: como identificar e qual a conduta",
+      "verso": "**RX de tórax em ortostase (ar sob as cúpulas) ou de abdome em decúbito lateral esquerdo com raios horizontais; TC é o mais sensível. Pneumoperitônio + quadro de perfuração → cirurgia.**\n\nO ar livre na cavidade confirma a perfuração de víscera oca. Sinais no RX: crescente aéreo subdiafragmático, sinal de Rigler (dupla parede da alça) e sinal do ligamento falciforme. No exame físico, o sinal de Jobert é o timpanismo na área de macicez hepática.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Pneumoperitoneum_chest_X-ray.jpg/600px-Pneumoperitoneum_chest_X-ray.jpg",
+        "legenda": "RX de tórax em pé: ar livre sob as cúpulas diafragmáticas (pneumoperitônio)",
+        "fonte": "Wikimedia Commons · Bill Rhodes · CC BY 2.0"
+      },
+      "pegadinha": "Pneumoperitônio pode ser NORMAL até cerca de 1 semana após laparotomia/laparoscopia. E a ausência de pneumoperitônio no RX não exclui perfuração.",
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aa-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Erros clássicos na conduta do abdome agudo (antibiótico, hidratação, contraste)",
+      "verso": "**Antibiótico de amplo espectro deve começar logo que se diagnostica infecção intra-abdominal, sem esperar cultura. Hidratação venosa é pilar da pancreatite em TODAS as gravidades. TC com contraste venoso é segura e útil no abdome agudo obstrutivo.**\n\nNa pancreatite, a hidratação é guiada por metas (diurese, FC, ureia/hematócrito), com Ringer lactato e sem excesso. Na obstrução, a TC mostra o nível, a causa e sinais de sofrimento de alça; o contraste venoso só é evitado em contraindicações específicas.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "ATB empírico sem esperar cultura na infecção intra-abdominal",
+          "Pancreatite: hidratação (Ringer lactato) leve ou grave; ATB profilático NÃO",
+          "Obstrução: TC com contraste venoso é segura",
+          "Pneumoperitônio com quadro de perfuração → cirurgia",
+          "Apendicite com abscesso tardio → drenagem + ATB (não apendicectomia imediata)"
+        ]
+      },
+      "pegadinha": "Antibiótico profilático na pancreatite aguda grave sem infecção confirmada é distrator.",
+      "fonte": "Sabiston / WSES guidelines / ACG 2024 (pancreatite)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "aa-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Sobre o manejo do abdome agudo, assinale a alternativa correta:",
+      "opcoes": [
+        "A antibioticoterapia só deve ser iniciada após confirmação microbiológica da infecção",
+        "A hidratação venosa só é necessária na pancreatite aguda grave",
+        "O contraste venoso na TC deve ser evitado no abdome agudo obstrutivo",
+        "No abdome agudo perfurativo, o pneumoperitônio confirma a perfuração e, em geral, indica cirurgia"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Antibiótico empírico começa ao diagnóstico (ex.: apendicite complicada).",
+        "Hidratação é pilar na pancreatite leve e na grave.",
+        "O contraste venoso é seguro e ajuda a definir causa e sofrimento de alça.",
+        "Gabarito: ar livre = perfuração de víscera oca → considerar cirurgia."
+      ],
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "apend-06",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendicite",
+      "frente": "Apendicite complicada com ABSCESSO ou plastrão (apresentação tardia): conduta",
+      "verso": "**Antibiótico + drenagem percutânea do abscesso (guiada por TC/USG); a apendicectomia NÃO é feita de imediato.**\n\nOperar um processo bloqueado e inflamado aumenta lesão de alça, fístula e ressecção ileocecal desnecessária. Melhorando, a apendicectomia de intervalo (6–8 semanas) é opcional; recomenda-se em sintomas recorrentes, e em > 40 anos faz-se colonoscopia/TC de controle para excluir neoplasia (de apêndice ou cólon).",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Apendicite de evolução tardia",
+          "TC: abscesso / plastrão",
+          [
+            "Abscesso drenável → drenagem percutânea + ATB",
+            "Plastrão sem abscesso → ATB"
+          ],
+          "Melhora → apendicectomia de intervalo opcional · > 40 anos: colonoscopia/TC"
+        ]
+      },
+      "pegadinha": "\"Toda apendicite complicada exige apendicectomia de urgência\" é falso. Peritonite difusa/perfuração livre, sim, vai para cirurgia.",
+      "fonte": "WSES Jerusalem guidelines 2020",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "colec-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Colecistite aguda",
+      "frente": "Diagnóstico de colecistite aguda (Tóquio 2018) e achados no USG",
+      "verso": "**A — inflamação local (Murphy, dor/massa/defesa no QSD) + B — inflamação sistêmica (febre, PCR, leucocitose) + C — imagem compatível. A + B = suspeita; A + B + C = diagnóstico definitivo.**\n\nUSG é o exame inicial: cálculo (impactado no colo), parede > 4 mm, líquido pericolecístico, vesícula distendida e Murphy ultrassonográfico. A cintilografia biliar (HIDA) é o exame mais acurado, mas pouco usada na prática.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ultrasonography_of_cholecystitis.jpg/600px-Ultrasonography_of_cholecystitis.jpg",
+        "legenda": "USG: cálculos, parede espessada e líquido pericolecístico — colecistite aguda",
+        "fonte": "Wikimedia Commons · Mikael Häggström, M.D. · CC0"
+      },
+      "pegadinha": "Murphy = parada da inspiração à palpação do ponto cístico. Courvoisier (vesícula palpável e indolor + icterícia) sugere neoplasia periampular, não colecistite.",
+      "fonte": "Tokyo Guidelines 2018 (TG18)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "colec-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Colecistite aguda",
+      "frente": "Gravidade da colecistite aguda (Tóquio 2018): graus I, II e III",
+      "verso": "**Grau III (grave) = disfunção orgânica. Grau II (moderado) = leucocitose > 18.000, massa palpável no QSD, sintomas > 72 h ou inflamação local acentuada. Grau I (leve) = não preenche II nem III.**\n\nInflamação local acentuada = colecistite gangrenosa ou enfisematosa, abscesso pericolecístico/hepático, peritonite biliar. Mnemônico da sua anotação para o grau III: TÓQUIO.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau III — disfunção (TÓQUIO)",
+          "Critério"
+        ],
+        "linhas": [
+          [
+            "T — Tontura",
+            "Rebaixamento do nível de consciência"
+          ],
+          [
+            "Ó — \"Os\" baixo",
+            "PaO2/FiO2 < 300"
+          ],
+          [
+            "Q — Queda de plaquetas",
+            "< 100.000"
+          ],
+          [
+            "U — Uso de aminas",
+            "Qualquer noradrenalina ou dopamina ≥ 5 µg/kg/min"
+          ],
+          [
+            "I — INR",
+            "> 1,5"
+          ],
+          [
+            "O — Oligúria",
+            "Ou creatinina > 2 mg/dL"
+          ]
+        ]
+      },
+      "pegadinha": "Massa palpável e > 72 h de evolução são grau II, não III.",
+      "fonte": "Tokyo Guidelines 2018 (TG18)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "colec-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Colecistite aguda",
+      "frente": "Conduta na colecistite aguda pela gravidade (Tóquio 2018)",
+      "verso": "**Todos: suporte + antibiótico. Grau I: colecistectomia videolaparoscópica precoce. Grau II: colecistectomia precoce se o paciente tolera e o centro é experiente; senão, tratamento clínico/drenagem e cirurgia tardia. Grau III: drenagem da vesícula (colecistostomia percutânea) e cirurgia depois — colecistectomia precoce só em centro avançado com disfunção orgânica rapidamente reversível.**\n\nA colecistectomia precoce (idealmente em até 72 h do início, aceitável até ~7–10 dias) reduz internação e recidiva. No grave, a drenagem controla o foco sem o estresse da cirurgia.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "I — leve",
+            "Colecistectomia VLP precoce"
+          ],
+          [
+            "II — moderado",
+            "Colecistectomia VLP precoce (se tolera) · senão drenagem/ATB e cirurgia tardia"
+          ],
+          [
+            "III — grave",
+            "Suporte + ATB + colecistostomia percutânea → colecistectomia eletiva depois"
+          ]
+        ]
+      },
+      "pegadinha": "Colecistite alitiásica (doente de UTI, NPT, queimado, politrauma) → colecistostomia percutânea com frequência. Colecistite enfisematosa (idoso diabético, Clostridium) → cirurgia de urgência.",
+      "uerj": "Costuma dar o caso com dados de gravidade para você classificar e escolher entre colecistectomia precoce e colecistostomia.",
+      "fonte": "Tokyo Guidelines 2018 (TG18)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "colec-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Colecistite aguda",
+      "frente": "Idoso, 78 anos, dor no hipocôndrio direito há 2 dias, febre e Murphy positivo. USG: cálculo impactado no infundíbulo, parede de 6 mm e líquido pericolecístico. Evolui com PA 80 × 50 mmHg apesar de volume, necessitando de noradrenalina, e plaquetas de 85.000. A conduta mais adequada, além de suporte e antibiótico, é:",
+      "opcoes": [
+        "Colecistectomia videolaparoscópica de urgência",
+        "Colecistostomia percutânea",
+        "CPRE com papilotomia",
+        "Antibiótico isolado e colecistectomia eletiva em 6 semanas"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Em grau III, a colecistectomia precoce fica restrita a centro avançado com disfunção reversível; no paciente em choque, a regra é drenar.",
+        "Gabarito: colecistite grau III (uso de amina, plaquetopenia) → drenagem da vesícula.",
+        "CPRE trata coledocolitíase/colangite, não colecistite.",
+        "Sem drenagem do foco, o paciente em disfunção orgânica pode não responder."
+      ],
+      "fonte": "Tokyo Guidelines 2018 (TG18)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "apeg-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendagite epiploica",
+      "frente": "Apendagite epiploica: o que é, quadro e imagem",
+      "verso": "**Torção ou trombose venosa espontânea de um apêndice epiploico (bolsa de gordura na superfície do cólon) → dor abdominal localizada, mais em FIE/sigmoide, em adulto que parece bem, com pouca ou nenhuma febre e leucocitose. Na TC: lesão ovalada paracólica com densidade de GORDURA e halo hiperdenso, com densificação da gordura ao redor.**\n\nImita diverticulite (à esquerda) ou apendicite (à direita). Às vezes há um ponto central hiperdenso (veia trombosada). Apêndice EPIPLOICO não é apêndice vermiforme.",
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "data/img/1792630159441-0.jpg",
+          "legenda": "TC com contraste: lesão ovalada com densidade de gordura e halo, paracólica no flanco esquerdo, junto ao cólon descendente (círculo) — apendagite epiploica"
+        },
+        {
+          "tipo": "vs",
+          "a": {
+            "t": "Apendagite epiploica",
+            "itens": [
+              "Dor focal intensa, paciente bem",
+              "Febre/leucocitose mínimas",
+              "TC: oval de gordura com halo",
+              "Autolimitada: AINE/analgésico"
+            ]
+          },
+          "b": {
+            "t": "Diverticulite",
+            "itens": [
+              "Dor + febre + leucocitose",
+              "Idoso mais comum",
+              "TC: divertículos + espessamento da parede",
+              "ATB (complicada) / cirurgia se perfurada"
+            ]
+          }
+        }
+      ],
+      "pegadinha": "\"Borramento do apêndice epiploico\" não é apendicite — leia o nome do órgão.",
+      "fonte": "Comentário UERJ / Radiopaedia — epiploic appendagitis",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "apeg-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendagite epiploica",
+      "frente": "Tratamento da apendagite epiploica",
+      "verso": "**Conservador: analgésicos/AINE e sintomáticos. Sem antibiótico e sem cirurgia; melhora em 3–14 dias.**\n\nComo é uma necrose gordurosa isquêmica estéril, não há infecção a tratar. O valor da TC está justamente em evitar antibiótico e cirurgia desnecessários.",
+      "pegadinha": "Infarto omental segmentar é o \"primo\" à direita: lesão de gordura maior, sem halo bem definido, mesmo tratamento conservador.",
+      "fonte": "Comentário UERJ / Radiopaedia — epiploic appendagitis",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "apeg-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendagite epiploica",
+      "frente": "Homem, 35 anos, dor intensa e localizada na fossa ilíaca esquerda há 1 dia, afebril, sem leucocitose e com PCR levemente elevada. A TC mostra lesão ovalada paracólica de densidade de gordura com halo hiperdenso, adjacente ao cólon descendente, com densificação da gordura ao redor. A conduta é:",
+      "opcoes": [
+        "Ciprofloxacino e metronidazol por 7 dias",
+        "Laparoscopia com ressecção do apêndice epiploico",
+        "Analgésicos e anti-inflamatório não esteroidal",
+        "Internação com antibiótico venoso e dieta zero"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Antibiótico não faz parte do tratamento: é necrose gordurosa estéril.",
+        "A cirurgia não é indicada na imensa maioria dos casos.",
+        "Gabarito: apendagite epiploica é autolimitada; trata-se a dor.",
+        "É o tratamento da diverticulite complicada, não da apendagite."
+      ],
+      "visual": {
+        "tipo": "img",
+        "src": "data/img/1792630159441-0.jpg",
+        "legenda": "Imagem da questão (TC)"
+      },
+      "fonte": "Comentário UERJ / Radiopaedia — epiploic appendagitis",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hemor-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Coloproctologia",
+      "sub": "Doença hemorroidária",
+      "frente": "Hemorroidas internas × externas e classificação das internas (graus I–IV)",
+      "verso": "**Internas: acima da linha pectínea, inervação visceral → sangramento vermelho vivo INDOLOR e prolapso. Externas: abaixo da linha pectínea, inervação somática → dor quando trombosam.**\n\nGraus das internas: I — sem prolapso; II — prolapso com redução espontânea; III — prolapso com redução manual; IV — prolapso irredutível.",
+      "visual": [
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Internal_and_external_hemorrhoids.png/600px-Internal_and_external_hemorrhoids.png",
+          "legenda": "Hemorroidas internas (acima da linha pectínea) e externas (abaixo)",
+          "fonte": "Wikimedia Commons · WikipedianProlific & Mikael Häggström · CC BY-SA 3.0"
+        },
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Grau",
+            "Prolapso"
+          ],
+          "linhas": [
+            [
+              "I",
+              "Não prolapsa"
+            ],
+            [
+              "II",
+              "Prolapsa e volta sozinha"
+            ],
+            [
+              "III",
+              "Prolapsa e precisa de redução manual"
+            ],
+            [
+              "IV",
+              "Irredutível"
+            ]
+          ]
+        }
+      ],
+      "pegadinha": "Dor anal intensa NÃO é típica de hemorroida interna — pense em fissura, trombose externa ou abscesso.",
+      "fonte": "ASCRS Clinical Practice Guidelines — Hemorrhoids (2018/2024)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hemor-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Coloproctologia",
+      "sub": "Doença hemorroidária",
+      "frente": "Tratamento da doença hemorroidária por grau",
+      "verso": "**Todos: fibras (25–35 g/dia), água, evitar esforço e tempo prolongado no vaso. Grau I: clínico. Grau II: clínico + LIGADURA ELÁSTICA (ambulatorial). Grau III: ligadura ou hemorroidectomia. Grau IV, mista ou falha: hemorroidectomia (Milligan-Morgan aberta ou Ferguson fechada).**\n\nA ligadura elástica é feita acima da linha pectínea (sem dor) na base do mamilo: causa isquemia, queda do tecido e fibrose que fixa a mucosa. O grampeador (PPH/Longo) serve para prolapso circunferencial (II–III): menos dor, mais recidiva e não trata o componente externo.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau",
+          "Tratamento"
+        ],
+        "linhas": [
+          [
+            "I",
+            "Fibras, água, hábito intestinal (± escleroterapia/fotocoagulação)"
+          ],
+          [
+            "II",
+            "!Ligadura elástica"
+          ],
+          [
+            "III",
+            "Ligadura ou hemorroidectomia"
+          ],
+          [
+            "IV / mista / trombosada encarcerada",
+            "Hemorroidectomia (Milligan-Morgan / Ferguson)"
+          ],
+          [
+            "Prolapso circunferencial II–III",
+            "PPH (grampeador)"
+          ]
+        ]
+      },
+      "pegadinha": "Ligadura em imunossuprimido ou anticoagulado: cuidado. Dor intensa + febre + retenção urinária após ligadura = sepse pélvica (emergência).",
+      "uerj": "Cobra a escolha do tratamento pelo grau descrito no caso (prolapso que volta sozinho = II → ligadura).",
+      "fonte": "ASCRS Clinical Practice Guidelines — Hemorrhoids (2018/2024)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hemor-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Coloproctologia",
+      "sub": "Doença hemorroidária",
+      "frente": "Trombose hemorroidária externa e sangramento anal: quando investigar outra causa",
+      "verso": "**Trombose externa com < 72 h de dor → excisão do trombo/mamilo sob anestesia local. Com > 72 h → tratamento conservador (analgésico, banho de assento, fibras), porque a dor já está melhorando.**\n\nAntes de atribuir sangramento à hemorroida, colonoscopia em quem tem ≥ 45–50 anos, sinais de alarme (anemia, perda de peso, mudança do hábito intestinal) ou história familiar de câncer colorretal.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "< 72 h",
+          "itens": [
+            "Excisão do trombo/mamilo",
+            "Anestesia local"
+          ]
+        },
+        "b": {
+          "t": "> 72 h",
+          "itens": [
+            "Conservador",
+            "Analgesia + banho de assento + fibras"
+          ]
+        }
+      },
+      "pegadinha": "Incisão simples do trombo (sem excisão) tem mais recidiva.",
+      "fonte": "ASCRS Clinical Practice Guidelines — Hemorrhoids (2018/2024)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "hemor-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Coloproctologia",
+      "sub": "Doença hemorroidária",
+      "frente": "Homem, 38 anos, sangramento vermelho vivo ao evacuar, indolor, intermitente, e \"algo que sai e volta sozinho\" após a evacuação. Anuscopia: um mamilo hemorroidário interno. Após medidas higienodietéticas sem melhora, a melhor conduta é:",
+      "opcoes": [
+        "Infiltração local com lidocaína",
+        "Hemorroidectomia de Ferguson",
+        "Hemorroidopexia com grampeador (PPH)",
+        "Ligadura elástica"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Lidocaína alivia dor aguda, não trata hemorroida interna.",
+        "Hemorroidectomia é para grau III–IV; excessiva no grau II.",
+        "PPH é para prolapso circunferencial de vários mamilos, não mamilo isolado.",
+        "Gabarito: hemorroida interna grau II (redução espontânea) → ligadura elástica ambulatorial."
+      ],
+      "fonte": "ASCRS Clinical Practice Guidelines — Hemorrhoids (2018/2024)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tbi-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Tuberculose intestinal: local preferencial, quadro e diagnóstico",
+      "verso": "**Acomete principalmente a região ILEOCECAL (rica em tecido linfoide e com estase). Febre, emagrecimento, dor abdominal, diarreia e/ou constipação, sangramento e massa em FID. Diagnóstico: colonoscopia com biópsia → histologia (granuloma caseoso), BAAR, cultura e teste molecular.**\n\nO grande diagnóstico diferencial é a doença de Crohn, que também é ileocecal e granulomatosa — tratar Crohn com imunossupressor em quem tem TB é desastroso. A radiografia de tórax é normal em boa parte dos casos, então RX normal não exclui.",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Tuberculose intestinal",
+          "itens": [
+            "Granulomas grandes, confluentes, CASEOSOS",
+            "Úlceras transversais/circunferenciais",
+            "Válvula ileocecal deformada e aberta",
+            "Ascite, linfonodos necróticos",
+            "BAAR/cultura/PCR +"
+          ]
+        },
+        "b": {
+          "t": "Doença de Crohn",
+          "itens": [
+            "Granulomas pequenos, não caseosos",
+            "Úlceras longitudinais, \"pedra de calçamento\"",
+            "Lesões salteadas",
+            "Fístulas e doença perianal",
+            "Sem micobactéria"
+          ]
+        }
+      },
+      "pegadinha": "Granuloma caseoso aponta para TB. Granuloma não caseoso é típico de Crohn.",
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tbi-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Tuberculose intestinal: tratamento e indicações cirúrgicas",
+      "verso": "**Tratamento é clínico: esquema básico (RIPE) por 6 meses. A principal indicação cirúrgica é a OBSTRUÇÃO intestinal por estenose; outras: perfuração livre, abscesso, fístula que não responde ao tratamento e hemorragia maciça.**\n\nA maioria das fístulas fecha com o tratamento medicamentoso, por isso a obstrução fica como a grande indicação. Cirurgia: ressecção segmentar limitada (geralmente ileocolectomia direita) com anastomose; estenoplastia em estenoses curtas.",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "RIPE 6 meses (2RHZE/4RH)",
+          "!Principal indicação cirúrgica: obstrução",
+          "Perfuração livre / abscesso",
+          "Fístula refratária",
+          "Hemorragia maciça"
+        ]
+      },
+      "pegadinha": "\"Fístula\" parece a resposta, mas a maioria responde ao RIPE.",
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-21"
+    },
+    {
+      "id": "tbi-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Paciente em tratamento para tuberculose intestinal ileocecal. Qual é a principal indicação de tratamento cirúrgico nessa doença?",
+      "opcoes": [
+        "Fístula enterocutânea",
+        "Obstrução intestinal",
+        "Diarreia crônica refratária",
+        "Linfadenomegalia mesentérica"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "A maioria das fístulas fecha com o tratamento medicamentoso.",
+        "Gabarito: a estenose ileocecal com obstrução é a principal indicação cirúrgica.",
+        "Diarreia é tratada clinicamente.",
+        "Linfonodos respondem ao RIPE; não indicam cirurgia."
+      ],
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-21"
     }
   ],
   "rev": 1792618340425
