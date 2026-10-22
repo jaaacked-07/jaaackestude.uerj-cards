@@ -235,7 +235,8 @@ details.crx summary{font-size:13px;color:var(--wine);cursor:pointer}
 .io,.ioed{position:relative;margin:14px 0 4px;border-radius:12px;overflow:hidden;line-height:0;user-select:none;-webkit-user-select:none}
 .io img,.ioed img{width:100%;display:block;pointer-events:none}
 .ior{position:absolute;background:var(--rose);border:2px solid var(--wine);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--bg);font:700 16px/1 Inter,system-ui,sans-serif}
-.ior.iot{background:var(--wine);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--wine)}
+.ior.iot{background:var(--wine);cursor:pointer;font-size:13px}
+.ior.iot.peek{background:transparent;border:3px dashed var(--wine);color:transparent}
 .ior.rev{background:transparent;border:3px solid var(--wine)}
 .ior.ed{opacity:.85}.ior.drawing{opacity:.5}
 .ior.ed span{font-size:12px}
@@ -422,7 +423,7 @@ async function carregar(){
     if(r.ok){const j=await r.json(); if((j.rev||0)>=((base&&base.rev)||0)){localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}}
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
-  migrarMarcasCtx();
+  migrarMarcasCtx(); migrarIO();
 }
 
 /* ===== Revisão estilo Anki, comprimida até a prova ===== */
@@ -499,6 +500,15 @@ const nivel=xp=>Math.floor(Math.sqrt(xp/60))+1;
 function marcarStreak(){ S.dias[hoje()]=1; recalc(); }
 function addXP(n){ S.xpDev[DEV]=(S.xpDev[DEV]||0)+n; recalc(); }
 /* marcações antigas feitas no contexto (gravadas no card) passam para o contexto */
+/* oclusão antiga (1 card por área) → 1 card só por imagem */
+function migrarIO(){
+  const u=Date.now(), g={}; let mudou=false;
+  (S.extra||[]).forEach(x=>{ if(x.tipo==='io'&&!x.del&&/-o\d+$/.test(x.id)) (g[x.grupo]=g[x.grupo]||[]).push(x); });
+  Object.entries(g).forEach(([gid,xs])=>{ const a=xs[0], n=(a.rects||[]).length;
+    xs.forEach(x=>{x.del=true;x.u=u;}); const c={...a,id:gid,u,frente:(a.perg||'Oclusão de imagem')+' · '+n+' área'+(n>1?'s':'')}; delete c.n; delete c.del;
+    S.extra=S.extra.filter(x=>x.id!==gid); S.extra.push(c); mudou=true; });
+  if(mudou){ save(); reaplicar(); }
+}
 function migrarMarcasCtx(){
   if(!S.marks||!CARDS.length) return; let mudou=false;
   const pl=t=>String(t||'').replace(/\*\*/g,'');
@@ -1477,7 +1487,7 @@ function clozeHTML(t,n,rev){
 }
 const czPlano=(t,n)=>String(t||'').replace(CZ_RE,(m,k,ans,dica)=>+k===n?'[…]':ans).replace(/\*\*/g,'').replace(/\n+/g,' ').trim();
 function ioHTML(c,rev){
-  return `<div class="io"><img src="${esc(imgSrc(c.img))}" alt="">${(c.rects||[]).map((r,i)=>`<div class="ior ${i===c.n?(rev?'rev':'iot'):''}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%">${i===c.n&&!rev?'?':''}</div>`).join('')}</div>`;
+  return `<div class="io"><img src="${esc(imgSrc(c.img))}" alt="">${(c.rects||[]).map((r,i)=>`<div class="ior ${rev?'rev':'iot'}" ${rev?'':'data-iop role="button"'} style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%">${rev?'':i+1}</div>`).join('')}</div>`;
 }
 function frenteHTML(c){
   if(c.tipo==='cloze') return `<div class="q czq" id="fq">${clozeHTML(c.texto,c.n,false)}</div>`;
@@ -1516,7 +1526,7 @@ function pCriar(){
   if(T==='io') campos=`
     <div class="tm">Imagem</div>
     ${CR.img?`<div class="ioed" id="ioed"><img src="${esc(imgSrc(CR.img))}" alt="" draggable="false">${CR.rects.map((r,i)=>`<div class="ior ed" data-r="${i}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%"><span>${i+1}</span><button data-rx="${i}" aria-label="Apagar">×</button></div>`).join('')}</div>
-      <p class="mute small" style="margin-top:6px">Arraste sobre a imagem para cobrir cada estrutura · cada retângulo vira 1 card · × apaga.</p>
+      <p class="mute small" style="margin-top:6px">Arraste sobre a imagem para cobrir cada estrutura · tudo fica num card só · × apaga.</p>
       <button class="link" id="iotroca" style="margin-top:4px">trocar imagem</button>`
     :`<button class="drop" id="iopick">Cole a imagem (Ctrl+V) ou toque para escolher</button>`}
     <div class="tm">Pergunta (opcional)</div><textarea class="ned cr" id="cp" data-k="perg" style="min-height:48px" placeholder="O que está oculto?">${esc(CR.perg)}</textarea>
@@ -1616,7 +1626,7 @@ function montarCards(previa){
   if(CR.tipo==='cz'){ const ns=czNums(CR.texto); if(!ns.length){ toast('Esconda pelo menos uma parte com […]'); return null; }
     return ns.map(n=>({...base,id:g+'-c'+n,grupo:g,tipo:'cloze',texto:CR.texto.trim(),n,frente:czPlano(CR.texto,n).slice(0,140),verso:CR.verso.trim(),...(vis?{visual:vis}:{})})); }
   if(!CR.img){ toast('Cole ou escolha uma imagem'); return null; } if(!CR.rects.length){ toast('Cubra pelo menos uma estrutura'); return null; }
-  return CR.rects.map((r,i)=>({...base,id:g+'-o'+(i+1),grupo:g,tipo:'io',img:CR.img,rects:CR.rects,n:i,perg:CR.perg.trim(),frente:(CR.perg.trim()||'Oclusão de imagem')+' · '+(i+1),verso:CR.verso.trim()}));
+  return [{...base,id:g,grupo:g,tipo:'io',img:CR.img,rects:CR.rects,perg:CR.perg.trim(),frente:(CR.perg.trim()||'Oclusão de imagem')+' · '+CR.rects.length+' área'+(CR.rects.length>1?'s':''),verso:CR.verso.trim()}];
 }
 async function subirImgCard(dataUrl,nome){
   const tk=ghTok(); if(!tk) return null;
@@ -1654,6 +1664,8 @@ function abrirEdicaoMeu(id){
   if(r.tipo==='cloze') CR.texto=irm[0].texto;
   fecharFolha(); if(SS) sair(); ir('criar');
 }
+/* oclusão: tocar numa área antes da resposta espia só ela */
+document.addEventListener('click',e=>{ const r=e.target.closest('[data-iop]'); if(r) r.classList.toggle('peek'); });
 /* N = novo card (fora de campos de texto) · colar imagem na aba Criar */
 document.addEventListener('keydown',e=>{
   if(e.key.toLowerCase()!=='n'||e.ctrlKey||e.metaKey||e.altKey||SS||$('#sheet')) return;
