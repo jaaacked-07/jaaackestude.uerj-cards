@@ -5023,7 +5023,8 @@
       },
       "pegadinha": "A manometria não confirma o refluxo — ela serve para escolher a técnica e excluir acalasia. Quem confirma é a pHmetria.",
       "fonte": "SAGES Guidelines (hiatal hernia / GERD) / Sabiston",
-      "add": "2026-10-21"
+      "add": "2026-10-21",
+      "fav": true
     },
     {
       "id": "hh-03",
@@ -6393,5 +6394,5 @@
       "add": "2026-10-21"
     }
   ],
-  "rev": 1792642285735
+  "rev": 1792642395655
 }
