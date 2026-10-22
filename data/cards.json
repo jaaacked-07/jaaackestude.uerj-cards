@@ -6257,7 +6257,8 @@
       "pegadinha": "Ligadura em imunossuprimido ou anticoagulado: cuidado. Dor intensa + febre + retenção urinária após ligadura = sepse pélvica (emergência).",
       "uerj": "Cobra a escolha do tratamento pelo grau descrito no caso (prolapso que volta sozinho = II → ligadura).",
       "fonte": "ASCRS Clinical Practice Guidelines — Hemorrhoids (2018/2024)",
-      "add": "2026-10-21"
+      "add": "2026-10-21",
+      "fav": true
     },
     {
       "id": "hemor-03",
@@ -6392,5 +6393,5 @@
       "add": "2026-10-21"
     }
   ],
-  "rev": 1792635657284
+  "rev": 1792642285735
 }
