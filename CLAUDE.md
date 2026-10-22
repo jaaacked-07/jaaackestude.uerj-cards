@@ -64,7 +64,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - Corrigir o que a anotação tiver de errado; conferir fatos duvidosos (portarias, doses, classificações) na fonte oficial vigente antes de escrever.
 - Frente curta e objetiva.
 - **Verso direto, mas BEM EXPLICADO e SEMPRE ESTRUTURADO** (ela não suporta texto corrido, uma frase atrás da outra):
-  - 1ª linha: a resposta direta, com o termo-chave em `**negrito**`.
+  - 1ª linha: a resposta direta, com o termo-chave em `**negrito**`. **Todo card flash começa assim** (1 a 3 linhas curtas, sem `- ` e sem terminar em `:`): o app mostra esse bloco em DESTAQUE como "resposta para lembrar"; o que vem depois da linha em branco aparece como explicação.
   - Linha em branco (`\n\n`) e depois a explicação em **tópicos** (linhas começando com `- `), uma ideia por linha.
   - Mudou de assunto/definição dentro do card (ex.: "Por quê:", "Conduta:", "Via:") → nova linha em branco + rótulo curto + tópicos.
   - Cada item de classificação em sua própria linha: `- **IIA** → ...` / `- **IIB** → ...`.

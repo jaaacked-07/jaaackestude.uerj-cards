@@ -322,7 +322,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
-      "verso": "Todas estas ESTÃO na lista:\n\n- Epilepsia\n- Úlcera gastrintestinal\n- Angina\n- Insuficiência cardíaca\n- AVC (doença cerebrovascular)\n- DIP",
+      "verso": "**Todas estas ESTÃO na lista de ICSAP.**\n\n- Epilepsia\n- Úlcera gastrintestinal\n- Angina\n- Insuficiência cardíaca\n- AVC (doença cerebrovascular)\n- DIP",
       "pegadinha": "A banca coloca essas como distratores achando que você vai excluir. Elas entram!",
       "fonte": "Portaria SAS/MS 221/2008",
       "add": "2026-10-20",
@@ -474,7 +474,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Rovsing × Dunphy: qual é qual?",
-      "verso": "- Os dois indicam **irritação peritoneal**.\n- Nenhum define a posição do apêndice.",
+      "verso": "**Rovsing:** palpar a FIE → dói a FID.\n**Dunphy:** tossir → dói a FID.\n\n- Os dois indicam **irritação peritoneal**.\n- Nenhum define a posição do apêndice.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -840,7 +840,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
-      "verso": "A FIGO estadia pelo **quanto o tumor andou para fora do colo**:\n\n- **I** → fica no colo\n- **II** → sai do útero (vagina alta ou paramétrio)\n- **III** → vagina baixa, parede pélvica, rim (hidronefrose) ou linfonodos\n- **IV** → sai da pelve ou invade bexiga/reto\n\nDesde 2018:\n- Imagem e patologia podem ser usadas em qualquer estádio (antes era só clínico).\n- Na dúvida, fica-se com o estádio menor.",
+      "verso": "**Quanto o tumor andou para fora do colo.**\n\n- **I** → fica no colo\n- **II** → sai do útero (vagina alta ou paramétrio)\n- **III** → vagina baixa, parede pélvica, rim (hidronefrose) ou linfonodos\n- **IV** → sai da pelve ou invade bexiga/reto\n\nDesde 2018:\n- Imagem e patologia podem ser usadas em qualquer estádio (antes era só clínico).\n- Na dúvida, fica-se com o estádio menor.",
       "fonte": "FIGO 2018 (Int J Gynaecol Obstet)",
       "add": "2026-10-20",
       "uerj": "Em prova de residência (UERJ inclusive), o estadiamento quase sempre vem dentro de um caso clínico: a questão dá um achado (TC, exame, biópsia) e pede o estádio ou a conduta. Treine o raciocínio achado → estádio → tratamento.",
@@ -914,7 +914,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "IIA × IIB: qual a diferença e por que importa tanto?",
-      "verso": "- **IIA** → 2/3 superiores da vagina, **sem** paramétrio\n  - IIA1 → ≤ 4 cm\n  - IIA2 → > 4 cm\n- **IIB** → **paramétrio invadido**, sem chegar à parede pélvica.\n\nPor que importa:\n- O paramétrio é o divisor de águas do tratamento.\n- Até IIA1 → ainda dá para operar (histerectomia radical).\n- A partir do IIB → quimiorradiação.",
+      "verso": "**IIB = paramétrio invadido → não opera mais (quimiorradiação).**\n\n- **IIA** → 2/3 superiores da vagina, **sem** paramétrio\n  - IIA1 → ≤ 4 cm\n  - IIA2 → > 4 cm\n- **IIB** → **paramétrio invadido**, sem chegar à parede pélvica.\n\nPor que importa:\n- O paramétrio é o divisor de águas do tratamento.\n- Até IIA1 → ainda dá para operar (histerectomia radical).\n- A partir do IIB → quimiorradiação.",
       "visual": [
         {
           "tipo": "img",
@@ -947,7 +947,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio III: o que coloca o tumor em IIIA, IIIB e IIIC?",
-      "verso": "Lógica do IIIB:\n- O ureter passa colado ao paramétrio.\n- Se o tumor o obstrui, já chegou perto da parede pélvica.",
+      "verso": "**IIIA = vagina baixa. IIIB = parede pélvica/hidronefrose.**\n**IIIC = linfonodo.**\n\nLógica do IIIB:\n- O ureter passa colado ao paramétrio.\n- Se o tumor o obstrui, já chegou perto da parede pélvica.",
       "visual": [
         {
           "tipo": "tabela",
@@ -998,7 +998,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estádio IV: IVA × IVB",
-      "verso": "- **IVA** → invasão da **mucosa** da bexiga ou do reto, comprovada por biópsia.\n- **IVB** → metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA:\n- Precisa invadir a mucosa.\n- Não basta o tumor encostar no órgão.",
+      "verso": "**IVA = mucosa de bexiga/reto. IVB = à distância.**\n\n- **IVA** → invasão da **mucosa** da bexiga ou do reto, comprovada por biópsia.\n- **IVB** → metástase à distância (fora da pelve verdadeira).\n\nPara ser IVA:\n- Precisa invadir a mucosa.\n- Não basta o tumor encostar no órgão.",
       "pegadinha": "Edema bolhoso da bexiga na cistoscopia NÃO classifica como IVA.",
       "fonte": "FIGO 2018",
       "add": "2026-10-20",
@@ -1160,7 +1160,7 @@
       "tema": "Sangramento uterino",
       "sub": "Sangramento uterino anormal",
       "frente": "Classificação FIGO de sangramento uterino anormal (PALM-COEIN): o que significa cada letra?",
-      "verso": "Como usar:\n- Primeiro procure lesão (**PALM**): aparece no ultrassom, histeroscopia ou biópsia.\n- Se não achar, pense nas causas sem lesão visível (**COEIN**).\n- A paciente pode ter mais de uma letra ao mesmo tempo.",
+      "verso": "**PALM = estruturais (com lesão). COEIN = não estruturais.**\n\nComo usar:\n- Primeiro procure lesão (**PALM**): aparece no ultrassom, histeroscopia ou biópsia.\n- Se não achar, pense nas causas sem lesão visível (**COEIN**).\n- A paciente pode ter mais de uma letra ao mesmo tempo.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -1591,7 +1591,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Qual biópsia usar em cada lesão de mama?",
-      "verso": "Por quê:\n- **Core biopsy** → dá histologia: diferencia in situ × invasivo e permite imuno-histoquímica.\n- **PAAF** → só citologia.",
+      "verso": "**Sólido → core biopsy. Cisto → PAAF. Microcalcificação → vácuo (mamotomia).**\n\nPor quê:\n- **Core biopsy** → dá histologia: diferencia in situ × invasivo e permite imuno-histoquímica.\n- **PAAF** → só citologia.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1840,7 +1840,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Diferencie DIP I, DIP II e DIP III (umbilical): causa e relação com a contração.",
-      "verso": "Por que a DIP II vem atrasada:\n- O feto só sente a queda de O2 **depois** do pico da contração (decalagem > 20 s).\n\nDIP I:\n- Reflexo vagal: começa e termina com a contração (em espelho) — fisiológica.",
+      "verso": "**DIP I = cabeça. DIP II = placenta (hipóxia). DIP III = cordão.**\n\nPor que a DIP II vem atrasada:\n- O feto só sente a queda de O2 **depois** do pico da contração (decalagem > 20 s).\n\nDIP I:\n- Reflexo vagal: começa e termina com a contração (em espelho) — fisiológica.",
       "visual": [
         {
           "tipo": "svg",
@@ -6392,5 +6392,5 @@
       "add": "2026-10-21"
     }
   ],
-  "rev": 1792618340425
+  "rev": 1792635657284
 }
