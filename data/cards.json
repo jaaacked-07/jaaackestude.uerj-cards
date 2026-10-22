@@ -6623,7 +6623,8 @@
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 200\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"15\" y=\"150\" width=\"110\" height=\"44\" rx=\"10\" fill=\"var(--rose-soft)\"/><text x=\"32\" y=\"178\" font-size=\"15\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">I</text><text x=\"62\" y=\"177\" font-size=\"9.5\" font-weight=\"500\" fill=\"var(--wine)\" text-anchor=\"start\">leve</text><rect x=\"15\" y=\"95\" width=\"205\" height=\"44\" rx=\"10\" fill=\"#e8c4b0\"/><text x=\"32\" y=\"123\" font-size=\"15\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">II</text><text x=\"62\" y=\"122\" font-size=\"9.5\" font-weight=\"500\" fill=\"var(--wine)\" text-anchor=\"start\">moderada: leuco > 18 mil, massa, > 72 h</text><rect x=\"15\" y=\"40\" width=\"300\" height=\"44\" rx=\"10\" fill=\"var(--wine)\"/><text x=\"32\" y=\"68\" font-size=\"15\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"start\">III</text><text x=\"62\" y=\"67\" font-size=\"9.5\" font-weight=\"500\" fill=\"var(--bg)\" text-anchor=\"start\">grave: disfunção orgânica</text><text x=\"330\" y=\"40\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"end\">colecistostomia</text><text x=\"330\" y=\"190\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"end\">colecistectomia precoce</text></svg>",
         "legenda": "Gravidade da colecistite pelos critérios de Tóquio 2018."
-      }
+      },
+      "fav": true
     },
     {
       "id": "colec-q1",
@@ -7005,5 +7006,5 @@
       }
     }
   ],
-  "rev": 1792644804870
+  "rev": 1792644950007
 }
