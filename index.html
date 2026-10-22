@@ -344,6 +344,16 @@ mark.hl{color:inherit;border-radius:3px;padding:0 1px;cursor:pointer;-webkit-box
 mark.hl-y{background:rgba(250,214,80,.55)}mark.hl-g{background:rgba(120,200,140,.45)}mark.hl-p{background:rgba(240,150,175,.45)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) mark.hl-y{background:rgba(250,214,80,.35)}:root:not([data-theme="light"]) mark.hl-g{background:rgba(120,200,140,.32)}:root:not([data-theme="light"]) mark.hl-p{background:rgba(240,150,175,.32)}}
 .hlz,.hlz *{-webkit-user-select:text;user-select:text}
+.mtfab{position:fixed;right:14px;bottom:calc(92px + env(safe-area-inset-bottom));z-index:65;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.mtfab.alto{bottom:calc(104px + env(safe-area-inset-bottom))}
+.mtfab .mtb{width:46px;height:46px;border-radius:50%;background:var(--card);color:var(--wine);box-shadow:var(--shadow),0 4px 14px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;border:2px solid transparent}
+.mtfab.on .mtb{color:var(--ink)}
+.mtfab[data-c="y"] .mtb{background:#F2D35B}.mtfab[data-c="g"] .mtb{background:#7FC995}.mtfab[data-c="p"] .mtb{background:#EE97AE}
+.mtfab .mtops{display:flex;gap:6px;align-items:center;background:var(--ink);padding:6px 8px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.mtfab .mtops.hide{display:none}
+.mtfab .mtops button{width:28px;height:28px;border-radius:50%;border:2px solid rgba(255,255,255,.25)}
+.mtfab .mtops .y{background:#F2D35B}.mtfab .mtops .g{background:#7FC995}.mtfab .mtops .p{background:#EE97AE}
+.mtfab .mtops .off{width:auto;border:0;background:none;color:var(--bg);font-size:12px;font-weight:600;padding:0 4px}
 .hltool{position:fixed;z-index:70;display:flex;gap:6px;align-items:center;background:var(--ink);padding:6px 8px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);transform:translateX(-50%)}
 .hltool button{width:26px;height:26px;border-radius:50%;border:2px solid rgba(255,255,255,.25)}
 .hltool .y{background:#F2D35B}.hltool .g{background:#7FC995}.hltool .p{background:#EE97AE}
@@ -1694,7 +1704,7 @@ document.addEventListener('paste',e=>{
 /* ===== Sessão ===== */
 let SS=null, CFSTOP=false;
 function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f.offsetHeight+40)+'px'}
-new MutationObserver(()=>{ajustaPe();aplicarZonas()}).observe(document.body,{childList:true,subtree:true});
+new MutationObserver(()=>{ajustaPe();aplicarZonas();fabMT()}).observe(document.body,{childList:true,subtree:true});
 function sessao(ids,modo,prev,nome){
   ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
   SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||''};
@@ -1816,7 +1826,30 @@ function mostrarFerr(rect,soApagar){
 }
 function esconderFerr(){ if(HLT) HLT.style.display='none'; HLR=null; MARCA_ALVO=null; }
 let selT=null, MARCA_ALVO=null;
+/* Modo marca-texto: escolhe a cor antes e só selecionar já marca */
+let MT=null, MTT=null, MDOWN=false; try{MT=localStorage.getItem(LS+'.mt')||null}catch(e){}
+const MT_SVG='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l5 5-9 9H6v-5z"/><path d="M4 21h8"/></svg>';
+function fabMT(){
+  let f=$('#mtfab'); const tem=!!document.querySelector('.hlz');
+  if(!tem){ if(f) f.remove(); return; }
+  if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
+    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><button class="mtb" aria-label="Marca-texto">${MT_SVG}</button>`;
+    f.querySelector('.mtb').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
+    f.querySelectorAll('[data-mc]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ MT=b.dataset.mc||null; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(e){} f.querySelector('.mtops').classList.add('hide'); fabMT(); toast(MT?'Marca-texto ligado: é só selecionar':'Marca-texto desligado'); }; });
+    document.body.appendChild(f); }
+  if(f.dataset.c!==(MT||'')){ f.dataset.c=MT||''; f.classList.toggle('on',!!MT); }
+  f.classList.toggle('alto',!!(SS||$('#sheet')));
+}
+function marcarDireto(){
+  const sel=getSelection(); if(!MT||!sel.rangeCount||sel.isCollapsed) return;
+  const r=sel.getRangeAt(0), base=r.commonAncestorContainer.nodeType===1?r.commonAncestorContainer:r.commonAncestorContainer.parentNode;
+  if(!base.closest('.hlz')||!sel.toString().trim()) return;
+  HLR=r.cloneRange(); marcarSelecao(MT); esconderFerr();
+}
+addEventListener('mousedown',()=>{MDOWN=true},true);
+addEventListener('mouseup',()=>{MDOWN=false; if(MT) setTimeout(marcarDireto,0)},true);
 document.addEventListener('selectionchange',()=>{ clearTimeout(selT); selT=setTimeout(()=>{
+  if(MT){ esconderFerr(); clearTimeout(MTT); if(!MDOWN) MTT=setTimeout(marcarDireto,tecladoFisico()?0:650); return; }
   const sel=getSelection(); if(!sel.rangeCount||sel.isCollapsed){ if(!MARCA_ALVO) esconderFerr(); return; }
   const r=sel.getRangeAt(0), base=r.commonAncestorContainer.nodeType===1?r.commonAncestorContainer:r.commonAncestorContainer.parentNode;
   if(!base.closest('.hlz')||!sel.toString().trim()) { esconderFerr(); return; }
