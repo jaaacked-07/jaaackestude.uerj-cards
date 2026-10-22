@@ -70,7 +70,7 @@ textarea{font:inherit;color:inherit}
 
 /* nav */
 nav{position:fixed;left:0;right:0;bottom:0;gap:0!important;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 0 calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:8px;z-index:5}
-nav button{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;color:var(--mute);padding:6px 8px;min-width:62px;border-radius:12px;position:relative}
+nav button{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;color:var(--mute);padding:6px 4px;min-width:0;flex:0 1 66px;border-radius:12px;position:relative}
 nav button.on{color:var(--wine)}
 nav svg{width:24px;height:24px}
 .dot{position:absolute;top:4px;right:12px;min-width:8px;height:8px;border-radius:8px;background:var(--bad)}
@@ -220,6 +220,29 @@ textarea.note:focus{border-color:var(--rose)}
 .mine textarea,.ned{width:100%;min-height:80px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-size:15px;outline:none;margin-top:6px}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
 .tm{font-size:13px;color:var(--mute);margin:10px 0 6px}
+/* criar card */
+.kbd{display:inline-block;vertical-align:middle;font:600 11px/1 Inter,system-ui,sans-serif;color:var(--mute);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:4px 6px;margin-left:6px;letter-spacing:0}
+.seg{display:flex;background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:4px;gap:4px;margin:0 0 8px}
+.seg button{flex:1;padding:9px 4px;border-radius:10px;font-size:13px;font-weight:500;color:var(--mute)}
+.seg button.on{background:var(--wine);color:var(--bg)}
+.seg button:disabled{opacity:.35}
+.ctool{display:flex;gap:4px;margin:2px 0 -2px}
+.ctool button{min-width:34px;height:30px;border-radius:8px;background:var(--card);box-shadow:var(--shadow);font-size:14px;color:var(--ink);padding:0 8px}
+.ctool .czb{color:var(--wine);font-weight:600}
+.drop{width:100%;border:1.5px dashed var(--rose);border-radius:14px;padding:30px 14px;color:var(--wine);font-size:14px;background:var(--rose-soft)}
+details.crx{margin-top:14px}
+details.crx summary{font-size:13px;color:var(--wine);cursor:pointer}
+.io,.ioed{position:relative;margin:14px 0 4px;border-radius:12px;overflow:hidden;line-height:0;user-select:none;-webkit-user-select:none}
+.io img,.ioed img{width:100%;display:block;pointer-events:none}
+.ior{position:absolute;background:var(--rose);border:2px solid var(--wine);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--bg);font:700 16px/1 Inter,system-ui,sans-serif}
+.ior.iot{background:var(--wine);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--wine)}
+.ior.rev{background:transparent;border:3px solid var(--wine)}
+.ior.ed{opacity:.85}.ior.drawing{opacity:.5}
+.ior.ed span{font-size:12px}
+.ior.ed button{position:absolute;top:-2px;right:-2px;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;line-height:20px}
+.czq{font-size:19px;line-height:1.5}
+.czh{display:inline-block;background:var(--wine);color:var(--bg);border-radius:6px;padding:0 8px;font-weight:600}
+.czv{color:var(--wine);background:var(--rose-soft);border-radius:4px;padding:0 3px}
 .srch{width:100%;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:11px 13px;font:inherit;font-size:15px;color:var(--ink);outline:none;margin-bottom:10px}
 .nb{font-size:11.5px;font-weight:600;color:var(--wine);text-transform:uppercase;letter-spacing:.05em}
 details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:22px;list-style:none}
@@ -329,6 +352,7 @@ mark.hl-y{background:rgba(250,214,80,.55)}mark.hl-g{background:rgba(120,200,140,
   <button data-p="estudar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>Estudar</button>
   <button data-p="erros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M9 11h6M9 15h4"/></svg>Erros<i class="dot hide" id="dotE"></i></button>
   <button data-p="pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M5 15l4-4 4 3 6-7"/></svg>Porcentagem</button>
+  <button data-p="criar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg>Criar</button>
   <button data-p="anotar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>Anotar</button>
 </nav>
 <canvas id="cf"></canvas>
@@ -376,7 +400,7 @@ function setCards(base){
   LASTBASE=base||[];
   const m={};
   LASTBASE.forEach(c=>m[c.id]=c);
-  (S.extra||[]).forEach(c=>m[c.id]=c);
+  (S.extra||[]).forEach(c=>{ if(!c.del) m[c.id]=c; });
   RAW=m; const out={};
   Object.values(m).forEach(c0=>{ if(oculto(c0)) return;
     const ed=S.edit[c0.id]||{}, c={...c0,...ed}; c.area=ed.area||dArea(c0); c.tema=ed.tema||dTema(c0); c.sub=ed.sub||dSub(c0);
@@ -503,7 +527,7 @@ const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 /* ===== Visuais ===== */
 /* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
 const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
-const ctxHTML=c=>c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';
+const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -520,7 +544,7 @@ function visual(v){
   if(!v) return '';
   if(Array.isArray(v)) return v.map(visual).join('');
   if(v.tipo==='svg') return `<div class="vis vsvg">${v.svg}${v.legenda?`<div class="vcap" style="padding:8px 2px 0">${esc(v.legenda)}</div>`:''}</div>`;
-  if(v.tipo==='img') return `<div class="vis vimg"><img src="${esc(v.src)}" alt="${esc(v.legenda||'')}" loading="lazy" onerror="this.parentNode.style.display='none'">${v.legenda||v.fonte?`<div class="vcap">${esc(v.legenda||'')}${v.fonte?` · ${esc(v.fonte)}`:''}</div>`:''}</div>`;
+  if(v.tipo==='img') return `<div class="vis vimg"><img src="${esc(imgSrc(v.src))}" alt="${esc(v.legenda||'')}" loading="lazy" onerror="this.parentNode.style.display='none'">${v.legenda||v.fonte?`<div class="vcap">${esc(v.legenda||'')}${v.fonte?` · ${esc(v.fonte)}`:''}</div>`:''}</div>`;
   if(v.tipo==='tabela') return `<div class="vis"><table class="t">${v.cab&&v.cab.some(x=>x)?'<tr>'+v.cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map(c=>`<td>${esc(c)}</td>`).join('')+'</tr>').join('')}</table></div>`;
   if(v.tipo==='fluxo') return `<div class="vis flow">${v.passos.map((p,i)=>(i?'<div class="fa"></div>':'')+(Array.isArray(p)?`<div class="fr">${p.map(x=>`<div class="fn">${esc(x)}</div>`).join('')}</div>`:`<div class="fn">${esc(p)}</div>`)).join('')}</div>`;
   if(v.tipo==='vs') return `<div class="vis vs"><div class="s"><h4>${esc(v.a.t)}</h4>${v.a.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div><div class="o">×</div><div class="s"><h4>${esc(v.b.t)}</h4>${v.b.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`;
@@ -529,9 +553,9 @@ function visual(v){
   return '';
 }
 function cardCompleto(c){
-  let h=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div>`;
+  let h=tagHTML(c)+(ehFrenteOculta(c)?'':frenteHTML(c));
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${inlBr((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
-  else h+=`<div class="ans">${paras(c.verso)}${visual(c.visual)}</div>`;
+  else h+=`<div class="ans">${respHTML(c)}</div>`;
   h+=`<div class="ans">${ctxHTML(c)}</div>`;
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
@@ -549,7 +573,7 @@ function render(){
   const e=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong&&S.srs[c.id].box<3).length;
   $('#dotE').classList.toggle('hide',!e);
   const y=scrollY;
-  ({home:pHome,estudar:pEstudar,erros:pErros,pct:pPct,anotar:pAnotar})[PAG]();
+  ({home:pHome,estudar:pEstudar,erros:pErros,pct:pPct,anotar:pAnotar,criar:pCriar})[PAG]();
   if(scrollY!==y) scrollTo(0,y);
 }
 
@@ -931,7 +955,7 @@ function verOcultos(){
 /* card na folha: resposta só ao tocar */
 function folhaCard(id){
   const c=BYID[id];
-  folha(tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div>${c.tipo==='quiz'?`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}</span></div>`).join('')}</div>`:''}<div id="fr"><button class="btn ghost" id="fv" style="margin-top:22px">Mostrar resposta</button></div>`);
+  folha(tagHTML(c)+`${frenteHTML(c)}${c.tipo==='quiz'?`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}</span></div>`).join('')}</div>`:''}<div id="fr"><button class="btn ghost" id="fv" style="margin-top:22px">Mostrar resposta</button></div>`);
   $('#fv').onclick=()=>{folha(cardCompleto(c))};
 }
 
@@ -939,6 +963,7 @@ function folhaCard(id){
 const DEST_PENDENTE={};
 function editarCard(id){
   const c=BYID[id], r=RAW[id]; if(!c) return;
+  if(r&&r.meu) return abrirEdicaoMeu(id);
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Editar card</div>
     <div class="tm">Baralho</div><button class="sel" id="eb" style="margin:6px 0 4px"><span class="sv" style="font-size:14px">${esc(c.area)} › ${esc(c.tema)} › ${esc(c.sub)}</span><span class="ch">▾</span></button>
     <p class="mute small" style="margin-top:4px">Formatação: cada linha = uma linha · "- " no começo = tópico · **texto** = destaque</p>
@@ -1107,7 +1132,7 @@ function mergeProg(R){
   if(R.plan&&R.plan.v===2){ if(!S.plan||S.plan.v!==2||R.plan.date>S.plan.date) S.plan=R.plan;
     else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0);} }
   if(R.ret&&(!S.ret||(R.ret.t||0)>(S.ret.t||0))) S.ret=R.ret;
-  const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>ex[c.id]=c); S.extra=Object.values(ex);
+  const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>{ const o=ex[c.id]; if(!o||(c.u||0)>(o.u||0)) ex[c.id]=c; }); S.extra=Object.values(ex);
   recalc(); migrarMarcasCtx();
   return JSON.stringify(progSnap())!==antes;
 }
@@ -1434,6 +1459,214 @@ function folha(html){
 }
 function fecharFolha(){const s=$('#sheet');if(s)s.remove();setTimeout(focarNota,0)}
 
+/* ===== Criar card (frente e verso · cloze · oclusão de imagem) ===== */
+const AREAS=['Cirurgia','Clínica Médica','Ginecologia','Obstetrícia','Medicina Preventiva','Pediatria'];
+const CR_TIPOS={fv:'Frente e verso',cz:'Cloze',io:'Oclusão de imagem'};
+const IMGC_KEY=LS+'.imgc';
+const imgCache=()=>{try{return JSON.parse(localStorage.getItem(IMGC_KEY))||{}}catch(e){return {}}};
+const imgSrc=s=>(s&&imgCache()[s])||s;
+let CR=null;
+function crNovo(tipo){ let d=null; try{d=JSON.parse(localStorage.getItem(LS+'.crdest'))}catch(e){}
+  return {tipo:tipo||'fv',dest:d,frente:'',verso:'',fimg:[],vimg:[],texto:'',extra:'',img:null,rects:[],perg:'',peg:'',ue:'',edit:null,foco:null}; }
+/* cloze: {{c1::resposta}} ou {{c1::resposta::dica}} */
+const CZ_RE=/\{\{c(\d+)::([\s\S]*?)(?:::([\s\S]*?))?\}\}/g;
+const czNums=t=>[...new Set([...String(t||'').matchAll(CZ_RE)].map(m=>+m[1]))].sort((a,b)=>a-b);
+function clozeHTML(t,n,rev){
+  const toks=[]; const s=String(t||'').replace(CZ_RE,(m,k,ans,dica)=>{ toks.push(+k===n?(rev?`<b class="czv">${inl(ans)}</b>`:`<span class="czh">[${dica?inl(dica):'…'}]</span>`):inl(ans)); return '\u0001'+(toks.length-1)+'\u0002'; });
+  return paras(s).replace(/\u0001(\d+)\u0002/g,(m,i)=>toks[+i]);
+}
+const czPlano=(t,n)=>String(t||'').replace(CZ_RE,(m,k,ans,dica)=>+k===n?'[…]':ans).replace(/\*\*/g,'').replace(/\n+/g,' ').trim();
+function ioHTML(c,rev){
+  return `<div class="io"><img src="${esc(imgSrc(c.img))}" alt="">${(c.rects||[]).map((r,i)=>`<div class="ior ${i===c.n?(rev?'rev':'iot'):''}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%">${i===c.n&&!rev?'?':''}</div>`).join('')}</div>`;
+}
+function frenteHTML(c){
+  if(c.tipo==='cloze') return `<div class="q czq" id="fq">${clozeHTML(c.texto,c.n,false)}</div>`;
+  if(c.tipo==='io') return `<div id="fq"><div class="q serif">${inlBr(c.perg||'O que está oculto?')}</div>${ioHTML(c,false)}</div>`;
+  return `<div class="q serif">${inlBr(c.frente)}</div>${c.fvis?visual(c.fvis):''}`;
+}
+function respHTML(c){
+  if(c.tipo==='cloze') return `<div class="czq">${clozeHTML(c.texto,c.n,true)}</div>${c.verso?paras(c.verso):''}${visual(c.visual)}`;
+  if(c.tipo==='io') return `<div class="q serif">${inlBr(c.perg||'O que está oculto?')}</div>${ioHTML(c,true)}${c.verso?paras(c.verso):''}`;
+  return paras(c.verso)+visual(c.visual);
+}
+const ehFrenteOculta=c=>c.tipo==='cloze'||c.tipo==='io';
+/* contexto do baralho para cards criados por ela */
+function ctxDoBaralho(c){ if(c.contexto) return c; const o=CARDS.find(x=>x.contexto&&x.area===c.area&&x.tema===c.tema&&x.sub===c.sub); return o?{...c,contexto:o.contexto,ctxvisual:c.ctxvisual||o.ctxvisual}:c; }
+
+function pCriar(){
+  if(!CR) CR=crNovo();
+  const d=CR.dest, T=CR.tipo;
+  const tool=(cz)=>`<div class="ctool" role="toolbar">
+      <button data-f="b" title="Negrito (Ctrl+B)"><b>B</b></button>
+      <button data-f="li" title="Tópico">•</button>
+      <button data-f="sub" title="Subtópico">◦</button>
+      <button data-f="seta" title="Seta">→</button>
+      ${cz?`<button data-f="cz" class="czb" title="Ocultar (Ctrl+Shift+C)">[…]</button><button data-f="czm" class="czb" title="Ocultar com o mesmo número">[…]=</button>`:''}
+      <button data-f="img" title="Imagem">▣</button>
+    </div>`;
+  const thumbs=(arr,k)=>arr.length?`<div class="nimgs" style="justify-content:flex-start">${arr.map((s,i)=>`<div class="th"><img src="${esc(imgSrc(s))}" alt=""><button data-rm="${k}:${i}" aria-label="Remover">×</button></div>`).join('')}</div>`:'';
+  let campos='';
+  if(T==='fv') campos=`
+    <div class="tm">Frente</div>${tool()}<textarea class="ned cr" id="cf" data-k="frente" data-im="fimg" placeholder="Pergunta">${esc(CR.frente)}</textarea>${thumbs(CR.fimg,'fimg')}
+    <div class="tm">Verso</div>${tool()}<textarea class="ned cr" id="cv" data-k="verso" data-im="vimg" style="min-height:120px" placeholder="Resposta direta na 1ª linha&#10;- tópicos embaixo">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`;
+  if(T==='cz'){ const ns=czNums(CR.texto); campos=`
+    <div class="tm">Texto</div>${tool(true)}<textarea class="ned cr" id="ct" data-k="texto" data-im="vimg" style="min-height:130px" placeholder="Selecione a parte que quer esconder e toque em […]">${esc(CR.texto)}</textarea>
+    <p class="mute small" id="czinfo" style="margin-top:4px">${ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda. […] cria uma lacuna nova; […]= esconde junto com a anterior (mesmo card).'}</p>
+    <div class="tm">Extra no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" data-im="vimg" style="min-height:60px">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`; }
+  if(T==='io') campos=`
+    <div class="tm">Imagem</div>
+    ${CR.img?`<div class="ioed" id="ioed"><img src="${esc(imgSrc(CR.img))}" alt="" draggable="false">${CR.rects.map((r,i)=>`<div class="ior ed" data-r="${i}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%"><span>${i+1}</span><button data-rx="${i}" aria-label="Apagar">×</button></div>`).join('')}</div>
+      <p class="mute small" style="margin-top:6px">Arraste sobre a imagem para cobrir cada estrutura · cada retângulo vira 1 card · × apaga.</p>
+      <button class="link" id="iotroca" style="margin-top:4px">trocar imagem</button>`
+    :`<button class="drop" id="iopick">Cole a imagem (Ctrl+V) ou toque para escolher</button>`}
+    <div class="tm">Pergunta (opcional)</div><textarea class="ned cr" id="cp" data-k="perg" style="min-height:48px" placeholder="O que está oculto?">${esc(CR.perg)}</textarea>
+    <div class="tm">Explicação no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" style="min-height:60px">${esc(CR.verso)}</textarea>`;
+  $('#app').innerHTML=`<div class="wrap">
+    <h2 class="serif">${CR.edit?'Editar card':'Criar card'} <span class="kbd" title="Atalho: N">N</span></h2>
+    <div class="seg">${Object.keys(CR_TIPOS).map(k=>`<button data-t="${k}" class="${k===T?'on':''}" ${CR.edit&&k!==T?'disabled':''}>${CR_TIPOS[k]}</button>`).join('')}</div>
+    <div class="tm">Baralho</div>
+    <button class="sel" id="cb" style="margin:6px 0 2px"><span class="sv" style="font-size:14px">${d?esc(d.area)+' › '+esc(d.tema)+' › '+esc(d.sub):'<span class="mute">Escolher baralho…</span>'}</span><span class="ch">▾</span></button>
+    <div class="linkrow" style="justify-content:flex-start;margin:0 0 8px"><button class="link" id="cnb">＋ novo baralho</button></div>
+    ${campos}
+    <details class="crx" ${CR.peg||CR.ue?'open':''}><summary>Pegadinha e Na UERJ (opcional)</summary>
+      <div class="tm">Pegadinha</div><textarea class="ned cr" id="cpg" data-k="peg" style="min-height:48px">${esc(CR.peg)}</textarea>
+      <div class="tm">Na UERJ</div><textarea class="ned cr" id="cue" data-k="ue" style="min-height:48px">${esc(CR.ue)}</textarea>
+    </details>
+    <button class="btn" id="csv" style="margin-top:16px">${CR.edit?'Salvar alterações':'Salvar card'}</button>
+    ${CR.edit?'<div class="linkrow"><button class="link" id="ccan">cancelar</button><button class="link" id="cdel" style="color:var(--bad)">excluir card</button></div>':`<button class="btn ghost" id="cprev" style="margin-top:10px">Ver como fica</button>`}
+    <p class="mute small" style="text-align:center;margin-top:12px">Ctrl+Enter salva · Ctrl+B negrito · cole imagens com Ctrl+V · <b>N</b> abre esta aba</p>
+  </div>`;
+  ligarCriar();
+}
+function ligarCriar(){
+  document.querySelectorAll('.seg [data-t]').forEach(b=>b.onclick=()=>{ if(CR.edit) return; CR.tipo=b.dataset.t; pCriar(); });
+  $('#cb').onclick=()=>escolherBaralho('Baralho do card',CR.dest,d=>{ crDest(d); fecharFolha(); pCriar(); });
+  $('#cnb').onclick=novoBaralhoCriar;
+  document.querySelectorAll('textarea.cr').forEach(ta=>{
+    ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
+    ta.onfocus=()=>{ CR.foco=ta.id; };
+    ta.onkeydown=e=>{
+      if((e.ctrlKey||e.metaKey)&&e.key==='Enter'){ e.preventDefault(); salvarCriado(); }
+      else if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&e.key.toLowerCase()==='b'){ e.preventDefault(); fmt(ta,'b'); }
+      else if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='c'&&ta.id==='ct'){ e.preventDefault(); fmt(ta,e.altKey?'czm':'cz'); }
+    };
+  });
+  document.querySelectorAll('.ctool [data-f]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{
+    const ta=b.closest('.ctool').nextElementSibling; if(b.dataset.f==='img') return escolherImg(ta.dataset.im||'vimg'); fmt(ta,b.dataset.f); }; });
+  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{ const [k,i]=b.dataset.rm.split(':'); CR[k].splice(+i,1); pCriar(); });
+  const ip=$('#iopick'); if(ip) ip.onclick=()=>escolherImg('io');
+  const it=$('#iotroca'); if(it) it.onclick=()=>escolherImg('io');
+  const ed=$('#ioed'); if(ed) ligarIO(ed);
+  $('#csv').onclick=salvarCriado;
+  const pv=$('#cprev'); if(pv) pv.onclick=()=>{ const cs=montarCards(true); if(!cs) return; folha(`<div class="mute small" style="margin-bottom:8px">Prévia${cs.length>1?` · 1 de ${cs.length} cards`:''}</div>${frenteHTML(cs[0])}<div class="ans">${respHTML(cs[0])}</div>`); };
+  const cc=$('#ccan'); if(cc) cc.onclick=()=>{ CR=null; ir('estudar'); };
+  const cd=$('#cdel'); if(cd) cd.onclick=async()=>{ if(!await confirmar('Excluir este card?','Excluir','Sai das revisões em todos os aparelhos.')) return;
+    const u=Date.now(); S.extra.forEach(x=>{ if(x.grupo===CR.edit) { x.del=true; x.u=u; } }); save(); reaplicar(); CR=null; toast('Card excluído'); ir('estudar'); syncProg(); };
+  const f=CR.foco&&$('#'+CR.foco); if(f) f.focus({preventScroll:true});
+}
+function crDest(d){ CR.dest=d; try{localStorage.setItem(LS+'.crdest',JSON.stringify(d))}catch(e){} }
+function fmt(ta,k){
+  const s=ta.selectionStart,e=ta.selectionEnd,v=ta.value,sel=v.slice(s,e);
+  if(k==='b'){ if(sel){ ta.setRangeText('**'+sel+'**',s,e,'end'); } else { ta.setRangeText('****',s,e,'start'); ta.setSelectionRange(s+2,s+2); } }
+  else if(k==='li'||k==='sub'){ const ls=v.lastIndexOf('\n',s-1)+1, le=v.indexOf('\n',e), fim=le<0?v.length:le, p=k==='li'?'- ':'  - ';
+    ta.setRangeText(v.slice(ls,fim).split('\n').map(l=>p+l.replace(/^\s*[-•◦]\s+/,'')).join('\n'),ls,fim,'end'); }
+  else if(k==='seta') ta.setRangeText(' → ',s,e,'end');
+  else if(k==='cz'||k==='czm'){ const ns=czNums(v), n=k==='czm'&&ns.length?Math.max(...ns):(ns.length?Math.max(...ns)+1:1);
+    if(sel) ta.setRangeText(`{{c${n}::${sel}}}`,s,e,'end'); else { ta.setRangeText(`{{c${n}::}}`,s,e,'start'); const p=s+`{{c${n}::`.length; ta.setSelectionRange(p,p); } }
+  ta.dispatchEvent(new Event('input')); ta.focus();
+}
+function escolherImg(alvo){
+  const i=document.createElement('input'); i.type='file'; i.accept='image/*'; i.multiple=alvo!=='io';
+  i.onchange=()=>addImgsCriar([...i.files],alvo); i.click();
+}
+async function addImgsCriar(files,alvo){
+  for(const f of files){ if(!/^image\//.test(f.type)) continue; let u; try{u=await comprimir(f)}catch(e){toast('Não consegui ler essa imagem');continue}
+    if(alvo==='io'){ CR.img=u; CR.rects=[]; break; } else CR[alvo].push(u); }
+  pCriar(); toast(alvo==='io'?'Imagem pronta: cubra as estruturas':'Imagem anexada');
+}
+function ligarIO(ed){
+  ed.style.touchAction='none';
+  let ini=null, box=null;
+  const pt=e=>{ const r=ed.getBoundingClientRect(); return {x:Math.max(0,Math.min(100,(e.clientX-r.left)/r.width*100)),y:Math.max(0,Math.min(100,(e.clientY-r.top)/r.height*100))}; };
+  ed.onpointerdown=e=>{ if(e.target.closest('[data-rx]')) return; e.preventDefault(); ed.setPointerCapture(e.pointerId); ini=pt(e); box=document.createElement('div'); box.className='ior ed drawing'; ed.appendChild(box); };
+  ed.onpointermove=e=>{ if(!ini) return; const p=pt(e); Object.assign(box.style,{left:Math.min(ini.x,p.x)+'%',top:Math.min(ini.y,p.y)+'%',width:Math.abs(p.x-ini.x)+'%',height:Math.abs(p.y-ini.y)+'%'}); };
+  ed.onpointerup=e=>{ if(!ini) return; const p=pt(e), r={x:+Math.min(ini.x,p.x).toFixed(2),y:+Math.min(ini.y,p.y).toFixed(2),w:+Math.abs(p.x-ini.x).toFixed(2),h:+Math.abs(p.y-ini.y).toFixed(2)}; ini=null;
+    if(r.w>1.5&&r.h>1.5) CR.rects.push(r); pCriar(); };
+  ed.querySelectorAll('[data-rx]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); CR.rects.splice(+b.dataset.rx,1); pCriar(); });
+}
+function novoBaralhoCriar(){
+  escolha('Grande área',AREAS.map(a=>({v:a,t:a})),CR.dest&&CR.dest.area,a=>{
+    const temas=[...new Set([...(MATERIAS_FIXAS[a]||[]),...CARDS.filter(c=>c.area===a).map(c=>c.tema),...S.decks.filter(x=>x.area===a).map(x=>x.tema)])].sort(abc);
+    const ops=temas.map(t=>({v:t,t})); if(!MATERIAS_FIXAS[a]) ops.push({v:'+',t:'＋ Nova matéria'});
+    const pedirSub=t=>pedirNome('Novo baralho em '+t,'Um baralho por tema grande. Ex.: Abdome agudo inflamatório — Apendicite',v=>{
+      const ex=[...CARDS,...S.decks].find(x=>x.area===a&&x.tema===t&&norm(x.sub)===norm(v)); const sub=ex?ex.sub:v.trim();
+      if(!ex) S.decks.push({id:Date.now(),area:a,tema:t,sub}); save(); crDest({area:a,tema:t,sub}); fecharFolha(); pCriar(); toast(ex?'Esse baralho já existia: vou usar ele':'Baralho criado'); });
+    setTimeout(()=>escolha('Matéria em '+a,ops,null,t=>{ if(t!=='+') return setTimeout(()=>pedirSub(t),0);
+      setTimeout(()=>pedirNome('Nova matéria em '+a,'Ex.: Mastologia',m=>{ const ex=temas.find(x=>norm(x)===norm(m)); setTimeout(()=>pedirSub(ex||m.trim()),0); }),0); }),0);
+  });
+}
+function montarCards(previa){
+  const d=CR.dest; if(!d&&!previa){ toast('Escolha o baralho'); return null; }
+  const base={area:d?d.area:'',tema:d?d.tema:'',sub:d?d.sub:'',meu:true,add:hoje(),fonte:'Criado por mim'};
+  if(CR.peg.trim()) base.pegadinha=CR.peg.trim(); if(CR.ue.trim()) base.uerj=CR.ue.trim();
+  const vis=CR.vimg.length?CR.vimg.map(s=>({tipo:'img',src:s})):undefined;
+  const g=CR.edit||('meu-'+Date.now().toString(36));
+  if(CR.tipo==='fv'){ if(!CR.frente.trim()||(!CR.verso.trim()&&!CR.vimg.length)){ toast('Preencha frente e verso'); return null; }
+    return [{...base,id:g,grupo:g,tipo:'flash',frente:CR.frente.trim(),verso:CR.verso.trim(),...(vis?{visual:vis}:{}),...(CR.fimg.length?{fvis:CR.fimg.map(s=>({tipo:'img',src:s}))}:{})}]; }
+  if(CR.tipo==='cz'){ const ns=czNums(CR.texto); if(!ns.length){ toast('Esconda pelo menos uma parte com […]'); return null; }
+    return ns.map(n=>({...base,id:g+'-c'+n,grupo:g,tipo:'cloze',texto:CR.texto.trim(),n,frente:czPlano(CR.texto,n).slice(0,140),verso:CR.verso.trim(),...(vis?{visual:vis}:{})})); }
+  if(!CR.img){ toast('Cole ou escolha uma imagem'); return null; } if(!CR.rects.length){ toast('Cubra pelo menos uma estrutura'); return null; }
+  return CR.rects.map((r,i)=>({...base,id:g+'-o'+(i+1),grupo:g,tipo:'io',img:CR.img,rects:CR.rects,n:i,perg:CR.perg.trim(),frente:(CR.perg.trim()||'Oclusão de imagem')+' · '+(i+1),verso:CR.verso.trim()}));
+}
+async function subirImgCard(dataUrl,nome){
+  const tk=ghTok(); if(!tk) return null;
+  const path=`data/img/${nome}.jpg`, url=GH_API.replace('data/notas.json',path);
+  try{ const w=await fetch(url,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify({message:'Imagem de card',content:dataUrl.split(',')[1],branch:'main'})}); if(!w.ok) return null; }catch(e){ return null; }
+  try{ const c=imgCache(); c[path]=dataUrl; const ks=Object.keys(c); while(ks.length>40) delete c[ks.shift()]; localStorage.setItem(IMGC_KEY,JSON.stringify(c)); }catch(e){}
+  return path;
+}
+let SALVANDO=false;
+async function salvarCriado(){
+  if(SALVANDO) return; const cs=montarCards(false); if(!cs) return; SALVANDO=true;
+  const btn=$('#csv'); if(btn){ btn.disabled=true; btn.textContent='Salvando…'; }
+  /* imagens novas sobem para o repositório (data/img); sem conexão ficam no próprio card */
+  const g=cs[0].grupo, map={}; let k=0, falhou=false;
+  const sobe=async s=>{ if(!/^data:/.test(s)) return s; if(map[s]) return map[s]; const p=await subirImgCard(s,g+'-'+(k++)); if(!p) falhou=true; return map[s]=p||s; };
+  for(const c of cs){
+    if(c.img) c.img=await sobe(c.img);
+    for(const f of ['visual','fvis']) if(Array.isArray(c[f])) for(const v of c[f]) v.src=await sobe(v.src);
+  }
+  const u=Date.now();
+  if(CR.edit){ S.extra.forEach(x=>{ if(x.grupo===CR.edit&&!cs.some(c=>c.id===x.id)){ x.del=true; x.u=u; } }); S.extra=S.extra.filter(x=>!cs.some(c=>c.id===x.id)); }
+  cs.forEach(c=>{ c.u=u; S.extra.push(c); });
+  S.decks=S.decks.filter(x=>!(x.area===cs[0].area&&x.tema===cs[0].tema&&x.sub===cs[0].sub)||(S.decksDel[x.id]=1,false));
+  save(); reaplicar(); SALVANDO=false;
+  const ed=CR.edit; toast(ed?'Card atualizado':(cs.length>1?cs.length+' cards criados':'Card criado')+(falhou?' (imagem só neste aparelho até conectar)':''));
+  const tipo=CR.tipo; CR=crNovo(tipo); CR.foco={fv:'cf',cz:'ct',io:null}[tipo];
+  if(ed){ CR=null; ir('estudar'); } else pCriar();
+  syncProg();
+}
+function abrirEdicaoMeu(id){
+  const r=RAW[id]; if(!r) return; const g=r.grupo||r.id, irm=S.extra.filter(x=>(x.grupo||x.id)===g&&!x.del);
+  CR={...crNovo(),tipo:r.tipo==='cloze'?'cz':r.tipo==='io'?'io':'fv',dest:{area:r.area,tema:r.tema,sub:r.sub},edit:g,
+    frente:r.frente||'',verso:r.verso||'',texto:r.texto||'',img:r.img||null,rects:(r.rects||[]).map(x=>({...x})),perg:r.perg||'',peg:r.pegadinha||'',ue:r.uerj||'',
+    fimg:(r.fvis||[]).map(v=>v.src),vimg:(r.visual?[].concat(r.visual):[]).filter(v=>v.tipo==='img').map(v=>v.src)};
+  if(r.tipo==='cloze') CR.texto=irm[0].texto;
+  fecharFolha(); if(SS) sair(); ir('criar');
+}
+/* N = novo card (fora de campos de texto) · colar imagem na aba Criar */
+document.addEventListener('keydown',e=>{
+  if(e.key.toLowerCase()!=='n'||e.ctrlKey||e.metaKey||e.altKey||SS||$('#sheet')) return;
+  const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return;
+  e.preventDefault(); if(PAG!=='criar'||!CR||CR.edit) CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
+});
+document.addEventListener('paste',e=>{
+  if(PAG!=='criar'||SS||$('#sheet')) return;
+  const fs=[...(e.clipboardData||{}).items||[]].filter(i=>i.kind==='file'&&/^image\//.test(i.type)).map(i=>i.getAsFile());
+  if(!fs.length) return; e.preventDefault();
+  const a=document.activeElement; addImgsCriar(fs,CR.tipo==='io'?'io':(a&&a.dataset&&a.dataset.im)||'vimg');
+});
+
 /* ===== Sessão ===== */
 let SS=null, CFSTOP=false;
 function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f.offsetHeight+40)+'px'}
@@ -1471,7 +1704,7 @@ function proximoCard(){
   const c=BYID[SS.fila[0]];
   $('#sb').scrollTop=0;
   const w=$('#sw'), f=$('#sf');
-  w.innerHTML=tagHTML(c)+`<div class="q serif">${esc(c.frente)}</div><div id="ar"></div>`;
+  w.innerHTML=tagHTML(c)+frenteHTML(c)+`<div id="ar"></div>`;
   if(c.tipo==='quiz'){
     $('#ar').innerHTML=`<div class="opts">${c.opcoes.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c hide">${inlBr((c.comentarios||[])[i]||'')}</span></span></button>`).join('')}</div>`;
     f.innerHTML='';
@@ -1486,7 +1719,8 @@ function proximoCard(){
   } else {
     f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
     $('#sh').onclick=()=>{
-      $('#ar').innerHTML=`<div class="ans hlz" data-hl="${c.id}">${paras(c.verso)}${visual(c.visual)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
+      if(ehFrenteOculta(c)&&$('#fq')) $('#fq').remove();
+      $('#ar').innerHTML=`<div class="ans hlz" data-hl="${c.id}">${respHTML(c)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
       f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };
