@@ -10,6 +10,19 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 - Cards que ela cria pela aba **Criar** (frente e verso, cloze, oclusão de imagem) ficam em `data/progresso.json` → `extra` (com `meu: true`). Nunca edite; só leia para não criar card repetido.
 - `data/chave.json` — acesso do app criptografado com o usuário dela. **Nunca editar nem apagar.**
 
+## ⚠️ PADRÃO OBRIGATÓRIO DE TODO CARD (checklist — nada sai sem isso)
+
+1. **Foco UERJ:** escreva como a UERJ cobra (caso clínico curto, conduta, pegadinha da banca). Fonte = bibliografia/diretriz **vigente** (ver "Qualidade do conteúdo"). Campo `uerj` sempre que der e bloco **"Como cai:"** no contexto.
+2. **Contexto do tema (`contexto`) em TODOS os cards — PROIBIDO card sem contexto.** Mesmo texto para o baralho inteiro; se o baralho já existe, copie o contexto dele.
+3. **Ilustração do contexto (`ctxvisual`) em TODOS os cards** (mesma do baralho): imagem real se existir; senão esquema SVG.
+4. **Visual no card (`visual`) sempre que possível:** imagem real > fluxograma > tabela > comparação (vs) > lista/grupos. Escore/classificação/conduta por etapas → SEMPRE tabela ou fluxo.
+5. **Resposta em destaque:** o verso começa com a resposta direta em `**negrito**` — **UMA ideia por linha** (nada de "A. B." ou "A; B" ou "A · B" na mesma linha: cada um vai para a linha de baixo). Pode ser seguida de tópicos `- ` no mesmo bloco quando a resposta é uma lista.
+6. **Explicação só em tópicos:** depois de uma linha em branco, rótulo curto terminando em `:` + tópicos `- ` (subtópico com 2 espaços). **Proibido texto corrido.**
+7. **Nada repetido** entre verso e visual (ver "Qualidade").
+8. **Escores destrinchados:** itens, pontos, total e faixas, em tabela.
+9. **Pelo menos 1 quiz por baralho** (4 alternativas, comentário em cada uma) e `pegadinha` sempre que der.
+10. **Antes de commitar, rode `python3 tools/validar.py`.** Se aparecer qualquer ❌, corrija e rode de novo. **Nunca commite com erro.** Corrija também os ⚠️ quando der (principalmente card sem visual).
+
 ## Rotina: transformar anotações em cards
 
 1. Ler `data/notas.json`. **Ignore as anotações com `"manual": true`** (ela já mandou pelo chat). Se não sobrar nenhuma pendente, **parar sem commitar nada**.
@@ -18,7 +31,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
    - **Anotação curta** (só o nome do tema, ex.: "Classificação FIGO"): cubra o tema completo do jeito que ele cai em prova, deixando claro no card qual classificação é.
 3. Acrescentar os cards ao fim do array `cards` em `data/cards.json` (nunca apagar nem reescrever cards existentes; `id` único).
 4. Em `data/notas.json`: mover os `id` processados para `processadas` (manter só os últimos 300) e esvaziar `pendentes`. Isso faz o bloco de notas do app zerar sozinho.
-5. Validar o JSON (`python3 -m json.tool`), commitar, fazer `git pull --rebase origin main` (o app também grava nesses arquivos) e dar push na `main`.
+5. Rodar `python3 tools/validar.py` (zero ❌; corrigir e repetir até passar), validar o JSON (`python3 -m json.tool`), commitar, fazer `git pull --rebase origin main` (o app também grava nesses arquivos) e dar push na `main`.
 
 Anotações podem trazer imagens (`imgs`: caminhos como `data/img/1792...-0.jpg` no repositório — são prints que a Jacke colou). Abra cada imagem (Read) para entender o que ela anotou. Se a imagem for útil no card (questão, achado, tabela da prova), use-a direto: `{"tipo":"img","src":"data/img/...jpg","legenda":"..."}`.
 
@@ -30,7 +43,7 @@ Se uma anotação for ilegível ou não tiver conteúdo médico, ainda assim mov
 1. Anexe e clone `jaaacked-07/jaaackestude.uerj-cards` (add_repo com access "push"), faça `git pull`.
 2. Crie os cards dessas anotações seguindo todas as regras deste arquivo (se houver imagens em `data/img/...`, abra-as).
 3. Em `data/notas.json`, mova esses `ids` para `processadas` e tire-os de `pendentes`.
-4. Valide os JSONs, commit, `git pull --rebase origin main`, push.
+4. Rode `python3 tools/validar.py` (zero ❌), valide os JSONs, commit, `git pull --rebase origin main`, push.
 5. Responda curto: quantos cards, em quais baralhos, e correções importantes. Diga que ela já pode tocar em **"Confirmar cards feitos"** no app (as anotações só somem quando ela confirma).
 
 ## Campos que o app grava (não mexer)
@@ -64,7 +77,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - Corrigir o que a anotação tiver de errado; conferir fatos duvidosos (portarias, doses, classificações) na fonte oficial vigente antes de escrever.
 - Frente curta e objetiva.
 - **Verso direto, mas BEM EXPLICADO e SEMPRE ESTRUTURADO** (ela não suporta texto corrido, uma frase atrás da outra):
-  - 1ª linha: a resposta direta, com o termo-chave em `**negrito**`. **Todo card flash começa assim** (1 a 3 linhas curtas, sem `- ` e sem terminar em `:`): o app mostra esse bloco em DESTAQUE como "resposta para lembrar"; o que vem depois da linha em branco aparece como explicação.
+  - 1ª linha: a resposta direta, com o termo-chave em `**negrito**`. **Todo card flash começa assim**: o app mostra esse 1º bloco em DESTAQUE como "resposta para lembrar"; o que vem depois da linha em branco aparece como explicação. **Uma ideia por linha** também no destaque (ex.: `**Nissen → 360° posterior**\n**Toupet → 270° posterior**`). Se a resposta for uma lista: `**Título:**` + tópicos `- ` no mesmo bloco.
   - Linha em branco (`\n\n`) e depois a explicação em **tópicos** (linhas começando com `- `), uma ideia por linha.
   - Mudou de assunto/definição dentro do card (ex.: "Por quê:", "Conduta:", "Via:") → nova linha em branco + rótulo curto + tópicos.
   - Cada item de classificação em sua própria linha: `- **IIA** → ...` / `- **IIB** → ...`.
