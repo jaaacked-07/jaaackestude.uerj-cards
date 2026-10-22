@@ -6786,7 +6786,8 @@
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Internal_and_external_hemorrhoids.png/600px-Internal_and_external_hemorrhoids.png",
         "legenda": "Hemorroidas internas (acima da linha pectínea) e externas (abaixo)",
         "fonte": "Wikimedia Commons · WikipedianProlific & Mikael Häggström · CC BY-SA 3.0"
-      }
+      },
+      "fav": true
     },
     {
       "id": "hemor-02",
@@ -7003,5 +7004,5 @@
       }
     }
   ],
-  "rev": 1792644577774
+  "rev": 1792644676570
 }
