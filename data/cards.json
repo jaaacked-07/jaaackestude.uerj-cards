@@ -2491,7 +2491,8 @@
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 270\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 -5 270 20 Q300 110 220 170 L205 240 L135 240 L120 170 Q40 110 70 20Z\" fill=\"var(--rose-soft)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><path d=\"M98 38 Q170 18 242 38 Q262 105 200 155 L140 155 Q78 105 98 38Z\" fill=\"none\" stroke=\"var(--rose)\" stroke-dasharray=\"4 3\"/><path d=\"M125 55 Q170 42 215 55 Q225 100 185 135 L155 135 Q115 100 125 55Z\" fill=\"var(--card)\" stroke=\"var(--wine)\" stroke-width=\"1.5\"/><text x=\"170\" y=\"95\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">endométrio</text><rect x=\"140\" y=\"170\" width=\"60\" height=\"60\" rx=\"6\" fill=\"none\" stroke=\"var(--wine)\" stroke-dasharray=\"3 2\"/><text x=\"270\" y=\"70\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">IA</text><text x=\"270\" y=\"82\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">< 50% do</text><text x=\"270\" y=\"93\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">miométrio</text><line x1=\"230\" y1=\"70\" x2=\"266\" y2=\"70\" stroke=\"var(--mute)\"/><text x=\"10\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">IB</text><text x=\"10\" y=\"72\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">≥ 50% do</text><text x=\"10\" y=\"83\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">miométrio</text><line x1=\"40\" y1=\"64\" x2=\"80\" y2=\"64\" stroke=\"var(--mute)\"/><text x=\"220\" y=\"212\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">II</text><text x=\"220\" y=\"224\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">estroma cervical</text><line x1=\"202\" y1=\"205\" x2=\"218\" y2=\"208\" stroke=\"var(--mute)\"/><text x=\"10\" y=\"150\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"start\">IIIA</text><text x=\"10\" y=\"162\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">serosa / anexos</text><line x1=\"60\" y1=\"140\" x2=\"88\" y2=\"120\" stroke=\"var(--mute)\"/><text x=\"170\" y=\"262\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">linha tracejada = metade da espessura do miométrio</text></svg>",
         "legenda": "Estadiamento do endométrio: quanto o tumor avança no miométrio, no colo e para fora."
-      }
+      },
+      "fav": true
     },
     {
       "id": "endom-04",
@@ -7006,5 +7007,5 @@
       }
     }
   ],
-  "rev": 1792644950007
+  "rev": 1792759807234
 }
