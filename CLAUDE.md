@@ -8,6 +8,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 - `data/notas.json` — anotações que a Jacke guarda no app (vão sozinhas para cá).
 - `data/progresso.json` — progresso dela sincronizado entre aparelhos. **Nunca editar.**
 - Cards que ela cria pela aba **Criar** (frente e verso, cloze, oclusão de imagem) ficam em `data/progresso.json` → `extra` (com `meu: true`). Nunca edite; só leia para não criar card repetido.
+- `data/prevalencia.json` — quanto cada baralho cai na UERJ (Foco UERJ, provas 2022–2026): `baralhos[sub].q` = nº de questões do tema. O app usa isso para pôr primeiro o que mais cai. **Ao criar um baralho novo, acrescente a entrada dele** (`"<nome do baralho>": {"q": N, "temas": "..."}`), contando as questões do tema no `DATA` do index.html do repositório jaaacked-07/jaaackestude.prevalenciaUERJ (público). Sem questão = `q: 0`. Nunca invente número.
 - `data/chave.json` — acesso do app criptografado com o usuário dela. **Nunca editar nem apagar.**
 
 ## ⚠️ PADRÃO OBRIGATÓRIO DE TODO CARD (checklist — nada sai sem isso)

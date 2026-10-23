@@ -77,6 +77,7 @@ nav svg{width:24px;height:24px}
 
 /* session */
 .sess{position:fixed;inset:0;background:var(--bg);z-index:10;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
+.sbar .vt.hide{visibility:hidden}
 .sbar{display:flex;align-items:center;gap:14px;padding:14px 16px;max-width:520px;width:100%;margin:0 auto}
 .sbar .x{width:32px;height:32px;display:grid;place-items:center;color:var(--mute);border-radius:10px}
 .prog{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
@@ -217,6 +218,15 @@ h2.serif{font-size:28px;margin:6px 0 18px}
 .bar{display:grid;grid-template-columns:96px 1fr 26px;gap:10px;align-items:center;font-size:14px}
 .bar .b{height:8px;background:var(--line);border-radius:8px;overflow:hidden}.bar .b i{display:block;height:100%;background:var(--bad);border-radius:8px}
 .bar .v{text-align:right;color:var(--mute);font-size:13px}
+.mapa{display:flex;flex-direction:column;gap:12px}
+.ma{background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:10px 12px 6px}
+.mah{display:flex;justify-content:space-between;align-items:baseline;font-family:Fraunces,Georgia,serif;font-size:16px;color:var(--wine);margin-bottom:4px}
+.mah span{font:500 11px Inter,system-ui,sans-serif;color:var(--mute)}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) 70px 36px;grid-template-rows:auto auto;column-gap:8px;align-items:center;width:100%;text-align:left;padding:7px 0;border-top:1px solid var(--line)}
+.mrow .mn{font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mrow .mb{height:7px;background:var(--line);border-radius:7px;overflow:hidden}.mrow .mb i{display:block;height:100%;border-radius:7px}
+.mrow .mv{font-size:12.5px;font-weight:600;text-align:right}
+.mrow .ms{grid-column:1/-1;font-size:11px;color:var(--mute)}
 .sec{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;margin:22px 0 8px}
 .rows{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
 .rowi{display:flex;align-items:center;gap:12px;padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;width:100%;font-size:15px}
@@ -330,7 +340,11 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .tile:active{transform:scale(.96)}
 .tile .tt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .tile .bd{position:absolute;left:7px;bottom:5px;font-size:9px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--ok)}
-.tile .bd.e{color:var(--bad)}.tile .bd.ok{color:var(--ok)}
+.tile .bd.e{color:var(--bad)}.tile .bd.ok{color:var(--ok)}.tile .bd.sg{color:var(--wine)}.tile .bd.q{color:#B7822F}
+.leech{background:var(--wine-soft);border-radius:14px;padding:12px 14px;margin-bottom:6px}
+.leech p{font-size:12.5px;color:var(--ink);opacity:.85;margin-bottom:6px;line-height:1.45}
+.leech .lr{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;padding:9px 0;border-top:1px solid color-mix(in srgb,var(--wine) 15%,transparent);font-size:14px;color:var(--ink)}
+.leech .lr b{color:var(--wine);font-size:12px;white-space:nowrap}
 .tile .st{position:absolute;right:5px;bottom:3px;font-size:10px}
 .tile.dim{opacity:.55}
 .tsrch{margin:6px 0 4px}
@@ -461,7 +475,34 @@ async function carregar(){
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
   migrarMarcasCtx(); migrarIO();
+  try{ PREV=JSON.parse(localStorage.getItem(LS+'.prev'))||PREV }catch(e){}
+  try{ const r=await fetch('data/prevalencia.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ PREV=await r.json(); localStorage.setItem(LS+'.prev',JSON.stringify(PREV)); } }catch(e){}
 }
+/* ===== Prioridade pela UERJ (Foco UERJ: questões 2022–2026) ===== */
+let PREV={areas:{},baralhos:{}};
+const qUERJ=c=>((PREV.baralhos||{})[c.sub]||{}).q||0;
+/* nota de prioridade: questões do tema na UERJ pesam mais; % da grande área desempata */
+const pesoUERJ=c=>qUERJ(c)*10+((PREV.areas||{})[c.area]||0)/3;
+const nivelUERJ=q=>q>=4?'alta':q>=2?'media':'baixa';
+/* ===== Modo véspera: sanguessugas, fracos, favoritos, marcados e o que mais cai — sem cards novos ===== */
+const VESP_INI='2026-10-30';
+function filaVespera(){
+  const P=c=>S.srs[c.id], marc=id=>S.marks&&S.marks[id]&&S.marks[id].l&&S.marks[id].l.length;
+  return CARDS.filter(c=>P(c)&&(ehFraco(P(c))||c.fav||marc(c.id)||qUERJ(c)>=4))
+    .sort((a,b)=>ehSanguessuga(P(b))-ehSanguessuga(P(a))||ehFraco(P(b))-ehFraco(P(a))||pesoUERJ(b)-pesoUERJ(a)).map(c=>c.id);
+}
+const vesperaAtiva=()=>{const h=hoje(); return h>=VESP_INI&&h<PROVA;};
+function vesperaHTML(destaque){ const n=filaVespera().length; if(!n) return '';
+  return `<button class="btn ${destaque?'':'ghost'} vespb" style="margin-top:14px">🌙 Modo véspera · ${n}</button>${destaque?`<p class="mute small" style="text-align:center;margin-top:6px">Só o que importa: sanguessugas, fracos, favoritos, o que você marcou e o que mais cai na UERJ. Sem cards novos.</p>`:''}`; }
+function ligarVespera(){ document.querySelectorAll('.vespb').forEach(b=>b.onclick=()=>sessao(filaVespera(),'vespera',null,'modo véspera')); }
+/* ===== Fraco e sanguessuga ===== */
+/* fraco = ainda não acertou 3× seguidas ("Sabia") E já errou OU marcou "Quase" alguma vez */
+const quaseN=x=>x.q!=null?x.q:Math.max(0,Math.round((2.5-(x.ease||2.5)-0.2*(x.lapses||0))/0.15));
+const ehFraco=x=>!!x&&(x.box||0)<3&&((x.wrong||0)>0||quaseN(x)>0);
+/* sanguessuga (termo do Anki) = card errado 4 ou mais vezes: repetir não está resolvendo */
+const LEECH=4;
+const ehSanguessuga=x=>!!x&&(x.wrong||0)>=LEECH&&(x.box||0)<3;
+const LEECH_TXT='Sanguessuga é o card que você já errou 4 ou mais vezes: só repetir não está resolvendo. Reescreva o card (✎), crie um macete na sua anotação ou estude o tema de novo.';
 
 /* ===== Revisão estilo Anki, comprimida até a prova ===== */
 /* Cada card tem facilidade (ease), intervalo (ivl), acertos seguidos (box) e lapsos.
@@ -477,7 +518,7 @@ function rating(id,r,tipoErro){
   const h=hoje(); s.seen++; s.last=h; s.lr=r; s.t=Date.now();
   let ivl;
   if(r===0){ s.wrong++; s.lapses++; s.box=0; s.reps=0; s.ease=Math.max(1.3,s.ease-0.2); if(tipoErro) s.et=tipoErro; ivl=1; }
-  else if(r===1){ s.ease=Math.max(1.3,s.ease-0.15); ivl=s.reps===0?1:Math.max(1,Math.round((s.ivl||1)*1.2)); s.reps++; }
+  else if(r===1){ s.q=quaseN(s)+1; s.ease=Math.max(1.3,s.ease-0.15); ivl=s.reps===0?1:Math.max(1,Math.round((s.ivl||1)*1.2)); s.reps++; }
   else { s.box++; ivl=s.reps===0?1:s.reps===1?3:Math.max(1,Math.round((s.ivl||1)*s.ease)); s.reps++; }
   const falta=diff(h,PROVA);
   if(falta>1){
@@ -489,10 +530,17 @@ function rating(id,r,tipoErro){
   s.ivl=ivl; s.due=addD(h,ivl); S.srs[id]=s;
 }
 const due=c=>S.srs[c.id]&&S.srs[c.id].due<=hoje();
-function novos(){return CARDS.filter(c=>!S.srs[c.id])}
+/* novos: baralhos mais cobrados na UERJ primeiro, mas intercalando baralhos (cada card já escolhido de um baralho reduz a vez dele) */
+function novos(){
+  const g={}; CARDS.forEach(c=>{ if(!S.srs[c.id]) (g[kSub(c)]=g[kSub(c)]||[]).push(c); });
+  const ks=Object.keys(g), usados={}, out=[];
+  while(true){ let best=null,bv=-1e9; ks.forEach(k=>{ if(!g[k].length) return; const v=pesoUERJ(g[k][0])-15*(usados[k]||0); if(v>bv){bv=v;best=k;} });
+    if(!best) break; out.push(g[best].shift()); usados[best]=(usados[best]||0)+1; }
+  return out;
+}
 function vencidos(){
   const P=x=>S.srs[x.id];
-  return CARDS.filter(due).sort((a,b)=>(P(b).lr===0)-(P(a).lr===0) || (P(b).lapses||0)-(P(a).lapses||0) || (P(a).ease||2.5)-(P(b).ease||2.5) || P(a).due.localeCompare(P(b).due));
+  return CARDS.filter(due).sort((a,b)=>(P(b).lr===0)-(P(a).lr===0) || pesoUERJ(b)-pesoUERJ(a) || (P(b).lapses||0)-(P(a).lapses||0) || (P(a).ease||2.5)-(P(b).ease||2.5) || P(a).due.localeCompare(P(b).due));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
 /* Fila: erros e revisões vencidas (os mais fracos primeiro) + novos (pelo menos 8 se houver).
@@ -510,7 +558,7 @@ function fila(n,excluir){
   if(out.length<n){
     const usados=new Set(out), P=x=>S.srs[x.id];
     const ref=CARDS.filter(c=>ok(c)&&P(c)&&!usados.has(c.id))
-      .sort((a,b)=>(P(b).lapses||0)-(P(a).lapses||0)||(P(a).box||0)-(P(b).box||0)||(P(a).last||'').localeCompare(P(b).last||''));
+      .sort((a,b)=>ehFraco(P(b))-ehFraco(P(a))||pesoUERJ(b)-pesoUERJ(a)||(P(b).lapses||0)-(P(a).lapses||0)||(P(a).box||0)-(P(b).box||0)||(P(a).last||'').localeCompare(P(b).last||''));
     out.push(...ref.slice(0,n-out.length).map(c=>c.id));
   }
   return shuffle(out);
@@ -645,6 +693,7 @@ function pHome(){
       <circle cx="94" cy="94" r="${R}" fill="none" stroke="var(--wine)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}" style="transition:stroke-dashoffset .6s ease"/></svg>
       <div class="in"><div class="n serif">${feito}<span class="mute" style="font-size:22px">/${META}</span></div><div class="l">estudados hoje</div></div>
     </div></div>
+    ${vesperaAtiva()?vesperaHTML(true):''}
     ${acao}
     ${retBtn(ret)}
     ${CARDS.length&&!pend?`<button class="btn ghost" id="mais" style="margin-top:14px">Estudar mais 20</button>`:''}
@@ -652,6 +701,7 @@ function pHome(){
   </div>`;
   const g=$('#go'); if(g) g.onclick=()=>sessao(shuffle(pendentes()),'dia');
   ligarRet(ret);
+  ligarVespera();
   const m=$('#mais'); if(m) m.onclick=()=>{const add=adicionarMais(20); if(add.length) sessao(add,'dia'); else toast('Sem cards para estudar agora')};
 }
 
@@ -693,26 +743,34 @@ function ligarArvore(el,aberto,redesenhar){
 /* ===== Caderno de erros ===== */
 const ABERTO_E=new Set();
 function pErros(){
-  const err=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
-  if(!err.length){$('#app').innerHTML=`<div class="wrap"><h2 class="serif">Caderno de erros</h2><div class="empty"><div class="serif">Nenhum erro ainda</div>Quando você errar um card, ele aparece aqui sozinho.</div></div>`;return}
-  const fracos=err.filter(c=>S.srs[c.id].box<3);
-  const cont={ns:0,cf:0,lr:0}; err.forEach(c=>{const t=S.srs[c.id].et;if(t)cont[t]++});
+  const X=c=>S.srs[c.id];
+  const err=CARDS.filter(c=>X(c)&&((X(c).wrong||0)>0||quaseN(X(c))>0));
+  if(!err.length){$('#app').innerHTML=`<div class="wrap"><h2 class="serif">Caderno de erros</h2><div class="empty"><div class="serif">Nenhum erro ainda</div>Quando você errar ou marcar "Quase" num card, ele aparece aqui sozinho.</div></div>`;return}
+  const fracos=err.filter(c=>ehFraco(X(c))).sort((a,b)=>pesoUERJ(b)-pesoUERJ(a));
+  const sang=err.filter(c=>ehSanguessuga(X(c)));
+  const cont={ns:0,cf:0,lr:0}; err.forEach(c=>{const t=X(c).et;if(t)cont[t]++});
   const mx=Math.max(1,...Object.values(cont)), temTipo=Object.values(cont).some(v=>v);
-  const tile=c=>{const x=S.srs[c.id],ok=x.box>=3;return `<div class="tile ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span><span class="bd ${ok?'ok':'e'}">${ok?'dominado':'errou '+x.wrong+'×'}</span></div>`};
+  const tile=c=>{const x=X(c),ok=!ehFraco(x),sg=ehSanguessuga(x),qn=quaseN(x);
+    const bd=ok?'<span class="bd ok">dominado</span>':sg?`<span class="bd sg" title="${LEECH_TXT}">🩸 sanguessuga</span>`:(x.wrong?`<span class="bd e">errou ${x.wrong}×</span>`:'')+(qn&&!x.wrong?`<span class="bd q">quase ${qn}×</span>`:'');
+    return `<div class="tile ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${bd}</div>`};
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Caderno de erros</h2>
+    <p class="mute small" style="margin-top:-10px;margin-bottom:14px">Fraco = errou ou marcou "Quase" e ainda não acertou 3× seguidas. Os mais cobrados na UERJ vêm primeiro.</p>
     ${fracos.length?`<button class="btn" id="rev">Revisar ${fracos.length} ${fracos.length>1?'fracos':'fraco'}</button>`:`<div class="done"><div class="serif">Tudo dominado ✓</div></div>`}
+    ${sang.length?`<div class="sec">🩸 Sanguessugas · ${sang.length}</div>
+      <div class="leech"><p>${LEECH_TXT}</p>${sang.map(c=>`<button class="lr" data-card="${c.id}"><span>${esc(c.frente)}</span><b>${X(c).wrong}×</b></button>`).join('')}</div>`:''}
     ${temTipo?`<div class="sec">Por que eu erro</div><div class="bars">${Object.keys(TIPOS).map(k=>`<div class="bar"><span>${TIPOS[k]}</span><span class="b"><i style="width:${cont[k]/mx*100}%"></i></span><span class="v">${cont[k]}</span></div>`).join('')}</div>`:''}
     <div class="sec">Onde eu erro</div>
     <div id="lstE">${arvoreHTML(err,ABERTO_E,{tile})}</div>
   </div>`;
-  const r=$('#rev'); if(r) r.onclick=()=>sessao(shuffle(fracos.map(c=>c.id)),'erros');
+  const r=$('#rev'); if(r) r.onclick=()=>sessao(fracos.map(c=>c.id),'erros',null,'revisão dos fracos');
+  document.querySelectorAll('.leech [data-card]').forEach(b=>b.onclick=()=>folhaCard(b.dataset.card));
   ligarArvore($('#lstE'),ABERTO_E,pErros);
 }
 
 /* ===== Estudar (baralho livre) ===== */
 const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
-const ORDENS={aleat:'Aleatória',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
+const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
 const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
@@ -720,6 +778,7 @@ function ordenar(pool){
   const pos=new Map(CARDS.map((c,i)=>[c.id,i])), P=c=>S.srs[c.id]||{};
   const L=pool.slice(), o=DECK.ordem;
   if(o==='aleat') return shuffle(L);
+  if(o==='uerj') return shuffle(L).sort((a,b)=>pesoUERJ(b)-pesoUERJ(a));
   if(o==='antigo') return L.sort((a,b)=>(a.add||'').localeCompare(b.add||'')||pos.get(a.id)-pos.get(b.id));
   if(o==='novo') return L.sort((a,b)=>(b.add||'').localeCompare(a.add||'')||pos.get(b.id)-pos.get(a.id));
   if(o==='errados') return L.sort((a,b)=>(P(b).wrong||0)-(P(a).wrong||0)||Math.random()-.5);
@@ -750,6 +809,7 @@ function pEstudar(){
     <h2 class="serif">Estudar</h2>
     <p class="mute small" style="margin-top:-10px;margin-bottom:16px">Monte seu baralho — o que você estudar aqui também entra na revisão programada.</p>
     ${(r=>r?retBtn(r,'')+'<div style="height:18px"></div>':'')(retAtual())}
+    ${!vesperaAtiva()&&filaVespera().length?`<div class="linkrow" style="justify-content:flex-start;margin:-6px 0 12px"><button class="link vespb">🌙 Modo véspera (${filaVespera().length}) — revisão final, sem novos</button></div>`:''}
     <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
     <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
@@ -766,7 +826,7 @@ function pEstudar(){
   $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
   $('#sO').onclick=()=>escolha('Ordem dos cards',Object.keys(ORDENS).map(k=>({v:k,t:ORDENS[k]})),DECK.ordem,v=>{DECK.ordem=v;pEstudar()});
   if(n) $('#dk').onclick=()=>sessao(ordenar(pool).slice(0,n).map(c=>c.id),'livre',null,temaTxt+(DECK.filtro!=='todos'?' ('+FILTROS[DECK.filtro]+')':''));
-  ligarRet(retAtual());
+  ligarRet(retAtual()); ligarVespera();
   const bs=$('#bs'); bs.oninput=()=>{DECK.busca=bs.value;const pos=bs.selectionStart;pEstudar();const b2=$('#bs');b2.focus();b2.setSelectionRange(pos,pos)};
   ligarArvore($('#lst'),ABERTO,pEstudar); ligarDrag($('#lst'));
   const oc=$('#oc'); if(oc) oc.onclick=verOcultos;
@@ -1346,7 +1406,9 @@ function pPct(){
       <div class="blk"><div class="k">Simulado</div><div class="ln"><span class="fr">${x.tot?x.ac+'/'+x.tot:'—'}</span><span class="pc">${x.g!=null?x.g+'%':''}</span></div></div>
       <div class="blk"><div class="k">UERJ</div><div class="ln"><span class="fr">${x.utot?x.uac+'/'+x.utot:'—'}</span><span class="pc u">${x.u!=null?x.u+'%':''}</span></div></div>
     </button>`).join('')}</div>`:`<div class="empty"><div class="serif">Nenhum simulado ainda</div>Adicione o primeiro para acompanhar sua evolução.</div>`}
+    ${mapaHTML()}
   </div>`;
+  ligarMapa();
   $('#addS').onclick=()=>{
     const nums=S.sim.map(x=>+((x.nome.match(/^Simulado (\d+)/)||[])[1]||0));
     const n=Math.max(S.sim.length,...nums,0)+1, id=Date.now();
@@ -1354,6 +1416,28 @@ function pPct(){
   };
   document.querySelectorAll('[data-sid]').forEach(b=>b.onclick=()=>editarSim(+b.dataset.sid));
 }
+/* ===== Mapa de matérias: onde você acerta e erra, cruzado com o que cai na UERJ ===== */
+function mapaDados(){
+  const A={};
+  CARDS.forEach(c=>{ const a=A[c.area]=A[c.area]||{}, m=a[c.tema]=a[c.tema]||{n:0,vis:0,seen:0,wrong:0,fr:0,subs:new Set(),q:0};
+    m.n++; m.subs.add(c.sub); const x=S.srs[c.id]; if(x){ m.vis++; m.seen+=x.seen||0; m.wrong+=x.wrong||0; if(ehFraco(x)) m.fr++; } });
+  Object.values(A).forEach(a=>Object.values(a).forEach(m=>{ m.q=[...m.subs].reduce((t,su)=>t+(((PREV.baralhos||{})[su]||{}).q||0),0); m.ac=m.seen?Math.round((1-m.wrong/m.seen)*100):null; }));
+  return A;
+}
+function mapaHTML(){
+  const A=mapaDados(); if(!Object.keys(A).length) return '';
+  const cor=v=>v==null?'var(--line)':v<60?'var(--bad)':v<80?'#D9A441':'var(--ok)';
+  const prio=m=>(m.q||0)*(m.ac==null?1:(100-m.ac)/100+0.15);
+  return `<div class="sec" style="margin-top:30px">Mapa de matérias</div>
+  <p class="mute small" style="margin:-2px 0 10px">Barra = % de acerto nos cards · vistos/total · 🔥 = cai muito na UERJ (Foco UERJ 2022–2026). Toque para estudar a matéria.</p>
+  <div class="mapa">${Object.keys(A).sort(abc).map(a=>`<div class="ma"><div class="mah">${esc(a)}<span>${(PREV.areas||{})[a]!=null?PREV.areas[a]+'% da prova':''}</span></div>${Object.entries(A[a]).sort((x,y)=>prio(y[1])-prio(x[1])||abc(x[0],y[0])).map(([t,m])=>`
+    <button class="mrow" data-ma="${esc(a)}" data-mt="${esc(t)}"><span class="mn">${m.q>=4?'🔥 ':''}${esc(t)}</span>
+      <span class="mb"><i style="width:${m.ac==null?0:m.ac}%;background:${cor(m.ac)}"></i></span>
+      <span class="mv">${m.ac==null?'—':m.ac+'%'}</span>
+      <span class="ms">${m.vis}/${m.n}${m.fr?` · ${m.fr} fraco${m.fr>1?'s':''}`:''}</span></button>`).join('')}</div>`).join('')}</div>`;
+}
+function ligarMapa(){ document.querySelectorAll('[data-mt]').forEach(b=>b.onclick=()=>{
+  const a=b.dataset.ma,t=b.dataset.mt; DECK.subs=new Set(CARDS.filter(c=>c.area===a&&c.tema===t).map(kSub)); DECK.filtro='todos'; DECK.ordem='uerj'; ir('estudar'); }); }
 function editarSim(id,novo){
   const x=S.sim.find(s=>s.id===id); if(!x) return;
   const campo=(k1,k2,cls,tit)=>`<div class="tm" style="margin-top:16px">${tit}</div><div class="fld">
@@ -1734,9 +1818,9 @@ function sessao(ids,modo,prev,nome){
   SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||''};
   if(prev){ SS.feitos=prev.feitos||0; SS.total=SS.feitos+ids.length; SS.unicos=(prev.unicos||0)||SS.total; SS.acertos=prev.acertos||0; }
   const el=document.createElement('div');el.className='sess';el.id='sess';
-  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
+  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="x vt hide" id="svt" aria-label="Voltar ao card anterior" title="Voltar ao card anterior (Z)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
   document.body.appendChild(el); document.body.style.overflow='hidden';
-  $('#sx').onclick=sair;
+  $('#sx').onclick=sair; $('#svt').onclick=voltarCard; SS.hist=[];
   proximoCard();
 }
 function retAtual(){ return S.ret&&S.ret.fila&&S.ret.fila.some(id=>BYID[id])?{...S.ret,fila:S.ret.fila.filter(id=>BYID[id])}:null; }
@@ -1757,7 +1841,7 @@ function barra(){
   $('#cb').textContent=SS.combo>=3?'×'+SS.combo:'';
 }
 function proximoCard(){
-  barra();
+  barra(); const vb=$('#svt'); if(vb) vb.classList.toggle('hide',!(SS.hist&&SS.hist.length));
   if(!SS.fila.length) return fim();
   const c=BYID[SS.fila[0]];
   $('#sb').scrollTop=0;
@@ -1790,9 +1874,13 @@ function pedirMotivo(c){
   f.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{vib(10);responder(c,0,b.dataset.t||null)});
 }
 function responder(c,r,t){
+  const h0=hoje();
+  SS.hist.push({id:SS.fila[0],srs:S.srs[SS.fila[0]]?JSON.parse(JSON.stringify(S.srs[SS.fila[0]])):null,fila:SS.fila.slice(),total:SS.total,feitos:SS.feitos,xp:SS.xp,combo:SS.combo,maxCombo:SS.maxCombo,acertos:SS.acertos,meta:SS.meta,rep:[...SS.repetidos],
+    done:S.plan?S.plan.done.slice():null,hoje:S.hoje?JSON.parse(JSON.stringify(S.hoje)):null,dia:S.dias[h0],xpDev:S.xpDev[DEV]||0,d:h0});
+  if(SS.hist.length>30) SS.hist.shift();
   const id=SS.fila.shift();
   const repetido=SS.repetidos.has(id);
-  if(!repetido) rating(id,r,t);   // todo card estudado, em qualquer modo, entra na revisão programada
+  if(!repetido){ rating(id,r,t); if(r===0&&(S.srs[id].wrong||0)===LEECH) setTimeout(()=>toast('🩸 Virou sanguessuga (errou 4×): reescreva ou crie um macete'),400); }   // todo card estudado, em qualquer modo, entra na revisão programada
   if(r===0 && !repetido){SS.repetidos.add(id); SS.fila.splice(Math.min(3,SS.fila.length),0,id); SS.total++;}
   SS.feitos++;
   if(!repetido && contarHoje(id)) SS.meta=true;
@@ -1801,6 +1889,17 @@ function responder(c,r,t){
   if(r===2){SS.combo++;if(!repetido)SS.acertos++;SS.maxCombo=Math.max(SS.maxCombo,SS.combo)} else SS.combo=0;
   if(S.plan && S.plan.ids.includes(id) && !S.plan.done.includes(id)) S.plan.done.push(id);
   save(); proximoCard();
+}
+/* volta ao card anterior desfazendo a resposta (agendamento, XP, contagem do dia) */
+function voltarCard(){
+  if(!SS||!SS.hist||!SS.hist.length) return;
+  const h=SS.hist.pop();
+  if(h.srs) S.srs[h.id]=h.srs; else delete S.srs[h.id];
+  Object.assign(SS,{fila:h.fila,total:h.total,feitos:h.feitos,xp:h.xp,combo:h.combo,maxCombo:h.maxCombo,acertos:h.acertos,meta:h.meta,repetidos:new Set(h.rep)});
+  if(h.done&&S.plan) S.plan.done=h.done;
+  if(h.hoje) S.hoje=h.hoje;
+  if(h.dia) S.dias[h.d]=h.dia; else delete S.dias[h.d];
+  S.xpDev[DEV]=h.xpDev; recalc(); save(); proximoCard(); vib(8);
 }
 function fim(){
   const lvAntes=nivel(S.xp-SS.xp);
@@ -1915,6 +2014,7 @@ document.addEventListener('keydown',e=>{
   const a=document.activeElement; if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return;
   const k=e.key.toLowerCase();
   if(e.key===' '||e.code==='Space'){ const b=$('#sh')||$('#nx'); if(b){ e.preventDefault(); b.click(); } return; }
+  if(k==='z'||e.key==='Backspace'){ e.preventDefault(); voltarCard(); return; }
   if(k==='e'){ e.preventDefault(); if($('#sh')) $('#sh').click(); const ed=document.querySelector('#ar [data-ed]'); if(ed) ed.click(); return; }
   if(['1','2','3'].includes(k)){ const r=document.querySelector(`.rate [data-r="${+k-1}"]`); if(r){ e.preventDefault(); r.click(); } return; }
   if(['a','b','c','d','e'].includes(k)&&k!=='e'){ const o=document.querySelector(`.opt[data-i="${'abcd'.indexOf(k)}"]:not([disabled])`); if(o){ e.preventDefault(); o.click(); } }

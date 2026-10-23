@@ -1,0 +1,150 @@
+{
+  "fonte": "Foco UERJ — provas UERJ 2022–2026 (460 questões)",
+  "explica": "q = nº de questões da UERJ 2022–2026 sobre o tema do baralho. areas = % das questões por grande área.",
+  "areas": {
+    "Clínica Médica": 29.8,
+    "Cirurgia": 17.8,
+    "Pediatria": 20.4,
+    "Medicina Preventiva": 11.5,
+    "Obstetrícia": 10.4,
+    "Ginecologia": 10.0
+  },
+  "baralhos": {
+    "Inflamatório - Apendicite": {
+      "q": 3,
+      "temas": "Escore de Alvarado; sinal de Rovsing; apendicite na gravidez"
+    },
+    "Abdome agudo — classificação e conduta geral": {
+      "q": 3,
+      "temas": "Pneumoperitônio (fisiologia e arritmia); abscesso retroperitoneal"
+    },
+    "Inflamatório - Apendagite epiploica": {
+      "q": 1,
+      "temas": "Questão comentada que você anotou"
+    },
+    "Inflamatório - Colecistite aguda": {
+      "q": 2,
+      "temas": "Colecistite aguda; Mirizzi"
+    },
+    "Doença hemorroidária": {
+      "q": 2,
+      "temas": "Doença hemorroidária; trombose hemorroidária"
+    },
+    "Hérnia de hiato e DRGE — cirurgia antirrefluxo": {
+      "q": 5,
+      "temas": "Cirurgia antirrefluxo; seleção para cirurgia; hérnia hiatal; esofagite; DRGE"
+    },
+    "Tuberculose intestinal": {
+      "q": 3,
+      "temas": "TB intestinal (complicada); TB peritoneal"
+    },
+    "Antibioticoprofilaxia cirúrgica": {
+      "q": 5,
+      "temas": "Antibioticoprofilaxia (2×); infecção de sítio cirúrgico; antissepsia; profilaxia"
+    },
+    "Avaliação e cuidados pré-operatórios": {
+      "q": 1,
+      "temas": "Anticoagulante no perioperatório"
+    },
+    "Nutrição perioperatória": {
+      "q": 4,
+      "temas": "Nutrição enteral precoce; realimentação; nutrição e cicatrização"
+    },
+    "Queimaduras": {
+      "q": 0,
+      "temas": ""
+    },
+    "TCE": {
+      "q": 1,
+      "temas": "TCE / escala de Glasgow"
+    },
+    "Trauma abdominal": {
+      "q": 4,
+      "temas": "Choque hemorrágico (2×); evisceração; sepse pós-esplenectomia"
+    },
+    "Trauma torácico": {
+      "q": 6,
+      "temas": "Trauma torácico penetrante (2×); tamponamento (2×); hemotórax maciço; sangramento persistente"
+    },
+    "Osteoporose e densitometria": {
+      "q": 2,
+      "temas": "Osteoporose; fratura vertebral"
+    },
+    "Mama — nódulo, BI-RADS e rastreamento": {
+      "q": 4,
+      "temas": "BI-RADS 3; BI-RADS 5; rastreio mamográfico; câncer de mama"
+    },
+    "Câncer de colo do útero": {
+      "q": 8,
+      "temas": "Câncer de colo (2×); LSIL (2×); HSIL; rastreamento; AGC (2×)"
+    },
+    "Câncer de endométrio": {
+      "q": 4,
+      "temas": "Câncer de endométrio (3×); hiperplasia atípica"
+    },
+    "Infertilidade e reserva ovariana": {
+      "q": 4,
+      "temas": "Baixa reserva ovariana (2×); reserva ovariana; endometriose e infertilidade"
+    },
+    "Sangramento uterino anormal": {
+      "q": 2,
+      "temas": "Mioma uterino; mioma subseroso"
+    },
+    "ICSAP": {
+      "q": 1,
+      "temas": "Internações por condições sensíveis à APS"
+    },
+    "Profilaxia da raiva humana": {
+      "q": 0,
+      "temas": ""
+    },
+    "Avaliação geriátrica ampla e polifarmácia": {
+      "q": 6,
+      "temas": "Polifarmácia (4×); avaliação geriátrica ampla; quedas"
+    },
+    "Notificação imediata": {
+      "q": 1,
+      "temas": "Controle de surto"
+    },
+    "PNVS": {
+      "q": 0,
+      "temas": ""
+    },
+    "Lacerações perineais": {
+      "q": 0,
+      "temas": ""
+    },
+    "RPMO — rotura prematura de membranas ovulares": {
+      "q": 1,
+      "temas": "Rotura prematura de membranas"
+    },
+    "Sofrimento fetal agudo — CTG": {
+      "q": 1,
+      "temas": "Sofrimento fetal agudo"
+    },
+    "Sofrimento fetal crônico": {
+      "q": 0,
+      "temas": ""
+    },
+    "Crescimento e baixa estatura": {
+      "q": 1,
+      "temas": "Variante normal de crescimento"
+    },
+    "Desenvolvimento neuropsicomotor — marcos": {
+      "q": 1,
+      "temas": "Atraso de linguagem"
+    },
+    "Alergia à proteína do leite de vaca (APLV)": {
+      "q": 3,
+      "temas": "APLV; anafilaxia alimentar (2×)"
+    },
+    "Reanimação neonatal": {
+      "q": 2,
+      "temas": "Reanimação neonatal; termorregulação"
+    },
+    "Anemia ferropriva e suplementação de ferro": {
+      "q": 1,
+      "temas": "Suplementação de ferro"
+    }
+  }
+}

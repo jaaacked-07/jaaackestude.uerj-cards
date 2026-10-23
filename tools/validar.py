@@ -9,6 +9,8 @@ erros, avisos = [], []
 E = lambda c, m: erros.append(f"❌ {c}: {m}")
 W = lambda c, m: avisos.append(f"⚠️  {c}: {m}")
 d = json.load(open('data/cards.json'))
+try: PREV = json.load(open('data/prevalencia.json')).get('baralhos', {})
+except Exception: PREV = {}
 cards = d['cards']
 ids = collections.Counter(c.get('id') for c in cards)
 for i, n in ids.items():
@@ -55,6 +57,7 @@ for c in cards:
         if v.get('tipo') == 'img' and not (str(v.get('src','')).startswith('https://upload.wikimedia.org/') or str(v.get('src','')).startswith('data/img/') or str(v.get('src','')).startswith('https://')): E(i, 'imagem com src inválido')
 for k, cs in deck.items():
     nome = ' › '.join(map(str, k))
+    if k[2] not in PREV: E(nome, 'baralho sem entrada em data/prevalencia.json (quanto cai na UERJ)')
     if len({c.get('contexto') for c in cs}) > 1: E(nome, 'cards do mesmo baralho com contextos diferentes (tem que ser o MESMO texto)')
     if not any(c.get('uerj') for c in cs): W(nome, 'nenhum card do baralho tem o campo "uerj"')
     if not any(c.get('tipo') == 'quiz' for c in cs): W(nome, 'baralho sem questão estilo prova (quiz)')
