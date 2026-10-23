@@ -415,7 +415,8 @@ const NOME='Jacke';
 const PROVA='2026-11-01';
 const VESPERA='2026-10-31';
 const META=20;            // cards por dia
-const MIN_NOVOS=8;        // novos garantidos na fila do dia (se houver)
+const MIN_NOVOS=15;       // novos garantidos na fila do dia (se houver)
+const MIN_REV=5;          // revisões vencidas garantidas
 const LS='uerjcards.v1';
 
 /* ===== Datas ===== */
@@ -488,8 +489,10 @@ const nivelUERJ=q=>q>=4?'alta':q>=2?'media':'baixa';
 const VESP_INI='2026-10-30';
 function filaVespera(){
   const P=c=>S.srs[c.id], marc=id=>S.marks&&S.marks[id]&&S.marks[id].l&&S.marks[id].l.length;
-  return CARDS.filter(c=>P(c)&&(ehFraco(P(c))||c.fav||marc(c.id)||qUERJ(c)>=4))
-    .sort((a,b)=>ehSanguessuga(P(b))-ehSanguessuga(P(a))||ehFraco(P(b))-ehFraco(P(a))||pesoUERJ(b)-pesoUERJ(a)).map(c=>c.id);
+  /* sanguessugas primeiro; depois o resto pela prioridade combinada (o que mais cai na UERJ + fraco + favorito/marcado), intercalando baralhos */
+  const sel=CARDS.filter(c=>P(c)&&(ehFraco(P(c))||c.fav||marc(c.id)||qUERJ(c)>=2));
+  const sg=intercalar(sel.filter(c=>ehSanguessuga(P(c))),prioridade), resto=intercalar(sel.filter(c=>!ehSanguessuga(P(c))),prioridade);
+  return [...sg,...resto].map(c=>c.id);
 }
 const vesperaAtiva=()=>{const h=hoje(); return h>=VESP_INI&&h<PROVA;};
 function vesperaHTML(destaque){ const n=filaVespera().length; if(!n) return '';
@@ -530,44 +533,60 @@ function rating(id,r,tipoErro){
   s.ivl=ivl; s.due=addD(h,ivl); S.srs[id]=s;
 }
 const due=c=>S.srs[c.id]&&S.srs[c.id].due<=hoje();
-/* novos: baralhos mais cobrados na UERJ primeiro, mas intercalando baralhos (cada card já escolhido de um baralho reduz a vez dele) */
-function novos(){
-  const g={}; CARDS.forEach(c=>{ if(!S.srs[c.id]) (g[kSub(c)]=g[kSub(c)]||[]).push(c); });
+/* ===== Prioridade combinada + intercalar baralhos =====
+   prioridade = quanto cai na UERJ + fraco + vezes que errou + favorito/marcado + atraso da revisão.
+   intercalar = escolhe sempre o melhor, mas cada card já escolhido de um baralho reduz a vez dele
+   (não vira 10 cards seguidos do mesmo tema). jitter = um pouco de acaso (modo aleatório). */
+const marcado=id=>!!(S.marks&&S.marks[id]&&S.marks[id].l&&S.marks[id].l.length);
+function prioridade(c){
+  const x=S.srs[c.id]; let p=pesoUERJ(c);
+  if(x){ if(ehFraco(x)) p+=30; p+=Math.min(x.lapses||0,4)*8; if(x.due&&x.due<hoje()) p+=Math.min(20,diff(x.due,hoje())*4); }
+  if(c.fav) p+=12; if(marcado(c.id)) p+=8;
+  return p;
+}
+function intercalar(lista,score,jitter){
+  const g={}; lista.forEach(c=>{ (g[kSub(c)]=g[kSub(c)]||[]).push({c,v:score(c)+(jitter?Math.random()*jitter:0)}); });
+  Object.values(g).forEach(a=>a.sort((x,y)=>y.v-x.v));
   const ks=Object.keys(g), usados={}, out=[];
-  while(true){ let best=null,bv=-1e9; ks.forEach(k=>{ if(!g[k].length) return; const v=pesoUERJ(g[k][0])-15*(usados[k]||0); if(v>bv){bv=v;best=k;} });
-    if(!best) break; out.push(g[best].shift()); usados[best]=(usados[best]||0)+1; }
+  for(;;){ let best=null,bv=-1e9; ks.forEach(k=>{ if(!g[k].length) return; const v=g[k][0].v-15*(usados[k]||0); if(v>bv){bv=v;best=k;} });
+    if(!best) break; out.push(g[best].shift().c); usados[best]=(usados[best]||0)+1; }
   return out;
 }
+function novos(){ return intercalar(CARDS.filter(c=>!S.srs[c.id]),pesoUERJ); }
 function vencidos(){
   const P=x=>S.srs[x.id];
-  return CARDS.filter(due).sort((a,b)=>(P(b).lr===0)-(P(a).lr===0) || pesoUERJ(b)-pesoUERJ(a) || (P(b).lapses||0)-(P(a).lapses||0) || (P(a).ease||2.5)-(P(b).ease||2.5) || P(a).due.localeCompare(P(b).due));
+  return CARDS.filter(due).sort((a,b)=>(P(b).lr===0)-(P(a).lr===0) || prioridade(b)-prioridade(a) || (P(b).lapses||0)-(P(a).lapses||0) || (P(a).ease||2.5)-(P(b).ease||2.5) || P(a).due.localeCompare(P(b).due));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
-/* Fila: erros e revisões vencidas (os mais fracos primeiro) + novos (pelo menos 8 se houver).
-   Se faltar card, completa com reforço: os já vistos mais fracos, mesmo sem estar vencidos. */
+/* Fila do dia: TODOS os erros vencidos + 15 novos (se houver) + revisões vencidas (pelo menos 5) até completar a meta.
+   Novos e revisões escolhidos pela prioridade combinada (UERJ + fraqueza), intercalando baralhos.
+   Se faltar card, completa com reforço (já vistos de maior prioridade). */
 function fila(n,excluir){
-  const ex=new Set(excluir||[]), ok=c=>!ex.has(c.id);
-  const rev=vencidos().filter(ok), nov=novos().filter(ok);
-  let nN=Math.min(nov.length,Math.max(MIN_NOVOS,n-rev.length)), nR=Math.min(rev.length,n-nN);
-  nN=Math.min(nov.length,n-nR);
-  const R=rev.slice(0,nR).map(c=>c.id), N=nov.slice(0,nN).map(c=>c.id);
-  let out=[];
-  const errs=R.filter(id=>S.srs[id].lr===0), resto=shuffle(R.filter(id=>S.srs[id].lr!==0));
-  out.push(...errs);
-  while(resto.length||N.length){ if(N.length) out.push(N.shift()); if(resto.length) out.push(resto.shift()); }
+  const ex=new Set(excluir||[]), ok=c=>!ex.has(c.id), P=c=>S.srs[c.id];
+  const venc=CARDS.filter(c=>ok(c)&&due(c));
+  const E=intercalar(venc.filter(c=>P(c).lr===0),prioridade).map(c=>c.id);
+  const outros=intercalar(venc.filter(c=>P(c).lr!==0),prioridade), nov=novos().filter(ok);
+  const vaga=Math.max(0,n-E.length);
+  let nN=Math.min(nov.length,Math.max(MIN_NOVOS,vaga-outros.length));
+  const nR=Math.min(outros.length,Math.max(MIN_REV,vaga-nN));   // pelo menos 5 revisões para não acumular
+  nN=Math.min(nov.length,Math.max(nN,vaga-nR));
+  const R=outros.slice(0,nR).map(c=>c.id), N=nov.slice(0,nN).map(c=>c.id);
+  const out=[...E];
+  while(R.length||N.length){ if(N.length) out.push(N.shift()); if(R.length) out.push(R.shift()); }
   if(out.length<n){
-    const usados=new Set(out), P=x=>S.srs[x.id];
-    const ref=CARDS.filter(c=>ok(c)&&P(c)&&!usados.has(c.id))
-      .sort((a,b)=>ehFraco(P(b))-ehFraco(P(a))||pesoUERJ(b)-pesoUERJ(a)||(P(b).lapses||0)-(P(a).lapses||0)||(P(a).box||0)-(P(b).box||0)||(P(a).last||'').localeCompare(P(b).last||''));
-    out.push(...ref.slice(0,n-out.length).map(c=>c.id));
+    const usados=new Set(out);
+    out.push(...intercalar(CARDS.filter(c=>ok(c)&&P(c)&&!usados.has(c.id)),prioridade).slice(0,n-out.length).map(c=>c.id));
   }
   return shuffle(out);
 }
 function montarPlano(){
   const h=hoje();
   if(!S.hoje||S.hoje.date!==h) S.hoje={date:h,ids:Object.keys(S.srs).filter(id=>S.srs[id].last===h)};
-  if(S.plan&&S.plan.date===h&&S.plan.v===2) return;
-  S.plan={date:h,ids:fila(META,S.hoje.ids),done:[],v:2};
+  if(S.plan&&S.plan.date===h&&S.plan.v===3) return;
+  /* plano de hoje feito com a regra antiga (8 novos): completa até 15 novos sem refazer o dia */
+  if(S.plan&&S.plan.date===h&&S.plan.v===2){ const tem=new Set(S.plan.ids), nN=S.plan.ids.filter(id=>!S.srs[id]||S.srs[id].last===h&&S.srs[id].seen===1).length;
+    S.plan.ids.push(...novos().filter(c=>!tem.has(c.id)).slice(0,Math.max(0,MIN_NOVOS-nN)).map(c=>c.id)); S.plan.v=3; save(); return; }
+  S.plan={date:h,ids:fila(META,S.hoje.ids),done:[],v:3};
   save();
 }
 function pendentes(){return S.plan.ids.filter(id=>BYID[id]&&!S.plan.done.includes(id))}
@@ -770,15 +789,15 @@ function pErros(){
 
 /* ===== Estudar (baralho livre) ===== */
 const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
-const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
+const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prioridade UERJ e fracos)',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
 const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 function ordenar(pool){
   const pos=new Map(CARDS.map((c,i)=>[c.id,i])), P=c=>S.srs[c.id]||{};
   const L=pool.slice(), o=DECK.ordem;
-  if(o==='aleat') return shuffle(L);
-  if(o==='uerj') return shuffle(L).sort((a,b)=>pesoUERJ(b)-pesoUERJ(a));
+  if(o==='aleat') return intercalar(L,prioridade,60);   // aleatória, mas puxando o que mais cai na UERJ e o que está fraco
+  if(o==='uerj') return intercalar(L,pesoUERJ);
   if(o==='antigo') return L.sort((a,b)=>(a.add||'').localeCompare(b.add||'')||pos.get(a.id)-pos.get(b.id));
   if(o==='novo') return L.sort((a,b)=>(b.add||'').localeCompare(a.add||'')||pos.get(b.id)-pos.get(a.id));
   if(o==='errados') return L.sort((a,b)=>(P(b).wrong||0)-(P(a).wrong||0)||Math.random()-.5);
@@ -1237,8 +1256,8 @@ function mergeProg(R){
   const m={}; [...S.notas,...(R.notas||[])].forEach(n=>{const o=m[n.id]; if(!o){m[n.id]={...n};return} const k=(n.u||n.id)>(o.u||o.id)?{...n}:o; k.env=!!(o.env||n.env); m[n.id]=k;});
   S.notas=Object.values(m).filter(n=>!S.notasDel[n.id]).sort((a,b)=>a.id-b.id);
   if(R.hoje){ if(!S.hoje||R.hoje.date>S.hoje.date) S.hoje=R.hoje; else if(R.hoje.date===S.hoje.date) S.hoje.ids=[...new Set([...S.hoje.ids,...R.hoje.ids])]; }
-  if(R.plan&&R.plan.v===2){ if(!S.plan||S.plan.v!==2||R.plan.date>S.plan.date) S.plan=R.plan;
-    else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0);} }
+  if(R.plan&&R.plan.v>=2){ if(!S.plan||!(S.plan.v>=2)||R.plan.date>S.plan.date) S.plan=R.plan;
+    else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0); S.plan.v=Math.max(S.plan.v||2,R.plan.v||2);} }
   if(R.ret&&(!S.ret||(R.ret.t||0)>(S.ret.t||0))) S.ret=R.ret;
   const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>{ const o=ex[c.id]; if(!o||(c.u||0)>(o.u||0)) ex[c.id]=c; }); S.extra=Object.values(ex);
   recalc(); migrarMarcasCtx();
