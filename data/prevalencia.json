@@ -131,8 +131,8 @@
       "temas": "Variante normal de crescimento"
     },
     "Desenvolvimento neuropsicomotor — marcos": {
-      "q": 1,
-      "temas": "Atraso de linguagem"
+      "q": 2,
+      "temas": "Atraso de linguagem; transtorno do espectro autista"
     },
     "Alergia à proteína do leite de vaca (APLV)": {
       "q": 3,
@@ -145,6 +145,70 @@
     "Anemia ferropriva e suplementação de ferro": {
       "q": 1,
       "temas": "Suplementação de ferro"
+    },
+    "Derrame pleural": {
+      "q": 2,
+      "temas": "Derrame pleural (critérios de Light); IC pós-IAM/derrame pleural"
+    },
+    "Ascite — GASA e PBE": {
+      "q": 3,
+      "temas": "Peritonite bacteriana espontânea (2×); TB peritoneal"
+    },
+    "Tuberculose": {
+      "q": 3,
+      "temas": "TB x neoplasia pulmonar; TB extrapulmonar em HIV; investigação de contatos de TB"
+    },
+    "HIV — TARV e infecções oportunistas": {
+      "q": 4,
+      "temas": "TARV inicial; profilaxia de infecção oportunista; meningite criptocócica/tuberculosa em HIV; cistoisosporíase"
+    },
+    "Meningites": {
+      "q": 5,
+      "temas": "Meningite bacteriana (CM e Ped); meningite tuberculosa; interpretação do líquor; meningite viral"
+    },
+    "Gota": {
+      "q": 1,
+      "temas": "Crise de gota; início de hipouricemiante"
+    },
+    "FAN e autoanticorpos": {
+      "q": 0,
+      "temas": "Sem questão específica no Foco UERJ (esclerose sistêmica caiu 1×)"
+    },
+    "DPOC": {
+      "q": 1,
+      "temas": "DPOC (espirometria)"
+    },
+    "Distúrbios do sódio": {
+      "q": 4,
+      "temas": "SIADH; SIADH paraneoplásico; correção rápida de hiponatremia; hiponatremia pós-operatória"
+    },
+    "Distúrbios ácido-base": {
+      "q": 0,
+      "temas": "Sem questão específica no Foco UERJ (questão comentada que você anotou)"
+    },
+    "Senescência e senilidade": {
+      "q": 1,
+      "temas": "Senescência x senilidade"
+    },
+    "Cirurgia bariátrica": {
+      "q": 2,
+      "temas": "Preparo pré-operatório bariátrico; mecanismo do bypass"
+    },
+    "Câncer de tireoide": {
+      "q": 1,
+      "temas": "Carcinoma papilífero de tireoide"
+    },
+    "Tuberculose na infância": {
+      "q": 3,
+      "temas": "TB pediátrica (esquema); ILTB; linfadenopatia arrastada"
+    },
+    "Doenças autoimunes na infância": {
+      "q": 0,
+      "temas": "Sem questão específica no Foco UERJ (AIJ sistêmica apareceu como distrator em questão de DII)"
+    },
+    "Doença inflamatória intestinal na infância": {
+      "q": 2,
+      "temas": "Doença inflamatória intestinal pediátrica; diarreia crônica (investigação)"
     }
   }
 }
