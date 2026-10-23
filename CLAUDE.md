@@ -8,7 +8,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 - `data/notas.json` — anotações que a Jacke guarda no app (vão sozinhas para cá).
 - `data/progresso.json` — progresso dela sincronizado entre aparelhos. **Nunca editar.**
 - Cards que ela cria pela aba **Criar** (frente e verso, cloze, oclusão de imagem) ficam em `data/progresso.json` → `extra` (com `meu: true`). Nunca edite; só leia para não criar card repetido.
-- `data/prevalencia.json` — quanto cada baralho cai na UERJ (Foco UERJ, provas 2022–2026): `baralhos[sub].q` = nº de questões do tema. O app usa isso para pôr primeiro o que mais cai. **Ao criar um baralho novo, acrescente a entrada dele** (`"<nome do baralho>": {"q": N, "temas": "..."}`), contando as questões do tema no `DATA` do index.html do repositório jaaacked-07/jaaackestude.prevalenciaUERJ (público). Sem questão = `q: 0`. Nunca invente número.
+- `data/prevalencia.json` — quanto cada baralho cai na UERJ (Foco UERJ, provas 2022–2026): `baralhos[sub].q` = nº de questões do tema. O app usa isso para pôr primeiro o que mais cai. **Ao criar um baralho novo (ou se ela renomeou um baralho), acrescente a entrada dele com o nome exato que está em `cards.json`** (`"<nome do baralho>": {"q": N, "temas": "..."}`), contando as questões do tema no `DATA` do index.html do repositório jaaacked-07/jaaackestude.prevalenciaUERJ (público). Sem questão = `q: 0`. Nunca invente número.
 - `data/chave.json` — acesso do app criptografado com o usuário dela. **Nunca editar nem apagar.**
 
 ## ⚠️ PADRÃO OBRIGATÓRIO DE TODO CARD (checklist — nada sai sem isso)
@@ -22,7 +22,8 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 7. **Nada repetido** entre verso e visual (ver "Qualidade").
 8. **Escores destrinchados:** itens, pontos, total e faixas, em tabela.
 9. **Pelo menos 1 quiz por baralho** (4 alternativas, comentário em cada uma) e `pegadinha` sempre que der.
-10. **Antes de commitar, rode `python3 tools/validar.py`.** Se aparecer qualquer ❌, corrija e rode de novo. **Nunca commite com erro.** Corrija também os ⚠️ quando der (principalmente card sem visual).
+10. **Baralho novo → entrada em `data/prevalencia.json`** (quanto cai na UERJ). É isso que faz o app priorizar o tema.
+11. **Antes de commitar, rode `python3 tools/validar.py`.** Se aparecer qualquer ❌, corrija e rode de novo. **Nunca commite com erro.** Corrija também os ⚠️ quando der (principalmente card sem visual).
 
 ## Rotina: transformar anotações em cards
 
@@ -92,7 +93,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - **IMAGEM REAL TEM PRIORIDADE** sobre desenho: achado de exame, foto clínica, peça, lâmina, radiografia, ECG, anatomia, dermatologia, sinais semiológicos etc. → use `{"tipo":"img"}` com imagem real. **Não desenhe em SVG algo que existe como imagem real.**
 - Tabela, fluxograma, comparação (`vs`), lista e grupos você pode e deve criar. SVG só para esquema conceitual que não existe como foto (ex.: mapa de estadiamento).
 - Use `pegadinha` para o ponto que a banca usa para derrubar.
-- Inclua pelo menos 1 `quiz` (estilo prova, 4 alternativas, comentário para cada uma) por tema quando a anotação vier de uma questão.
+- Pelo menos 1 `quiz` por baralho (estilo prova, 4 alternativas, comentário para cada uma); quando a anotação vier de uma questão, faça o quiz a partir dela.
 
 ## Contexto do tema (em TODO card)
 
@@ -125,6 +126,7 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
   "pegadinha": "texto",             // opcional (use sempre que der)
   "uerj": "como a UERJ cobra isso",  // opcional (use sempre que der)
   "contexto": "resumo do tema amplo",  // obrigatório (igual para o baralho todo)
+  "ctxvisual": { ... },             // obrigatório: ilustração do contexto (igual para o baralho todo)
   "fonte": "Portaria X / comentário UERJ",
   "add": "AAAA-MM-DD"               // data de hoje
 }
@@ -135,14 +137,24 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 - Tabela: `{"tipo":"tabela","cab":["Sinal","Como","Sugere"],"linhas":[["Psoas","...","..."]]}`
 - Fluxograma: `{"tipo":"fluxo","passos":["Passo 1","Passo 2",["Ramo A","Ramo B"]]}` (array interno = ramos lado a lado)
 - Comparação: `{"tipo":"vs","a":{"t":"X","itens":["..."]},"b":{"t":"Y","itens":["..."]}}`
-- Lista: `{"tipo":"lista","itens":["item","!item destacado"]}` (`!` no início = destaque)
+- Lista: `{"tipo":"lista","itens":["item","!item destacado"]}` (`!` no início = destaque; também vale numa célula de tabela)
 - Grupos: `{"tipo":"grupos","grupos":[{"t":"Grupo","itens":["a","b"]}]}`
 
 - Desenho SVG: `{"tipo":"svg","svg":"<svg viewBox=...>...</svg>","legenda":"..."}` — use as cores do app por variável CSS (`var(--wine)`, `var(--rose)`, `var(--rose-soft)`, `var(--ink)`, `var(--mute)`, `var(--line)`, `var(--card)`) para funcionar no modo escuro; sem fontes externas.
 - Imagem real: `{"tipo":"img","src":"https://upload.wikimedia.org/...","legenda":"...","fonte":"Wikimedia Commons · autor/licença"}` — use imagens de licença livre (Wikimedia Commons, Open-i/PMC com licença aberta, CDC PHIL). Como achar e montar a URL (o acesso direto ao Wikimedia pode estar bloqueado no ambiente):
   1. WebSearch com `commons.wikimedia.org File: <termo em inglês>` para achar o nome exato do arquivo (ex.: `Diagram_showing_stage_2B_cervical_cancer_CRUK_216.svg`).
-  2. Monte a miniatura: `h = md5(nome_com_underscores)`; URL = `https://upload.wikimedia.org/wikipedia/commons/thumb/{h[0]}/{h[0:2]}/{nome}/600px-{nome}` (+ `.png` no fim se o arquivo for `.svg`).
+  2. Monte a URL: `h = md5(nome_com_underscores)`. Miniatura (fotos grandes e SVG): `https://upload.wikimedia.org/wikipedia/commons/thumb/{h[0]}/{h[0:2]}/{nome}/600px-{nome}` (+ `.png` no fim se o arquivo for `.svg`). Se a imagem original puder ter menos de 600 px de largura, use o arquivo original: `https://upload.wikimedia.org/wikipedia/commons/{h[0]}/{h[0:2]}/{nome}` (miniatura maior que o original dá erro).
   3. Se conseguir abrir a URL ou a página do arquivo, confira que a imagem mostra o que a legenda diz. Se a imagem falhar, o app simplesmente a esconde.
 - Vários visuais no mesmo card: `"visual": [ {...}, {...} ]`.
 
+SVG: textos com no mínimo 8,5 de tamanho, `viewBox` com até ~340 de largura (cabe no celular) e sem texto saindo da área.
+
 Escolha o formato pelo conteúdo: critérios/comparação de várias colunas → tabela; conduta/algoritmo → fluxo; X versus Y → vs; enumeração → lista ou grupos.
+
+## Como o app usa os cards (para entender as prioridades)
+
+- **Fila do dia:** todos os cards errados que venceram + **15 novos** + pelo menos 5 revisões, completando 20 (passa de 20 se houver muito erro).
+- **Prioridade:** quanto o baralho cai na UERJ (`data/prevalencia.json`) + se o card está fraco + quantas vezes ela errou + favorito/marca-texto + atraso. Os baralhos são intercalados (não vêm 10 cards seguidos do mesmo tema).
+- **Fraco** = errou ou marcou "Quase" e ainda não acertou 3× seguidas. **Sanguessuga** = errou 4 ou mais vezes.
+- **Modo véspera** (30–31/10): sanguessugas, fracos, favoritos, marcados e o que mais cai na UERJ, sem novos.
+- Revisão comprimida até a prova: nenhum intervalo passa da metade dos dias que faltam; nada fica para depois de 31/10.

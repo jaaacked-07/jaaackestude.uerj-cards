@@ -123,6 +123,7 @@ table.t{width:100%;table-layout:auto;overflow-wrap:break-word;word-break:normal;
 .t td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 .t tr:last-child td{border-bottom:0}
 .t td:first-child{font-weight:600;color:var(--wine)}
+.t td.hl{font-weight:700;color:var(--wine)}
 .flow{display:flex;flex-direction:column;align-items:center;gap:0}
 .fn{background:var(--card);box-shadow:var(--shadow);border-radius:12px;padding:9px 16px;font-size:14.5px;text-align:center;min-width:60%}
 .fr{display:flex;gap:8px;width:100%;justify-content:center}.fr .fn{min-width:0;flex:1}
@@ -481,7 +482,10 @@ async function carregar(){
 }
 /* ===== Prioridade pela UERJ (Foco UERJ: questões 2022–2026) ===== */
 let PREV={areas:{},baralhos:{}};
-const qUERJ=c=>((PREV.baralhos||{})[c.sub]||{}).q||0;
+const PREVN={}; let PREVREF=null;
+function qUERJ(c){ const B=PREV.baralhos||{}; if(B[c.sub]) return B[c.sub].q||0;
+  if(PREVREF!==B){ PREVREF=B; for(const k in PREVN) delete PREVN[k]; Object.keys(B).forEach(k=>PREVN[norm(k)]=B[k]); }
+  const e=PREVN[norm(c.sub)]; return e?e.q||0:0; }
 /* nota de prioridade: questões do tema na UERJ pesam mais; % da grande área desempata */
 const pesoUERJ=c=>qUERJ(c)*10+((PREV.areas||{})[c.area]||0)/3;
 const nivelUERJ=q=>q>=4?'alta':q>=2?'media':'baixa';
@@ -553,10 +557,6 @@ function intercalar(lista,score,jitter){
   return out;
 }
 function novos(){ return intercalar(CARDS.filter(c=>!S.srs[c.id]),pesoUERJ); }
-function vencidos(){
-  const P=x=>S.srs[x.id];
-  return CARDS.filter(due).sort((a,b)=>(P(b).lr===0)-(P(a).lr===0) || prioridade(b)-prioridade(a) || (P(b).lapses||0)-(P(a).lapses||0) || (P(a).ease||2.5)-(P(b).ease||2.5) || P(a).due.localeCompare(P(b).due));
-}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
 /* Fila do dia: TODOS os erros vencidos + 15 novos (se houver) + revisões vencidas (pelo menos 5) até completar a meta.
    Novos e revisões escolhidos pela prioridade combinada (UERJ + fraqueza), intercalando baralhos.
@@ -660,7 +660,7 @@ function visual(v){
   if(v.tipo==='svg') return `<div class="vis vsvg">${v.svg}${v.legenda?`<div class="vcap" style="padding:8px 2px 0">${esc(v.legenda)}</div>`:''}</div>`;
   if(v.tipo==='img') return `<div class="vis vimg"><img src="${esc(imgSrc(v.src))}" alt="${esc(v.legenda||'')}" loading="lazy" onerror="this.parentNode.style.display='none'">${v.legenda||v.fonte?`<div class="vcap">${esc(v.legenda||'')}${v.fonte?` · ${esc(v.fonte)}`:''}</div>`:''}</div>`;
   if(v.tipo==='tabela'){ const nc=Math.max(...v.linhas.map(r=>r.length),(v.cab||[]).length), cab=v.cab&&v.cab.some(x=>x)?v.cab:null;
-    return `<div class="vis"><table class="t ${nc>=3?'larga':''} ${cab?'':'semcab'}">${cab?'<tr>'+cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map((c,i)=>`<td${cab&&cab[i]?` data-l="${esc(cab[i])}"`:''}>${esc(c)}</td>`).join('')+'</tr>').join('')}</table></div>`; }
+    return `<div class="vis"><table class="t ${nc>=3?'larga':''} ${cab?'':'semcab'}">${cab?'<tr>'+cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map((c,i)=>{ const d=String(c), hl=d[0]==='!'; return `<td${cab&&cab[i]?` data-l="${esc(cab[i])}"`:''}${hl?' class="hl"':''}>${esc(hl?d.slice(1):d)}</td>`; }).join('')+'</tr>').join('')}</table></div>`; }
   if(v.tipo==='fluxo') return `<div class="vis flow">${v.passos.map((p,i)=>(i?'<div class="fa"></div>':'')+(Array.isArray(p)?`<div class="fr">${p.map(x=>`<div class="fn">${esc(x)}</div>`).join('')}</div>`:`<div class="fn">${esc(p)}</div>`)).join('')}</div>`;
   if(v.tipo==='vs') return `<div class="vis vs"><div class="s"><h4>${esc(v.a.t)}</h4>${v.a.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div><div class="o">×</div><div class="s"><h4>${esc(v.b.t)}</h4>${v.b.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`;
   if(v.tipo==='lista') return `<div class="vis li">${v.itens.map(x=>x[0]==='!'?`<div class="hl">${esc(x.slice(1))}</div>`:`<div>${esc(x)}</div>`).join('')}</div>`;
@@ -1267,7 +1267,7 @@ let PSYNC=false, PTIMER=null, PMUDOU=false;
 function agendarSync(){ PMUDOU=true; clearTimeout(PTIMER); if(!SS) PTIMER=setTimeout(syncProg,4000); }
 async function syncProg(){
   clearTimeout(PTIMER);
-  const tk=ghTok(); if(!tk||PSYNC||SS) return; PSYNC=true;
+  const tk=ghTok(); if(!tk||PSYNC||(SS&&!document.hidden)) return; PSYNC=true;   // na rodada só sincroniza ao sair do app (fechar/trocar de app)
   for(let i=0;i<2;i++){
     try{
       const r=await fetch(GH_PROG+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'});
@@ -1913,7 +1913,7 @@ function responder(c,r,t){
 function voltarCard(){
   if(!SS||!SS.hist||!SS.hist.length) return;
   const h=SS.hist.pop();
-  if(h.srs) S.srs[h.id]=h.srs; else delete S.srs[h.id];
+  if(h.srs) S.srs[h.id]={...h.srs,t:Date.now()}; else delete S.srs[h.id];
   Object.assign(SS,{fila:h.fila,total:h.total,feitos:h.feitos,xp:h.xp,combo:h.combo,maxCombo:h.maxCombo,acertos:h.acertos,meta:h.meta,repetidos:new Set(h.rep)});
   if(h.done&&S.plan) S.plan.done=h.done;
   if(h.hoje) S.hoje=h.hoje;

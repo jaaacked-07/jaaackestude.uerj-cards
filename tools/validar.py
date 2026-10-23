@@ -47,6 +47,8 @@ for c in cards:
         for l in v.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'verso: itens juntos com "·" no mesmo tópico → "{l.strip()[:60]}"')
         if not c.get('visual'): W(i, 'card sem "visual" (imagem real, tabela, fluxo, vs, lista ou grupos)')
+    for v in (c.get('visual') if isinstance(c.get('visual'), list) else [c.get('visual')] if c.get('visual') else []):
+        if v.get('tipo') == 'tabela' and not v.get('linhas'): E(i, 'tabela sem linhas')
     if c.get('tipo') == 'quiz':
         o = c.get('opcoes') or []
         if len(o) != 4: E(i, 'quiz precisa de 4 alternativas (A–D)')
@@ -57,7 +59,7 @@ for c in cards:
         if v.get('tipo') == 'img' and not (str(v.get('src','')).startswith('https://upload.wikimedia.org/') or str(v.get('src','')).startswith('data/img/') or str(v.get('src','')).startswith('https://')): E(i, 'imagem com src inválido')
 for k, cs in deck.items():
     nome = ' › '.join(map(str, k))
-    if k[2] not in PREV: E(nome, 'baralho sem entrada em data/prevalencia.json (quanto cai na UERJ)')
+    if k[2] not in PREV: E(nome, 'baralho sem entrada em data/prevalencia.json (novo ou renomeado: acrescente com o nome exato)')
     if len({c.get('contexto') for c in cs}) > 1: E(nome, 'cards do mesmo baralho com contextos diferentes (tem que ser o MESMO texto)')
     if not any(c.get('uerj') for c in cs): W(nome, 'nenhum card do baralho tem o campo "uerj"')
     if not any(c.get('tipo') == 'quiz' for c in cs): W(nome, 'baralho sem questão estilo prova (quiz)')
