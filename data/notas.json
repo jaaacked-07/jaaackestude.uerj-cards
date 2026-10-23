@@ -122,6 +122,11 @@
       "id": 1792788887488,
       "d": "2026-10-23",
       "t": "Profilaxia contactantes tuberculose: Antes de avaliar as alternativas a respeito do cenário construído, vale repassar a lógica da avaliação de contatos:\nContatos sintomáticos — essas pessoas entram direto no fluxo de doença ativa: exame clínico completo, radiografia de tórax e teste bacteriológico, em geral baciloscopia ou Teste Rápido Molecular (TRM-TB). Importante deixar claro: crianças < 10 anos e adolescentes que forem incapazes de fornecer boas amostras de escarro devem ser submetidos ao sistema de pontuação para diagnóstico de TB doença.\nContatos assintomáticos — aqui o alvo é buscar indivíduos com a infecção latente. Devem ser realizados prova tuberculínica (PPD) ou IGRA e radiografia de tórax."
+    },
+    {
+      "id": 1792788969358,
+      "d": "2026-10-23",
+      "t": "Concluindo até aqui: temos uma acidose metabólica com acidose respiratória concomitante e ânion-gap aumentado. Entretanto, a banca pediu ainda a análise do gap osmolar. Entenda: normalmente temos uma proximidade entre os valores da osmolaridade sérica medida (laboratorialmente) e da calculada. \"Bora\" para a terceira fórmula:\n• Osm = 2Na + Gli/18 + Ureia/6.\nQuando essa diferença excede 10 mOsm/kg, temos o gap (hiato) osmolar. Esse hiato se deve ao acúmulo de substâncias osmoticamente ativas, não contempladas na fórmula, em concentrações séricas significativas. Exemplos são o manitol e álcoois, como o metanol, etanol e etilenoglicol. No caso em tela, a osmolaridade calculada dá 293\nmOsm/kg. Se a osmolaridade medida foi de 340 mOsm/kg então temos um gap osmolar considerável (> 10 mOsm/kg), o que nos deve fazer pensar em alguma intoxicação exógena!"
     }
   ],
   "processadas": [
