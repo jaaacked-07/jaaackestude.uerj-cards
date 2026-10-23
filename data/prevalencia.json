@@ -209,6 +209,14 @@
     "Doença inflamatória intestinal na infância": {
       "q": 2,
       "temas": "Doença inflamatória intestinal pediátrica; diarreia crônica (investigação)"
+    },
+    "Asma": {
+      "q": 2,
+      "temas": "Asma não controlada; broncoespasmo induzido por exercício"
+    },
+    "Asma na infância": {
+      "q": 3,
+      "temas": "Asma não controlada (3×)"
     }
   }
 }

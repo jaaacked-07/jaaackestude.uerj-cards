@@ -10060,6 +10060,510 @@
         "svg": "<svg viewBox=\"0 0 340 104\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"20\" y1=\"60\" x2=\"320\" y2=\"60\" stroke=\"var(--mute)\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"60\" r=\"7\" fill=\"var(--wine)\"/><text x=\"80\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">3 m</text><text x=\"80\" y=\"84\" font-size=\"8.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">sustenta</text><text x=\"80\" y=\"96\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">a cabeça</text><circle cx=\"140\" cy=\"60\" r=\"7\" fill=\"var(--wine)\"/><text x=\"140\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">6 m</text><text x=\"140\" y=\"84\" font-size=\"8.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">senta</text><text x=\"140\" y=\"96\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">com apoio</text><circle cx=\"200\" cy=\"60\" r=\"7\" fill=\"var(--wine)\"/><text x=\"200\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">9 m</text><text x=\"200\" y=\"84\" font-size=\"8.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">senta sem apoio</text><text x=\"200\" y=\"96\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">engatinha</text><circle cx=\"260\" cy=\"60\" r=\"7\" fill=\"var(--wine)\"/><text x=\"260\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">12 m</text><text x=\"260\" y=\"84\" font-size=\"8.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">anda</text><text x=\"260\" y=\"96\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">com apoio</text><circle cx=\"320\" cy=\"60\" r=\"7\" fill=\"var(--wine)\"/><text x=\"320\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">15 m</text><text x=\"320\" y=\"84\" font-size=\"8.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">anda</text><text x=\"320\" y=\"96\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">sozinho</text><text x=\"170\" y=\"16\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">crânio-caudal: da cabeça para os pés</text></svg>",
         "legenda": "Marcos motores no 1º ano e meio."
       }
+    },
+    {
+      "id": "dpoc-07",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "DPOC",
+      "frente": "DPOC no seguimento: como ajustar o tratamento (GOLD)",
+      "verso": "**Dispneia persistente → garantir LABA + LAMA.**\n**Exacerbações persistentes → acrescentar corticoide inalatório se eosinófilos ≥ 100.**\n**Ainda exacerbando em terapia tripla → roflumilaste (VEF1 < 50% + bronquite crônica) ou azitromicina (ex-tabagista).**\n\nAntes de escalar:\n- Conferir técnica inalatória e adesão.\n- Tratar comorbidades e manter reabilitação.\n\nCorticoide inalatório pelos eosinófilos:\n- **≥ 300** → maior benefício.\n- **100–300** → benefício moderado.\n- **< 100** → pouco benefício e mais pneumonia.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Paciente em seguimento",
+          [
+            "Problema = dispneia",
+            "Problema = exacerbações"
+          ],
+          [
+            "LABA + LAMA (trocar dispositivo, investigar outras causas)",
+            "LABA + LAMA + CI se eosinófilos ≥ 100"
+          ],
+          "Persistem exacerbações → roflumilaste ou azitromicina"
+        ]
+      },
+      "pegadinha": "O seguimento é guiado pelo \"traço tratável\" (dispneia ou exacerbação), não pelo grupo ABE inicial.",
+      "fonte": "GOLD Report 2025 / Diretrizes SBPT DPOC",
+      "add": "2026-10-23",
+      "contexto": "**DPOC = limitação persistente ao fluxo aéreo, não totalmente reversível, por exposição (tabaco, fumaça de lenha); diagnóstico pela espirometria.**\n\nDiagnóstico:\n- **VEF1/CVF < 0,7 após broncodilatador** → confirma obstrução persistente\n- **VEF1 (% do previsto)** → gravidade da obstrução (GOLD 1 a 4)\n\nAvaliação (GOLD ABE):\n- **Sintomas** → mMRC e CAT\n- **Exacerbações no último ano** → definem o grupo E\n\nExacerbação:\n- Piora aguda de dispneia, tosse e/ou escarro\n- Principal gatilho → infecção viral ou bacteriana\n- Tratamento → broncodilatador de curta, corticoide, O2 alvo 88–92%, antibiótico se indicado, VNI se acidose respiratória\n\nO que reduz mortalidade:\n- Parar de fumar\n- O2 domiciliar na hipoxemia crônica\n\nComo cai:\n- Exacerbação em caso clínico: antibiótico, oseltamivir, VNI, conduta no refratário.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/COPD.JPG/600px-COPD.JPG",
+        "legenda": "RX de DPOC grave: hiperinsuflação, coração pequeno e hipertransparência",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "dpoc-08",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "DPOC",
+      "frente": "Exacerbação da DPOC: quando internar e quando mandar para UTI",
+      "verso": "**Internar → dispneia grave de repouso, hipoxemia/insuficiência respiratória, confusão, cianose, edema novo, falha do tratamento inicial, comorbidade grave ou falta de suporte em casa.**\n**UTI → dispneia grave sem resposta, confusão/letargia, hipoxemia grave persistente ou acidose respiratória que piora apesar da VNI, instabilidade hemodinâmica.**\n\nVNI (antes de intubar):\n- pH ≤ 7,35 e PaCO2 ≥ 45 mmHg.\n- Dispneia grave com fadiga muscular.\n\nContraindicam VNI (→ IOT):\n- Rebaixamento importante, parada respiratória, instabilidade, vômitos, secreção excessiva.",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Internar",
+            "itens": [
+              "Dispneia de repouso",
+              "SatO2 baixa / insuficiência respiratória",
+              "Confusão",
+              "Cianose ou edema novo",
+              "Falha do tratamento ambulatorial",
+              "Sem suporte domiciliar"
+            ]
+          },
+          {
+            "t": "UTI",
+            "itens": [
+              "!Acidose respiratória que piora apesar da VNI",
+              "Hipoxemia grave persistente",
+              "Rebaixamento",
+              "Instabilidade hemodinâmica"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "VNI reduz intubação e mortalidade na exacerbação com acidose respiratória — é a 1ª escolha, não a IOT.",
+      "fonte": "GOLD Report 2025 / Diretrizes SBPT DPOC",
+      "add": "2026-10-23",
+      "contexto": "**DPOC = limitação persistente ao fluxo aéreo, não totalmente reversível, por exposição (tabaco, fumaça de lenha); diagnóstico pela espirometria.**\n\nDiagnóstico:\n- **VEF1/CVF < 0,7 após broncodilatador** → confirma obstrução persistente\n- **VEF1 (% do previsto)** → gravidade da obstrução (GOLD 1 a 4)\n\nAvaliação (GOLD ABE):\n- **Sintomas** → mMRC e CAT\n- **Exacerbações no último ano** → definem o grupo E\n\nExacerbação:\n- Piora aguda de dispneia, tosse e/ou escarro\n- Principal gatilho → infecção viral ou bacteriana\n- Tratamento → broncodilatador de curta, corticoide, O2 alvo 88–92%, antibiótico se indicado, VNI se acidose respiratória\n\nO que reduz mortalidade:\n- Parar de fumar\n- O2 domiciliar na hipoxemia crônica\n\nComo cai:\n- Exacerbação em caso clínico: antibiótico, oseltamivir, VNI, conduta no refratário.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/COPD.JPG/600px-COPD.JPG",
+        "legenda": "RX de DPOC grave: hiperinsuflação, coração pequeno e hipertransparência",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "dpoc-09",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "DPOC",
+      "frente": "DPOC × asma e quando pesquisar alfa-1 antitripsina",
+      "verso": "**DPOC → > 40 anos, tabagismo/fumaça de lenha, sintomas progressivos, obstrução persistente pós-BD.**\n**Asma → início precoce, atopia, sintomas variáveis, obstrução reversível.**\n**Alfa-1 antitripsina → dosar em todo paciente com DPOC (OMS), sobretudo jovem, pouco tabagismo ou enfisema de BASES.**\n\nAlfa-1 antitripsina:\n- Enfisema panacinar de lobos inferiores.\n- Pode ter doença hepática (cirrose) associada.\n- Tratamento específico: reposição de alfa-1 antitripsina.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/59/Copd_versus_healthy_lung.jpg",
+        "legenda": "Pulmão saudável × DPOC: destruição alveolar (enfisema) e inflamação brônquica",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      },
+      "pegadinha": "Enfisema do tabagismo → centrolobular de ÁPICES. Enfisema de BASES em jovem → alfa-1 antitripsina.",
+      "fonte": "GOLD Report 2025 / Diretrizes SBPT DPOC",
+      "add": "2026-10-23",
+      "contexto": "**DPOC = limitação persistente ao fluxo aéreo, não totalmente reversível, por exposição (tabaco, fumaça de lenha); diagnóstico pela espirometria.**\n\nDiagnóstico:\n- **VEF1/CVF < 0,7 após broncodilatador** → confirma obstrução persistente\n- **VEF1 (% do previsto)** → gravidade da obstrução (GOLD 1 a 4)\n\nAvaliação (GOLD ABE):\n- **Sintomas** → mMRC e CAT\n- **Exacerbações no último ano** → definem o grupo E\n\nExacerbação:\n- Piora aguda de dispneia, tosse e/ou escarro\n- Principal gatilho → infecção viral ou bacteriana\n- Tratamento → broncodilatador de curta, corticoide, O2 alvo 88–92%, antibiótico se indicado, VNI se acidose respiratória\n\nO que reduz mortalidade:\n- Parar de fumar\n- O2 domiciliar na hipoxemia crônica\n\nComo cai:\n- Exacerbação em caso clínico: antibiótico, oseltamivir, VNI, conduta no refratário.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/COPD.JPG/600px-COPD.JPG",
+        "legenda": "RX de DPOC grave: hiperinsuflação, coração pequeno e hipertransparência",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "dpoc-q3",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "DPOC",
+      "frente": "Homem, 67 anos, DPOC (VEF1 38%), chega com piora da dispneia e escarro purulento. Em uso de O2 a 2 L/min: SatO2 89%, FR 30 irpm, consciente e colaborativo. Gasometria: pH 7,29; PaCO2 62 mmHg; HCO3 30. Já recebeu broncodilatador e corticoide. A próxima conduta é:",
+      "opcoes": [
+        "Aumentar o O2 para manter SatO2 > 96%",
+        "Iniciar ventilação não invasiva",
+        "Intubação orotraqueal imediata",
+        "Aminofilina venosa"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "O2 em excesso piora a hipercapnia; alvo 88–92%.",
+        "Gabarito: acidose respiratória (pH ≤ 7,35, PaCO2 ≥ 45) em paciente consciente → VNI.",
+        "IOT fica para falha da VNI, rebaixamento ou instabilidade.",
+        "Metilxantina é 2ª linha e não trata a acidose respiratória."
+      ],
+      "pegadinha": "HCO3 de 30 mostra que já havia retenção crônica: é uma acidose respiratória crônica agudizada.",
+      "uerj": "Exacerbação com gasometria para decidir VNI é um formato frequente nas bancas.",
+      "fonte": "GOLD Report 2025 / Diretrizes SBPT DPOC",
+      "add": "2026-10-23",
+      "contexto": "**DPOC = limitação persistente ao fluxo aéreo, não totalmente reversível, por exposição (tabaco, fumaça de lenha); diagnóstico pela espirometria.**\n\nDiagnóstico:\n- **VEF1/CVF < 0,7 após broncodilatador** → confirma obstrução persistente\n- **VEF1 (% do previsto)** → gravidade da obstrução (GOLD 1 a 4)\n\nAvaliação (GOLD ABE):\n- **Sintomas** → mMRC e CAT\n- **Exacerbações no último ano** → definem o grupo E\n\nExacerbação:\n- Piora aguda de dispneia, tosse e/ou escarro\n- Principal gatilho → infecção viral ou bacteriana\n- Tratamento → broncodilatador de curta, corticoide, O2 alvo 88–92%, antibiótico se indicado, VNI se acidose respiratória\n\nO que reduz mortalidade:\n- Parar de fumar\n- O2 domiciliar na hipoxemia crônica\n\nComo cai:\n- Exacerbação em caso clínico: antibiótico, oseltamivir, VNI, conduta no refratário.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/COPD.JPG/600px-COPD.JPG",
+        "legenda": "RX de DPOC grave: hiperinsuflação, coração pequeno e hipertransparência",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "asma-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "Asma",
+      "frente": "Diagnóstico de asma: o que confirma a variabilidade do fluxo?",
+      "verso": "**Espirometria com resposta ao broncodilatador → VEF1 sobe > 12% e > 200 mL (adulto) ou > 12% do previsto (criança).**\n**Ou variabilidade do PFE > 10% (adulto) ou > 13% (criança) em 2 semanas.**\n\nOutros testes:\n- Teste de broncoprovocação (metacolina) positivo.\n- Melhora após 4 semanas de corticoide inalatório.\n- Teste de exercício positivo (broncoespasmo induzido por exercício).\n\nAtenção:\n- Espirometria normal fora da crise NÃO exclui asma.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Teste",
+          "Positivo se"
+        ],
+        "linhas": [
+          [
+            "Resposta ao BD (adulto)",
+            "VEF1 ↑ > 12% e > 200 mL"
+          ],
+          [
+            "Resposta ao BD (criança)",
+            "VEF1 ↑ > 12% do previsto"
+          ],
+          [
+            "Variabilidade do PFE em 2 semanas (adulto)",
+            "> 10%"
+          ],
+          [
+            "Variabilidade do PFE em 2 semanas (criança)",
+            "> 13%"
+          ],
+          [
+            "Broncoprovocação",
+            "Queda do VEF1 ≥ 20% com metacolina"
+          ],
+          [
+            "Teste de exercício",
+            "Queda do VEF1 > 10% e > 200 mL"
+          ]
+        ]
+      },
+      "pegadinha": "GINA 2025 trocou \"limitação variável do fluxo\" por \"fluxo expiratório variável\": a obstrução não precisa estar presente no dia do exame.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma = doença inflamatória crônica das vias aéreas, com sintomas e obstrução VARIÁVEIS e reversíveis.**\n\nDiagnóstico (≥ 6 anos):\n- **Sintomas variáveis** → sibilância, dispneia, aperto no peito, tosse, piores à noite ou com gatilhos\n- **Fluxo expiratório variável** → espirometria com resposta ao BD ou variabilidade do PFE\n\nTratamento por etapas (GINA):\n- **≥ 12 anos** → preferir budesonida-formoterol como alívio (trilha 1)\n- **6–11 anos** → corticoide inalatório como base\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes\n- **SABA isolado** → não é mais recomendado no adulto e adolescente\n\nSeguimento:\n- Avaliar controle (4 perguntas) e risco de crise\n- Antes de subir etapa → técnica inalatória, adesão, gatilhos\n- Controlada por 3 meses → descer etapa\n\nComo cai:\n- Caso de asma não controlada: qual a próxima etapa?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Asthma_attack-illustration_NIH.jpg",
+        "legenda": "Via aérea normal × via aérea na asma: inflamação, muco e contração do músculo liso",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      }
+    },
+    {
+      "id": "asma-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "Asma",
+      "frente": "Avaliação do controle da asma (GINA): as 4 perguntas",
+      "verso": "**Nas últimas 4 semanas:**\n- Sintomas diurnos mais de 2×/semana?\n- Despertar noturno por asma?\n- Alívio (SABA) mais de 2×/semana?\n- Limitação de atividade por asma?",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Respostas \"sim\"",
+          "Classificação"
+        ],
+        "linhas": [
+          [
+            "0 de 4",
+            "Controlada"
+          ],
+          [
+            "1–2 de 4",
+            "Parcialmente controlada"
+          ],
+          [
+            "3–4 de 4",
+            "!Não controlada"
+          ]
+        ]
+      },
+      "pegadinha": "Controle de sintomas ≠ risco: VEF1 < 60%, crise no último ano, uso de ≥ 3 frascos de SABA/ano, tabagismo e eosinófilos altos aumentam o risco de crise mesmo com poucos sintomas.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma = doença inflamatória crônica das vias aéreas, com sintomas e obstrução VARIÁVEIS e reversíveis.**\n\nDiagnóstico (≥ 6 anos):\n- **Sintomas variáveis** → sibilância, dispneia, aperto no peito, tosse, piores à noite ou com gatilhos\n- **Fluxo expiratório variável** → espirometria com resposta ao BD ou variabilidade do PFE\n\nTratamento por etapas (GINA):\n- **≥ 12 anos** → preferir budesonida-formoterol como alívio (trilha 1)\n- **6–11 anos** → corticoide inalatório como base\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes\n- **SABA isolado** → não é mais recomendado no adulto e adolescente\n\nSeguimento:\n- Avaliar controle (4 perguntas) e risco de crise\n- Antes de subir etapa → técnica inalatória, adesão, gatilhos\n- Controlada por 3 meses → descer etapa\n\nComo cai:\n- Caso de asma não controlada: qual a próxima etapa?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Asthma_attack-illustration_NIH.jpg",
+        "legenda": "Via aérea normal × via aérea na asma: inflamação, muco e contração do músculo liso",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      }
+    },
+    {
+      "id": "asma-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "Asma",
+      "frente": "Tratamento da asma em ≥ 12 anos por etapas (GINA)",
+      "verso": "**Trilha 1 (preferida) → budesonida-formoterol em dose baixa como alívio em todas as etapas.**\n**Trilha 2 → SABA como alívio + corticoide inalatório de manutenção.**\n\nPor que a trilha 1:\n- Cada alívio já leva corticoide → menos crises graves que SABA isolado.\n- O formoterol age rápido (como SABA) e dura mais.\n\nEtapa 5 (asma grave):\n- Associar LAMA (tiotrópio).\n- Fenotipar e encaminhar: anti-IgE, anti-IL-5, anti-IL-4R, anti-TSLP.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Etapa",
+          "Trilha 1 (preferida)",
+          "Trilha 2 (alternativa)"
+        ],
+        "linhas": [
+          [
+            "1",
+            "Budesonida-formoterol dose baixa SÓ quando precisar",
+            "CI sempre que usar SABA"
+          ],
+          [
+            "2",
+            "Budesonida-formoterol dose baixa SÓ quando precisar",
+            "CI dose baixa diário"
+          ],
+          [
+            "3",
+            "Budesonida-formoterol dose baixa manutenção + alívio (MART)",
+            "CI dose baixa + LABA"
+          ],
+          [
+            "4",
+            "Budesonida-formoterol dose média manutenção + alívio",
+            "CI dose média/alta + LABA"
+          ],
+          [
+            "5",
+            "+ LAMA, fenotipar, biológico",
+            "+ LAMA, fenotipar, biológico"
+          ]
+        ]
+      },
+      "pegadinha": "SABA isolado como único tratamento NÃO é mais recomendado para ≥ 12 anos (aumenta risco de crise grave e morte).",
+      "uerj": "Asma não controlada caiu na UERJ (clínica e pediatria): a pergunta costuma ser a próxima etapa.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma = doença inflamatória crônica das vias aéreas, com sintomas e obstrução VARIÁVEIS e reversíveis.**\n\nDiagnóstico (≥ 6 anos):\n- **Sintomas variáveis** → sibilância, dispneia, aperto no peito, tosse, piores à noite ou com gatilhos\n- **Fluxo expiratório variável** → espirometria com resposta ao BD ou variabilidade do PFE\n\nTratamento por etapas (GINA):\n- **≥ 12 anos** → preferir budesonida-formoterol como alívio (trilha 1)\n- **6–11 anos** → corticoide inalatório como base\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes\n- **SABA isolado** → não é mais recomendado no adulto e adolescente\n\nSeguimento:\n- Avaliar controle (4 perguntas) e risco de crise\n- Antes de subir etapa → técnica inalatória, adesão, gatilhos\n- Controlada por 3 meses → descer etapa\n\nComo cai:\n- Caso de asma não controlada: qual a próxima etapa?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Asthma_attack-illustration_NIH.jpg",
+        "legenda": "Via aérea normal × via aérea na asma: inflamação, muco e contração do músculo liso",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      }
+    },
+    {
+      "id": "asma-04",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "Asma",
+      "frente": "Asma não controlada: o que fazer antes de subir a etapa?",
+      "verso": "**Checar técnica inalatória, adesão, exposições (tabaco, alérgenos, ocupação) e comorbidades antes de aumentar o tratamento.**\n\nComorbidades que pioram a asma:\n- Rinite/rinossinusite.\n- DRGE.\n- Obesidade.\n- Apneia do sono, ansiedade/depressão.\n\nDescer etapa:\n- Após 3 meses de controle → reduzir o corticoide em 25–50%.\n- Nunca suspender totalmente o corticoide inalatório no adulto.",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Asma não controlada",
+          "Técnica + adesão + gatilhos + comorbidades",
+          [
+            "Corrigiu → reavaliar em 2–3 meses",
+            "Tudo certo → subir uma etapa"
+          ],
+          "Controlada por 3 meses → descer uma etapa"
+        ]
+      },
+      "pegadinha": "Broncoespasmo induzido por exercício no asmático é sinal de asma NÃO controlada → ajustar a manutenção, não só usar SABA antes do exercício.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma = doença inflamatória crônica das vias aéreas, com sintomas e obstrução VARIÁVEIS e reversíveis.**\n\nDiagnóstico (≥ 6 anos):\n- **Sintomas variáveis** → sibilância, dispneia, aperto no peito, tosse, piores à noite ou com gatilhos\n- **Fluxo expiratório variável** → espirometria com resposta ao BD ou variabilidade do PFE\n\nTratamento por etapas (GINA):\n- **≥ 12 anos** → preferir budesonida-formoterol como alívio (trilha 1)\n- **6–11 anos** → corticoide inalatório como base\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes\n- **SABA isolado** → não é mais recomendado no adulto e adolescente\n\nSeguimento:\n- Avaliar controle (4 perguntas) e risco de crise\n- Antes de subir etapa → técnica inalatória, adesão, gatilhos\n- Controlada por 3 meses → descer etapa\n\nComo cai:\n- Caso de asma não controlada: qual a próxima etapa?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Asthma_attack-illustration_NIH.jpg",
+        "legenda": "Via aérea normal × via aérea na asma: inflamação, muco e contração do músculo liso",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      }
+    },
+    {
+      "id": "asma-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Pneumologia",
+      "sub": "Asma",
+      "frente": "Mulher, 28 anos, asmática, em uso apenas de salbutamol quando precisa. Nas últimas 4 semanas, sintomas diurnos 3×/semana, 1 despertar noturno e uso de salbutamol 4×/semana. Técnica inalatória correta. A melhor conduta é:",
+      "opcoes": [
+        "Manter salbutamol e acrescentar montelucaste",
+        "Iniciar budesonida-formoterol em dose baixa como manutenção e alívio",
+        "Iniciar corticoide oral por 5 dias e manter salbutamol isolado",
+        "Iniciar LABA isolado (formoterol) de manutenção"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Montelucaste é alternativa menos eficaz que o corticoide inalatório.",
+        "Gabarito: asma não controlada (3 de 4 critérios) em paciente sem controlador → corticoide inalatório; pela trilha 1, budesonida-formoterol (etapa 3: manutenção + alívio).",
+        "Corticoide oral é para crise, não para controle.",
+        "LABA sem corticoide inalatório aumenta risco de morte na asma."
+      ],
+      "pegadinha": "Nunca LABA sem corticoide inalatório na asma.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma = doença inflamatória crônica das vias aéreas, com sintomas e obstrução VARIÁVEIS e reversíveis.**\n\nDiagnóstico (≥ 6 anos):\n- **Sintomas variáveis** → sibilância, dispneia, aperto no peito, tosse, piores à noite ou com gatilhos\n- **Fluxo expiratório variável** → espirometria com resposta ao BD ou variabilidade do PFE\n\nTratamento por etapas (GINA):\n- **≥ 12 anos** → preferir budesonida-formoterol como alívio (trilha 1)\n- **6–11 anos** → corticoide inalatório como base\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes\n- **SABA isolado** → não é mais recomendado no adulto e adolescente\n\nSeguimento:\n- Avaliar controle (4 perguntas) e risco de crise\n- Antes de subir etapa → técnica inalatória, adesão, gatilhos\n- Controlada por 3 meses → descer etapa\n\nComo cai:\n- Caso de asma não controlada: qual a próxima etapa?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Asthma_attack-illustration_NIH.jpg",
+        "legenda": "Via aérea normal × via aérea na asma: inflamação, muco e contração do músculo liso",
+        "fonte": "Wikimedia Commons · NHLBI/NIH · Domínio público"
+      }
+    },
+    {
+      "id": "asmi-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Asma em ≤ 5 anos: diagnóstico e tratamento por etapas",
+      "verso": "**Diagnóstico → os 3 critérios: sibilância recorrente, nenhuma outra causa provável e resposta ao tratamento.**\n**Só 1 ou 2 critérios → \"suspeita de asma\" e seguimento.**\n\nQuando iniciar corticoide inalatório diário:\n- Sintomas mais de 2×/semana.\n- Ou ≥ 1 crise grave (emergência) no último ano.\n\nTeste terapêutico:\n- CI diário por 2–3 meses → melhora apoia o diagnóstico.",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Etapa",
+          "Preferido",
+          "Alternativa"
+        ],
+        "linhas": [
+          [
+            "1",
+            "SABA se necessário",
+            "CI intermitente curto no início do resfriado"
+          ],
+          [
+            "2",
+            "!CI dose baixa diário + SABA se necessário",
+            "Montelucaste diário ou CI intermitente"
+          ],
+          [
+            "3",
+            "CI dose dobrada (média)",
+            "CI dose baixa + montelucaste; encaminhar"
+          ],
+          [
+            "4",
+            "Manter e encaminhar ao especialista",
+            "—"
+          ]
+        ]
+      },
+      "pegadinha": "Mudou em 2025: GINA passou a permitir o DIAGNÓSTICO de asma em ≤ 5 anos (antes era só \"sibilância recorrente\").",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\n≤ 5 anos:\n- **Diagnóstico** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **Base** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **Dispositivo** → spray com espaçador (máscara se < 3 anos)\n\n6–11 anos:\n- **Base** → corticoide inalatório dose baixa\n- **Etapa 3** → CI + LABA, CI dose média ou MART com budesonida-formoterol em dose muito baixa\n\n≥ 12 anos:\n- Igual ao adulto (budesonida-formoterol como alívio preferido)\n\nControle:\n- 4 perguntas (sintomas diurnos, despertar, alívio, limitação)\n\nComo cai:\n- Criança com asma não controlada: qual a próxima etapa para a idade?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "asmi-02",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Asma em 6–11 anos: tratamento por etapas",
+      "verso": "**Base → corticoide inalatório em dose baixa.**\n**Etapa 3 → CI + LABA dose baixa, CI dose média ou MART com budesonida-formoterol em dose muito baixa.**\n**Etapa 4 → encaminhar.**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Etapa",
+          "Preferido",
+          "Alternativa"
+        ],
+        "linhas": [
+          [
+            "1",
+            "CI dose baixa sempre que usar SABA",
+            "CI dose baixa diário"
+          ],
+          [
+            "2",
+            "!CI dose baixa diário",
+            "Montelucaste; CI sempre que usar SABA"
+          ],
+          [
+            "3",
+            "CI dose baixa + LABA, ou CI dose média, ou MART dose muito baixa",
+            "CI dose baixa + montelucaste"
+          ],
+          [
+            "4",
+            "CI dose média + LABA ou MART dose baixa; encaminhar",
+            "+ tiotrópio ou montelucaste"
+          ],
+          [
+            "5",
+            "Fenotipar; anti-IgE, anti-IL-5, anti-IL-4R",
+            "Corticoide oral (último recurso)"
+          ]
+        ]
+      },
+      "pegadinha": "Montelucaste é menos eficaz que CI e tem alerta de efeitos neuropsiquiátricos (pesadelos, agitação).",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\n≤ 5 anos:\n- **Diagnóstico** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **Base** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **Dispositivo** → spray com espaçador (máscara se < 3 anos)\n\n6–11 anos:\n- **Base** → corticoide inalatório dose baixa\n- **Etapa 3** → CI + LABA, CI dose média ou MART com budesonida-formoterol em dose muito baixa\n\n≥ 12 anos:\n- Igual ao adulto (budesonida-formoterol como alívio preferido)\n\nControle:\n- 4 perguntas (sintomas diurnos, despertar, alívio, limitação)\n\nComo cai:\n- Criança com asma não controlada: qual a próxima etapa para a idade?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "asmi-03",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Dispositivo inalatório por idade",
+      "verso": "**< 3 anos → spray com espaçador e MÁSCARA.**\n**3–5 anos → spray com espaçador e BOCAL.**\n**≥ 6 anos → spray com espaçador ou pó seco (se fizer inspiração rápida e forte).**\n\nPor quê:\n- O espaçador dispensa coordenação entre disparo e inspiração e reduz depósito na orofaringe.\n- Pó seco depende de fluxo inspiratório forte → não serve para criança pequena nem na crise.\n\nNebulizador:\n- Alternativa quando não há espaçador ou não se adapta; não é superior.",
+      "visual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dry_powder_inhalers.jpg/600px-Dry_powder_inhalers.jpg",
+        "legenda": "Dispositivos de pó seco (Turbuhaler, Accuhaler, Ellipta) — exigem inspiração rápida e forte",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      },
+      "pegadinha": "Na crise, spray + espaçador é tão eficaz quanto a nebulização.",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\n≤ 5 anos:\n- **Diagnóstico** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **Base** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **Dispositivo** → spray com espaçador (máscara se < 3 anos)\n\n6–11 anos:\n- **Base** → corticoide inalatório dose baixa\n- **Etapa 3** → CI + LABA, CI dose média ou MART com budesonida-formoterol em dose muito baixa\n\n≥ 12 anos:\n- Igual ao adulto (budesonida-formoterol como alívio preferido)\n\nControle:\n- 4 perguntas (sintomas diurnos, despertar, alívio, limitação)\n\nComo cai:\n- Criança com asma não controlada: qual a próxima etapa para a idade?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "asmi-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Menino de 7 anos com asma, em uso de salbutamol quando precisa e de budesonida em dose baixa diária há 3 meses, com boa técnica e adesão. Mantém sintomas diurnos 3×/semana e acorda à noite 2×/mês. A próxima etapa é:",
+      "opcoes": [
+        "Suspender a budesonida e usar montelucaste isolado",
+        "Aumentar para CI dose baixa + LABA, ou CI dose média, ou budesonida-formoterol em dose muito baixa como manutenção e alívio",
+        "Iniciar omalizumabe",
+        "Prednisolona oral diária"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Montelucaste isolado é inferior ao CI.",
+        "Gabarito: 6–11 anos não controlado na etapa 2 → etapa 3 (qualquer das três opções).",
+        "Biológico é etapa 5, após avaliação especializada.",
+        "Corticoide oral diário é último recurso na etapa 5."
+      ],
+      "pegadinha": "Antes de subir, sempre conferir técnica e adesão (o enunciado já garantiu).",
+      "uerj": "Asma não controlada em pediatria caiu 3× na UERJ (2022–2026).",
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-23",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\n≤ 5 anos:\n- **Diagnóstico** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **Base** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **Dispositivo** → spray com espaçador (máscara se < 3 anos)\n\n6–11 anos:\n- **Base** → corticoide inalatório dose baixa\n- **Etapa 3** → CI + LABA, CI dose média ou MART com budesonida-formoterol em dose muito baixa\n\n≥ 12 anos:\n- Igual ao adulto (budesonida-formoterol como alívio preferido)\n\nControle:\n- 4 perguntas (sintomas diurnos, despertar, alívio, limitação)\n\nComo cai:\n- Criança com asma não controlada: qual a próxima etapa para a idade?",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      }
     }
   ],
   "rev": 1792759807234
