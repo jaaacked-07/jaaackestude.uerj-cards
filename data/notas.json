@@ -3,82 +3,98 @@
     {
       "id": 1792784228583,
       "d": "2026-10-23",
-      "t": "criterios de light"
+      "t": "criterios de light",
+      "manual": true
     },
     {
       "id": 1792784235979,
       "d": "2026-10-23",
-      "t": "criterios GASA"
+      "t": "criterios GASA",
+      "manual": true
     },
     {
       "id": 1792784542516,
       "d": "2026-10-23",
-      "t": "Senescência e Senilidade"
+      "t": "Senescência e Senilidade",
+      "manual": true
     },
     {
       "id": 1792784927619,
       "d": "2026-10-23",
-      "t": "Tuberculose (tudo de mais importante):\ndiagnostico, infecção latente, profilaxia contactante, tratamento, testes diagnosticos etc\nse algum esquema for diferente (de acordo com idade), coloque todos os esquemas, relcionando-o com idade"
+      "t": "Tuberculose (tudo de mais importante):\ndiagnostico, infecção latente, profilaxia contactante, tratamento, testes diagnosticos etc\nse algum esquema for diferente (de acordo com idade), coloque todos os esquemas, relcionando-o com idade",
+      "manual": true
     },
     {
       "id": 1792785023333,
       "d": "2026-10-23",
-      "t": "cirurgia bariátrica (aspectos mais relevantes do tema)"
+      "t": "cirurgia bariátrica (aspectos mais relevantes do tema)",
+      "manual": true
     },
     {
       "id": 1792785169265,
       "d": "2026-10-23",
-      "t": "doenças autoimunes pediatricas (dermatomiosite juvenil, hepatite autoimune, colangite esclerosante primaria, hashimoto etc"
+      "t": "doenças autoimunes pediatricas (dermatomiosite juvenil, hepatite autoimune, colangite esclerosante primaria, hashimoto etc",
+      "manual": true
     },
     {
       "id": 1792785247445,
       "d": "2026-10-23",
-      "t": "tipos de FAN e oq cada um significa"
+      "t": "tipos de FAN e oq cada um significa",
+      "manual": true
     },
     {
       "id": 1792787506371,
       "d": "2026-10-23",
-      "t": "resumão de momento de início da TARV para diferentes doenças infecciosas.\n(1) Tuberculose (sem lesão do sistema nervoso central [SNC]): início da TARV em até sete dias do começo do tratamento da tuberculose.\n(2) Tuberculose (com lesão do SNC): geralmente, o início da TARV ocorre entre quatro e seis semanas após o começo do RIPE; se CD4 < 50 células/uL, antecipa-se para duas semanas. Em localidades remotas, posterga-se para oito semanas.\n(3) Neurocriptococose: início da TARV entre quatro e seis semanas após o começo do tratamento antifúngico.\n(4) Pneumocistose: início da TARV em até duas semanas após o começo do tratamento antifungico.\n(5) Neurotoxoplasmose: início da TARV ao longo das primeiras duas semanas após o início do tratamento antiparasitário."
+      "t": "resumão de momento de início da TARV para diferentes doenças infecciosas.\n(1) Tuberculose (sem lesão do sistema nervoso central [SNC]): início da TARV em até sete dias do começo do tratamento da tuberculose.\n(2) Tuberculose (com lesão do SNC): geralmente, o início da TARV ocorre entre quatro e seis semanas após o começo do RIPE; se CD4 < 50 células/uL, antecipa-se para duas semanas. Em localidades remotas, posterga-se para oito semanas.\n(3) Neurocriptococose: início da TARV entre quatro e seis semanas após o começo do tratamento antifúngico.\n(4) Pneumocistose: início da TARV em até duas semanas após o começo do tratamento antifungico.\n(5) Neurotoxoplasmose: início da TARV ao longo das primeiras duas semanas após o início do tratamento antiparasitário.",
+      "manual": true
     },
     {
       "id": 1792787624150,
       "d": "2026-10-23",
-      "t": "A questão traz paciente com quadro agudo de gota.\nPrimeiro conceito: a medicação para redução do urato, como o alopurinol, em geral, não é iniciada durante as crises, pois variações abruptas nos níveis de urato podem agravar a artrite.\nEm relação à droga de escolha para manejo agudo, a primeira opção costuma ser um Anti-Inflamatório Não Esteroidal (AINE), como o naproxeno, exceto se houver contraindicação.\nAlgumas razões para evitar AINE incluem uma taxa de filtração glomerular < 60, hipercalemia, úlcera duodenal ou gástrica, hipertensão mal controlada, insuficiência cardíaca moderada a grave ou descompensada, cirrose, interação medicamentosa não modificável (por exemplo, anticoagulação), alergia ou intolerância conhecida a AINE. A colchicina é uma droga alternativa na crise de gota, geralmente utilizada quando o paciente tem uma contraindicação ao uso de AINE.\nSendo assim, vamos às assertivas.\nLetra A: incorreta O paciente do caso possui contraindicação a AINE, pois está em tratamento de insuficiência cardíaca."
+      "t": "A questão traz paciente com quadro agudo de gota.\nPrimeiro conceito: a medicação para redução do urato, como o alopurinol, em geral, não é iniciada durante as crises, pois variações abruptas nos níveis de urato podem agravar a artrite.\nEm relação à droga de escolha para manejo agudo, a primeira opção costuma ser um Anti-Inflamatório Não Esteroidal (AINE), como o naproxeno, exceto se houver contraindicação.\nAlgumas razões para evitar AINE incluem uma taxa de filtração glomerular < 60, hipercalemia, úlcera duodenal ou gástrica, hipertensão mal controlada, insuficiência cardíaca moderada a grave ou descompensada, cirrose, interação medicamentosa não modificável (por exemplo, anticoagulação), alergia ou intolerância conhecida a AINE. A colchicina é uma droga alternativa na crise de gota, geralmente utilizada quando o paciente tem uma contraindicação ao uso de AINE.\nSendo assim, vamos às assertivas.\nLetra A: incorreta O paciente do caso possui contraindicação a AINE, pois está em tratamento de insuficiência cardíaca.",
+      "manual": true
     },
     {
       "id": 1792787728258,
       "d": "2026-10-23",
-      "t": "Os valores de referência para a análise do líquor são essenciais para interpretação correta em casos de suspeita de infecção do sistema nervoso central. Em condições normais, a contagem celular no líquor deve ser de até 4 células/mm?, predominantemente linfócitos e monócitos. Para as proteínas, o valor normal é até 30 mg/dL, mas pode variar com a idade. A glicose do líquor deve ser maior que 2/3 da gliceria sérica.\nEm casos de meningite bacteriana, espera-se aumento significativo da contagem celular (superior a 100 células/mm?, geralmente > 500), com predomínio de neutrófilos, proteínas acima de 45 mg/dL e glicose abaixo de 40 mg/dL (ou < 40% da glicemia sérica). Bons estudos!"
+      "t": "Os valores de referência para a análise do líquor são essenciais para interpretação correta em casos de suspeita de infecção do sistema nervoso central. Em condições normais, a contagem celular no líquor deve ser de até 4 células/mm?, predominantemente linfócitos e monócitos. Para as proteínas, o valor normal é até 30 mg/dL, mas pode variar com a idade. A glicose do líquor deve ser maior que 2/3 da gliceria sérica.\nEm casos de meningite bacteriana, espera-se aumento significativo da contagem celular (superior a 100 células/mm?, geralmente > 500), com predomínio de neutrófilos, proteínas acima de 45 mg/dL e glicose abaixo de 40 mg/dL (ou < 40% da glicemia sérica). Bons estudos!",
+      "manual": true
     },
     {
       "id": 1792787820845,
       "d": "2026-10-23",
-      "t": "oill para a uerj em CM o Harrison tambem indica a associação com vanco? e em pediatria para a UERJ em 2026/2027 manter a referencia do tratado brasileiro que indica a associação? obrigada!!              Sim. Para esse quadro de meningite bacteriana em lactente, a conduta empírica de referência segue sendo cefalosporina de 3ª geração associada à vancomicina, justamente pela necessidade de cobrir pneumococo com possível resistência. Então, para prova, vale manter essa associação como resposta. A TC antes da punção não é rotina na ausência de sinais focais, rebaixamento importante ou hipertensão intracraniana. E o líquor é compatível com meningite bacteriana, mas não dispensa cultura/PCR quando disponíveis. Bons estudos!"
+      "t": "oill para a uerj em CM o Harrison tambem indica a associação com vanco? e em pediatria para a UERJ em 2026/2027 manter a referencia do tratado brasileiro que indica a associação? obrigada!!              Sim. Para esse quadro de meningite bacteriana em lactente, a conduta empírica de referência segue sendo cefalosporina de 3ª geração associada à vancomicina, justamente pela necessidade de cobrir pneumococo com possível resistência. Então, para prova, vale manter essa associação como resposta. A TC antes da punção não é rotina na ausência de sinais focais, rebaixamento importante ou hipertensão intracraniana. E o líquor é compatível com meningite bacteriana, mas não dispensa cultura/PCR quando disponíveis. Bons estudos!",
+      "manual": true
     },
     {
       "id": 1792787920002,
       "d": "2026-10-23",
-      "t": "diferença dos 4 tumores de tireoide (papilifero, anaplasico, medular e um outro)\nobs: faça um card bem objetivo citando as principais catracteristicas de cada um)"
+      "t": "diferença dos 4 tumores de tireoide (papilifero, anaplasico, medular e um outro)\nobs: faça um card bem objetivo citando as principais catracteristicas de cada um)",
+      "manual": true
     },
     {
       "id": 1792788106002,
       "d": "2026-10-23",
-      "t": "DPOC exacerbada e sintomas gripais - coriza e dor de garganta.\nEmbora o paciente não saiba ser portador da doença, o exame físico e radiológico corroboram para a hipótese de DPOC, com a presença de aumento do tempo expiratório, sibilos difusos e hiperinsuflação pulmonar na radiografia de tórax, que demonstra retificação do diafragma e hipertransparência pulmonar.\nAs medidas inicias para manejo do quadro já foram tomadas, incluindo a prescrição de broncodilatadores (salbutamol e ipatróprio), corticoide sistêmico e oxigenoterapia para correção da hipoxemia.\nPergunta-se sobre o tratamento ANTIMICROBIANO.\nHá dois pontos principais a serem respondidos.\n(1) O paciente necessita de prescrição de OSELTAMIVIR para influenza? Resposta: sim! Embora o teste rápido para essa doença tenha sido negativo, devemos ter cuidado na interpretação desse resultado, pois falso-negativos são comuns. O exame de escolha para diagnóstico de influenza é o teste molecular (PCR), especialmente em um cenário clínico compatível como o da questão - paciente com sintomas gripais e sindrome respiratória aguda grave, podendo ser compatível com uma pneumonia viral. Segundo o livro-texto de Infectologia Mandell, pacientes com DPOC são considerados de alto risco para infecção grave por influenza e devem receber inibidores da neuraminidase, como oseltamivir, quando desenvolverem sintomas de influenza, mesmo no cenário de um resultado negativo de teste rápido (LETRAS A e C INCORRETAS)\n(2) Qual o espectro de antibiótico mais adequado?    (2) Qual o espectro de antibiótico mais adequado?\n- Paciente COM indicação de internação hospitalar (presença de pelo menos um desses critérios: múltiplas comorbidades, exacerbações frequentes [= 2 por ano], DPOC grave [VEF1 ≤ 50%], necessidade de uso de oxigênio suplementar): as drogas de primeira escolha são cefalosporina de terceira geração, como ceftriaxona ou cefotaxima, ou uma fluoroquinolona respiratória (ex.: levofloxacino ou moxifloxacino).\nCaso o paciente tenha fatores de risco para infecção por Pseudomonas aeruginosa, os antibióticos de escolha devem cobrir essa bactéria, sendo opções piperacilina-tazobactam, cefepime ou ceftazidima.\nOs fatores de risco para infecção por essa bactéria são: DPOC muito grave (VEF1 < 30%), bronquiectasias, uso de antibióticos de amplo espectro nos últimos três meses; uso sistêmico crônico de glicocorticoide.\n- Paciente SEM indicação de internação hospitalar (sem os critérios listados acima): pode receber alta com antibióticos orais, como amoxicilina-clavulanato ou macrolídeo.\nNo caso do paciente em tela, o paciente TEM indicação de internação hospitalar, devido ao quadro de insuficiência respiratória com necessidade de suplementação de oxigênio. Não há fatores de risco conhecidos para colonização por Pseudomonas. Portanto, as opções de antibiótico são cefalosporina de terceira geração (como ceftriaxona) ou fluoroquinola respiratória. Não é necessário associar drogas de amplo espectro como piperacilina-tazobactam, pois há o risco de induzir resistência bacteriana (LETRA D INCORRETA). conclui q a melhor opção de droga é CEFTRIAXONA E OSELTAMIVIR"
+      "t": "DPOC exacerbada e sintomas gripais - coriza e dor de garganta.\nEmbora o paciente não saiba ser portador da doença, o exame físico e radiológico corroboram para a hipótese de DPOC, com a presença de aumento do tempo expiratório, sibilos difusos e hiperinsuflação pulmonar na radiografia de tórax, que demonstra retificação do diafragma e hipertransparência pulmonar.\nAs medidas inicias para manejo do quadro já foram tomadas, incluindo a prescrição de broncodilatadores (salbutamol e ipatróprio), corticoide sistêmico e oxigenoterapia para correção da hipoxemia.\nPergunta-se sobre o tratamento ANTIMICROBIANO.\nHá dois pontos principais a serem respondidos.\n(1) O paciente necessita de prescrição de OSELTAMIVIR para influenza? Resposta: sim! Embora o teste rápido para essa doença tenha sido negativo, devemos ter cuidado na interpretação desse resultado, pois falso-negativos são comuns. O exame de escolha para diagnóstico de influenza é o teste molecular (PCR), especialmente em um cenário clínico compatível como o da questão - paciente com sintomas gripais e sindrome respiratória aguda grave, podendo ser compatível com uma pneumonia viral. Segundo o livro-texto de Infectologia Mandell, pacientes com DPOC são considerados de alto risco para infecção grave por influenza e devem receber inibidores da neuraminidase, como oseltamivir, quando desenvolverem sintomas de influenza, mesmo no cenário de um resultado negativo de teste rápido (LETRAS A e C INCORRETAS)\n(2) Qual o espectro de antibiótico mais adequado?    (2) Qual o espectro de antibiótico mais adequado?\n- Paciente COM indicação de internação hospitalar (presença de pelo menos um desses critérios: múltiplas comorbidades, exacerbações frequentes [= 2 por ano], DPOC grave [VEF1 ≤ 50%], necessidade de uso de oxigênio suplementar): as drogas de primeira escolha são cefalosporina de terceira geração, como ceftriaxona ou cefotaxima, ou uma fluoroquinolona respiratória (ex.: levofloxacino ou moxifloxacino).\nCaso o paciente tenha fatores de risco para infecção por Pseudomonas aeruginosa, os antibióticos de escolha devem cobrir essa bactéria, sendo opções piperacilina-tazobactam, cefepime ou ceftazidima.\nOs fatores de risco para infecção por essa bactéria são: DPOC muito grave (VEF1 < 30%), bronquiectasias, uso de antibióticos de amplo espectro nos últimos três meses; uso sistêmico crônico de glicocorticoide.\n- Paciente SEM indicação de internação hospitalar (sem os critérios listados acima): pode receber alta com antibióticos orais, como amoxicilina-clavulanato ou macrolídeo.\nNo caso do paciente em tela, o paciente TEM indicação de internação hospitalar, devido ao quadro de insuficiência respiratória com necessidade de suplementação de oxigênio. Não há fatores de risco conhecidos para colonização por Pseudomonas. Portanto, as opções de antibiótico são cefalosporina de terceira geração (como ceftriaxona) ou fluoroquinola respiratória. Não é necessário associar drogas de amplo espectro como piperacilina-tazobactam, pois há o risco de induzir resistência bacteriana (LETRA D INCORRETA). conclui q a melhor opção de droga é CEFTRIAXONA E OSELTAMIVIR",
+      "manual": true
     },
     {
       "id": 1792788180863,
       "d": "2026-10-23",
-      "t": "A TB pleural é a forma mais comum de tuberculose extrapulmonar em adultos não portadores do HIV. O diagnóstico deve ser pesquisado pela\ntoracocentese, que revela um líquido amarelo-citrino, turvo ou raramente serossanguinolento (< 10% dos casos). Quando aplicamos os critérios de Light, tipicamente encontramos um exsudato; basta a presença de um dos critérios abaixo:\n1. Relação proteína do líquido pleural/proteína sérica > 0,5;\n2. Relação LDH do líquido pleural/LDH sérica > 0,6;\n3. LDH no líquido pleural › 2/3 do limite superior do LDH sérico ou > 200.\nRepare que temos uma relação LDH do liquido pleural/LDH sérica de 0,68 e uma concentração sérica > 200, configurando um exsudato. Que outras características podemos esperar na TB pleural? A celularidade é alta (1.000-6.000 leucócitos/mm*), com predomínio de linfócitos (exceto nos primeiros\n15\ndias de instalação,\npolimorfonucleares\nquando\nOS\nsobressaem).\nOutras\ncaracterísticas do derrame pleural da TB: glicose baixa (média de 40-80 mg/dl, mas raramente < 20 mg/dl); pH normal (7,30-7,40); ausência de eosinófilos; e < 5% de células mesoteliais (frequentemente encontradas em um derrame neoplásico). Veja que está tudo \"batendo\" com a descrição no enunciado!"
+      "t": "A TB pleural é a forma mais comum de tuberculose extrapulmonar em adultos não portadores do HIV. O diagnóstico deve ser pesquisado pela\ntoracocentese, que revela um líquido amarelo-citrino, turvo ou raramente serossanguinolento (< 10% dos casos). Quando aplicamos os critérios de Light, tipicamente encontramos um exsudato; basta a presença de um dos critérios abaixo:\n1. Relação proteína do líquido pleural/proteína sérica > 0,5;\n2. Relação LDH do líquido pleural/LDH sérica > 0,6;\n3. LDH no líquido pleural › 2/3 do limite superior do LDH sérico ou > 200.\nRepare que temos uma relação LDH do liquido pleural/LDH sérica de 0,68 e uma concentração sérica > 200, configurando um exsudato. Que outras características podemos esperar na TB pleural? A celularidade é alta (1.000-6.000 leucócitos/mm*), com predomínio de linfócitos (exceto nos primeiros\n15\ndias de instalação,\npolimorfonucleares\nquando\nOS\nsobressaem).\nOutras\ncaracterísticas do derrame pleural da TB: glicose baixa (média de 40-80 mg/dl, mas raramente < 20 mg/dl); pH normal (7,30-7,40); ausência de eosinófilos; e < 5% de células mesoteliais (frequentemente encontradas em um derrame neoplásico). Veja que está tudo \"batendo\" com a descrição no enunciado!",
+      "manual": true
     },
     {
       "id": 1792788300078,
       "d": "2026-10-23",
-      "t": "Temos uma criança de nove anos com quadro de dor abdominal e diarreia crônica (duração > 3-4\nsemanas) que pode ser classificada em relação ao seu tipo como INFLAMATÓRIA, pois está associada a SANGUE vivo nas fezes.\nAlém disso, há outros sinais de inflamação corroborando para esse mecanismo fisiopatológico, como a elevação de proteína C reativa, anemia leve normocítica (de doença crônica) e o aumento de calprotectina fecal, um marcador importante e relativamente específico de inflamação intestinal.\nSó com esses dados já podemos excluir a hipótese de doença celíaca, que se trata de uma intolerância ao gluten imunomediada e tipicamente causa diarreia AQUOSA, sem sangue e sem elevação de marcadores inflamatórios (LETRA D INCORRETA).\nHá ainda a história há seis semanas de dor em joelho esquerdo e cotovelo direito, que se confirma como ARTRITE ao exame físico devido aos achados de edema, aumento da temperatura e limitação da movimentação.\nTudo isso se encaixa no diagnóstico de uma\nDOENÇA INFLAMATÓRIA INTESTINAL, pois a artrite é uma das manifestações extraintestinais mais comuns dessa condição, afetando cerca de 13% dos pacientes. Embora o pico dessa condição ocorra de forma bimodal entre os 15-30 anos e posteriormente entre os 50-80 ano, ela pode se iniciar em qualquer idade.\nPode ser tanto doença de Crohn como retocolite ulcerativa e a diferenciação só seria possível pela realização de exames adicionais, como colonoscopia com biópsias (LETRA A CORRETA).\nA artrite idiopática juvenil justificaria o quadro de artrite da criança, mas não a diarreia inflamatória.\nNa sua forma sistêmica (doença de Still), além da artrite observa-se marcante comprometimento visceral, com hepatomegalia, esplenomegalia, linfadenomegalia e derrame pericárdico. Verificamos febre intermitente com picos ≥ 39°C, que deve estar presente durante pelo menos duas semanas (sendo pelo menos três dias consecutivos com picos) para o diagnóstico. Há ainda um típico rash cutâneo cor salmão (LETRA C INCORRETA).\nA porfiria intermitente aguda é um distúrbio da metabolização do heme (um componente da hemoglobina) que cursa com sintomas clássicos como dor abdominal, hiperatividade simpática (hipertensão, taquicardia, tremores e sudorese profusa), neuropatia periférica e sintomas psiquiátricos (LETRA B INCORRETA).\nResposta: letra A."
+      "t": "Temos uma criança de nove anos com quadro de dor abdominal e diarreia crônica (duração > 3-4\nsemanas) que pode ser classificada em relação ao seu tipo como INFLAMATÓRIA, pois está associada a SANGUE vivo nas fezes.\nAlém disso, há outros sinais de inflamação corroborando para esse mecanismo fisiopatológico, como a elevação de proteína C reativa, anemia leve normocítica (de doença crônica) e o aumento de calprotectina fecal, um marcador importante e relativamente específico de inflamação intestinal.\nSó com esses dados já podemos excluir a hipótese de doença celíaca, que se trata de uma intolerância ao gluten imunomediada e tipicamente causa diarreia AQUOSA, sem sangue e sem elevação de marcadores inflamatórios (LETRA D INCORRETA).\nHá ainda a história há seis semanas de dor em joelho esquerdo e cotovelo direito, que se confirma como ARTRITE ao exame físico devido aos achados de edema, aumento da temperatura e limitação da movimentação.\nTudo isso se encaixa no diagnóstico de uma\nDOENÇA INFLAMATÓRIA INTESTINAL, pois a artrite é uma das manifestações extraintestinais mais comuns dessa condição, afetando cerca de 13% dos pacientes. Embora o pico dessa condição ocorra de forma bimodal entre os 15-30 anos e posteriormente entre os 50-80 ano, ela pode se iniciar em qualquer idade.\nPode ser tanto doença de Crohn como retocolite ulcerativa e a diferenciação só seria possível pela realização de exames adicionais, como colonoscopia com biópsias (LETRA A CORRETA).\nA artrite idiopática juvenil justificaria o quadro de artrite da criança, mas não a diarreia inflamatória.\nNa sua forma sistêmica (doença de Still), além da artrite observa-se marcante comprometimento visceral, com hepatomegalia, esplenomegalia, linfadenomegalia e derrame pericárdico. Verificamos febre intermitente com picos ≥ 39°C, que deve estar presente durante pelo menos duas semanas (sendo pelo menos três dias consecutivos com picos) para o diagnóstico. Há ainda um típico rash cutâneo cor salmão (LETRA C INCORRETA).\nA porfiria intermitente aguda é um distúrbio da metabolização do heme (um componente da hemoglobina) que cursa com sintomas clássicos como dor abdominal, hiperatividade simpática (hipertensão, taquicardia, tremores e sudorese profusa), neuropatia periférica e sintomas psiquiátricos (LETRA B INCORRETA).\nResposta: letra A.",
+      "manual": true
     },
     {
       "id": 1792788456167,
       "d": "2026-10-23",
-      "t": "M-CHAT\nTeste de Denver"
+      "t": "M-CHAT\nTeste de Denver",
+      "manual": true
     },
     {
       "id": 1792788651868,
@@ -86,52 +102,62 @@
       "t": "Como sabemos, a síndrome nefrótica é marcada pela proteinúria maciça (› 40-50 mg/kg/dia em crianças). Dentre as proteínas perdidas, podemos destacar as imunoglobulinas, em especial as do tipo IgG, e componentes da via alternativa do complemento. Dessa forma, portadores dessa condição se tornam mais suscetíveis a infecções, principalmente por germes encapsulados. A clínica descrita no enunciado sugere o diagnóstico de peritonite bacteriana espontânea, a famosa PBE.\nCerca de 50% dos casos são causados pelo pneumococo; em segundo lugar, temos a E. coli. Não confunda com a PBE dos cirróticos, que é causada, em sua maioria, por esta bactéria. Resposta: letra A",
       "imgs": [
         "data/img/1792788651868-0.jpg"
-      ]
+      ],
+      "manual": true
     },
     {
       "id": 1792788686270,
       "d": "2026-10-23",
-      "t": "Gota: clinica, tratamento, diagnostico etc"
+      "t": "Gota: clinica, tratamento, diagnostico etc",
+      "manual": true
     },
     {
       "id": 1792788723240,
       "d": "2026-10-23",
-      "t": "SIADH"
+      "t": "SIADH",
+      "manual": true
     },
     {
       "id": 1792788728595,
       "d": "2026-10-23",
-      "t": "Disturbios de Sódio"
+      "t": "Disturbios de Sódio",
+      "manual": true
     },
     {
       "id": 1792788781428,
       "d": "2026-10-23",
-      "t": "Temos um paciente com carga tabágica importante e que apresenta alguns estigmas de DPOC: tempo expiratório aumentado, sibilos expiratórios, radiografia com retificação das cúpulas diafragmáticas e hipertransparência dos campos pulmonares. No momento, ele apresenta escarro amarelado, dispneia intensa em repouso e elevação da PCR... É uma exacerbação de sua doença de base! Agora, reparem que não houve resposta ao tratamento mesmo com salbutamol, ipratróprio, corticoide e oxigênio! O que mais podemos fazer?\nPara esses pacientes refratários ao tratamento broncodilatador, podemos usar o sulfato de magnésio! A dose é de 2 gramas por via venosa, em dose única, ao longo de 20 minutos (parece que o medicamento possui efeito broncodilatador por inibir o fluxo de cálcio nas células musculares lisas).\nNão há evidência que mostre que a n-acetilcisteína possa ter um papel na exacerbação da DPOC. A teofilina, por outro lado, é considerada terapia de segunda linha (além de causar náusea, vômitos e arritmias). O uso sistêmico de adrenalina aumenta o risco de arritmias e até de isquemia miocárdica (trata-se de uma estratégia virtualmente nunca\nusada).\nResposta: letra C.\nAvaliar texto"
+      "t": "Temos um paciente com carga tabágica importante e que apresenta alguns estigmas de DPOC: tempo expiratório aumentado, sibilos expiratórios, radiografia com retificação das cúpulas diafragmáticas e hipertransparência dos campos pulmonares. No momento, ele apresenta escarro amarelado, dispneia intensa em repouso e elevação da PCR... É uma exacerbação de sua doença de base! Agora, reparem que não houve resposta ao tratamento mesmo com salbutamol, ipratróprio, corticoide e oxigênio! O que mais podemos fazer?\nPara esses pacientes refratários ao tratamento broncodilatador, podemos usar o sulfato de magnésio! A dose é de 2 gramas por via venosa, em dose única, ao longo de 20 minutos (parece que o medicamento possui efeito broncodilatador por inibir o fluxo de cálcio nas células musculares lisas).\nNão há evidência que mostre que a n-acetilcisteína possa ter um papel na exacerbação da DPOC. A teofilina, por outro lado, é considerada terapia de segunda linha (além de causar náusea, vômitos e arritmias). O uso sistêmico de adrenalina aumenta o risco de arritmias e até de isquemia miocárdica (trata-se de uma estratégia virtualmente nunca\nusada).\nResposta: letra C.\nAvaliar texto",
+      "manual": true
     },
     {
       "id": 1792788784332,
       "d": "2026-10-23",
-      "t": "dpoc"
+      "t": "dpoc",
+      "manual": true
     },
     {
       "id": 1792788834808,
       "d": "2026-10-23",
-      "t": "A banca descreve criança com febre persistente por 15 dias, linfonodomegalia — sem melhora com cefalexina, utilizada para adenite inespecífica — emagrecimento e contato com pessoas... Que estão... Tossindo! Este é o pulo do gato, the jump of the cat, nesta questão. O enunciado não traria esta informação, ainda mais somada à prova tuberculínica positiva, à toa. Esse conjunto de achados nos faz pensar em Tuberculose (TB) ganglionar, a forma mais comum de TB extrapulmonar na infância. Decidido pelo tratamento, a terapêutica, em crianças abaixo dos 10 anos, seria com esquema RIP (Rifampicina, Isoniazida e Pirazinamida) por seis meses. Agora, vamos destrinchar as demais alternativas.\nLetra A: incorreta. A doença da arranhadura do gato, causada pela Bartonella henselae, normalmente começa com pápula ou pústula após contato com gato - tais achados cutâneos não foram citados. O principal sintoma é linfadenopatia regional, que aparece algumas semanas após o contato. Agora, na doença pela B. henselae, a febre seria de mais curta duração, não permanente... Ademais, embora o tratamento de escolha seja com azitromicina, haveria resposta — ainda que parcial — à cefalexina, algo não visto aqui... B. henselae é germe\nGram-positivo suscetível a betalactâmicos!\nLetra B: incorreta. Toxoplasmose é comumente assintomática em crianças. Quando clinicamente manifesta, vem com febre baixa, mal-estar e linfadenopatia. A febre prolongada, o emagrecimento significativo e a linfadenopatia generalizada no caso descrito não são característicos de toxoplasmose. Ademais, a doença responderia à combinação entre sulfametoxazol-trimetoprima."
+      "t": "A banca descreve criança com febre persistente por 15 dias, linfonodomegalia — sem melhora com cefalexina, utilizada para adenite inespecífica — emagrecimento e contato com pessoas... Que estão... Tossindo! Este é o pulo do gato, the jump of the cat, nesta questão. O enunciado não traria esta informação, ainda mais somada à prova tuberculínica positiva, à toa. Esse conjunto de achados nos faz pensar em Tuberculose (TB) ganglionar, a forma mais comum de TB extrapulmonar na infância. Decidido pelo tratamento, a terapêutica, em crianças abaixo dos 10 anos, seria com esquema RIP (Rifampicina, Isoniazida e Pirazinamida) por seis meses. Agora, vamos destrinchar as demais alternativas.\nLetra A: incorreta. A doença da arranhadura do gato, causada pela Bartonella henselae, normalmente começa com pápula ou pústula após contato com gato - tais achados cutâneos não foram citados. O principal sintoma é linfadenopatia regional, que aparece algumas semanas após o contato. Agora, na doença pela B. henselae, a febre seria de mais curta duração, não permanente... Ademais, embora o tratamento de escolha seja com azitromicina, haveria resposta — ainda que parcial — à cefalexina, algo não visto aqui... B. henselae é germe\nGram-positivo suscetível a betalactâmicos!\nLetra B: incorreta. Toxoplasmose é comumente assintomática em crianças. Quando clinicamente manifesta, vem com febre baixa, mal-estar e linfadenopatia. A febre prolongada, o emagrecimento significativo e a linfadenopatia generalizada no caso descrito não são característicos de toxoplasmose. Ademais, a doença responderia à combinação entre sulfametoxazol-trimetoprima.",
+      "manual": true
     },
     {
       "id": 1792788887488,
       "d": "2026-10-23",
-      "t": "Profilaxia contactantes tuberculose: Antes de avaliar as alternativas a respeito do cenário construído, vale repassar a lógica da avaliação de contatos:\nContatos sintomáticos — essas pessoas entram direto no fluxo de doença ativa: exame clínico completo, radiografia de tórax e teste bacteriológico, em geral baciloscopia ou Teste Rápido Molecular (TRM-TB). Importante deixar claro: crianças < 10 anos e adolescentes que forem incapazes de fornecer boas amostras de escarro devem ser submetidos ao sistema de pontuação para diagnóstico de TB doença.\nContatos assintomáticos — aqui o alvo é buscar indivíduos com a infecção latente. Devem ser realizados prova tuberculínica (PPD) ou IGRA e radiografia de tórax."
+      "t": "Profilaxia contactantes tuberculose: Antes de avaliar as alternativas a respeito do cenário construído, vale repassar a lógica da avaliação de contatos:\nContatos sintomáticos — essas pessoas entram direto no fluxo de doença ativa: exame clínico completo, radiografia de tórax e teste bacteriológico, em geral baciloscopia ou Teste Rápido Molecular (TRM-TB). Importante deixar claro: crianças < 10 anos e adolescentes que forem incapazes de fornecer boas amostras de escarro devem ser submetidos ao sistema de pontuação para diagnóstico de TB doença.\nContatos assintomáticos — aqui o alvo é buscar indivíduos com a infecção latente. Devem ser realizados prova tuberculínica (PPD) ou IGRA e radiografia de tórax.",
+      "manual": true
     },
     {
       "id": 1792788969358,
       "d": "2026-10-23",
-      "t": "Concluindo até aqui: temos uma acidose metabólica com acidose respiratória concomitante e ânion-gap aumentado. Entretanto, a banca pediu ainda a análise do gap osmolar. Entenda: normalmente temos uma proximidade entre os valores da osmolaridade sérica medida (laboratorialmente) e da calculada. \"Bora\" para a terceira fórmula:\n• Osm = 2Na + Gli/18 + Ureia/6.\nQuando essa diferença excede 10 mOsm/kg, temos o gap (hiato) osmolar. Esse hiato se deve ao acúmulo de substâncias osmoticamente ativas, não contempladas na fórmula, em concentrações séricas significativas. Exemplos são o manitol e álcoois, como o metanol, etanol e etilenoglicol. No caso em tela, a osmolaridade calculada dá 293\nmOsm/kg. Se a osmolaridade medida foi de 340 mOsm/kg então temos um gap osmolar considerável (> 10 mOsm/kg), o que nos deve fazer pensar em alguma intoxicação exógena!"
+      "t": "Concluindo até aqui: temos uma acidose metabólica com acidose respiratória concomitante e ânion-gap aumentado. Entretanto, a banca pediu ainda a análise do gap osmolar. Entenda: normalmente temos uma proximidade entre os valores da osmolaridade sérica medida (laboratorialmente) e da calculada. \"Bora\" para a terceira fórmula:\n• Osm = 2Na + Gli/18 + Ureia/6.\nQuando essa diferença excede 10 mOsm/kg, temos o gap (hiato) osmolar. Esse hiato se deve ao acúmulo de substâncias osmoticamente ativas, não contempladas na fórmula, em concentrações séricas significativas. Exemplos são o manitol e álcoois, como o metanol, etanol e etilenoglicol. No caso em tela, a osmolaridade calculada dá 293\nmOsm/kg. Se a osmolaridade medida foi de 340 mOsm/kg então temos um gap osmolar considerável (> 10 mOsm/kg), o que nos deve fazer pensar em alguma intoxicação exógena!",
+      "manual": true
     },
     {
       "id": 1792789108462,
       "d": "2026-10-23",
-      "t": "O tratamento da ILTB em pessoas vivendo com HIV está indicado nos seguintes cenários:\n(1) CD4 ≤ 350 células/uL => todos devem ser tratados, a não ser que já tenham tratado no passado;\n(2) CD4 › 350 células/uL => contato com alguém que tenha TB; PPD reator sem tratamento prévio; cicatriz radiológica compatível com TB sem tratamento prévio.\nNo caso da nossa paciente, ela já fez o tratamento contra ILTB e, assim, não tem indicação de repeti-lo\n- o único cenário em que ela teria nova indicação de tratar seria em caso de nova exposição após o diagnóstico de infecção pelo HIV."
+      "t": "O tratamento da ILTB em pessoas vivendo com HIV está indicado nos seguintes cenários:\n(1) CD4 ≤ 350 células/uL => todos devem ser tratados, a não ser que já tenham tratado no passado;\n(2) CD4 › 350 células/uL => contato com alguém que tenha TB; PPD reator sem tratamento prévio; cicatriz radiológica compatível com TB sem tratamento prévio.\nNo caso da nossa paciente, ela já fez o tratamento contra ILTB e, assim, não tem indicação de repeti-lo\n- o único cenário em que ela teria nova indicação de tratar seria em caso de nova exposição após o diagnóstico de infecção pelo HIV.",
+      "manual": true
     }
   ],
   "processadas": [
