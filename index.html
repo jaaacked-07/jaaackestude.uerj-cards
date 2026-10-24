@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FBF7F2;--card:#FFFFFF;--ink:#2A1E21;--mute:#8C7F80;--line:#EFE6DD;
@@ -257,7 +257,15 @@ textarea.note:focus{border-color:var(--rose)}
 .star.on{color:var(--mid)}
 .mine{margin-top:16px;border-left:3px solid var(--rose);padding:2px 0 2px 12px}
 .mine .mh{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);font-weight:600;margin-bottom:3px}
-.mine .mt{font-size:16px;white-space:pre-wrap}
+.mine .mt,.anot .mt{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:14px;line-height:1.5;white-space:pre-wrap}
+.anot{margin:6px 0 10px;padding:5px 10px 6px;border-left:2px dashed var(--rose);background:color-mix(in srgb,var(--rose) 8%,transparent);border-radius:0 10px 10px 0;cursor:text;overflow-wrap:anywhere}
+.anot .mimg,.mine .mimg{display:block;max-width:100%;max-height:min(60vh,520px);width:auto;height:auto;object-fit:contain;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
+.anot.edit{display:flex;gap:6px;align-items:flex-end;padding:6px;cursor:auto}
+.anot.edit textarea{flex:1;min-height:42px;margin:0;resize:none;overflow:hidden;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;padding:7px 9px}
+.ansv{flex:none;width:30px;height:30px;border-radius:50%;background:var(--rose);color:#fff;font-size:15px;line-height:30px;text-align:center}
+body.ntmode [data-an]{cursor:crosshair}
+.mtfab .mtrow{display:flex;gap:8px}
+.mtfab .ntb.on{background:var(--rose);color:#fff}
 .mine .mimg{display:block;max-width:100%;max-height:min(60vh,520px);width:auto;height:auto;object-fit:contain;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .addn{margin-top:14px;font-size:14px;color:var(--rose);font-weight:500}
 .mine textarea,.ned{width:100%;min-height:80px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-size:15px;outline:none;margin-top:6px}
@@ -392,8 +400,8 @@ mark.hl-y{background:rgba(250,214,80,.55)}mark.hl-g{background:rgba(120,200,140,
 .mtfab{position:fixed;right:14px;bottom:calc(92px + env(safe-area-inset-bottom));z-index:65;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
 .mtfab.alto{bottom:calc(104px + env(safe-area-inset-bottom))}
 .mtfab .mtb{width:46px;height:46px;border-radius:50%;background:var(--card);color:var(--wine);box-shadow:var(--shadow),0 4px 14px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;border:2px solid transparent}
-.mtfab.on .mtb{color:var(--ink)}
-.mtfab[data-c="y"] .mtb{background:#F2D35B}.mtfab[data-c="g"] .mtb{background:#7FC995}.mtfab[data-c="p"] .mtb{background:#EE97AE}
+.mtfab.on .mtm{color:var(--ink)}
+.mtfab[data-c="y"] .mtm{background:#F2D35B}.mtfab[data-c="g"] .mtm{background:#7FC995}.mtfab[data-c="p"] .mtm{background:#EE97AE}
 .mtfab .mtops{display:flex;gap:6px;align-items:center;background:var(--ink);padding:6px 8px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 .mtfab .mtops.hide{display:none}
 .mtfab .mtops button{width:28px;height:28px;border-radius:50%;border:2px solid rgba(255,255,255,.25)}
@@ -683,7 +691,7 @@ function cardCompleto(c){
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
   if(c.fonte) h+=`<div class="src">${esc(c.fonte)}</div>`;
-  return `<div class="hlz" data-hl="${c.id}">${h}</div>`;
+  return `<div class="hlz" data-hl="${c.id}" data-an="${c.id}">${h}</div>`;
 }
 
 /* ===== Páginas ===== */
@@ -1143,39 +1151,103 @@ function minhaCorpo(t){
   const tx=t.slice(i).replace(/^\n+|\n+$/g,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; return h;
 }
 function minhaHTML(id){
-  const t=(BYID[id]||{}).minha;
-  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div>${minhaCorpo(t)}</div><button class="addn" data-ed="${id}">Editar card</button>`:`<button class="addn" data-ed="${id}">Editar card</button>`}</div>`;
+  const t=anParse((BYID[id]||{}).minha).base;
+  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div>${minhaCorpo(t)}</div>`:''}</div>`;
 }
+/* ===== Anotações no lugar (botão ✎ ao lado do marca-texto, atalho T) =====
+   guardadas no mesmo campo "minha": bloco "@@nota|n|âncora" + texto, então sincronizam igual */
+const AN_RE=/^@@nota\|(\d+)\|(.*)$/, AN_BLK='li,p,.vis,.opt,.q,.czq,.uerj,.pega,.ctxh,.src,.tag,.fn';
+let NT=false;
+function anParse(s){ const base=[],l=[]; let cur=null;
+  String(s||'').split('\n').forEach(x=>{ const m=x.match(AN_RE); if(m){ cur={n:+m[1],a:m[2],t:[]}; l.push(cur); } else (cur?cur.t:base).push(x); });
+  return {base:base.join('\n').trim(), l:l.map(o=>({n:o.n,a:o.a,t:o.t.join('\n').trim()}))}; }
+const anJoin=p=>[p.base,...p.l.filter(o=>o.t).map(o=>`@@nota|${o.n}|${o.a}\n${o.t}`)].filter(Boolean).join('\n\n').trim();
+function anTxt(b){ const c=b.cloneNode(true); c.querySelectorAll('.anot'+(b.tagName==='LI'?',ul':'')).forEach(x=>x.remove());
+  let t=c.textContent.replace(/\s+/g,' ').trim(); if(!t){ const im=b.querySelector('img'); t=im?'img:'+(im.getAttribute('src')||'').slice(-40):''; } return t.slice(0,60); }
+const anBlocos=root=>[...root.querySelectorAll(AN_BLK)].filter(b=>!b.closest('.anot,.mbx')&&b.closest('[data-an]')===root);
+function anInserir(root,blk,el){
+  if(!blk){ const m=root.querySelector('.mbx'); if(m) m.prepend(el); else root.appendChild(el); return; }
+  if(blk.tagName==='LI'){ const ul=[...blk.children].find(x=>x.tagName==='UL'); ul?blk.insertBefore(el,ul):blk.appendChild(el); }
+  else if(blk.matches('.fn')) blk.closest('.vis').after(el); else blk.after(el);
+}
+function pintarAnots(){
+  document.querySelectorAll('[data-an]').forEach(root=>{
+    const id=root.dataset.an, raw=(BYID[id]||{}).minha||'', p=anParse(raw);
+    if(root.dataset.av!==raw){ root.querySelectorAll('.anot:not(.edit)').forEach(x=>{ if(x.closest('[data-an]')===root) x.remove(); }); root.dataset.av=raw; }
+    if(!p.l.length) return; let bl=null;
+    p.l.forEach((o,k)=>{ if(!o.t||root.querySelector(`.anot[data-k="${k}"]`)) return;
+      bl=bl||anBlocos(root); let hit=null, n=0;
+      if(o.a) for(const b of bl){ if(anTxt(b)===o.a){ if(n===o.n){hit=b;break} n++; } }
+      if(!hit&&!root.querySelector('.mbx')) return;
+      const el=document.createElement('div'); el.className='anot'; el.dataset.mid=id; el.dataset.k=k; el.innerHTML=minhaCorpo(o.t);
+      anInserir(root,hit,el); });
+  });
+}
+function anEditor(id,k,txt,a,n){ const el=document.createElement('div'); el.className='anot edit'; el.dataset.mid=id; el.dataset.k=k;
+  if(a!=null){ el.dataset.a=a; el.dataset.n=n; }
+  el.innerHTML=`<textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><button class="ansv" data-ansv aria-label="Salvar">✓</button>`;
+  return el; }
+function anFocar(el){ const ta=el.querySelector('textarea'); anAltura(ta); ta.focus({preventScroll:true}); const n=ta.value.length; ta.setSelectionRange(n,n); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+const anAltura=ta=>{ ta.style.height='auto'; ta.style.height=ta.scrollHeight+2+'px'; };
+function anNova(root,alvo){
+  const id=root.dataset.an, ja=alvo.closest('.anot:not(.edit)'), mn=alvo.closest('.mbx .mine');
+  if(ja) return anEditar(ja); if(mn) return anEditarBase(mn.closest('.mbx'));
+  let blk=alvo.closest(AN_BLK); if(blk&&(blk.closest('.anot,.mbx')||blk.closest('[data-an]')!==root)) blk=null;
+  let a='',n=0; if(blk){ a=anTxt(blk); for(const b of anBlocos(root)){ if(b===blk) break; if(anTxt(b)===a) n++; } }
+  const el=anEditor(id,'novo','',a,n); anInserir(root,blk,el); anFocar(el);
+}
+function anEditar(x){ const p=anParse((BYID[x.dataset.mid]||{}).minha), k=+x.dataset.k, el=anEditor(x.dataset.mid,k,(p.l[k]||{}).t);
+  x.replaceWith(el); anFocar(el); }
+function anEditarBase(box){ if(!box||box.querySelector('.anot.edit')) return; const id=box.dataset.mid, el=anEditor(id,'b',anParse((BYID[id]||{}).minha).base);
+  box.innerHTML=''; box.appendChild(el); anFocar(el); }
+function anSalvar(ed){
+  if(!ed||!ed.isConnected||ed.dataset.saving||ed.dataset.busy) return; ed.dataset.saving=1;
+  const id=ed.dataset.mid, k=ed.dataset.k, t=ed.querySelector('textarea').value.trim(), antes=(BYID[id]||{}).minha||'', p=anParse(antes);
+  if(k==='b') p.base=t; else if(k==='novo'){ if(t) p.l.push({n:+ed.dataset.n||0,a:ed.dataset.a||'',t}); } else if(p.l[+k]) p.l[+k].t=t;
+  const novo=anJoin(p); ed.remove();
+  if(novo!==antes){ S.minha[id]=novo; save(); reaplicar(); toast(t?'Anotação salva':'Anotação apagada'); syncEdits(); }
+  document.querySelectorAll(`.mbx[data-mid="${id}"]`).forEach(b=>{ if(!b.querySelector('.anot.edit')) b.outerHTML=minhaHTML(id); });
+  document.querySelectorAll(`[data-an="${id}"]`).forEach(r=>delete r.dataset.av); pintarAnots();
+}
+function modoNota(v){ NT=v===undefined?!NT:v; document.body.classList.toggle('ntmode',NT); const b=document.querySelector('#mtfab .ntb'); if(b) b.classList.toggle('on',NT);
+  if(NT){ esconderFerr(); toast('Toque onde quer a anotação'); } }
+addEventListener('click',e=>{
+  if(e.target.closest('#mtfab')) return;
+  if(NT){ const root=e.target.closest('[data-an]'); modoNota(false); if(!root) return; e.preventDefault(); e.stopPropagation(); anNova(root,e.target); return; }
+  const a=e.target.closest('.anot:not(.edit),.mbx .mine');
+  if(a&&!MT&&getSelection().isCollapsed&&!e.target.closest('img[data-zoom],mark.hl')){ e.preventDefault(); e.stopPropagation(); a.classList.contains('anot')?anEditar(a):anEditarBase(a.closest('.mbx')); }
+},true);
+document.addEventListener('focusout',e=>{ const ed=e.target.closest&&e.target.closest('.anot.edit'); if(!ed) return;
+  setTimeout(()=>{ if(ed.isConnected&&!ed.contains(document.activeElement)) anSalvar(ed); },150); });
+document.addEventListener('input',e=>{ if(e.target.matches&&e.target.matches('.anot.edit textarea')) anAltura(e.target); });
 document.addEventListener('keydown',e=>{
-  const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.mbx')) return;
-  if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&tecladoFisico()){ e.preventDefault(); const b=t.closest('.mbx').querySelector('[data-sv]'); if(b) b.click(); }
+  const a=document.activeElement;
+  if(e.key.toLowerCase()==='t'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))&&!$('#sheet')&&document.querySelector('[data-an]')){ e.preventDefault(); modoNota(); }
+});
+document.addEventListener('keydown',e=>{
+  const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.anot.edit')) return;
+  if(e.key==='Enter'&&e.shiftKey&&!e.isComposing){ e.preventDefault(); anSalvar(t.closest('.anot.edit')); }
 });
 /* colar foto (Ctrl+V) na anotação do card */
 document.addEventListener('paste',async e=>{
-  const ta=e.target; if(!ta.classList||!ta.classList.contains('ned')||!ta.closest('.mbx')) return;
+  const ta=e.target; if(!ta.classList||!ta.classList.contains('ned')||!ta.closest('.anot.edit')) return;
   const fs=[...(e.clipboardData||{}).items||[]].filter(i=>i.kind==='file'&&/^image\//.test(i.type)).map(i=>i.getAsFile());
   if(!fs.length) return; e.preventDefault();
-  const id=ta.closest('.mbx').dataset.mid, sv=ta.closest('.mbx').querySelector('[data-sv]'); if(sv) sv.disabled=true;
+  const box=ta.closest('.anot.edit'), id=box.dataset.mid, sv=box.querySelector('[data-ansv]'); if(sv) sv.disabled=true; box.dataset.busy=1;
   toast('Enviando foto…');
   for(const f of fs){ let u; try{u=await comprimir(f)}catch(er){toast('Não consegui ler essa imagem');continue}
     let path=await subirImgCard(u,'minha-'+id.replace(/[^\w-]/g,'')+'-'+Date.now().toString(36));
     if(!path){ path='local:'+Date.now().toString(36); try{const c=imgCache(); c[path]=u; localStorage.setItem(IMGC_KEY,JSON.stringify(c));}catch(er){} toast('Sem conexão: a foto fica só neste aparelho'); }
     const p0=ta.selectionStart, v=ta.value, tok=(p0&&v[p0-1]!=='\n'?'\n':'')+`![](${path})`+'\n';
     ta.value=v.slice(0,p0)+tok+v.slice(ta.selectionEnd); ta.setSelectionRange(p0+tok.length,p0+tok.length); }
-  if(sv) sv.disabled=false; ta.focus(); toast('Foto colada — toque em salvar');
+  if(sv) sv.disabled=false; delete box.dataset.busy; anAltura(ta); ta.focus(); toast('Foto colada — Shift+Enter ou ✓ salva');
 });
 document.addEventListener('click',e=>{
   const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ folha(`<img src="${esc(zm.getAttribute('src'))}" alt="" style="width:100%;height:auto;border-radius:12px;display:block">`); return; }
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
-  const ed=e.target.closest('[data-ed]');
-  if(ed){const id=ed.dataset.ed,box=ed.closest('.mbx');
-    box.innerHTML=`<div class="mine"><div class="mh">Minha anotação</div><textarea class="ned" placeholder="Escreva como se fosse parte do card… (cole fotos com Ctrl+V)">${esc((BYID[id]||{}).minha||'')}</textarea><button class="addn" data-sv="${id}">salvar</button></div>`;
-    box.querySelector('textarea').focus();return}
-  const sv=e.target.closest('[data-sv]');
-  if(sv){const id=sv.dataset.sv,box=sv.closest('.mbx'),t=box.querySelector('textarea').value.trim();
-    S.minha[id]=t;save();reaplicar();box.outerHTML=minhaHTML(id);toast('Salvo no card');syncEdits()}
+  const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
 });
 
 /* ===== Envio automático pro GitHub ===== */
@@ -1536,7 +1608,7 @@ document.addEventListener('keydown',e=>{
   if(!t||at===t||(at&&/^(INPUT|TEXTAREA|SELECT)$/.test(at.tagName))) return;
   if(e.key.length===1||e.key==='Backspace'||e.key==='Enter'){
     t.focus(); const n=t.value.length; t.setSelectionRange(n,n);
-    if(e.key==='Enter'&&!e.shiftKey&&tecladoFisico()){ e.preventDefault(); $('#sv').click(); }
+    if(e.key==='Enter'&&e.shiftKey){ e.preventDefault(); $('#sv').click(); }
   }
 },true);
 document.addEventListener('visibilitychange',()=>{ if(!document.hidden) setTimeout(focarNota,50); });
@@ -1550,7 +1622,7 @@ function pAnotar(){
   const ri=rascImgs();
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
-    <textarea class="note" id="tx" placeholder="${tecladoFisico()?'Anote o erro desta questão… (Enter guarda · Shift+Enter pula linha · cole imagens com Ctrl+V)':'Anote o erro desta questão… (toque em Guardar para salvar)'}"></textarea>
+    <textarea class="note" id="tx" placeholder="${tecladoFisico()?'Anote o erro desta questão… (Enter pula linha · Shift+Enter guarda · cole imagens com Ctrl+V)':'Anote o erro desta questão… (toque em Guardar para salvar)'}"></textarea>
     ${ri.length?`<div class="nimgs">${ri.map((u,i)=>`<div class="th"><img src="${u}" alt=""><button data-rmi="${i}" aria-label="Remover">×</button></div>`).join('')}</div>`:''}
     <button class="addimg" id="ai">+ imagem</button><input type="file" id="fi" accept="image/*" multiple hidden>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
@@ -1564,8 +1636,8 @@ function pAnotar(){
   if(foc&&sel) { $('#tx').focus({preventScroll:true}); $('#tx').setSelectionRange(sel[0],sel[1]); } else focarNota();
   if(scrollY!==Y0) scrollTo(0,Y0);
   $('#tx').oninput=e=>setRasc(e.target.value);
-  /* PC: Enter guarda. Celular/tablet (tela de toque): Enter pula linha; guarda no botão */
-  $('#tx').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&tecladoFisico()){ e.preventDefault(); $('#sv').click(); } };
+  /* todos os aparelhos: Enter pula linha; Shift+Enter guarda (ou o botão) */
+  $('#tx').onkeydown=e=>{ if(e.key==='Enter'&&e.shiftKey&&!e.isComposing){ e.preventDefault(); $('#sv').click(); } };
   $('#sv').onclick=()=>{const t=$('#tx').value.trim(), im=rascImgs(); if(!t&&!im.length)return;
     S.notas.push({id:Date.now(),d:hoje(),t:t||'(imagem)',env:false,...(im.length?{imgs:im.map(u=>({local:u}))}:{})});
     save();$('#tx').value='';setRasc('');setRascImgs([]);toast('Guardado');pAnotar();enviarPendentes()};
@@ -1729,7 +1801,7 @@ function pCriar(){
     </details>
     <button class="btn" id="csv" style="margin-top:16px">${CR.edit?'Salvar alterações':'Salvar card'}</button>
     ${CR.edit?'<div class="linkrow"><button class="link" id="ccan">cancelar</button><button class="link" id="cdel" style="color:var(--bad)">excluir card</button></div>':`<button class="btn ghost" id="cprev" style="margin-top:10px">Ver como fica</button>`}
-    <p class="mute small" style="text-align:center;margin-top:12px">Ctrl+Enter salva · Ctrl+B negrito · cole imagens com Ctrl+V · <b>N</b> abre esta aba</p>
+    <p class="mute small" style="text-align:center;margin-top:12px">Shift+Enter salva · Ctrl+B negrito · cole imagens com Ctrl+V · <b>N</b> abre esta aba</p>
   </div>`;
   ligarCriar();
 }
@@ -1741,7 +1813,7 @@ function ligarCriar(){
     ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
     ta.onfocus=()=>{ CR.foco=ta.id; };
     ta.onkeydown=e=>{
-      if((e.ctrlKey||e.metaKey)&&e.key==='Enter'){ e.preventDefault(); salvarCriado(); }
+      if((e.ctrlKey||e.metaKey||e.shiftKey)&&e.key==='Enter'){ e.preventDefault(); salvarCriado(); }
       else if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&e.key.toLowerCase()==='b'){ e.preventDefault(); fmt(ta,'b'); }
       else if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='c'&&ta.id==='ct'){ e.preventDefault(); fmt(ta,e.altKey?'czm':'cz'); }
     };
@@ -1867,7 +1939,7 @@ document.addEventListener('paste',e=>{
 /* ===== Sessão ===== */
 let SS=null, CFSTOP=false;
 function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f.offsetHeight+40)+'px'}
-new MutationObserver(()=>{ajustaPe();aplicarZonas();fabMT()}).observe(document.body,{childList:true,subtree:true});
+new MutationObserver(()=>{ajustaPe();aplicarZonas();pintarAnots();fabMT()}).observe(document.body,{childList:true,subtree:true});
 function sessao(ids,modo,prev,nome){
   ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
   SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||''};
@@ -1901,7 +1973,7 @@ function proximoCard(){
   const c=BYID[SS.fila[0]];
   $('#sb').scrollTop=0;
   const w=$('#sw'), f=$('#sf');
-  w.innerHTML=tagHTML(c)+frenteHTML(c)+`<div id="ar"></div>`;
+  w.innerHTML=tagHTML(c)+frenteHTML(c)+`<div id="ar"></div>`; w.dataset.an=c.id; delete w.dataset.av;
   if(c.tipo==='quiz'){
     $('#ar').innerHTML=`<div class="opts">${c.opcoes.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c hide">${inlBr((c.comentarios||[])[i]||'')}</span></span></button>`).join('')}</div>`;
     f.innerHTML='';
@@ -1976,7 +2048,7 @@ function fim(){
 }
 
 /* ===== Marca-texto ===== */
-function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts,svg')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
+function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts,svg,.anot')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
 function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>{ if(m.closest('.hlz')===z) m.replaceWith(...m.childNodes); }); z.normalize(); }
 function aplicarMarcas(z){
   const m=S.marks[z.dataset.hl]; if(!m||!m.l) return;
@@ -2007,12 +2079,14 @@ let selT=null, MARCA_ALVO=null;
 /* Modo marca-texto: escolhe a cor antes e só selecionar já marca */
 let MT=null, MTT=null, MDOWN=false; try{MT=localStorage.getItem(LS+'.mt')||null}catch(e){}
 const MT_SVG='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l5 5-9 9H6v-5z"/><path d="M4 21h8"/></svg>';
+const NT_SVG='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l4 4-8 8H6v-4z"/><path d="M13 20h7M16 16h4"/></svg>';
 function fabMT(){
   let f=$('#mtfab'); const tem=!!document.querySelector('.hlz');
   if(!tem){ if(f) f.remove(); return; }
   if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
-    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><button class="mtb" aria-label="Marca-texto">${MT_SVG}</button>`;
-    f.querySelector('.mtb').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
+    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.querySelector('.ntb').onmousedown=e=>e.preventDefault(); f.querySelector('.ntb').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); modoNota(); };
+    f.querySelector('.mtm').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
     f.querySelectorAll('[data-mc]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ MT=b.dataset.mc||null; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(e){} f.querySelector('.mtops').classList.add('hide'); fabMT(); toast(MT?'Marca-texto ligado: é só selecionar':'Marca-texto desligado'); }; });
     document.body.appendChild(f); }
   if(f.dataset.c!==(MT||'')){ f.dataset.c=MT||''; f.classList.toggle('on',!!MT); }
@@ -2070,7 +2144,7 @@ document.addEventListener('keydown',e=>{
   const k=e.key.toLowerCase();
   if(e.key===' '||e.code==='Space'){ const b=$('#sh')||$('#nx'); if(b){ e.preventDefault(); b.click(); } return; }
   if(k==='z'||e.key==='Backspace'){ e.preventDefault(); voltarCard(); return; }
-  if(k==='e'){ e.preventDefault(); if($('#sh')) $('#sh').click(); const ed=document.querySelector('#ar [data-ed]'); if(ed) ed.click(); return; }
+  if(k==='e'){ e.preventDefault(); if($('#sh')) $('#sh').click(); anEditarBase(document.querySelector('#ar .mbx')); return; }
   if(['1','2','3'].includes(k)){ const r=document.querySelector(`.rate [data-r="${+k-1}"]`); if(r){ e.preventDefault(); r.click(); } return; }
   if(['a','b','c','d','e'].includes(k)&&k!=='e'){ const o=document.querySelector(`.opt[data-i="${'abcd'.indexOf(k)}"]:not([disabled])`); if(o){ e.preventDefault(); o.click(); } }
 });
