@@ -17836,7 +17836,1032 @@
       },
       "fonte": "Ditzel RM et al. — J Trauma Acute Care Surg 2020 (\"lethal diamond\") / ATLS 10ª ed.",
       "add": "2026-10-24"
+    },
+    {
+      "id": "apend-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendicite",
+      "frente": "Qual o sinal de dor na FID ao palpar a FIE?",
+      "resposta": "Rovsing",
+      "aceitas": [
+        "sinal de rovsing"
+      ],
+      "verso": "**Sinal de Rovsing.**\n\nOutros:\n- Blumberg → descompressão brusca dolorosa (peritonite).\n- Psoas → dor à extensão da coxa (retrocecal).\n- Obturador → dor à rotação interna da coxa (pélvico).",
+      "macete": "Rovsing = \"Repercute do outro lado\".",
+      "contexto": "**Apendicite = causa mais comum de abdome agudo cirúrgico (pico 10–30 anos).**\n\nO que é:\n- Obstrução da luz do apêndice (fecalito, hiperplasia linfoide) → distensão, isquemia, infecção.\n- Sem tratamento → perfuração (peritonite) ou bloqueio (plastrão/abscesso).\n\nClínica:\n- Dor periumbilical/epigástrica que migra para a FID\n- Anorexia, náuseas/vômitos, febre baixa\n- McBurney e Blumberg positivos\n- Sinais por posição → ver o card de sinais (Psoas, Obturador, Rovsing)\n\nDiagnóstico:\n- Clínico, com apoio do escore de **Alvarado** (0–10 pontos):\n  - **≤ 4** → improvável\n  - **5–6** → possível → imagem\n  - **≥ 7** → provável → cirurgia\n- Imagem na dúvida → USG em criança e gestante; TC no adulto\n\nGestação:\n- Emergência cirúrgica NÃO obstétrica mais comum\n- Apêndice sobe com o útero → dor em flanco/HD no 3º trimestre\n- USG → RM sem contraste; não adiar a cirurgia (perfuração mata o feto)\n\nConduta:\n- Apendicectomia (videolaparoscópica preferida) + antibiótico\n- Plastrão/abscesso (> 5 dias, massa) → antibiótico ± drenagem; apendicectomia de intervalo opcional\n\nO que mais cai na UERJ:\n- Sinal semiológico pelo nome (Rovsing, Psoas, Obturador × Murphy, Giordano).\n- Somar o Alvarado no caso (dor em FID e leucocitose valem 2).\n- Apendicite na gestante: mais comum que colecistite; leucocitose leve é fisiológica.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><circle cx=\"170\" cy=\"125\" r=\"4\" fill=\"var(--mute)\"/><text x=\"184\" y=\"121\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">umbigo</text><circle cx=\"88\" cy=\"205\" r=\"4\" fill=\"var(--mute)\"/><text x=\"80\" y=\"224\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">EIAS D</text><line x1=\"88\" y1=\"205\" x2=\"170\" y2=\"125\" stroke=\"var(--mute)\" stroke-width=\"1\"/><circle cx=\"115\" cy=\"178\" r=\"9\" fill=\"var(--wine)\"/><text x=\"60\" y=\"168\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">McBurney</text><text x=\"60\" y=\"181\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">1/3 EIAS→umbigo</text><circle cx=\"170\" cy=\"70\" r=\"16\" fill=\"var(--rose)\" opacity=\".35\"/><text x=\"170\" y=\"48\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">1º dor periumbilical/epigástrica</text><defs><marker id=\"ap\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0 0L8 4L0 8Z\" fill=\"var(--wine)\"/></marker></defs><path d=\"M165 84 Q150 135 124 168\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2\" stroke-dasharray=\"5 3\" marker-end=\"url(#ap)\"/><text x=\"215\" y=\"160\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">2º migra para a FID</text><text x=\"215\" y=\"174\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">(peritônio parietal)</text><text x=\"108\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FID</text><text x=\"232\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FIE</text></svg>",
+        "legenda": "Abdome (lado direito da paciente à esquerda da imagem): migração da dor e ponto de McBurney."
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "apend-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendicite",
+      "frente": "Qual a emergência cirúrgica não obstétrica mais comum na gestação?",
+      "resposta": "apendicite",
+      "aceitas": [
+        "apendicite aguda"
+      ],
+      "verso": "**Apendicite aguda.**\n\nNa gestação:\n- Apêndice sobe com o útero → dor em flanco/HD no 3º trimestre.\n- Imagem → USG; inconclusiva → RM sem contraste.\n- Não adiar a cirurgia (perfuração mata o feto).",
+      "macete": "Gestante com dor abdominal: \"Apendicite Antes\" de colecistite.",
+      "pegadinha": "Leucocitose leve é fisiológica na gestação.",
+      "contexto": "**Apendicite = causa mais comum de abdome agudo cirúrgico (pico 10–30 anos).**\n\nO que é:\n- Obstrução da luz do apêndice (fecalito, hiperplasia linfoide) → distensão, isquemia, infecção.\n- Sem tratamento → perfuração (peritonite) ou bloqueio (plastrão/abscesso).\n\nClínica:\n- Dor periumbilical/epigástrica que migra para a FID\n- Anorexia, náuseas/vômitos, febre baixa\n- McBurney e Blumberg positivos\n- Sinais por posição → ver o card de sinais (Psoas, Obturador, Rovsing)\n\nDiagnóstico:\n- Clínico, com apoio do escore de **Alvarado** (0–10 pontos):\n  - **≤ 4** → improvável\n  - **5–6** → possível → imagem\n  - **≥ 7** → provável → cirurgia\n- Imagem na dúvida → USG em criança e gestante; TC no adulto\n\nGestação:\n- Emergência cirúrgica NÃO obstétrica mais comum\n- Apêndice sobe com o útero → dor em flanco/HD no 3º trimestre\n- USG → RM sem contraste; não adiar a cirurgia (perfuração mata o feto)\n\nConduta:\n- Apendicectomia (videolaparoscópica preferida) + antibiótico\n- Plastrão/abscesso (> 5 dias, massa) → antibiótico ± drenagem; apendicectomia de intervalo opcional\n\nO que mais cai na UERJ:\n- Sinal semiológico pelo nome (Rovsing, Psoas, Obturador × Murphy, Giordano).\n- Somar o Alvarado no caso (dor em FID e leucocitose valem 2).\n- Apendicite na gestante: mais comum que colecistite; leucocitose leve é fisiológica.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><circle cx=\"170\" cy=\"125\" r=\"4\" fill=\"var(--mute)\"/><text x=\"184\" y=\"121\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">umbigo</text><circle cx=\"88\" cy=\"205\" r=\"4\" fill=\"var(--mute)\"/><text x=\"80\" y=\"224\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">EIAS D</text><line x1=\"88\" y1=\"205\" x2=\"170\" y2=\"125\" stroke=\"var(--mute)\" stroke-width=\"1\"/><circle cx=\"115\" cy=\"178\" r=\"9\" fill=\"var(--wine)\"/><text x=\"60\" y=\"168\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">McBurney</text><text x=\"60\" y=\"181\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">1/3 EIAS→umbigo</text><circle cx=\"170\" cy=\"70\" r=\"16\" fill=\"var(--rose)\" opacity=\".35\"/><text x=\"170\" y=\"48\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">1º dor periumbilical/epigástrica</text><defs><marker id=\"ap\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0 0L8 4L0 8Z\" fill=\"var(--wine)\"/></marker></defs><path d=\"M165 84 Q150 135 124 168\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2\" stroke-dasharray=\"5 3\" marker-end=\"url(#ap)\"/><text x=\"215\" y=\"160\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">2º migra para a FID</text><text x=\"215\" y=\"174\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">(peritônio parietal)</text><text x=\"108\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FID</text><text x=\"232\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FIE</text></svg>",
+        "legenda": "Abdome (lado direito da paciente à esquerda da imagem): migração da dor e ponto de McBurney."
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "apend-d3",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Inflamatório - Apendicite",
+      "frente": "Qual escore clínico estratifica a probabilidade de apendicite?",
+      "resposta": "Alvarado",
+      "aceitas": [
+        "escore de alvarado",
+        "mantrels"
+      ],
+      "verso": "**Alvarado (MANTRELS).**\n\nFaixas:\n- ≤ 4 → improvável.\n- 5–6 → possível → imagem.\n- ≥ 7 → provável → cirurgia.\n- Dor em FID e leucocitose valem 2 pontos cada.",
+      "macete": "MANTRELS: Migração, Anorexia, Náusea, Tenderness, Rebote, Elevação da temperatura, Leucocitose, Shift.",
+      "contexto": "**Apendicite = causa mais comum de abdome agudo cirúrgico (pico 10–30 anos).**\n\nO que é:\n- Obstrução da luz do apêndice (fecalito, hiperplasia linfoide) → distensão, isquemia, infecção.\n- Sem tratamento → perfuração (peritonite) ou bloqueio (plastrão/abscesso).\n\nClínica:\n- Dor periumbilical/epigástrica que migra para a FID\n- Anorexia, náuseas/vômitos, febre baixa\n- McBurney e Blumberg positivos\n- Sinais por posição → ver o card de sinais (Psoas, Obturador, Rovsing)\n\nDiagnóstico:\n- Clínico, com apoio do escore de **Alvarado** (0–10 pontos):\n  - **≤ 4** → improvável\n  - **5–6** → possível → imagem\n  - **≥ 7** → provável → cirurgia\n- Imagem na dúvida → USG em criança e gestante; TC no adulto\n\nGestação:\n- Emergência cirúrgica NÃO obstétrica mais comum\n- Apêndice sobe com o útero → dor em flanco/HD no 3º trimestre\n- USG → RM sem contraste; não adiar a cirurgia (perfuração mata o feto)\n\nConduta:\n- Apendicectomia (videolaparoscópica preferida) + antibiótico\n- Plastrão/abscesso (> 5 dias, massa) → antibiótico ± drenagem; apendicectomia de intervalo opcional\n\nO que mais cai na UERJ:\n- Sinal semiológico pelo nome (Rovsing, Psoas, Obturador × Murphy, Giordano).\n- Somar o Alvarado no caso (dor em FID e leucocitose valem 2).\n- Apendicite na gestante: mais comum que colecistite; leucocitose leve é fisiológica.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><circle cx=\"170\" cy=\"125\" r=\"4\" fill=\"var(--mute)\"/><text x=\"184\" y=\"121\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"start\">umbigo</text><circle cx=\"88\" cy=\"205\" r=\"4\" fill=\"var(--mute)\"/><text x=\"80\" y=\"224\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">EIAS D</text><line x1=\"88\" y1=\"205\" x2=\"170\" y2=\"125\" stroke=\"var(--mute)\" stroke-width=\"1\"/><circle cx=\"115\" cy=\"178\" r=\"9\" fill=\"var(--wine)\"/><text x=\"60\" y=\"168\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">McBurney</text><text x=\"60\" y=\"181\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">1/3 EIAS→umbigo</text><circle cx=\"170\" cy=\"70\" r=\"16\" fill=\"var(--rose)\" opacity=\".35\"/><text x=\"170\" y=\"48\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">1º dor periumbilical/epigástrica</text><defs><marker id=\"ap\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0 0L8 4L0 8Z\" fill=\"var(--wine)\"/></marker></defs><path d=\"M165 84 Q150 135 124 168\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"2\" stroke-dasharray=\"5 3\" marker-end=\"url(#ap)\"/><text x=\"215\" y=\"160\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">2º migra para a FID</text><text x=\"215\" y=\"174\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">(peritônio parietal)</text><text x=\"108\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FID</text><text x=\"232\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">FIE</text></svg>",
+        "legenda": "Abdome (lado direito da paciente à esquerda da imagem): migração da dor e ponto de McBurney."
+      },
+      "fonte": "Comentário da questão UERJ",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aplv-d1",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Qual a conduta na APLV do lactente em aleitamento materno exclusivo?",
+      "resposta": "manter o aleitamento",
+      "aceitas": [
+        "manter amamentacao",
+        "manter o aleitamento materno",
+        "manter aleitamento e dieta materna",
+        "manter o am",
+        "manter aleitamento materno com exclusao materna"
+      ],
+      "verso": "**Manter o aleitamento materno.**\n\nComo:\n- Mãe faz dieta de exclusão do leite e derivados.\n- Repor cálcio para a mãe.",
+      "macete": "APLV no peito: \"tira o leite da MÃE, não o peito do bebê\".",
+      "pegadinha": "Trocar o AM por fórmula é o erro.",
+      "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nO que é:\n- Reação a caseína/proteínas do soro, mais comum no 1º ano de vida.\n- Intolerância à lactose = falta de lactase (não é alergia, rara no lactente).\n\nFormas (o tempo separa — ver ilustração):\n- **IgE mediada** → minutos a 2 h: urticária, angioedema, vômitos, anafilaxia\n- **Não IgE** → horas a dias\n  - Proctocolite → sangue/muco nas fezes em lactente bem, geralmente amamentado\n  - FPIES → vômitos incoercíveis, palidez, letargia\n  - Enteropatia → diarreia crônica e baixo ganho\n- **Mista** → esofagite eosinofílica, dermatite atópica\n\nDiagnóstico:\n- Dieta de exclusão com melhora + teste de provocação oral (padrão-ouro)\n- IgE específica/prick só ajudam na forma IgE\n\nTratamento:\n- **Em aleitamento** → MANTER o AM com exclusão do leite na dieta da mãe (+ cálcio)\n- **Sem AM** → fórmula extensamente hidrolisada; aminoácidos se grave/anafilaxia/FPIES\n- Soja → só > 6 meses e na forma IgE; leite de cabra não serve (reação cruzada)\n\nAnafilaxia:\n- Adrenalina IM 0,01 mg/kg no vasto lateral (máx. 0,3 mg criança / 0,5 mg adulto)\n- Anti-histamínico e corticoide são só adjuvantes\n- Observar 4–6 h e alta com autoinjetor + plano de ação\n\nPrognóstico:\n- Maioria tolera até 3–5 anos → reexposição supervisionada a cada 6–12 meses\n\nO que mais cai na UERJ:\n- Lactente amamentado com sangue nas fezes → proctocolite → manter AM e excluir leite da mãe.\n- Adrenalina IM como 1ª e única droga que salva na anafilaxia; asma associada aumenta a gravidade.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"15\" y1=\"120\" x2=\"325\" y2=\"120\" stroke=\"var(--mute)\"/><line x1=\"15\" y1=\"114\" x2=\"15\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"15\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">minutos</text><line x1=\"110\" y1=\"114\" x2=\"110\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"110\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">2 h</text><line x1=\"210\" y1=\"114\" x2=\"210\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"210\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">horas</text><line x1=\"325\" y1=\"114\" x2=\"325\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"325\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">dias</text><rect x=\"15\" y=\"20\" width=\"95\" height=\"34\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"62\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">IgE mediada</text><text x=\"62\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">urticária, anafilaxia</text><rect x=\"130\" y=\"20\" width=\"195\" height=\"34\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"227\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Não IgE</text><text x=\"227\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--ink)\" text-anchor=\"middle\">proctocolite, FPIES, enteropatia</text><rect x=\"15\" y=\"64\" width=\"310\" height=\"34\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"170\" y=\"79\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Mista</text><text x=\"170\" y=\"92\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">esofagite eosinofílica, dermatite atópica</text></svg>",
+        "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
+      },
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aplv-d2",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Qual fórmula se usa na APLV do lactente sem aleitamento materno?",
+      "resposta": "extensamente hidrolisada",
+      "aceitas": [
+        "formula extensamente hidrolisada",
+        "fórmula extensamente hidrolisada",
+        "proteina extensamente hidrolisada"
+      ],
+      "verso": "**Fórmula extensamente hidrolisada.**\n\nDetalhes:\n- Grave/anafilaxia/FPIES → fórmula de aminoácidos.\n- Soja → só > 6 meses e forma IgE.\n- Leite de cabra → não (reação cruzada).",
+      "macete": "\"Extensa\" para o leite: hidrolisa tudo.",
+      "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nO que é:\n- Reação a caseína/proteínas do soro, mais comum no 1º ano de vida.\n- Intolerância à lactose = falta de lactase (não é alergia, rara no lactente).\n\nFormas (o tempo separa — ver ilustração):\n- **IgE mediada** → minutos a 2 h: urticária, angioedema, vômitos, anafilaxia\n- **Não IgE** → horas a dias\n  - Proctocolite → sangue/muco nas fezes em lactente bem, geralmente amamentado\n  - FPIES → vômitos incoercíveis, palidez, letargia\n  - Enteropatia → diarreia crônica e baixo ganho\n- **Mista** → esofagite eosinofílica, dermatite atópica\n\nDiagnóstico:\n- Dieta de exclusão com melhora + teste de provocação oral (padrão-ouro)\n- IgE específica/prick só ajudam na forma IgE\n\nTratamento:\n- **Em aleitamento** → MANTER o AM com exclusão do leite na dieta da mãe (+ cálcio)\n- **Sem AM** → fórmula extensamente hidrolisada; aminoácidos se grave/anafilaxia/FPIES\n- Soja → só > 6 meses e na forma IgE; leite de cabra não serve (reação cruzada)\n\nAnafilaxia:\n- Adrenalina IM 0,01 mg/kg no vasto lateral (máx. 0,3 mg criança / 0,5 mg adulto)\n- Anti-histamínico e corticoide são só adjuvantes\n- Observar 4–6 h e alta com autoinjetor + plano de ação\n\nPrognóstico:\n- Maioria tolera até 3–5 anos → reexposição supervisionada a cada 6–12 meses\n\nO que mais cai na UERJ:\n- Lactente amamentado com sangue nas fezes → proctocolite → manter AM e excluir leite da mãe.\n- Adrenalina IM como 1ª e única droga que salva na anafilaxia; asma associada aumenta a gravidade.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"15\" y1=\"120\" x2=\"325\" y2=\"120\" stroke=\"var(--mute)\"/><line x1=\"15\" y1=\"114\" x2=\"15\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"15\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">minutos</text><line x1=\"110\" y1=\"114\" x2=\"110\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"110\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">2 h</text><line x1=\"210\" y1=\"114\" x2=\"210\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"210\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">horas</text><line x1=\"325\" y1=\"114\" x2=\"325\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"325\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">dias</text><rect x=\"15\" y=\"20\" width=\"95\" height=\"34\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"62\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">IgE mediada</text><text x=\"62\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">urticária, anafilaxia</text><rect x=\"130\" y=\"20\" width=\"195\" height=\"34\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"227\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Não IgE</text><text x=\"227\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--ink)\" text-anchor=\"middle\">proctocolite, FPIES, enteropatia</text><rect x=\"15\" y=\"64\" width=\"310\" height=\"34\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"170\" y=\"79\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Mista</text><text x=\"170\" y=\"92\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">esofagite eosinofílica, dermatite atópica</text></svg>",
+        "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
+      },
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aplv-d3",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Alergia à proteína do leite de vaca (APLV)",
+      "frente": "Qual o padrão-ouro para o diagnóstico de APLV?",
+      "resposta": "teste de provocação oral",
+      "aceitas": [
+        "provocacao oral",
+        "tpo",
+        "teste de provocacao oral duplo cego"
+      ],
+      "verso": "**Teste de provocação oral.**\n\nNa prática:\n- Após 2–4 semanas de exclusão com melhora.\n- IgE/prick → só ajudam na forma IgE mediada.",
+      "macete": "Prova o leite de novo: piorou = alergia.",
+      "contexto": "**APLV = reação imunológica às proteínas do leite (diferente de intolerância à lactose).**\n\nO que é:\n- Reação a caseína/proteínas do soro, mais comum no 1º ano de vida.\n- Intolerância à lactose = falta de lactase (não é alergia, rara no lactente).\n\nFormas (o tempo separa — ver ilustração):\n- **IgE mediada** → minutos a 2 h: urticária, angioedema, vômitos, anafilaxia\n- **Não IgE** → horas a dias\n  - Proctocolite → sangue/muco nas fezes em lactente bem, geralmente amamentado\n  - FPIES → vômitos incoercíveis, palidez, letargia\n  - Enteropatia → diarreia crônica e baixo ganho\n- **Mista** → esofagite eosinofílica, dermatite atópica\n\nDiagnóstico:\n- Dieta de exclusão com melhora + teste de provocação oral (padrão-ouro)\n- IgE específica/prick só ajudam na forma IgE\n\nTratamento:\n- **Em aleitamento** → MANTER o AM com exclusão do leite na dieta da mãe (+ cálcio)\n- **Sem AM** → fórmula extensamente hidrolisada; aminoácidos se grave/anafilaxia/FPIES\n- Soja → só > 6 meses e na forma IgE; leite de cabra não serve (reação cruzada)\n\nAnafilaxia:\n- Adrenalina IM 0,01 mg/kg no vasto lateral (máx. 0,3 mg criança / 0,5 mg adulto)\n- Anti-histamínico e corticoide são só adjuvantes\n- Observar 4–6 h e alta com autoinjetor + plano de ação\n\nPrognóstico:\n- Maioria tolera até 3–5 anos → reexposição supervisionada a cada 6–12 meses\n\nO que mais cai na UERJ:\n- Lactente amamentado com sangue nas fezes → proctocolite → manter AM e excluir leite da mãe.\n- Adrenalina IM como 1ª e única droga que salva na anafilaxia; asma associada aumenta a gravidade.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"15\" y1=\"120\" x2=\"325\" y2=\"120\" stroke=\"var(--mute)\"/><line x1=\"15\" y1=\"114\" x2=\"15\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"15\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">minutos</text><line x1=\"110\" y1=\"114\" x2=\"110\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"110\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">2 h</text><line x1=\"210\" y1=\"114\" x2=\"210\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"210\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">horas</text><line x1=\"325\" y1=\"114\" x2=\"325\" y2=\"126\" stroke=\"var(--mute)\"/><text x=\"325\" y=\"142\" font-size=\"9.5\" font-weight=\"600\" fill=\"var(--mute)\" text-anchor=\"middle\">dias</text><rect x=\"15\" y=\"20\" width=\"95\" height=\"34\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"62\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">IgE mediada</text><text x=\"62\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--bg)\" text-anchor=\"middle\">urticária, anafilaxia</text><rect x=\"130\" y=\"20\" width=\"195\" height=\"34\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"227\" y=\"35\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Não IgE</text><text x=\"227\" y=\"48\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--ink)\" text-anchor=\"middle\">proctocolite, FPIES, enteropatia</text><rect x=\"15\" y=\"64\" width=\"310\" height=\"34\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\"/><text x=\"170\" y=\"79\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Mista</text><text x=\"170\" y=\"92\" font-size=\"8.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">esofagite eosinofílica, dermatite atópica</text></svg>",
+        "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
+      },
+      "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aa-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Qual exame de imagem simples mostra pneumoperitônio?",
+      "resposta": "RX de tórax em pé",
+      "aceitas": [
+        "rx de torax",
+        "radiografia de torax em pe",
+        "rx torax em pe",
+        "radiografia de torax"
+      ],
+      "verso": "**RX de tórax em pé.**\n\nAchado:\n- Ar sob as cúpulas diafragmáticas.\n- Não consegue ficar em pé → decúbito lateral esquerdo.\n- Mais sensível → TC.",
+      "macete": "Ar sobe: procure embaixo do diafragma com o paciente em pé.",
+      "contexto": "**Abdome agudo = dor abdominal de início recente que pode precisar de cirurgia; classificar pelo mecanismo.**\n\nO que é:\n- Dor abdominal aguda (< 7 dias) que exige diagnóstico e conduta rápidos.\n- A localização da dor orienta a hipótese (ver ilustração).\n\nTipos:\n- **Inflamatório** → apendicite, colecistite, diverticulite, pancreatite\n- **Obstrutivo** → bridas, hérnia, neoplasia, volvo\n- **Perfurativo** → úlcera péptica, divertículo, corpo estranho\n- **Vascular** → isquemia mesentérica (dor desproporcional ao exame)\n- **Hemorrágico** → ectópica rota, aneurisma roto, cisto hemorrágico\n\nAvaliação:\n- β-hCG em toda mulher em idade fértil\n- Laboratório → hemograma, amilase/lipase, lactato, função renal, EAS\n- Imagem → USG (vesícula, pelve, criança, gestante), RX (pneumoperitônio, obstrução), TC (padrão no adulto)\n\nPneumoperitônio:\n- RX de tórax em pé → ar sob as cúpulas\n- Perfuração de víscera → laparotomia/laparoscopia de urgência\n\nConduta geral:\n- Jejum, hidratação venosa, analgesia (opioide NÃO mascara o diagnóstico)\n- SNG se obstrução/vômitos; antibiótico se infecção ou perfuração\n- Instabilidade + peritonite difusa → cirurgia sem esperar exames\n\nPneumoperitônio da laparoscopia (CO₂):\n- Pressão de 12–15 mmHg comprime a cava → ↓ retorno venoso e débito, ↑ RVS\n- Distensão peritoneal → reflexo vagal → bradicardia (desinsuflar, depois atropina)\n- CO₂ absorvido → hipercapnia e acidose\n- Proclive piora o retorno venoso; Trendelenburg melhora\n\nAbscesso retroperitoneal/psoas:\n- Febre, dor lombar, sinal do psoas e claudicação\n- Causas → Crohn, apendicite retrocecal, diverticulite, mal de Pott\n- TC + drenagem percutânea + antibiótico\n\nO que mais cai na UERJ:\n- Afirmativas sobre conduta (analgesia permitida, ATB, hidratação, contraste).\n- Fisiologia do pneumoperitônio na laparoscopia e bradicardia na insuflação.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><text x=\"115\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">QSD</text><text x=\"115\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">colecistite</text><text x=\"225\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Epigástrio/QSE</text><text x=\"225\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">úlcera, pancreatite</text><text x=\"115\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FID</text><text x=\"115\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">apendicite</text><text x=\"225\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FIE</text><text x=\"225\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">diverticulite</text><text x=\"170\" y=\"118\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">difusa: perfuração, isquemia</text></svg>",
+        "legenda": "Onde dói e o que pensar primeiro (lado direito da paciente à esquerda da imagem)."
+      },
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aa-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Analgesia com opioide mascara o diagnóstico de abdome agudo?",
+      "resposta": "não",
+      "aceitas": [
+        "nao mascara",
+        "nao",
+        "nao atrapalha"
+      ],
+      "verso": "**Não.**\n\nNa prática:\n- Analgesia precoce não altera a acurácia do exame.\n- Deve ser feita já na avaliação inicial.",
+      "macete": "Dor tratada não esconde peritonite.",
+      "pegadinha": "Negar analgesia \"para não mascarar\" é a alternativa errada.",
+      "contexto": "**Abdome agudo = dor abdominal de início recente que pode precisar de cirurgia; classificar pelo mecanismo.**\n\nO que é:\n- Dor abdominal aguda (< 7 dias) que exige diagnóstico e conduta rápidos.\n- A localização da dor orienta a hipótese (ver ilustração).\n\nTipos:\n- **Inflamatório** → apendicite, colecistite, diverticulite, pancreatite\n- **Obstrutivo** → bridas, hérnia, neoplasia, volvo\n- **Perfurativo** → úlcera péptica, divertículo, corpo estranho\n- **Vascular** → isquemia mesentérica (dor desproporcional ao exame)\n- **Hemorrágico** → ectópica rota, aneurisma roto, cisto hemorrágico\n\nAvaliação:\n- β-hCG em toda mulher em idade fértil\n- Laboratório → hemograma, amilase/lipase, lactato, função renal, EAS\n- Imagem → USG (vesícula, pelve, criança, gestante), RX (pneumoperitônio, obstrução), TC (padrão no adulto)\n\nPneumoperitônio:\n- RX de tórax em pé → ar sob as cúpulas\n- Perfuração de víscera → laparotomia/laparoscopia de urgência\n\nConduta geral:\n- Jejum, hidratação venosa, analgesia (opioide NÃO mascara o diagnóstico)\n- SNG se obstrução/vômitos; antibiótico se infecção ou perfuração\n- Instabilidade + peritonite difusa → cirurgia sem esperar exames\n\nPneumoperitônio da laparoscopia (CO₂):\n- Pressão de 12–15 mmHg comprime a cava → ↓ retorno venoso e débito, ↑ RVS\n- Distensão peritoneal → reflexo vagal → bradicardia (desinsuflar, depois atropina)\n- CO₂ absorvido → hipercapnia e acidose\n- Proclive piora o retorno venoso; Trendelenburg melhora\n\nAbscesso retroperitoneal/psoas:\n- Febre, dor lombar, sinal do psoas e claudicação\n- Causas → Crohn, apendicite retrocecal, diverticulite, mal de Pott\n- TC + drenagem percutânea + antibiótico\n\nO que mais cai na UERJ:\n- Afirmativas sobre conduta (analgesia permitida, ATB, hidratação, contraste).\n- Fisiologia do pneumoperitônio na laparoscopia e bradicardia na insuflação.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><text x=\"115\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">QSD</text><text x=\"115\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">colecistite</text><text x=\"225\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Epigástrio/QSE</text><text x=\"225\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">úlcera, pancreatite</text><text x=\"115\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FID</text><text x=\"115\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">apendicite</text><text x=\"225\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FIE</text><text x=\"225\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">diverticulite</text><text x=\"170\" y=\"118\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">difusa: perfuração, isquemia</text></svg>",
+        "legenda": "Onde dói e o que pensar primeiro (lado direito da paciente à esquerda da imagem)."
+      },
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "aa-d3",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Abdome agudo",
+      "sub": "Abdome agudo — classificação e conduta geral",
+      "frente": "Qual o abdome agudo com dor desproporcional ao exame físico?",
+      "resposta": "isquemia mesentérica",
+      "aceitas": [
+        "isquemia mesenterica aguda",
+        "abdome agudo vascular",
+        "vascular"
+      ],
+      "verso": "**Isquemia mesentérica aguda (vascular).**\n\nPistas:\n- Idoso, FA, aterosclerose.\n- Lactato alto; angio-TC confirma.",
+      "macete": "Dói muito, abdome \"bonzinho\" = intestino sem sangue.",
+      "contexto": "**Abdome agudo = dor abdominal de início recente que pode precisar de cirurgia; classificar pelo mecanismo.**\n\nO que é:\n- Dor abdominal aguda (< 7 dias) que exige diagnóstico e conduta rápidos.\n- A localização da dor orienta a hipótese (ver ilustração).\n\nTipos:\n- **Inflamatório** → apendicite, colecistite, diverticulite, pancreatite\n- **Obstrutivo** → bridas, hérnia, neoplasia, volvo\n- **Perfurativo** → úlcera péptica, divertículo, corpo estranho\n- **Vascular** → isquemia mesentérica (dor desproporcional ao exame)\n- **Hemorrágico** → ectópica rota, aneurisma roto, cisto hemorrágico\n\nAvaliação:\n- β-hCG em toda mulher em idade fértil\n- Laboratório → hemograma, amilase/lipase, lactato, função renal, EAS\n- Imagem → USG (vesícula, pelve, criança, gestante), RX (pneumoperitônio, obstrução), TC (padrão no adulto)\n\nPneumoperitônio:\n- RX de tórax em pé → ar sob as cúpulas\n- Perfuração de víscera → laparotomia/laparoscopia de urgência\n\nConduta geral:\n- Jejum, hidratação venosa, analgesia (opioide NÃO mascara o diagnóstico)\n- SNG se obstrução/vômitos; antibiótico se infecção ou perfuração\n- Instabilidade + peritonite difusa → cirurgia sem esperar exames\n\nPneumoperitônio da laparoscopia (CO₂):\n- Pressão de 12–15 mmHg comprime a cava → ↓ retorno venoso e débito, ↑ RVS\n- Distensão peritoneal → reflexo vagal → bradicardia (desinsuflar, depois atropina)\n- CO₂ absorvido → hipercapnia e acidose\n- Proclive piora o retorno venoso; Trendelenburg melhora\n\nAbscesso retroperitoneal/psoas:\n- Febre, dor lombar, sinal do psoas e claudicação\n- Causas → Crohn, apendicite retrocecal, diverticulite, mal de Pott\n- TC + drenagem percutânea + antibiótico\n\nO que mais cai na UERJ:\n- Afirmativas sobre conduta (analgesia permitida, ATB, hidratação, contraste).\n- Fisiologia do pneumoperitônio na laparoscopia e bradicardia na insuflação.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M70 20 Q170 0 270 20 L285 230 Q170 250 55 230 Z\" fill=\"var(--card)\" stroke=\"var(--mute)\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"240\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"125\" x2=\"280\" y2=\"125\" stroke=\"var(--line)\" stroke-dasharray=\"4 4\"/><text x=\"115\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">QSD</text><text x=\"115\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">colecistite</text><text x=\"225\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Epigástrio/QSE</text><text x=\"225\" y=\"74\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">úlcera, pancreatite</text><text x=\"115\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FID</text><text x=\"115\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">apendicite</text><text x=\"225\" y=\"170\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FIE</text><text x=\"225\" y=\"184\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">diverticulite</text><text x=\"170\" y=\"118\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">difusa: perfuração, isquemia</text></svg>",
+        "legenda": "Onde dói e o que pensar primeiro (lado direito da paciente à esquerda da imagem)."
+      },
+      "fonte": "Sabiston / WSES guidelines",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Qual a região mais acometida pela tuberculose intestinal?",
+      "resposta": "ileocecal",
+      "aceitas": [
+        "regiao ileocecal",
+        "ileo terminal",
+        "ileo terminal e ceco",
+        "ileo e ceco"
+      ],
+      "verso": "**Região ileocecal.**\n\nPor quê:\n- Estase do conteúdo.\n- Muito tecido linfoide.",
+      "macete": "TB gosta do \"fim do delgado\" como o Crohn — diferencie pelo granuloma.",
+      "contexto": "**TB intestinal = infecção pelo M. tuberculosis com predileção pela região ileocecal.**\n\nO que é:\n- Região ileocecal → estase + muito tecido linfoide (ver ilustração).\n- Via principal → deglutição de escarro bacilífero; leite não pasteurizado (M. bovis).\n\nClínica:\n- Febre, sudorese, emagrecimento\n- Dor e massa em FID, diarreia ou alteração do hábito\n- Pode obstruir, sangrar, perfurar ou fistulizar\n\nDiagnóstico:\n- Colonoscopia com biópsia → granuloma caseoso, BAAR, cultura, teste molecular\n- Achados → úlceras transversais, válvula ileocecal destruída\n- RX de tórax normal NÃO exclui\n\nDiferencial com Crohn:\n- **TB** → granuloma caseoso, úlcera transversal, PPD/IGRA reagente\n- **Crohn** → granuloma não caseoso, úlcera longitudinal, fístula perianal, lesões salteadas\n- No Brasil, excluir TB antes de imunossuprimir\n\nTratamento:\n- RIPE 6 meses\n- Cirurgia → obstrução (complicação mais comum), perfuração, fístula, sangramento\n\nTB peritoneal:\n- Ascite exsudativa, GASA < 1,1, linfócitos, ADA > 30–40\n- Padrão-ouro → laparoscopia com biópsia\n- Carcinomatose também tem GASA baixo → citologia oncótica diferencia\n\nO que mais cai na UERJ:\n- Obstrução como principal complicação/indicação cirúrgica.\n- TB × Crohn ileocecal.\n- TB peritoneal × carcinomatose pelo líquido ascítico.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 228\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M60 200 L60 70 Q60 40 90 40 L250 40 Q280 40 280 70 L280 200\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"22\" stroke-linecap=\"round\"/><path d=\"M150 150 Q100 160 72 175\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"12\" stroke-linecap=\"round\"/><circle cx=\"68\" cy=\"180\" r=\"24\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"3\" stroke-dasharray=\"5 3\"/><text x=\"110\" y=\"215\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Região ileocecal</text><text x=\"170\" y=\"100\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">cólon</text><text x=\"165\" y=\"140\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">íleo terminal</text></svg>",
+        "legenda": "Local preferido da TB intestinal: íleo terminal e ceco."
+      },
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Qual a complicação mais comum da tuberculose intestinal?",
+      "resposta": "obstrução",
+      "aceitas": [
+        "obstrucao intestinal",
+        "estenose",
+        "estenose ileocecal",
+        "suboclusao"
+      ],
+      "verso": "**Obstrução (estenose ileocecal).**\n\nOutras:\n- Perfuração, fístula, sangramento.\n- É a principal indicação cirúrgica.",
+      "macete": "TB intestinal \"aperta\" o íleo.",
+      "contexto": "**TB intestinal = infecção pelo M. tuberculosis com predileção pela região ileocecal.**\n\nO que é:\n- Região ileocecal → estase + muito tecido linfoide (ver ilustração).\n- Via principal → deglutição de escarro bacilífero; leite não pasteurizado (M. bovis).\n\nClínica:\n- Febre, sudorese, emagrecimento\n- Dor e massa em FID, diarreia ou alteração do hábito\n- Pode obstruir, sangrar, perfurar ou fistulizar\n\nDiagnóstico:\n- Colonoscopia com biópsia → granuloma caseoso, BAAR, cultura, teste molecular\n- Achados → úlceras transversais, válvula ileocecal destruída\n- RX de tórax normal NÃO exclui\n\nDiferencial com Crohn:\n- **TB** → granuloma caseoso, úlcera transversal, PPD/IGRA reagente\n- **Crohn** → granuloma não caseoso, úlcera longitudinal, fístula perianal, lesões salteadas\n- No Brasil, excluir TB antes de imunossuprimir\n\nTratamento:\n- RIPE 6 meses\n- Cirurgia → obstrução (complicação mais comum), perfuração, fístula, sangramento\n\nTB peritoneal:\n- Ascite exsudativa, GASA < 1,1, linfócitos, ADA > 30–40\n- Padrão-ouro → laparoscopia com biópsia\n- Carcinomatose também tem GASA baixo → citologia oncótica diferencia\n\nO que mais cai na UERJ:\n- Obstrução como principal complicação/indicação cirúrgica.\n- TB × Crohn ileocecal.\n- TB peritoneal × carcinomatose pelo líquido ascítico.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 228\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M60 200 L60 70 Q60 40 90 40 L250 40 Q280 40 280 70 L280 200\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"22\" stroke-linecap=\"round\"/><path d=\"M150 150 Q100 160 72 175\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"12\" stroke-linecap=\"round\"/><circle cx=\"68\" cy=\"180\" r=\"24\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"3\" stroke-dasharray=\"5 3\"/><text x=\"110\" y=\"215\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Região ileocecal</text><text x=\"170\" y=\"100\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">cólon</text><text x=\"165\" y=\"140\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">íleo terminal</text></svg>",
+        "legenda": "Local preferido da TB intestinal: íleo terminal e ceco."
+      },
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-d3",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Intestino delgado e cólon",
+      "sub": "Tuberculose intestinal",
+      "frente": "Qual granuloma diferencia a TB intestinal da doença de Crohn?",
+      "resposta": "caseoso",
+      "aceitas": [
+        "granuloma caseoso",
+        "necrose caseosa"
+      ],
+      "verso": "**Granuloma caseoso (TB).**\n\nComparação:\n- Crohn → granuloma NÃO caseoso.\n- TB → úlcera transversal; Crohn → longitudinal.",
+      "macete": "Caseoso = \"queijo\" da TB.",
+      "contexto": "**TB intestinal = infecção pelo M. tuberculosis com predileção pela região ileocecal.**\n\nO que é:\n- Região ileocecal → estase + muito tecido linfoide (ver ilustração).\n- Via principal → deglutição de escarro bacilífero; leite não pasteurizado (M. bovis).\n\nClínica:\n- Febre, sudorese, emagrecimento\n- Dor e massa em FID, diarreia ou alteração do hábito\n- Pode obstruir, sangrar, perfurar ou fistulizar\n\nDiagnóstico:\n- Colonoscopia com biópsia → granuloma caseoso, BAAR, cultura, teste molecular\n- Achados → úlceras transversais, válvula ileocecal destruída\n- RX de tórax normal NÃO exclui\n\nDiferencial com Crohn:\n- **TB** → granuloma caseoso, úlcera transversal, PPD/IGRA reagente\n- **Crohn** → granuloma não caseoso, úlcera longitudinal, fístula perianal, lesões salteadas\n- No Brasil, excluir TB antes de imunossuprimir\n\nTratamento:\n- RIPE 6 meses\n- Cirurgia → obstrução (complicação mais comum), perfuração, fístula, sangramento\n\nTB peritoneal:\n- Ascite exsudativa, GASA < 1,1, linfócitos, ADA > 30–40\n- Padrão-ouro → laparoscopia com biópsia\n- Carcinomatose também tem GASA baixo → citologia oncótica diferencia\n\nO que mais cai na UERJ:\n- Obstrução como principal complicação/indicação cirúrgica.\n- TB × Crohn ileocecal.\n- TB peritoneal × carcinomatose pelo líquido ascítico.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 228\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M60 200 L60 70 Q60 40 90 40 L250 40 Q280 40 280 70 L280 200\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"22\" stroke-linecap=\"round\"/><path d=\"M150 150 Q100 160 72 175\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"12\" stroke-linecap=\"round\"/><circle cx=\"68\" cy=\"180\" r=\"24\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"3\" stroke-dasharray=\"5 3\"/><text x=\"110\" y=\"215\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Região ileocecal</text><text x=\"170\" y=\"100\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">cólon</text><text x=\"165\" y=\"140\" font-size=\"9.5\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">íleo terminal</text></svg>",
+        "legenda": "Local preferido da TB intestinal: íleo terminal e ceco."
+      },
+      "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asc-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Ascite — GASA e PBE",
+      "frente": "Qual valor de GASA indica ascite por hipertensão portal?",
+      "resposta": "≥ 1,1 g/dL",
+      "aceitas": [
+        "1,1",
+        "1.1",
+        "maior ou igual a 1,1",
+        ">= 1,1",
+        "1,1 g/dl",
+        "acima de 1,1"
+      ],
+      "verso": "**GASA ≥ 1,1 g/dL.**\n\nInterpretação:\n- ≥ 1,1 → hipertensão portal (cirrose, IC, Budd-Chiari).\n- < 1,1 → causa peritoneal (carcinomatose, TB, pancreatite, nefrótica).",
+      "macete": "GASA alto = \"pressão alta na porta\".",
+      "contexto": "**Ascite = líquido livre na cavidade peritoneal; a principal causa é a cirrose com hipertensão portal.**\n\nO que é:\n- Na cirrose → hipertensão portal + vasodilatação esplâncnica → retenção de sódio e água.\n- Clínica → aumento do volume abdominal, macicez móvel, piparote.\n\nParacentese diagnóstica:\n- **Indicação** → toda ascite nova e todo cirrótico com ascite internado ou que piorou\n- **Pedir** → albumina, proteína total, celularidade com diferencial, cultura (frasco de hemocultura)\n- Coagulopatia não contraindica\n\nGASA (albumina sérica − albumina do líquido):\n- **≥ 1,1 g/dL** → hipertensão portal (cirrose, IC, Budd-Chiari)\n- **< 1,1 g/dL** → peritoneal (carcinomatose, TB, pancreatite, síndrome nefrótica)\n- Proteína do líquido > 2,5 com GASA alto → cardíaca\n\nPBE:\n- Febre, dor, encefalopatia ou piora renal — pode ser assintomática\n- **Diagnóstico** → neutrófilos ≥ 250/mm³ (cultura pode ser negativa)\n- **Tratamento** → cefalosporina de 3ª geração sem esperar a cultura\n- **Albumina** 1,5 g/kg no D1 e 1 g/kg no D3 → previne síndrome hepatorrenal\n\nPeritonite secundária (perfuração):\n- Polimicrobiana, glicose < 50, proteína > 1 g/dL, LDH alto → TC\n\nProfilaxia de PBE:\n- Após o 1º episódio → norfloxacino/ciprofloxacino contínuo\n- HDA no cirrótico → ceftriaxona por 7 dias\n- Proteína ascítica baixa com disfunção hepática/renal\n\nTratamento da ascite:\n- Restrição de sódio + espironolactona ± furosemida (100:40)\n- Tensa/refratária → paracentese de alívio + albumina se > 5 L\n\nO que mais cai na UERJ:\n- Calcular o GASA no caso e apontar a causa.\n- PBE: PMN ≥ 250 basta; tratar antes da cultura; albumina associada.\n- Criança nefrótica com ascite e febre → peritonite pneumocócica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/CirrhosisWithAscitesMark.png/600px-CirrhosisWithAscitesMark.png",
+        "legenda": "USG: fígado cirrótico com ascite ao redor",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+      },
+      "fonte": "AASLD Practice Guidance 2021 (ascite, PBE e SHR) / EASL 2018",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asc-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Ascite — GASA e PBE",
+      "frente": "Qual a contagem de neutrófilos no líquido ascítico que define PBE?",
+      "resposta": "250",
+      "aceitas": [
+        "250/mm3",
+        ">= 250",
+        "250 celulas",
+        "250 neutrofilos",
+        "maior ou igual a 250"
+      ],
+      "verso": "**Neutrófilos ≥ 250/mm³.**\n\nDetalhes:\n- Cultura pode ser negativa.\n- Tratar já com cefalosporina de 3ª geração.",
+      "macete": "PBE = \"250 e trata\".",
+      "contexto": "**Ascite = líquido livre na cavidade peritoneal; a principal causa é a cirrose com hipertensão portal.**\n\nO que é:\n- Na cirrose → hipertensão portal + vasodilatação esplâncnica → retenção de sódio e água.\n- Clínica → aumento do volume abdominal, macicez móvel, piparote.\n\nParacentese diagnóstica:\n- **Indicação** → toda ascite nova e todo cirrótico com ascite internado ou que piorou\n- **Pedir** → albumina, proteína total, celularidade com diferencial, cultura (frasco de hemocultura)\n- Coagulopatia não contraindica\n\nGASA (albumina sérica − albumina do líquido):\n- **≥ 1,1 g/dL** → hipertensão portal (cirrose, IC, Budd-Chiari)\n- **< 1,1 g/dL** → peritoneal (carcinomatose, TB, pancreatite, síndrome nefrótica)\n- Proteína do líquido > 2,5 com GASA alto → cardíaca\n\nPBE:\n- Febre, dor, encefalopatia ou piora renal — pode ser assintomática\n- **Diagnóstico** → neutrófilos ≥ 250/mm³ (cultura pode ser negativa)\n- **Tratamento** → cefalosporina de 3ª geração sem esperar a cultura\n- **Albumina** 1,5 g/kg no D1 e 1 g/kg no D3 → previne síndrome hepatorrenal\n\nPeritonite secundária (perfuração):\n- Polimicrobiana, glicose < 50, proteína > 1 g/dL, LDH alto → TC\n\nProfilaxia de PBE:\n- Após o 1º episódio → norfloxacino/ciprofloxacino contínuo\n- HDA no cirrótico → ceftriaxona por 7 dias\n- Proteína ascítica baixa com disfunção hepática/renal\n\nTratamento da ascite:\n- Restrição de sódio + espironolactona ± furosemida (100:40)\n- Tensa/refratária → paracentese de alívio + albumina se > 5 L\n\nO que mais cai na UERJ:\n- Calcular o GASA no caso e apontar a causa.\n- PBE: PMN ≥ 250 basta; tratar antes da cultura; albumina associada.\n- Criança nefrótica com ascite e febre → peritonite pneumocócica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/CirrhosisWithAscitesMark.png/600px-CirrhosisWithAscitesMark.png",
+        "legenda": "USG: fígado cirrótico com ascite ao redor",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+      },
+      "fonte": "AASLD Practice Guidance 2021 (ascite, PBE e SHR) / EASL 2018",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asc-d3",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Ascite — GASA e PBE",
+      "frente": "O que se associa ao antibiótico na PBE para prevenir síndrome hepatorrenal?",
+      "resposta": "albumina",
+      "aceitas": [
+        "albumina ev",
+        "albumina humana"
+      ],
+      "verso": "**Albumina.**\n\nDose:\n- 1,5 g/kg no D1.\n- 1 g/kg no D3.",
+      "macete": "PBE = \"Cefalo + Albumina\" (C + A).",
+      "contexto": "**Ascite = líquido livre na cavidade peritoneal; a principal causa é a cirrose com hipertensão portal.**\n\nO que é:\n- Na cirrose → hipertensão portal + vasodilatação esplâncnica → retenção de sódio e água.\n- Clínica → aumento do volume abdominal, macicez móvel, piparote.\n\nParacentese diagnóstica:\n- **Indicação** → toda ascite nova e todo cirrótico com ascite internado ou que piorou\n- **Pedir** → albumina, proteína total, celularidade com diferencial, cultura (frasco de hemocultura)\n- Coagulopatia não contraindica\n\nGASA (albumina sérica − albumina do líquido):\n- **≥ 1,1 g/dL** → hipertensão portal (cirrose, IC, Budd-Chiari)\n- **< 1,1 g/dL** → peritoneal (carcinomatose, TB, pancreatite, síndrome nefrótica)\n- Proteína do líquido > 2,5 com GASA alto → cardíaca\n\nPBE:\n- Febre, dor, encefalopatia ou piora renal — pode ser assintomática\n- **Diagnóstico** → neutrófilos ≥ 250/mm³ (cultura pode ser negativa)\n- **Tratamento** → cefalosporina de 3ª geração sem esperar a cultura\n- **Albumina** 1,5 g/kg no D1 e 1 g/kg no D3 → previne síndrome hepatorrenal\n\nPeritonite secundária (perfuração):\n- Polimicrobiana, glicose < 50, proteína > 1 g/dL, LDH alto → TC\n\nProfilaxia de PBE:\n- Após o 1º episódio → norfloxacino/ciprofloxacino contínuo\n- HDA no cirrótico → ceftriaxona por 7 dias\n- Proteína ascítica baixa com disfunção hepática/renal\n\nTratamento da ascite:\n- Restrição de sódio + espironolactona ± furosemida (100:40)\n- Tensa/refratária → paracentese de alívio + albumina se > 5 L\n\nO que mais cai na UERJ:\n- Calcular o GASA no caso e apontar a causa.\n- PBE: PMN ≥ 250 basta; tratar antes da cultura; albumina associada.\n- Criança nefrótica com ascite e febre → peritonite pneumocócica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/CirrhosisWithAscitesMark.png/600px-CirrhosisWithAscitesMark.png",
+        "legenda": "USG: fígado cirrótico com ascite ao redor",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+      },
+      "fonte": "AASLD Practice Guidance 2021 (ascite, PBE e SHR) / EASL 2018",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tb-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Tuberculose",
+      "frente": "Qual o teste de escolha para diagnosticar TB pulmonar no Brasil?",
+      "resposta": "TRM-TB",
+      "aceitas": [
+        "teste rapido molecular",
+        "trm",
+        "xpert",
+        "genexpert",
+        "teste rapido molecular para tb"
+      ],
+      "verso": "**Teste rápido molecular (TRM-TB).**\n\nVantagens:\n- Resultado em ~2 h.\n- Detecta resistência à rifampicina.",
+      "macete": "TRM = \"Teste Rápido Manda\" no diagnóstico.",
+      "contexto": "**Tuberculose = infecção pelo M. tuberculosis, transmitida por aerossol; a forma pulmonar bacilífera mantém a cadeia de transmissão.**\n\nO que é:\n- Bacilo álcool-ácido resistente, transmitido pela fala, tosse e espirro do bacilífero.\n- Imunidade celular contém o bacilo (granuloma) → infecção latente.\n\nInfecção latente × doença:\n- **ILTB** → infectado, sem doença, não transmite\n- **TB ativa** → sintomas, imagem e/ou bacteriologia\n\nClínica:\n- Tosse ≥ 3 semanas, febre vespertina, sudorese noturna, emagrecimento\n- RX → cavitação em ápices/segmentos posteriores (ver imagem)\n- População vulnerável (rua, presídio, indígena, HIV) → tosse de qualquer duração\n\nDiagnóstico da doença:\n- **TRM-TB** → teste preferencial, detecta resistência à rifampicina\n- **Baciloscopia** → 2 amostras de escarro\n- **Cultura + TS** → retratamento, TRM com resistência, HIV, populações vulneráveis\n- **PT/IGRA** → servem para ILTB, não diagnosticam doença no adulto\n\nTratamento (≥ 10 anos):\n- **2RHZE/4RH** → 6 meses\n- **Meningite e osteoarticular** → 12 meses\n\nEfeitos adversos:\n- Hepatotoxicidade (H, R, Z) → suspender se transaminases > 3× com sintomas ou > 5×\n- Rifampicina → urina laranja, interações (anticoncepcional, TARV)\n- Isoniazida → neuropatia periférica (piridoxina)\n- Etambutol → neurite óptica; pirazinamida → hiperuricemia/artralgia\n\nTB e HIV:\n- Forma disseminada/extrapulmonar; baciloscopia e RX podem vir normais\n- LF-LAM urinário ajuda com CD4 baixo\n- TARV em até 2 semanas após o RIPE — adiar na TB meníngea\n\nContatos e ILTB:\n- Sintomático → investigar TB ativa\n- Assintomático → PT/IGRA; positivo com RX normal → tratar ILTB\n- Esquemas ILTB → 3HP, 4R, 6–9H\n- PVHIV com CD4 ≤ 350 → tratar ILTB sem PT\n\nO que mais cai na UERJ:\n- TB no HIV com BAAR/RX negativos e LAM positivo.\n- Diferencial TB × neoplasia pulmonar (cavidade de parede espessa > 15 mm sugere escamoso).\n- Avaliação de contatos e quando tratar ILTB.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tuberculosis-x-ray-1.jpg",
+        "legenda": "RX: TB pulmonar avançada com infiltrado bilateral e cavitação no ápice direito",
+        "fonte": "Wikimedia Commons · CDC (autor desconhecido) · Domínio público"
+      },
+      "fonte": "MS — Manual de Recomendações para o Controle da TB no Brasil (2ª ed., 2019) / Protocolo de Vigilância da ILTB (2022) / Fluxograma AIDS avançada (MS, 2026)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tb-d3",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Tuberculose",
+      "frente": "Qual o esquema básico de tratamento da TB no adulto?",
+      "resposta": "2RHZE/4RH",
+      "aceitas": [
+        "2rhze 4rh",
+        "ripe",
+        "2 rhze 4 rh",
+        "rhze por 2 meses e rh por 4 meses",
+        "ripe 2 meses e rh 4 meses"
+      ],
+      "verso": "**2RHZE/4RH (6 meses).**\n\nExceções:\n- Meningite e osteoarticular → 12 meses.\n- < 10 anos → sem etambutol.",
+      "macete": "RIPE: 2 meses com os 4, mais 4 meses com RH.",
+      "contexto": "**Tuberculose = infecção pelo M. tuberculosis, transmitida por aerossol; a forma pulmonar bacilífera mantém a cadeia de transmissão.**\n\nO que é:\n- Bacilo álcool-ácido resistente, transmitido pela fala, tosse e espirro do bacilífero.\n- Imunidade celular contém o bacilo (granuloma) → infecção latente.\n\nInfecção latente × doença:\n- **ILTB** → infectado, sem doença, não transmite\n- **TB ativa** → sintomas, imagem e/ou bacteriologia\n\nClínica:\n- Tosse ≥ 3 semanas, febre vespertina, sudorese noturna, emagrecimento\n- RX → cavitação em ápices/segmentos posteriores (ver imagem)\n- População vulnerável (rua, presídio, indígena, HIV) → tosse de qualquer duração\n\nDiagnóstico da doença:\n- **TRM-TB** → teste preferencial, detecta resistência à rifampicina\n- **Baciloscopia** → 2 amostras de escarro\n- **Cultura + TS** → retratamento, TRM com resistência, HIV, populações vulneráveis\n- **PT/IGRA** → servem para ILTB, não diagnosticam doença no adulto\n\nTratamento (≥ 10 anos):\n- **2RHZE/4RH** → 6 meses\n- **Meningite e osteoarticular** → 12 meses\n\nEfeitos adversos:\n- Hepatotoxicidade (H, R, Z) → suspender se transaminases > 3× com sintomas ou > 5×\n- Rifampicina → urina laranja, interações (anticoncepcional, TARV)\n- Isoniazida → neuropatia periférica (piridoxina)\n- Etambutol → neurite óptica; pirazinamida → hiperuricemia/artralgia\n\nTB e HIV:\n- Forma disseminada/extrapulmonar; baciloscopia e RX podem vir normais\n- LF-LAM urinário ajuda com CD4 baixo\n- TARV em até 2 semanas após o RIPE — adiar na TB meníngea\n\nContatos e ILTB:\n- Sintomático → investigar TB ativa\n- Assintomático → PT/IGRA; positivo com RX normal → tratar ILTB\n- Esquemas ILTB → 3HP, 4R, 6–9H\n- PVHIV com CD4 ≤ 350 → tratar ILTB sem PT\n\nO que mais cai na UERJ:\n- TB no HIV com BAAR/RX negativos e LAM positivo.\n- Diferencial TB × neoplasia pulmonar (cavidade de parede espessa > 15 mm sugere escamoso).\n- Avaliação de contatos e quando tratar ILTB.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tuberculosis-x-ray-1.jpg",
+        "legenda": "RX: TB pulmonar avançada com infiltrado bilateral e cavitação no ápice direito",
+        "fonte": "Wikimedia Commons · CDC (autor desconhecido) · Domínio público"
+      },
+      "fonte": "MS — Manual de Recomendações para o Controle da TB no Brasil (2ª ed., 2019) / Protocolo de Vigilância da ILTB (2022) / Fluxograma AIDS avançada (MS, 2026)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tb-d4",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Tuberculose",
+      "frente": "Qual tuberculostático deixa a urina alaranjada?",
+      "resposta": "rifampicina",
+      "aceitas": [
+        "rifampicina"
+      ],
+      "verso": "**Rifampicina.**\n\nTambém:\n- Indutor enzimático → reduz anticoncepcional e algumas TARV.\n- Hepatotóxica.",
+      "macete": "Rifampicina = \"Ruiva\": urina, lágrima e suor laranja.",
+      "contexto": "**Tuberculose = infecção pelo M. tuberculosis, transmitida por aerossol; a forma pulmonar bacilífera mantém a cadeia de transmissão.**\n\nO que é:\n- Bacilo álcool-ácido resistente, transmitido pela fala, tosse e espirro do bacilífero.\n- Imunidade celular contém o bacilo (granuloma) → infecção latente.\n\nInfecção latente × doença:\n- **ILTB** → infectado, sem doença, não transmite\n- **TB ativa** → sintomas, imagem e/ou bacteriologia\n\nClínica:\n- Tosse ≥ 3 semanas, febre vespertina, sudorese noturna, emagrecimento\n- RX → cavitação em ápices/segmentos posteriores (ver imagem)\n- População vulnerável (rua, presídio, indígena, HIV) → tosse de qualquer duração\n\nDiagnóstico da doença:\n- **TRM-TB** → teste preferencial, detecta resistência à rifampicina\n- **Baciloscopia** → 2 amostras de escarro\n- **Cultura + TS** → retratamento, TRM com resistência, HIV, populações vulneráveis\n- **PT/IGRA** → servem para ILTB, não diagnosticam doença no adulto\n\nTratamento (≥ 10 anos):\n- **2RHZE/4RH** → 6 meses\n- **Meningite e osteoarticular** → 12 meses\n\nEfeitos adversos:\n- Hepatotoxicidade (H, R, Z) → suspender se transaminases > 3× com sintomas ou > 5×\n- Rifampicina → urina laranja, interações (anticoncepcional, TARV)\n- Isoniazida → neuropatia periférica (piridoxina)\n- Etambutol → neurite óptica; pirazinamida → hiperuricemia/artralgia\n\nTB e HIV:\n- Forma disseminada/extrapulmonar; baciloscopia e RX podem vir normais\n- LF-LAM urinário ajuda com CD4 baixo\n- TARV em até 2 semanas após o RIPE — adiar na TB meníngea\n\nContatos e ILTB:\n- Sintomático → investigar TB ativa\n- Assintomático → PT/IGRA; positivo com RX normal → tratar ILTB\n- Esquemas ILTB → 3HP, 4R, 6–9H\n- PVHIV com CD4 ≤ 350 → tratar ILTB sem PT\n\nO que mais cai na UERJ:\n- TB no HIV com BAAR/RX negativos e LAM positivo.\n- Diferencial TB × neoplasia pulmonar (cavidade de parede espessa > 15 mm sugere escamoso).\n- Avaliação de contatos e quando tratar ILTB.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tuberculosis-x-ray-1.jpg",
+        "legenda": "RX: TB pulmonar avançada com infiltrado bilateral e cavitação no ápice direito",
+        "fonte": "Wikimedia Commons · CDC (autor desconhecido) · Domínio público"
+      },
+      "fonte": "MS — Manual de Recomendações para o Controle da TB no Brasil (2ª ed., 2019) / Protocolo de Vigilância da ILTB (2022) / Fluxograma AIDS avançada (MS, 2026)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-inf-d1",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Infectologia pediátrica",
+      "sub": "Tuberculose na infância",
+      "frente": "Qual o escore do MS que fecha TB muito provável na criança?",
+      "resposta": "40 pontos",
+      "aceitas": [
+        "40",
+        ">= 40",
+        "maior ou igual a 40",
+        "40 ou mais"
+      ],
+      "verso": "**≥ 40 pontos.**\n\nFaixas:\n- 30–35 → possível (pode tratar).\n- ≤ 25 → pouco provável.",
+      "macete": "\"40 = sem dúvida, trata\".",
+      "contexto": "**TB na criança é paucibacilar: o diagnóstico geralmente é clínico-radiológico, pelo sistema de pontuação do MS, e quase sempre há um adulto bacilífero em casa.**\n\nO que é:\n- Criança raramente transmite → o caso índice é o adulto da casa.\n- Formas mais graves (miliar, meníngea) nos menores de 2 anos sem BCG.\n\nDiferenças da criança:\n- **Bacteriologia** → quase sempre negativa\n- **Diagnóstico < 10 anos** → sistema de pontuação (≥ 40 = muito provável)\n- **Forma extrapulmonar mais comum** → ganglionar periférica\n\nSistema de pontuação (itens):\n- Clínica (febre, tosse, emagrecimento > 2 semanas)\n- RX sugestivo\n- Contato com adulto com TB nos últimos 2 anos\n- PT (≥ 10 mm, ou ≥ 5 mm se não vacinado/BCG há > 2 anos/imunossuprimido)\n- Desnutrição grave\n\nProva tuberculínica:\n- Intradérmica no antebraço, leitura em 48–72 h (ver imagem)\n- Mede o maior diâmetro do endurado\n\nTratamento:\n- **< 10 anos** → RHZ (sem etambutol — risco de neurite óptica não relatada)\n- **TB não grave (3 meses a < 16 anos)** → esquema encurtado de 4 meses\n- **Grave** → 6 meses\n- **Meningite/osteoarticular** → 12 meses\n\nContatos:\n- **PT ≥ 5 mm ou IGRA reagente** (independe da BCG) → excluir doença e tratar ILTB\n- ILTB na criança → rifampicina 4 meses preferencial\n\nRN de mãe bacilífera:\n- Não vacinar BCG ao nascer\n- Profilaxia primária 3 meses → fazer PT\n- PT < 5 mm → suspender e vacinar BCG\n- PT ≥ 5 mm → completar ILTB\n\nO que mais cai na UERJ:\n- Somar o escore de pontuação em caso clínico.\n- Esquema pela idade (etambutol só ≥ 10 anos).\n- Conduta no RN de mãe bacilífera.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Mantoux_tuberculin_skin_test.jpg/600px-Mantoux_tuberculin_skin_test.jpg",
+        "legenda": "Aplicação da prova tuberculínica (Mantoux): injeção intradérmica no antebraço",
+        "fonte": "Wikimedia Commons · Greg Knobloch / CDC · Domínio público"
+      },
+      "fonte": "Doc. Científico SBP — Tuberculose na infância no Brasil: atualização (2026) / MS — Manual de Recomendações (2019) e Notas Informativas 2024",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-inf-d2",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Infectologia pediátrica",
+      "sub": "Tuberculose na infância",
+      "frente": "Até que idade o esquema da TB na criança não usa etambutol?",
+      "resposta": "10 anos",
+      "aceitas": [
+        "menor de 10 anos",
+        "abaixo de 10 anos",
+        "10",
+        "< 10 anos"
+      ],
+      "verso": "**< 10 anos (RHZ).**\n\nPor quê:\n- Risco de neurite óptica em quem não relata alteração visual.\n- ≥ 10 anos → RIPE como o adulto.",
+      "macete": "Abaixo de 10 \"não vê\" → sem Etambutol (olho).",
+      "contexto": "**TB na criança é paucibacilar: o diagnóstico geralmente é clínico-radiológico, pelo sistema de pontuação do MS, e quase sempre há um adulto bacilífero em casa.**\n\nO que é:\n- Criança raramente transmite → o caso índice é o adulto da casa.\n- Formas mais graves (miliar, meníngea) nos menores de 2 anos sem BCG.\n\nDiferenças da criança:\n- **Bacteriologia** → quase sempre negativa\n- **Diagnóstico < 10 anos** → sistema de pontuação (≥ 40 = muito provável)\n- **Forma extrapulmonar mais comum** → ganglionar periférica\n\nSistema de pontuação (itens):\n- Clínica (febre, tosse, emagrecimento > 2 semanas)\n- RX sugestivo\n- Contato com adulto com TB nos últimos 2 anos\n- PT (≥ 10 mm, ou ≥ 5 mm se não vacinado/BCG há > 2 anos/imunossuprimido)\n- Desnutrição grave\n\nProva tuberculínica:\n- Intradérmica no antebraço, leitura em 48–72 h (ver imagem)\n- Mede o maior diâmetro do endurado\n\nTratamento:\n- **< 10 anos** → RHZ (sem etambutol — risco de neurite óptica não relatada)\n- **TB não grave (3 meses a < 16 anos)** → esquema encurtado de 4 meses\n- **Grave** → 6 meses\n- **Meningite/osteoarticular** → 12 meses\n\nContatos:\n- **PT ≥ 5 mm ou IGRA reagente** (independe da BCG) → excluir doença e tratar ILTB\n- ILTB na criança → rifampicina 4 meses preferencial\n\nRN de mãe bacilífera:\n- Não vacinar BCG ao nascer\n- Profilaxia primária 3 meses → fazer PT\n- PT < 5 mm → suspender e vacinar BCG\n- PT ≥ 5 mm → completar ILTB\n\nO que mais cai na UERJ:\n- Somar o escore de pontuação em caso clínico.\n- Esquema pela idade (etambutol só ≥ 10 anos).\n- Conduta no RN de mãe bacilífera.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Mantoux_tuberculin_skin_test.jpg/600px-Mantoux_tuberculin_skin_test.jpg",
+        "legenda": "Aplicação da prova tuberculínica (Mantoux): injeção intradérmica no antebraço",
+        "fonte": "Wikimedia Commons · Greg Knobloch / CDC · Domínio público"
+      },
+      "fonte": "Doc. Científico SBP — Tuberculose na infância no Brasil: atualização (2026) / MS — Manual de Recomendações (2019) e Notas Informativas 2024",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tbi-inf-d3",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Infectologia pediátrica",
+      "sub": "Tuberculose na infância",
+      "frente": "Qual a conduta com a BCG no RN de mãe bacilífera?",
+      "resposta": "não vacinar",
+      "aceitas": [
+        "nao vacinar ao nascer",
+        "adiar a bcg",
+        "nao vacinar",
+        "adiar bcg"
+      ],
+      "verso": "**Não vacinar ao nascer.**\n\nSequência:\n- Profilaxia primária por 3 meses.\n- PT < 5 mm → suspender e vacinar BCG.\n- PT ≥ 5 mm → completar tratamento de ILTB.",
+      "macete": "Mãe bacilífera: \"primeiro protege com remédio, depois vacina\".",
+      "contexto": "**TB na criança é paucibacilar: o diagnóstico geralmente é clínico-radiológico, pelo sistema de pontuação do MS, e quase sempre há um adulto bacilífero em casa.**\n\nO que é:\n- Criança raramente transmite → o caso índice é o adulto da casa.\n- Formas mais graves (miliar, meníngea) nos menores de 2 anos sem BCG.\n\nDiferenças da criança:\n- **Bacteriologia** → quase sempre negativa\n- **Diagnóstico < 10 anos** → sistema de pontuação (≥ 40 = muito provável)\n- **Forma extrapulmonar mais comum** → ganglionar periférica\n\nSistema de pontuação (itens):\n- Clínica (febre, tosse, emagrecimento > 2 semanas)\n- RX sugestivo\n- Contato com adulto com TB nos últimos 2 anos\n- PT (≥ 10 mm, ou ≥ 5 mm se não vacinado/BCG há > 2 anos/imunossuprimido)\n- Desnutrição grave\n\nProva tuberculínica:\n- Intradérmica no antebraço, leitura em 48–72 h (ver imagem)\n- Mede o maior diâmetro do endurado\n\nTratamento:\n- **< 10 anos** → RHZ (sem etambutol — risco de neurite óptica não relatada)\n- **TB não grave (3 meses a < 16 anos)** → esquema encurtado de 4 meses\n- **Grave** → 6 meses\n- **Meningite/osteoarticular** → 12 meses\n\nContatos:\n- **PT ≥ 5 mm ou IGRA reagente** (independe da BCG) → excluir doença e tratar ILTB\n- ILTB na criança → rifampicina 4 meses preferencial\n\nRN de mãe bacilífera:\n- Não vacinar BCG ao nascer\n- Profilaxia primária 3 meses → fazer PT\n- PT < 5 mm → suspender e vacinar BCG\n- PT ≥ 5 mm → completar ILTB\n\nO que mais cai na UERJ:\n- Somar o escore de pontuação em caso clínico.\n- Esquema pela idade (etambutol só ≥ 10 anos).\n- Conduta no RN de mãe bacilífera.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Mantoux_tuberculin_skin_test.jpg/600px-Mantoux_tuberculin_skin_test.jpg",
+        "legenda": "Aplicação da prova tuberculínica (Mantoux): injeção intradérmica no antebraço",
+        "fonte": "Wikimedia Commons · Greg Knobloch / CDC · Domínio público"
+      },
+      "fonte": "Doc. Científico SBP — Tuberculose na infância no Brasil: atualização (2026) / MS — Manual de Recomendações (2019) e Notas Informativas 2024",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asmi-d1",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Qual dispositivo inalatório é o de escolha na criança pequena?",
+      "resposta": "spray com espaçador",
+      "aceitas": [
+        "espacador",
+        "aerossol dosimetrado com espacador",
+        "bombinha com espacador",
+        "spray com espacador e mascara",
+        "espacador com mascara"
+      ],
+      "verso": "**Spray dosimetrado com espaçador.**\n\nDetalhe:\n- < 3–4 anos → espaçador com máscara.\n- Nebulizador não é melhor na crise.",
+      "macete": "Criança: \"bombinha + espaçador sempre\".",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\nO que é:\n- Inflamação crônica da via aérea com obstrução variável e reversível.\n- Gatilhos → vírus, alérgenos, fumaça (tabagismo passivo), exercício, frio.\n\nClínica:\n- Sibilância, tosse noturna, dispneia e aperto no peito recorrentes\n- Piora à noite/madrugada e com gatilhos; atopia pessoal/familiar\n\nDiagnóstico:\n- **≤ 5 anos** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **≥ 6 anos** → espirometria com obstrução reversível ao broncodilatador\n\nControle (últimas 4 semanas):\n- Sintomas diurnos > 2×/semana\n- Despertar noturno\n- Resgate > 2×/semana\n- Limitação de atividade\n\nTratamento de manutenção:\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **6–11 anos** → CI dose baixa; etapa 3 → CI + LABA, CI dose média ou MART em dose muito baixa\n- **≥ 12 anos** → igual ao adulto (CI-formoterol como alívio preferido)\n- Nunca LABA sem corticoide inalatório; SABA isolado não é mais recomendado (≥ 12 anos)\n\nAntes de subir etapa:\n- Técnica inalatória, adesão, exposição, comorbidades (rinite, obesidade, DRGE)\n\nDispositivo:\n- Spray com espaçador (máscara se < 3–4 anos) — ver imagem\n\nCrise:\n- Salbutamol spray com espaçador a cada 20 min na 1ª hora\n- Prednisolona 1–2 mg/kg (máx. 40 mg) por 3–5 dias\n- O₂ para SpO₂ 94–98%\n\nAsma e outras situações:\n- Gestante → tratar igual (budesonida é o CI mais estudado); asma não controlada faz mais mal\n- Betabloqueador → evitar não seletivo (propranolol, carvedilol); se preciso, cardiosseletivo\n\nO que mais cai na UERJ:\n- Asma não controlada: checar técnica/adesão e qual a próxima etapa para a idade.\n- Betabloqueador no asmático e individualizar pela adesão/tolerabilidade.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      },
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asmi-d2",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Qual a base do tratamento de controle da asma na criança?",
+      "resposta": "corticoide inalatório",
+      "aceitas": [
+        "ci",
+        "corticoide inalatorio diario",
+        "budesonida",
+        "corticoesteroide inalatorio",
+        "ci diario"
+      ],
+      "verso": "**Corticoide inalatório.**\n\nDetalhe:\n- ≤ 5 anos → diário se sintomas frequentes ou crise grave no ano.\n- Nunca LABA sem corticoide.",
+      "macete": "Asma é inflamação: \"o corticoide inalado apaga o fogo\".",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\nO que é:\n- Inflamação crônica da via aérea com obstrução variável e reversível.\n- Gatilhos → vírus, alérgenos, fumaça (tabagismo passivo), exercício, frio.\n\nClínica:\n- Sibilância, tosse noturna, dispneia e aperto no peito recorrentes\n- Piora à noite/madrugada e com gatilhos; atopia pessoal/familiar\n\nDiagnóstico:\n- **≤ 5 anos** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **≥ 6 anos** → espirometria com obstrução reversível ao broncodilatador\n\nControle (últimas 4 semanas):\n- Sintomas diurnos > 2×/semana\n- Despertar noturno\n- Resgate > 2×/semana\n- Limitação de atividade\n\nTratamento de manutenção:\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **6–11 anos** → CI dose baixa; etapa 3 → CI + LABA, CI dose média ou MART em dose muito baixa\n- **≥ 12 anos** → igual ao adulto (CI-formoterol como alívio preferido)\n- Nunca LABA sem corticoide inalatório; SABA isolado não é mais recomendado (≥ 12 anos)\n\nAntes de subir etapa:\n- Técnica inalatória, adesão, exposição, comorbidades (rinite, obesidade, DRGE)\n\nDispositivo:\n- Spray com espaçador (máscara se < 3–4 anos) — ver imagem\n\nCrise:\n- Salbutamol spray com espaçador a cada 20 min na 1ª hora\n- Prednisolona 1–2 mg/kg (máx. 40 mg) por 3–5 dias\n- O₂ para SpO₂ 94–98%\n\nAsma e outras situações:\n- Gestante → tratar igual (budesonida é o CI mais estudado); asma não controlada faz mais mal\n- Betabloqueador → evitar não seletivo (propranolol, carvedilol); se preciso, cardiosseletivo\n\nO que mais cai na UERJ:\n- Asma não controlada: checar técnica/adesão e qual a próxima etapa para a idade.\n- Betabloqueador no asmático e individualizar pela adesão/tolerabilidade.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      },
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "asmi-d3",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Pneumologia pediátrica",
+      "sub": "Asma na infância",
+      "frente": "Qual a primeira coisa a checar antes de subir a etapa da asma?",
+      "resposta": "técnica inalatória",
+      "aceitas": [
+        "tecnica inalatoria",
+        "tecnica e adesao",
+        "adesao",
+        "tecnica inalatoria e adesao"
+      ],
+      "verso": "**Técnica inalatória (e adesão).**\n\nDepois:\n- Exposição (tabagismo passivo, alérgenos).\n- Comorbidades (rinite, obesidade, DRGE).",
+      "macete": "\"Antes de subir o remédio, olhe a bombinha\".",
+      "contexto": "**Asma é a doença crônica mais comum da infância; o tratamento muda conforme a faixa etária: ≤ 5 anos, 6–11 anos e ≥ 12 anos.**\n\nO que é:\n- Inflamação crônica da via aérea com obstrução variável e reversível.\n- Gatilhos → vírus, alérgenos, fumaça (tabagismo passivo), exercício, frio.\n\nClínica:\n- Sibilância, tosse noturna, dispneia e aperto no peito recorrentes\n- Piora à noite/madrugada e com gatilhos; atopia pessoal/familiar\n\nDiagnóstico:\n- **≤ 5 anos** → sibilância recorrente + sem outra causa + resposta ao tratamento (os 3)\n- **≥ 6 anos** → espirometria com obstrução reversível ao broncodilatador\n\nControle (últimas 4 semanas):\n- Sintomas diurnos > 2×/semana\n- Despertar noturno\n- Resgate > 2×/semana\n- Limitação de atividade\n\nTratamento de manutenção:\n- **≤ 5 anos** → corticoide inalatório diário se sintomas frequentes ou crise grave no último ano\n- **6–11 anos** → CI dose baixa; etapa 3 → CI + LABA, CI dose média ou MART em dose muito baixa\n- **≥ 12 anos** → igual ao adulto (CI-formoterol como alívio preferido)\n- Nunca LABA sem corticoide inalatório; SABA isolado não é mais recomendado (≥ 12 anos)\n\nAntes de subir etapa:\n- Técnica inalatória, adesão, exposição, comorbidades (rinite, obesidade, DRGE)\n\nDispositivo:\n- Spray com espaçador (máscara se < 3–4 anos) — ver imagem\n\nCrise:\n- Salbutamol spray com espaçador a cada 20 min na 1ª hora\n- Prednisolona 1–2 mg/kg (máx. 40 mg) por 3–5 dias\n- O₂ para SpO₂ 94–98%\n\nAsma e outras situações:\n- Gestante → tratar igual (budesonida é o CI mais estudado); asma não controlada faz mais mal\n- Betabloqueador → evitar não seletivo (propranolol, carvedilol); se preciso, cardiosseletivo\n\nO que mais cai na UERJ:\n- Asma não controlada: checar técnica/adesão e qual a próxima etapa para a idade.\n- Betabloqueador no asmático e individualizar pela adesão/tolerabilidade.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
+        "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
+        "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
+      },
+      "fonte": "GINA 2025 (Global Initiative for Asthma) / Recomendações SBPT para o manejo da asma (2020)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "Qual o agente clássico da SHU típica?",
+      "resposta": "E. coli O157:H7",
+      "aceitas": [
+        "e coli",
+        "escherichia coli",
+        "e coli o157",
+        "stec",
+        "e coli produtora de shiga",
+        "ehec",
+        "o157 h7",
+        "shigella"
+      ],
+      "verso": "**E. coli produtora de toxina Shiga (O157:H7).**\n\nTambém:\n- Shigella.\n- Criança < 5 anos após diarreia com sangue.",
+      "macete": "SHU = \"Shiga Hemolisa e Uremia\".",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nO que é:\n- Microtrombos de plaquetas fragmentam as hemácias (esquizócitos — ver imagem).\n- O órgão-alvo define a doença: rim (SHU) ou cérebro (PTT).\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos; principal causa de IRA na infância\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia, recorrente\n- Tratamento → eculizumabe\n\nSHU por pneumococo:\n- Neuraminidase expõe o antígeno T → Coombs POSITIVO (exceção)\n\nPTT:\n- Deficiência de ADAMTS13 (< 10%), adulto jovem, mulher\n- Pêntade → MAT + plaquetopenia + febre + alteração neurológica + rim (leve)\n- Tratamento → plasmaférese urgente (+ corticoide, caplacizumabe)\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n- Coagulograma normal (diferencia de CIVD)\n\nTratamento da SHU típica:\n- Suporte → hidratação, controle de eletrólitos e PA, diálise se preciso\n- Antibiótico e antidiarreico na diarreia por EHEC AUMENTAM o risco\n- Plaquetas só se sangramento ou procedimento\n\nO que mais cai na UERJ:\n- Achado NÃO compatível: Coombs positivo (só no pneumococo).\n- Caso pós-diarreia com anemia, plaquetopenia e IRA → suporte, sem antibiótico.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "Antibiótico na diarreia por E. coli O157:H7 aumenta ou diminui o risco de SHU?",
+      "resposta": "aumenta",
+      "aceitas": [
+        "aumenta o risco"
+      ],
+      "verso": "**Aumenta.**\n\nPor quê:\n- Mais liberação de toxina Shiga.\n- Antidiarreico também aumenta.",
+      "macete": "EHEC: \"não mexe, que piora\".",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nO que é:\n- Microtrombos de plaquetas fragmentam as hemácias (esquizócitos — ver imagem).\n- O órgão-alvo define a doença: rim (SHU) ou cérebro (PTT).\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos; principal causa de IRA na infância\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia, recorrente\n- Tratamento → eculizumabe\n\nSHU por pneumococo:\n- Neuraminidase expõe o antígeno T → Coombs POSITIVO (exceção)\n\nPTT:\n- Deficiência de ADAMTS13 (< 10%), adulto jovem, mulher\n- Pêntade → MAT + plaquetopenia + febre + alteração neurológica + rim (leve)\n- Tratamento → plasmaférese urgente (+ corticoide, caplacizumabe)\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n- Coagulograma normal (diferencia de CIVD)\n\nTratamento da SHU típica:\n- Suporte → hidratação, controle de eletrólitos e PA, diálise se preciso\n- Antibiótico e antidiarreico na diarreia por EHEC AUMENTAM o risco\n- Plaquetas só se sangramento ou procedimento\n\nO que mais cai na UERJ:\n- Achado NÃO compatível: Coombs positivo (só no pneumococo).\n- Caso pós-diarreia com anemia, plaquetopenia e IRA → suporte, sem antibiótico.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-d3",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "Qual o resultado do Coombs direto na SHU típica?",
+      "resposta": "negativo",
+      "aceitas": [
+        "coombs negativo"
+      ],
+      "verso": "**Negativo.**\n\nExceção:\n- SHU por pneumococo → Coombs positivo.\n- Esquizócitos no sangue periférico.",
+      "macete": "SHU = hemólise \"mecânica\" (microangiopatia), não imune.",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nO que é:\n- Microtrombos de plaquetas fragmentam as hemácias (esquizócitos — ver imagem).\n- O órgão-alvo define a doença: rim (SHU) ou cérebro (PTT).\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos; principal causa de IRA na infância\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia, recorrente\n- Tratamento → eculizumabe\n\nSHU por pneumococo:\n- Neuraminidase expõe o antígeno T → Coombs POSITIVO (exceção)\n\nPTT:\n- Deficiência de ADAMTS13 (< 10%), adulto jovem, mulher\n- Pêntade → MAT + plaquetopenia + febre + alteração neurológica + rim (leve)\n- Tratamento → plasmaférese urgente (+ corticoide, caplacizumabe)\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n- Coagulograma normal (diferencia de CIVD)\n\nTratamento da SHU típica:\n- Suporte → hidratação, controle de eletrólitos e PA, diálise se preciso\n- Antibiótico e antidiarreico na diarreia por EHEC AUMENTAM o risco\n- Plaquetas só se sangramento ou procedimento\n\nO que mais cai na UERJ:\n- Achado NÃO compatível: Coombs positivo (só no pneumococo).\n- Caso pós-diarreia com anemia, plaquetopenia e IRA → suporte, sem antibiótico.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Quais os 2 sinais que a pêntade de Reynolds acrescenta à tríade de Charcot?",
+      "resposta": "hipotensão e confusão mental",
+      "aceitas": [
+        "hipotensao e confusao",
+        "confusao mental e hipotensao",
+        "choque e confusao",
+        "hipotensao e alteracao do nivel de consciencia",
+        "confusao e hipotensao"
+      ],
+      "verso": "**Hipotensão e confusão mental.**\n\nSignificado:\n- Colangite grave (tóxica).\n- Drenagem biliar urgente.",
+      "macete": "Reynolds: \"R de Rebaixa\" (consciência) e PA baixa.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nO que é:\n- Obstrução + bactéria na bile → aumento da pressão biliar → bacteremia.\n- Germes → Gram-negativos entéricos (E. coli, Klebsiella), enterococo, anaeróbios.\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave/tóxica)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, FA/GGT e bilirrubina altas)\n- **C** → imagem com dilatação da via biliar ou causa (USG, colangio-RM)\n\nGravidade e drenagem:\n- **Grave** (disfunção orgânica) → drenagem urgente\n- **Moderada** → drenagem precoce (24–48 h)\n- **Leve** → antibiótico e drenagem eletiva\n\nTratamento:\n- Hemoculturas + antibiótico (Gram-negativos e anaeróbios)\n- **Drenagem → CPRE com papilotomia** (via preferencial — ver imagem)\n- CPTH (percutânea) → só se CPRE falhar/indisponível\n- Depois → colecistectomia na mesma internação\n\nColangite × colecistite:\n- Colangite → icterícia importante, via biliar dilatada, bilirrubina/FA muito altas\n- Colecistite → Murphy, vesícula espessada, sem icterícia importante (exceto Mirizzi)\n\nO que mais cai na UERJ:\n- Reconhecer Charcot/Reynolds e indicar CPRE (não drenagem percutânea).\n- Tríades epônimas trocadas entre si (Charcot × Beck × Cushing).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-d3",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Qual o método preferencial de drenagem biliar na colangite por coledocolitíase?",
+      "resposta": "CPRE",
+      "aceitas": [
+        "cpre com papilotomia",
+        "colangiopancreatografia retrograda endoscopica",
+        "papilotomia endoscopica"
+      ],
+      "verso": "**CPRE com papilotomia.**\n\nAlternativa:\n- CPTH (percutânea) → se CPRE falhar ou indisponível.",
+      "macete": "Colangite = \"Charcot pede CPRE\".",
+      "pegadinha": "Drenagem percutânea como 1ª escolha é a errada.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nO que é:\n- Obstrução + bactéria na bile → aumento da pressão biliar → bacteremia.\n- Germes → Gram-negativos entéricos (E. coli, Klebsiella), enterococo, anaeróbios.\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave/tóxica)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, FA/GGT e bilirrubina altas)\n- **C** → imagem com dilatação da via biliar ou causa (USG, colangio-RM)\n\nGravidade e drenagem:\n- **Grave** (disfunção orgânica) → drenagem urgente\n- **Moderada** → drenagem precoce (24–48 h)\n- **Leve** → antibiótico e drenagem eletiva\n\nTratamento:\n- Hemoculturas + antibiótico (Gram-negativos e anaeróbios)\n- **Drenagem → CPRE com papilotomia** (via preferencial — ver imagem)\n- CPTH (percutânea) → só se CPRE falhar/indisponível\n- Depois → colecistectomia na mesma internação\n\nColangite × colecistite:\n- Colangite → icterícia importante, via biliar dilatada, bilirrubina/FA muito altas\n- Colecistite → Murphy, vesícula espessada, sem icterícia importante (exceto Mirizzi)\n\nO que mais cai na UERJ:\n- Reconhecer Charcot/Reynolds e indicar CPRE (não drenagem percutânea).\n- Tríades epônimas trocadas entre si (Charcot × Beck × Cushing).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Como se chama a tríade hipotensão + turgência jugular + abafamento de bulhas?",
+      "resposta": "tríade de Beck",
+      "aceitas": [
+        "beck",
+        "triade de beck"
+      ],
+      "verso": "**Tríade de Beck (tamponamento cardíaco).**\n\nItens:\n- Hipotensão\n- Turgência jugular\n- Abafamento de bulhas\n\nOutras tríades:\n- Charcot → colangite.\n- Cushing → hipertensão intracraniana.",
+      "macete": "Beck = 3 B: Baixa PA, Bulhas abafadas, \"Bochecha\" do pescoço cheia (jugular).",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nPericardite aguda (porta de entrada):\n- Causas → viral/idiopática (principal), pós-IAM, uremia, TB, neoplasia, autoimune\n- Diagnóstico (2 de 4) → dor pleurítica que melhora inclinado para frente, atrito, supra de ST difuso com infra de PR, derrame\n- Tratamento → AINE/AAS + colchicina por 3 meses\n\nTamponamento:\n- Líquido que comprime as câmaras (velocidade importa mais que volume)\n- Causas → neoplasia (pulmão, mama, linfoma), trauma, pós-cirurgia, uremia\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal** → queda da PAS > 10 mmHg na inspiração\n- ECG → baixa voltagem e alternância elétrica\n- Eco → derrame com colapso diastólico do VD/AD (ver imagem)\n\nConduta no tamponamento:\n- Pericardiocentese de urgência (subxifoide)\n- Volume como ponte\n- Proibido diurético e vasodilatador\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- Clínica de IC direita (ascite, edema, hepatomegalia) com pulmão limpo\n- **Sinal de Kussmaul** → turgência jugular que AUMENTA na inspiração\n- **Knock pericárdico** → ruído protodiastólico\n- **Sinal de Broadbent** → retração sistólica da parede\n- Diagnóstico → calcificação no RX/TC, espessamento pericárdico\n- Tratamento → pericardiectomia\n\nO que mais cai na UERJ:\n- Pulso paradoxal = tamponamento; Kussmaul = constritiva (a banca troca).\n- Tamponamento neoplásico confundido com TEP pela dispneia.\n- Tríade de Beck × outras tríades epônimas.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Qual sinal é a queda da PAS > 10 mmHg na inspiração?",
+      "resposta": "pulso paradoxal",
+      "aceitas": [
+        "paradoxal"
+      ],
+      "verso": "**Pulso paradoxal.**\n\nNa prática:\n- Típico do tamponamento.\n- Kussmaul (jugular sobe na inspiração) → pericardite constritiva.",
+      "macete": "Paradoxal = tamPONAmento; Kussmaul = Konstritiva.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nPericardite aguda (porta de entrada):\n- Causas → viral/idiopática (principal), pós-IAM, uremia, TB, neoplasia, autoimune\n- Diagnóstico (2 de 4) → dor pleurítica que melhora inclinado para frente, atrito, supra de ST difuso com infra de PR, derrame\n- Tratamento → AINE/AAS + colchicina por 3 meses\n\nTamponamento:\n- Líquido que comprime as câmaras (velocidade importa mais que volume)\n- Causas → neoplasia (pulmão, mama, linfoma), trauma, pós-cirurgia, uremia\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal** → queda da PAS > 10 mmHg na inspiração\n- ECG → baixa voltagem e alternância elétrica\n- Eco → derrame com colapso diastólico do VD/AD (ver imagem)\n\nConduta no tamponamento:\n- Pericardiocentese de urgência (subxifoide)\n- Volume como ponte\n- Proibido diurético e vasodilatador\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- Clínica de IC direita (ascite, edema, hepatomegalia) com pulmão limpo\n- **Sinal de Kussmaul** → turgência jugular que AUMENTA na inspiração\n- **Knock pericárdico** → ruído protodiastólico\n- **Sinal de Broadbent** → retração sistólica da parede\n- Diagnóstico → calcificação no RX/TC, espessamento pericárdico\n- Tratamento → pericardiectomia\n\nO que mais cai na UERJ:\n- Pulso paradoxal = tamponamento; Kussmaul = constritiva (a banca troca).\n- Tamponamento neoplásico confundido com TEP pela dispneia.\n- Tríade de Beck × outras tríades epônimas.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-d3",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Qual o tratamento da pericardite constritiva?",
+      "resposta": "pericardiectomia",
+      "aceitas": [
+        "pericardiectomia"
+      ],
+      "verso": "**Pericardiectomia.**\n\nCausas:\n- TB, pós-cirurgia cardíaca, radioterapia, idiopática.\n- Tamponamento → pericardiocentese.",
+      "macete": "Casca dura → \"tira a casca\".",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nPericardite aguda (porta de entrada):\n- Causas → viral/idiopática (principal), pós-IAM, uremia, TB, neoplasia, autoimune\n- Diagnóstico (2 de 4) → dor pleurítica que melhora inclinado para frente, atrito, supra de ST difuso com infra de PR, derrame\n- Tratamento → AINE/AAS + colchicina por 3 meses\n\nTamponamento:\n- Líquido que comprime as câmaras (velocidade importa mais que volume)\n- Causas → neoplasia (pulmão, mama, linfoma), trauma, pós-cirurgia, uremia\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal** → queda da PAS > 10 mmHg na inspiração\n- ECG → baixa voltagem e alternância elétrica\n- Eco → derrame com colapso diastólico do VD/AD (ver imagem)\n\nConduta no tamponamento:\n- Pericardiocentese de urgência (subxifoide)\n- Volume como ponte\n- Proibido diurético e vasodilatador\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- Clínica de IC direita (ascite, edema, hepatomegalia) com pulmão limpo\n- **Sinal de Kussmaul** → turgência jugular que AUMENTA na inspiração\n- **Knock pericárdico** → ruído protodiastólico\n- **Sinal de Broadbent** → retração sistólica da parede\n- Diagnóstico → calcificação no RX/TC, espessamento pericárdico\n- Tratamento → pericardiectomia\n\nO que mais cai na UERJ:\n- Pulso paradoxal = tamponamento; Kussmaul = constritiva (a banca troca).\n- Tamponamento neoplásico confundido com TEP pela dispneia.\n- Tríade de Beck × outras tríades epônimas.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Qual o sinal de vesícula palpável e indolor com icterícia?",
+      "resposta": "Courvoisier",
+      "aceitas": [
+        "courvoisier-terrier",
+        "sinal de courvoisier",
+        "courvoisier terrier",
+        "sinal de courvoisier-terrier"
+      ],
+      "verso": "**Sinal de Courvoisier-Terrier.**\n\nSugere:\n- Obstrução maligna distal (cabeça de pâncreas, periampular).",
+      "macete": "Courvoisier = vesícula \"Cheia e Calma\" (indolor) → câncer.",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nCorpo/cauda:\n- Sem icterícia → dor e emagrecimento, diagnóstico mais tardio\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- Achado → lesão hipoatenuante/hipovascular (ver imagem)\n- Eco-endoscopia com punção → biópsia quando necessária\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nRessecabilidade (TC):\n- **Ressecável** → sem contato arterial e veia porta/mesentérica superior livre\n- **Borderline** → contato limitado → neoadjuvância\n- **Irressecável** → envolvimento do tronco celíaco/AMS > 180° ou metástase\n\nTratamento:\n- Cabeça ressecável → duodenopancreatectomia (Whipple) + quimioterapia adjuvante (FOLFIRINOX)\n- Corpo/cauda → pancreatectomia distal + esplenectomia\n- Paliativo → prótese biliar endoscópica, quimioterapia, analgesia (neurólise do plexo celíaco)\n\nO que mais cai na UERJ:\n- Idoso tabagista com icterícia indolor + Courvoisier.\n- TC: lesão hipoatenuante na cabeça.\n- Tabagismo como principal fator de risco.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Qual o principal fator de risco modificável do câncer de pâncreas?",
+      "resposta": "tabagismo",
+      "aceitas": [
+        "fumo",
+        "cigarro"
+      ],
+      "verso": "**Tabagismo.**\n\nOutros:\n- Obesidade, pancreatite crônica, DM de início recente após 50 anos.",
+      "macete": "Pâncreas também \"fuma e morre\".",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nCorpo/cauda:\n- Sem icterícia → dor e emagrecimento, diagnóstico mais tardio\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- Achado → lesão hipoatenuante/hipovascular (ver imagem)\n- Eco-endoscopia com punção → biópsia quando necessária\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nRessecabilidade (TC):\n- **Ressecável** → sem contato arterial e veia porta/mesentérica superior livre\n- **Borderline** → contato limitado → neoadjuvância\n- **Irressecável** → envolvimento do tronco celíaco/AMS > 180° ou metástase\n\nTratamento:\n- Cabeça ressecável → duodenopancreatectomia (Whipple) + quimioterapia adjuvante (FOLFIRINOX)\n- Corpo/cauda → pancreatectomia distal + esplenectomia\n- Paliativo → prótese biliar endoscópica, quimioterapia, analgesia (neurólise do plexo celíaco)\n\nO que mais cai na UERJ:\n- Idoso tabagista com icterícia indolor + Courvoisier.\n- TC: lesão hipoatenuante na cabeça.\n- Tabagismo como principal fator de risco.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-d3",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Qual a cirurgia do câncer de cabeça de pâncreas ressecável?",
+      "resposta": "duodenopancreatectomia",
+      "aceitas": [
+        "whipple",
+        "gastroduodenopancreatectomia",
+        "cirurgia de whipple",
+        "duodenopancreatectomia cefalica"
+      ],
+      "verso": "**Duodenopancreatectomia (Whipple).**\n\nDepois:\n- Quimioterapia adjuvante (FOLFIRINOX).\n- Corpo/cauda → pancreatectomia distal + esplenectomia.",
+      "macete": "Cabeça = \"Whipple\"; cauda = distal.",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nCorpo/cauda:\n- Sem icterícia → dor e emagrecimento, diagnóstico mais tardio\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- Achado → lesão hipoatenuante/hipovascular (ver imagem)\n- Eco-endoscopia com punção → biópsia quando necessária\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nRessecabilidade (TC):\n- **Ressecável** → sem contato arterial e veia porta/mesentérica superior livre\n- **Borderline** → contato limitado → neoadjuvância\n- **Irressecável** → envolvimento do tronco celíaco/AMS > 180° ou metástase\n\nTratamento:\n- Cabeça ressecável → duodenopancreatectomia (Whipple) + quimioterapia adjuvante (FOLFIRINOX)\n- Corpo/cauda → pancreatectomia distal + esplenectomia\n- Paliativo → prótese biliar endoscópica, quimioterapia, analgesia (neurólise do plexo celíaco)\n\nO que mais cai na UERJ:\n- Idoso tabagista com icterícia indolor + Courvoisier.\n- TC: lesão hipoatenuante na cabeça.\n- Tabagismo como principal fator de risco.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "amp-d1",
+      "tipo": "digitar",
+      "area": "Ginecologia",
+      "tema": "Endocrinologia ginecológica",
+      "sub": "Amenorreia primária",
+      "frente": "Qual o cariótipo da síndrome de Morris (insensibilidade androgênica completa)?",
+      "resposta": "46,XY",
+      "aceitas": [
+        "46 xy",
+        "46xy",
+        "xy"
+      ],
+      "verso": "**46,XY.**\n\nQuadro:\n- Mamas presentes, útero ausente.\n- Pelos escassos, testosterona em nível masculino.",
+      "macete": "Morris tem Mamas, mas é XY.",
+      "contexto": "**Amenorreia primária = ausência de menarca aos 15 anos com caracteres sexuais normais, ou aos 13 anos sem caracteres sexuais.**\n\nO que é:\n- Falha em algum ponto do eixo: hipotálamo → hipófise → gônada → útero → trato de saída.\n- Sempre excluir gestação primeiro.\n\nRaciocínio (2 perguntas — ver ilustração):\n- **Tem mamas?** → houve estrogênio (ovário funcionou)\n- **Tem útero?** → houve ducto de Müller (sem AMH de testículo)\n\nPrincipais causas:\n- **Disgenesia gonadal** (Turner, Swyer) → a mais comum, FSH alto\n- **Agenesia mülleriana** (MRKH) → 2ª mais comum\n- **Insensibilidade androgênica** (Morris) → 46,XY com mamas e sem útero\n- **Hipogonadismo hipogonadotrófico** (Kallmann, atraso constitucional) → FSH baixo\n- **Obstrução** (hímen imperfurado, septo) → dor cíclica com caracteres normais\n\nExames-chave:\n- β-hCG, FSH, cariótipo, USG pélvica, testosterona\n\nSwyer (46,XY, SRY inativo):\n- Gônadas em fita → sem AMH e sem testosterona\n- Útero e trompas presentes, genitália feminina, sem puberdade\n- Gestação possível com ovodoação\n\nGonadectomia:\n- Cromossomo Y + disgenesia (Swyer, Turner com Y) → retirar logo (gonadoblastoma/disgerminoma)\n- Morris → após a puberdade (testículo produz o estrogênio das mamas)\n\nMRKH:\n- Pedir USG renal (malformação urinária associada)\n- Tratamento → neovagina (dilatadores ou cirurgia)\n\nO que mais cai na UERJ:\n- Diferenciar MRKH × Morris × Swyer × Turner pelo caso (mamas, pelos, útero, cariótipo).\n- Swyer tem útero (sem AMH) — a banca oferece \"genitália mista\" como distrator.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"125\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero presente</text><text x=\"265\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero ausente</text><text transform=\"rotate(-90 14 70)\" x=\"14\" y=\"70\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Com mamas</text><text transform=\"rotate(-90 14 160)\" x=\"14\" y=\"160\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Sem mamas</text><rect x=\"55\" y=\"22\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Obstrução / outras</text><text x=\"125.0\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Hímen imperfurado</text><text x=\"125.0\" y=\"68\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Septo vaginal transverso</text><text x=\"125\" y=\"102\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Investigar como secundária</text><rect x=\"198\" y=\"22\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">MRKH (46,XX)</text><text x=\"265.5\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos normais</text><text x=\"265\" y=\"82\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Morris (46,XY)</text><text x=\"265\" y=\"96\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos escassos</text><rect x=\"55\" y=\"118\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH alto</text><text x=\"125.0\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Turner (45,X)</text><text x=\"125.0\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Swyer (46,XY)</text><text x=\"125\" y=\"182\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH baixo</text><text x=\"125\" y=\"196\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Kallmann / atraso constitucional</text><rect x=\"198\" y=\"118\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Raro</text><text x=\"265.5\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Def. 17α-hidroxilase</text><text x=\"265.5\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">(46,XY)</text></svg>",
+        "legenda": "Mamas e útero: as duas perguntas que separam as causas."
+      },
+      "fonte": "ASRM Practice Committee — Current evaluation of amenorrhea (2008/2024) / FEBRASGO — Amenorreia",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "amp-d2",
+      "tipo": "digitar",
+      "area": "Ginecologia",
+      "tema": "Endocrinologia ginecológica",
+      "sub": "Amenorreia primária",
+      "frente": "Qual o cariótipo da síndrome de MRKH?",
+      "resposta": "46,XX",
+      "aceitas": [
+        "46 xx",
+        "46xx",
+        "xx"
+      ],
+      "verso": "**46,XX.**\n\nQuadro:\n- Caracteres sexuais normais (ovário funciona).\n- Útero ausente/rudimentar e vagina curta.\n- Pedir USG renal.",
+      "macete": "MRKH = mulher \"XX completa\", só falta o útero.",
+      "contexto": "**Amenorreia primária = ausência de menarca aos 15 anos com caracteres sexuais normais, ou aos 13 anos sem caracteres sexuais.**\n\nO que é:\n- Falha em algum ponto do eixo: hipotálamo → hipófise → gônada → útero → trato de saída.\n- Sempre excluir gestação primeiro.\n\nRaciocínio (2 perguntas — ver ilustração):\n- **Tem mamas?** → houve estrogênio (ovário funcionou)\n- **Tem útero?** → houve ducto de Müller (sem AMH de testículo)\n\nPrincipais causas:\n- **Disgenesia gonadal** (Turner, Swyer) → a mais comum, FSH alto\n- **Agenesia mülleriana** (MRKH) → 2ª mais comum\n- **Insensibilidade androgênica** (Morris) → 46,XY com mamas e sem útero\n- **Hipogonadismo hipogonadotrófico** (Kallmann, atraso constitucional) → FSH baixo\n- **Obstrução** (hímen imperfurado, septo) → dor cíclica com caracteres normais\n\nExames-chave:\n- β-hCG, FSH, cariótipo, USG pélvica, testosterona\n\nSwyer (46,XY, SRY inativo):\n- Gônadas em fita → sem AMH e sem testosterona\n- Útero e trompas presentes, genitália feminina, sem puberdade\n- Gestação possível com ovodoação\n\nGonadectomia:\n- Cromossomo Y + disgenesia (Swyer, Turner com Y) → retirar logo (gonadoblastoma/disgerminoma)\n- Morris → após a puberdade (testículo produz o estrogênio das mamas)\n\nMRKH:\n- Pedir USG renal (malformação urinária associada)\n- Tratamento → neovagina (dilatadores ou cirurgia)\n\nO que mais cai na UERJ:\n- Diferenciar MRKH × Morris × Swyer × Turner pelo caso (mamas, pelos, útero, cariótipo).\n- Swyer tem útero (sem AMH) — a banca oferece \"genitália mista\" como distrator.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"125\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero presente</text><text x=\"265\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero ausente</text><text transform=\"rotate(-90 14 70)\" x=\"14\" y=\"70\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Com mamas</text><text transform=\"rotate(-90 14 160)\" x=\"14\" y=\"160\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Sem mamas</text><rect x=\"55\" y=\"22\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Obstrução / outras</text><text x=\"125.0\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Hímen imperfurado</text><text x=\"125.0\" y=\"68\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Septo vaginal transverso</text><text x=\"125\" y=\"102\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Investigar como secundária</text><rect x=\"198\" y=\"22\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">MRKH (46,XX)</text><text x=\"265.5\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos normais</text><text x=\"265\" y=\"82\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Morris (46,XY)</text><text x=\"265\" y=\"96\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos escassos</text><rect x=\"55\" y=\"118\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH alto</text><text x=\"125.0\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Turner (45,X)</text><text x=\"125.0\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Swyer (46,XY)</text><text x=\"125\" y=\"182\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH baixo</text><text x=\"125\" y=\"196\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Kallmann / atraso constitucional</text><rect x=\"198\" y=\"118\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Raro</text><text x=\"265.5\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Def. 17α-hidroxilase</text><text x=\"265.5\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">(46,XY)</text></svg>",
+        "legenda": "Mamas e útero: as duas perguntas que separam as causas."
+      },
+      "fonte": "ASRM Practice Committee — Current evaluation of amenorrhea (2008/2024) / FEBRASGO — Amenorreia",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "amp-d3",
+      "tipo": "digitar",
+      "area": "Ginecologia",
+      "tema": "Endocrinologia ginecológica",
+      "sub": "Amenorreia primária",
+      "frente": "Qual a causa mais comum de amenorreia primária?",
+      "resposta": "disgenesia gonadal",
+      "aceitas": [
+        "turner",
+        "sindrome de turner",
+        "disgenesia gonadal (turner)"
+      ],
+      "verso": "**Disgenesia gonadal (Turner).**\n\nDepois:\n- Agenesia mülleriana (MRKH) → 2ª.\n- FSH alto → falha ovariana.",
+      "macete": "1º Turner, 2º MRKH.",
+      "contexto": "**Amenorreia primária = ausência de menarca aos 15 anos com caracteres sexuais normais, ou aos 13 anos sem caracteres sexuais.**\n\nO que é:\n- Falha em algum ponto do eixo: hipotálamo → hipófise → gônada → útero → trato de saída.\n- Sempre excluir gestação primeiro.\n\nRaciocínio (2 perguntas — ver ilustração):\n- **Tem mamas?** → houve estrogênio (ovário funcionou)\n- **Tem útero?** → houve ducto de Müller (sem AMH de testículo)\n\nPrincipais causas:\n- **Disgenesia gonadal** (Turner, Swyer) → a mais comum, FSH alto\n- **Agenesia mülleriana** (MRKH) → 2ª mais comum\n- **Insensibilidade androgênica** (Morris) → 46,XY com mamas e sem útero\n- **Hipogonadismo hipogonadotrófico** (Kallmann, atraso constitucional) → FSH baixo\n- **Obstrução** (hímen imperfurado, septo) → dor cíclica com caracteres normais\n\nExames-chave:\n- β-hCG, FSH, cariótipo, USG pélvica, testosterona\n\nSwyer (46,XY, SRY inativo):\n- Gônadas em fita → sem AMH e sem testosterona\n- Útero e trompas presentes, genitália feminina, sem puberdade\n- Gestação possível com ovodoação\n\nGonadectomia:\n- Cromossomo Y + disgenesia (Swyer, Turner com Y) → retirar logo (gonadoblastoma/disgerminoma)\n- Morris → após a puberdade (testículo produz o estrogênio das mamas)\n\nMRKH:\n- Pedir USG renal (malformação urinária associada)\n- Tratamento → neovagina (dilatadores ou cirurgia)\n\nO que mais cai na UERJ:\n- Diferenciar MRKH × Morris × Swyer × Turner pelo caso (mamas, pelos, útero, cariótipo).\n- Swyer tem útero (sem AMH) — a banca oferece \"genitália mista\" como distrator.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"125\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero presente</text><text x=\"265\" y=\"14\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Útero ausente</text><text transform=\"rotate(-90 14 70)\" x=\"14\" y=\"70\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Com mamas</text><text transform=\"rotate(-90 14 160)\" x=\"14\" y=\"160\" font-size=\"9.5\" font-weight=\"700\" fill=\"var(--mute)\" text-anchor=\"middle\">Sem mamas</text><rect x=\"55\" y=\"22\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Obstrução / outras</text><text x=\"125.0\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Hímen imperfurado</text><text x=\"125.0\" y=\"68\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Septo vaginal transverso</text><text x=\"125\" y=\"102\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Investigar como secundária</text><rect x=\"198\" y=\"22\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">MRKH (46,XX)</text><text x=\"265.5\" y=\"55\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos normais</text><text x=\"265\" y=\"82\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Morris (46,XY)</text><text x=\"265\" y=\"96\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">pelos escassos</text><rect x=\"55\" y=\"118\" width=\"140\" height=\"90\" rx=\"8\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"125.0\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH alto</text><text x=\"125.0\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Turner (45,X)</text><text x=\"125.0\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Swyer (46,XY)</text><text x=\"125\" y=\"182\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">FSH baixo</text><text x=\"125\" y=\"196\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Kallmann / atraso constitucional</text><rect x=\"198\" y=\"118\" width=\"135\" height=\"90\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--rose)\" stroke-width=\"1.5\"/><text x=\"265.5\" y=\"136\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Raro</text><text x=\"265.5\" y=\"151\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">Def. 17α-hidroxilase</text><text x=\"265.5\" y=\"164\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">(46,XY)</text></svg>",
+        "legenda": "Mamas e útero: as duas perguntas que separam as causas."
+      },
+      "fonte": "ASRM Practice Committee — Current evaluation of amenorrhea (2008/2024) / FEBRASGO — Amenorreia",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "abort-d1",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Hemorragias da gestação",
+      "sub": "Abortamento",
+      "frente": "Qual o comprimento cabeça-nádega sem batimento que confirma gestação inviável?",
+      "resposta": "7 mm",
+      "aceitas": [
+        ">= 7 mm",
+        "7",
+        "ccn 7 mm",
+        "maior ou igual a 7 mm"
+      ],
+      "verso": "**CCN ≥ 7 mm sem BCF.**\n\nOutro critério:\n- Saco gestacional ≥ 25 mm sem embrião.",
+      "macete": "Inviável: \"7 sem coração, 25 sem bebê\".",
+      "contexto": "**Abortamento = interrupção da gestação antes de 20–22 semanas ou com feto < 500 g; o tipo clínico define a conduta.**\n\nO que é:\n- Perda gestacional precoce; a maioria no 1º trimestre por alteração cromossômica do embrião.\n- Clínica → sangramento vaginal ± cólica; o colo e a USG classificam.\n\nTipos:\n- **Ameaça** → sangra pouco, colo fechado, embrião vivo\n- **Inevitável** → colo aberto, ovo ainda no útero\n- **Incompleto** → colo aberto, restos (endométrio > 15 mm)\n- **Completo** → colo fechado, útero vazio\n- **Retido** → colo fechado, embrião sem batimento\n- **Infectado** → febre, secreção fétida, dor\n\nGestação inviável na USG (ver ilustração):\n- CCN ≥ 7 mm sem batimento cardíaco\n- Saco gestacional ≥ 25 mm sem embrião\n\nConduta:\n- Ameaça → expectante (repouso relativo, sem relação)\n- Retido → expectante, misoprostol ou esvaziamento, conforme preferência e estabilidade\n- Infectado → antibiótico (gentamicina + clindamicina) + esvaziamento\n- Rh negativo → anti-D\n\nEsvaziamento:\n- Até 12 semanas → AMIU (preferível) ou misoprostol\n- Após 12 semanas → misoprostol, depois curetagem se restos\n\nHabitual (≥ 3 perdas seguidas; investigar já com 2):\n- SAF → AAS + heparina profilática\n- Malformação uterina (septo)\n- Translocação balanceada no casal (cariótipo)\n- Endocrinopatias descompensadas\n- Insuficiência istmocervical → perdas de 2º tri indolores → cerclagem 12–16 semanas\n\nAborto legal no Brasil:\n- Estupro, risco de vida materno, anencefalia\n- No estupro → sem B.O. nem autorização judicial (basta o relato e o protocolo)\n- Objeção de consciência é individual e não vale sem outro médico ou na urgência\n- Profilaxias em até 72 h (PEP-HIV, IST, hepatite B); contracepção de emergência até 5 dias\n\nO que mais cai na UERJ:\n- CCN ≥ 7 mm sem BCF já fecha retido (não é \"cedo demais\").\n- Causas de abortamento habitual e cerclagem na insuficiência istmocervical.\n- Aborto legal no estupro sem B.O.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 175\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"20\" y=\"22\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">CCN (embrião) sem batimento</text><rect x=\"20\" y=\"32\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"230\" y=\"32\" width=\"90\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"230\" y1=\"28\" x2=\"230\" y2=\"52\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"230\" y=\"66\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">7 mm</text><text x=\"120\" y=\"66\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">suspeito → repetir USG</text><text x=\"290\" y=\"66\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">inviável</text><text x=\"20\" y=\"100\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">Saco gestacional (DMSG) sem embrião</text><rect x=\"20\" y=\"110\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"260\" y=\"110\" width=\"60\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"130\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"260\" y=\"144\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">25 mm</text><text x=\"130\" y=\"144\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">16–24 mm: suspeito</text><text x=\"300\" y=\"160\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">anembrionada</text></svg>",
+        "legenda": "Os 2 cortes que fecham gestação inviável: CCN 7 mm e saco 25 mm."
+      },
+      "fonte": "Doubilet et al., NEJM 2013 (Society of Radiologists in Ultrasound) / ACOG Practice Bulletin 200 (2018)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "abort-d2",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Hemorragias da gestação",
+      "sub": "Abortamento",
+      "frente": "Qual o método de esvaziamento uterino preferível até 12 semanas?",
+      "resposta": "AMIU",
+      "aceitas": [
+        "aspiracao manual intrauterina",
+        "aspiracao manual intra-uterina",
+        "aspiracao"
+      ],
+      "verso": "**AMIU (aspiração manual intrauterina).**\n\nComparação:\n- Menos perfuração e anestesia que a curetagem.\n- > 12 semanas → misoprostol e depois curetagem se restos.",
+      "macete": "Até 12, \"aspira\".",
+      "contexto": "**Abortamento = interrupção da gestação antes de 20–22 semanas ou com feto < 500 g; o tipo clínico define a conduta.**\n\nO que é:\n- Perda gestacional precoce; a maioria no 1º trimestre por alteração cromossômica do embrião.\n- Clínica → sangramento vaginal ± cólica; o colo e a USG classificam.\n\nTipos:\n- **Ameaça** → sangra pouco, colo fechado, embrião vivo\n- **Inevitável** → colo aberto, ovo ainda no útero\n- **Incompleto** → colo aberto, restos (endométrio > 15 mm)\n- **Completo** → colo fechado, útero vazio\n- **Retido** → colo fechado, embrião sem batimento\n- **Infectado** → febre, secreção fétida, dor\n\nGestação inviável na USG (ver ilustração):\n- CCN ≥ 7 mm sem batimento cardíaco\n- Saco gestacional ≥ 25 mm sem embrião\n\nConduta:\n- Ameaça → expectante (repouso relativo, sem relação)\n- Retido → expectante, misoprostol ou esvaziamento, conforme preferência e estabilidade\n- Infectado → antibiótico (gentamicina + clindamicina) + esvaziamento\n- Rh negativo → anti-D\n\nEsvaziamento:\n- Até 12 semanas → AMIU (preferível) ou misoprostol\n- Após 12 semanas → misoprostol, depois curetagem se restos\n\nHabitual (≥ 3 perdas seguidas; investigar já com 2):\n- SAF → AAS + heparina profilática\n- Malformação uterina (septo)\n- Translocação balanceada no casal (cariótipo)\n- Endocrinopatias descompensadas\n- Insuficiência istmocervical → perdas de 2º tri indolores → cerclagem 12–16 semanas\n\nAborto legal no Brasil:\n- Estupro, risco de vida materno, anencefalia\n- No estupro → sem B.O. nem autorização judicial (basta o relato e o protocolo)\n- Objeção de consciência é individual e não vale sem outro médico ou na urgência\n- Profilaxias em até 72 h (PEP-HIV, IST, hepatite B); contracepção de emergência até 5 dias\n\nO que mais cai na UERJ:\n- CCN ≥ 7 mm sem BCF já fecha retido (não é \"cedo demais\").\n- Causas de abortamento habitual e cerclagem na insuficiência istmocervical.\n- Aborto legal no estupro sem B.O.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 175\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"20\" y=\"22\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">CCN (embrião) sem batimento</text><rect x=\"20\" y=\"32\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"230\" y=\"32\" width=\"90\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"230\" y1=\"28\" x2=\"230\" y2=\"52\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"230\" y=\"66\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">7 mm</text><text x=\"120\" y=\"66\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">suspeito → repetir USG</text><text x=\"290\" y=\"66\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">inviável</text><text x=\"20\" y=\"100\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">Saco gestacional (DMSG) sem embrião</text><rect x=\"20\" y=\"110\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"260\" y=\"110\" width=\"60\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"130\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"260\" y=\"144\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">25 mm</text><text x=\"130\" y=\"144\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">16–24 mm: suspeito</text><text x=\"300\" y=\"160\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">anembrionada</text></svg>",
+        "legenda": "Os 2 cortes que fecham gestação inviável: CCN 7 mm e saco 25 mm."
+      },
+      "fonte": "Doubilet et al., NEJM 2013 (Society of Radiologists in Ultrasound) / ACOG Practice Bulletin 200 (2018)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "abort-d3",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Hemorragias da gestação",
+      "sub": "Abortamento",
+      "frente": "Com quantas perdas consecutivas se define abortamento habitual?",
+      "resposta": "3",
+      "aceitas": [
+        "tres",
+        "3 perdas",
+        "tres perdas",
+        "3 ou mais"
+      ],
+      "verso": "**≥ 3 perdas consecutivas.**\n\nDetalhe:\n- Já se investiga a partir de 2.\n- Causas → SAF, septo uterino, translocação, istmocervical.",
+      "macete": "\"3 seguidas = habitual\".",
+      "contexto": "**Abortamento = interrupção da gestação antes de 20–22 semanas ou com feto < 500 g; o tipo clínico define a conduta.**\n\nO que é:\n- Perda gestacional precoce; a maioria no 1º trimestre por alteração cromossômica do embrião.\n- Clínica → sangramento vaginal ± cólica; o colo e a USG classificam.\n\nTipos:\n- **Ameaça** → sangra pouco, colo fechado, embrião vivo\n- **Inevitável** → colo aberto, ovo ainda no útero\n- **Incompleto** → colo aberto, restos (endométrio > 15 mm)\n- **Completo** → colo fechado, útero vazio\n- **Retido** → colo fechado, embrião sem batimento\n- **Infectado** → febre, secreção fétida, dor\n\nGestação inviável na USG (ver ilustração):\n- CCN ≥ 7 mm sem batimento cardíaco\n- Saco gestacional ≥ 25 mm sem embrião\n\nConduta:\n- Ameaça → expectante (repouso relativo, sem relação)\n- Retido → expectante, misoprostol ou esvaziamento, conforme preferência e estabilidade\n- Infectado → antibiótico (gentamicina + clindamicina) + esvaziamento\n- Rh negativo → anti-D\n\nEsvaziamento:\n- Até 12 semanas → AMIU (preferível) ou misoprostol\n- Após 12 semanas → misoprostol, depois curetagem se restos\n\nHabitual (≥ 3 perdas seguidas; investigar já com 2):\n- SAF → AAS + heparina profilática\n- Malformação uterina (septo)\n- Translocação balanceada no casal (cariótipo)\n- Endocrinopatias descompensadas\n- Insuficiência istmocervical → perdas de 2º tri indolores → cerclagem 12–16 semanas\n\nAborto legal no Brasil:\n- Estupro, risco de vida materno, anencefalia\n- No estupro → sem B.O. nem autorização judicial (basta o relato e o protocolo)\n- Objeção de consciência é individual e não vale sem outro médico ou na urgência\n- Profilaxias em até 72 h (PEP-HIV, IST, hepatite B); contracepção de emergência até 5 dias\n\nO que mais cai na UERJ:\n- CCN ≥ 7 mm sem BCF já fecha retido (não é \"cedo demais\").\n- Causas de abortamento habitual e cerclagem na insuficiência istmocervical.\n- Aborto legal no estupro sem B.O.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 175\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"20\" y=\"22\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">CCN (embrião) sem batimento</text><rect x=\"20\" y=\"32\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"230\" y=\"32\" width=\"90\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"230\" y1=\"28\" x2=\"230\" y2=\"52\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"230\" y=\"66\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">7 mm</text><text x=\"120\" y=\"66\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">suspeito → repetir USG</text><text x=\"290\" y=\"66\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">inviável</text><text x=\"20\" y=\"100\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\">Saco gestacional (DMSG) sem embrião</text><rect x=\"20\" y=\"110\" width=\"300\" height=\"14\" rx=\"7\" fill=\"var(--card)\" stroke=\"var(--mute)\"/><rect x=\"260\" y=\"110\" width=\"60\" height=\"14\" rx=\"7\" fill=\"var(--rose)\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"130\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"260\" y=\"144\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">25 mm</text><text x=\"130\" y=\"144\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"middle\">16–24 mm: suspeito</text><text x=\"300\" y=\"160\" font-size=\"8.5\" fill=\"var(--wine)\" text-anchor=\"middle\">anembrionada</text></svg>",
+        "legenda": "Os 2 cortes que fecham gestação inviável: CCN 7 mm e saco 25 mm."
+      },
+      "fonte": "Doubilet et al., NEJM 2013 (Society of Radiologists in Ultrasound) / ACOG Practice Bulletin 200 (2018)",
+      "add": "2026-10-24"
     }
   ],
-  "rev": 1792885533240
+  "rev": 1792885656863
 }
