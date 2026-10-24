@@ -219,8 +219,8 @@
       "temas": "Asma não controlada (3×)"
     },
     "Cicatrização de feridas": {
-      "q": 3,
-      "temas": "Cicatrização de feridas; fisiologia da cicatrização; queloide × cicatriz hipertrófica"
+      "q": 4,
+      "temas": "Cicatrização de feridas; fisiologia da cicatrização; queloide × cicatriz hipertrófica; seroma pós-operatório"
     },
     "Hiperparatireoidismo": {
       "q": 2,
@@ -261,6 +261,14 @@
     "Colangite biliar primária": {
       "q": 1,
       "temas": "Cirrose biliar primária"
+    },
+    "Síndrome de Cushing": {
+      "q": 2,
+      "temas": "Doença de Cushing (ACTH-dependente); síndrome de Cushing pediátrica"
+    },
+    "Câncer de vesícula biliar": {
+      "q": 1,
+      "temas": "Câncer de vesícula biliar"
     }
   }
 }
