@@ -27,7 +27,7 @@ for c in cards:
     ctx = c.get('contexto') or ''
     if ctx:
         if not ctx.lstrip().startswith('**'): E(i, 'contexto: 1ª linha tem que ser a definição em **negrito**')
-        if 'O que mais cai na UERJ:' not in ctx: W(i, 'contexto: falta o bloco final "O que mais cai na UERJ:"')
+        if 'O que mais cai na UERJ:' not in ctx: E(i, 'contexto: falta o bloco final "O que mais cai na UERJ:"')
         elif ctx.rstrip().split('O que mais cai na UERJ:')[-1].count('\n\n'): E(i, 'contexto: o bloco "O que mais cai na UERJ:" tem que ser o ÚLTIMO')
         for l in ctx.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'contexto: itens juntos com "·" na mesma linha → "{l.strip()[:60]}"')
