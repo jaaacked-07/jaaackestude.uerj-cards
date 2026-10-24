@@ -12948,6 +12948,192 @@
         "legenda": "Camadas da parede da vesícula e a conduta pelo T no carcinoma incidental."
       },
       "add": "2026-10-24"
+    },
+    {
+      "id": "panc-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Câncer de pâncreas: exame de escolha para diagnóstico e estadiamento",
+      "verso": "**TC de abdome com contraste EV em protocolo pancreático (multifásica)**\n\nPor quê:\n- Mostra o tumor, linfonodos e metástase hepática\n- Define a relação com os vasos (artéria mesentérica superior, tronco celíaco, veia porta/mesentérica) → ressecabilidade\n\nAchados:\n- Massa **hipoatenuante** (hipovascular) nas fases arterial e portal\n- **Sinal do duplo ducto** → dilatação do colédoco + ducto pancreático principal\n\nOutros exames:\n- USG → 1º exame da icterícia, mas vê mal o pâncreas\n- Ecoendoscopia → lesão pequena não vista na TC e biópsia (PAAF)\n- CPRE → só se precisar drenar a via biliar (não é para diagnóstico)",
+      "visual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "Lesão hipoatenuante na cabeça do pâncreas, com menos realce que o parênquima normal",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "pegadinha": "CHC realça na fase arterial (hipervascular); adenocarcinoma de pâncreas é HIPOvascular — aparece mais escuro que o pâncreas normal.",
+      "uerj": "Câncer de pâncreas caiu 2× na UERJ (2022–2026), mais o sinal de Courvoisier.",
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nComo cai:\n- Idoso com icterícia indolor e Courvoisier: exame de escolha, ressecabilidade e cirurgia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Câncer de pâncreas: critérios de ressecabilidade na TC",
+      "verso": "**Ressecável → sem contato arterial e contato venoso ≤ 180° sem irregularidade**\n**Borderline → contato arterial limitado ou venoso reconstruível → neoadjuvância**\n**Irressecável → envolvimento arterial > 180° ou metástase**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Artérias (AMS, tronco celíaco, hepática comum)",
+          "Veias (VMS / porta)",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "!Ressecável",
+            "Sem contato",
+            "Sem contato ou ≤ 180° sem irregularidade",
+            "!Cirurgia (± neoadjuvância)"
+          ],
+          [
+            "Borderline",
+            "AMS/tronco ≤ 180°; hepática comum reconstruível",
+            "> 180° ou trombo curto reconstruível",
+            "Neoadjuvância → reavaliar e operar"
+          ],
+          [
+            "Localmente avançado",
+            "> 180° na AMS ou tronco celíaco",
+            "Não reconstruível",
+            "Quimio (± radio)"
+          ],
+          [
+            "Metastático",
+            "—",
+            "—",
+            "!Quimioterapia paliativa; drenar via biliar se icterícia"
+          ]
+        ]
+      },
+      "pegadinha": "Metástase hepática ou ascite carcinomatosa = irressecável, mesmo com tumor pequeno.",
+      "uerj": "A UERJ cobra o exame que define ressecabilidade (TC com contraste).",
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nComo cai:\n- Idoso com icterícia indolor e Courvoisier: exame de escolha, ressecabilidade e cirurgia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Sinal de Courvoisier-Terrier: o que é e o que sugere",
+      "verso": "**Vesícula palpável e indolor + icterícia → obstrução maligna distal do colédoco**\n\nCausas:\n- Tumor de cabeça de pâncreas (principal)\n- Tumores periampulares (ampola, colédoco distal, duodeno)\n\nPor que a vesícula dilata:\n- Obstrução lenta e progressiva distende uma vesícula sem fibrose\n- Na litíase, a vesícula costuma ser fibrosada (inflamações repetidas) → não dilata",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Icterícia neoplásica",
+          "itens": [
+            "!Indolor e progressiva",
+            "Vesícula palpável (Courvoisier)",
+            "Emagrecimento",
+            "Idoso, tabagista"
+          ]
+        },
+        "b": {
+          "t": "Icterícia por cálculo",
+          "itens": [
+            "Com dor (cólica)",
+            "Vesícula não palpável (fibrosada)",
+            "Flutuante",
+            "Febre se colangite"
+          ]
+        }
+      },
+      "pegadinha": "Courvoisier não é o mesmo que Murphy: Murphy é dor à inspiração na colecistite.",
+      "uerj": "Sinal de Courvoisier caiu na UERJ.",
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nComo cai:\n- Idoso com icterícia indolor e Courvoisier: exame de escolha, ressecabilidade e cirurgia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Câncer de cabeça de pâncreas ressecável: cirurgia e tratamento complementar",
+      "verso": "**Duodenopancreatectomia (cirurgia de Whipple)**\n\nO que retira:\n- Cabeça do pâncreas, duodeno, colédoco distal, vesícula ± antro gástrico e linfonodos\n- Reconstrução → pancreato, hepático e gastro/duodenojejunostomia\n\nOutras localizações:\n- Corpo e cauda → pancreatectomia distal + esplenectomia\n\nDepois da cirurgia:\n- Quimioterapia adjuvante (FOLFIRINOX modificado se bom estado) → padrão\n\nComplicação típica:\n- Fístula pancreática",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Icterícia indolor → USG (dilatação de vias)",
+          "TC protocolo pancreático",
+          [
+            "Ressecável → Whipple + quimio adjuvante",
+            "Borderline → neoadjuvância",
+            "Irressecável → quimio + prótese biliar"
+          ]
+        ]
+      },
+      "pegadinha": "Drenagem biliar pré-operatória de rotina NÃO é indicada — só se colangite, icterícia muito alta ou atraso da cirurgia/neoadjuvância.",
+      "uerj": "Fístula pancreática também já caiu na UERJ.",
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nComo cai:\n- Idoso com icterícia indolor e Courvoisier: exame de escolha, ressecabilidade e cirurgia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "panc-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Pâncreas",
+      "sub": "Câncer de pâncreas",
+      "frente": "Homem, 68 anos, tabagista, com icterícia progressiva indolor, prurido, colúria e perda de 8 kg em 2 meses. Ao exame, vesícula palpável e indolor. USG: dilatação das vias biliares intra e extra-hepáticas, pâncreas mal visualizado. O exame de escolha para diagnóstico e estadiamento é:",
+      "opcoes": [
+        "CPRE com escovado",
+        "Ressonância magnética sem contraste",
+        "TC de abdome com contraste EV em protocolo pancreático (multifásica)",
+        "Dosagem de CA 19-9"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "CPRE é terapêutica (drenagem); não estadia e tem risco de complicações.",
+        "Sem contraste não avalia a relação com vasos.",
+        "Gabarito: TC multifásica com contraste mostra o tumor hipoatenuante, os vasos (ressecabilidade) e as metástases.",
+        "CA 19-9 não faz diagnóstico (falso positivo na colestase; ~10% não secretam)."
+      ],
+      "pegadinha": "CPRE parece lógica (icterícia), mas é para tratar, não para diagnosticar/estadiar.",
+      "uerj": "Questão da anotação dela com TC.",
+      "fonte": "NCCN Guidelines Pancreatic Adenocarcinoma (2025) / Sabiston Textbook of Surgery 21ª ed. / INCA",
+      "contexto": "**Câncer de pâncreas = adenocarcinoma ductal na maioria (~90%), 60–70% na cabeça do pâncreas; diagnóstico tardio e prognóstico ruim.**\n\nFatores de risco:\n- **Tabagismo** → principal fator modificável\n- Obesidade, DM de início recente após os 50 anos, pancreatite crônica\n- História familiar e síndromes genéticas (BRCA2, Lynch, Peutz-Jeghers)\n\nQuadro (cabeça):\n- **Icterícia obstrutiva indolor** progressiva, colúria, acolia, prurido\n- **Sinal de Courvoisier-Terrier** → vesícula palpável e indolor + icterícia\n- Emagrecimento, dor epigástrica irradiada para o dorso (doença avançada)\n- Tromboflebite migratória (sinal de Trousseau)\n\nDiagnóstico e estadiamento:\n- **TC com contraste em protocolo pancreático (trifásica)** → exame de escolha\n- CA 19-9 → prognóstico e seguimento (não serve para rastreio)\n\nComo cai:\n- Idoso com icterícia indolor e Courvoisier: exame de escolha, ressecabilidade e cirurgia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "data/img/1792802097335-0.jpg",
+        "legenda": "TC com contraste: lesão hipoatenuante (hipovascular) na cabeça do pâncreas",
+        "fonte": "Print da questão anotada pela Jacke"
+      },
+      "add": "2026-10-24"
     }
   ],
   "rev": 1792759807234

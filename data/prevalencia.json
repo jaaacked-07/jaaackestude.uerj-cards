@@ -269,6 +269,10 @@
     "Câncer de vesícula biliar": {
       "q": 1,
       "temas": "Câncer de vesícula biliar"
+    },
+    "Câncer de pâncreas": {
+      "q": 3,
+      "temas": "Câncer de pâncreas (tabagismo, 2×); sinal de Courvoisier"
     }
   }
 }
