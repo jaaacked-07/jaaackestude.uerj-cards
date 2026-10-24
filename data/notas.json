@@ -24,6 +24,14 @@
       "id": 1792801874236,
       "d": "2026-10-23",
       "t": "O quadro descrito é típico de hipocalcemia pós-paratireoidectomia em paciente com hiperparatireoidismo secundário. Nestes casos, a retirada das paratireoides remove subitamente o estímulo à reabsorção óssea.\nSem o excesso de PTH, o osso fica \"faminto\" por cálcio e fósforo para compensar o período em que sofreu com o excesso de reabsorção.\nÉ como se houvesse um \"rebote\" de formação/remineralização óssea com captação intensa de cálcio, fósforo e magnésio. Como resultado, podemos ter hipocalcemia (principal), hipofosfatemia e hipomagnesemia. A hipocalcemia pode se manifestar com sintomas neuromusculares (mais precoces e frequentes), cãimbas e tetania.\nAnalisando as alternativas:\nLetra A: correta. Esta é a manifestação clássica e precoce da hipocalcemia, caracterizada por sensação de formigamento ou dormência ao redor da boca."
+    },
+    {
+      "id": 1792802097335,
+      "d": "2026-10-23",
+      "t": "A Tomografia Computadorizada (TC) de abdome com contraste (de preferência uma\nTC de múltiplos canais e contraste intravenoso com estudo trifásico) é o exame de escolha para avaliar o câncer de pâncreas, pois detecta as lesões não visualizadas pela ultrassonografia, além de complementar o estadiamento e a definição de ressecabilidade das lesões encontradas. A TC caracteriza com precisão o tamanho do tumor, o acometimento linfonodal e a presença ou não de metástases à distância (ex.: fígado). O exame tem que ser feito com contraste IV para delinear a relação do tumor com estruturas vasculares, como as artérias que passam próximas à cabeça do pâncreas (dado crucial na definição de ressecabilidade). O tumor aparece como uma massa hipotenuante na fase portal, frequentemente associada à dilatação do ducto pancreático e do colédoco (\"sinal do ducto duplo*).\nResposta: letra C.\nVISÃO DA RÁDIO:\nNo gabarito adicionamos uma tomografia computadorizada de abdome, com contraste endovenoso, corte axial. Nesse estudo usamos os termos \"atenuação\" ou\n\"densidade\", sendo hiper mais claro e hipo mais escuro. O câncer de pâncreas é reconhecido como uma lesão hipovascularizada na cabeça do pâncreas.\nInferimos que a lesão é hipovascularizada pois ela apresenta menos realce pelo meio de contraste em relação ao parênquima pancreático normal. Em relação aoparênquima saudável, a lesão aparece hipotenuante nas fases arterial e portal.",
+      "imgs": [
+        "data/img/1792802097335-0.jpg"
+      ]
     }
   ],
   "processadas": [
