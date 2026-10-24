@@ -1222,7 +1222,7 @@ document.addEventListener('focusout',e=>{ const ed=e.target.closest&&e.target.cl
 document.addEventListener('input',e=>{ if(e.target.matches&&e.target.matches('.anot.edit textarea')) anAltura(e.target); });
 document.addEventListener('keydown',e=>{
   const a=document.activeElement;
-  if(e.key.toLowerCase()==='t'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))&&!$('#sheet')&&document.querySelector('[data-an]')){ e.preventDefault(); modoNota(); }
+  if(e.key.toLowerCase()==='t'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))&&!$('#sheet')&&!e.repeat){ if(!document.querySelector('[data-an]')){ if(PAG!=='anotar'&&PAG!=='criar') toast('Abra um card para anotar'); return; } e.preventDefault(); modoNota(); }
 });
 document.addEventListener('keydown',e=>{
   const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.anot.edit')) return;
@@ -2084,7 +2084,7 @@ let MT=null, MTT=null, MDOWN=false; try{MT=localStorage.getItem(LS+'.mt')||null}
 const MT_SVG='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l5 5-9 9H6v-5z"/><path d="M4 21h8"/></svg>';
 const NT_SVG='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l4 4-8 8H6v-4z"/><path d="M13 20h7M16 16h4"/></svg>';
 function fabMT(){
-  let f=$('#mtfab'); const tem=!!document.querySelector('.hlz');
+  let f=$('#mtfab'); const tem=!!document.querySelector('.hlz,[data-an]');
   if(!tem){ if(f) f.remove(); return; }
   if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
     f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
@@ -2163,7 +2163,11 @@ function confete(n){
 /* ===== Início ===== */
 carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits).then(convidarEntrar);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits)}});
-if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{}));
+  /* versão nova do app: recarrega sozinho (na rodada, espera você sair; o "Retomar" já fica salvo) */
+  let NOVA=false; const recarregar=()=>{ if(!SS&&!document.querySelector('.anot.edit')) location.reload(); else NOVA=true; };
+  if(navigator.serviceWorker.controller) navigator.serviceWorker.addEventListener('controllerchange',recarregar);
+  setInterval(()=>{ if(NOVA) recarregar(); },5000); }
 </script>
 </body>
 </html>
