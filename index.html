@@ -269,7 +269,7 @@ textarea.note:focus{border-color:var(--rose)}
 .mine{margin-top:16px;border-left:3px solid var(--rose);padding:2px 0 2px 12px}
 .mine .mh{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);font-weight:600;margin-bottom:3px}
 .mine .mt,.anot .mt{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:14px;line-height:1.5;white-space:pre-wrap}
-.anot{margin:6px 0 10px;padding:5px 10px 6px;border-left:2px dashed var(--rose);background:color-mix(in srgb,var(--rose) 8%,transparent);border-radius:0 10px 10px 0;cursor:text;overflow-wrap:anywhere}
+.anot{margin:6px 0 10px;padding:5px 10px 6px;border-left:2px dashed var(--rose);background:color-mix(in srgb,var(--rose) 8%,transparent);border-radius:0 10px 10px 0;overflow-wrap:anywhere}
 .anot .mimg,.mine .mimg{display:block;width:100%;max-width:440px;max-height:min(50vh,420px);height:auto;object-fit:contain;object-position:left center;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .anot.edit{display:flex;gap:6px;align-items:flex-end;padding:6px;cursor:auto}
 .anot.edit textarea{flex:1;min-height:42px;margin:0;resize:none;overflow:hidden;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;padding:7px 9px}
@@ -1193,6 +1193,8 @@ function anInserir(root,blk,el){
   if(blk.tagName==='LI'){ const ul=[...blk.children].find(x=>x.tagName==='UL'); ul?blk.insertBefore(el,ul):blk.appendChild(el); }
   else if(blk.matches('.fn')) blk.closest('.vis').after(el); else blk.after(el);
 }
+/* cada anotação é uma "zona" própria do marca-texto (chave = card + texto da nota) */
+const hashT=t=>{ let h=5381; for(const ch of String(t)) h=((h<<5)+h+ch.codePointAt(0))|0; return (h>>>0).toString(36); };
 function pintarAnots(){
   document.querySelectorAll('[data-an]').forEach(root=>{
     const id=root.dataset.an, raw=(BYID[id]||{}).minha||'', p=anParse(raw);
@@ -1202,7 +1204,7 @@ function pintarAnots(){
       bl=bl||anBlocos(root); let hit=null, n=0;
       if(o.a) for(const b of bl){ if(anTxt(b)===o.a){ if(n===o.n){hit=b;break} n++; } }
       if(!hit&&!root.querySelector('.mbx')) return;
-      const el=document.createElement('div'); el.className='anot'; el.dataset.mid=id; el.dataset.k=k; el.innerHTML='<button class="aned" data-aned aria-label="Editar ou apagar anotação" title="Editar / apagar">✎</button>'+minhaCorpo(o.t);
+      const el=document.createElement('div'); el.className='anot hlz'; el.dataset.hl=id+'#'+hashT(o.t); el.dataset.mid=id; el.dataset.k=k; el.innerHTML='<button class="aned" data-aned aria-label="Editar ou apagar anotação" title="Editar / apagar">✎</button>'+minhaCorpo(o.t);
       anInserir(root,hit,el); });
   });
 }
@@ -1238,8 +1240,6 @@ addEventListener('click',e=>{
   if(e.target.closest('#mtfab')) return;
   if(NT){ const root=e.target.closest('[data-an]'); modoNota(false); if(!root) return; e.preventDefault(); e.stopPropagation(); anNova(root,e.target); return; }
   const ae=e.target.closest('[data-aned]'); if(ae){ e.preventDefault(); e.stopPropagation(); const x=ae.closest('.anot,.mine'); x.classList.contains('anot')?anEditar(x):anEditarBase(x.closest('.mbx')); return; }
-  const a=e.target.closest('.anot:not(.edit),.mbx .mine');
-  if(a&&getSelection().isCollapsed&&!e.target.closest('img[data-zoom],mark.hl')){ e.preventDefault(); e.stopPropagation(); a.classList.contains('anot')?anEditar(a):anEditarBase(a.closest('.mbx')); }
 },true);
 document.addEventListener('pointerdown',e=>{ if(e.target.closest('.anot.edit .anbt')) e.preventDefault(); },true);
 document.addEventListener('focusout',e=>{ const ed=e.target.closest&&e.target.closest('.anot.edit'); if(!ed) return;
@@ -2083,7 +2083,7 @@ function fim(){
 }
 
 /* ===== Marca-texto ===== */
-function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,button.aned,.tacts,svg,.anot')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
+function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,button.aned,.tacts,svg')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
 function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>{ if(m.closest('.hlz')===z) m.replaceWith(...m.childNodes); }); z.normalize(); }
 /* texto corrido da zona com a posição de cada nó (a marca guarda o trecho + qual ocorrência dele: marca no lugar certo, ex. dentro do fluxograma) */
 function zonaMapa(z){ const w=zonaTextos(z), ns=[]; let n,p=0,txt=''; while(n=w.nextNode()){ ns.push({n,s:p}); txt+=n.nodeValue; p+=n.nodeValue.length; } return {ns,txt}; }
