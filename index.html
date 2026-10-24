@@ -1566,7 +1566,7 @@ function comprimir(file){return new Promise((res,rej)=>{
     const M=1100, k=Math.min(1,M/Math.max(im.width,im.height)), c=document.createElement('canvas');
     c.width=Math.round(im.width*k); c.height=Math.round(im.height*k);
     const x=c.getContext('2d'); x.fillStyle='#fff'; x.fillRect(0,0,c.width,c.height); x.drawImage(im,0,0,c.width,c.height);
-    res(c.toDataURL('image/jpeg',0.82));}; im.src=fr.result;};
+    res(c.toDataURL('image/jpeg',0.78));}; im.src=fr.result;};
   fr.readAsDataURL(file);
 })}
 const srcImg=i=>i.local||imgSrc(i.path);
@@ -1818,7 +1818,20 @@ const imgCache=()=>{try{return JSON.parse(localStorage.getItem(IMGC_KEY))||{}}ca
 /* fotos recém-coladas: memória da sessão + cache local (se o armazenamento lotar, apaga as mais antigas e tenta de novo) */
 const MEMIMG={};
 function guardarImg(path,dataUrl){ MEMIMG[path]=dataUrl; const c=imgCache(); c[path]=dataUrl; let ks=Object.keys(c); while(ks.length>40) delete c[ks.shift()];
-  for(;;){ try{ localStorage.setItem(IMGC_KEY,JSON.stringify(c)); return; }catch(e){ ks=Object.keys(c).filter(k=>k!==path); if(!ks.length){ try{localStorage.removeItem(IMGC_KEY)}catch(_){} return; } delete c[ks[0]]; } } }
+  for(;;){ try{ localStorage.setItem(IMGC_KEY,JSON.stringify(c)); return; }catch(e){ ks=Object.keys(c).filter(k=>k!==path&&!k.startsWith('local:')); if(!ks.length){ toast('Armazenamento cheio: conecte à internet para enviar as fotos pendentes'); return; } delete c[ks[0]]; } } }
+/* foto colada sem internet ("local:…"): reenvia sozinha quando a conexão voltar e troca pelo caminho do GitHub */
+let REENV=false;
+async function reenviarFotosLocais(){
+  if(REENV||!ghTok()||!navigator.onLine) return; REENV=true;
+  try{ const c=imgCache(); let mudou=false;
+    for(const id of Object.keys(S.minha||{})){ let t=S.minha[id]; const locs=[...new Set((String(t).match(/local:[a-z0-9]+/g)||[]))];
+      for(const l of locs){ const u=c[l]||MEMIMG[l]; if(!u) continue; const p=await subirImgCard(u,'minha-'+id.replace(/[^\w-]/g,'')+'-'+l.slice(6)); if(!p) continue;
+        t=t.split(l).join(p); delete c[l]; mudou=true; }
+      if(t!==S.minha[id]) S.minha[id]=t; }
+    if(mudou){ try{localStorage.setItem(IMGC_KEY,JSON.stringify(c))}catch(e){} save(); reaplicar(); syncEdits(); toast('Fotos pendentes enviadas'); }
+  }finally{ REENV=false; } }
+addEventListener('online',()=>setTimeout(reenviarFotosLocais,1500));
+try{ navigator.storage&&navigator.storage.persist&&navigator.storage.persist(); }catch(e){}
 const RAW_BASE='https://raw.githubusercontent.com/jaaacked-07/jaaackestude.uerj-cards/main/';
 const imgSrc=s=>(s&&(MEMIMG[s]||imgCache()[s]))||s;
 /* foto ainda não publicada no site: busca direto do repositório; se falhar, esconde */
@@ -2272,7 +2285,7 @@ function confete(n){
 }
 
 /* ===== Início ===== */
-carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits).then(convidarEntrar);
+carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits).then(convidarEntrar).then(()=>setTimeout(reenviarFotosLocais,3000));
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits)}});
 if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{}));
   /* versão nova do app: recarrega sozinho (na rodada, espera você sair; o "Retomar" já fica salvo) */
