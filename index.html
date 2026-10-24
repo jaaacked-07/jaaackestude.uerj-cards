@@ -30,7 +30,7 @@
 }}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;min-height:100%}
-body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
+body{padding:env(safe-area-inset-top) 0 calc(140px + env(safe-area-inset-bottom))}
 /* tela fixa: sem rolagem/zoom para os lados (só rola na vertical) */
 html,body{overflow-x:hidden;max-width:100%;overscroll-behavior-x:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:pan-y}
 .sess,.sbody,.end,.sheet{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
@@ -84,7 +84,8 @@ nav svg{width:24px;height:24px}
 .prog i{display:block;height:100%;background:var(--wine);border-radius:6px;transition:width .35s ease}
 .pcount{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
 .combo{font-size:13px;color:var(--rose);font-weight:600;min-width:34px;text-align:right}
-.sbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sbody{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain}
+html:has(body>.sess),html:has(body>.sess) body{overflow:hidden!important;height:100%}
 .sbody .wrap{padding-top:6px;padding-bottom:140px}
 .tag{font-size:12px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
 .q{font-size:23px;line-height:1.3}
@@ -2021,7 +2022,7 @@ document.addEventListener('paste',e=>{
 
 /* ===== Sessão ===== */
 let SS=null, CFSTOP=false;
-function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f.offsetHeight+40)+'px'}
+function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w){const p=(f.offsetHeight+110)+'px'; if(w.style.paddingBottom!==p) w.style.paddingBottom=p;}}
 new MutationObserver(()=>{ajustaPe();aplicarZonas();pintarAnots();fabMT()}).observe(document.body,{childList:true,subtree:true});
 function sessao(ids,modo,prev,nome){
   ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
@@ -2029,7 +2030,7 @@ function sessao(ids,modo,prev,nome){
   if(prev){ SS.feitos=prev.feitos||0; SS.total=SS.feitos+ids.length; SS.unicos=(prev.unicos||0)||SS.total; SS.acertos=prev.acertos||0; }
   const el=document.createElement('div');el.className='sess';el.id='sess';
   el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="x vt hide" id="svt" aria-label="Voltar ao card anterior" title="Voltar ao card anterior (Z)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
-  document.body.appendChild(el); document.body.style.overflow='hidden';
+  document.body.appendChild(el); document.body.style.overflow='hidden'; document.documentElement.style.overflow='hidden';
   $('#sx').onclick=sair; $('#svt').onclick=voltarCard; SS.hist=[];
   proximoCard();
 }
@@ -2044,7 +2045,7 @@ function guardarRetomar(){
   S.ret=resto.length?{t:Date.now(),t0:SS.t0,modo:SS.modo,nome:SS.nome,fila:resto,feitos:SS.feitos,unicos:SS.unicos,acertos:SS.acertos}:{t:Date.now(),fila:[]};
   save();
 }
-function sair(){guardarRetomar();const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render();syncProg()}
+function sair(){guardarRetomar();const e=$('#sess');if(e)e.remove();document.body.style.overflow='';document.documentElement.style.overflow='';SS=null;render();syncProg()}
 function barra(){
   let f,t;
   if(SS.modo==='dia'&&S.plan){ const ids=S.plan.ids.filter(id=>BYID[id]); t=ids.length; f=ids.filter(id=>S.plan.done.includes(id)).length; }
