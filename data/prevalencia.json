@@ -273,6 +273,10 @@
     "Câncer de pâncreas": {
       "q": 3,
       "temas": "Câncer de pâncreas (tabagismo, 2×); sinal de Courvoisier"
+    },
+    "TC com contraste — fases, densidade e achados": {
+      "q": 0,
+      "temas": "Sem questão própria; base para CHC e câncer de pâncreas"
     }
   }
 }

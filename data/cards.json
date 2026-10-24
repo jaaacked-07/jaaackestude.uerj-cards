@@ -13134,6 +13134,252 @@
         "fonte": "Print da questão anotada pela Jacke"
       },
       "add": "2026-10-24"
+    },
+    {
+      "id": "tcc-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Radiologia",
+      "sub": "TC com contraste — fases, densidade e achados",
+      "frente": "TC: o que significa hiperdenso e hipodenso",
+      "verso": "**Hiperdenso → mais claro que o tecido vizinho**\n**Hipodenso → mais escuro que o tecido vizinho**\n\nLógica:\n- Densidade = quanto o tecido atenua o raio X (unidades Hounsfield, UH)\n- Quanto mais denso (cálcio, metal, contraste), mais branco\n- Na TC se fala densidade/atenuação; na RM, sinal; na USG, ecogenicidade",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Material",
+          "UH (aprox.)",
+          "Na imagem"
+        ],
+        "linhas": [
+          [
+            "Ar",
+            "−1.000",
+            "Preto"
+          ],
+          [
+            "Gordura",
+            "−100 a −50",
+            "Quase preto"
+          ],
+          [
+            "Água / cisto simples / líquor",
+            "0 a 20",
+            "Escuro (hipodenso)"
+          ],
+          [
+            "Partes moles / músculo",
+            "40 a 60",
+            "Cinza"
+          ],
+          [
+            "!Sangue agudo",
+            "!50 a 80",
+            "Mais claro que o cérebro (hiperdenso)"
+          ],
+          [
+            "Contraste iodado / cálcio / osso",
+            "> 200 a 1.000",
+            "Branco"
+          ]
+        ]
+      },
+      "pegadinha": "Hematoma fica hiperdenso no agudo e vai ficando iso e depois hipodenso em semanas.",
+      "uerj": "Questões da UERJ trazem a TC e cobram \"lesão hipoatenuante/hipervascular\" no comentário.",
+      "fonte": "Colégio Brasileiro de Radiologia — Manual de meios de contraste / ACR Manual on Contrast Media (2024) / LI-RADS v2018 (ACR) / Sabiston 21ª ed.",
+      "contexto": "**TC trifásica = imagens do mesmo órgão em tempos diferentes após o contraste iodado EV, para ver como cada lesão capta e elimina o contraste.**\n\nDensidade (atenuação):\n- **Hiperdenso/hiperatenuante** → mais claro (absorve mais raio X: osso, cálcio, sangue agudo, contraste)\n- **Hipodenso/hipoatenuante** → mais escuro (líquido, gordura, ar, edema, tumor hipovascular)\n- Sempre comparar com o tecido vizinho\n\nFases:\n- **Sem contraste** → base (cálcio, sangue, gordura)\n- **Arterial (~25–35 s)** → lesões hipervasculares brilham\n- **Portal (~60–70 s)** → fígado normal no máximo; lesão hipovascular fica escura\n- **Tardia (3–5 min)** → washout, cicatriz fibrosa, cápsula\n\nCuidados:\n- Alergia prévia a contraste iodado, função renal, metformina\n\nComo cai:\n- Interpretar o padrão de realce: CHC, hemangioma, pâncreas, adrenal.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "Mesma lesão (CHC) nas fases sem contraste, arterial, portal e tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tcc-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Radiologia",
+      "sub": "TC com contraste — fases, densidade e achados",
+      "frente": "TC trifásica (multifásica): indicações",
+      "verso": "**Caracterizar lesões pelo padrão de realce ao longo do tempo**\n\nPrincipais indicações:\n- **Fígado** → nódulo em cirrótico (CHC), hemangioma, HNF, metástase\n- **Pâncreas** → tumor e ressecabilidade (protocolo pancreático)\n- **Adrenal** → incidentaloma (densidade sem contraste e washout)\n- **Rim** → massa renal sólida × cisto\n- **AngioTC** → dissecção de aorta, TEP, sangramento ativo\n\nPor que várias fases:\n- Cada lesão tem um \"tempo\" de vascularização (artéria hepática × porta)",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Fase",
+          "Tempo após contraste",
+          "O que mostra melhor"
+        ],
+        "linhas": [
+          [
+            "Sem contraste",
+            "—",
+            "Calcificação, sangue, gordura; densidade basal (adrenal)"
+          ],
+          [
+            "!Arterial",
+            "~25–35 s",
+            "!Lesão hipervascular (CHC, HNF, adenoma, metástase neuroendócrina, renal)"
+          ],
+          [
+            "!Portal",
+            "~60–70 s",
+            "!Lesão hipovascular (metástase de cólon, adenocarcinoma de pâncreas); veias"
+          ],
+          [
+            "Tardia / equilíbrio",
+            "3–5 min (adrenal 15 min)",
+            "Washout, cápsula, cicatriz fibrosa, enchimento do hemangioma"
+          ]
+        ]
+      },
+      "pegadinha": "Washout = lesão que estava mais clara no arterial fica mais ESCURA que o fígado na portal/tardia (não é só \"perder contraste\").",
+      "uerj": "Base para questões de CHC e câncer de pâncreas.",
+      "fonte": "Colégio Brasileiro de Radiologia — Manual de meios de contraste / ACR Manual on Contrast Media (2024) / LI-RADS v2018 (ACR) / Sabiston 21ª ed.",
+      "contexto": "**TC trifásica = imagens do mesmo órgão em tempos diferentes após o contraste iodado EV, para ver como cada lesão capta e elimina o contraste.**\n\nDensidade (atenuação):\n- **Hiperdenso/hiperatenuante** → mais claro (absorve mais raio X: osso, cálcio, sangue agudo, contraste)\n- **Hipodenso/hipoatenuante** → mais escuro (líquido, gordura, ar, edema, tumor hipovascular)\n- Sempre comparar com o tecido vizinho\n\nFases:\n- **Sem contraste** → base (cálcio, sangue, gordura)\n- **Arterial (~25–35 s)** → lesões hipervasculares brilham\n- **Portal (~60–70 s)** → fígado normal no máximo; lesão hipovascular fica escura\n- **Tardia (3–5 min)** → washout, cicatriz fibrosa, cápsula\n\nCuidados:\n- Alergia prévia a contraste iodado, função renal, metformina\n\nComo cai:\n- Interpretar o padrão de realce: CHC, hemangioma, pâncreas, adrenal.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "Mesma lesão (CHC) nas fases sem contraste, arterial, portal e tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tcc-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Radiologia",
+      "sub": "TC com contraste — fases, densidade e achados",
+      "frente": "Padrão de realce na TC das principais lesões",
+      "verso": "**CHC → realce arterial + washout**\n**Hemangioma → realce periférico nodular com enchimento centrípeto**\n**Pâncreas (adenocarcinoma) → massa hipoatenuante**\n**Metástase de cólon → hipovascular, realce em anel**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Lesão",
+          "Arterial",
+          "Portal / tardia"
+        ],
+        "linhas": [
+          [
+            "!CHC",
+            "!Hiper (brilha)",
+            "!Washout (fica escuro) ± cápsula"
+          ],
+          [
+            "!Hemangioma",
+            "Realce periférico em glóbulos, descontínuo",
+            "Enche de fora para dentro; igual ao vaso no tardio"
+          ],
+          [
+            "Hiperplasia nodular focal",
+            "Hiper homogêneo",
+            "Iso ao fígado; cicatriz central realça no tardio"
+          ],
+          [
+            "Metástase de cólon",
+            "Hipo, realce periférico (alvo)",
+            "Hipo"
+          ],
+          [
+            "Cisto simples",
+            "Não realça (0–20 UH)",
+            "Não realça"
+          ],
+          [
+            "!Adenocarcinoma de pâncreas",
+            "!Hipoatenuante",
+            "Hipoatenuante; duplo ducto"
+          ],
+          [
+            "Adenoma adrenal",
+            "Sem contraste < 10 UH (rico em gordura)",
+            "Washout absoluto > 60%"
+          ],
+          [
+            "Carcinoma renal de células claras",
+            "Hiper",
+            "Washout"
+          ],
+          [
+            "Abscesso",
+            "Realce em anel",
+            "Centro hipodenso, sem realce"
+          ]
+        ]
+      },
+      "pegadinha": "Hemangioma é o tumor hepático benigno mais comum e NÃO se biopsia (risco de sangramento).",
+      "uerj": "CHC (nódulo em cirrótico) e câncer de pâncreas com TC caíram na UERJ.",
+      "fonte": "Colégio Brasileiro de Radiologia — Manual de meios de contraste / ACR Manual on Contrast Media (2024) / LI-RADS v2018 (ACR) / Sabiston 21ª ed.",
+      "contexto": "**TC trifásica = imagens do mesmo órgão em tempos diferentes após o contraste iodado EV, para ver como cada lesão capta e elimina o contraste.**\n\nDensidade (atenuação):\n- **Hiperdenso/hiperatenuante** → mais claro (absorve mais raio X: osso, cálcio, sangue agudo, contraste)\n- **Hipodenso/hipoatenuante** → mais escuro (líquido, gordura, ar, edema, tumor hipovascular)\n- Sempre comparar com o tecido vizinho\n\nFases:\n- **Sem contraste** → base (cálcio, sangue, gordura)\n- **Arterial (~25–35 s)** → lesões hipervasculares brilham\n- **Portal (~60–70 s)** → fígado normal no máximo; lesão hipovascular fica escura\n- **Tardia (3–5 min)** → washout, cicatriz fibrosa, cápsula\n\nCuidados:\n- Alergia prévia a contraste iodado, função renal, metformina\n\nComo cai:\n- Interpretar o padrão de realce: CHC, hemangioma, pâncreas, adrenal.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "Mesma lesão (CHC) nas fases sem contraste, arterial, portal e tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tcc-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Radiologia",
+      "sub": "TC com contraste — fases, densidade e achados",
+      "frente": "Contraste iodado: cuidados antes da TC (função renal, metformina, alergia)",
+      "verso": "**Função renal → risco maior com TFG < 30 ou IRA → hidratar com SF 0,9%**\n**Metformina → suspender se TFG < 30 ou IRA (reintroduzir após 48 h com função estável)**\n**Alergia prévia → avaliar alternativa ou pré-medicação**\n\nAlergia:\n- Reação prévia leve → pré-medicação com corticoide + anti-histamínico\n- Alergia a frutos do mar NÃO contraindica contraste iodado\n\nOutros cuidados:\n- Hipertireoidismo não controlado → risco de tireotoxicose pela carga de iodo\n- Gestação → só se indispensável",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!TFG < 30 ou IRA → maior risco de lesão renal; hidratar",
+          "!Metformina: suspender se TFG < 30 ou IRA",
+          "Alergia a camarão ≠ alergia a contraste",
+          "Reação grave prévia → evitar o mesmo agente / outro exame"
+        ]
+      },
+      "pegadinha": "Suspender metformina de rotina em todos os pacientes com função renal normal é desnecessário.",
+      "uerj": "Cuidado com contraste pode aparecer em pré-operatório/clínica.",
+      "fonte": "Colégio Brasileiro de Radiologia — Manual de meios de contraste / ACR Manual on Contrast Media (2024) / LI-RADS v2018 (ACR) / Sabiston 21ª ed.",
+      "contexto": "**TC trifásica = imagens do mesmo órgão em tempos diferentes após o contraste iodado EV, para ver como cada lesão capta e elimina o contraste.**\n\nDensidade (atenuação):\n- **Hiperdenso/hiperatenuante** → mais claro (absorve mais raio X: osso, cálcio, sangue agudo, contraste)\n- **Hipodenso/hipoatenuante** → mais escuro (líquido, gordura, ar, edema, tumor hipovascular)\n- Sempre comparar com o tecido vizinho\n\nFases:\n- **Sem contraste** → base (cálcio, sangue, gordura)\n- **Arterial (~25–35 s)** → lesões hipervasculares brilham\n- **Portal (~60–70 s)** → fígado normal no máximo; lesão hipovascular fica escura\n- **Tardia (3–5 min)** → washout, cicatriz fibrosa, cápsula\n\nCuidados:\n- Alergia prévia a contraste iodado, função renal, metformina\n\nComo cai:\n- Interpretar o padrão de realce: CHC, hemangioma, pâncreas, adrenal.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "Mesma lesão (CHC) nas fases sem contraste, arterial, portal e tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tcc-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Radiologia",
+      "sub": "TC com contraste — fases, densidade e achados",
+      "frente": "Mulher, 40 anos, sem hepatopatia, com nódulo hepático de 4 cm achado em USG. Na TC trifásica: realce periférico nodular e descontínuo na fase arterial, com enchimento progressivo centrípeto nas fases portal e tardia, ficando com a mesma densidade dos vasos. O diagnóstico e a conduta são:",
+      "opcoes": [
+        "Carcinoma hepatocelular → ressecção",
+        "Hemangioma → conduta expectante, sem biópsia",
+        "Metástase hipervascular → biópsia percutânea",
+        "Hiperplasia nodular focal → suspender anticoncepcional e ressecar"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "CHC tem realce arterial difuso e washout (fica escuro), em geral em cirrótico.",
+        "Gabarito: realce periférico globular com enchimento centrípeto = hemangioma; assintomático → observar.",
+        "Metástase não faz enchimento centrípeto; biopsiar hemangioma pode sangrar.",
+        "HNF realça homogêneo no arterial e tem cicatriz central; não precisa ressecar."
+      ],
+      "pegadinha": "Nódulo que \"brilha\" no arterial não é sempre CHC — o padrão (periférico × difuso) e o washout decidem.",
+      "uerj": "Interpretação de realce na TC aparece nos comentários de questões de fígado e pâncreas.",
+      "fonte": "Colégio Brasileiro de Radiologia — Manual de meios de contraste / ACR Manual on Contrast Media (2024) / LI-RADS v2018 (ACR) / Sabiston 21ª ed.",
+      "contexto": "**TC trifásica = imagens do mesmo órgão em tempos diferentes após o contraste iodado EV, para ver como cada lesão capta e elimina o contraste.**\n\nDensidade (atenuação):\n- **Hiperdenso/hiperatenuante** → mais claro (absorve mais raio X: osso, cálcio, sangue agudo, contraste)\n- **Hipodenso/hipoatenuante** → mais escuro (líquido, gordura, ar, edema, tumor hipovascular)\n- Sempre comparar com o tecido vizinho\n\nFases:\n- **Sem contraste** → base (cálcio, sangue, gordura)\n- **Arterial (~25–35 s)** → lesões hipervasculares brilham\n- **Portal (~60–70 s)** → fígado normal no máximo; lesão hipovascular fica escura\n- **Tardia (3–5 min)** → washout, cicatriz fibrosa, cápsula\n\nCuidados:\n- Alergia prévia a contraste iodado, função renal, metformina\n\nComo cai:\n- Interpretar o padrão de realce: CHC, hemangioma, pâncreas, adrenal.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "Mesma lesão (CHC) nas fases sem contraste, arterial, portal e tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
     }
   ],
   "rev": 1792759807234
