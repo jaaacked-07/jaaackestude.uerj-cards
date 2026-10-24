@@ -258,6 +258,7 @@ textarea.note:focus{border-color:var(--rose)}
 .mine{margin-top:16px;border-left:3px solid var(--rose);padding:2px 0 2px 12px}
 .mine .mh{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);font-weight:600;margin-bottom:3px}
 .mine .mt{font-size:16px;white-space:pre-wrap}
+.mine .mimg{display:block;max-width:100%;max-height:min(60vh,520px);width:auto;height:auto;object-fit:contain;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .addn{margin-top:14px;font-size:14px;color:var(--rose);font-weight:500}
 .mine textarea,.ned{width:100%;min-height:80px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-size:15px;outline:none;margin-top:6px}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
@@ -1135,21 +1136,42 @@ function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else r
 
 /* ===== Favorito e anotação pessoal no card ===== */
 function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
+/* anotação pessoal: texto + fotos coladas, guardadas como ![](data/img/...) dentro do próprio texto */
+const IMG_RE=/!\[[^\]]*\]\(([^)\s]+)\)/g;
+function minhaCorpo(t){
+  let h='',i=0; String(t).replace(IMG_RE,(m,src,pos)=>{ const tx=t.slice(i,pos).replace(/^\n+|\n+$/g,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; h+=`<img class="mimg" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`; i=pos+m.length; return m; });
+  const tx=t.slice(i).replace(/^\n+|\n+$/g,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; return h;
+}
 function minhaHTML(id){
   const t=(BYID[id]||{}).minha;
-  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div><div class="mt">${esc(t)}</div></div><button class="addn" data-ed="${id}">Editar card</button>`:`<button class="addn" data-ed="${id}">Editar card</button>`}</div>`;
+  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div>${minhaCorpo(t)}</div><button class="addn" data-ed="${id}">Editar card</button>`:`<button class="addn" data-ed="${id}">Editar card</button>`}</div>`;
 }
 document.addEventListener('keydown',e=>{
   const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.mbx')) return;
-  if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); const b=t.closest('.mbx').querySelector('[data-sv]'); if(b) b.click(); }
+  if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&tecladoFisico()){ e.preventDefault(); const b=t.closest('.mbx').querySelector('[data-sv]'); if(b) b.click(); }
+});
+/* colar foto (Ctrl+V) na anotação do card */
+document.addEventListener('paste',async e=>{
+  const ta=e.target; if(!ta.classList||!ta.classList.contains('ned')||!ta.closest('.mbx')) return;
+  const fs=[...(e.clipboardData||{}).items||[]].filter(i=>i.kind==='file'&&/^image\//.test(i.type)).map(i=>i.getAsFile());
+  if(!fs.length) return; e.preventDefault();
+  const id=ta.closest('.mbx').dataset.mid, sv=ta.closest('.mbx').querySelector('[data-sv]'); if(sv) sv.disabled=true;
+  toast('Enviando foto…');
+  for(const f of fs){ let u; try{u=await comprimir(f)}catch(er){toast('Não consegui ler essa imagem');continue}
+    let path=await subirImgCard(u,'minha-'+id.replace(/[^\w-]/g,'')+'-'+Date.now().toString(36));
+    if(!path){ path='local:'+Date.now().toString(36); try{const c=imgCache(); c[path]=u; localStorage.setItem(IMGC_KEY,JSON.stringify(c));}catch(er){} toast('Sem conexão: a foto fica só neste aparelho'); }
+    const p0=ta.selectionStart, v=ta.value, tok=(p0&&v[p0-1]!=='\n'?'\n':'')+`![](${path})`+'\n';
+    ta.value=v.slice(0,p0)+tok+v.slice(ta.selectionEnd); ta.setSelectionRange(p0+tok.length,p0+tok.length); }
+  if(sv) sv.disabled=false; ta.focus(); toast('Foto colada — toque em salvar');
 });
 document.addEventListener('click',e=>{
+  const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ folha(`<img src="${esc(zm.getAttribute('src'))}" alt="" style="width:100%;height:auto;border-radius:12px;display:block">`); return; }
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const ed=e.target.closest('[data-ed]');
   if(ed){const id=ed.dataset.ed,box=ed.closest('.mbx');
-    box.innerHTML=`<div class="mine"><div class="mh">Minha anotação</div><textarea class="ned" placeholder="Escreva como se fosse parte do card…">${esc((BYID[id]||{}).minha||'')}</textarea><button class="addn" data-sv="${id}">salvar</button></div>`;
+    box.innerHTML=`<div class="mine"><div class="mh">Minha anotação</div><textarea class="ned" placeholder="Escreva como se fosse parte do card… (cole fotos com Ctrl+V)">${esc((BYID[id]||{}).minha||'')}</textarea><button class="addn" data-sv="${id}">salvar</button></div>`;
     box.querySelector('textarea').focus();return}
   const sv=e.target.closest('[data-sv]');
   if(sv){const id=sv.dataset.sv,box=sv.closest('.mbx'),t=box.querySelector('textarea').value.trim();

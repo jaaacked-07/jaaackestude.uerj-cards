@@ -51,7 +51,7 @@ Se uma anotação for ilegível ou não tiver conteúdo médico, ainda assim mov
 ## Campos que o app grava (não mexer)
 
 A Jacke edita, renomeia, favorita e oculta cards pelo app, e isso é gravado direto em `data/cards.json`:
-`fav`, `oculto`, `minha` (texto dela no card) e `rev` (no topo do arquivo). Nunca altere nem remova esses campos, e nunca desfaça edições que ela fez em `frente`/`verso`/`tema`/`sub`.
+`fav`, `oculto`, `minha` (texto dela no card; pode conter fotos coladas no formato `![](data/img/...jpg)`) e `rev` (no topo do arquivo). Nunca altere nem remova esses campos, e nunca desfaça edições que ela fez em `frente`/`verso`/`tema`/`sub`.
 Ao criar cards novos, **reutilize os nomes de `tema` e `sub` que já existem** no arquivo quando o assunto for o mesmo (ela pode ter renomeado). Nunca crie uma matéria ou assunto novo que seja variação de um existente (acento, abreviação, sinônimo, singular/plural: "Preventiva" = "Medicina Preventiva" = "Saúde Coletiva"; "Clínica" = "Clínica Médica"). Se a matéria que ela escreveu na anotação já existir com outro nome, use o nome que já existe.
 
 ## Organização: grande área → matéria → assunto
