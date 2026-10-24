@@ -1942,7 +1942,7 @@ function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w)w.style.paddingBottom=(f
 new MutationObserver(()=>{ajustaPe();aplicarZonas();pintarAnots();fabMT()}).observe(document.body,{childList:true,subtree:true});
 function sessao(ids,modo,prev,nome){
   ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
-  SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||''};
+  SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||'',t0:(prev&&prev.t0)||Date.now()};
   if(prev){ SS.feitos=prev.feitos||0; SS.total=SS.feitos+ids.length; SS.unicos=(prev.unicos||0)||SS.total; SS.acertos=prev.acertos||0; }
   const el=document.createElement('div');el.className='sess';el.id='sess';
   el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="x vt hide" id="svt" aria-label="Voltar ao card anterior" title="Voltar ao card anterior (Z)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
@@ -1950,13 +1950,15 @@ function sessao(ids,modo,prev,nome){
   $('#sx').onclick=sair; $('#svt').onclick=voltarCard; SS.hist=[];
   proximoCard();
 }
-function retAtual(){ return S.ret&&S.ret.fila&&S.ret.fila.some(id=>BYID[id])?{...S.ret,fila:S.ret.fila.filter(id=>BYID[id])}:null; }
+/* "Retomar": tira o que já foi respondido hoje (mesmo se o app fechou no meio, sem passar pelo "sair") */
+function retAtual(){ if(!S.ret||!S.ret.fila) return null; const h=hoje(), f=[...new Set(S.ret.fila)].filter(id=>BYID[id]&&!(S.srs[id]&&S.srs[id].last===h&&(S.srs[id].t||0)>(S.ret.t0||0)));
+  return f.length?{...S.ret,fila:f}:null; }
 function retBtn(ret,st){ return ret?`<button class="btn ${st||'ghost'} retb" style="margin-top:14px">↺ Retomar ${ret.modo==='erros'?'revisão de erros':esc(ret.nome||'baralho')} · ${ret.fila.length}</button>`:''; }
 function ligarRet(ret){ document.querySelectorAll('.retb').forEach(b=>b.onclick=()=>sessao(ret.fila,ret.modo,ret)); }
 function guardarRetomar(){
   if(!SS||SS.modo==='dia') return;   // a fila do dia já se retoma pelo "Continuar"
   const resto=[...new Set(SS.fila)].filter(id=>BYID[id]);
-  S.ret=resto.length?{t:Date.now(),modo:SS.modo,nome:SS.nome,fila:resto,feitos:SS.feitos,unicos:SS.unicos,acertos:SS.acertos}:{t:Date.now(),fila:[]};
+  S.ret=resto.length?{t:Date.now(),t0:SS.t0,modo:SS.modo,nome:SS.nome,fila:resto,feitos:SS.feitos,unicos:SS.unicos,acertos:SS.acertos}:{t:Date.now(),fila:[]};
   save();
 }
 function sair(){guardarRetomar();const e=$('#sess');if(e)e.remove();document.body.style.overflow='';SS=null;render();syncProg()}
@@ -2015,7 +2017,7 @@ function responder(c,r,t){
   SS.xp+=ganho; addXP(ganho);
   if(r===2){SS.combo++;if(!repetido)SS.acertos++;SS.maxCombo=Math.max(SS.maxCombo,SS.combo)} else SS.combo=0;
   if(S.plan && S.plan.ids.includes(id) && !S.plan.done.includes(id)) S.plan.done.push(id);
-  save(); proximoCard();
+  guardarRetomar(); save(); proximoCard();
 }
 /* volta ao card anterior desfazendo a resposta (agendamento, XP, contagem do dia) */
 function voltarCard(){
@@ -2026,6 +2028,7 @@ function voltarCard(){
   if(h.done&&S.plan) S.plan.done=h.done;
   if(h.hoje) S.hoje=h.hoje;
   if(h.dia) S.dias[h.d]=h.dia; else delete S.dias[h.d];
+  guardarRetomar();
   S.xpDev[DEV]=h.xpDev; recalc(); save(); proximoCard(); vib(8);
 }
 function fim(){
