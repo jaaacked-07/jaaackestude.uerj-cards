@@ -1170,8 +1170,8 @@ function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<spa
 /* anotação pessoal: texto + fotos coladas, guardadas como ![](data/img/...) dentro do próprio texto */
 const IMG_RE=/!\[[^\]]*\]\(([^)\s]+)\)/g;
 function minhaCorpo(t){
-  let h='',i=0; String(t).replace(IMG_RE,(m,src,pos)=>{ const tx=t.slice(i,pos).replace(/^\n+|\n+$/g,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; h+=`<img class="mimg" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`; i=pos+m.length; return m; });
-  const tx=t.slice(i).replace(/^\n+|\n+$/g,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; return h;
+  let h='',i=0; String(t).replace(IMG_RE,(m,src,pos)=>{ const tx=t.slice(i,pos).replace(i?/^\n/:/^/,'').replace(/\n$/,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; h+=`<img class="mimg" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`; i=pos+m.length; return m; });
+  const tx=t.slice(i).replace(i?/^\n/:/^/,''); if(tx) h+=`<div class="mt">${esc(tx.replace(/\n$/,'\n\u200b'))}</div>`; return h;
 }
 function minhaHTML(id){
   const t=anParse((BYID[id]||{}).minha).base;
@@ -1181,10 +1181,12 @@ function minhaHTML(id){
    guardadas no mesmo campo "minha": bloco "@@nota|n|âncora" + texto, então sincronizam igual */
 const AN_RE=/^@@nota\|(\d+)\|(.*)$/, AN_BLK='li,p,.vis,.opt,.q,.czq,.mac,.dgr,.uerj,.pega,.ctxh,.src,.tag,.fn';
 let NT=false;
+/* guarda o texto como ela digitou (linhas em branco incluídas); entre blocos vai 1 linha em branco de separação */
 function anParse(s){ const base=[],l=[]; let cur=null;
-  String(s||'').split('\n').forEach(x=>{ const m=x.match(AN_RE); if(m){ cur={n:+m[1],a:m[2],t:[]}; l.push(cur); } else (cur?cur.t:base).push(x); });
-  return {base:base.join('\n').trim(), l:l.map(o=>({n:o.n,a:o.a,t:o.t.join('\n').trim()}))}; }
-const anJoin=p=>[p.base,...p.l.filter(o=>o.t).map(o=>`@@nota|${o.n}|${o.a}\n${o.t}`)].filter(Boolean).join('\n\n').trim();
+  String(s||'').replace(/\r/g,'').split('\n').forEach(x=>{ const m=x.match(AN_RE); if(m){ if(!cur&&base.length&&base[base.length-1]==='') base.pop(); else if(cur&&cur.t.length&&cur.t[cur.t.length-1]==='') cur.t.pop(); cur={n:+m[1],a:m[2],t:[]}; l.push(cur); } else (cur?cur.t:base).push(x); });
+  const tx=a=>{ const t=a.join('\n'); return t.trim()?t:''; };
+  return {base:tx(base), l:l.map(o=>({n:o.n,a:o.a,t:tx(o.t)}))}; }
+const anJoin=p=>[p.base,...p.l.filter(o=>o.t&&o.t.trim()).map(o=>`@@nota|${o.n}|${o.a}\n${o.t}`)].filter(x=>x&&x.trim()).join('\n\n');
 function anTxt(b){ const c=b.cloneNode(true); c.querySelectorAll('.anot'+(b.tagName==='LI'?',ul':'')).forEach(x=>x.remove());
   let t=c.textContent.replace(/\s+/g,' ').trim(); if(!t){ const im=b.querySelector('img'); t=im?'img:'+(im.getAttribute('src')||'').slice(-40):''; } return t.slice(0,60); }
 const anBlocos=root=>[...root.querySelectorAll(AN_BLK)].filter(b=>!b.closest('.anot,.mbx')&&b.closest('[data-an]')===root);
@@ -1227,7 +1229,7 @@ function anEditarBase(box){ if(!box||box.querySelector('.anot.edit')) return; co
   box.innerHTML=''; box.appendChild(el); anFocar(el); }
 function anSalvar(ed){
   if(!ed||!ed.isConnected||ed.dataset.saving||ed.dataset.busy) return; ed.dataset.saving=1;
-  const id=ed.dataset.mid, k=ed.dataset.k, t=ed.querySelector('textarea').value.trim(), antes=(BYID[id]||{}).minha||'', p=anParse(antes);
+  const id=ed.dataset.mid, k=ed.dataset.k, t0=ed.querySelector('textarea').value.replace(/\r/g,''), t=t0.trim()?t0.replace(/\s+$/,m=>m.replace(/[^\n]/g,'')):'', antes=(BYID[id]||{}).minha||'', p=anParse(antes);
   if(k==='b') p.base=t; else if(k==='novo'){ if(t) p.l.push({n:+ed.dataset.n||0,a:ed.dataset.a||'',t}); } else if(p.l[+k]) p.l[+k].t=t;
   const novo=anJoin(p); ed.remove();
   if(novo!==antes){ S.minha[id]=novo; save(); reaplicar(); toast(t?'Anotação salva':'Anotação apagada'); syncEdits(); }
