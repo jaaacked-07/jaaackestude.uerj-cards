@@ -357,6 +357,9 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .simtile{aspect-ratio:1;background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:transform .12s}
 .simtile:active{transform:scale(.97)}
 .simtile{justify-content:space-between;text-align:center;align-items:center}
+.simtile.c2{aspect-ratio:auto;min-height:100%}
+.simtile .nmw{display:flex;flex-direction:column;align-items:center;gap:5px;width:100%}
+.simtile .nm2{font-size:12.5px;font-weight:700;color:var(--wine);background:var(--wine-soft);border-radius:8px;padding:3px 9px;line-height:1.3;max-width:100%;overflow-wrap:anywhere;white-space:normal}
 .simtile .nm{font-size:13.5px;color:var(--mute);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
 .simtile .k{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 .simtile .ln{display:flex;justify-content:center;align-items:baseline;gap:10px}
@@ -1426,8 +1429,8 @@ function pPct(){
     ${grafico(L)}
     <button class="btn" id="addS">Adicionar simulado</button>
     ${L.length?`<button class="btn ghost" id="verS" style="margin-top:10px">${VER_SIM?'Ocultar simulados':'Ver simulados · '+L.length}</button>`:''}
-    ${L.length&&VER_SIM?`<div class="simgrid">${L.slice().reverse().map(x=>`<button class="simtile" data-sid="${x.id}">
-      <div class="nm">${esc(x.nome)}</div>
+    ${L.length&&VER_SIM?`<div class="simgrid">${L.slice().reverse().map(x=>`<button class="simtile ${x.area?'c2':''}" data-sid="${x.id}">
+      <div class="nmw"><div class="nm">${esc(x.nome)}</div>${x.area?`<div class="nm2">${esc(x.area)}</div>`:''}</div>
       <div class="blk"><div class="k">Simulado</div><div class="ln"><span class="fr">${x.tot?x.ac+'/'+x.tot:'—'}</span><span class="pc">${x.g!=null?x.g+'%':''}</span></div></div>
       <div class="blk"><div class="k">UERJ</div><div class="ln"><span class="fr">${x.utot?x.uac+'/'+x.utot:'—'}</span><span class="pc u">${x.u!=null?x.u+'%':''}</span></div></div>
     </button>`).join('')}</div>`:L.length?'':`<div class="empty"><div class="serif">Nenhum simulado ainda</div>Adicione o primeiro para acompanhar sua evolução.</div>`}
@@ -1470,18 +1473,20 @@ function editarSim(id,novo){
       <div><label>Acertos</label><input inputmode="numeric" id="${k2}" value="${x[k2]||''}"></div>
       <div><label>Questões</label><input inputmode="numeric" id="${k1}" value="${x[k1]||''}"></div>
       <div class="pp ${cls}" id="p_${k1}">${pc(x[k2],x[k1])!=null?pc(x[k2],x[k1])+'%':'—'}</div></div>`;
-  folha(`<input class="srch" id="sn" value="${esc(x.nome)}" style="font-family:Fraunces,Georgia,serif;font-size:19px">
+  folha(`<div class="tm">Título</div><input class="srch" id="sn" value="${esc(x.nome)}" style="font-family:Fraunces,Georgia,serif;font-size:19px">
+    <div class="tm">Área / anotação (opcional · aparece em destaque no quadrinho)</div><input class="srch" id="sa" value="${esc(x.area||'')}" placeholder="Ex.: Clínica · Gineco · Geral">
     ${campo('tot','ac','','Simulado (total)')}${campo('utot','uac','u','Só questões da UERJ')}
     <button class="btn" id="ss" style="margin-top:20px">Salvar</button>
     <div class="foot"><button class="link" id="sd" style="color:var(--bad)">apagar simulado</button></div>`);
   const num=k=>Math.max(0,parseInt(($('#'+k).value||'').replace(/\D/g,''))||0);
   const upd=()=>[['tot','ac'],['utot','uac']].forEach(([t,a])=>{const T=num(t),A=num(a),el=$('#p_'+t); el.textContent=T?Math.round(Math.min(A,T)/T*100)+'%':'—';});
+  $('#sa').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('#ss').click()}};
   ['ac','tot','uac','utot'].forEach(k=>{$('#'+k).oninput=upd; $('#'+k).onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('#ss').click()}}});
   if(novo) setTimeout(()=>$('#ac').focus(),250);
   $('#ss').onclick=()=>{
     const T=num('tot'),A=num('ac'),UT=num('utot'),UA=num('uac');
     if(A>T||UA>UT){toast('Acertos não podem passar do total de questões');return}
-    Object.assign(x,{nome:$('#sn').value.trim()||x.nome,tot:T,ac:A,utot:UT,uac:UA,u:Date.now()}); save(); fecharFolha(); pPct();
+    Object.assign(x,{nome:$('#sn').value.trim()||x.nome,area:$('#sa').value.trim(),tot:T,ac:A,utot:UT,uac:UA,u:Date.now()}); if(!x.area) delete x.area; save(); fecharFolha(); pPct();
   };
   $('#sd').onclick=async()=>{ if(!(await confirmar('Apagar este simulado?','Apagar')))return; S.simDel[id]=1; S.sim=S.sim.filter(s=>s.id!==id); save(); pPct(); };
 }
