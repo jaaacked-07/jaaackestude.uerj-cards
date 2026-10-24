@@ -70,7 +70,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "PNVS: as ações de vigilância são só coletivas? Em quais pontos de atenção acontecem?",
-      "verso": "**Individuais OU coletivas**, em **TODOS** os pontos de atenção.\n\n- Não são só coletivas.\n- Não ficam só na APS: a vigilância está em toda a Rede de Atenção.",
+      "verso": "**Individuais OU coletivas.**\n**Em TODOS os pontos de atenção.**\n\n- Não são só coletivas.\n- Não ficam só na APS: a vigilância está em toda a Rede de Atenção.",
       "pegadinha": "Alternativa que diz \"apenas coletivas\" ou \"apenas na APS\" está errada.",
       "fonte": "Resolução CNS 588/2018 (diretriz II)",
       "add": "2026-10-20",
@@ -88,7 +88,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "PNVS",
       "frente": "Quais vigilâncias a PNVS manda integrar? \nPNVS: politica nacional de vigilancia sanitaria",
-      "verso": "**PNVS = Política Nacional de Vigilância em Saúde.**\n\n- Integra as 4 vigilâncias + os laboratórios de saúde pública.\n- Preserva as especificidades de cada uma.\n- A vigilância **sanitária** é só uma das 4 (não é o nome da política).",
+      "verso": "**4 vigilâncias + laboratórios de saúde pública:**\n- Epidemiológica\n- Sanitária\n- Ambiental\n- Saúde do trabalhador\n\n- PNVS = Política Nacional de Vigilância em **Saúde** (não \"sanitária\").\n- Preserva as especificidades de cada vigilância.\n- A vigilância **sanitária** é só uma das 4.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -218,7 +218,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Qual a premissa das Internações por Condições Sensíveis à APS (ICSAP)?",
-      "verso": "**APS oportuna e de boa qualidade evita a internação** (ou reduz sua frequência) nessas condições.\n\n- Por isso a ICSAP alta sugere APS falhando.",
+      "verso": "**APS boa evita a internação.**\n\n- Por isso a ICSAP alta sugere APS falhando.",
       "fonte": "Lista brasileira de ICSAP (Portaria SAS/MS 221/2008)",
       "add": "2026-10-20",
       "contexto": "**ICSAP = internações que uma APS boa evitaria.**\n\n- Lista brasileira: Portaria SAS/MS 221/2008 (19 grupos de causas).\n- Usada como **indicador indireto** de acesso, qualidade e resolutividade da APS.\n- ICSAP alta → APS falhando (acesso, prevenção, acompanhamento).\n\nGrandes grupos:\n- Preveníveis por vacina e condições evitáveis\n- Infecções (gastroenterites, ORL, pneumonia bacteriana, ITU, pele, DIP)\n- Crônicas (HAS, angina, IC, AVC, DM, asma, DPOC, epilepsia)\n- Outras (anemia, deficiências nutricionais, úlcera, pré-natal e parto)\n\nLimitações:\n- Depende da qualidade do registro (AIH) e do perfil da população.\n\nComo cai:\n- \"Qual NÃO é condição sensível?\" (ex.: apendicite, câncer, trauma).",
@@ -322,7 +322,7 @@
       "tema": "Atenção Primária",
       "sub": "ICSAP",
       "frente": "Quais condições \"parecem hospitalares\", mas ESTÃO na lista de ICSAP?",
-      "verso": "**Todas estas ESTÃO na lista de ICSAP.**\n\n- Epilepsia\n- Úlcera gastrintestinal\n- Angina\n- Insuficiência cardíaca\n- AVC (doença cerebrovascular)\n- DIP",
+      "verso": "**ESTÃO na lista de ICSAP:**\n- Epilepsia\n- Úlcera gastrintestinal\n- Angina\n- Insuficiência cardíaca\n- AVC (doença cerebrovascular)\n- DIP",
       "pegadinha": "A banca coloca essas como distratores achando que você vai excluir. Elas entram!",
       "fonte": "Portaria SAS/MS 221/2008",
       "add": "2026-10-20",
@@ -369,7 +369,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Sinais da apendicite: como pesquisar e o que sugere cada um",
-      "verso": "**Cada sinal aponta a posição do apêndice ou só irritação peritoneal (tabela).**",
+      "verso": "**Psoas → retrocecal**\n**Obturador → pélvica**\n**Rovsing / Dunphy / Blumberg → irritação peritoneal**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -537,7 +537,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendicite",
       "frente": "Escore de Alvarado: quais os itens, quantos pontos cada um e como interpretar?",
-      "verso": "**Alvarado = MANTRELS, total de 10 pontos.**\n\n- Só **dor em FID** e **leucocitose** valem 2; o resto vale 1.\n\nInterpretação:\n- **≤ 4** → apendicite improvável → observar / outro diagnóstico\n- **5–6** → possível → observação e exame de imagem\n- **≥ 7** → provável → avaliação cirúrgica\n\nPor quê:\n- Escore baixo ajuda a **excluir**; escore alto não dispensa a avaliação clínica.",
+      "verso": "**MANTRELS = 10 pontos.**\n**Dor em FID e leucocitose → 2 pontos.**\n**Os outros 6 → 1 ponto.**\n\nInterpretação:\n- **≤ 4** → apendicite improvável → observar / outro diagnóstico\n- **5–6** → possível → observação e exame de imagem\n- **≥ 7** → provável → avaliação cirúrgica\n\nPor quê:\n- Escore baixo ajuda a **excluir**; escore alto não dispensa a avaliação clínica.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -612,7 +612,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata SÓ para o município (SMS): quais agravos?",
-      "verso": "**Só para o município (SMS).**\n\n- Lógica: agravos de resposta local — acidentes, tétano e violência.",
+      "verso": "**Só município:**\n- Acidentes (trabalho, peçonhento, mordedura)\n- Tétano\n- Violência sexual / tentativa de suicídio\n\n- Lógica: agravos de resposta local — acidentes, tétano e violência.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -641,7 +641,7 @@
       "tema": "Vigilância em Saúde",
       "sub": "Notificação imediata",
       "frente": "Notificação imediata para SMS + SES (sem o MS): quais agravos?",
-      "verso": "**SMS + SES (sem o MS).**\n\n- Lógica: doenças graves que exigem ação regional rápida (bloqueio, quimioprofilaxia).",
+      "verso": "**SMS + SES = doenças de bloqueio regional:**\n- Coqueluche\n- Difteria\n- Meningites\n\n- Lógica: doenças graves que exigem ação regional rápida (bloqueio, quimioprofilaxia).",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -841,7 +841,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Estadiamento FIGO 2018 do câncer de colo do útero: qual a lógica geral?",
-      "verso": "**Quanto o tumor andou para fora do colo.**\n\n- **I** → fica no colo\n- **II** → sai do útero (vagina alta ou paramétrio)\n- **III** → vagina baixa, parede pélvica, rim (hidronefrose) ou linfonodos\n- **IV** → sai da pelve ou invade bexiga/reto\n\nDesde 2018:\n- Imagem e patologia podem ser usadas em qualquer estádio (antes era só clínico).\n- Na dúvida, fica-se com o estádio menor.",
+      "verso": "**Quanto o tumor andou para fora do colo:**\n- **I** → fica no colo\n- **II** → sai do útero (vagina alta ou paramétrio)\n- **III** → vagina baixa, parede pélvica, rim (hidronefrose) ou linfonodos\n- **IV** → sai da pelve ou invade bexiga/reto\n\nDesde 2018:\n- Imagem e patologia podem ser usadas em qualquer estádio (antes era só clínico).\n- Na dúvida, fica-se com o estádio menor.",
       "fonte": "FIGO 2018 (Int J Gynaecol Obstet)",
       "add": "2026-10-20",
       "uerj": "Em prova de residência (UERJ inclusive), o estadiamento quase sempre vem dentro de um caso clínico: a questão dá um achado (TC, exame, biópsia) e pede o estádio ou a conduta. Treine o raciocínio achado → estádio → tratamento.",
@@ -1023,7 +1023,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Câncer de colo: tratamento por estádio",
-      "verso": "**Quanto mais cedo, mais cirúrgico.**\n\n- Tumor > 4 cm ou paramétrio invadido → quimiorradiação (cisplatina semanal + RT externa + braquiterapia).\n- Doença inicial e desejo de gestar → pode preservar o útero (conização ou traquelectomia radical).",
+      "verso": "**Até IIA1 → cirurgia.**\n**IIB em diante → quimiorradiação.**\n\n- Tumor > 4 cm ou paramétrio invadido → quimiorradiação (cisplatina semanal + RT externa + braquiterapia).\n- Doença inicial e desejo de gestar → pode preservar o útero (conização ou traquelectomia radical).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1329,7 +1329,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS: o que significa cada categoria e qual a conduta?",
-      "verso": "**Cada número do BI-RADS já é a conduta.**",
+      "verso": "**Cada número já é a conduta:**\n- 0 → completar\n- 1 e 2 → rotina\n- 3 → controle em 6 meses\n- 4 e 5 → biópsia\n- 6 → tratar",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1393,7 +1393,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "BI-RADS 3: como é o seguimento?",
-      "verso": "**Controle de curto intervalo por ~2 anos.**",
+      "verso": "**Controle aos 6, 12 e 24 meses.**",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -1614,7 +1614,7 @@
       "tema": "Mastologia",
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Rastreamento do câncer de mama no SUS: quem e a cada quanto tempo?",
-      "verso": "**Ministério da Saúde (set/2025): mamografia a cada 2 anos dos 50 aos 74 anos.**\n\nO que mudou:\n- Antes o limite era 69 anos.\n- A faixa de 40–49 dependia de sintoma ou risco; agora é por demanda, com decisão compartilhada.",
+      "verso": "**Mamografia a cada 2 anos, dos 50 aos 74.**\n**Fonte → Ministério da Saúde (set/2025).**\n\nO que mudou:\n- Antes o limite era 69 anos.\n- A faixa de 40–49 dependia de sintoma ou risco; agora é por demanda, com decisão compartilhada.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1770,7 +1770,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quais são os parâmetros de uma CTG normal (tranquilizadora)?",
-      "verso": "**CTG normal = tranquilizadora** (parâmetros na tabela).\n\nPor quê:\n- A **variabilidade** é o melhor marcador de oxigenação do SNC fetal: preservada, praticamente exclui acidemia naquele momento.\n- Feto **reativo** = ≥ 2 acelerações em 20 min.",
+      "verso": "**CTG normal:**\n- Linha de base 110–160\n- Variabilidade moderada (6–25)\n- Acelerações presentes\n- Sem desacelerações\n\nPor quê:\n- A **variabilidade** é o melhor marcador de oxigenação do SNC fetal: preservada, praticamente exclui acidemia naquele momento.\n- Feto **reativo** = ≥ 2 acelerações em 20 min.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1882,7 +1882,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Quando a DIP umbilical (variável) é desfavorável?",
-      "verso": "**É desfavorável quando há sinais de hipóxia** (tabela).\n\nPor quê:\n- A DIP III típica tem \"ombros\" e recupera rápido: o feto está compensando.\n- Sem ombros e com recuperação lenta, a compressão está levando à acidemia.",
+      "verso": "**Desfavorável = sinais de hipóxia:**\n- Sem ombros / overshoot\n- Recuperação lenta ou bifásica (W)\n- Variabilidade reduzida\n- Queda > 60 bpm ou > 60 s\n\nPor quê:\n- A DIP III típica tem \"ombros\" e recupera rápido: o feto está compensando.\n- Sem ombros e com recuperação lenta, a compressão está levando à acidemia.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -1922,7 +1922,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Classificação da CTG intraparto em 3 categorias (NICHD/ACOG): o que é Categoria I, II e III?",
-      "verso": "**Sem variabilidade ausente (ou padrão sinusoidal), nunca é categoria III.**",
+      "verso": "**Categoria I → normal**\n**Categoria II → indeterminada**\n**Categoria III → variabilidade AUSENTE + DIPs/bradicardia, ou sinusoidal**\n\nPegadinha:\n- Sem variabilidade ausente (ou padrão sinusoidal), **nunca** é categoria III.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -1966,7 +1966,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Conduta diante de CTG categoria III / sofrimento fetal agudo intraparto",
-      "verso": "**Reanimação intraútero imediata.** Sem melhora rápida → parto pela via mais rápida e segura.\n\nMedidas (corrigem a causa):\n- Decúbito lateral esquerdo (descomprime cava/aorta)\n- Suspender ocitocina; tratar taquissistolia (tocolítico agudo se preciso)\n- Corrigir hipotensão materna (hidratação; vasopressor pós-analgesia)\n- Toque vaginal para afastar prolapso de cordão",
+      "verso": "**Reanimação intraútero imediata.**\n**Sem melhora → parto pela via mais rápida.**\n\nMedidas (corrigem a causa):\n- Decúbito lateral esquerdo (descomprime cava/aorta)\n- Suspender ocitocina; tratar taquissistolia (tocolítico agudo se preciso)\n- Corrigir hipotensão materna (hidratação; vasopressor pós-analgesia)\n- Toque vaginal para afastar prolapso de cordão",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -2002,7 +2002,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Causas de alteração da linha de base e da variabilidade (taquicardia, bradicardia, padrão sinusoidal, variabilidade reduzida)",
-      "verso": "**Cada alteração aponta um grupo de causas.**\n**Muitas não são hipóxia.**",
+      "verso": "**Taquicardia → febre / corioamnionite**\n**Bradicardia → hipotensão materna / taquissistolia**\n**Variabilidade ↓ → sono / opioide / MgSO4**\n**Sinusoidal → anemia fetal**",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -2121,7 +2121,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "O que é sofrimento fetal crônico e quais são as principais causas?",
-      "verso": "**Hipoxemia fetal de instalação lenta por insuficiência placentária.**\n\n- Causa principal: **síndromes hipertensivas**.",
+      "verso": "**Insuficiência placentária → hipoxemia fetal lenta.**\n**Causa nº 1 → síndromes hipertensivas.**\n\n- Causa principal: **síndromes hipertensivas**.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -2152,7 +2152,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Perfil biofísico fetal (Manning): parâmetros, pontuação e interpretação",
-      "verso": "**5 parâmetros, 0 ou 2 pontos cada** (tabela).\n\nInterpretação:\n- **8–10** → normal\n- **6** → duvidoso\n- **≤ 4** → anormal\n\nPor quê:\n- Os 4 primeiros dependem do SNC **no momento** (agudos).\n- O líquido reflete semanas de perfusão renal (crônico).",
+      "verso": "**5 itens × 2 pontos = 10.**\n**8–10 → normal**\n**6 → duvidoso**\n**≤ 4 → anormal**\n\nPor quê:\n- Os 4 primeiros dependem do SNC **no momento** (agudos).\n- O líquido reflete semanas de perfusão renal (crônico).",
       "visual": [
         {
           "tipo": "tabela",
@@ -2216,7 +2216,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Dopplervelocimetria no sofrimento fetal crônico: qual a sequência de alterações?",
-      "verso": "**Sequência de piora:**\n\n- Artéria umbilical com resistência aumentada\n- Centralização (cerebral média dilata)\n- Diástole zero\n- Diástole reversa\n- Ducto venoso alterado (o mais tardio e grave)",
+      "verso": "**Sequência de piora:**\n- Artéria umbilical com resistência aumentada\n- Centralização (cerebral média dilata)\n- Diástole zero\n- Diástole reversa\n- Ducto venoso alterado (o mais tardio e grave)",
       "visual": [
         {
           "tipo": "svg",
@@ -2266,7 +2266,7 @@
       "tema": "Vitalidade fetal",
       "sub": "Sofrimento fetal crônico",
       "frente": "Conduta (momento do parto) no feto com insuficiência placentária conforme o Doppler",
-      "verso": "**Quanto pior o Doppler, mais cedo se interrompe** (FEBRASGO / protocolo de Barcelona).\n\nAntes do parto:\n- < 34 semanas → corticoide.\n- < ~32 semanas → sulfato de magnésio (neuroproteção).",
+      "verso": "**Quanto pior o Doppler, mais cedo o parto:**\n- Centralização → 37 semanas\n- Diástole zero → 34 semanas\n- Diástole reversa → 30 semanas\n- Ducto venoso alterado → ~26 semanas\n\nAntes do parto:\n- < 34 semanas → corticoide.\n- < ~32 semanas → sulfato de magnésio (neuroproteção).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2501,7 +2501,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de endométrio",
       "frente": "O que mudou na FIGO 2023 do câncer de endométrio?",
-      "verso": "**Entram o tipo histológico, a invasão linfovascular (LVSI) e a classificação molecular.**\n\nHistologia:\n- **Não agressiva** → endometrioide grau 1–2\n- **Agressiva** → endometrioide grau 3, seroso, células claras, carcinossarcoma, indiferenciado\n\nMolecular:\n- Só muda os estádios I–II (sufixo \"m\").\n- Mudanças na tabela.",
+      "verso": "**FIGO 2023 passou a incluir:**\n- Tipo histológico\n- Invasão linfovascular (LVSI)\n- Classificação molecular\n\nHistologia:\n- **Não agressiva** → endometrioide grau 1–2\n- **Agressiva** → endometrioide grau 3, seroso, células claras, carcinossarcoma, indiferenciado\n\nMolecular:\n- Só muda os estádios I–II (sufixo \"m\").\n- Mudanças na tabela.",
       "pegadinha": "Questões antigas e muitas atuais ainda usam a FIGO 2009 — leia o enunciado para ver qual classificação ele pede.",
       "uerj": "Se a questão não citar 2023, responda pela FIGO 2009.",
       "fonte": "FIGO 2009 (Pecorelli) / FIGO 2023 (Berek et al., Int J Gynecol Obstet)",
@@ -2569,7 +2569,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de endométrio",
       "frente": "Câncer de endométrio: tipos, fatores de risco e quadro clínico",
-      "verso": "**Sangramento pós-menopausa é o sinal de alerta.**\n\n- **Tipo I (endometrioide)** → estrogênio-dependente, mais comum, melhor prognóstico.\n- **Tipo II (seroso, células claras)** → não depende de estrogênio, mulher mais idosa e magra, agressivo.\n\nFatores de risco (excesso de estrogênio sem progesterona):\n- Obesidade, nuliparidade, menarca precoce/menopausa tardia\n- SOP/anovulação, terapia estrogênica isolada, tamoxifeno\n- Diabetes, síndrome de Lynch\n\nProteção:\n- Anticoncepcional oral combinado, DIU de levonorgestrel, tabagismo (só epidemiologicamente!)",
+      "verso": "**Sinal de alerta → sangramento pós-menopausa.**\n**Tipo I → endometrioide, estrogênio-dependente.**\n**Tipo II → seroso / células claras, agressivo.**\n\n- **Tipo I (endometrioide)** → estrogênio-dependente, mais comum, melhor prognóstico.\n- **Tipo II (seroso, células claras)** → não depende de estrogênio, mulher mais idosa e magra, agressivo.\n\nFatores de risco (excesso de estrogênio sem progesterona):\n- Obesidade, nuliparidade, menarca precoce/menopausa tardia\n- SOP/anovulação, terapia estrogênica isolada, tamoxifeno\n- Diabetes, síndrome de Lynch\n\nProteção:\n- Anticoncepcional oral combinado, DIU de levonorgestrel, tabagismo (só epidemiologicamente!)",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -2726,7 +2726,7 @@
       "tema": "Climatério",
       "sub": "Osteoporose e densitometria",
       "frente": "Fisiopatologia: por que a falta de estrogênio causa osteoporose? (RANK / RANKL / OPG)",
-      "verso": "**Sem estrogênio: ↑ RANKL e ↓ osteoprotegerina → mais osteoclastos → mais reabsorção.**\n\nQuem é quem:\n- **RANKL** → produzido pelo **osteoblasto**; liga-se ao **RANK** do precursor do osteoclasto → forma e ativa osteoclastos.\n- **Osteoprotegerina (OPG)** → também do osteoblasto; é um **receptor \"isca\" (chamariz)** que se liga ao RANKL e impede a ligação ao RANK.\n- **Estrogênio** → aumenta OPG e reduz RANKL (freia a reabsorção).\n\nLigação com o tratamento:\n- **Denosumabe** = anticorpo anti-RANKL (age como uma OPG).",
+      "verso": "**Sem estrogênio → ↑ RANKL e ↓ OPG → mais reabsorção.**\n\nQuem é quem:\n- **RANKL** → produzido pelo **osteoblasto**; liga-se ao **RANK** do precursor do osteoclasto → forma e ativa osteoclastos.\n- **Osteoprotegerina (OPG)** → também do osteoblasto; é um **receptor \"isca\" (chamariz)** que se liga ao RANKL e impede a ligação ao RANK.\n- **Estrogênio** → aumenta OPG e reduz RANKL (freia a reabsorção).\n\nLigação com o tratamento:\n- **Denosumabe** = anticorpo anti-RANKL (age como uma OPG).",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -2783,7 +2783,7 @@
       "tema": "Oncologia ginecológica",
       "sub": "Câncer de colo do útero",
       "frente": "Citologia com células glandulares atípicas (AGC): qual a conduta inicial?",
-      "verso": "**Colposcopia + nova citologia (com atenção ao canal) + USG TV se ≥ 35 anos.**\n\n- Vale para AGC \"possivelmente não neoplásicas\" **e** \"não se pode afastar lesão de alto grau\" (mesma conduta).\n- Vale para qualquer idade (inclusive < 25 anos).\n- USG TV também abaixo de 35 se houver sangramento anormal ou anovulação crônica.\n- USG TV anormal → estudo anatomopatológico do endométrio.\n\nPor quê:\n- Atipia glandular pode vir do canal cervical (adenocarcinoma) **ou do endométrio**.",
+      "verso": "**Colposcopia + nova citologia (canal).**\n**USG TV se ≥ 35 anos.**\n\n- Vale para AGC \"possivelmente não neoplásicas\" **e** \"não se pode afastar lesão de alto grau\" (mesma conduta).\n- Vale para qualquer idade (inclusive < 25 anos).\n- USG TV também abaixo de 35 se houver sangramento anormal ou anovulação crônica.\n- USG TV anormal → estudo anatomopatológico do endométrio.\n\nPor quê:\n- Atipia glandular pode vir do canal cervical (adenocarcinoma) **ou do endométrio**.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -2917,7 +2917,7 @@
       "tema": "Reprodução humana",
       "sub": "Infertilidade e reserva ovariana",
       "frente": "Marcadores de reserva ovariana: quais são e quando dosar?",
-      "verso": "**Hormônio antimülleriano (AMH): pode ser dosado em QUALQUER fase do ciclo.**\n\n- **AMH** → produzido pelas células da granulosa dos folículos pré-antrais e antrais pequenos; varia pouco no ciclo.\n- **Contagem de folículos antrais (CFA)** → USG TV no início da fase folicular.\n- **FSH basal** → dosar no **2º–4º dia** do ciclo (alto = reserva baixa).\n- **Estradiol** → só junto com o FSH: estradiol alto no 3º dia suprime o FSH e mascara reserva baixa.\n- **Progesterona** → não avalia reserva; avalia ovulação (meio da fase lútea, ~21º–24º dia).",
+      "verso": "**AMH → qualquer dia do ciclo.**\n**FSH e CFA → início da fase folicular.**\n\n- **AMH** → produzido pelas células da granulosa dos folículos pré-antrais e antrais pequenos; varia pouco no ciclo.\n- **Contagem de folículos antrais (CFA)** → USG TV no início da fase folicular.\n- **FSH basal** → dosar no **2º–4º dia** do ciclo (alto = reserva baixa).\n- **Estradiol** → só junto com o FSH: estradiol alto no 3º dia suprime o FSH e mascara reserva baixa.\n- **Progesterona** → não avalia reserva; avalia ovulação (meio da fase lútea, ~21º–24º dia).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -2965,7 +2965,7 @@
       "tema": "Reprodução humana",
       "sub": "Infertilidade e reserva ovariana",
       "frente": "AMH alto e AMH baixo: o que sugerem?",
-      "verso": "**AMH acompanha o número de folículos pequenos.**\n\nFatores que alteram o valor:\n- Anticoncepcional hormonal e gestação → reduzem temporariamente.\n- Obesidade → valores um pouco menores.",
+      "verso": "**AMH baixo → reserva baixa.**\n**AMH alto → SOP.**\n\nFatores que alteram o valor:\n- Anticoncepcional hormonal e gestação → reduzem temporariamente.\n- Obesidade → valores um pouco menores.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -3330,7 +3330,7 @@
       "tema": "Parto e puerpério",
       "sub": "Lacerações perineais",
       "frente": "Lacerações de 3º e 4º grau: fatores de risco e conduta",
-      "verso": "**Reparo no centro cirúrgico, com boa analgesia, por profissional experiente.**\n\nFatores de risco:\n- Primiparidade, macrossomia (> 4 kg), parto instrumental (**fórcipe** > vácuo)\n- Episiotomia **mediana**, distocia de ombro, occipito-posterior, período expulsivo prolongado\n\nConduta:\n- Esfíncter externo: sutura término-terminal ou sobreposição; interno: término-terminal.\n- Antibiótico (ex.: cefalosporina + metronidazol) e laxativo/emoliente fecal.\n- Fisioterapia do assoalho pélvico; seguimento por incontinência anal.",
+      "verso": "**Reparo no centro cirúrgico.**\n**Maior fator de risco → parto instrumental (fórcipe).**\n\nFatores de risco:\n- Primiparidade, macrossomia (> 4 kg), parto instrumental (**fórcipe** > vácuo)\n- Episiotomia **mediana**, distocia de ombro, occipito-posterior, período expulsivo prolongado\n\nConduta:\n- Esfíncter externo: sutura término-terminal ou sobreposição; interno: término-terminal.\n- Antibiótico (ex.: cefalosporina + metronidazol) e laxativo/emoliente fecal.\n- Fisioterapia do assoalho pélvico; seguimento por incontinência anal.",
       "pegadinha": "Episiotomia mediolateral (≥ 60° da linha média) PROTEGE do 3º/4º grau; a mediana aumenta o risco.",
       "fonte": "RCOG Green-top Guideline 29 (lesão obstétrica do esfíncter anal) / FEBRASGO",
       "add": "2026-10-21",
@@ -3395,7 +3395,7 @@
       "tema": "Nutrologia pediátrica",
       "sub": "Anemia ferropriva e suplementação de ferro",
       "frente": "Suplementação profilática de ferro no lactente a termo saudável (SBP 2026)",
-      "verso": "**Dose fixa de 10–12,5 mg/dia de ferro elementar, em 2 ciclos de 3 meses.**\n\nVale para:\n- Termo, peso adequado, sem fatores de risco — em aleitamento materno ou não.\n\nMudou em relação à SBP 2021:\n- Antes: **1 mg/kg/dia contínuo** dos 6 aos 24 meses (ou desde os 3 meses se fator de risco).\n- Agora: dose fixa, em ciclos; alinhada com o Ministério da Saúde.",
+      "verso": "**10–12,5 mg/dia de ferro elementar.**\n**2 ciclos → 6–9 meses e 12–15 meses.**\n\nVale para:\n- Termo, peso adequado, sem fatores de risco — em aleitamento materno ou não.\n\nMudou em relação à SBP 2021:\n- Antes: **1 mg/kg/dia contínuo** dos 6 aos 24 meses (ou desde os 3 meses se fator de risco).\n- Agora: dose fixa, em ciclos; alinhada com o Ministério da Saúde.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -3597,7 +3597,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Crescimento e baixa estatura",
       "frente": "Baixa estatura: definição e alvo genético",
-      "verso": "**Estatura < percentil 3 (ou escore z < -2) para idade e sexo.**\n\nTambém investigar:\n- Velocidade de crescimento baixa\n- Queda de canal\n- Estatura muito abaixo do alvo genético\n\nAlvo genético (estatura-alvo):\n- **Menino** → (altura do pai + altura da mãe **+ 13**) ÷ 2\n- **Menina** → (altura do pai + altura da mãe **− 13**) ÷ 2\n- Faixa normal → alvo **± 8,5 cm** (≈ 2 DP)",
+      "verso": "**Baixa estatura → < percentil 3 (z < −2).**\n**Alvo genético → (pai + mãe ± 13) ÷ 2.**\n\nTambém investigar:\n- Velocidade de crescimento baixa\n- Queda de canal\n- Estatura muito abaixo do alvo genético\n\nAlvo genético (estatura-alvo):\n- **Menino** → (altura do pai + altura da mãe **+ 13**) ÷ 2\n- **Menina** → (altura do pai + altura da mãe **− 13**) ÷ 2\n- Faixa normal → alvo **± 8,5 cm** (≈ 2 DP)",
       "pegadinha": "Criança no p3 mas dentro do alvo familiar e com velocidade normal → provavelmente variante normal.",
       "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
       "add": "2026-10-21",
@@ -3858,7 +3858,7 @@
       "tema": "Neonatologia",
       "sub": "Reanimação neonatal",
       "frente": "RN ≥ 34 semanas ao nascer: as 3 perguntas e o clampeamento do cordão",
-      "verso": "**Gestação ≥ 34 semanas? Respira ou chora? Tônus em flexão?**\n\n- **Sim às três (boa vitalidade)** → clampeamento **≥ 60 s** (1–3 min), contato pele a pele, secar, manter aquecido.\n- **Não respira / hipotônico** → estímulo tátil (~15 s), de preferência **antes de clampear**.\n- Começou a respirar → clampeamento tardio.\n- Não respondeu → clampeamento **imediato** e mesa de reanimação (2026: a **ordenha** do cordão é opção — ~20 cm, 3 vezes, antes de clampear).\n\nNovidade 2026:\n- Antes (2022) o RN sem boa vitalidade ia direto para clampeamento imediato.",
+      "verso": "**3 perguntas:**\n- ≥ 34 semanas?\n- Respira ou chora?\n- Tônus em flexão?\n**Sim às 3 → clampear com ≥ 60 s.**\n\n- **Sim às três (boa vitalidade)** → clampeamento **≥ 60 s** (1–3 min), contato pele a pele, secar, manter aquecido.\n- **Não respira / hipotônico** → estímulo tátil (~15 s), de preferência **antes de clampear**.\n- Começou a respirar → clampeamento tardio.\n- Não respondeu → clampeamento **imediato** e mesa de reanimação (2026: a **ordenha** do cordão é opção — ~20 cm, 3 vezes, antes de clampear).\n\nNovidade 2026:\n- Antes (2022) o RN sem boa vitalidade ia direto para clampeamento imediato.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -3887,7 +3887,7 @@
       "tema": "Neonatologia",
       "sub": "Reanimação neonatal",
       "frente": "VPP no RN ≥ 34 semanas: quando e como",
-      "verso": "**FC < 100 bpm, apneia ou respiração irregular → VPP em até 60 s (Minuto de Ouro).**\n\n- **FiO2 inicial 21%** (ar ambiente); ajustar ~20% a cada 30 s pela SatO2.\n- **30–60 ventilações/min** (\"ventila, solta, solta\").\n- Ventilador manual em T: fluxo ~10 L/min, **PIP 20–30**, **PEEP 5** cmH2O, máximo 40.\n- FC: **monitor cardíaco de 3 derivações** assim que indicar VPP.\n- Oxímetro no **pulso direito** (pré-ductal).\n\nInterface:\n- Máscara facial; **máscara laríngea** é alternativa em RN ≥ 2.000 g (não usar durante massagem).\n\nMecônio:\n- Não aspirar traqueia de rotina; se não respira, VPP no primeiro minuto mesmo com mecônio.",
+      "verso": "**FC < 100 ou apneia → VPP.**\n**Iniciar em até 60 s (Minuto de Ouro).**\n\n- **FiO2 inicial 21%** (ar ambiente); ajustar ~20% a cada 30 s pela SatO2.\n- **30–60 ventilações/min** (\"ventila, solta, solta\").\n- Ventilador manual em T: fluxo ~10 L/min, **PIP 20–30**, **PEEP 5** cmH2O, máximo 40.\n- FC: **monitor cardíaco de 3 derivações** assim que indicar VPP.\n- Oxímetro no **pulso direito** (pré-ductal).\n\nInterface:\n- Máscara facial; **máscara laríngea** é alternativa em RN ≥ 2.000 g (não usar durante massagem).\n\nMecônio:\n- Não aspirar traqueia de rotina; se não respira, VPP no primeiro minuto mesmo com mecônio.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -3934,7 +3934,7 @@
       "tema": "Neonatologia",
       "sub": "Reanimação neonatal",
       "frente": "Massagem cardíaca e medicações na reanimação neonatal",
-      "verso": "**FC < 60 bpm após 30 s de VPP efetiva com cânula (ou máscara laríngea) → massagem.**\n\nMassagem:\n- Técnica dos **2 polegares** no terço inferior do esterno, 1/3 do diâmetro AP.\n- **3:1** (90 compressões + 30 ventilações/min), **O2 a 100%**.\n- Reavaliar FC após **60 s**.\n\nAdrenalina (FC < 60 após 60 s de massagem + VPP):\n- **EV (veia umbilical)**: **0,02 mg/kg** (faixa 0,01–0,03) = 0,2 mL/kg da solução 0,1 mg/mL; repetir a cada 3–5 min.\n- **Endotraqueal**: 0,05–0,1 mg/kg, **dose única** enquanto obtém acesso venoso.\n\nVolume:\n- SF 0,9% **10 mL/kg** em 5–10 min se suspeita de hipovolemia (perda de sangue, palidez, pulsos fracos).",
+      "verso": "**FC < 60 após 30 s de VPP efetiva → massagem 3:1.**\n\nMassagem:\n- Técnica dos **2 polegares** no terço inferior do esterno, 1/3 do diâmetro AP.\n- **3:1** (90 compressões + 30 ventilações/min), **O2 a 100%**.\n- Reavaliar FC após **60 s**.\n\nAdrenalina (FC < 60 após 60 s de massagem + VPP):\n- **EV (veia umbilical)**: **0,02 mg/kg** (faixa 0,01–0,03) = 0,2 mL/kg da solução 0,1 mg/mL; repetir a cada 3–5 min.\n- **Endotraqueal**: 0,05–0,1 mg/kg, **dose única** enquanto obtém acesso venoso.\n\nVolume:\n- SF 0,9% **10 mL/kg** em 5–10 min se suspeita de hipovolemia (perda de sangue, palidez, pulsos fracos).",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -4009,7 +4009,7 @@
       "tema": "Imunizações",
       "sub": "Profilaxia da raiva humana",
       "frente": "Raiva: acidente leve × grave",
-      "verso": "**Grave = local perigoso, ferida profunda/múltipla ou contato com mucosa.**\n\nSem indicação (contato indireto):\n- Tocar/alimentar o animal, lambedura em pele íntegra → só lavar.",
+      "verso": "**Grave:**\n- Cabeça / face / mãos / pés\n- Ferida profunda ou múltipla\n- Lambedura de mucosa\n- Morcego (sempre)\n\nSem indicação (contato indireto):\n- Tocar/alimentar o animal, lambedura em pele íntegra → só lavar.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -4091,7 +4091,7 @@
       "tema": "Imunizações",
       "sub": "Profilaxia da raiva humana",
       "frente": "Raiva: esquema de vacina e soro na pós-exposição",
-      "verso": "**Vacina: 4 doses nos dias 0, 3, 7 e 14.**\n\n- **IM** → frasco inteiro no deltoide (vasto lateral da coxa em < 2 anos). **Nunca no glúteo.**\n- **ID** → 0,2 mL por dia (0,1 mL em 2 sítios), preferida em grandes centros.\n- Faltou? **Não reinicia**: aplica no dia em que voltar e mantém os intervalos.\n\nSoro/imunoglobulina (acidentes graves):\n- **SAR 40 UI/kg** ou **IGHAR 20 UI/kg**.\n- Infiltrar o máximo possível **dentro e ao redor das lesões**; o resto IM em outro grupo muscular (não o da vacina).\n- Até **7 dias** após a 1ª dose da vacina; depois disso, não fazer.\n\nSempre:\n- Lavar a ferida com água e sabão; avaliar tétano.",
+      "verso": "**Vacina → 4 doses: D0 / D3 / D7 / D14.**\n\n- **IM** → frasco inteiro no deltoide (vasto lateral da coxa em < 2 anos). **Nunca no glúteo.**\n- **ID** → 0,2 mL por dia (0,1 mL em 2 sítios), preferida em grandes centros.\n- Faltou? **Não reinicia**: aplica no dia em que voltar e mantém os intervalos.\n\nSoro/imunoglobulina (acidentes graves):\n- **SAR 40 UI/kg** ou **IGHAR 20 UI/kg**.\n- Infiltrar o máximo possível **dentro e ao redor das lesões**; o resto IM em outro grupo muscular (não o da vacina).\n- Até **7 dias** após a 1ª dose da vacina; depois disso, não fazer.\n\nSempre:\n- Lavar a ferida com água e sabão; avaliar tétano.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -4195,7 +4195,7 @@
       "tema": "Gastroenterologia pediátrica",
       "sub": "Alergia à proteína do leite de vaca (APLV)",
       "frente": "APLV: formas clínicas (IgE, não IgE e mistas)",
-      "verso": "**O mecanismo define o tempo dos sintomas e os exames úteis.**\n\n- **IgE mediada** (minutos até 2 h) → urticária, angioedema, vômitos imediatos, broncoespasmo, **anafilaxia**.\n- **Não IgE** (horas a dias):\n- **Proctocolite alérgica** → lactente em bom estado, em aleitamento materno, com **sangue e muco nas fezes**.\n- **Enterocolite induzida por proteína (FPIES)** → vômitos repetidos 1–4 h após ingestão, palidez, letargia, pode chocar.\n- Enteropatia → diarreia, má absorção, baixo ganho de peso.\n- **Mistas** → esofagite eosinofílica, dermatite atópica.",
+      "verso": "**IgE → minutos a 2 h**\n**Não IgE → horas a dias**\n**Mista → as duas (esofagite eosinofílica, dermatite atópica)**\n\n- **IgE mediada** (minutos até 2 h) → urticária, angioedema, vômitos imediatos, broncoespasmo, **anafilaxia**.\n- **Não IgE** (horas a dias):\n- **Proctocolite alérgica** → lactente em bom estado, em aleitamento materno, com **sangue e muco nas fezes**.\n- **Enterocolite induzida por proteína (FPIES)** → vômitos repetidos 1–4 h após ingestão, palidez, letargia, pode chocar.\n- Enteropatia → diarreia, má absorção, baixo ganho de peso.\n- **Mistas** → esofagite eosinofílica, dermatite atópica.",
       "pegadinha": "Lactente em aleitamento EXCLUSIVO pode ter APLV: a proteína do leite que a mãe toma passa para o leite materno.",
       "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
       "add": "2026-10-21",
@@ -4242,7 +4242,7 @@
       "tema": "Gastroenterologia pediátrica",
       "sub": "Alergia à proteína do leite de vaca (APLV)",
       "frente": "Tratamento da APLV: o que dar ao lactente?",
-      "verso": "**Em aleitamento materno: manter a amamentação e tirar leite e derivados da dieta da MÃE.**\n\n- Mãe em dieta de exclusão → repor **cálcio** (~1.000 mg/dia) e vitamina D.\n\nSem aleitamento materno:\n- **Fórmula extensamente hidrolisada (FEH)** → 1ª escolha na maioria dos casos.\n- **Fórmula de aminoácidos** → anafilaxia, esofagite eosinofílica, FPIES grave, falha da FEH, má absorção grave.\n- **Fórmula de soja** → só > 6 meses, forma IgE, sem sintomas gastrointestinais.\n\nNão usar:\n- Fórmula parcialmente hidrolisada (\"HA\"), leite de cabra/outros mamíferos (reação cruzada), fórmula \"sem lactose\".",
+      "verso": "**Mama no peito → manter a amamentação.**\n**Mãe tira leite e derivados da dieta.**\n\n- Mãe em dieta de exclusão → repor **cálcio** (~1.000 mg/dia) e vitamina D.\n\nSem aleitamento materno:\n- **Fórmula extensamente hidrolisada (FEH)** → 1ª escolha na maioria dos casos.\n- **Fórmula de aminoácidos** → anafilaxia, esofagite eosinofílica, FPIES grave, falha da FEH, má absorção grave.\n- **Fórmula de soja** → só > 6 meses, forma IgE, sem sintomas gastrointestinais.\n\nNão usar:\n- Fórmula parcialmente hidrolisada (\"HA\"), leite de cabra/outros mamíferos (reação cruzada), fórmula \"sem lactose\".",
       "pegadinha": "APLV ≠ intolerância à lactose: fórmula sem lactose ainda tem a proteína do leite.",
       "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI) / ESPGHAN 2023",
       "add": "2026-10-21",
@@ -4436,7 +4436,7 @@
       "tema": "Trauma",
       "sub": "Trauma torácico",
       "frente": "Tórax instável: definição e o que realmente causa a insuficiência respiratória",
-      "verso": "**≥ 2 costelas adjacentes fraturadas em ≥ 2 pontos → movimento paradoxal.**\n**A hipoxemia vem da CONTUSÃO PULMONAR, não do movimento paradoxal.**\n\nPor quê:\n- Contusão → hemorragia alveolar, edema e inflamação.\n- Alvéolos perfundidos e não ventilados → ↑ shunt → hipoxemia.\n- A dor reduz expansão e tosse → atelectasia.\n\nTratamento:\n- O2 e **analgesia potente** (bloqueios/peridural)\n- Fisioterapia; hidratação cuidadosa (sem hipervolemia)\n- VNI/IOT se insuficiência respiratória\n- Fixação cirúrgica das costelas em casos selecionados",
+      "verso": "**≥ 2 costelas, cada uma em ≥ 2 pontos → movimento paradoxal.**\n**A hipoxemia vem da CONTUSÃO PULMONAR, não do movimento paradoxal.**\n\nPor quê:\n- Contusão → hemorragia alveolar, edema e inflamação.\n- Alvéolos perfundidos e não ventilados → ↑ shunt → hipoxemia.\n- A dor reduz expansão e tosse → atelectasia.\n\nTratamento:\n- O2 e **analgesia potente** (bloqueios/peridural)\n- Fisioterapia; hidratação cuidadosa (sem hipervolemia)\n- VNI/IOT se insuficiência respiratória\n- Fixação cirúrgica das costelas em casos selecionados",
       "visual": {
         "tipo": "img",
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pulmonary_contusion_CT_arrow.jpg/600px-Pulmonary_contusion_CT_arrow.jpg",
@@ -4461,7 +4461,7 @@
       "tema": "Trauma",
       "sub": "Trauma torácico",
       "frente": "Tamponamento cardíaco traumático: sinais e conduta",
-      "verso": "**Tríade de Beck + FAST pericárdico positivo → toracotomia / janela pericárdica.**\n\nTríade de Beck:\n- Hipotensão\n- Bulhas abafadas\n- Turgência jugular\n\nOutros sinais:\n- Pulso paradoxal (queda > 10 mmHg da PAS na inspiração)\n- Sinal de Kussmaul\n- AESP\n\nPericardiocentese:\n- Só como ponte quando não há cirurgião.\n- No penetrante o sangue coagula → a agulha muitas vezes não resolve.",
+      "verso": "**Tríade de Beck + FAST positivo.**\n**Conduta → toracotomia / janela pericárdica.**\n\nTríade de Beck:\n- Hipotensão\n- Bulhas abafadas\n- Turgência jugular\n\nOutros sinais:\n- Pulso paradoxal (queda > 10 mmHg da PAS na inspiração)\n- Sinal de Kussmaul\n- AESP\n\nPericardiocentese:\n- Só como ponte quando não há cirurgião.\n- No penetrante o sangue coagula → a agulha muitas vezes não resolve.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -4731,7 +4731,7 @@
       "tema": "Trauma",
       "sub": "Trauma abdominal",
       "frente": "Cirurgia de controle de danos: quando e qual o objetivo?",
-      "verso": "**Tríade letal (hipotermia + acidose + coagulopatia) → cirurgia abreviada em etapas.**\n\n- Etapas no fluxo abaixo.\n- Insistir no reparo definitivo no paciente frio, acidótico e coagulopata aumenta a mortalidade.\n\nRisco:\n- Síndrome compartimental abdominal: PIA > 20 mmHg + nova disfunção orgânica.\n  - Medida pela pressão vesical.\n  - Conduta: descompressão.",
+      "verso": "**Tríade letal → cirurgia abreviada em etapas.**\n**Tríade → hipotermia + acidose + coagulopatia.**\n\n- Etapas no fluxo abaixo.\n- Insistir no reparo definitivo no paciente frio, acidótico e coagulopata aumenta a mortalidade.\n\nRisco:\n- Síndrome compartimental abdominal: PIA > 20 mmHg + nova disfunção orgânica.\n  - Medida pela pressão vesical.\n  - Conduta: descompressão.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -4786,7 +4786,7 @@
       "tema": "Trauma",
       "sub": "TCE",
       "frente": "Hematoma EXTRADURAL (epidural): vaso, imagem e quadro clássico",
-      "verso": "**Artéria meníngea média → lesão BICONVEXA que não cruza suturas → intervalo lúcido.**\n\n- Fratura temporal; sangue entre osso e dura.\n- A dura é aderida às suturas → o sangue não as ultrapassa.\n- Intervalo lúcido em cerca de 1/3 dos casos: perde a consciência, recupera e piora.\n- Bom prognóstico com cirurgia precoce (pouca lesão do parênquima).",
+      "verso": "**Artéria meníngea média.**\n**TC → BICONVEXA, não cruza suturas.**\n**Quadro → intervalo lúcido.**\n\n- Fratura temporal; sangue entre osso e dura.\n- A dura é aderida às suturas → o sangue não as ultrapassa.\n- Intervalo lúcido em cerca de 1/3 dos casos: perde a consciência, recupera e piora.\n- Bom prognóstico com cirurgia precoce (pouca lesão do parênquima).",
       "visual": {
         "tipo": "img",
         "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Epidural_hematoma_arrow.png",
@@ -4937,7 +4937,7 @@
       "tema": "Trauma",
       "sub": "TCE",
       "frente": "Quando operar um hematoma extradural ou subdural agudo?",
-      "verso": "**Extradural > 30 mL ou subdural > 10 mm / desvio > 5 mm → operar, qualquer Glasgow.**\n\n- Glasgow ≤ 8 com anisocoria ou piora neurológica → operar também.\n- Cirurgia: craniotomia ampla, drenagem e hemostasia, o mais cedo possível.\n\nPode observar (TC seriada):\n- Extradural < 30 mL, < 15 mm, desvio < 5 mm, Glasgow > 8, sem déficit focal.",
+      "verso": "**Extradural > 30 mL → operar.**\n**Subdural > 10 mm ou desvio > 5 mm → operar.**\n**Vale para qualquer Glasgow.**\n\n- Glasgow ≤ 8 com anisocoria ou piora neurológica → operar também.\n- Cirurgia: craniotomia ampla, drenagem e hemostasia, o mais cedo possível.\n\nPode observar (TC seriada):\n- Extradural < 30 mL, < 15 mm, desvio < 5 mm, Glasgow > 8, sem déficit focal.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -5269,7 +5269,7 @@
       "tema": "Trauma",
       "sub": "Queimaduras",
       "frente": "Lesão inalatória e critérios de encaminhamento a centro de queimados",
-      "verso": "**Sinal de lesão inalatória → IOT precoce, antes que o edema feche a via aérea.**\n\nIntoxicações:\n- CO → O2 a 100%\n- Cianeto → hidroxocobalamina\n\nAtenção:\n- Oximetria fica falsamente normal no CO (carboxi-Hb lida como oxi-Hb).\n- Dosar carboxi-hemoglobina.",
+      "verso": "**Lesão inalatória → IOT precoce.**\n**Antes que o edema feche a via aérea.**\n\nIntoxicações:\n- CO → O2 a 100%\n- Cianeto → hidroxocobalamina\n\nAtenção:\n- Oximetria fica falsamente normal no CO (carboxi-Hb lida como oxi-Hb).\n- Dosar carboxi-hemoglobina.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -5457,7 +5457,7 @@
       "tema": "Esôfago e estômago",
       "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
       "frente": "Passos técnicos da hiatoplastia com fundoplicatura de Nissen e suas complicações",
-      "verso": "**Válvula de 360°, curta e frouxa (\"floppy\"), com ≥ 2–3 cm de esôfago intra-abdominal.**\n\n- Passos na lista.\n\nComplicações:\n- Disfagia (válvula apertada ou longa)\n- Gas-bloat: não consegue eructar/vomitar, distensão\n- Lesão vagal\n- Recidiva da hérnia; deslizamento da válvula (\"slipped Nissen\")",
+      "verso": "**Válvula de 360°, curta e frouxa (\"floppy\").**\n**≥ 2–3 cm de esôfago intra-abdominal.**\n\n- Passos na lista.\n\nComplicações:\n- Disfagia (válvula apertada ou longa)\n- Gas-bloat: não consegue eructar/vomitar, distensão\n- Lesão vagal\n- Recidiva da hérnia; deslizamento da válvula (\"slipped Nissen\")",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -5515,7 +5515,7 @@
       "tema": "Perioperatório",
       "sub": "Nutrição perioperatória",
       "frente": "Quem precisa de terapia nutricional ANTES da cirurgia e por quanto tempo?",
-      "verso": "**Desnutrido grave + cirurgia de grande porte → terapia nutricional 7–14 dias antes.**\n\n- Mesmo que precise adiar a cirurgia.\n- Critérios de risco grave na lista (ESPEN).\n- Triagem: NRS-2002 ≥ 3 = risco nutricional.\n\nPor quê:\n- Desnutrição aumenta deiscência, infecção e mortalidade.",
+      "verso": "**Desnutrido grave → nutrir 7–14 dias antes.**\n**Vale para cirurgia de grande porte.**\n\n- Mesmo que precise adiar a cirurgia.\n- Critérios de risco grave na lista (ESPEN).\n- Triagem: NRS-2002 ≥ 3 = risco nutricional.\n\nPor quê:\n- Desnutrição aumenta deiscência, infecção e mortalidade.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -5612,7 +5612,7 @@
       "tema": "Perioperatório",
       "sub": "Nutrição perioperatória",
       "frente": "Imunonutrição: o que é e para quem?",
-      "verso": "**Arginina + ômega-3 + nucleotídeos: 5–7 dias antes e 5–7 dias depois.**\n\n- Indicações principais: grandes cirurgias oncológicas do aparelho digestivo e de cabeça e pescoço, sobretudo em desnutridos.\n- Reduz complicações infecciosas nesses grupos.\n- Outros cenários das questões: politrauma grave, SDRA, sepse leve.",
+      "verso": "**Arginina + ômega-3 + nucleotídeos.**\n**5–7 dias antes e 5–7 dias depois.**\n\n- Indicações principais: grandes cirurgias oncológicas do aparelho digestivo e de cabeça e pescoço, sobretudo em desnutridos.\n- Reduz complicações infecciosas nesses grupos.\n- Outros cenários das questões: politrauma grave, SDRA, sepse leve.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -5690,7 +5690,7 @@
       "tema": "Perioperatório",
       "sub": "Nutrição perioperatória",
       "frente": "Síndrome de realimentação: quem tem risco e como prevenir",
-      "verso": "**Desnutrido grave + nutrição rápida demais → hipofosfatemia (principal).**\n\n- Também ↓ K e ↓ Mg → arritmia, insuficiência respiratória e cardíaca.\n\nPor quê:\n- A glicose sobe a insulina, que leva P, K e Mg para dentro das células.\n\nPrevenção:\n- Começar devagar: ~10–20 kcal/kg/dia\n- Tiamina antes\n- Repor eletrólitos",
+      "verso": "**Realimentação → hipofosfatemia.**\n**Risco → desnutrido grave nutrido rápido demais.**\n\n- Também ↓ K e ↓ Mg → arritmia, insuficiência respiratória e cardíaca.\n\nPor quê:\n- A glicose sobe a insulina, que leva P, K e Mg para dentro das células.\n\nPrevenção:\n- Começar devagar: ~10–20 kcal/kg/dia\n- Tiamina antes\n- Repor eletrólitos",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -6030,7 +6030,7 @@
       "tema": "Perioperatório",
       "sub": "Avaliação e cuidados pré-operatórios",
       "frente": "Medicações no pré-operatório: o que manter e o que suspender",
-      "verso": "**Manter:** betabloqueador, estatina, AAS (na maioria), corticoide.\n**Suspender:** antiagregantes P2Y12, anticoagulantes, iSGLT2, metformina.\n\n- Prazos na comparação abaixo.\n- Betabloqueador crônico suspenso → rebote (isquemia, taquicardia).\n- AAS: suspender (7 dias) só em neurocirurgia, RTU de próstata e câmara posterior do olho.\n- Ponte com heparina: só varfarina em alto risco trombótico (ex.: prótese mecânica mitral).",
+      "verso": "**Manter:**\n- Betabloqueador\n- Estatina\n- AAS (maioria)\n- Corticoide\n**Suspender:**\n- Antiagregantes P2Y12\n- Anticoagulantes\n- iSGLT2\n- Metformina (no dia)\n\n- Prazos na comparação abaixo.\n- Betabloqueador crônico suspenso → rebote (isquemia, taquicardia).\n- AAS: suspender (7 dias) só em neurocirurgia, RTU de próstata e câmara posterior do olho.\n- Ponte com heparina: só varfarina em alto risco trombótico (ex.: prótese mecânica mitral).",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -6101,7 +6101,7 @@
       "tema": "Saúde do idoso",
       "sub": "Avaliação geriátrica ampla e polifarmácia",
       "frente": "O que é a Avaliação Geriátrica Ampla (AGA) e quais domínios avalia?",
-      "verso": "**Avaliação multidimensional centrada na FUNCIONALIDADE, para montar um plano de cuidados.**\n\n- Não serve para diagnosticar uma doença específica.\n- Domínios e instrumentos na tabela.\n- Mais útil no idoso frágil ou em risco.",
+      "verso": "**Avaliação centrada na FUNCIONALIDADE.**\n**Objetivo → plano de cuidados.**\n\n- Não serve para diagnosticar uma doença específica.\n- Domínios e instrumentos na tabela.\n- Mais útil no idoso frágil ou em risco.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -6280,7 +6280,7 @@
       "tema": "Saúde do idoso",
       "sub": "Avaliação geriátrica ampla e polifarmácia",
       "frente": "Como manejar a polifarmácia: Beers, STOPP/START e desprescrição",
-      "verso": "**Revisar tudo, usar Beers e STOPP/START e desprescrever um remédio por vez.**\n\n- Começar pelos de maior risco.\n- Incluir fitoterápicos e automedicação.\n- Retirar devagar: benzodiazepínicos, antidepressivos, betabloqueadores e IBP (abstinência/rebote).\n- Simplificar horários e envolver o cuidador.",
+      "verso": "**Revisar tudo → Beers / STOPP-START → desprescrever 1 por vez.**\n\n- Começar pelos de maior risco.\n- Incluir fitoterápicos e automedicação.\n- Retirar devagar: benzodiazepínicos, antidepressivos, betabloqueadores e IBP (abstinência/rebote).\n- Simplificar horários e envolver o cuidador.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -6663,7 +6663,7 @@
       "tema": "Abdome agudo",
       "sub": "Inflamatório - Apendagite epiploica",
       "frente": "Apendagite epiploica: o que é, quadro e imagem",
-      "verso": "**Torção/trombose de um apêndice epiploico → dor localizada em paciente bem.**\n**TC: oval de GORDURA com halo hiperdenso.**\n\nQuadro:\n- Mais em FIE/sigmoide\n- Pouca ou nenhuma febre e leucocitose\n- Imita diverticulite (à esquerda) ou apendicite (à direita)\n\nTC:\n- Lesão paracólica com densidade de gordura e halo\n- Densificação da gordura ao redor\n- Às vezes ponto central hiperdenso (veia trombosada)",
+      "verso": "**Torção de apêndice epiploico → dor localizada em paciente bem.**\n**TC: oval de GORDURA com halo hiperdenso.**\n\nQuadro:\n- Mais em FIE/sigmoide\n- Pouca ou nenhuma febre e leucocitose\n- Imita diverticulite (à esquerda) ou apendicite (à direita)\n\nTC:\n- Lesão paracólica com densidade de gordura e halo\n- Densificação da gordura ao redor\n- Às vezes ponto central hiperdenso (veia trombosada)",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -6915,7 +6915,7 @@
       "tema": "Intestino delgado e cólon",
       "sub": "Tuberculose intestinal",
       "frente": "Tuberculose intestinal: local preferencial, quadro e diagnóstico",
-      "verso": "**Região ILEOCECAL.**\n**Diagnóstico: colonoscopia com biópsia (granuloma caseoso, BAAR, cultura, teste molecular).**\n\nQuadro:\n- Febre, emagrecimento, dor abdominal\n- Diarreia e/ou constipação, sangramento\n- Massa em FID\n\nAtenção:\n- Grande diferencial: doença de Crohn (comparação abaixo).\n- Tratar Crohn com imunossupressor em quem tem TB é desastroso.\n- RX de tórax normal NÃO exclui.",
+      "verso": "**Região ILEOCECAL.**\n**Diagnóstico → colonoscopia com biópsia.**\n\nQuadro:\n- Febre, emagrecimento, dor abdominal\n- Diarreia e/ou constipação, sangramento\n- Massa em FID\n\nAtenção:\n- Grande diferencial: doença de Crohn (comparação abaixo).\n- Tratar Crohn com imunossupressor em quem tem TB é desastroso.\n- RX de tórax normal NÃO exclui.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -7079,7 +7079,7 @@
       "tema": "Pneumologia",
       "sub": "Derrame pleural",
       "frente": "Derrame parapneumônico: quando drenar?",
-      "verso": "**Drenar se pus (empiema), Gram ou cultura positivos, pH < 7,2 ou glicose < 60 mg/dL.**\n\nLógica:\n- Bactérias consomem glicose e produzem ácido → pH e glicose caem.\n- Sem drenagem, o derrame complicado vira septado e encarcera o pulmão.\n\nSe não melhorar com dreno:\n- Septações → fibrinolítico intrapleural ou videotoracoscopia.",
+      "verso": "**Drenar se:**\n- Pus (empiema)\n- Gram ou cultura positivos\n- pH < 7,2\n- Glicose < 60 mg/dL\n\nLógica:\n- Bactérias consomem glicose e produzem ácido → pH e glicose caem.\n- Sem drenagem, o derrame complicado vira septado e encarcera o pulmão.\n\nSe não melhorar com dreno:\n- Septações → fibrinolítico intrapleural ou videotoracoscopia.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -7354,7 +7354,7 @@
       "tema": "Infectologia",
       "sub": "Tuberculose",
       "frente": "Efeitos adversos dos tuberculostáticos e conduta na hepatotoxicidade",
-      "verso": "**Suspender o esquema se transaminases ≥ 3× o limite com sintomas, ≥ 5× sem sintomas, ou icterícia.**\n\nReintrodução (após normalizar):\n- Rifampicina + etambutol primeiro.\n- Depois isoniazida.\n- Por último pirazinamida (mais hepatotóxica).",
+      "verso": "**Suspender o esquema se:**\n- Transaminases ≥ 3× com sintomas\n- ≥ 5× sem sintomas\n- Icterícia\n\nReintrodução (após normalizar):\n- Rifampicina + etambutol primeiro.\n- Depois isoniazida.\n- Por último pirazinamida (mais hepatotóxica).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -7561,7 +7561,7 @@
       "tema": "Infectologia",
       "sub": "HIV — TARV e infecções oportunistas",
       "frente": "Quando iniciar a TARV em cada infecção oportunista?",
-      "verso": "**Infecção do SNC (meningite criptocócica ou tuberculosa) → adiar 4–6 semanas.**\n**Demais infecções → o mais cedo possível, em geral até 7 dias–2 semanas.**\n\nPor que adiar no SNC:\n- A SIRI causa inflamação dentro de um espaço fechado → hipertensão intracraniana e morte.\n\nPor que antecipar nas outras:\n- Cada semana sem TARV com CD4 baixo aumenta a mortalidade por novas infecções.",
+      "verso": "**Infecção do SNC → adiar TARV 4–6 semanas.**\n**Demais → iniciar em até 2 semanas.**\n**SNC = meningite criptocócica ou tuberculosa.**\n\nPor que adiar no SNC:\n- A SIRI causa inflamação dentro de um espaço fechado → hipertensão intracraniana e morte.\n\nPor que antecipar nas outras:\n- Cada semana sem TARV com CD4 baixo aumenta a mortalidade por novas infecções.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -7613,7 +7613,7 @@
       "tema": "Infectologia",
       "sub": "HIV — TARV e infecções oportunistas",
       "frente": "Esquema inicial de TARV e ajuste com tuberculose",
-      "verso": "**Esquema preferencial → tenofovir (TDF) + lamivudina (3TC) + dolutegravir (DTG).**\n**Com rifampicina → DTG 50 mg de 12/12 h (dose dobrada).**\n\nPor quê:\n- A rifampicina induz o metabolismo hepático e reduz o nível do DTG.\n- Inibidores de protease com ritonavir e nevirapina não devem ser usados com rifampicina.\n\nAtenção ao tenofovir:\n- Nefrotoxicidade e perda óssea → avaliar função renal.",
+      "verso": "**TDF + 3TC + dolutegravir.**\n**Com rifampicina → DTG 50 mg 12/12 h.**\n\nPor quê:\n- A rifampicina induz o metabolismo hepático e reduz o nível do DTG.\n- Inibidores de protease com ritonavir e nevirapina não devem ser usados com rifampicina.\n\nAtenção ao tenofovir:\n- Nefrotoxicidade e perda óssea → avaliar função renal.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -7712,7 +7712,7 @@
       "tema": "Infectologia",
       "sub": "Meningites",
       "frente": "Líquor: valores normais e padrão de cada meningite",
-      "verso": "**Bacteriana → muitos neutrófilos, proteína alta e glicose baixa.**\n**Viral → linfócitos, proteína normal ou pouco alta e glicose NORMAL.**\n**Tuberculosa/fúngica → linfócitos, proteína muito alta e glicose baixa.**\n\nLógica:\n- Bactéria e neutrófilo consomem glicose → glicose cai.\n- Vírus não consome glicose → glicose normal.\n- TB tem evolução arrastada (semanas) e acomete a base do crânio (pares cranianos).",
+      "verso": "**Bacteriana:**\n- Neutrófilos\n- Proteína ↑\n- Glicose ↓\n**Viral:**\n- Linfócitos\n- Glicose NORMAL\n**Tuberculosa / fúngica:**\n- Linfócitos\n- Proteína ↑↑\n- Glicose ↓\n\nLógica:\n- Bactéria e neutrófilo consomem glicose → glicose cai.\n- Vírus não consome glicose → glicose normal.\n- TB tem evolução arrastada (semanas) e acomete a base do crânio (pares cranianos).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -7772,7 +7772,7 @@
       "tema": "Infectologia",
       "sub": "Meningites",
       "frente": "Antibiótico empírico na meningite bacteriana por idade",
-      "verso": "**3 meses a 50 anos → ceftriaxona + vancomicina (referências americanas).**\n**> 50 anos ou imunossuprimido → acrescentar ampicilina (Listeria).**\n**< 1 mês → ampicilina + cefotaxima (ou gentamicina).**\n\nPor que vancomicina:\n- Cobre pneumococo resistente à cefalosporina.\n- É a recomendação do Harrison (IDSA) e do Nelson.\n\nNo Brasil:\n- A resistência do pneumococo à ceftriaxona é baixa.\n- O MS (Guia de Vigilância) usa ceftriaxona isolada como empírico.\n\nDexametasona:\n- Antes ou junto da 1ª dose de antibiótico.\n- Benefício: pneumococo no adulto e Haemophilus na criança (surdez).",
+      "verso": "**3 meses–50 anos → ceftriaxona + vancomicina.**\n**> 50 anos ou imunossuprimido → + ampicilina (Listeria).**\n**< 1 mês → ampicilina + cefotaxima (ou gentamicina).**\n\nPor que vancomicina:\n- Cobre pneumococo resistente à cefalosporina.\n- É a recomendação do Harrison (IDSA) e do Nelson.\n\nNo Brasil:\n- A resistência do pneumococo à ceftriaxona é baixa.\n- O MS (Guia de Vigilância) usa ceftriaxona isolada como empírico.\n\nDexametasona:\n- Antes ou junto da 1ª dose de antibiótico.\n- Benefício: pneumococo no adulto e Haemophilus na criança (surdez).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -7821,7 +7821,7 @@
       "tema": "Infectologia",
       "sub": "Meningites",
       "frente": "Quimioprofilaxia dos contatos na meningite",
-      "verso": "**Meningococo e Haemophilus influenzae b → rifampicina para contatos íntimos.**\n**Pneumococo → não precisa.**\n\nQuem recebe:\n- Moradores do mesmo domicílio e contatos íntimos (creche, mesma sala de convívio prolongado).\n- Profissional de saúde só se fez procedimento sem proteção (intubação, aspiração).\n\nAlternativas à rifampicina (meningococo):\n- Ceftriaxona dose única (gestantes).\n- Ciprofloxacino dose única (adultos).",
+      "verso": "**Meningococo e Hib → rifampicina.**\n**Só contatos íntimos.**\n**Pneumococo → não precisa.**\n\nQuem recebe:\n- Moradores do mesmo domicílio e contatos íntimos (creche, mesma sala de convívio prolongado).\n- Profissional de saúde só se fez procedimento sem proteção (intubação, aspiração).\n\nAlternativas à rifampicina (meningococo):\n- Ceftriaxona dose única (gestantes).\n- Ciprofloxacino dose única (adultos).",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -7924,7 +7924,7 @@
       "tema": "Reumatologia",
       "sub": "Gota",
       "frente": "Tratamento da crise de gota: como escolher a droga",
-      "verso": "**AINE, colchicina e corticoide são todos 1ª linha.**\n**A escolha é pela contraindicação do paciente.**\n\nEvitar AINE:\n- TFG < 60, insuficiência cardíaca, HAS mal controlada.\n- Úlcera péptica, cirrose, anticoagulação.\n\nColchicina:\n- Dose baixa, iniciada nas primeiras 24–36 h.\n- Evitar na insuficiência renal grave e com inibidores fortes da CYP3A4 (claritromicina).\n\nCorticoide:\n- Oral ou intra-articular (monoartrite).\n- Boa opção na DRC e na IC.\n\nQuem já usa alopurinol:\n- NÃO suspender durante a crise.",
+      "verso": "**AINE / colchicina / corticoide → todos 1ª linha.**\n**A escolha é pela contraindicação.**\n\nEvitar AINE:\n- TFG < 60, insuficiência cardíaca, HAS mal controlada.\n- Úlcera péptica, cirrose, anticoagulação.\n\nColchicina:\n- Dose baixa, iniciada nas primeiras 24–36 h.\n- Evitar na insuficiência renal grave e com inibidores fortes da CYP3A4 (claritromicina).\n\nCorticoide:\n- Oral ou intra-articular (monoartrite).\n- Boa opção na DRC e na IC.\n\nQuem já usa alopurinol:\n- NÃO suspender durante a crise.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -8015,7 +8015,7 @@
       "tema": "Reumatologia",
       "sub": "Gota",
       "frente": "Fatores que aumentam e que reduzem o ácido úrico",
-      "verso": "**Aumentam → álcool (cerveja), carnes vermelhas e frutos do mar, frutose, tiazídico e diurético de alça, AAS em dose baixa, ciclosporina.**\n**Reduzem → losartana, fenofibrato, vitamina C, laticínios desnatados.**\n\nNa prática:\n- Hipertenso com gota → trocar tiazídico por losartana quando possível.\n- Dislipidêmico com gota → fenofibrato ajuda.",
+      "verso": "**Aumentam:**\n- Álcool (cerveja)\n- Carne vermelha / frutos do mar\n- Frutose\n- Tiazídico / diurético de alça\n- AAS em dose baixa\n- Ciclosporina\n**Reduzem:**\n- Losartana\n- Fenofibrato\n- Vitamina C\n- Laticínios desnatados\n\nNa prática:\n- Hipertenso com gota → trocar tiazídico por losartana quando possível.\n- Dislipidêmico com gota → fenofibrato ajuda.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -8088,7 +8088,7 @@
       "tema": "Reumatologia",
       "sub": "FAN e autoanticorpos",
       "frente": "Padrões de FAN e o que cada um sugere",
-      "verso": "**Nuclear pontilhado fino denso → anti-DFS70 → pessoa SAUDÁVEL (fala contra doença autoimune).**\n\nLógica:\n- O padrão mostra onde o anticorpo se liga dentro do núcleo ou do citoplasma.\n- Sempre confirmar com o anticorpo específico.",
+      "verso": "**Pontilhado fino denso (anti-DFS70) → pessoa SAUDÁVEL.**\n\nLógica:\n- O padrão mostra onde o anticorpo se liga dentro do núcleo ou do citoplasma.\n- Sempre confirmar com o anticorpo específico.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -8489,7 +8489,7 @@
       "tema": "Pneumologia",
       "sub": "DPOC",
       "frente": "Exacerbação da DPOC: quando dar antibiótico e qual escolher",
-      "verso": "**Indicar → aumento da purulência do escarro + aumento da dispneia ou do volume do escarro, ou necessidade de ventilação.**\n**Duração → 5–7 dias.**\n\nEscolha:\n- **Ambulatorial, sem fator de risco** → amoxicilina-clavulanato, macrolídeo ou doxiciclina.\n- **Internado / fatores de mau prognóstico** → ceftriaxona ou cefotaxima, ou quinolona respiratória (levo/moxifloxacino).\n- **Risco de Pseudomonas** → piperacilina-tazobactam, cefepime ou ceftazidima.\n\nFatores de mau prognóstico:\n- Comorbidades múltiplas.\n- ≥ 2 exacerbações/ano.\n- VEF1 ≤ 50%.\n- Uso de O2.\n\nRisco de Pseudomonas:\n- VEF1 < 30%, bronquiectasias, antibiótico de amplo espectro nos últimos 3 meses, corticoide sistêmico crônico.\n\nSíndrome gripal associada:\n- DPOC é grupo de risco → oseltamivir, mesmo com teste rápido negativo (baixa sensibilidade).",
+      "verso": "**Escarro purulento + ↑ dispneia ou ↑ volume → antibiótico.**\n**Ou se precisar de ventilação.**\n**Duração → 5–7 dias.**\n\nEscolha:\n- **Ambulatorial, sem fator de risco** → amoxicilina-clavulanato, macrolídeo ou doxiciclina.\n- **Internado / fatores de mau prognóstico** → ceftriaxona ou cefotaxima, ou quinolona respiratória (levo/moxifloxacino).\n- **Risco de Pseudomonas** → piperacilina-tazobactam, cefepime ou ceftazidima.\n\nFatores de mau prognóstico:\n- Comorbidades múltiplas.\n- ≥ 2 exacerbações/ano.\n- VEF1 ≤ 50%.\n- Uso de O2.\n\nRisco de Pseudomonas:\n- VEF1 < 30%, bronquiectasias, antibiótico de amplo espectro nos últimos 3 meses, corticoide sistêmico crônico.\n\nSíndrome gripal associada:\n- DPOC é grupo de risco → oseltamivir, mesmo com teste rápido negativo (baixa sensibilidade).",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -8644,7 +8644,7 @@
       "tema": "Nefrologia",
       "sub": "Distúrbios do sódio",
       "frente": "SIADH: critérios, causas e tratamento",
-      "verso": "**Hiponatremia hipotônica + urina inapropriadamente concentrada (Uosm > 100) + Na urinário > 30 + euvolemia.**\n\nPara fechar o diagnóstico, excluir:\n- Hipotireoidismo, insuficiência adrenal, uso de diurético.\n\nTratamento:\n- **Restrição hídrica** (< 800–1.000 mL/dia) → 1ª linha.\n- **Sal (comprimidos) ± furosemida** ou **ureia** oral.\n- **Tolvaptana** → casos refratários.\n- **Salina 3%** → só se sintomas graves.",
+      "verso": "**SIADH:**\n- Hiponatremia hipotônica\n- Uosm > 100\n- Na urinário > 30\n- Euvolemia\n\nPara fechar o diagnóstico, excluir:\n- Hipotireoidismo, insuficiência adrenal, uso de diurético.\n\nTratamento:\n- **Restrição hídrica** (< 800–1.000 mL/dia) → 1ª linha.\n- **Sal (comprimidos) ± furosemida** ou **ureia** oral.\n- **Tolvaptana** → casos refratários.\n- **Salina 3%** → só se sintomas graves.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -8697,7 +8697,7 @@
       "tema": "Nefrologia",
       "sub": "Distúrbios do sódio",
       "frente": "Hiponatremia: quando dar salina 3% e limite de correção",
-      "verso": "**Sintomas graves (convulsão, coma, vômitos, rebaixamento) → salina 3%, 150 mL em 20 min, repetir até 2–3 vezes.**\n**Meta inicial → subir 4–6 mmol/L.**\n**Limite → até 10 mmol/L em 24 h (8 se alto risco).**\n\nAlto risco de desmielinização:\n- Na ≤ 105, etilismo, desnutrição, hipocalemia, hepatopatia.\n\nDesmielinização osmótica (mielinólise pontina):\n- Aparece dias depois: disartria, disfagia, tetraparesia, \"locked-in\".\n- Se passou do limite → relentar com água livre/SG 5% ± desmopressina.",
+      "verso": "**Sintomas graves → salina 3% (150 mL em 20 min, até 3×).**\n**Meta → subir 4–6 mmol/L.**\n**Limite → 10 mmol/L em 24 h (8 se alto risco).**\n\nSintomas graves:\n- Convulsão\n- Coma / rebaixamento\n- Vômitos\n\nAlto risco de desmielinização:\n- Na ≤ 105, etilismo, desnutrição, hipocalemia, hepatopatia.\n\nDesmielinização osmótica (mielinólise pontina):\n- Aparece dias depois: disartria, disfagia, tetraparesia, \"locked-in\".\n- Se passou do limite → relentar com água livre/SG 5% ± desmopressina.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -8725,7 +8725,7 @@
       "tema": "Nefrologia",
       "sub": "Distúrbios do sódio",
       "frente": "Hipernatremia: causas e como corrigir",
-      "verso": "**Falta de água livre: não bebe (idoso, criança, rebaixado) ou perde água (diabetes insipidus, febre, diarreia osmótica).**\n**Corrigir com água livre (VO/SNG ou SG 5%) sem baixar mais que ~10 mmol/L em 24 h na crônica.**\n\nDiabetes insipidus:\n- Poliúria com urina diluída (Uosm baixa) e Na alto.\n- **Central** → responde à desmopressina.\n- **Nefrogênico** (lítio, hipercalcemia) → não responde.\n\nCorreção rápida demais:\n- Edema cerebral (o neurônio adaptado puxa água).",
+      "verso": "**Causa → falta de água livre.**\n**Correção → água livre, sem baixar > 10 mmol/L em 24 h.**\n\nCausas:\n- Não bebe água (idoso, criança, rebaixado)\n- Perde água (diabetes insipidus, febre, diarreia osmótica)\n- Repor com água livre VO/SNG ou SG 5%\n\nDiabetes insipidus:\n- Poliúria com urina diluída (Uosm baixa) e Na alto.\n- **Central** → responde à desmopressina.\n- **Nefrogênico** (lítio, hipercalcemia) → não responde.\n\nCorreção rápida demais:\n- Edema cerebral (o neurônio adaptado puxa água).",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -9039,7 +9039,7 @@
       "tema": "Saúde do idoso",
       "sub": "Senescência e senilidade",
       "frente": "Por que o idoso tem mais efeito adverso de medicamento?",
-      "verso": "**Por mudanças fisiológicas da senescência na distribuição e eliminação das drogas.**\n\nComposição corporal:\n- ↓ água corporal → drogas hidrossolúveis (lítio, digoxina) ficam mais concentradas.\n- ↑ gordura → drogas lipossolúveis (benzodiazepínicos) acumulam e duram mais.\n\nEliminação:\n- ↓ TFG → acumulam drogas de excreção renal.\n- ↓ metabolismo hepático.\n\nLigação proteica:\n- ↓ albumina → mais fração livre (varfarina, fenitoína).",
+      "verso": "**Senescência muda distribuição e eliminação das drogas.**\n\nComposição corporal:\n- ↓ água corporal → drogas hidrossolúveis (lítio, digoxina) ficam mais concentradas.\n- ↑ gordura → drogas lipossolúveis (benzodiazepínicos) acumulam e duram mais.\n\nEliminação:\n- ↓ TFG → acumulam drogas de excreção renal.\n- ↓ metabolismo hepático.\n\nLigação proteica:\n- ↓ albumina → mais fração livre (varfarina, fenitoína).",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -9189,7 +9189,7 @@
       "tema": "Esôfago e estômago",
       "sub": "Cirurgia bariátrica",
       "frente": "Preparo pré-operatório da cirurgia bariátrica",
-      "verso": "**Avaliação multiprofissional: cirurgião, endocrinologista, nutricionista, psicólogo/psiquiatra e avaliação clínica/cardiológica e pulmonar.**\n\nExames e medidas:\n- Endoscopia digestiva alta (H. pylori, hérnia de hiato, lesões).\n- USG de abdome (colelitíase).\n- Rastrear apneia do sono.\n- Parar de fumar.\n- Perda de peso pré-operatória (reduz o fígado e o risco).\n\nContraindicações:\n- Uso ativo de álcool ou drogas.\n- Doença psiquiátrica grave não controlada.\n- Risco anestésico proibitivo.\n- Incapacidade de entender e aderir ao seguimento.",
+      "verso": "**Avaliação multiprofissional:**\n- Cirurgião\n- Endocrinologista\n- Nutricionista\n- Psicólogo / psiquiatra\n- Clínico, cardiologista e pneumologista\n\nExames e medidas:\n- Endoscopia digestiva alta (H. pylori, hérnia de hiato, lesões).\n- USG de abdome (colelitíase).\n- Rastrear apneia do sono.\n- Parar de fumar.\n- Perda de peso pré-operatória (reduz o fígado e o risco).\n\nContraindicações:\n- Uso ativo de álcool ou drogas.\n- Doença psiquiátrica grave não controlada.\n- Risco anestésico proibitivo.\n- Incapacidade de entender e aderir ao seguimento.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -9298,7 +9298,7 @@
       "tema": "Cabeça e pescoço",
       "sub": "Câncer de tireoide",
       "frente": "Os 4 tumores de tireoide: diferenças principais",
-      "verso": "**Papilífero → o mais comum, disseminação LINFÁTICA, melhor prognóstico.**\n**Folicular → disseminação HEMATOGÊNICA (osso, pulmão), PAAF não diferencia de adenoma.**\n**Medular → células C, calcitonina, pode ser hereditário (NEM 2).**\n**Anaplásico → idoso, crescimento muito rápido, pior prognóstico.**",
+      "verso": "**Papilífero → o mais comum, via linfática**\n**Folicular → via hematogênica**\n**Medular → calcitonina (NEM 2)**\n**Anaplásico → idoso, o pior prognóstico**\n\nPara lembrar:\n- Folicular → PAAF não diferencia de adenoma\n- Anaplásico → crescimento muito rápido",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -9633,7 +9633,7 @@
       "tema": "Reumatologia pediátrica",
       "sub": "Doenças autoimunes na infância",
       "frente": "Artrite idiopática juvenil: critérios e subtipos",
-      "verso": "**Artrite em < 16 anos, por ≥ 6 semanas, sem outra causa.**\n\nUveíte (oligoarticular FAN+):\n- Crônica, anterior e ASSINTOMÁTICA.\n- Exame oftalmológico periódico com lâmpada de fenda.",
+      "verso": "**Artrite em < 16 anos por ≥ 6 semanas, sem outra causa.**\n\nUveíte (oligoarticular FAN+):\n- Crônica, anterior e ASSINTOMÁTICA.\n- Exame oftalmológico periódico com lâmpada de fenda.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -9685,7 +9685,7 @@
       "tema": "Reumatologia pediátrica",
       "sub": "Doenças autoimunes na infância",
       "frente": "AIJ sistêmica (doença de Still): critérios e complicação grave",
-      "verso": "**Febre cotidiana (picos ≥ 39 °C) por ≥ 2 semanas, ≥ 3 dias seguidos, + artrite + ≥ 1 de: rash evanescente cor de salmão, linfadenomegalia, hepato/esplenomegalia ou serosite.**\n\nComplicação grave:\n- **Síndrome de ativação macrofágica** → febre contínua, citopenias.\n  - Ferritina muito alta.\n  - VHS e fibrinogênio CAEM (consumo).\n  - Transaminases e triglicerídeos altos.",
+      "verso": "**Febre cotidiana ≥ 2 semanas + artrite + 1 achado sistêmico.**\n\nAchados sistêmicos (≥ 1):\n- Rash evanescente cor de salmão\n- Linfonodomegalia\n- Hepato / esplenomegalia\n- Serosite\n\nFebre:\n- Picos ≥ 39 °C, ≥ 3 dias seguidos\n\nComplicação grave:\n- **Síndrome de ativação macrofágica** → febre contínua, citopenias.\n  - Ferritina muito alta.\n  - VHS e fibrinogênio CAEM (consumo).\n  - Transaminases e triglicerídeos altos.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -9715,7 +9715,7 @@
       "tema": "Reumatologia pediátrica",
       "sub": "Doenças autoimunes na infância",
       "frente": "Dermatomiosite juvenil: diagnóstico e diferenças do adulto",
-      "verso": "**Fraqueza muscular proximal simétrica + lesões de pele típicas (heliótropo e pápulas de Gottron).**\n\nCritérios de Bohan e Peter:\n- Fraqueza proximal simétrica.\n- Enzimas musculares elevadas (CK, aldolase, TGO, DHL).\n- Eletromiografia miopática.\n- Biópsia muscular com inflamação.\n- Lesão de pele típica.\n- **Definida** → pele + 3 critérios; **provável** → pele + 2.\n\nDiferenças da criança:\n- **Calcinose** frequente (pele, músculo).\n- **Vasculopatia** (úlceras, sangramento intestinal).\n- **NÃO se associa a câncer** (no adulto, sim).\n\nTratamento:\n- Corticoide + metotrexato; fotoproteção.",
+      "verso": "**Fraqueza proximal simétrica + lesões de pele.**\n**Pele → heliótropo e pápulas de Gottron.**\n\nCritérios de Bohan e Peter:\n- Fraqueza proximal simétrica.\n- Enzimas musculares elevadas (CK, aldolase, TGO, DHL).\n- Eletromiografia miopática.\n- Biópsia muscular com inflamação.\n- Lesão de pele típica.\n- **Definida** → pele + 3 critérios; **provável** → pele + 2.\n\nDiferenças da criança:\n- **Calcinose** frequente (pele, músculo).\n- **Vasculopatia** (úlceras, sangramento intestinal).\n- **NÃO se associa a câncer** (no adulto, sim).\n\nTratamento:\n- Corticoide + metotrexato; fotoproteção.",
       "visual": {
         "tipo": "img",
         "src": "https://upload.wikimedia.org/wikipedia/commons/6/68/Dermatomyositis13.jpg",
@@ -9740,7 +9740,7 @@
       "tema": "Reumatologia pediátrica",
       "sub": "Doenças autoimunes na infância",
       "frente": "Hepatite autoimune e colangite esclerosante primária na criança",
-      "verso": "**Hepatite autoimune → tipo 1 (FAN/antimúsculo liso) ou tipo 2 (anti-LKM1, típica da criança, mais grave).**\n**Colangite esclerosante → estenoses e dilatações das vias biliares, associada à retocolite.**\n\nHepatite autoimune:\n- IgG elevada (hipergamaglobulinemia), transaminases altas.\n- Pode abrir como hepatite aguda grave.\n- Biópsia: hepatite de interface.\n- Tratamento: prednisona ± azatioprina.\n\nColangite esclerosante primária:\n- GGT alta (a FA da criança é alta pelo crescimento).\n- Colangio-RM → aspecto em \"contas de rosário\".\n- Sobreposição com hepatite autoimune é comum na criança (colangite esclerosante autoimune).\n- Risco de colangiocarcinoma; tratamento definitivo: transplante.",
+      "verso": "**Hepatite autoimune tipo 1 → FAN / antimúsculo liso**\n**Tipo 2 → anti-LKM1 (criança, mais grave)**\n**Colangite esclerosante → estenoses biliares + retocolite**\n\nHepatite autoimune:\n- IgG elevada (hipergamaglobulinemia), transaminases altas.\n- Pode abrir como hepatite aguda grave.\n- Biópsia: hepatite de interface.\n- Tratamento: prednisona ± azatioprina.\n\nColangite esclerosante primária:\n- GGT alta (a FA da criança é alta pelo crescimento).\n- Colangio-RM → aspecto em \"contas de rosário\".\n- Sobreposição com hepatite autoimune é comum na criança (colangite esclerosante autoimune).\n- Risco de colangiocarcinoma; tratamento definitivo: transplante.",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -9782,7 +9782,7 @@
       "tema": "Reumatologia pediátrica",
       "sub": "Doenças autoimunes na infância",
       "frente": "Tireoidite de Hashimoto na criança e no adolescente",
-      "verso": "**Causa mais comum de hipotireoidismo adquirido e de bócio na infância e adolescência.**\n\nQuadro:\n- Bócio indolor, mais em meninas adolescentes.\n- Queda da velocidade de crescimento com atraso da idade óssea.\n- Atraso puberal (raramente puberdade precoce — síndrome de Van Wyk-Grumbach).\n- Queda no rendimento escolar, constipação, ganho de peso.\n\nDiagnóstico:\n- TSH alto, T4 livre baixo ou normal.\n- Anti-TPO (e anti-tireoglobulina) positivos.\n\nAssociações:\n- Síndrome de Down, síndrome de Turner, DM1, doença celíaca.\n\nTratamento:\n- Levotiroxina.",
+      "verso": "**Hashimoto → causa nº 1 de hipotireoidismo adquirido.**\n**Também a causa nº 1 de bócio na infância.**\n\nQuadro:\n- Bócio indolor, mais em meninas adolescentes.\n- Queda da velocidade de crescimento com atraso da idade óssea.\n- Atraso puberal (raramente puberdade precoce — síndrome de Van Wyk-Grumbach).\n- Queda no rendimento escolar, constipação, ganho de peso.\n\nDiagnóstico:\n- TSH alto, T4 livre baixo ou normal.\n- Anti-TPO (e anti-tireoglobulina) positivos.\n\nAssociações:\n- Síndrome de Down, síndrome de Turner, DM1, doença celíaca.\n\nTratamento:\n- Levotiroxina.",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -9842,7 +9842,7 @@
       "tema": "Gastroenterologia pediátrica",
       "sub": "Doença inflamatória intestinal na infância",
       "frente": "Doença de Crohn × retocolite ulcerativa",
-      "verso": "**Crohn → transmural, salteado, qualquer parte do tubo digestivo (íleo terminal), fístulas e doença perianal.**\n**Retocolite → mucosa, contínua a partir do reto, só cólon, sangue nas fezes.**",
+      "verso": "**Crohn → transmural e salteado (íleo terminal)**\n**Retocolite → mucosa e contínua desde o reto**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -9911,7 +9911,7 @@
       "tema": "Gastroenterologia pediátrica",
       "sub": "Doença inflamatória intestinal na infância",
       "frente": "Calprotectina fecal e manifestações extraintestinais da DII",
-      "verso": "**Calprotectina fecal alta → inflamação intestinal (separa DII de distúrbio funcional).**\n**Artrite periférica → manifestação extraintestinal mais comum.**\n\nCalprotectina:\n- Proteína dos neutrófilos eliminada nas fezes.\n- Normal praticamente afasta DII ativa.\n- Não diferencia DII de infecção.\n\nDoença celíaca (diferencial):\n- Diarreia aquosa/disabsortiva, sem sangue, sem marcadores inflamatórios.\n- Triagem: anti-transglutaminase IgA + IgA total.",
+      "verso": "**Calprotectina alta → inflamação intestinal.**\n**Separa DII de distúrbio funcional.**\n**Extraintestinal mais comum → artrite periférica.**\n\nCalprotectina:\n- Proteína dos neutrófilos eliminada nas fezes.\n- Normal praticamente afasta DII ativa.\n- Não diferencia DII de infecção.\n\nDoença celíaca (diferencial):\n- Diarreia aquosa/disabsortiva, sem sangue, sem marcadores inflamatórios.\n- Triagem: anti-transglutaminase IgA + IgA total.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -9985,7 +9985,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Desenvolvimento neuropsicomotor — marcos",
       "frente": "M-CHAT-R/F: o que é, quando aplicar e como pontuar",
-      "verso": "**Rastreio de risco para transtorno do espectro autista (TEA) entre 16 e 30 meses.**\n**SBP recomenda aplicar aos 18 e aos 24 meses.**\n\nComo funciona:\n- 20 perguntas de sim/não respondidas pelos pais.\n- Cada resposta de risco vale 1 ponto (total 0–20).\n- Na maioria, \"NÃO\" é a resposta de risco.\n  - Itens 2, 5 e 12 → \"SIM\" é a de risco.",
+      "verso": "**M-CHAT-R/F → rastreio de autismo (TEA).**\n**Faixa → 16 a 30 meses.**\n**SBP recomenda aplicar aos 18 e aos 24 meses.**\n\nComo funciona:\n- 20 perguntas de sim/não respondidas pelos pais.\n- Cada resposta de risco vale 1 ponto (total 0–20).\n- Na maioria, \"NÃO\" é a resposta de risco.\n  - Itens 2, 5 e 12 → \"SIM\" é a de risco.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -10029,7 +10029,7 @@
       "tema": "Crescimento e desenvolvimento",
       "sub": "Desenvolvimento neuropsicomotor — marcos",
       "frente": "Teste de Denver II: o que avalia e como interpretar",
-      "verso": "**Triagem do desenvolvimento de 0 a 6 anos em 4 áreas: pessoal-social, motor fino-adaptativo, linguagem e motor grosso.**\n\nComo se lê cada item:\n- **Avançado** → passa em item que a maioria só faz mais velha.\n- **Normal** → passa, ou falha em item que < 75% da idade passa.\n- **Cautela** → falha/recusa item que 75–90% da idade já passam.\n- **Atraso** → falha item que > 90% da idade já passam.",
+      "verso": "**Triagem de 0 a 6 anos em 4 áreas:**\n- Pessoal-social\n- Motor fino-adaptativo\n- Linguagem\n- Motor grosso\n\nComo se lê cada item:\n- **Avançado** → passa em item que a maioria só faz mais velha.\n- **Normal** → passa, ou falha em item que < 75% da idade passa.\n- **Cautela** → falha/recusa item que 75–90% da idade já passam.\n- **Atraso** → falha item que > 90% da idade já passam.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -10102,7 +10102,7 @@
       "tema": "Pneumologia",
       "sub": "DPOC",
       "frente": "Exacerbação da DPOC: quando internar e quando mandar para UTI",
-      "verso": "**Internar → dispneia grave de repouso, hipoxemia/insuficiência respiratória, confusão, cianose, edema novo, falha do tratamento inicial, comorbidade grave ou falta de suporte em casa.**\n**UTI → dispneia grave sem resposta, confusão/letargia, hipoxemia grave persistente ou acidose respiratória que piora apesar da VNI, instabilidade hemodinâmica.**\n\nVNI (antes de intubar):\n- pH ≤ 7,35 e PaCO2 ≥ 45 mmHg.\n- Dispneia grave com fadiga muscular.\n\nContraindicam VNI (→ IOT):\n- Rebaixamento importante, parada respiratória, instabilidade, vômitos, secreção excessiva.",
+      "verso": "**Internar → dispneia grave ou insuficiência respiratória.**\n**Internar → falha do tratamento inicial.**\n**UTI → sem resposta à VNI, confusão ou instabilidade.**\n\nInternar também se:\n- Confusão, cianose ou edema novo\n- Comorbidade grave\n- Falta de suporte em casa\n\nUTI também se:\n- Hipoxemia grave persistente\n- Acidose respiratória que piora apesar da VNI\n\nVNI (antes de intubar):\n- pH ≤ 7,35 e PaCO2 ≥ 45 mmHg.\n- Dispneia grave com fadiga muscular.\n\nContraindicam VNI (→ IOT):\n- Rebaixamento importante, parada respiratória, instabilidade, vômitos, secreção excessiva.",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -10146,7 +10146,7 @@
       "tema": "Pneumologia",
       "sub": "DPOC",
       "frente": "DPOC × asma e quando pesquisar alfa-1 antitripsina",
-      "verso": "**DPOC → > 40 anos, tabagismo/fumaça de lenha, sintomas progressivos, obstrução persistente pós-BD.**\n**Asma → início precoce, atopia, sintomas variáveis, obstrução reversível.**\n**Alfa-1 antitripsina → dosar em todo paciente com DPOC (OMS), sobretudo jovem, pouco tabagismo ou enfisema de BASES.**\n\nAlfa-1 antitripsina:\n- Enfisema panacinar de lobos inferiores.\n- Pode ter doença hepática (cirrose) associada.\n- Tratamento específico: reposição de alfa-1 antitripsina.",
+      "verso": "**DPOC → > 40 anos + tabagismo + obstrução persistente**\n**Asma → início precoce + atopia + obstrução reversível**\n**Alfa-1 antitripsina → dosar em todo DPOC (jovem ou enfisema de bases)**\n\nAlfa-1 antitripsina:\n- Enfisema panacinar de lobos inferiores.\n- Pode ter doença hepática (cirrose) associada.\n- Tratamento específico: reposição de alfa-1 antitripsina.",
       "visual": {
         "tipo": "img",
         "src": "https://upload.wikimedia.org/wikipedia/commons/5/59/Copd_versus_healthy_lung.jpg",
@@ -10203,7 +10203,7 @@
       "tema": "Pneumologia",
       "sub": "Asma",
       "frente": "Diagnóstico de asma: o que confirma a variabilidade do fluxo?",
-      "verso": "**Espirometria com resposta ao broncodilatador → VEF1 sobe > 12% e > 200 mL (adulto) ou > 12% do previsto (criança).**\n**Ou variabilidade do PFE > 10% (adulto) ou > 13% (criança) em 2 semanas.**\n\nOutros testes:\n- Teste de broncoprovocação (metacolina) positivo.\n- Melhora após 4 semanas de corticoide inalatório.\n- Teste de exercício positivo (broncoespasmo induzido por exercício).\n\nAtenção:\n- Espirometria normal fora da crise NÃO exclui asma.",
+      "verso": "**BD → VEF1 sobe > 12% e > 200 mL.**\n**Ou PFE varia > 10% (adulto) / > 13% (criança).**\n\nOutros testes:\n- Teste de broncoprovocação (metacolina) positivo.\n- Melhora após 4 semanas de corticoide inalatório.\n- Teste de exercício positivo (broncoespasmo induzido por exercício).\n\nAtenção:\n- Espirometria normal fora da crise NÃO exclui asma.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -10295,7 +10295,7 @@
       "tema": "Pneumologia",
       "sub": "Asma",
       "frente": "Tratamento da asma em ≥ 12 anos por etapas (GINA)",
-      "verso": "**Trilha 1 (preferida) → budesonida-formoterol em dose baixa como alívio em todas as etapas.**\n**Trilha 2 → SABA como alívio + corticoide inalatório de manutenção.**\n\nPor que a trilha 1:\n- Cada alívio já leva corticoide → menos crises graves que SABA isolado.\n- O formoterol age rápido (como SABA) e dura mais.\n\nEtapa 5 (asma grave):\n- Associar LAMA (tiotrópio).\n- Fenotipar e encaminhar: anti-IgE, anti-IL-5, anti-IL-4R, anti-TSLP.",
+      "verso": "**Trilha 1 → budesonida-formoterol como alívio.**\n**Trilha 2 → SABA + corticoide inalatório.**\n**Trilha 2 → SABA como alívio + corticoide inalatório de manutenção.**\n\nPor que a trilha 1:\n- Cada alívio já leva corticoide → menos crises graves que SABA isolado.\n- O formoterol age rápido (como SABA) e dura mais.\n\nEtapa 5 (asma grave):\n- Associar LAMA (tiotrópio).\n- Fenotipar e encaminhar: anti-IgE, anti-IL-5, anti-IL-4R, anti-TSLP.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -10350,7 +10350,7 @@
       "tema": "Pneumologia",
       "sub": "Asma",
       "frente": "Asma não controlada: o que fazer antes de subir a etapa?",
-      "verso": "**Checar técnica inalatória, adesão, exposições (tabaco, alérgenos, ocupação) e comorbidades antes de aumentar o tratamento.**\n\nComorbidades que pioram a asma:\n- Rinite/rinossinusite.\n- DRGE.\n- Obesidade.\n- Apneia do sono, ansiedade/depressão.\n\nDescer etapa:\n- Após 3 meses de controle → reduzir o corticoide em 25–50%.\n- Nunca suspender totalmente o corticoide inalatório no adulto.",
+      "verso": "**Antes de subir a etapa, checar:**\n- Técnica inalatória\n- Adesão\n- Exposições (tabaco, alérgenos)\n- Comorbidades\n\nComorbidades que pioram a asma:\n- Rinite/rinossinusite.\n- DRGE.\n- Obesidade.\n- Apneia do sono, ansiedade/depressão.\n\nDescer etapa:\n- Após 3 meses de controle → reduzir o corticoide em 25–50%.\n- Nunca suspender totalmente o corticoide inalatório no adulto.",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -10412,7 +10412,7 @@
       "tema": "Pneumologia pediátrica",
       "sub": "Asma na infância",
       "frente": "Asma em ≤ 5 anos: diagnóstico e tratamento por etapas",
-      "verso": "**Diagnóstico → os 3 critérios: sibilância recorrente, nenhuma outra causa provável e resposta ao tratamento.**\n**Só 1 ou 2 critérios → \"suspeita de asma\" e seguimento.**\n\nQuando iniciar corticoide inalatório diário:\n- Sintomas mais de 2×/semana.\n- Ou ≥ 1 crise grave (emergência) no último ano.\n\nTeste terapêutico:\n- CI diário por 2–3 meses → melhora apoia o diagnóstico.",
+      "verso": "**3 critérios:**\n- Sibilância recorrente\n- Nenhuma outra causa\n- Resposta ao tratamento\n**Só 1 ou 2 → suspeita de asma.**\n\nQuando iniciar corticoide inalatório diário:\n- Sintomas mais de 2×/semana.\n- Ou ≥ 1 crise grave (emergência) no último ano.\n\nTeste terapêutico:\n- CI diário por 2–3 meses → melhora apoia o diagnóstico.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -11048,7 +11048,7 @@
       "tema": "Cirurgia pediátrica",
       "sub": "Doença de Hirschsprung",
       "frente": "Doença de Hirschsprung: tratamento e principal complicação",
-      "verso": "**Tratamento → ressecção do segmento aganglionar com abaixamento do cólon normal (pull-through)**\n**Complicação mais temida → enterocolite associada a Hirschsprung**\n\nTécnicas:\n- Swenson, Duhamel e Soave\n- Hoje muito feito por via transanal (De la Torre), em tempo único\n- Colostomia antes, se enterocolite grave, desnutrição ou aganglionose extensa\n\nEnterocolite:\n- Febre, distensão, diarreia explosiva fétida, sepse\n- Pode ocorrer antes OU depois da cirurgia\n- Conduta → hidratação, antibiótico, descompressão com irrigação retal",
+      "verso": "**Tratamento → pull-through (abaixamento).**\n**Complicação mais temida → enterocolite.**\n\nTécnicas:\n- Swenson, Duhamel e Soave\n- Hoje muito feito por via transanal (De la Torre), em tempo único\n- Colostomia antes, se enterocolite grave, desnutrição ou aganglionose extensa\n\nEnterocolite:\n- Febre, distensão, diarreia explosiva fétida, sepse\n- Pode ocorrer antes OU depois da cirurgia\n- Conduta → hidratação, antibiótico, descompressão com irrigação retal",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -11190,7 +11190,7 @@
       "tema": "Nefrologia",
       "sub": "Síndrome nefrótica",
       "frente": "Síndrome nefrótica × síndrome nefrítica",
-      "verso": "**Nefrótica → proteinúria maciça, edema e hipoalbuminemia**\n**Nefrítica → hematúria, hipertensão, oligúria e edema**\n\nLógica:\n- Nefrótica = lesão do podócito → \"filtro furado\" para proteína\n- Nefrítica = inflamação glomerular → hemácias passam e a filtração cai",
+      "verso": "**Nefrótica:**\n- Proteinúria maciça\n- Edema\n- Hipoalbuminemia\n**Nefrítica:**\n- Hematúria\n- Hipertensão\n- Oligúria\n- Edema\n\nLógica:\n- Nefrótica = lesão do podócito → \"filtro furado\" para proteína\n- Nefrítica = inflamação glomerular → hemácias passam e a filtração cai",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -11351,7 +11351,7 @@
       "tema": "Cardiologia",
       "sub": "Hipertensão pulmonar",
       "frente": "Hipertensão pulmonar: investigação até chegar no grupo 1 (HAP)",
-      "verso": "**Eco sugere → afastar grupos 2 e 3 → cintilografia V/Q afasta grupo 4 → cateterismo direito confirma**\n\nPor que a V/Q:\n- É o exame de triagem para tromboembólica crônica (mais sensível que a angioTC)\n- V/Q normal praticamente afasta o grupo 4",
+      "verso": "**Eco sugere → cateterismo direito confirma.**\n**No meio → afastar grupos 2, 3 e 4 (V/Q).**\n\nPor que a V/Q:\n- É o exame de triagem para tromboembólica crônica (mais sensível que a angioTC)\n- V/Q normal praticamente afasta o grupo 4",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -11384,7 +11384,7 @@
       "tema": "Cardiologia",
       "sub": "Hipertensão pulmonar",
       "frente": "Hipertensão arterial pulmonar (grupo 1): fisiopatologia e tratamento",
-      "verso": "**Remodelamento das pequenas artérias pulmonares → ↑ RVP → sobrecarga e falência do VD**\n\nTratamento específico (HAP):\n- Teste de vasorreatividade no cateterismo → só idiopática, hereditária ou por drogas\n  - Positivo (minoria) → bloqueador de canal de cálcio em dose alta\n- Negativo → terapia dupla inicial\n  - Antagonista do receptor de endotelina (ambrisentana, bosentana, macitentana)\n  - Inibidor da fosfodiesterase 5 (sildenafila, tadalafila)\n- Alto risco → acrescentar prostanoide EV/SC\n\nMedidas gerais:\n- Diurético, O2 se hipoxemia, evitar gravidez, vacinação",
+      "verso": "**Remodelamento arterial → ↑ RVP → falência do VD.**\n\nTratamento específico (HAP):\n- Teste de vasorreatividade no cateterismo → só idiopática, hereditária ou por drogas\n  - Positivo (minoria) → bloqueador de canal de cálcio em dose alta\n- Negativo → terapia dupla inicial\n  - Antagonista do receptor de endotelina (ambrisentana, bosentana, macitentana)\n  - Inibidor da fosfodiesterase 5 (sildenafila, tadalafila)\n- Alto risco → acrescentar prostanoide EV/SC\n\nMedidas gerais:\n- Diurético, O2 se hipoxemia, evitar gravidez, vacinação",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -12076,7 +12076,7 @@
       "tema": "Cardiologia",
       "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
       "frente": "Tamponamento cardíaco × pericardite constritiva",
-      "verso": "**Tamponamento → pulso paradoxal, descenso y ausente, pericardiocentese**\n**Constritiva → Kussmaul, knock, descenso y profundo, pericardiectomia**",
+      "verso": "**Tamponamento:**\n- Pulso paradoxal\n- Descenso y ausente\n- Pericardiocentese\n**Constritiva:**\n- Kussmaul\n- Knock pericárdico\n- Descenso y profundo\n- Pericardiectomia",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -12387,7 +12387,7 @@
       "tema": "Gastroenterologia",
       "sub": "Colangite biliar primária",
       "frente": "Colangite biliar primária × colangite esclerosante primária",
-      "verso": "**CBP → mulher, AMA positivo, ductos pequenos, USG/CPRM normal**\n**CEP → homem, retocolite ulcerativa, CPRM com estenoses em \"contas de rosário\"**",
+      "verso": "**CBP → mulher + AMA positivo**\n**CEP → homem + retocolite + CPRM em contas de rosário**\n\nCBP:\n- Ductos pequenos → USG/CPRM normal",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -12516,7 +12516,7 @@
       "tema": "Perioperatório",
       "sub": "Cicatrização de feridas",
       "frente": "Complicações da ferida operatória: seroma × hematoma × linfocele (linforreia) × abscesso",
-      "verso": "**Seroma → líquido claro (soro/linfa), sem febre**\n**Hematoma → sangue, ferida arroxeada e endurecida**\n**Linfocele/linforreia → linfa após dissecção linfonodal**\n**Abscesso → pus, dor, calor, febre**",
+      "verso": "**Seroma → líquido claro, sem febre**\n**Hematoma → sangue, ferida arroxeada**\n**Linfocele → linfa após linfadenectomia**\n**Abscesso → pus + sinais inflamatórios + febre**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -12615,7 +12615,7 @@
       "tema": "Nefrologia",
       "sub": "Distúrbios do sódio",
       "frente": "SIADH: por que o paciente fica euvolêmico e por que Uosm > 100 é \"inapropriada\"",
-      "verso": "**Euvolêmico → o excesso de água estimula o peptídeo natriurético atrial, que elimina sódio**\n**Uosm > 100 → urina concentrada quando deveria estar no máximo diluída**\n\nMecanismo:\n- ADH autônomo → rim reabsorve água livre → hiponatremia hipotônica\n- Volume extra → ↑ peptídeo natriurético atrial → natriurese (Na urinário > 30–40)\n- Perda de sódio contrabalança a água → sem edema e sem hipervolemia\n\nPor que 100:\n- Com plasma hipotônico, o rim normal faz urina de 50–100 mOsm/kg\n- Qualquer valor acima disso mostra ADH agindo sem estímulo fisiológico",
+      "verso": "**Euvolêmico → excesso de água libera peptídeo natriurético.**\n**Uosm > 100 → urina concentrada quando devia diluir.**\n\nMecanismo:\n- ADH autônomo → rim reabsorve água livre → hiponatremia hipotônica\n- Volume extra → ↑ peptídeo natriurético atrial → natriurese (Na urinário > 30–40)\n- Perda de sódio contrabalança a água → sem edema e sem hipervolemia\n\nPor que 100:\n- Com plasma hipotônico, o rim normal faz urina de 50–100 mOsm/kg\n- Qualquer valor acima disso mostra ADH agindo sem estímulo fisiológico",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -12727,7 +12727,7 @@
       "tema": "Endocrinologia",
       "sub": "Síndrome de Cushing",
       "frente": "Doença de Cushing × ACTH ectópico × tumor adrenal: diferenças",
-      "verso": "**Doença de Cushing → ACTH alto, suprime com dexametasona em dose alta**\n**ACTH ectópico → ACTH muito alto, não suprime, hipocalemia e evolução rápida**\n**Adrenal → ACTH suprimido**",
+      "verso": "**Doença de Cushing → ACTH alto, suprime com dexa dose alta**\n**ACTH ectópico → ACTH muito alto, não suprime**\n**Adrenal → ACTH suprimido**\n\nACTH ectópico:\n- Hipocalemia\n- Evolução rápida",
       "visual": [
         {
           "tipo": "tabela",
@@ -12982,7 +12982,7 @@
       "tema": "Pâncreas",
       "sub": "Câncer de pâncreas",
       "frente": "Câncer de pâncreas: critérios de ressecabilidade na TC",
-      "verso": "**Ressecável → sem contato arterial e contato venoso ≤ 180° sem irregularidade**\n**Borderline → contato arterial limitado ou venoso reconstruível → neoadjuvância**\n**Irressecável → envolvimento arterial > 180° ou metástase**",
+      "verso": "**Ressecável → sem contato arterial.**\n**Borderline → contato limitado → neoadjuvância.**\n**Irressecável → artéria > 180° ou metástase.**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -13037,7 +13037,7 @@
       "tema": "Pâncreas",
       "sub": "Câncer de pâncreas",
       "frente": "Sinal de Courvoisier-Terrier: o que é e o que sugere",
-      "verso": "**Vesícula palpável e indolor + icterícia → obstrução maligna distal do colédoco**\n\nCausas:\n- Tumor de cabeça de pâncreas (principal)\n- Tumores periampulares (ampola, colédoco distal, duodeno)\n\nPor que a vesícula dilata:\n- Obstrução lenta e progressiva distende uma vesícula sem fibrose\n- Na litíase, a vesícula costuma ser fibrosada (inflamações repetidas) → não dilata",
+      "verso": "**Vesícula palpável e indolor + icterícia.**\n**Sugere → obstrução maligna distal do colédoco.**\n\nCausas:\n- Tumor de cabeça de pâncreas (principal)\n- Tumores periampulares (ampola, colédoco distal, duodeno)\n\nPor que a vesícula dilata:\n- Obstrução lenta e progressiva distende uma vesícula sem fibrose\n- Na litíase, a vesícula costuma ser fibrosada (inflamações repetidas) → não dilata",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -13461,7 +13461,7 @@
       "tema": "Nefrologia",
       "sub": "Distúrbios do sódio",
       "frente": "Hiponatremia aguda no pós-operatório: por que acontece e como prevenir?",
-      "verso": "**Soro glicosado 5% (água livre) + ADH alto do pós-operatório → hiponatremia aguda**\n**Prevenção → soro de manutenção isotônico**\n\nPor que o ADH sobe no pós-operatório:\n- Dor\n- Náusea e vômitos\n- Estresse cirúrgico e opioides\n\nPor que é grave:\n- A queda é rápida (< 48 h) → o cérebro não tem tempo de se adaptar.\n- Água entra no neurônio → edema cerebral → convulsão, coma.\n\nMaior risco:\n- Crianças\n- Mulheres em idade fértil\n- Hipoxemia associada",
+      "verso": "**SG 5% + ADH alto → hiponatremia aguda.**\n**Prevenção → soro de manutenção isotônico.**\n\nPor que o ADH sobe no pós-operatório:\n- Dor\n- Náusea e vômitos\n- Estresse cirúrgico e opioides\n\nPor que é grave:\n- A queda é rápida (< 48 h) → o cérebro não tem tempo de se adaptar.\n- Água entra no neurônio → edema cerebral → convulsão, coma.\n\nMaior risco:\n- Crianças\n- Mulheres em idade fértil\n- Hipoxemia associada",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -13521,7 +13521,7 @@
       "tema": "Perioperatório",
       "sub": "Nutrição perioperatória",
       "frente": "Aminoácidos essenciais, não essenciais e condicionalmente essenciais",
-      "verso": "**Essenciais = os 9 que o corpo NÃO fabrica → vêm obrigatoriamente da dieta**\n**Condicionalmente essenciais → viram necessários no estresse (trauma, sepse, grande cirurgia)**\n\nPegadinha clássica:\n- **Glutamina** e **arginina** → condicionalmente essenciais (não são essenciais).\n- **Histidina** → é essencial.\n\nOnde entra na cirurgia:\n- Arginina → componente da imunonutrição\n- Glutamina → combustível do enterócito e do linfócito",
+      "verso": "**Essenciais → 9, vêm só da dieta.**\n**Condicionalmente essenciais → necessários no estresse (trauma / sepse / grande cirurgia).**\n\nPegadinha clássica:\n- **Glutamina** e **arginina** → condicionalmente essenciais (não são essenciais).\n- **Histidina** → é essencial.\n\nOnde entra na cirurgia:\n- Arginina → componente da imunonutrição\n- Glutamina → combustível do enterócito e do linfócito",
       "visual": {
         "tipo": "grupos",
         "grupos": [
@@ -13642,7 +13642,7 @@
       "tema": "Esôfago e estômago",
       "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
       "frente": "Esofagite de refluxo: classificação de Los Angeles",
-      "verso": "**Classifica pela extensão das erosões na EDA: A, B, C e D**\n**LA B, C e D → DRGE confirmada (Lyon 2.0)**\n\nPor que importa:\n- **LA A** → inconclusiva (pode aparecer em quem não tem DRGE) → precisa de pHmetria.\n- **LA C e D** → repetir EDA após tratar, para ver cicatrização e procurar Barrett por baixo.",
+      "verso": "**Classifica pela extensão das erosões na EDA (A → D).**\n**LA B, C ou D → DRGE confirmada (Lyon 2.0).**\n\nPor que importa:\n- **LA A** → inconclusiva (pode aparecer em quem não tem DRGE) → precisa de pHmetria.\n- **LA C e D** → repetir EDA após tratar, para ver cicatrização e procurar Barrett por baixo.",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -13686,7 +13686,7 @@
       "tema": "Esôfago e estômago",
       "sub": "Hérnia de hiato e DRGE — cirurgia antirrefluxo",
       "frente": "Esofagite de refluxo: o que é e como tratar?",
-      "verso": "**Esofagite = lesão da mucosa do esôfago pelo refluxo ácido (erosões na EDA)**\n**Tratamento → IBP em dose plena por 8 semanas**\n\nDepois das 8 semanas:\n- **LA A e B** → reduzir para a menor dose eficaz ou sob demanda\n- **LA C e D** → manutenção contínua + EDA de controle\n- Sem resposta → dobrar a dose (2×/dia) e rever adesão\n\nMedidas gerais:\n- Elevar a cabeceira (se sintoma noturno)\n- Não deitar até 2–3 h após comer\n- Perder peso, parar de fumar\n\nQuando operar:\n- Refratária, dependente de IBP ou complicada (ver card de indicação)",
+      "verso": "**Esofagite = erosões da mucosa pelo refluxo.**\n**Tratamento → IBP dose plena por 8 semanas.**\n\nDepois das 8 semanas:\n- **LA A e B** → reduzir para a menor dose eficaz ou sob demanda\n- **LA C e D** → manutenção contínua + EDA de controle\n- Sem resposta → dobrar a dose (2×/dia) e rever adesão\n\nMedidas gerais:\n- Elevar a cabeceira (se sintoma noturno)\n- Não deitar até 2–3 h após comer\n- Perder peso, parar de fumar\n\nQuando operar:\n- Refratária, dependente de IBP ou complicada (ver card de indicação)",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -14135,7 +14135,7 @@
       "tema": "Trauma",
       "sub": "Choque hemorrágico e transfusão maciça",
       "frente": "Transfusão maciça: definição, quando acionar o protocolo e como transfundir",
-      "verso": "**Definição clássica → ≥ 10 concentrados de hemácias em 24 h (ou > 4 em 1 h)**\n**Transfundir na proporção 1:1:1 (plasma : plaquetas : hemácias)**\n**Ácido tranexâmico nas primeiras 3 h**\n\nÁcido tranexâmico:\n- 1 g IV em 10 min + 1 g em 8 h\n- Depois de 3 h → não dar (aumenta mortalidade)\n\nQuando acionar:\n- Escore ABC ≥ 2 (tabela)\n- Instável que não responde ao cristaloide inicial",
+      "verso": "**Maciça → ≥ 10 CH em 24 h (ou > 4 em 1 h).**\n**Proporção → 1:1:1.**\n**Ácido tranexâmico → nas primeiras 3 h.**\n\nÁcido tranexâmico:\n- 1 g IV em 10 min + 1 g em 8 h\n- Depois de 3 h → não dar (aumenta mortalidade)\n\nQuando acionar:\n- Escore ABC ≥ 2 (tabela)\n- Instável que não responde ao cristaloide inicial",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -14340,7 +14340,7 @@
       "tema": "Mastologia",
       "sub": "Câncer de mama — subtipos moleculares e tratamento",
       "frente": "Hormonioterapia no câncer de mama: tamoxifeno × inibidor de aromatase",
-      "verso": "**Pré-menopausa → tamoxifeno**\n**Pós-menopausa → inibidor de aromatase (anastrozol, letrozol, exemestano)**\n**Duração → 5 a 10 anos**",
+      "verso": "**Pré-menopausa → tamoxifeno**\n**Pós-menopausa → inibidor de aromatase**\n**Duração → 5 a 10 anos**\n\nInibidores de aromatase:\n- Anastrozol\n- Letrozol\n- Exemestano",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -14502,7 +14502,7 @@
       "tema": "Infecções genitais",
       "sub": "Doença inflamatória pélvica (DIP)",
       "frente": "DIP: tratamento ambulatorial e hospitalar",
-      "verso": "**Ambulatorial → ceftriaxona 500 mg IM dose única + doxiciclina 100 mg VO 12/12 h + metronidazol 500 mg VO 12/12 h, por 14 dias**\n**Reavaliar em 72 h**\n\nHospitalar:\n- Ceftriaxona 1 g IV/dia + doxiciclina + metronidazol IV\n- Alternativa → clindamicina + gentamicina\n- Passar para VO após 24–48 h de melhora, completando 14 dias\n\nParcerias:\n- Avaliar e tratar empiricamente para gonococo e clamídia\n\nDIU:\n- Não precisa retirar\n- Retirar se não melhorar em 72 h",
+      "verso": "**Ambulatorial → ceftriaxona + doxiciclina + metronidazol por 14 dias.**\n**Reavaliar em 72 h.**\n\nDoses ambulatoriais:\n- Ceftriaxona 500 mg IM dose única\n- Doxiciclina 100 mg VO 12/12 h\n- Metronidazol 500 mg VO 12/12 h\n\nHospitalar:\n- Ceftriaxona 1 g IV/dia + doxiciclina + metronidazol IV\n- Alternativa → clindamicina + gentamicina\n- Passar para VO após 24–48 h de melhora, completando 14 dias\n\nParcerias:\n- Avaliar e tratar empiricamente para gonococo e clamídia\n\nDIU:\n- Não precisa retirar\n- Retirar se não melhorar em 72 h",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -14704,7 +14704,7 @@
       "tema": "Endocrinologia ginecológica",
       "sub": "Amenorreia primária",
       "frente": "MRKH × insensibilidade androgênica completa (Morris)",
-      "verso": "**MRKH → 46,XX, ovários normais, pelos normais**\n**Morris → 46,XY, testículos, pelos escassos e testosterona em nível masculino**\n\nO que têm em comum:\n- Mamas desenvolvidas\n- Vagina curta em fundo cego\n- Útero ausente\n\nPor quê:\n- MRKH → falha do ducto de Müller, mas ovário normal faz estrogênio\n- Morris → testículo faz AMH (some o útero) e testosterona, que vira estrogênio (mamas), mas o receptor de andrógeno não funciona (sem pelos)",
+      "verso": "**MRKH → 46,XX + ovários + pelos normais**\n**Morris → 46,XY + testículos + pelos escassos**\n\nMorris:\n- Testosterona em nível masculino\n\nO que têm em comum:\n- Mamas desenvolvidas\n- Vagina curta em fundo cego\n- Útero ausente\n\nPor quê:\n- MRKH → falha do ducto de Müller, mas ovário normal faz estrogênio\n- Morris → testículo faz AMH (some o útero) e testosterona, que vira estrogênio (mamas), mas o receptor de andrógeno não funciona (sem pelos)",
       "visual": {
         "tipo": "vs",
         "a": {
@@ -15108,7 +15108,7 @@
       "tema": "Pré-natal",
       "sub": "Aloimunização Rh e profilaxia anti-D",
       "frente": "Teste de Kleihauer-Betke: o que mede e para que serve?",
-      "verso": "**Mede o volume de hemácias fetais no sangue materno (hemorragia feto-materna)**\n**Profilaxia eficaz → Kleihauer NEGATIVO**\n\nDose:\n- 300 µg de anti-D neutralizam ~30 mL de sangue fetal total (15 mL de hemácias)\n- Hemorragia maior → doses adicionais (calculadas pelo Kleihauer)\n\nQuando pedir:\n- Pós-parto com risco de grande hemorragia (trauma, descolamento, cesárea difícil, gemelar)\n- Após trauma abdominal na gestante Rh negativo",
+      "verso": "**Kleihauer → mede hemácias fetais no sangue materno.**\n**Profilaxia eficaz → Kleihauer NEGATIVO.**\n\nDose:\n- 300 µg de anti-D neutralizam ~30 mL de sangue fetal total (15 mL de hemácias)\n- Hemorragia maior → doses adicionais (calculadas pelo Kleihauer)\n\nQuando pedir:\n- Pós-parto com risco de grande hemorragia (trauma, descolamento, cesárea difícil, gemelar)\n- Após trauma abdominal na gestante Rh negativo",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -15152,7 +15152,7 @@
       "tema": "Pré-natal",
       "sub": "Aloimunização Rh e profilaxia anti-D",
       "frente": "Quando fazer imunoglobulina anti-D?",
-      "verso": "**Gestante Rh− com Coombs indireto negativo e parceiro Rh+ ou desconhecido**\n**28 semanas + até 72 h após qualquer evento sensibilizante ou parto de RN Rh+**",
+      "verso": "**Rh− com Coombs indireto negativo.**\n**28 semanas + até 72 h após evento ou parto (RN Rh+).**",
       "visual": {
         "tipo": "lista",
         "itens": [
@@ -15366,7 +15366,7 @@
       "tema": "Hemorragias da gestação",
       "sub": "Abortamento",
       "frente": "Abortamento retido: opções de conduta",
-      "verso": "**Expectante, medicamentosa (misoprostol) ou esvaziamento (AMIU)**\n**Escolha compartilhada com a gestante, se estável e sem infecção**\n\nMisoprostol (FIGO 2023, < 13 semanas):\n- 800 µg via vaginal (ou 600 µg sublingual)\n- Pode repetir a cada 3 h se necessário\n\nAMIU × curetagem:\n- **AMIU** → preferível até 12 semanas (menos perfuração e sinéquia)\n- Curetagem → após 12 semanas, depois da expulsão do feto\n\nSempre:\n- Rh negativo → imunoglobulina anti-D",
+      "verso": "**Expectante, misoprostol ou AMIU.**\n**Escolha compartilhada (se estável e sem infecção).**\n\nMisoprostol (FIGO 2023, < 13 semanas):\n- 800 µg via vaginal (ou 600 µg sublingual)\n- Pode repetir a cada 3 h se necessário\n\nAMIU × curetagem:\n- **AMIU** → preferível até 12 semanas (menos perfuração e sinéquia)\n- Curetagem → após 12 semanas, depois da expulsão do feto\n\nSempre:\n- Rh negativo → imunoglobulina anti-D",
       "visual": {
         "tipo": "fluxo",
         "passos": [
@@ -15503,5 +15503,5 @@
       "add": "2026-10-24"
     }
   ],
-  "rev": 1792759807234
+  "rev": 1792877635320
 }

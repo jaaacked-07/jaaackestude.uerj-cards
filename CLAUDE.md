@@ -13,11 +13,14 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 
 ## ⚠️ PADRÃO OBRIGATÓRIO DE TODO CARD (checklist — nada sai sem isso)
 
-1. **Foco UERJ:** escreva como a UERJ cobra (caso clínico curto, conduta, pegadinha da banca). Fonte = bibliografia/diretriz **vigente** (ver "Qualidade do conteúdo"). Campo `uerj` sempre que der e bloco **"Como cai:"** no contexto.
+1. **Foco UERJ:** escreva como a UERJ cobra (caso clínico curto, conduta, pegadinha da banca). Fonte = bibliografia/diretriz **vigente** (ver "Qualidade do conteúdo"). Campo `uerj` sempre que der e bloco **"O que mais cai na UERJ:"** no FINAL do contexto.
 2. **Contexto do tema (`contexto`) em TODOS os cards — PROIBIDO card sem contexto.** Mesmo texto para o baralho inteiro; se o baralho já existe, copie o contexto dele.
 3. **Ilustração do contexto (`ctxvisual`) em TODOS os cards** (mesma do baralho): imagem real se existir; senão esquema SVG.
 4. **Visual no card (`visual`) sempre que possível:** imagem real > fluxograma > tabela > comparação (vs) > lista/grupos. Escore/classificação/conduta por etapas → SEMPRE tabela ou fluxo.
-5. **Resposta em destaque:** o verso começa com a resposta direta em `**negrito**` — **UMA ideia por linha** (nada de "A. B." ou "A; B" ou "A · B" na mesma linha: cada um vai para a linha de baixo). Pode ser seguida de tópicos `- ` no mesmo bloco quando a resposta é uma lista.
+5. **Resposta em destaque = gatilho de memória** (regra somada às demais, não substitui nenhuma):
+   - **1ª linha:** a resposta OBJETIVA e fácil de lembrar, trazendo imediatamente o que a frente pergunta (curta: idealmente ≤ ~8 palavras). Cria a associação rápida pergunta → informação essencial.
+   - **Linhas seguintes da caixinha:** só os detalhes que fazem parte da resposta principal (ex.: adulto × criança, os itens da lista pedida). Explicação, porquê, conduta geral e pegadinha ficam FORA da caixinha, no jeito de sempre.
+   - **UM conceito por linha** na caixinha: nada de "A. B.", "A; B", "A · B" nem lista separada por vírgula na mesma linha. Lista = título em negrito (`**Manter:**`) + um item por linha (`- item`) dentro do mesmo bloco.
 6. **Explicação só em tópicos:** depois de uma linha em branco, rótulo curto terminando em `:` + tópicos `- ` (subtópico com 2 espaços). **Proibido texto corrido.**
 7. **Nada repetido** entre verso e visual (ver "Qualidade").
 8. **Escores destrinchados:** itens, pontos, total e faixas, em tabela.
@@ -101,7 +104,10 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 - Ex.: pergunta sobre notificação imediata → o contexto explica notificação compulsória como um todo (o que é, prazos imediata × semanal, exemplos de semanais e imediatas, para quem notificar).
 - Ex.: pergunta sobre DIP tardia → o contexto explica a CTG inteira (linha de base, variabilidade, acelerações, tipos de DIP, categorias, conduta).
 - **Um contexto por baralho**: todos os cards do mesmo baralho recebem o MESMO texto. As marcações (marca-texto) dela no contexto ficam presas à **1ª linha** do contexto: ao ampliar um contexto existente, **nunca mude a 1ª linha** (só acrescente/edite as de baixo), senão ela perde as marcações. Se o baralho já tem contexto, reutilize (pode ampliar com o que faltar e atualizar em todos os cards do baralho).
-- Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), curto (cabe numa tela), terminando com **`Como cai:`** (como a UERJ cobra).
+- Estruturado como o verso (1ª linha em negrito com a definição; blocos com rótulo e tópicos `- `), cabendo em uma tela.
+- **Profundidade com foco UERJ:** o contexto tem que trazer o que a UERJ realmente cobra do tema, já destrinchado (ex.: meningite → a diferença do líquor bacteriana × viral × tuberculosa × fúngica). Use o Foco UERJ (repositório jaaacked-07/jaaackestude.prevalenciaUERJ: temas, pontos cobrados e pegadinhas de 2022–2026) e a diretriz vigente. Contexto raso é erro.
+- **Termina com o bloco `O que mais cai na UERJ:`** (no FINAL, depois da explicação): tópicos curtos com o que a banca cobra e as pegadinhas recorrentes.
+- **Nada repetido:** o que já está na explicação, no `ctxvisual` ou nos cards do baralho não se repete no contexto (ex.: se a tabela do líquor é o `ctxvisual`, o texto não repete a tabela; o bloco final só aponta o que cai).
 - **Hierarquia obrigatória também no contexto** (igual ao verso): rótulo do bloco numa linha terminando em `:`; cada item numa linha própria `- **termo** → explicação`; detalhes de um item como subtópico recuado (`  - ` com 2 espaços).
 - **Nunca** junte vários itens numa linha com `·`, `;` ou `/` (✗ `- 0 → completar · 1/2 → rotina · 3 → controle`). Uma ideia por linha.
 - O app mostra no fim da explicação, num quadro próprio. Não use mais o campo `resumo`.

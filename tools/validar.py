@@ -27,7 +27,8 @@ for c in cards:
     ctx = c.get('contexto') or ''
     if ctx:
         if not ctx.lstrip().startswith('**'): E(i, 'contexto: 1ª linha tem que ser a definição em **negrito**')
-        if 'Como cai:' not in ctx: E(i, 'contexto: falta o bloco "Como cai:"')
+        if 'O que mais cai na UERJ:' not in ctx: W(i, 'contexto: falta o bloco final "O que mais cai na UERJ:"')
+        elif ctx.rstrip().split('O que mais cai na UERJ:')[-1].count('\n\n'): E(i, 'contexto: o bloco "O que mais cai na UERJ:" tem que ser o ÚLTIMO')
         for l in ctx.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'contexto: itens juntos com "·" na mesma linha → "{l.strip()[:60]}"')
         if len(ctx) > 1600: W(i, 'contexto longo demais (deve caber numa tela)')
@@ -39,6 +40,8 @@ for c in cards:
             core = l.strip().strip('*')
             if re.match(r'^\s*[-•◦]\s', l): continue
             if ' · ' in core or re.search(r'[.;]\s+\**[A-ZÁÉÍÓÚÂÊÔÃÕÇ]', core): E(i, f'resposta em destaque com 2 ideias na mesma linha (quebre em linhas) → "{l.strip()[:70]}"')
+            if core.count(',') >= 2 and not re.search(r'\d,\d', core): E(i, f'resposta em destaque com lista por vírgula na mesma linha (use título + um item por linha) → "{l.strip()[:70]}"')
+        if b0 and len(b0[0].strip().strip('*')) > 70: W(i, f'1ª linha da resposta longa — deixe objetiva (gatilho de memória) → "{b0[0].strip()[:70]}"')
         if len(v.split('\n\n')) < 2 and not c.get('visual'): W(i, 'verso sem explicação em tópicos e sem visual')
         for bl in v.split('\n\n')[1:]:
             ls = [x for x in bl.split('\n') if x.strip()]
