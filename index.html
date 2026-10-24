@@ -482,13 +482,18 @@ const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/8
 let S;
 try{S=JSON.parse(localStorage.getItem(LS))||{}}catch(e){S={}}
 const DEV=(()=>{try{let d=localStorage.getItem(LS+'.dev');if(!d){d=Math.random().toString(36).slice(2,10);localStorage.setItem(LS+'.dev',d)}return d}catch(e){return 'x'}})();
-function fixS(){S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.ren.area=S.ren.area||{}; S.edit=S.edit||{}; S.oculto=S.oculto||{};
+function fixS(){ (S.notas||[]).forEach(n=>(n.imgs||[]).forEach(im=>{ if(im&&im.path&&im.local) delete im.local; }));S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.ren.area=S.ren.area||{}; S.edit=S.edit||{}; S.oculto=S.oculto||{};
   S.xpDev=S.xpDev||{}; if(S.xp&&!Object.keys(S.xpDev).length) S.xpDev[DEV]=S.xp;
   S.dias=S.dias||{}; if(S.streak&&S.streak.last&&!Object.keys(S.dias).length) for(let i=0;i<S.streak.n;i++) S.dias[addD(S.streak.last,-i)]=1;
   S.notasDel=S.notasDel||{}; S.sim=S.sim||[]; S.simDel=S.simDel||{}; S.decks=S.decks||[]; S.decksDel=S.decksDel||{}; S.marks=S.marks||{};
   if(typeof recalc==='function') recalc();}
 fixS();
-const saveLocal=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}};
+/* se o armazenamento do aparelho lotar (fotos em cache), libera o cache de fotos e tenta de novo — o progresso nunca deixa de ser salvo */
+let LSAVISO=false;
+function lsSet(k,v){ try{ localStorage.setItem(k,v); return true; }catch(e){}
+  try{ localStorage.removeItem(LS+'.imgc'); localStorage.setItem(k,v); return true; }catch(e){}
+  if(!LSAVISO){ LSAVISO=true; setTimeout(()=>toast('Armazenamento do aparelho cheio'),300); } return false; }
+const saveLocal=()=>{ lsSet(LS,JSON.stringify(S)); };
 const save=()=>{saveLocal();if(typeof agendarSync==='function')agendarSync()};
 
 /* ===== Cards ===== */
@@ -853,7 +858,7 @@ const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
 const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prioridade UERJ e fracos)',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
-const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',fav:'⭐ Favoritos',novos:'Nunca vistos'};
+const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Só de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 function ordenar(pool){
   const pos=new Map(CARDS.map((c,i)=>[c.id,i])), P=c=>S.srs[c.id]||{};
   const L=pool.slice(), o=DECK.ordem;
@@ -871,6 +876,7 @@ function deckPool(){
   if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
+  if(DECK.filtro==='digitar') p=p.filter(c=>c.tipo==='digitar');
   if(DECK.filtro==='fav') p=p.filter(c=>c.fav);
   if(DECK.filtro==='novos') p=p.filter(c=>!S.srs[c.id]);
   return p;
@@ -883,7 +889,7 @@ function pEstudar(){
   const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
   const nb=norm(DECK.busca.trim());
   const lista=nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+c.area+' '+(c.verso||'')).includes(nb)):CARDS;
-  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
+  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':c.tipo==='digitar'?'<span class="bd">⌨</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
   const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
@@ -1193,7 +1199,7 @@ function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<spa
 const IMG_RE=/!\[([^\]]*)\]\(([^)\s]+)\)/g;
 /* anotação: **negrito**, __sublinhado__, {v}vermelho{/v}; fotos ![p|m|](src) = pequena/média/grande; fotos na mesma linha = lado a lado */
 const fmtNota=t=>esc(t).replace(/\*\*([\s\S]+?)\*\*/g,'<b>$1</b>').replace(/__([\s\S]+?)__/g,'<u>$1</u>').replace(/\{v\}([\s\S]*?)\{\/v\}/g,'<span class="vm">$1</span>').replace(/\{\/?v\}/g,'');
-const imgTag=(a,src)=>`<img class="mimg ${a==='p'?'sp':a==='m'?'sm':'sg'}" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`;
+const imgTag=(a,src)=>`<img class="mimg ${a==='p'?'sp':a==='m'?'sm':'sg'}" src="${esc(imgSrc(src))}" data-p="${esc(src)}" alt="" data-zoom onerror="imgFalhou(this)">`;
 function minhaCorpo(t){
   t=String(t); let h='',i=0; const toks=[...t.matchAll(IMG_RE)];
   for(let j=0;j<toks.length;){ const g=[toks[j]]; while(j+g.length<toks.length&&/^[ \t]*$/.test(t.slice(g[g.length-1].index+g[g.length-1][0].length,toks[j+g.length].index))) g.push(toks[j+g.length]);
@@ -1319,7 +1325,7 @@ document.addEventListener('paste',async e=>{
   toast('Enviando foto…');
   for(const f of fs){ let u; try{u=await comprimir(f)}catch(er){toast('Não consegui ler essa imagem');continue}
     let path=await subirImgCard(u,'minha-'+id.replace(/[^\w-]/g,'')+'-'+Date.now().toString(36));
-    if(!path){ path='local:'+Date.now().toString(36); try{const c=imgCache(); c[path]=u; localStorage.setItem(IMGC_KEY,JSON.stringify(c));}catch(er){} toast('Sem conexão: a foto fica só neste aparelho'); }
+    if(!path){ path='local:'+Date.now().toString(36); guardarImg(path,u); toast('Sem conexão: a foto fica só neste aparelho'); }
     const p0=ta.selectionStart, v=ta.value, tok=(p0&&v[p0-1]!=='\n'?'\n':'')+`![](${path})`+'\n';
     ta.value=v.slice(0,p0)+tok+v.slice(ta.selectionEnd); ta.setSelectionRange(p0+tok.length,p0+tok.length); }
   if(sv) sv.disabled=false; delete box.dataset.busy; anAltura(ta); anFotos(box); ta.focus(); toast('Foto colada — Shift+Enter ou ✓ salva');
@@ -1405,7 +1411,7 @@ async function enviarPendentes(silencioso){
   const pend=S.notas.filter(n=>!n.env);
   if(!ghTok()||!pend.length||ENVIANDO) return; ENVIANDO=true;
   try{
-    for(const n of pend) for(let i=0;i<(n.imgs||[]).length;i++){ const im=n.imgs[i]; if(!im.path&&im.local){ im.path=await subirImg(n.id,i,im.local); saveLocal(); } }
+    for(const n of pend) for(let i=0;i<(n.imgs||[]).length;i++){ const im=n.imgs[i]; if(!im.path&&im.local){ im.path=await subirImg(n.id,i,im.local); if(im.path){ guardarImg(im.path,im.local); delete im.local; } saveLocal(); } }
     await ghMod(d=>{const ja=new Set(d.pendentes.map(n=>String(n.id)));pend.forEach(n=>{if(!ja.has(String(n.id)))d.pendentes.push({id:n.id,d:n.d,t:n.t,...(n.imgs&&n.imgs.length?{imgs:n.imgs.map(i=>i.path)}:{})})})});
     pend.forEach(n=>n.env=true); save();
   }catch(e){ if(!silencioso) toast(String(e.message)==='401'?'Chave do GitHub inválida ou vencida':'Sem internet — envio quando voltar'); }
@@ -1553,7 +1559,7 @@ async function convidarEntrar(){
 
 /* ===== Imagens nas anotações ===== */
 const rascImgs=()=>{try{return JSON.parse(localStorage.getItem(LS+'.rascimg'))||[]}catch(e){return []}};
-const setRascImgs=a=>{try{localStorage.setItem(LS+'.rascimg',JSON.stringify(a))}catch(e){toast('Imagem grande demais para guardar offline')}};
+const setRascImgs=a=>{ if(!lsSet(LS+'.rascimg',JSON.stringify(a))) toast('Imagem grande demais para guardar offline'); };
 function comprimir(file){return new Promise((res,rej)=>{
   const fr=new FileReader(); fr.onerror=rej;
   fr.onload=()=>{const im=new Image(); im.onerror=rej; im.onload=()=>{
@@ -1563,7 +1569,7 @@ function comprimir(file){return new Promise((res,rej)=>{
     res(c.toDataURL('image/jpeg',0.82));}; im.src=fr.result;};
   fr.readAsDataURL(file);
 })}
-const srcImg=i=>i.local||i.path;
+const srcImg=i=>i.local||imgSrc(i.path);
 async function subirImg(nid,idx,dataUrl){
   const tk=ghTok(), path=`data/img/${nid}-${idx}.jpg`, url=GH_API.replace('data/notas.json',path);
   const g=await fetch(url+'?ref=main',{headers:ghH(tk),cache:'no-store'}); const sha=g.ok?(await g.json()).sha:null;
@@ -1704,7 +1710,7 @@ function pAnotar(){
   const tx0=$('#tx'), draft=tx0?tx0.value:rascunho(), foc=tx0&&document.activeElement===tx0, sel=tx0?[tx0.selectionStart,tx0.selectionEnd]:null;
   const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env), man=lista.filter(n=>n.manual), resto=lista.filter(n=>!n.manual);
   const est=n=>n.manual?(n.pronto?'Cards feitos ✓':'Aguardando cards'):n.env?'✓ enviada':tk?'enviando…':'não enviada';
-  const item=n=>`<div class="nt ${MODO_SEL&&!n.manual?'selmode':''} ${SELN.has(n.id)?'sel':''}" data-id="${n.id}">${MODO_SEL&&!n.manual?`<span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span>`:''}<div class="d"><span class="nb ${n.manual?(n.pronto?'pill ok':'pill cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" alt=""></div>`).join('')}</div>`:''}</div>`;
+  const item=n=>`<div class="nt ${MODO_SEL&&!n.manual?'selmode':''} ${SELN.has(n.id)?'sel':''}" data-id="${n.id}">${MODO_SEL&&!n.manual?`<span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span>`:''}<div class="d"><span class="nb ${n.manual?(n.pronto?'pill ok':'pill cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt=""></div>`).join('')}</div>`:''}</div>`;
   const ri=rascImgs();
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
@@ -1759,7 +1765,7 @@ ${n.t}${n.imgs&&n.imgs.length?'\nImagens: '+n.imgs.map(x=>x.path||'(imagem ainda
   document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
     if(el.classList.contains('selmode')){ togSel(+el.dataset.id); return; }
     const n=S.notas.find(x=>x.id==el.dataset.id);
-    folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>${n.imgs&&n.imgs.length?`<div class="nfull">${n.imgs.map(i=>`<img src="${esc(srcImg(i))}" alt="">`).join('')}</div>`:''}
+    folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>${n.imgs&&n.imgs.length?`<div class="nfull">${n.imgs.map(i=>`<img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt="">`).join('')}</div>`:''}
       <button class="btn" id="ns" style="margin-top:12px">Salvar</button>
       <div class="foot"><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
     $('#ns').onclick=async()=>{const t=$('#ne').value.trim();fecharFolha();if(!t||t===n.t)return;n.t=t;n.u=Date.now();save();pAnotar();
@@ -1809,7 +1815,14 @@ const AREAS=['Cirurgia','Clínica Médica','Ginecologia','Obstetrícia','Medicin
 const CR_TIPOS={fv:'Frente e verso',cz:'Cloze',io:'Oclusão de imagem'};
 const IMGC_KEY=LS+'.imgc';
 const imgCache=()=>{try{return JSON.parse(localStorage.getItem(IMGC_KEY))||{}}catch(e){return {}}};
-const imgSrc=s=>(s&&imgCache()[s])||s;
+/* fotos recém-coladas: memória da sessão + cache local (se o armazenamento lotar, apaga as mais antigas e tenta de novo) */
+const MEMIMG={};
+function guardarImg(path,dataUrl){ MEMIMG[path]=dataUrl; const c=imgCache(); c[path]=dataUrl; let ks=Object.keys(c); while(ks.length>40) delete c[ks.shift()];
+  for(;;){ try{ localStorage.setItem(IMGC_KEY,JSON.stringify(c)); return; }catch(e){ ks=Object.keys(c).filter(k=>k!==path); if(!ks.length){ try{localStorage.removeItem(IMGC_KEY)}catch(_){} return; } delete c[ks[0]]; } } }
+const RAW_BASE='https://raw.githubusercontent.com/jaaacked-07/jaaackestude.uerj-cards/main/';
+const imgSrc=s=>(s&&(MEMIMG[s]||imgCache()[s]))||s;
+/* foto ainda não publicada no site: busca direto do repositório; se falhar, esconde */
+function imgFalhou(el){ const p=el.dataset.p||''; if(p.startsWith('data/img/')&&!el.dataset.raw){ el.dataset.raw=1; el.src=RAW_BASE+p; return; } el.style.display='none'; }
 let CR=null;
 function crNovo(tipo){ let d=null; try{d=JSON.parse(localStorage.getItem(LS+'.crdest'))}catch(e){}
   return {tipo:tipo||'fv',dest:d,frente:'',verso:'',fimg:[],vimg:[],texto:'',extra:'',img:null,rects:[],perg:'',peg:'',ue:'',edit:null,foco:null}; }
@@ -1975,7 +1988,7 @@ async function subirImgCard(dataUrl,nome){
   const tk=ghTok(); if(!tk) return null;
   const path=`data/img/${nome}.jpg`, url=GH_API.replace('data/notas.json',path);
   try{ const w=await fetch(url,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify({message:'Imagem de card',content:dataUrl.split(',')[1],branch:'main'})}); if(!w.ok) return null; }catch(e){ return null; }
-  try{ const c=imgCache(); c[path]=dataUrl; const ks=Object.keys(c); while(ks.length>40) delete c[ks.shift()]; localStorage.setItem(IMGC_KEY,JSON.stringify(c)); }catch(e){}
+  guardarImg(path,dataUrl);
   return path;
 }
 let SALVANDO=false;
