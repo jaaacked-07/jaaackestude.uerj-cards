@@ -26,7 +26,9 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
 8. **Escores destrinchados:** itens, pontos, total e faixas, em tabela.
 9. **Pelo menos 1 quiz por baralho** (4 alternativas, comentário em cada uma) e `pegadinha` sempre que der.
 10. **Baralho novo → entrada em `data/prevalencia.json`** (quanto cai na UERJ). É isso que faz o app priorizar o tema.
-11. **Antes de commitar, rode `python3 tools/validar.py`.** Se aparecer qualquer ❌, corrija e rode de novo. **Nunca commite com erro.** Corrija também os ⚠️ quando der (principalmente card sem visual).
+11. **Macete em TODO card novo (campo `macete`) — ela pediu, ajuda MUITO a gravar.** Mnemônico, acróstico, rima, associação visual ou "regra de bolso" curta (1–2 linhas). O app mostra numa caixa amarela "🧠 Macete" logo abaixo da resposta. Use macete consagrado quando existir (ex.: "MUDPILES", "Charcot = febre + icterícia + dor"); se não existir, crie um que faça sentido — nunca um macete que distorça o conteúdo. O validador dá ❌ em card novo sem macete.
+12. **Cards de digitar (`"tipo": "digitar"`) junto com flash/quiz:** em todo lote, cerca de 1 a cada 3–4 cards (pelo menos 1 por anotação quando der). Pergunta DIRETA e objetiva (termina em "?"), cuja resposta é curta e única: um nome, um número, uma droga, um valor de corte (`resposta` ≤ 6 palavras). Ponha em `aceitas` as outras formas certas (sinônimo, sigla, com/sem unidade). O `verso` segue o padrão do flash (1ª linha = a resposta em negrito + explicação em tópicos). Ex.: "Qual o limite de correção do sódio em 24 h?" → `resposta: "8 mmol/L"`, `aceitas: ["8", "8 meq/L", "8 a 10"]`.
+13. **Antes de commitar, rode `python3 tools/validar.py`.** Se aparecer qualquer ❌, corrija e rode de novo. **Nunca commite com erro.** Corrija também os ⚠️ quando der (principalmente card sem visual).
 
 ## Rotina: transformar anotações em cards
 
@@ -120,7 +122,7 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
 ```json
 {
   "id": "tema-curto-07",            // único
-  "tipo": "flash",                  // "flash" ou "quiz"
+  "tipo": "flash",                  // "flash", "quiz" ou "digitar"
   "area": "Medicina Preventiva",    // grande área (ver lista acima)
   "tema": "Vigilância em Saúde",    // matéria
   "sub": "Notificação imediata",    // assunto (vira filtro no app)
@@ -128,6 +130,9 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
   "verso": "Resposta curta",        // só flash
   "opcoes": ["A", "B", "C", "D"],   // só quiz
   "certa": 1,                       // só quiz (índice 0-based)
+  "resposta": "8 mmol/L",           // só digitar: o que ela digita (curto)
+  "aceitas": ["8", "8 meq/L"],      // só digitar: outras formas aceitas (opcional)
+  "macete": "texto curto",          // OBRIGATÓRIO em card novo: mnemônico/associação
   "comentarios": ["...", "...", "...", "..."], // só quiz, um por alternativa
   "visual": { ... },                // opcional
   "pegadinha": "texto",             // opcional (use sempre que der)

@@ -15837,7 +15837,220 @@
         "legenda": "Os 2 cortes que fecham gestação inviável: CCN 7 mm e saco 25 mm."
       },
       "add": "2026-10-24"
+    },
+    {
+      "id": "na-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Distúrbios do sódio",
+      "frente": "Qual o limite máximo de correção do sódio nas primeiras 24 h?",
+      "resposta": "8 a 10 mmol/L",
+      "aceitas": [
+        "8 10",
+        "8-10",
+        "8 a 10",
+        "10",
+        "8",
+        "10 mmol/L",
+        "8 mmol/L",
+        "8 a 10 meq/L",
+        "10 meq/L"
+      ],
+      "verso": "**8–10 mmol/L em 24 h.**\n\nPor quê:\n- Corrigir rápido demais → desmielinização osmótica (dias depois).\n- Alto risco (alcoolista, desnutrido, hipocalemia) → mirar no limite mais baixo (8).",
+      "macete": "Sódio sobe de \"8 a 10\" — passou disso, a PONTE cai (mielinólise pontina).",
+      "contexto": "**O sódio reflete o equilíbrio de ÁGUA: hiponatremia = excesso relativo de água; hipernatremia = falta de água.**\n\nO que é:\n- O ADH controla a água livre; o sódio sérico mostra se sobra ou falta água em relação ao sal.\n- Os sintomas são neurológicos: o neurônio incha (hipo) ou murcha (hiper) — ver ilustração.\n\nHiponatremia (Na < 135) — passo a passo:\n- **1º osmolaridade sérica** → normal = pseudo (lipídio/proteína); alta = hiperglicemia/manitol\n- **2º osmolaridade urinária** → < 100 = polidipsia ou pouco soluto (cerveja, \"chá com torradas\")\n- **3º volemia + Na urinário**\n  - Hipovolêmica → Na urinário < 20 (perda extrarrenal) → SF corrige\n  - Euvolêmica → SIADH, hipotireoidismo, insuficiência adrenal\n  - Hipervolêmica → IC, cirrose, síndrome nefrótica\n\nSIADH:\n- Euvolêmica + Uosm > 100 + Na urinário > 30, com tireoide, adrenal e rim normais\n- Causas → pneumonia, CA de pulmão de pequenas células, SNC, ISRS, carbamazepina, pós-operatório\n- Tratamento → restrição hídrica (SF pode PIORAR)\n\nCorreção:\n- Sintomas graves (convulsão, coma) → salina 3% em bolus\n- Limite → 8–10 mmol/L em 24 h\n- Rápida demais → desmielinização osmótica dias depois (disartria, disfagia, tetraparesia)\n\nHipernatremia (Na > 145):\n- Falta de água livre → idoso/criança sem acesso, diabetes insipidus\n- DI central responde à desmopressina; nefrogênico (lítio, hipercalcemia) não\n- Corrigir com água livre, sem baixar > 10 mmol/L em 24 h\n\nO que mais cai na UERJ:\n- SIADH em caso clínico (pneumonia, tumor de pulmão) — diferenciar de hipovolemia pelo Na urinário.\n- Velocidade de correção e o que é fator de risco para mielinólise (hipocalemia é fator de risco, não causa).\n- Hiponatremia pós-operatória por soro hipotônico → manutenção deve ser isotônica.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 128\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><circle cx=\"55\" cy=\"58\" r=\"26\" fill=\"var(--rose-soft)\" stroke=\"var(--rose)\" stroke-width=\"2\"/><text x=\"55\" y=\"62\" font-size=\"9\" fill=\"var(--ink)\" text-anchor=\"middle\">neurônio</text><text x=\"55\" y=\"104\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">normal</text><path d=\"M90 58 h24 m-5 -5 l5 5 l-5 5\" stroke=\"var(--mute)\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"58\" r=\"38\" fill=\"var(--rose-soft)\" stroke=\"var(--wine)\" stroke-width=\"2\"/><text x=\"160\" y=\"56\" font-size=\"9\" fill=\"var(--ink)\" text-anchor=\"middle\">água entra</text><text x=\"160\" y=\"68\" font-size=\"9\" fill=\"var(--ink)\" text-anchor=\"middle\">→ edema</text><text x=\"160\" y=\"112\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">hiponatremia aguda</text><path d=\"M205 58 h24 m-5 -5 l5 5 l-5 5\" stroke=\"var(--mute)\" fill=\"none\" stroke-width=\"1.5\"/><text x=\"217\" y=\"44\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">correção</text><text x=\"217\" y=\"80\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">rápida</text><circle cx=\"280\" cy=\"58\" r=\"20\" fill=\"var(--card)\" stroke=\"var(--wine)\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><text x=\"280\" y=\"62\" font-size=\"9\" fill=\"var(--ink)\" text-anchor=\"middle\">murcha</text><text x=\"280\" y=\"104\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">desmielinização</text><text x=\"280\" y=\"116\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">osmótica</text></svg>",
+        "legenda": "Hiponatremia aguda incha o neurônio; correção rápida da crônica faz o neurônio adaptado murchar"
+      },
+      "fonte": "Diretriz Europeia de Hiponatremia (ESE/ESICM/ERA)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "men-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Meningites",
+      "frente": "Qual célula predomina no líquor da meningite bacteriana?",
+      "resposta": "neutrófilos",
+      "aceitas": [
+        "neutrofilo",
+        "polimorfonucleares",
+        "polimorfonuclear",
+        "pmn",
+        "segmentados"
+      ],
+      "verso": "**Neutrófilos (polimorfonucleares).**\n\nNo líquor:\n- Celularidade alta (centenas a milhares).\n- Glicose baixa e proteína alta.\n- Viral e tuberculosa → linfócitos.",
+      "macete": "Bactéria é \"bicho grande\" → chama o neutrófilo, que come a glicose (glicose ↓).",
+      "contexto": "**Meningite = inflamação das meninges; o líquor diz se é bacteriana, viral, tuberculosa ou fúngica.**\n\nO que é:\n- Infecção do espaço subaracnoide; a bacteriana é emergência (mata em horas).\n- Agentes por idade:\n  - RN → GBS, E. coli, Listeria\n  - Criança e adulto → pneumococo, meningococo (Hib se não vacinado)\n  - > 50 anos, etilista, imunossuprimido, gestante → + Listeria\n\nClínica:\n- Febre, cefaleia, rigidez de nuca, alteração da consciência\n- Lactente → irritabilidade, abaulamento de fontanela, sem rigidez\n- Meningococo → petéquias/púrpura\n\nLíquor (tabela abaixo):\n- Normal → < 5 células, proteína 15–45, glicose ~2/3 da sérica\n- A **glicose** separa: cai na bacteriana, TB e fúngica; normal na viral\n\nConduta:\n- Punção lombar antes do antibiótico, se não houver contraindicação\n- TC antes da punção → déficit focal, papiledema, convulsão, rebaixamento, imunossupressão (colher hemocultura e iniciar ATB ANTES da TC)\n- Empírico pela idade + dexametasona antes/junto da 1ª dose\n- Viral (enterovírus) → suporte; encefalite herpética → aciclovir\n\nQuimioprofilaxia:\n- Meningococo e Hib → rifampicina para contatos íntimos\n- Pneumococo → não precisa\n\nFormas especiais:\n- **Tuberculosa** → subaguda, VI par, hidrocefalia; RIPE 12 meses + corticoide\n- **Criptocócica** → HIV com CD4 < 100, pressão de abertura muito alta; adiar TARV 4–6 semanas\n\nO que mais cai na UERJ:\n- DIFERENCIAR O LÍQUOR pelo caso (células, predomínio, proteína, glicose, ADA/tinta da China).\n- Etilista ou > 50 anos → lembrar da ampicilina (Listeria).\n- Líquor bacteriano com mononucleares → Listeria.\n- Quem recebe quimioprofilaxia (e que pneumococo não recebe).",
+      "ctxvisual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Líquor",
+            "Bacteriana",
+            "Viral",
+            "Tuberculosa",
+            "Fúngica (cripto)"
+          ],
+          "linhas": [
+            [
+              "Aspecto",
+              "Turvo",
+              "Límpido",
+              "Límpido / opalescente",
+              "Límpido"
+            ],
+            [
+              "Células",
+              "↑↑↑ (centenas a milhares)",
+              "↑ (10–500)",
+              "↑ (50–500)",
+              "↑ (20–500), pode ser baixa"
+            ],
+            [
+              "Predomínio",
+              "!Neutrófilos",
+              "Linfócitos",
+              "Linfócitos",
+              "Linfócitos"
+            ],
+            [
+              "Proteína",
+              "↑↑",
+              "Normal ou ↑ leve",
+              "!↑↑↑ (muito alta)",
+              "↑"
+            ],
+            [
+              "Glicose",
+              "!↓↓",
+              "!NORMAL",
+              "↓",
+              "↓"
+            ],
+            [
+              "Exame-chave",
+              "Gram, cultura, lactato > 3,5",
+              "PCR viral",
+              "ADA ↑, PCR/cultura",
+              "Tinta da China, CrAg; pressão de abertura muito alta"
+            ]
+          ]
+        },
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/MenigitisCSF2019.jpg/600px-MenigitisCSF2019.jpg",
+          "legenda": "Líquor turvo de meningite bacteriana (Streptococcus): celularidade muito alta",
+          "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+        }
+      ],
+      "fonte": "Harrison 21ª ed. / Guia de Vigilância em Saúde (MS)",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "rean-d1",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Neonatologia",
+      "sub": "Reanimação neonatal",
+      "frente": "Qual a relação massagem : ventilação na reanimação neonatal?",
+      "resposta": "3:1",
+      "aceitas": [
+        "3 para 1",
+        "3 1",
+        "tres para um",
+        "3 por 1"
+      ],
+      "verso": "**3:1 (3 compressões : 1 ventilação).**\n\nComo fazer:\n- Só depois de 30 s de VPP efetiva com FC < 60.\n- O₂ a 100% durante a massagem.\n- Técnica dos 2 polegares no terço inferior do esterno.",
+      "macete": "No RN o ritmo é \"um-e-dois-e-três-e-VENTILA\" (3:1).",
+      "contexto": "**Reanimação neonatal (SBP) = garantir ventilação efetiva no Minuto de Ouro.**\n\nO que é:\n- A maioria das paradas neonatais é respiratória → ventilar resolve quase tudo.\n- Preparo antes do parto: material testado, equipe treinada, sala 23–25 °C.\n\nAo nascer, 3 perguntas:\n- ≥ 34 semanas? Respira/chora? Tônus em flexão?\n- Sim → clampeamento tardio (≥ 60 s), pele a pele, aquecer\n- Não → mesa de reanimação\n\nPassos iniciais:\n- Aquecer, posicionar (leve extensão), aspirar só se obstrução, secar\n- < 34 semanas → saco plástico SEM secar + touca, sob calor radiante\n- Temperatura axilar alvo → 36,5–37,5 °C\n\nFluxo (ver ilustração):\n- FC < 100 ou apneia/respiração irregular → **VPP** até 60 s de vida\n- O₂ inicial → 21% no ≥ 34 semanas; 30% no < 34 semanas\n- FC < 60 após 30 s de VPP EFETIVA (com via aérea avançada) → **massagem 3:1** com O₂ 100%\n- FC < 60 após massagem → **adrenalina** (preferir via umbilical)\n- Hipovolemia suspeita → SF 10 mL/kg\n\nAvaliação:\n- FC → ausculta precórdio ou monitor cardíaco (o mais preciso)\n- Oxímetro no pulso direito (pré-ductal)\n\nMecônio:\n- RN vigoroso → cuidados de rotina\n- Não vigoroso → passos iniciais e VPP; não aspirar traqueia de rotina\n\nO que mais cai na UERJ:\n- VPP é a medida mais importante — não pular para massagem.\n- Concentração de O₂ por idade gestacional.\n- Termorregulação do prematuro (saco plástico sem secar).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 172\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><line x1=\"20\" y1=\"40\" x2=\"20\" y2=\"150\" stroke=\"var(--line)\"/><text x=\"20\" y=\"165\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">0 s</text><line x1=\"170\" y1=\"40\" x2=\"170\" y2=\"150\" stroke=\"var(--line)\"/><text x=\"170\" y=\"165\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">30 s</text><line x1=\"320\" y1=\"40\" x2=\"320\" y2=\"150\" stroke=\"var(--line)\"/><text x=\"320\" y=\"165\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">60 s</text><rect x=\"20\" y=\"50\" width=\"150\" height=\"30\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"95.0\" y=\"69\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Passos iniciais</text><rect x=\"170\" y=\"50\" width=\"150\" height=\"30\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"245.0\" y=\"69\" font-size=\"10\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">VPP se indicada</text><text x=\"170\" y=\"30\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">MINUTO DE OURO</text><text x=\"20\" y=\"105\" font-size=\"10\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"start\">Avaliar FC + respiração (não a cor)</text><text x=\"20\" y=\"125\" font-size=\"10\" font-weight=\"500\" fill=\"var(--ink)\" text-anchor=\"start\">FC < 100 ou apneia → VPP</text><text x=\"20\" y=\"143\" font-size=\"10\" font-weight=\"500\" fill=\"var(--ink)\" text-anchor=\"start\">FC < 60 após VPP efetiva → massagem 3:1</text></svg>",
+        "legenda": "O primeiro minuto de vida na sala de parto."
+      },
+      "fonte": "SBP — Diretrizes de Reanimação Neonatal",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "chq-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "Choque hemorrágico e transfusão maciça",
+      "frente": "Na fratura de pelve instável com choque, qual a 1ª medida para conter o sangramento?",
+      "resposta": "cinta pélvica",
+      "aceitas": [
+        "cinta",
+        "lencol",
+        "binder",
+        "binder pelvico",
+        "estabilizacao pelvica",
+        "amarrar a pelve",
+        "enfaixar a pelve"
+      ],
+      "verso": "**Cinta pélvica (ou lençol) na altura dos trocânteres.**\n\nPor quê:\n- O sangramento vem do plexo VENOSO pélvico.\n- Fechar a pelve reduz o volume e tampona.\n- Depois → angioembolização ou packing pré-peritoneal.",
+      "macete": "Pelve sangra veia → \"aperta o cinto\" antes de pensar em embolizar.",
+      "contexto": "**Choque hemorrágico = perfusão inadequada por perda de sangue; no trauma, todo choque é hemorrágico até prova em contrário.**\n\nO que é:\n- Perda de volume → queda do débito → hipoperfusão → acidose lática.\n- Fontes no trauma → tórax, abdome, pelve, ossos longos, externo.\n\nClasses (ATLS):\n- **I** → < 15%, sinais vitais normais\n- **II** → 15–30%, taquicardia e PA diferencial reduzida\n- **III** → 31–40%, hipotensão, confusão e oligúria\n- **IV** → > 40%, letárgico, diurese desprezível\n\nRessuscitação de controle de danos:\n- Parar o sangramento (cirurgia, angioembolização, cinta pélvica)\n- Hipotensão permissiva (PAS ~90) até o controle — exceto no TCE\n- Cristaloide aquecido limitado (até 1 L) e sangue precoce\n- Plasma : plaquetas : hemácias → 1:1:1\n- Ácido tranexâmico nas primeiras 3 h\n\nTransfusão maciça:\n- ≥ 10 concentrados em 24 h (ou > 4 em 1 h)\n- Citrato quela cálcio → hipocalcemia (repor cálcio)\n- Também hipotermia, hipercalemia, coagulopatia dilucional, alcalose metabólica tardia\n\nDiamante letal (ver ilustração):\n- Hipotermia + acidose + coagulopatia + hipocalcemia → um piora o outro\n\nO que mais cai na UERJ:\n- Classe do choque pelo caso (hipotensão só a partir da classe III).\n- Fratura de pelve: o sangue vem do plexo VENOSO → cinta pélvica é a 1ª medida.\n- Citrato causa HIPOcalcemia (não hiper).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><polygon points=\"170,30 290,115 170,200 50,115\" fill=\"var(--rose-soft)\" stroke=\"var(--wine)\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"30\" r=\"7\" fill=\"var(--wine)\"/><circle cx=\"290\" cy=\"115\" r=\"7\" fill=\"var(--wine)\"/><circle cx=\"170\" cy=\"200\" r=\"7\" fill=\"var(--wine)\"/><circle cx=\"50\" cy=\"115\" r=\"9\" fill=\"var(--rose)\"/><text x=\"170\" y=\"16\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Hipotermia</text><text x=\"300\" y=\"100\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"end\">Acidose</text><text x=\"170\" y=\"222\" font-size=\"11\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Coagulopatia</text><text x=\"42\" y=\"98\" font-size=\"11\" font-weight=\"700\" fill=\"var(--rose)\" text-anchor=\"start\">Hipocalcemia</text><text x=\"42\" y=\"138\" font-size=\"8.5\" fill=\"var(--ink)\" text-anchor=\"start\">(citrato)</text><text x=\"170\" y=\"110\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Choque</text><text x=\"170\" y=\"123\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">hemorrágico</text></svg>",
+        "legenda": "Diamante letal: a tríade clássica + hipocalcemia."
+      },
+      "fonte": "ATLS 10ª ed.",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "tb-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Tuberculose",
+      "frente": "Qual tuberculostático causa neurite óptica?",
+      "resposta": "etambutol",
+      "aceitas": [
+        "emb"
+      ],
+      "verso": "**Etambutol.**\n\nNa prática:\n- Alteração de acuidade e de visão de cores (verde-vermelho).\n- Por isso não se usa < 10 anos (não relatam alteração visual).",
+      "macete": "EtambutOLHO — E de \"Eye\".",
+      "contexto": "**Tuberculose = infecção pelo M. tuberculosis, transmitida por aerossol; a forma pulmonar bacilífera mantém a cadeia de transmissão.**\n\nO que é:\n- Bacilo álcool-ácido resistente, transmitido pela fala, tosse e espirro do bacilífero.\n- Imunidade celular contém o bacilo (granuloma) → infecção latente.\n\nInfecção latente × doença:\n- **ILTB** → infectado, sem doença, não transmite\n- **TB ativa** → sintomas, imagem e/ou bacteriologia\n\nClínica:\n- Tosse ≥ 3 semanas, febre vespertina, sudorese noturna, emagrecimento\n- RX → cavitação em ápices/segmentos posteriores (ver imagem)\n- População vulnerável (rua, presídio, indígena, HIV) → tosse de qualquer duração\n\nDiagnóstico da doença:\n- **TRM-TB** → teste preferencial, detecta resistência à rifampicina\n- **Baciloscopia** → 2 amostras de escarro\n- **Cultura + TS** → retratamento, TRM com resistência, HIV, populações vulneráveis\n- **PT/IGRA** → servem para ILTB, não diagnosticam doença no adulto\n\nTratamento (≥ 10 anos):\n- **2RHZE/4RH** → 6 meses\n- **Meningite e osteoarticular** → 12 meses\n\nEfeitos adversos:\n- Hepatotoxicidade (H, R, Z) → suspender se transaminases > 3× com sintomas ou > 5×\n- Rifampicina → urina laranja, interações (anticoncepcional, TARV)\n- Isoniazida → neuropatia periférica (piridoxina)\n- Etambutol → neurite óptica; pirazinamida → hiperuricemia/artralgia\n\nTB e HIV:\n- Forma disseminada/extrapulmonar; baciloscopia e RX podem vir normais\n- LF-LAM urinário ajuda com CD4 baixo\n- TARV em até 2 semanas após o RIPE — adiar na TB meníngea\n\nContatos e ILTB:\n- Sintomático → investigar TB ativa\n- Assintomático → PT/IGRA; positivo com RX normal → tratar ILTB\n- Esquemas ILTB → 3HP, 4R, 6–9H\n- PVHIV com CD4 ≤ 350 → tratar ILTB sem PT\n\nO que mais cai na UERJ:\n- TB no HIV com BAAR/RX negativos e LAM positivo.\n- Diferencial TB × neoplasia pulmonar (cavidade de parede espessa > 15 mm sugere escamoso).\n- Avaliação de contatos e quando tratar ILTB.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tuberculosis-x-ray-1.jpg",
+        "legenda": "RX: TB pulmonar avançada com infiltrado bilateral e cavitação no ápice direito",
+        "fonte": "Wikimedia Commons · CDC (autor desconhecido) · Domínio público"
+      },
+      "fonte": "MS — Manual de Recomendações para o Controle da TB no Brasil",
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Qual o nome da tríade febre + icterícia + dor em hipocôndrio direito?",
+      "resposta": "tríade de Charcot",
+      "aceitas": [
+        "charcot",
+        "triade charcot"
+      ],
+      "verso": "**Tríade de Charcot (colangite aguda).**\n\nGravidade:\n- + hipotensão + confusão mental → pêntade de Reynolds (colangite grave).\n- Conduta → antibiótico + drenagem biliar (CPRE).",
+      "macete": "Charcot = 3 (febre, icterícia, dor); Reynolds = 5 (+ confusão e PA baixa) — \"R de Rebaixa\".",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nO que é:\n- Obstrução + bactéria na bile → aumento da pressão biliar → bacteremia.\n- Germes → Gram-negativos entéricos (E. coli, Klebsiella), enterococo, anaeróbios.\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave/tóxica)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, FA/GGT e bilirrubina altas)\n- **C** → imagem com dilatação da via biliar ou causa (USG, colangio-RM)\n\nGravidade e drenagem:\n- **Grave** (disfunção orgânica) → drenagem urgente\n- **Moderada** → drenagem precoce (24–48 h)\n- **Leve** → antibiótico e drenagem eletiva\n\nTratamento:\n- Hemoculturas + antibiótico (Gram-negativos e anaeróbios)\n- **Drenagem → CPRE com papilotomia** (via preferencial — ver imagem)\n- CPTH (percutânea) → só se CPRE falhar/indisponível\n- Depois → colecistectomia na mesma internação\n\nColangite × colecistite:\n- Colangite → icterícia importante, via biliar dilatada, bilirrubina/FA muito altas\n- Colecistite → Murphy, vesícula espessada, sem icterícia importante (exceto Mirizzi)\n\nO que mais cai na UERJ:\n- Reconhecer Charcot/Reynolds e indicar CPRE (não drenagem percutânea).\n- Tríades epônimas trocadas entre si (Charcot × Beck × Cushing).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "fonte": "Tokyo Guidelines 2018",
+      "add": "2026-10-24"
     }
   ],
-  "rev": 1792878611438
+  "rev": 1792880509898
 }

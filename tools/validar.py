@@ -32,7 +32,15 @@ for c in cards:
         for l in ctx.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'contexto: itens juntos com "·" na mesma linha → "{l.strip()[:60]}"')
         if len(ctx) > 3200: W(i, 'contexto longo demais (resumão direto, sem enrolação)')
-    if c.get('tipo') == 'flash':
+    if c.get('tipo') not in ('flash','quiz','digitar'): E(i, f'tipo inválido: {c.get("tipo")}')
+    if (c.get('add') or '') >= '2026-10-25' and not (c.get('macete') or '').strip(): E(i, 'falta "macete" (mnemônico/associação para gravar) — obrigatório nos cards novos')
+    if c.get('tipo') == 'digitar':
+        r = (c.get('resposta') or '').strip()
+        if not r: E(i, 'digitar: falta "resposta" (o que ela digita)')
+        elif len(r) > 40 or len(r.split()) > 6: E(i, f'digitar: "resposta" tem que ser curta e direta (≤ 6 palavras) → "{r[:50]}"')
+        if not isinstance(c.get('aceitas', []), list): E(i, 'digitar: "aceitas" tem que ser lista')
+        if not (c.get('frente') or '').strip().endswith('?'): W(i, 'digitar: a frente deve ser uma pergunta direta terminando em "?"')
+    if c.get('tipo') in ('flash','digitar'):
         v = c.get('verso') or ''
         b0 = v.split('\n\n')[0].strip().split('\n')
         if not b0 or not b0[0].startswith('**'): E(i, 'verso: 1ª linha tem que ser a RESPOSTA DIRETA em **negrito** (é ela que fica em destaque)')

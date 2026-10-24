@@ -93,6 +93,17 @@ nav svg{width:24px;height:24px}
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pega{margin-top:16px;background:var(--mid-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 .pega b{color:var(--mid)}
+.mac{margin-top:14px;background:#FFF4D6;border:1.5px dashed #E2B53E;border-radius:14px;padding:11px 14px;font-size:15px;color:#4A3A10}
+.mac b{color:#9A6B00}
+@media (prefers-color-scheme:dark){.mac{background:#3A3018;color:#F3E6C4;border-color:#8A6D25}.mac b{color:#F2C960}}
+.dig{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.dig input{width:100%;font-size:17px;padding:13px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);outline:none}
+.dig input:focus{border-color:var(--rose)}
+.dig .dh{font-size:12.5px;color:var(--mute)}
+.dgr{margin:14px 0 4px;padding:10px 14px;border-radius:14px;font-size:15px}
+.dgr.ok{background:#E3F2E6;color:#24633A}.dgr.bad{background:#F8E1E3;color:#8A2A35}
+@media (prefers-color-scheme:dark){.dgr.ok{background:#1F3A27;color:#9FDCB0}.dgr.bad{background:#3E2226;color:#F2AEB6}}
+.rate button.sug{outline:2.5px solid currentColor;outline-offset:2px}
 .uerj{margin-top:12px;background:var(--wine-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 .uerj b{color:var(--wine)}
 .src{margin-top:14px;font-size:12px;color:var(--mute)}
@@ -262,6 +273,9 @@ textarea.note:focus{border-color:var(--rose)}
 .anot .mimg,.mine .mimg{display:block;width:100%;max-width:440px;max-height:min(50vh,420px);height:auto;object-fit:contain;object-position:left center;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .anot.edit{display:flex;gap:6px;align-items:flex-end;padding:6px;cursor:auto}
 .anot.edit textarea{flex:1;min-height:42px;margin:0;resize:none;overflow:hidden;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;padding:7px 9px}
+.anot,.mine{position:relative}
+.aned{float:right;margin:-2px -4px 2px 8px;width:26px;height:26px;border-radius:50%;font-size:13px;line-height:26px;text-align:center;color:var(--rose);background:var(--card);border:1px solid var(--line);opacity:.75}
+.aned:hover{opacity:1}
 .anbt{display:flex;flex-direction:column;gap:6px;flex:none}
 .andel{width:30px;height:30px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);font-size:13px;line-height:27px;text-align:center}
 .ansv{flex:none;width:30px;height:30px;border-radius:50%;background:var(--rose);color:#fff;font-size:15px;line-height:30px;text-align:center}
@@ -634,7 +648,7 @@ function migrarMarcasCtx(){
   if(!S.marks||!CARDS.length) return; let mudou=false;
   const pl=t=>String(t||'').replace(/\*\*/g,'');
   CARDS.forEach(c=>{ const m=S.marks[c.id]; if(!c.contexto||!m||!m.l||!m.l.length) return;
-    const ctx=pl(c.contexto), resto=pl([c.frente,c.verso,c.uerj,c.pegadinha,...(c.opcoes||[]),...(c.comentarios||[]),S.minha&&S.minha[c.id]].join('\n'));
+    const ctx=pl(c.contexto), resto=pl([c.frente,c.verso,c.resposta,c.macete,c.uerj,c.pegadinha,...(c.opcoes||[]),...(c.comentarios||[]),S.minha&&S.minha[c.id]].join('\n'));
     const vai=m.l.filter(x=>ctx.includes(x.t)&&!resto.includes(x.t)); if(!vai.length) return;
     const k=ctxKey(c), d=S.marks[k]||(S.marks[k]={l:[]});
     vai.forEach(x=>{ if(!d.l.some(y=>y.t===x.t)) d.l.push(x); });
@@ -659,6 +673,13 @@ const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 /* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
 const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
 const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
+const macHTML=c=>c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'';
+/* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
+const normR=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9%+]+/g,' ').trim();
+function levR(a,b){ const m=a.length,n=b.length; if(!m||!n) return 0; let p=[...Array(n+1).keys()];
+  for(let i=1;i<=m;i++){ const q=[i]; for(let j=1;j<=n;j++) q[j]=Math.min(p[j]+1,q[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=q; } return 1-p[n]/Math.max(m,n); }
+function conferirDig(c,v){ const u=normR(v); if(!u) return false; const dig=x=>(x.match(/\d+/g)||[]).join(',');
+  return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>u===a||(` ${u} `).includes(` ${a} `)||(dig(u)===dig(a)&&levR(u,a)>=.85)); }
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -687,7 +708,8 @@ function visual(v){
 function cardCompleto(c){
   let h=tagHTML(c)+(ehFrenteOculta(c)?'':frenteHTML(c));
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${inlBr((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
-  else h+=`<div class="ans">${respHTML(c)}</div>`;
+  else h+=`<div class="ans">${respHTML(c)}${macHTML(c)}</div>`;
+  if(c.tipo==='quiz') h+=macHTML(c);
   h+=`<div class="ans">${ctxHTML(c)}</div>`;
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
@@ -1153,11 +1175,11 @@ function minhaCorpo(t){
 }
 function minhaHTML(id){
   const t=anParse((BYID[id]||{}).minha).base;
-  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><div class="mh">Minha anotação</div>${minhaCorpo(t)}</div>`:''}</div>`;
+  return `<div class="mbx" data-mid="${id}">${t?`<div class="mine"><button class="aned" data-aned aria-label="Editar ou apagar anotação" title="Editar / apagar">✎</button><div class="mh">Minha anotação</div>${minhaCorpo(t)}</div>`:''}</div>`;
 }
 /* ===== Anotações no lugar (botão ✎ ao lado do marca-texto, atalho T) =====
    guardadas no mesmo campo "minha": bloco "@@nota|n|âncora" + texto, então sincronizam igual */
-const AN_RE=/^@@nota\|(\d+)\|(.*)$/, AN_BLK='li,p,.vis,.opt,.q,.czq,.uerj,.pega,.ctxh,.src,.tag,.fn';
+const AN_RE=/^@@nota\|(\d+)\|(.*)$/, AN_BLK='li,p,.vis,.opt,.q,.czq,.mac,.dgr,.uerj,.pega,.ctxh,.src,.tag,.fn';
 let NT=false;
 function anParse(s){ const base=[],l=[]; let cur=null;
   String(s||'').split('\n').forEach(x=>{ const m=x.match(AN_RE); if(m){ cur={n:+m[1],a:m[2],t:[]}; l.push(cur); } else (cur?cur.t:base).push(x); });
@@ -1180,7 +1202,7 @@ function pintarAnots(){
       bl=bl||anBlocos(root); let hit=null, n=0;
       if(o.a) for(const b of bl){ if(anTxt(b)===o.a){ if(n===o.n){hit=b;break} n++; } }
       if(!hit&&!root.querySelector('.mbx')) return;
-      const el=document.createElement('div'); el.className='anot'; el.dataset.mid=id; el.dataset.k=k; el.innerHTML=minhaCorpo(o.t);
+      const el=document.createElement('div'); el.className='anot'; el.dataset.mid=id; el.dataset.k=k; el.innerHTML='<button class="aned" data-aned aria-label="Editar ou apagar anotação" title="Editar / apagar">✎</button>'+minhaCorpo(o.t);
       anInserir(root,hit,el); });
   });
 }
@@ -1215,6 +1237,7 @@ function modoNota(v){ NT=v===undefined?!NT:v; document.body.classList.toggle('nt
 addEventListener('click',e=>{
   if(e.target.closest('#mtfab')) return;
   if(NT){ const root=e.target.closest('[data-an]'); modoNota(false); if(!root) return; e.preventDefault(); e.stopPropagation(); anNova(root,e.target); return; }
+  const ae=e.target.closest('[data-aned]'); if(ae){ e.preventDefault(); e.stopPropagation(); const x=ae.closest('.anot,.mine'); x.classList.contains('anot')?anEditar(x):anEditarBase(x.closest('.mbx')); return; }
   const a=e.target.closest('.anot:not(.edit),.mbx .mine');
   if(a&&getSelection().isCollapsed&&!e.target.closest('img[data-zoom],mark.hl')){ e.preventDefault(); e.stopPropagation(); a.classList.contains('anot')?anEditar(a):anEditarBase(a.closest('.mbx')); }
 },true);
@@ -1986,16 +2009,22 @@ function proximoCard(){
       const i=+b.dataset.i, ok=i===c.certa;
       document.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;x.querySelector('.c').classList.remove('hide');if(j===c.certa)x.classList.add('ok');else if(j===i)x.classList.add('bad')});
       vib(ok?12:[20,40,20]);
-      $('#ar').insertAdjacentHTML('beforeend',`<div class="ans">${ctxHTML(c)}</div>`+extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
+      $('#ar').insertAdjacentHTML('beforeend',macHTML(c)+`<div class="ans">${ctxHTML(c)}</div>`+extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
       if(ok) f.innerHTML=`<button class="btn" id="nx">Continuar</button>`, $('#nx').onclick=()=>responder(c,2);
       else pedirMotivo(c);
     });
   } else {
-    f.innerHTML=`<button class="btn" id="sh">Mostrar resposta</button>`;
+    const dg=c.tipo==='digitar';
+    if(dg){ $('#ar').innerHTML=`<div class="dig"><input id="dg" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="Digite a resposta…"><div class="dh">Enter confere · em branco = não sei</div></div>`;
+      $('#dg').onkeydown=e=>{ if(e.key==='Enter'&&!e.isComposing){ e.preventDefault(); $('#sh').click(); } }; setTimeout(()=>{ const i=$('#dg'); if(i) i.focus({preventScroll:true}); },60); }
+    f.innerHTML=`<button class="btn" id="sh">${dg?'Conferir':'Mostrar resposta'}</button>`;
     $('#sh').onclick=()=>{
       if(ehFrenteOculta(c)&&$('#fq')) $('#fq').remove();
-      $('#ar').innerHTML=`<div class="ans hlz" data-hl="${c.id}">${respHTML(c)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
-      f.innerHTML=`<div class="rate"><button class="r0" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2" data-r="2">Sabia</button></div>`;
+      let res='', sug=-1;
+      if(dg){ const v=($('#dg')||{}).value||'', ok=conferirDig(c,v); sug=ok?2:0; if(document.activeElement) document.activeElement.blur();
+        res=`<div class="dgr ${ok?'ok':'bad'}">${v.trim()?`${ok?'✓':'✗'} Você: <b>${esc(v.trim())}</b>`:'✗ Em branco'}</div>`; }
+      $('#ar').innerHTML=res+`<div class="ans hlz" data-hl="${c.id}">${respHTML(c)}${macHTML(c)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
+      f.innerHTML=`<div class="rate"><button class="r0${sug===0?' sug':''}" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2${sug===2?' sug':''}" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };
   }
@@ -2054,7 +2083,7 @@ function fim(){
 }
 
 /* ===== Marca-texto ===== */
-function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts,svg,.anot')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
+function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,button.aned,.tacts,svg,.anot')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
 function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>{ if(m.closest('.hlz')===z) m.replaceWith(...m.childNodes); }); z.normalize(); }
 /* texto corrido da zona com a posição de cada nó (a marca guarda o trecho + qual ocorrência dele: marca no lugar certo, ex. dentro do fluxograma) */
 function zonaMapa(z){ const w=zonaTextos(z), ns=[]; let n,p=0,txt=''; while(n=w.nextNode()){ ns.push({n,s:p}); txt+=n.nodeValue; p+=n.nodeValue.length; } return {ns,txt}; }
