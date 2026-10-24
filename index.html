@@ -259,14 +259,15 @@ textarea.note:focus{border-color:var(--rose)}
 .mine .mh{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);font-weight:600;margin-bottom:3px}
 .mine .mt,.anot .mt{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:14px;line-height:1.5;white-space:pre-wrap}
 .anot{margin:6px 0 10px;padding:5px 10px 6px;border-left:2px dashed var(--rose);background:color-mix(in srgb,var(--rose) 8%,transparent);border-radius:0 10px 10px 0;cursor:text;overflow-wrap:anywhere}
-.anot .mimg,.mine .mimg{display:block;max-width:100%;max-height:min(60vh,520px);width:auto;height:auto;object-fit:contain;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
+.anot .mimg,.mine .mimg{display:block;width:100%;max-width:440px;max-height:min(50vh,420px);height:auto;object-fit:contain;object-position:left center;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .anot.edit{display:flex;gap:6px;align-items:flex-end;padding:6px;cursor:auto}
 .anot.edit textarea{flex:1;min-height:42px;margin:0;resize:none;overflow:hidden;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;padding:7px 9px}
+.anbt{display:flex;flex-direction:column;gap:6px;flex:none}
+.andel{width:30px;height:30px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);font-size:13px;line-height:27px;text-align:center}
 .ansv{flex:none;width:30px;height:30px;border-radius:50%;background:var(--rose);color:#fff;font-size:15px;line-height:30px;text-align:center}
 body.ntmode [data-an]{cursor:crosshair}
 .mtfab .mtrow{display:flex;gap:8px}
 .mtfab .ntb.on{background:var(--rose);color:#fff}
-.mine .mimg{display:block;max-width:100%;max-height:min(60vh,520px);width:auto;height:auto;object-fit:contain;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
 .addn{margin-top:14px;font-size:14px;color:var(--rose);font-weight:500}
 .mine textarea,.ned{width:100%;min-height:80px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-size:15px;outline:none;margin-top:6px}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
@@ -1185,7 +1186,7 @@ function pintarAnots(){
 }
 function anEditor(id,k,txt,a,n){ const el=document.createElement('div'); el.className='anot edit'; el.dataset.mid=id; el.dataset.k=k;
   if(a!=null){ el.dataset.a=a; el.dataset.n=n; }
-  el.innerHTML=`<textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><button class="ansv" data-ansv aria-label="Salvar">✓</button>`;
+  el.innerHTML=`<textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><span class="anbt">${k==='novo'?'':'<button class="andel" data-andel aria-label="Apagar anotação" title="Apagar">🗑</button>'}<button class="ansv" data-ansv aria-label="Salvar" title="Salvar (Shift+Enter)">✓</button></span>`;
   return el; }
 function anFocar(el){ const ta=el.querySelector('textarea'); anAltura(ta); ta.focus({preventScroll:true}); const n=ta.value.length; ta.setSelectionRange(n,n); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }
 const anAltura=ta=>{ ta.style.height='auto'; ta.style.height=ta.scrollHeight+2+'px'; };
@@ -1215,8 +1216,9 @@ addEventListener('click',e=>{
   if(e.target.closest('#mtfab')) return;
   if(NT){ const root=e.target.closest('[data-an]'); modoNota(false); if(!root) return; e.preventDefault(); e.stopPropagation(); anNova(root,e.target); return; }
   const a=e.target.closest('.anot:not(.edit),.mbx .mine');
-  if(a&&!MT&&getSelection().isCollapsed&&!e.target.closest('img[data-zoom],mark.hl')){ e.preventDefault(); e.stopPropagation(); a.classList.contains('anot')?anEditar(a):anEditarBase(a.closest('.mbx')); }
+  if(a&&getSelection().isCollapsed&&!e.target.closest('img[data-zoom],mark.hl')){ e.preventDefault(); e.stopPropagation(); a.classList.contains('anot')?anEditar(a):anEditarBase(a.closest('.mbx')); }
 },true);
+document.addEventListener('pointerdown',e=>{ if(e.target.closest('.anot.edit .anbt')) e.preventDefault(); },true);
 document.addEventListener('focusout',e=>{ const ed=e.target.closest&&e.target.closest('.anot.edit'); if(!ed) return;
   setTimeout(()=>{ if(ed.isConnected&&!ed.contains(document.activeElement)) anSalvar(ed); },150); });
 document.addEventListener('input',e=>{ if(e.target.matches&&e.target.matches('.anot.edit textarea')) anAltura(e.target); });
@@ -1248,6 +1250,7 @@ document.addEventListener('click',e=>{
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
+  const dl=e.target.closest('[data-andel]'); if(dl){ const ed=dl.closest('.anot.edit'); ed.querySelector('textarea').value=''; anSalvar(ed); return; }
 });
 
 /* ===== Envio automático pro GitHub ===== */
@@ -2053,11 +2056,16 @@ function fim(){
 /* ===== Marca-texto ===== */
 function zonaTextos(z){ return document.createTreeWalker(z,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('textarea,input,button.star,button.pen,.tacts,svg,.anot')||n.parentNode.closest('.hlz')!==z?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}); }
 function limparMarcas(z){ z.querySelectorAll('mark.hl').forEach(m=>{ if(m.closest('.hlz')===z) m.replaceWith(...m.childNodes); }); z.normalize(); }
+/* texto corrido da zona com a posição de cada nó (a marca guarda o trecho + qual ocorrência dele: marca no lugar certo, ex. dentro do fluxograma) */
+function zonaMapa(z){ const w=zonaTextos(z), ns=[]; let n,p=0,txt=''; while(n=w.nextNode()){ ns.push({n,s:p}); txt+=n.nodeValue; p+=n.nodeValue.length; } return {ns,txt}; }
+function ocorrAntes(txt,t,g){ let o=0,k=txt.indexOf(t); while(k>=0&&k<g){ o++; k=txt.indexOf(t,k+1); } return o; }
 function aplicarMarcas(z){
   const m=S.marks[z.dataset.hl]; if(!m||!m.l) return;
-  m.l.forEach((x,i)=>{ const w=zonaTextos(z); let n;
-    while(n=w.nextNode()){ if(n.parentNode.closest('mark.hl')) continue; const k=n.nodeValue.indexOf(x.t); if(k<0) continue;
-      const r=document.createRange(); r.setStart(n,k); r.setEnd(n,k+x.t.length); const mk=document.createElement('mark'); mk.className='hl hl-'+x.c; mk.dataset.mi=i; r.surroundContents(mk); break; } });
+  m.l.forEach((x,i)=>{ if(!x.t) return; const {ns,txt}=zonaMapa(z); let k=txt.indexOf(x.t);
+    for(let o=0;o<(x.o||0)&&k>=0;o++){ const k2=txt.indexOf(x.t,k+1); if(k2<0) break; k=k2; }
+    if(k<0) return; const e=k+x.t.length;
+    ns.forEach(({n,s:p})=>{ const a=Math.max(k,p)-p, b=Math.min(e,p+n.nodeValue.length)-p; if(b<=a||n.parentNode.closest('mark.hl')) return;
+      const r=document.createRange(); r.setStart(n,a); r.setEnd(n,b); const mk=document.createElement('mark'); mk.className='hl hl-'+x.c; mk.dataset.mi=i; r.surroundContents(mk); }); });
 }
 function aplicarZonas(){ document.querySelectorAll('.hlz[data-hl]:not([data-ok])').forEach(z=>{ z.dataset.ok=1; aplicarMarcas(z); }); }
 function remarcar(id){ document.querySelectorAll(`.hlz[data-hl="${id}"]`).forEach(z=>{ limparMarcas(z); aplicarMarcas(z); }); }
@@ -2082,7 +2090,7 @@ let selT=null, MARCA_ALVO=null;
 /* Modo marca-texto: escolhe a cor antes e só selecionar já marca */
 let MT=null, MTT=null, MDOWN=false; try{MT=localStorage.getItem(LS+'.mt')||null}catch(e){}
 const MT_SVG='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l5 5-9 9H6v-5z"/><path d="M4 21h8"/></svg>';
-const NT_SVG='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l4 4-8 8H6v-4z"/><path d="M13 20h7M16 16h4"/></svg>';
+const NT_SVG='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14M12 5v14M9 19h6"/></svg>';
 function fabMT(){
   let f=$('#mtfab'); const tem=!!document.querySelector('.hlz,[data-an]');
   if(!tem){ if(f) f.remove(); return; }
@@ -2113,12 +2121,13 @@ document.addEventListener('selectionchange',()=>{ clearTimeout(selT); selT=setTi
 function marcarSelecao(c){
   const r=HLR; if(!r) return;
   const base=r.commonAncestorContainer.nodeType===1?r.commonAncestorContainer:r.commonAncestorContainer.parentNode, z=base.closest('.hlz'); if(!z) return;
-  const id=z.dataset.hl, parts=[], w=zonaTextos(z); let n;
-  while(n=w.nextNode()){ if(!r.intersectsNode(n)||n.parentNode.closest('mark.hl')) continue;
+  const id=z.dataset.hl, parts=[], {ns,txt}=zonaMapa(z);
+  ns.forEach(({n,s:p})=>{ if(!r.intersectsNode(n)||n.parentNode.closest('mark.hl')) return;
     let a=0,b=n.nodeValue.length; if(n===r.startContainer) a=r.startOffset; if(n===r.endContainer) b=r.endOffset;
-    const t=n.nodeValue.slice(a,b); if(t.trim().length>=2) parts.push(t); }
+    let t=n.nodeValue.slice(a,b); const l0=t.length-t.trimStart().length; t=t.trim(); if(!t) return;
+    parts.push({t,o:ocorrAntes(txt,t,p+a+l0)}); });
   if(!parts.length) return;
-  const m=S.marks[id]||(S.marks[id]={l:[]}); parts.forEach(t=>m.l.push({t,c})); m.u=Date.now();
+  const m=S.marks[id]||(S.marks[id]={l:[]}); parts.forEach(x=>m.l.push({t:x.t,c,o:x.o})); m.u=Date.now();
   save(); getSelection().removeAllRanges(); remarcar(id); vib(8);
 }
 function apagarMarca(){
