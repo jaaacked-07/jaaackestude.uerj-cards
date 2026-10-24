@@ -695,11 +695,13 @@ const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,
 const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
 const macHTML=c=>c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'';
 /* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
-const normR=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9%+]+/g,' ').trim();
+const normR=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9%+]+/g,' ').replace(/(\d)([a-z])/g,'$1 $2').replace(/\bhoras?\b/g,'h').replace(/\bminutos?\b/g,'min').replace(/\s+/g,' ').trim();
 function levR(a,b){ const m=a.length,n=b.length; if(!m||!n) return 0; let p=[...Array(n+1).keys()];
   for(let i=1;i<=m;i++){ const q=[i]; for(let j=1;j<=n;j++) q[j]=Math.min(p[j]+1,q[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=q; } return 1-p[n]/Math.max(m,n); }
 function conferirDig(c,v){ const u=normR(v); if(!u) return false; const dig=x=>(x.match(/\d+/g)||[]).join(',');
-  return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>u===a||(` ${u} `).includes(` ${a} `)||(dig(u)===dig(a)&&levR(u,a)>=.85)); }
+  /* erro de digitação só é tolerado em palavras longas; palavras curtas (tipo I × II, 3 × 4) têm que bater */
+  const parecido=(u,a)=>{ const x=u.split(' '), y=a.split(' '); return x.length===y.length&&x.every((w,i)=>w===y[i]||(w.length>=4&&y[i].length>=4&&levR(w,y[i])>=.8)); };
+  return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>u===a||(u+' ').startsWith(a+' ')||(dig(u)===dig(a)&&parecido(u,a))); }
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
