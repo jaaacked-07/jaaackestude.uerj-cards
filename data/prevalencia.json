@@ -277,6 +277,38 @@
     "TC com contraste — fases, densidade e achados": {
       "q": 0,
       "temas": "Sem questão própria; base para CHC e câncer de pâncreas"
+    },
+    "Hérnias da parede abdominal — inguinal, femoral e umbilical": {
+      "q": 4,
+      "temas": "Herniorrafia inguinal (Lichtenstein); hérnia femoral (epidemiologia); hérnia contaminada (evitar tela); hérnia umbilical encarcerada"
+    },
+    "Choque hemorrágico e transfusão maciça": {
+      "q": 4,
+      "temas": "Choque hemorrágico (classe de choque; trauma pélvico) (2×); transfusão maciça (efeito do citrato); tríade letal do trauma"
+    },
+    "Câncer de mama — subtipos moleculares e tratamento": {
+      "q": 2,
+      "temas": "Câncer de mama HER2+; contracepção pós-câncer de mama"
+    },
+    "Doença inflamatória pélvica (DIP)": {
+      "q": 1,
+      "temas": "Abscesso tubo-ovariano/DIP"
+    },
+    "Amenorreia primária": {
+      "q": 3,
+      "temas": "Agenesia mülleriana (MRKH) (2×); disgenesia gonadal (Swyer)"
+    },
+    "Vulvovaginites": {
+      "q": 2,
+      "temas": "Vaginose bacteriana; vaginose bacteriana × tricomoníase"
+    },
+    "Aloimunização Rh e profilaxia anti-D": {
+      "q": 1,
+      "temas": "Isoimunização Rh"
+    },
+    "Abortamento": {
+      "q": 3,
+      "temas": "Abortamento retido; abortamento habitual (etiologia); aborto legal (violência sexual)"
     }
   }
 }
