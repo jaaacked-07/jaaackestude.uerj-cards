@@ -31,7 +31,7 @@ for c in cards:
         elif ctx.rstrip().split('O que mais cai na UERJ:')[-1].count('\n\n'): E(i, 'contexto: o bloco "O que mais cai na UERJ:" tem que ser o ÚLTIMO')
         for l in ctx.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'contexto: itens juntos com "·" na mesma linha → "{l.strip()[:60]}"')
-        if len(ctx) > 1600: W(i, 'contexto longo demais (deve caber numa tela)')
+        if len(ctx) > 3200: W(i, 'contexto longo demais (resumão direto, sem enrolação)')
     if c.get('tipo') == 'flash':
         v = c.get('verso') or ''
         b0 = v.split('\n\n')[0].strip().split('\n')
