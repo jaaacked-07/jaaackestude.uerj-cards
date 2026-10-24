@@ -217,6 +217,50 @@
     "Asma na infância": {
       "q": 3,
       "temas": "Asma não controlada (3×)"
+    },
+    "Cicatrização de feridas": {
+      "q": 3,
+      "temas": "Cicatrização de feridas; fisiologia da cicatrização; queloide × cicatriz hipertrófica"
+    },
+    "Hiperparatireoidismo": {
+      "q": 2,
+      "temas": "Hiperparatireoidismo/osteodistrofia; hipocalcemia pós-paratireoidectomia"
+    },
+    "Doença de Hirschsprung": {
+      "q": 1,
+      "temas": "Doença de Hirschsprung"
+    },
+    "Síndrome nefrótica": {
+      "q": 4,
+      "temas": "Síndrome nefrótica do adulto; síndrome nefrótica na infância (2×); vacinação em nefrótico"
+    },
+    "Hipertensão pulmonar": {
+      "q": 1,
+      "temas": "Hipertensão pulmonar"
+    },
+    "Carcinoma hepatocelular": {
+      "q": 1,
+      "temas": "Carcinoma hepatocelular (nódulo em cirrótico)"
+    },
+    "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas": {
+      "q": 3,
+      "temas": "SHU (clínica 1×, pediatria 2×)"
+    },
+    "Colangite aguda": {
+      "q": 3,
+      "temas": "Colangite aguda (clínica 2×, cirurgia 1×)"
+    },
+    "Doenças do pericárdio — tamponamento e pericardite constritiva": {
+      "q": 3,
+      "temas": "Tamponamento neoplásico; tamponamento/pericardite; tríade de Beck"
+    },
+    "Dissecção aguda de aorta": {
+      "q": 1,
+      "temas": "Dissecção de aorta"
+    },
+    "Colangite biliar primária": {
+      "q": 1,
+      "temas": "Cirrose biliar primária"
     }
   }
 }

@@ -10564,6 +10564,1950 @@
         "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
         "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
       }
+    },
+    {
+      "id": "cic-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Cicatrização de feridas",
+      "frente": "Fases da cicatrização: duração, células e o que acontece em cada uma",
+      "verso": "**Inflamatória → Proliferativa → Maturação**\n**Macrófago = célula mais importante da fase inflamatória**\n\nPor que o macrófago:\n- Limpa a ferida e libera fatores de crescimento (PDGF, TGF-β)\n- É ele que recruta fibroblastos e inicia a fase proliferativa\n- Sem neutrófilo a ferida cicatriza; sem macrófago, não",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Fase",
+          "Quando",
+          "Células",
+          "Evento"
+        ],
+        "linhas": [
+          [
+            "Inflamatória",
+            "0–4 dias",
+            "Plaquetas → neutrófilos (24–48 h) → !macrófagos (48–96 h)",
+            "Hemostasia e limpeza"
+          ],
+          [
+            "Proliferativa",
+            "4–21 dias",
+            "!Fibroblastos, células endoteliais, queratinócitos",
+            "Colágeno III, angiogênese, granulação, epitelização"
+          ],
+          [
+            "Maturação",
+            "3 sem → 1 ano",
+            "Fibroblastos e miofibroblastos",
+            "!Colágeno III → I e contração"
+          ]
+        ]
+      },
+      "pegadinha": "Força tênsil máxima da cicatriz é ~80% da pele original — nunca volta a 100%. Miofibroblasto é a célula da contração.",
+      "uerj": "Fisiologia da cicatrização e cicatrização de feridas caíram na UERJ (2022–2026).",
+      "fonte": "Sabiston Textbook of Surgery 21ª ed. (2022) / Schwartz's Principles of Surgery 11ª ed.",
+      "contexto": "**Cicatrização = reparo do tecido lesado em 3 fases que se sobrepõem: inflamatória, proliferativa e de maturação.**\n\nFases:\n- **Inflamatória (0–4 dias)** → hemostasia, plaquetas, neutrófilos e depois macrófagos\n- **Proliferativa (4–21 dias)** → fibroblastos, colágeno III, angiogênese, granulação, epitelização\n- **Maturação (3 semanas a 1 ano)** → colágeno III trocado por I e contração\n\nTipos de fechamento:\n- **1ª intenção** → bordas aproximadas (sutura)\n- **2ª intenção** → ferida aberta, fecha por granulação e contração\n- **3ª intenção (primária retardada)** → deixa aberta alguns dias e sutura depois\n\nAtrapalham:\n- Infecção, isquemia, diabetes, corticoide, desnutrição, tabagismo, radioterapia\n- Falta de vitamina C (hidroxilação do colágeno) e de zinco\n\nCicatriz patológica:\n- **Hipertrófica** → fica nos limites da ferida e pode regredir\n- **Queloide** → ultrapassa os limites e recidiva após excisão\n\nComo cai:\n- Fase e célula mais importante, tipo de intenção e queloide × hipertrófica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Keloid.jpg",
+        "legenda": "Queloide: cicatriz que ultrapassa os limites da ferida original",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cic-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Cicatrização de feridas",
+      "frente": "Cicatrização por 1ª, 2ª e 3ª intenção: quando usar cada uma",
+      "verso": "**1ª intenção → ferida limpa, bordas aproximadas**\n**2ª intenção → ferida aberta, fecha por granulação**\n**3ª intenção → aberta por alguns dias e suturada depois**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Tipo",
+          "Quando usar",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "1ª intenção",
+            "Corte cirúrgico limpo, pouca perda de tecido",
+            "Cicatriz fina, rápida"
+          ],
+          [
+            "2ª intenção",
+            "Perda de tecido, ferida infectada, abscesso drenado",
+            "!Mais contração e cicatriz maior"
+          ],
+          [
+            "3ª intenção (primária retardada)",
+            "Ferida contaminada (ex.: mordedura, ferida suja) → limpa por 3–5 dias e fecha",
+            "Menos infecção que a 1ª intenção na ferida suja"
+          ]
+        ]
+      },
+      "pegadinha": "Ferida operatória infectada → abrir e deixar fechar por 2ª intenção (ou fechar depois = 3ª), nunca ressuturar com infecção.",
+      "uerj": "A UERJ costuma dar a ferida e pedir o tipo de fechamento.",
+      "fonte": "Sabiston Textbook of Surgery 21ª ed. (2022) / Schwartz's Principles of Surgery 11ª ed.",
+      "contexto": "**Cicatrização = reparo do tecido lesado em 3 fases que se sobrepõem: inflamatória, proliferativa e de maturação.**\n\nFases:\n- **Inflamatória (0–4 dias)** → hemostasia, plaquetas, neutrófilos e depois macrófagos\n- **Proliferativa (4–21 dias)** → fibroblastos, colágeno III, angiogênese, granulação, epitelização\n- **Maturação (3 semanas a 1 ano)** → colágeno III trocado por I e contração\n\nTipos de fechamento:\n- **1ª intenção** → bordas aproximadas (sutura)\n- **2ª intenção** → ferida aberta, fecha por granulação e contração\n- **3ª intenção (primária retardada)** → deixa aberta alguns dias e sutura depois\n\nAtrapalham:\n- Infecção, isquemia, diabetes, corticoide, desnutrição, tabagismo, radioterapia\n- Falta de vitamina C (hidroxilação do colágeno) e de zinco\n\nCicatriz patológica:\n- **Hipertrófica** → fica nos limites da ferida e pode regredir\n- **Queloide** → ultrapassa os limites e recidiva após excisão\n\nComo cai:\n- Fase e célula mais importante, tipo de intenção e queloide × hipertrófica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Keloid.jpg",
+        "legenda": "Queloide: cicatriz que ultrapassa os limites da ferida original",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cic-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Cicatrização de feridas",
+      "frente": "Queloide × cicatriz hipertrófica",
+      "verso": "**Queloide → ultrapassa os limites da ferida e recidiva**\n**Hipertrófica → fica dentro dos limites e pode regredir**\n\nTratamento:\n- 1ª linha → corticoide intralesional (triancinolona) e placa de silicone/compressão\n- Queloide → excisão isolada recidiva muito; associar corticoide ou radioterapia",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Queloide",
+          "itens": [
+            "!Passa dos limites da ferida",
+            "Surge meses depois",
+            "Não regride",
+            "Pele negra, lóbulo da orelha, esterno, ombro",
+            "Colágeno grosso e desorganizado",
+            "Alta recidiva após excisão"
+          ]
+        },
+        "b": {
+          "t": "Hipertrófica",
+          "itens": [
+            "!Limitada à ferida",
+            "Surge semanas depois",
+            "Pode regredir sozinha",
+            "Áreas de tensão e flexão",
+            "Colágeno organizado (paralelo)",
+            "Melhora com tempo e compressão"
+          ]
+        }
+      },
+      "pegadinha": "Ressecção isolada do queloide é a resposta ERRADA — a recidiva passa de 50%.",
+      "uerj": "Queloide × cicatriz hipertrófica caiu na UERJ.",
+      "fonte": "Sabiston Textbook of Surgery 21ª ed. (2022) / Schwartz's Principles of Surgery 11ª ed.",
+      "contexto": "**Cicatrização = reparo do tecido lesado em 3 fases que se sobrepõem: inflamatória, proliferativa e de maturação.**\n\nFases:\n- **Inflamatória (0–4 dias)** → hemostasia, plaquetas, neutrófilos e depois macrófagos\n- **Proliferativa (4–21 dias)** → fibroblastos, colágeno III, angiogênese, granulação, epitelização\n- **Maturação (3 semanas a 1 ano)** → colágeno III trocado por I e contração\n\nTipos de fechamento:\n- **1ª intenção** → bordas aproximadas (sutura)\n- **2ª intenção** → ferida aberta, fecha por granulação e contração\n- **3ª intenção (primária retardada)** → deixa aberta alguns dias e sutura depois\n\nAtrapalham:\n- Infecção, isquemia, diabetes, corticoide, desnutrição, tabagismo, radioterapia\n- Falta de vitamina C (hidroxilação do colágeno) e de zinco\n\nCicatriz patológica:\n- **Hipertrófica** → fica nos limites da ferida e pode regredir\n- **Queloide** → ultrapassa os limites e recidiva após excisão\n\nComo cai:\n- Fase e célula mais importante, tipo de intenção e queloide × hipertrófica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Keloid.jpg",
+        "legenda": "Queloide: cicatriz que ultrapassa os limites da ferida original",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cic-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Perioperatório",
+      "sub": "Cicatrização de feridas",
+      "frente": "Homem, 40 anos, 5º dia de laparotomia, com hiperemia, calor e saída de secreção purulenta pela ferida operatória. Afebril, sem sinais de deiscência aponeurótica. A conduta mais adequada é:",
+      "opcoes": [
+        "Manter os pontos e iniciar antibiótico oral",
+        "Retirar os pontos da pele, drenar, lavar e deixar cicatrizar por segunda intenção",
+        "Ressuturar a pele após lavagem no centro cirúrgico",
+        "Aplicar corticoide tópico para reduzir a inflamação"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Pus coletado precisa de drenagem; antibiótico sozinho não resolve.",
+        "Gabarito: infecção superficial de sítio cirúrgico → abrir, drenar e deixar fechar por 2ª intenção (antibiótico só se celulite extensa ou repercussão sistêmica).",
+        "Fechar ferida infectada mantém a infecção; só se fecha depois de limpa (3ª intenção).",
+        "Corticoide atrasa a cicatrização (inibe a fase inflamatória)."
+      ],
+      "pegadinha": "Antibiótico não substitui a abertura da ferida.",
+      "uerj": "Cicatrização e ferida operatória aparecem em caso clínico de pós-operatório.",
+      "fonte": "Sabiston Textbook of Surgery 21ª ed. (2022) / Schwartz's Principles of Surgery 11ª ed.",
+      "contexto": "**Cicatrização = reparo do tecido lesado em 3 fases que se sobrepõem: inflamatória, proliferativa e de maturação.**\n\nFases:\n- **Inflamatória (0–4 dias)** → hemostasia, plaquetas, neutrófilos e depois macrófagos\n- **Proliferativa (4–21 dias)** → fibroblastos, colágeno III, angiogênese, granulação, epitelização\n- **Maturação (3 semanas a 1 ano)** → colágeno III trocado por I e contração\n\nTipos de fechamento:\n- **1ª intenção** → bordas aproximadas (sutura)\n- **2ª intenção** → ferida aberta, fecha por granulação e contração\n- **3ª intenção (primária retardada)** → deixa aberta alguns dias e sutura depois\n\nAtrapalham:\n- Infecção, isquemia, diabetes, corticoide, desnutrição, tabagismo, radioterapia\n- Falta de vitamina C (hidroxilação do colágeno) e de zinco\n\nCicatriz patológica:\n- **Hipertrófica** → fica nos limites da ferida e pode regredir\n- **Queloide** → ultrapassa os limites e recidiva após excisão\n\nComo cai:\n- Fase e célula mais importante, tipo de intenção e queloide × hipertrófica.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Keloid.jpg",
+        "legenda": "Queloide: cicatriz que ultrapassa os limites da ferida original",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hpt-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Endocrinologia",
+      "sub": "Hiperparatireoidismo",
+      "frente": "Hiperparatireoidismo primário × secundário × terciário: como diferenciar pelos exames",
+      "verso": "**Primário → Ca ↑ com PTH ↑**\n**Secundário → Ca ↓ ou normal com PTH ↑**\n**Terciário → Ca ↑ com PTH muito ↑ em renal crônico**\n\nLógica:\n- No primário a glândula não obedece ao cálcio alto\n- No secundário o PTH sobe para corrigir o cálcio baixo (resposta adequada)\n- Fósforo separa a causa do secundário: alto na DRC, baixo na falta de vitamina D",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Primário",
+          "Secundário (DRC)",
+          "Secundário (↓ vit. D)",
+          "Terciário"
+        ],
+        "linhas": [
+          [
+            "Causa",
+            "Adenoma (~85%), hiperplasia, carcinoma (<1%)",
+            "Doença renal crônica",
+            "Deficiência de vitamina D, má absorção",
+            "DRC de longa data / pós-transplante"
+          ],
+          [
+            "Cálcio",
+            "!↑",
+            "↓ ou normal",
+            "↓ ou normal",
+            "!↑"
+          ],
+          [
+            "Fósforo",
+            "↓",
+            "!↑",
+            "↓",
+            "↑ ou normal"
+          ],
+          [
+            "PTH",
+            "↑",
+            "↑",
+            "↑",
+            "!↑↑"
+          ],
+          [
+            "Tratamento",
+            "Paratireoidectomia",
+            "Quelante de P, vit. D ativa, calcimimético",
+            "Repor vitamina D e cálcio",
+            "Paratireoidectomia (subtotal)"
+          ]
+        ]
+      },
+      "pegadinha": "PTH \"normal\" com cálcio alto já é anormal (inapropriado) → primário.",
+      "uerj": "Hiperparatireoidismo/osteodistrofia renal caiu na UERJ (2022–2026).",
+      "fonte": "Fifth International Workshop on Asymptomatic Primary Hyperparathyroidism (J Bone Miner Res, 2022) / KDIGO CKD-MBD 2017 / Harrison 21ª ed.",
+      "contexto": "**Hiperparatireoidismo = excesso de PTH; o que separa os tipos é o cálcio e a causa.**\n\nTipos:\n- **Primário** → a paratireoide é o problema (adenoma em ~85%)\n  - Cálcio alto e PTH alto (ou inapropriadamente normal)\n- **Secundário** → resposta a cálcio baixo, fósforo alto ou falta de vitamina D\n  - Doença renal crônica é a causa clássica\n  - Cálcio baixo ou normal e PTH alto\n- **Terciário** → secundário de longa data que ficou autônomo\n  - Cálcio alto, típico após transplante renal\n\nClínica do primário:\n- Maioria assintomática (achado de cálcio alto)\n- \"Ossos, pedras, gemidos abdominais e queixas psíquicas\"\n\nComo cai:\n- Interpretar Ca, P e PTH e indicar paratireoidectomia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Blausen_0533_Parathyroid_adenoma.png",
+        "legenda": "Adenoma de paratireoide — principal causa de hiperparatireoidismo primário",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hpt-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Endocrinologia",
+      "sub": "Hiperparatireoidismo",
+      "frente": "Hiperparatireoidismo primário assintomático: quando indicar paratireoidectomia",
+      "verso": "**Sintomático → sempre operar**\n**Assintomático → operar se tiver qualquer 1 critério**\n- Cálcio > 1 mg/dL acima do limite superior\n- Osteoporose (T-score ≤ −2,5) ou fratura vertebral\n- Clearance de creatinina < 60 mL/min\n- Calciúria > 250 mg/dia (mulher) ou > 300 mg/dia (homem)\n- Nefrolitíase ou nefrocalcinose\n- Idade < 50 anos\n\nAntes da cirurgia:\n- Localizar o adenoma → cintilografia com sestamibi e USG cervical\n- A localização NÃO faz o diagnóstico (que é bioquímico)",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Ca ↑ + PTH ↑ ou normal → hiperparatireoidismo primário",
+          [
+            "Sintomático (litíase, osteoporose, fratura)",
+            "Assintomático"
+          ],
+          [
+            "Paratireoidectomia",
+            "Algum critério? → cirurgia / nenhum → seguimento"
+          ]
+        ]
+      },
+      "pegadinha": "Exame de imagem negativo não afasta o diagnóstico nem contraindica a cirurgia.",
+      "uerj": "Pode cobrar indicação cirúrgica no paciente assintomático.",
+      "fonte": "Fifth International Workshop on Asymptomatic Primary Hyperparathyroidism (J Bone Miner Res, 2022) / KDIGO CKD-MBD 2017 / Harrison 21ª ed.",
+      "contexto": "**Hiperparatireoidismo = excesso de PTH; o que separa os tipos é o cálcio e a causa.**\n\nTipos:\n- **Primário** → a paratireoide é o problema (adenoma em ~85%)\n  - Cálcio alto e PTH alto (ou inapropriadamente normal)\n- **Secundário** → resposta a cálcio baixo, fósforo alto ou falta de vitamina D\n  - Doença renal crônica é a causa clássica\n  - Cálcio baixo ou normal e PTH alto\n- **Terciário** → secundário de longa data que ficou autônomo\n  - Cálcio alto, típico após transplante renal\n\nClínica do primário:\n- Maioria assintomática (achado de cálcio alto)\n- \"Ossos, pedras, gemidos abdominais e queixas psíquicas\"\n\nComo cai:\n- Interpretar Ca, P e PTH e indicar paratireoidectomia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Blausen_0533_Parathyroid_adenoma.png",
+        "legenda": "Adenoma de paratireoide — principal causa de hiperparatireoidismo primário",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hpt-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Endocrinologia",
+      "sub": "Hiperparatireoidismo",
+      "frente": "Complicação metabólica típica após paratireoidectomia",
+      "verso": "**Hipocalcemia → \"síndrome da fome óssea\"**\n\nPor quê:\n- Osso desmineralizado pelo PTH alto passa a captar cálcio, fósforo e magnésio quando o PTH cai\n- Mais comum se doença óssea importante (FA alta) ou hiperparatireoidismo secundário/terciário\n\nComo aparece:\n- Parestesia perioral, sinais de Chvostek e Trousseau, tetania\n\nConduta:\n- Gluconato de cálcio EV se sintomática\n- Cálcio oral + calcitriol e repor magnésio",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Sinal de Chvostek → percussão do nervo facial contrai a face",
+          "!Sinal de Trousseau → manguito acima da PAS por 3 min causa espasmo carpal",
+          "Hipocalcemia transitória também pode vir de lesão/isquemia das outras paratireoides"
+        ]
+      },
+      "pegadinha": "Fome óssea = cálcio E fósforo baixos (no hipoparatireoidismo pós-operatório o fósforo sobe).",
+      "uerj": "Hipocalcemia pós-paratireoidectomia caiu na UERJ.",
+      "fonte": "Fifth International Workshop on Asymptomatic Primary Hyperparathyroidism (J Bone Miner Res, 2022) / KDIGO CKD-MBD 2017 / Harrison 21ª ed.",
+      "contexto": "**Hiperparatireoidismo = excesso de PTH; o que separa os tipos é o cálcio e a causa.**\n\nTipos:\n- **Primário** → a paratireoide é o problema (adenoma em ~85%)\n  - Cálcio alto e PTH alto (ou inapropriadamente normal)\n- **Secundário** → resposta a cálcio baixo, fósforo alto ou falta de vitamina D\n  - Doença renal crônica é a causa clássica\n  - Cálcio baixo ou normal e PTH alto\n- **Terciário** → secundário de longa data que ficou autônomo\n  - Cálcio alto, típico após transplante renal\n\nClínica do primário:\n- Maioria assintomática (achado de cálcio alto)\n- \"Ossos, pedras, gemidos abdominais e queixas psíquicas\"\n\nComo cai:\n- Interpretar Ca, P e PTH e indicar paratireoidectomia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Blausen_0533_Parathyroid_adenoma.png",
+        "legenda": "Adenoma de paratireoide — principal causa de hiperparatireoidismo primário",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hpt-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Endocrinologia",
+      "sub": "Hiperparatireoidismo",
+      "frente": "Homem, 58 anos, em hemodiálise há 8 anos, com dor óssea e prurido. Exames: cálcio 8,0 mg/dL, fósforo 7,2 mg/dL, PTH 850 pg/mL. O diagnóstico mais provável é:",
+      "opcoes": [
+        "Hiperparatireoidismo primário por adenoma",
+        "Hiperparatireoidismo secundário à doença renal crônica",
+        "Hipoparatireoidismo",
+        "Hiperparatireoidismo terciário"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Primário tem cálcio ALTO e fósforo baixo.",
+        "Gabarito: DRC → retém fósforo, ↓ calcitriol → cálcio baixo → PTH sobe (doença mineral e óssea da DRC).",
+        "PTH está muito alto, não baixo.",
+        "Terciário exige cálcio alto (glândula autônoma); aqui o cálcio está baixo."
+      ],
+      "pegadinha": "PTH muito alto em renal crônico só vira terciário quando o cálcio sobe.",
+      "uerj": "UERJ cobra interpretação de Ca, P e PTH em caso clínico.",
+      "fonte": "Fifth International Workshop on Asymptomatic Primary Hyperparathyroidism (J Bone Miner Res, 2022) / KDIGO CKD-MBD 2017 / Harrison 21ª ed.",
+      "contexto": "**Hiperparatireoidismo = excesso de PTH; o que separa os tipos é o cálcio e a causa.**\n\nTipos:\n- **Primário** → a paratireoide é o problema (adenoma em ~85%)\n  - Cálcio alto e PTH alto (ou inapropriadamente normal)\n- **Secundário** → resposta a cálcio baixo, fósforo alto ou falta de vitamina D\n  - Doença renal crônica é a causa clássica\n  - Cálcio baixo ou normal e PTH alto\n- **Terciário** → secundário de longa data que ficou autônomo\n  - Cálcio alto, típico após transplante renal\n\nClínica do primário:\n- Maioria assintomática (achado de cálcio alto)\n- \"Ossos, pedras, gemidos abdominais e queixas psíquicas\"\n\nComo cai:\n- Interpretar Ca, P e PTH e indicar paratireoidectomia.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Blausen_0533_Parathyroid_adenoma.png",
+        "legenda": "Adenoma de paratireoide — principal causa de hiperparatireoidismo primário",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hirs-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Cirurgia pediátrica",
+      "sub": "Doença de Hirschsprung",
+      "frente": "Quadro clínico típico da doença de Hirschsprung no recém-nascido",
+      "verso": "**Atraso na eliminação do mecônio (> 48 h)**\n**Distensão abdominal**\n**Vômitos biliosos**\n\nNo exame:\n- Toque retal com ampola vazia e saída explosiva de fezes e gases ao retirar o dedo (\"sinal do esguicho\")\n\nForma tardia:\n- Constipação crônica grave desde o nascimento, sem escape fecal (encoprese)\n- Desnutrição e distensão crônica",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Hirschsprung",
+          "itens": [
+            "!Sintoma desde o nascimento",
+            "Mecônio > 48 h",
+            "Ampola retal vazia",
+            "Sem escape fecal",
+            "Déficit de crescimento"
+          ]
+        },
+        "b": {
+          "t": "Constipação funcional",
+          "itens": [
+            "Começa após o desfralde/mudança alimentar",
+            "Mecônio normal",
+            "!Ampola cheia de fezes",
+            "Escape fecal (encoprese) comum",
+            "Crescimento normal"
+          ]
+        }
+      },
+      "pegadinha": "90% dos RN normais eliminam mecônio nas primeiras 24 h — atraso > 48 h é sinal de alarme.",
+      "uerj": "Doença de Hirschsprung caiu na UERJ (2022–2026) em caso de RN.",
+      "fonte": "Ashcraft's Pediatric Surgery 7ª ed. (2020) / Tratado de Pediatria SBP 5ª ed. (2022) / Nelson Textbook of Pediatrics 22ª ed.",
+      "contexto": "**Doença de Hirschsprung = ausência congênita de células ganglionares no reto e no cólon distal (megacólon congênito aganglionar).**\n\nMecanismo:\n- Falha da migração das células da crista neural no sentido craniocaudal\n- O segmento sem gânglios fica contraído e não relaxa → obstrução funcional\n- O cólon acima dilata\n\nExtensão:\n- **Retossigmoide** → ~75–80% dos casos\n- **Cólon total** → forma rara e grave\n\nAssociações:\n- **Síndrome de Down** → associação mais clássica\n- **Gene RET** → mutação mais frequente\n- Predomínio no sexo masculino\n\nComo cai:\n- RN que não elimina mecônio em 48 h com distensão, e o exame que confirma (biópsia retal).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M20 40 Q20 20 60 20 L150 20 Q190 20 190 40 L190 80 Q190 95 175 95 L120 95\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"34\" stroke-linecap=\"round\"/><path d=\"M120 95 Q200 95 230 100 L300 108\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"10\" stroke-linecap=\"round\"/><line x1=\"208\" y1=\"80\" x2=\"208\" y2=\"122\" stroke=\"var(--ink)\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"100\" y=\"60\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">cólon dilatado</text><text x=\"100\" y=\"73\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(normal, com gânglios)</text><text x=\"208\" y=\"134\" font-size=\"9\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">zona de transição</text><text x=\"280\" y=\"92\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">reto estreito</text><text x=\"280\" y=\"126\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">SEM gânglios</text><text x=\"280\" y=\"138\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(contraído)</text><text x=\"318\" y=\"112\" font-size=\"8.5\" fill=\"var(--mute)\">ânus</text></svg>",
+        "legenda": "O segmento doente é o estreito (sem gânglios); o dilatado é o cólon normal acima dele."
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hirs-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Cirurgia pediátrica",
+      "sub": "Doença de Hirschsprung",
+      "frente": "Doença de Hirschsprung: associações genéticas importantes",
+      "verso": "**Síndrome de Down (trissomia 21)**\n**Mutação no gene RET**\n\nOutras associações:\n- Síndrome de Waardenburg (Waardenburg-Shah)\n- MEN 2A (também gene RET)\n- Hipoventilação central congênita (Haddad)\n- Cardiopatias congênitas\n\nEpidemiologia:\n- ~1 em 5.000 nascidos vivos\n- Meninos 4 : 1 na forma de segmento curto",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Cromossômica",
+            "itens": [
+              "!Trissomia 21 (~10% dos casos)"
+            ]
+          },
+          {
+            "t": "Genética",
+            "itens": [
+              "!RET (proto-oncogene)",
+              "EDNRB / EDN3"
+            ]
+          },
+          {
+            "t": "Síndromes",
+            "itens": [
+              "Waardenburg",
+              "MEN 2A",
+              "Haddad"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Down também se associa a atresia duodenal (\"dupla bolha\") — não confundir com Hirschsprung (obstrução distal, distensão difusa).",
+      "uerj": "Pode aparecer a criança com fenótipo de Down como pista.",
+      "fonte": "Ashcraft's Pediatric Surgery 7ª ed. (2020) / Tratado de Pediatria SBP 5ª ed. (2022) / Nelson Textbook of Pediatrics 22ª ed.",
+      "contexto": "**Doença de Hirschsprung = ausência congênita de células ganglionares no reto e no cólon distal (megacólon congênito aganglionar).**\n\nMecanismo:\n- Falha da migração das células da crista neural no sentido craniocaudal\n- O segmento sem gânglios fica contraído e não relaxa → obstrução funcional\n- O cólon acima dilata\n\nExtensão:\n- **Retossigmoide** → ~75–80% dos casos\n- **Cólon total** → forma rara e grave\n\nAssociações:\n- **Síndrome de Down** → associação mais clássica\n- **Gene RET** → mutação mais frequente\n- Predomínio no sexo masculino\n\nComo cai:\n- RN que não elimina mecônio em 48 h com distensão, e o exame que confirma (biópsia retal).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M20 40 Q20 20 60 20 L150 20 Q190 20 190 40 L190 80 Q190 95 175 95 L120 95\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"34\" stroke-linecap=\"round\"/><path d=\"M120 95 Q200 95 230 100 L300 108\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"10\" stroke-linecap=\"round\"/><line x1=\"208\" y1=\"80\" x2=\"208\" y2=\"122\" stroke=\"var(--ink)\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"100\" y=\"60\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">cólon dilatado</text><text x=\"100\" y=\"73\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(normal, com gânglios)</text><text x=\"208\" y=\"134\" font-size=\"9\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">zona de transição</text><text x=\"280\" y=\"92\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">reto estreito</text><text x=\"280\" y=\"126\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">SEM gânglios</text><text x=\"280\" y=\"138\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(contraído)</text><text x=\"318\" y=\"112\" font-size=\"8.5\" fill=\"var(--mute)\">ânus</text></svg>",
+        "legenda": "O segmento doente é o estreito (sem gânglios); o dilatado é o cólon normal acima dele."
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hirs-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Cirurgia pediátrica",
+      "sub": "Doença de Hirschsprung",
+      "frente": "Doença de Hirschsprung: exames diagnósticos e qual confirma",
+      "verso": "**Biópsia retal (por sucção) confirma = padrão-ouro**\n\nAchados da biópsia:\n- Ausência de células ganglionares (plexos submucoso e mioentérico)\n- Troncos nervosos hipertrofiados\n- Acetilcolinesterase aumentada e calretinina ausente\n\nExames de apoio:\n- Enema opaco → zona de transição (cone) entre reto estreito e cólon dilatado\n- Manometria anorretal → ausência do reflexo inibitório retoanal",
+      "visual": [
+        {
+          "tipo": "tabela",
+          "cab": [
+            "Exame",
+            "Achado",
+            "Papel"
+          ],
+          "linhas": [
+            [
+              "!Biópsia retal por sucção",
+              "Sem células ganglionares, AChE ↑, calretinina negativa",
+              "!Confirma"
+            ],
+            [
+              "Enema opaco",
+              "Zona de transição; retenção do contraste após 24 h",
+              "Sugere e mostra a extensão"
+            ],
+            [
+              "Manometria anorretal",
+              "Reflexo inibitório retoanal ausente",
+              "Triagem (melhor em criança maior)"
+            ],
+            [
+              "RX simples",
+              "Alças distendidas, reto sem ar",
+              "Inespecífico"
+            ]
+          ]
+        },
+        {
+          "tipo": "img",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hirschsprung_acetylcholine.jpg",
+          "legenda": "Biópsia retal com coloração de acetilcolinesterase: fibras nervosas hipertrofiadas",
+          "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+        }
+      ],
+      "pegadinha": "Enema opaco pode ser normal no RN (o cólon ainda não dilatou) e na aganglionose total — quem confirma é a biópsia.",
+      "uerj": "A UERJ cobra o exame que confirma: biópsia retal.",
+      "fonte": "Ashcraft's Pediatric Surgery 7ª ed. (2020) / Tratado de Pediatria SBP 5ª ed. (2022) / Nelson Textbook of Pediatrics 22ª ed.",
+      "contexto": "**Doença de Hirschsprung = ausência congênita de células ganglionares no reto e no cólon distal (megacólon congênito aganglionar).**\n\nMecanismo:\n- Falha da migração das células da crista neural no sentido craniocaudal\n- O segmento sem gânglios fica contraído e não relaxa → obstrução funcional\n- O cólon acima dilata\n\nExtensão:\n- **Retossigmoide** → ~75–80% dos casos\n- **Cólon total** → forma rara e grave\n\nAssociações:\n- **Síndrome de Down** → associação mais clássica\n- **Gene RET** → mutação mais frequente\n- Predomínio no sexo masculino\n\nComo cai:\n- RN que não elimina mecônio em 48 h com distensão, e o exame que confirma (biópsia retal).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M20 40 Q20 20 60 20 L150 20 Q190 20 190 40 L190 80 Q190 95 175 95 L120 95\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"34\" stroke-linecap=\"round\"/><path d=\"M120 95 Q200 95 230 100 L300 108\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"10\" stroke-linecap=\"round\"/><line x1=\"208\" y1=\"80\" x2=\"208\" y2=\"122\" stroke=\"var(--ink)\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"100\" y=\"60\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">cólon dilatado</text><text x=\"100\" y=\"73\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(normal, com gânglios)</text><text x=\"208\" y=\"134\" font-size=\"9\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">zona de transição</text><text x=\"280\" y=\"92\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">reto estreito</text><text x=\"280\" y=\"126\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">SEM gânglios</text><text x=\"280\" y=\"138\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(contraído)</text><text x=\"318\" y=\"112\" font-size=\"8.5\" fill=\"var(--mute)\">ânus</text></svg>",
+        "legenda": "O segmento doente é o estreito (sem gânglios); o dilatado é o cólon normal acima dele."
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hirs-04",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Cirurgia pediátrica",
+      "sub": "Doença de Hirschsprung",
+      "frente": "Doença de Hirschsprung: tratamento e principal complicação",
+      "verso": "**Tratamento → ressecção do segmento aganglionar com abaixamento do cólon normal (pull-through)**\n**Complicação mais temida → enterocolite associada a Hirschsprung**\n\nTécnicas:\n- Swenson, Duhamel e Soave\n- Hoje muito feito por via transanal (De la Torre), em tempo único\n- Colostomia antes, se enterocolite grave, desnutrição ou aganglionose extensa\n\nEnterocolite:\n- Febre, distensão, diarreia explosiva fétida, sepse\n- Pode ocorrer antes OU depois da cirurgia\n- Conduta → hidratação, antibiótico, descompressão com irrigação retal",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Biópsia retal confirma",
+          "Irrigações retais até a cirurgia",
+          [
+            "Bom estado → pull-through primário (transanal)",
+            "Enterocolite grave / extensa → colostomia e cirurgia depois"
+          ]
+        ]
+      },
+      "pegadinha": "Enterocolite é a principal causa de morte e pode surgir mesmo após a cirurgia.",
+      "uerj": "Conduta e complicação podem vir no mesmo caso.",
+      "fonte": "Ashcraft's Pediatric Surgery 7ª ed. (2020) / Tratado de Pediatria SBP 5ª ed. (2022) / Nelson Textbook of Pediatrics 22ª ed.",
+      "contexto": "**Doença de Hirschsprung = ausência congênita de células ganglionares no reto e no cólon distal (megacólon congênito aganglionar).**\n\nMecanismo:\n- Falha da migração das células da crista neural no sentido craniocaudal\n- O segmento sem gânglios fica contraído e não relaxa → obstrução funcional\n- O cólon acima dilata\n\nExtensão:\n- **Retossigmoide** → ~75–80% dos casos\n- **Cólon total** → forma rara e grave\n\nAssociações:\n- **Síndrome de Down** → associação mais clássica\n- **Gene RET** → mutação mais frequente\n- Predomínio no sexo masculino\n\nComo cai:\n- RN que não elimina mecônio em 48 h com distensão, e o exame que confirma (biópsia retal).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M20 40 Q20 20 60 20 L150 20 Q190 20 190 40 L190 80 Q190 95 175 95 L120 95\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"34\" stroke-linecap=\"round\"/><path d=\"M120 95 Q200 95 230 100 L300 108\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"10\" stroke-linecap=\"round\"/><line x1=\"208\" y1=\"80\" x2=\"208\" y2=\"122\" stroke=\"var(--ink)\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"100\" y=\"60\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">cólon dilatado</text><text x=\"100\" y=\"73\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(normal, com gânglios)</text><text x=\"208\" y=\"134\" font-size=\"9\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">zona de transição</text><text x=\"280\" y=\"92\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">reto estreito</text><text x=\"280\" y=\"126\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">SEM gânglios</text><text x=\"280\" y=\"138\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(contraído)</text><text x=\"318\" y=\"112\" font-size=\"8.5\" fill=\"var(--mute)\">ânus</text></svg>",
+        "legenda": "O segmento doente é o estreito (sem gânglios); o dilatado é o cólon normal acima dele."
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hirs-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Cirurgia pediátrica",
+      "sub": "Doença de Hirschsprung",
+      "frente": "RN a termo, 3 dias, com Síndrome de Down, ainda não eliminou mecônio. Apresenta distensão abdominal e vômitos biliosos. Ao toque retal, saída explosiva de fezes e gases. O exame que confirma o diagnóstico mais provável é:",
+      "opcoes": [
+        "Enema opaco",
+        "Biópsia retal por sucção",
+        "Manometria anorretal",
+        "Teste do suor"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Mostra a zona de transição, mas pode ser normal no RN; não confirma.",
+        "Gabarito: Hirschsprung → biópsia retal (ausência de células ganglionares) é o padrão-ouro.",
+        "Ausência do reflexo inibitório sugere, mas não confirma e é pouco usada no RN.",
+        "Teste do suor é para fibrose cística (íleo meconial) — distrator plausível em RN que não elimina mecônio."
+      ],
+      "pegadinha": "Íleo meconial (fibrose cística) também cursa com retardo do mecônio — mas o toque com \"esguicho\" + Down aponta Hirschsprung.",
+      "uerj": "Questão clássica de RN com retardo na eliminação do mecônio.",
+      "fonte": "Ashcraft's Pediatric Surgery 7ª ed. (2020) / Tratado de Pediatria SBP 5ª ed. (2022) / Nelson Textbook of Pediatrics 22ª ed.",
+      "contexto": "**Doença de Hirschsprung = ausência congênita de células ganglionares no reto e no cólon distal (megacólon congênito aganglionar).**\n\nMecanismo:\n- Falha da migração das células da crista neural no sentido craniocaudal\n- O segmento sem gânglios fica contraído e não relaxa → obstrução funcional\n- O cólon acima dilata\n\nExtensão:\n- **Retossigmoide** → ~75–80% dos casos\n- **Cólon total** → forma rara e grave\n\nAssociações:\n- **Síndrome de Down** → associação mais clássica\n- **Gene RET** → mutação mais frequente\n- Predomínio no sexo masculino\n\nComo cai:\n- RN que não elimina mecônio em 48 h com distensão, e o exame que confirma (biópsia retal).",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><path d=\"M20 40 Q20 20 60 20 L150 20 Q190 20 190 40 L190 80 Q190 95 175 95 L120 95\" fill=\"none\" stroke=\"var(--rose)\" stroke-width=\"34\" stroke-linecap=\"round\"/><path d=\"M120 95 Q200 95 230 100 L300 108\" fill=\"none\" stroke=\"var(--wine)\" stroke-width=\"10\" stroke-linecap=\"round\"/><line x1=\"208\" y1=\"80\" x2=\"208\" y2=\"122\" stroke=\"var(--ink)\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"100\" y=\"60\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">cólon dilatado</text><text x=\"100\" y=\"73\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(normal, com gânglios)</text><text x=\"208\" y=\"134\" font-size=\"9\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">zona de transição</text><text x=\"280\" y=\"92\" font-size=\"9\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">reto estreito</text><text x=\"280\" y=\"126\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">SEM gânglios</text><text x=\"280\" y=\"138\" font-size=\"8.5\" fill=\"var(--mute)\" text-anchor=\"middle\">(contraído)</text><text x=\"318\" y=\"112\" font-size=\"8.5\" fill=\"var(--mute)\">ânus</text></svg>",
+        "legenda": "O segmento doente é o estreito (sem gânglios); o dilatado é o cólon normal acima dele."
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "men-04",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Meningites",
+      "frente": "Líquor bacteriano com predomínio de MONONUCLEARES: qual agente pensar?",
+      "verso": "**Listeria monocytogenes**\n\nPor quê:\n- Bactéria intracelular → pode dar pleocitose com predomínio de mononucleares\n- Mas mantém o perfil bacteriano: glicose muito baixa e proteína alta\n\nQuem tem:\n- Idosos (> 50 anos), imunossuprimidos, etilistas, gestantes e RN\n\nTratamento:\n- **Ampicilina** (± gentamicina) → cefalosporinas NÃO cobrem Listeria\n- Alergia grave à penicilina → sulfametoxazol-trimetoprima",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Líquor",
+          "Bacteriana comum",
+          "Listeria",
+          "Viral"
+        ],
+        "linhas": [
+          [
+            "Células",
+            "> 500, neutrófilos",
+            "!Centenas, mononucleares podem predominar",
+            "< 500, linfócitos"
+          ],
+          [
+            "Glicose",
+            "Baixa",
+            "!Baixa",
+            "Normal"
+          ],
+          [
+            "Proteína",
+            "Alta",
+            "Alta",
+            "Normal/pouco ↑"
+          ]
+        ]
+      },
+      "pegadinha": "Mononucleares no líquor não garantem vírus: glicose muito baixa + proteína muito alta = bacteriana até prova em contrário (Listeria, ou TB/fungo se arrastado).",
+      "uerj": "Interpretação do líquor e esquema empírico caem na UERJ.",
+      "fonte": "Harrison 21ª ed. / IDSA 2004 / Guia de Vigilância em Saúde (MS, 2024) / Tratado de Pediatria SBP",
+      "contexto": "**Meningite = inflamação das meninges; o líquor diz se é bacteriana, viral, tuberculosa ou fúngica.**\n\nQuadro:\n- Febre, cefaleia, rigidez de nuca, alteração da consciência\n- Lactente → irritabilidade, abaulamento de fontanela, sem rigidez\n\nConduta inicial:\n- **Punção lombar** → antes do antibiótico, se não houver contraindicação\n- **TC antes da punção** → déficit focal, papiledema, convulsão nova, rebaixamento importante da consciência, imunossupressão\n- **Antibiótico** → não atrasar (colher hemocultura e iniciar se a punção vai demorar)\n- **Dexametasona** → antes ou junto da 1ª dose de antibiótico\n\nQuimioprofilaxia de contatos:\n- **Meningococo e Haemophilus** → rifampicina para contatos íntimos\n\nComo cai:\n- Caso com líquor para classificar, ou antibiótico empírico pela idade.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/MenigitisCSF2019.jpg/600px-MenigitisCSF2019.jpg",
+        "legenda": "Líquor turvo de meningite bacteriana (Streptococcus): celularidade muito alta",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "men-q2",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Meningites",
+      "frente": "Homem, 68 anos, etilista, com febre, cefaleia e confusão há 2 dias. Líquor: 400 células/mm³ (60% mononucleares), proteína 160 mg/dL e glicose 20 mg/dL. Além da ceftriaxona, qual antibiótico não pode faltar no esquema empírico?",
+      "opcoes": [
+        "Aciclovir",
+        "Ampicilina",
+        "Vancomicina isolada sem ceftriaxona",
+        "Nenhum: o líquor é de meningite viral"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Cobre herpes (encefalite), mas o líquor com glicose muito baixa é bacteriano.",
+        "Gabarito: idoso + etilista → cobrir Listeria com ampicilina; cefalosporinas não têm ação contra ela.",
+        "Vancomicina cobre pneumococo resistente, não Listeria, e não substitui a ceftriaxona.",
+        "Predomínio de mononucleares é a pegadinha: glicose 20 e proteína 160 apontam bacteriana."
+      ],
+      "pegadinha": "Predomínio de mononucleares + hipoglicorraquia em idoso/imunossuprimido = Listeria → ampicilina.",
+      "uerj": "Questão de interpretação de líquor com escolha do antibiótico empírico.",
+      "fonte": "Harrison 21ª ed. / IDSA 2004 / Guia de Vigilância em Saúde (MS, 2024) / Tratado de Pediatria SBP",
+      "contexto": "**Meningite = inflamação das meninges; o líquor diz se é bacteriana, viral, tuberculosa ou fúngica.**\n\nQuadro:\n- Febre, cefaleia, rigidez de nuca, alteração da consciência\n- Lactente → irritabilidade, abaulamento de fontanela, sem rigidez\n\nConduta inicial:\n- **Punção lombar** → antes do antibiótico, se não houver contraindicação\n- **TC antes da punção** → déficit focal, papiledema, convulsão nova, rebaixamento importante da consciência, imunossupressão\n- **Antibiótico** → não atrasar (colher hemocultura e iniciar se a punção vai demorar)\n- **Dexametasona** → antes ou junto da 1ª dose de antibiótico\n\nQuimioprofilaxia de contatos:\n- **Meningococo e Haemophilus** → rifampicina para contatos íntimos\n\nComo cai:\n- Caso com líquor para classificar, ou antibiótico empírico pela idade.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/MenigitisCSF2019.jpg/600px-MenigitisCSF2019.jpg",
+        "legenda": "Líquor turvo de meningite bacteriana (Streptococcus): celularidade muito alta",
+        "fonte": "Wikimedia Commons · James Heilman, MD · CC BY-SA 4.0"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "nef-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome nefrótica",
+      "frente": "Síndrome nefrótica × síndrome nefrítica",
+      "verso": "**Nefrótica → proteinúria maciça, edema e hipoalbuminemia**\n**Nefrítica → hematúria, hipertensão, oligúria e edema**\n\nLógica:\n- Nefrótica = lesão do podócito → \"filtro furado\" para proteína\n- Nefrítica = inflamação glomerular → hemácias passam e a filtração cai",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Nefrótica",
+          "itens": [
+            "!Proteinúria > 3,5 g/dia",
+            "Albumina < 3 g/dL",
+            "Edema importante (anasarca)",
+            "Dislipidemia, lipidúria",
+            "Hematúria ausente ou discreta",
+            "Hipercoagulabilidade"
+          ]
+        },
+        "b": {
+          "t": "Nefrítica",
+          "itens": [
+            "!Hematúria com dismorfismo e cilindros hemáticos",
+            "Hipertensão",
+            "Oligúria e ↑ creatinina",
+            "Proteinúria < 3,5 g/dia",
+            "Ex.: GNPE, IgA, lúpus"
+          ]
+        }
+      },
+      "pegadinha": "Algumas doenças fazem as duas (glomerulonefrite membranoproliferativa, lúpus classe IV).",
+      "uerj": "Síndrome nefrótica do adulto e da criança caíram na UERJ (2022–2026).",
+      "fonte": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases / Diretrizes SBP de síndrome nefrótica na infância / Harrison 21ª ed.",
+      "contexto": "**Síndrome nefrótica = proteinúria > 3,5 g/24 h (criança > 50 mg/kg/dia ou > 40 mg/m²/h) + hipoalbuminemia + edema ± dislipidemia.**\n\nCausas no adulto:\n- **Primárias** → glomerulopatia membranosa, GESF, lesão mínima\n- **Secundárias** → diabetes (principal), lúpus (classe V), amiloidose, hepatite B/C, HIV, drogas, neoplasias\n\nCausa na criança:\n- **Lesão mínima** → ~80–90%, responde a corticoide\n\nComplicações:\n- Trombose (veia renal, TVP) → perda de antitrombina III\n- Infecção (pneumococo, peritonite) → perda de imunoglobulinas\n- Dislipidemia e IRA\n\nComo cai:\n- Distinguir nefrótica × nefrítica, causa pela idade e complicação.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Nephrotic_syndrome.jpg",
+        "legenda": "Edema importante na síndrome nefrótica",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "nef-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome nefrótica",
+      "frente": "Principal causa de síndrome nefrótica por faixa etária e a associação de cada glomerulopatia",
+      "verso": "**Criança → lesão mínima**\n**Adulto (primária) → glomerulopatia membranosa / GESF**\n**Adulto (geral) → nefropatia diabética**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Glomerulopatia",
+          "Pensar quando",
+          "Detalhe de prova"
+        ],
+        "linhas": [
+          [
+            "!Lesão mínima",
+            "Criança 2–8 anos; adulto com AINE, linfoma de Hodgkin",
+            "Microscopia óptica normal; apagamento de podócitos na eletrônica"
+          ],
+          [
+            "!Membranosa",
+            "Adulto; neoplasia sólida, hepatite B, lúpus classe V, drogas",
+            "Anticorpo anti-PLA2R (primária); mais trombose de veia renal"
+          ],
+          [
+            "GESF",
+            "Negros, HIV, obesidade, heroína, rim único",
+            "Mais resistente a corticoide"
+          ],
+          [
+            "Membranoproliferativa",
+            "Hepatite C, crioglobulinemia",
+            "Complemento baixo"
+          ],
+          [
+            "Amiloidose",
+            "Mieloma, doença inflamatória crônica",
+            "Rins aumentados; vermelho Congo"
+          ]
+        ]
+      },
+      "pegadinha": "Criança fora da faixa típica (< 1 ano ou > 12 anos), hematúria, hipertensão, complemento baixo ou sem resposta ao corticoide → biopsiar.",
+      "uerj": "Cobra a etiologia pela idade e pela doença associada.",
+      "fonte": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases / Diretrizes SBP de síndrome nefrótica na infância / Harrison 21ª ed.",
+      "contexto": "**Síndrome nefrótica = proteinúria > 3,5 g/24 h (criança > 50 mg/kg/dia ou > 40 mg/m²/h) + hipoalbuminemia + edema ± dislipidemia.**\n\nCausas no adulto:\n- **Primárias** → glomerulopatia membranosa, GESF, lesão mínima\n- **Secundárias** → diabetes (principal), lúpus (classe V), amiloidose, hepatite B/C, HIV, drogas, neoplasias\n\nCausa na criança:\n- **Lesão mínima** → ~80–90%, responde a corticoide\n\nComplicações:\n- Trombose (veia renal, TVP) → perda de antitrombina III\n- Infecção (pneumococo, peritonite) → perda de imunoglobulinas\n- Dislipidemia e IRA\n\nComo cai:\n- Distinguir nefrótica × nefrítica, causa pela idade e complicação.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Nephrotic_syndrome.jpg",
+        "legenda": "Edema importante na síndrome nefrótica",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "nef-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome nefrótica",
+      "frente": "Síndrome nefrótica na criança: tratamento inicial e vacinação",
+      "verso": "**Prednisolona 60 mg/m²/dia (máx. 60 mg) por 4–6 semanas**\n**Depois 40 mg/m² em dias alternados por 4–6 semanas**\n\nResposta:\n- Corticossensível → remissão (proteinúria negativa) em até 4 semanas\n- Sem remissão após 4–6 semanas → corticorresistente → biópsia\n\nVacinação:\n- Vacinas vivas (varicela, tríplice viral, febre amarela) → adiar enquanto em corticoide em dose alta (≥ 2 mg/kg/dia ou ≥ 20 mg/dia por ≥ 14 dias)\n- Pneumocócica e influenza → indicadas (risco de peritonite pneumocócica)",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Criança 1–12 anos com nefrótica pura → corticoide sem biópsia",
+          [
+            "Remissão em ≤ 4 sem → corticossensível (lesão mínima)",
+            "Sem remissão → corticorresistente → biópsia (GESF?)"
+          ]
+        ]
+      },
+      "pegadinha": "Na criança típica o tratamento é empírico — não se biopsia antes do corticoide.",
+      "uerj": "Vacinação no nefrótico já caiu na UERJ.",
+      "fonte": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases / Diretrizes SBP de síndrome nefrótica na infância / Harrison 21ª ed.",
+      "contexto": "**Síndrome nefrótica = proteinúria > 3,5 g/24 h (criança > 50 mg/kg/dia ou > 40 mg/m²/h) + hipoalbuminemia + edema ± dislipidemia.**\n\nCausas no adulto:\n- **Primárias** → glomerulopatia membranosa, GESF, lesão mínima\n- **Secundárias** → diabetes (principal), lúpus (classe V), amiloidose, hepatite B/C, HIV, drogas, neoplasias\n\nCausa na criança:\n- **Lesão mínima** → ~80–90%, responde a corticoide\n\nComplicações:\n- Trombose (veia renal, TVP) → perda de antitrombina III\n- Infecção (pneumococo, peritonite) → perda de imunoglobulinas\n- Dislipidemia e IRA\n\nComo cai:\n- Distinguir nefrótica × nefrítica, causa pela idade e complicação.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Nephrotic_syndrome.jpg",
+        "legenda": "Edema importante na síndrome nefrótica",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "nef-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome nefrótica",
+      "frente": "Menino de 4 anos com edema palpebral que evoluiu para anasarca em 1 semana. PA normal. Urina: proteína 4+, sem hematúria. Albumina 1,8 g/dL, colesterol 380 mg/dL, complemento normal. A conduta mais adequada é:",
+      "opcoes": [
+        "Biópsia renal antes de qualquer tratamento",
+        "Prednisolona 60 mg/m²/dia",
+        "Ciclofosfamida",
+        "Antibiótico para glomerulonefrite pós-estreptocócica"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Biópsia só nas atípicas ou corticorresistentes.",
+        "Gabarito: quadro típico de lesão mínima → corticoide empírico.",
+        "Imunossupressor é reservado a recidivas frequentes ou corticodependência/resistência.",
+        "GNPE é nefrítica (hematúria, HAS, complemento baixo)."
+      ],
+      "pegadinha": "Complemento normal e ausência de hematúria/HAS → nefrótica pura → lesão mínima.",
+      "uerj": "Caso pediátrico de nefrótica pura com conduta.",
+      "fonte": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases / Diretrizes SBP de síndrome nefrótica na infância / Harrison 21ª ed.",
+      "contexto": "**Síndrome nefrótica = proteinúria > 3,5 g/24 h (criança > 50 mg/kg/dia ou > 40 mg/m²/h) + hipoalbuminemia + edema ± dislipidemia.**\n\nCausas no adulto:\n- **Primárias** → glomerulopatia membranosa, GESF, lesão mínima\n- **Secundárias** → diabetes (principal), lúpus (classe V), amiloidose, hepatite B/C, HIV, drogas, neoplasias\n\nCausa na criança:\n- **Lesão mínima** → ~80–90%, responde a corticoide\n\nComplicações:\n- Trombose (veia renal, TVP) → perda de antitrombina III\n- Infecção (pneumococo, peritonite) → perda de imunoglobulinas\n- Dislipidemia e IRA\n\nComo cai:\n- Distinguir nefrótica × nefrítica, causa pela idade e complicação.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Nephrotic_syndrome.jpg",
+        "legenda": "Edema importante na síndrome nefrótica",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hap-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Hipertensão pulmonar",
+      "frente": "Hipertensão pulmonar: investigação até chegar no grupo 1 (HAP)",
+      "verso": "**Eco sugere → afastar grupos 2 e 3 → cintilografia V/Q afasta grupo 4 → cateterismo direito confirma**\n\nPor que a V/Q:\n- É o exame de triagem para tromboembólica crônica (mais sensível que a angioTC)\n- V/Q normal praticamente afasta o grupo 4",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dispneia + eco com alta probabilidade de HP",
+          "ECG, eco do VE, espirometria, TC de tórax → grupos 2 e 3?",
+          "Cintilografia V/Q → grupo 4?",
+          "Cateterismo de câmaras direitas",
+          [
+            "PAOP > 15 → pós-capilar (grupo 2)",
+            "PAOP ≤ 15 + RVP > 2 Woods → pré-capilar → HAP (grupo 1) se sem outra causa"
+          ]
+        ]
+      },
+      "pegadinha": "Eco só estima — o diagnóstico de HP é sempre pelo cateterismo direito.",
+      "uerj": "Hipertensão pulmonar caiu na UERJ (2022–2026) em caso clínico com cateterismo.",
+      "fonte": "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension / 7th World Symposium on Pulmonary Hypertension (2024)",
+      "contexto": "**Hipertensão pulmonar = PAP média > 20 mmHg no cateterismo direito (definição ESC/ERS 2022).**\n\nPré × pós-capilar:\n- **Pré-capilar** → PAOP ≤ 15 mmHg e RVP > 2 Woods (problema no leito arterial pulmonar)\n- **Pós-capilar** → PAOP > 15 mmHg (problema no coração esquerdo)\n\nGrupos (OMS):\n- **1** → hipertensão arterial pulmonar (idiopática, hereditária, drogas, colagenose, HIV, portopulmonar, cardiopatia congênita, esquistossomose)\n- **2** → doença do coração esquerdo (a mais comum)\n- **3** → doença pulmonar/hipóxia (DPOC, intersticial)\n- **4** → obstrução arterial pulmonar (tromboembólica crônica)\n- **5** → mecanismos multifatoriais/desconhecidos\n\nComo cai:\n- Caso de mulher jovem com dispneia e investigação que leva ao grupo 1.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Schwere_pulmonale_Hypertonie_51W_-_CR_pa_-_001.jpg",
+        "legenda": "Radiografia com tronco e artérias pulmonares centrais dilatados na hipertensão pulmonar grave",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hap-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Hipertensão pulmonar",
+      "frente": "Hipertensão arterial pulmonar (grupo 1): fisiopatologia e tratamento",
+      "verso": "**Remodelamento das pequenas artérias pulmonares → ↑ RVP → sobrecarga e falência do VD**\n\nTratamento específico (HAP):\n- Teste de vasorreatividade no cateterismo → só idiopática, hereditária ou por drogas\n  - Positivo (minoria) → bloqueador de canal de cálcio em dose alta\n- Negativo → terapia dupla inicial\n  - Antagonista do receptor de endotelina (ambrisentana, bosentana, macitentana)\n  - Inibidor da fosfodiesterase 5 (sildenafila, tadalafila)\n- Alto risco → acrescentar prostanoide EV/SC\n\nMedidas gerais:\n- Diurético, O2 se hipoxemia, evitar gravidez, vacinação",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Via",
+          "Problema na HAP",
+          "Droga"
+        ],
+        "linhas": [
+          [
+            "Endotelina",
+            "↑ (vasoconstrição, proliferação)",
+            "!Antagonistas: ambrisentana, bosentana, macitentana"
+          ],
+          [
+            "Óxido nítrico",
+            "↓",
+            "!iPDE5: sildenafila, tadalafila; riociguate"
+          ],
+          [
+            "Prostaciclina",
+            "↓",
+            "Epoprostenol, treprostinil, iloprosta, selexipague"
+          ]
+        ]
+      },
+      "pegadinha": "Bloqueador de cálcio sem teste de vasorreatividade positivo é ERRADO (pode piorar o VD).",
+      "uerj": "Cobra o mecanismo e o padrão do cateterismo.",
+      "fonte": "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension / 7th World Symposium on Pulmonary Hypertension (2024)",
+      "contexto": "**Hipertensão pulmonar = PAP média > 20 mmHg no cateterismo direito (definição ESC/ERS 2022).**\n\nPré × pós-capilar:\n- **Pré-capilar** → PAOP ≤ 15 mmHg e RVP > 2 Woods (problema no leito arterial pulmonar)\n- **Pós-capilar** → PAOP > 15 mmHg (problema no coração esquerdo)\n\nGrupos (OMS):\n- **1** → hipertensão arterial pulmonar (idiopática, hereditária, drogas, colagenose, HIV, portopulmonar, cardiopatia congênita, esquistossomose)\n- **2** → doença do coração esquerdo (a mais comum)\n- **3** → doença pulmonar/hipóxia (DPOC, intersticial)\n- **4** → obstrução arterial pulmonar (tromboembólica crônica)\n- **5** → mecanismos multifatoriais/desconhecidos\n\nComo cai:\n- Caso de mulher jovem com dispneia e investigação que leva ao grupo 1.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Schwere_pulmonale_Hypertonie_51W_-_CR_pa_-_001.jpg",
+        "legenda": "Radiografia com tronco e artérias pulmonares centrais dilatados na hipertensão pulmonar grave",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "hap-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Hipertensão pulmonar",
+      "frente": "Mulher, 32 anos, sem comorbidades, com dispneia aos esforços progressiva. Eco: PSAP estimada de 70 mmHg. TC de tórax e espirometria normais; cintilografia V/Q normal. Cateterismo direito: PAP média 45 mmHg, PAOP 8 mmHg, RVP 9 Woods. O diagnóstico é:",
+      "opcoes": [
+        "Hipertensão pulmonar por doença do coração esquerdo (grupo 2)",
+        "Hipertensão arterial pulmonar (grupo 1)",
+        "Hipertensão pulmonar tromboembólica crônica (grupo 4)",
+        "Hipertensão pulmonar por doença pulmonar (grupo 3)"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Grupo 2 é pós-capilar (PAOP > 15).",
+        "Gabarito: pré-capilar (PAOP ≤ 15, RVP > 2) sem doença pulmonar nem TEP crônico → HAP.",
+        "V/Q normal afasta o grupo 4.",
+        "TC e espirometria normais afastam o grupo 3."
+      ],
+      "pegadinha": "PAOP baixa é o dado que tira o coração esquerdo da jogada.",
+      "uerj": "Questão de hipertensão pulmonar com cateterismo.",
+      "fonte": "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension / 7th World Symposium on Pulmonary Hypertension (2024)",
+      "contexto": "**Hipertensão pulmonar = PAP média > 20 mmHg no cateterismo direito (definição ESC/ERS 2022).**\n\nPré × pós-capilar:\n- **Pré-capilar** → PAOP ≤ 15 mmHg e RVP > 2 Woods (problema no leito arterial pulmonar)\n- **Pós-capilar** → PAOP > 15 mmHg (problema no coração esquerdo)\n\nGrupos (OMS):\n- **1** → hipertensão arterial pulmonar (idiopática, hereditária, drogas, colagenose, HIV, portopulmonar, cardiopatia congênita, esquistossomose)\n- **2** → doença do coração esquerdo (a mais comum)\n- **3** → doença pulmonar/hipóxia (DPOC, intersticial)\n- **4** → obstrução arterial pulmonar (tromboembólica crônica)\n- **5** → mecanismos multifatoriais/desconhecidos\n\nComo cai:\n- Caso de mulher jovem com dispneia e investigação que leva ao grupo 1.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Schwere_pulmonale_Hypertonie_51W_-_CR_pa_-_001.jpg",
+        "legenda": "Radiografia com tronco e artérias pulmonares centrais dilatados na hipertensão pulmonar grave",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "chc-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Carcinoma hepatocelular",
+      "frente": "Achado de imagem que diagnostica CHC sem biópsia",
+      "verso": "**Realce na fase arterial + washout na fase portal/tardia**\n**Nódulo ≥ 1 cm em paciente de alto risco (cirrose)**\n\nPor quê:\n- O CHC é nutrido pela artéria hepática (o fígado normal, pela porta)\n- Na fase arterial ele brilha; na portal o fígado brilha e o tumor fica escuro\n\nQuando biopsiar:\n- Fígado sem cirrose (critério não invasivo não vale)\n- Imagem atípica ou inconclusiva",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Nódulo na USG de rastreamento em cirrótico",
+          [
+            "< 1 cm → repetir USG em 3 meses",
+            "≥ 1 cm → TC ou RM trifásica"
+          ],
+          [
+            "Realce arterial + washout → CHC (sem biópsia)",
+            "Atípico → outra imagem ou biópsia"
+          ]
+        ]
+      },
+      "pegadinha": "Em fígado NÃO cirrótico (ex.: MASH sem cirrose) a imagem típica sugere, mas a confirmação em geral exige biópsia.",
+      "uerj": "Carcinoma hepatocelular (nódulo em cirrótico) caiu na UERJ (2022–2026).",
+      "fonte": "AASLD Practice Guidance on HCC (2023) / EASL Clinical Practice Guidelines HCC (2025) / BCLC 2022 / Nomenclatura MASLD (Rinella et al., 2023)",
+      "contexto": "**Carcinoma hepatocelular (CHC) = tumor primário maligno mais comum do fígado; surge quase sempre em fígado com doença crônica.**\n\nFatores de risco:\n- **Cirrose de qualquer causa** → principal\n- **Hepatite B** → pode dar CHC mesmo sem cirrose\n- **MASLD/MASH** (esteatose metabólica, antiga DHGNA/NASH) → pode dar CHC sem cirrose\n- Álcool, hepatite C, hemocromatose, aflatoxina\n\nRastreamento:\n- **Cirróticos (e hepatite B de alto risco)** → USG de abdome ± alfafetoproteína a cada 6 meses\n\nDiagnóstico:\n- **TC ou RM trifásica** → realce arterial + washout na fase portal/tardia\n- Nódulo ≥ 1 cm com esse padrão em cirrótico dispensa biópsia (LI-RADS 5)\n\nComo cai:\n- Achado de imagem típico, fator de risco e conduta pelo estádio (BCLC).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "TC trifásica de CHC: realce na fase arterial e washout nas fases portal/tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "chc-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Carcinoma hepatocelular",
+      "frente": "CHC sem cirrose: quais doenças podem causar",
+      "verso": "**Hepatite B**\n**MASLD/MASH (esteatose hepática metabólica)**\n\nPor quê:\n- Hepatite B → DNA viral integra no hepatócito (oncogênese direta)\n- MASH → obesidade, DM2 e resistência insulínica causam inflamação crônica e carcinogênese, mesmo antes da cirrose\n\nNomenclatura nova:\n- DHGNA → MASLD (doença hepática esteatótica associada à disfunção metabólica)\n- NASH → MASH",
+      "visual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "CHC pode surgir sem cirrose",
+            "itens": [
+              "!Hepatite B",
+              "!MASLD/MASH (obesidade, DM2)",
+              "Aflatoxina"
+            ]
+          },
+          {
+            "t": "CHC quase só com cirrose",
+            "itens": [
+              "Hepatite C",
+              "Álcool",
+              "Hemocromatose"
+            ]
+          }
+        ]
+      },
+      "pegadinha": "Rastreio semestral com USG é para cirróticos; na hepatite B vale também sem cirrose em grupos de alto risco.",
+      "uerj": "A UERJ pode trocar a sigla antiga pela nova (DHGNA → MASLD).",
+      "fonte": "AASLD Practice Guidance on HCC (2023) / EASL Clinical Practice Guidelines HCC (2025) / BCLC 2022 / Nomenclatura MASLD (Rinella et al., 2023)",
+      "contexto": "**Carcinoma hepatocelular (CHC) = tumor primário maligno mais comum do fígado; surge quase sempre em fígado com doença crônica.**\n\nFatores de risco:\n- **Cirrose de qualquer causa** → principal\n- **Hepatite B** → pode dar CHC mesmo sem cirrose\n- **MASLD/MASH** (esteatose metabólica, antiga DHGNA/NASH) → pode dar CHC sem cirrose\n- Álcool, hepatite C, hemocromatose, aflatoxina\n\nRastreamento:\n- **Cirróticos (e hepatite B de alto risco)** → USG de abdome ± alfafetoproteína a cada 6 meses\n\nDiagnóstico:\n- **TC ou RM trifásica** → realce arterial + washout na fase portal/tardia\n- Nódulo ≥ 1 cm com esse padrão em cirrótico dispensa biópsia (LI-RADS 5)\n\nComo cai:\n- Achado de imagem típico, fator de risco e conduta pelo estádio (BCLC).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "TC trifásica de CHC: realce na fase arterial e washout nas fases portal/tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "chc-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Carcinoma hepatocelular",
+      "frente": "Tratamento do CHC pelo estadiamento BCLC",
+      "verso": "**BCLC 0/A → ressecção, transplante ou ablação**\n**BCLC B → quimioembolização (TACE)**\n**BCLC C → terapia sistêmica**\n**BCLC D → cuidados de suporte**\n\nCritérios de Milão (transplante):\n- 1 nódulo ≤ 5 cm\n- ou até 3 nódulos, todos ≤ 3 cm\n- sem invasão vascular e sem doença fora do fígado",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "BCLC",
+          "Quem é",
+          "Tratamento"
+        ],
+        "linhas": [
+          [
+            "0 (muito precoce)",
+            "Nódulo único < 2 cm, função hepática preservada, ECOG 0",
+            "Ablação ou ressecção"
+          ],
+          [
+            "A (precoce)",
+            "Único ou até 3 nódulos ≤ 3 cm, ECOG 0",
+            "!Ressecção, transplante (Milão) ou ablação"
+          ],
+          [
+            "B (intermediário)",
+            "Multinodular, sem invasão vascular, ECOG 0",
+            "!TACE (quimioembolização)"
+          ],
+          [
+            "C (avançado)",
+            "Invasão portal ou metástase, ECOG 1–2",
+            "!Atezolizumabe + bevacizumabe (ou outras sistêmicas)"
+          ],
+          [
+            "D (terminal)",
+            "Função hepática muito ruim ou ECOG 3–4",
+            "Suporte (transplante se dentro de Milão)"
+          ]
+        ]
+      },
+      "pegadinha": "Ressecção só se fígado bem compensado e sem hipertensão portal importante; senão, transplante.",
+      "uerj": "Pode perguntar a conduta pelo tamanho/número de nódulos.",
+      "fonte": "AASLD Practice Guidance on HCC (2023) / EASL Clinical Practice Guidelines HCC (2025) / BCLC 2022 / Nomenclatura MASLD (Rinella et al., 2023)",
+      "contexto": "**Carcinoma hepatocelular (CHC) = tumor primário maligno mais comum do fígado; surge quase sempre em fígado com doença crônica.**\n\nFatores de risco:\n- **Cirrose de qualquer causa** → principal\n- **Hepatite B** → pode dar CHC mesmo sem cirrose\n- **MASLD/MASH** (esteatose metabólica, antiga DHGNA/NASH) → pode dar CHC sem cirrose\n- Álcool, hepatite C, hemocromatose, aflatoxina\n\nRastreamento:\n- **Cirróticos (e hepatite B de alto risco)** → USG de abdome ± alfafetoproteína a cada 6 meses\n\nDiagnóstico:\n- **TC ou RM trifásica** → realce arterial + washout na fase portal/tardia\n- Nódulo ≥ 1 cm com esse padrão em cirrótico dispensa biópsia (LI-RADS 5)\n\nComo cai:\n- Achado de imagem típico, fator de risco e conduta pelo estádio (BCLC).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "TC trifásica de CHC: realce na fase arterial e washout nas fases portal/tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "chc-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Carcinoma hepatocelular",
+      "frente": "Homem, 60 anos, obeso, diabético tipo 2, sem etilismo e com sorologias virais negativas. TC: nódulo hepático de 3 cm com realce arterial e washout na fase portal. Elastografia sem cirrose. O diagnóstico mais provável e o fator de risco são:",
+      "opcoes": [
+        "Hemangioma, sem relação com a síndrome metabólica",
+        "Carcinoma hepatocelular associado à doença hepática esteatótica metabólica (MASLD/MASH)",
+        "Metástase de cólon, pois CHC só ocorre em cirrótico",
+        "Hiperplasia nodular focal ligada à obesidade"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Hemangioma tem realce periférico globular e enchimento centrípeto, sem washout.",
+        "Gabarito: realce arterial + washout = CHC; MASH (obesidade e DM2) causa CHC mesmo sem cirrose.",
+        "CHC pode surgir sem cirrose (MASH, hepatite B); metástase de cólon é hipovascular.",
+        "HNF tem cicatriz central e não faz washout."
+      ],
+      "pegadinha": "Sem cirrose, a confirmação costuma exigir biópsia — mas o padrão de imagem continua sendo de CHC.",
+      "uerj": "Questão de imagem com fator de risco metabólico.",
+      "fonte": "AASLD Practice Guidance on HCC (2023) / EASL Clinical Practice Guidelines HCC (2025) / BCLC 2022 / Nomenclatura MASLD (Rinella et al., 2023)",
+      "contexto": "**Carcinoma hepatocelular (CHC) = tumor primário maligno mais comum do fígado; surge quase sempre em fígado com doença crônica.**\n\nFatores de risco:\n- **Cirrose de qualquer causa** → principal\n- **Hepatite B** → pode dar CHC mesmo sem cirrose\n- **MASLD/MASH** (esteatose metabólica, antiga DHGNA/NASH) → pode dar CHC sem cirrose\n- Álcool, hepatite C, hemocromatose, aflatoxina\n\nRastreamento:\n- **Cirróticos (e hepatite B de alto risco)** → USG de abdome ± alfafetoproteína a cada 6 meses\n\nDiagnóstico:\n- **TC ou RM trifásica** → realce arterial + washout na fase portal/tardia\n- Nódulo ≥ 1 cm com esse padrão em cirrótico dispensa biópsia (LI-RADS 5)\n\nComo cai:\n- Achado de imagem típico, fator de risco e conduta pelo estádio (BCLC).",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Triphasic_CT_scan_of_hepatocellular_carcinoma.jpg",
+        "legenda": "TC trifásica de CHC: realce na fase arterial e washout nas fases portal/tardia",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "SHU típica: tríade, causa e laboratório",
+      "verso": "**Anemia hemolítica microangiopática**\n**Plaquetopenia**\n**Lesão renal aguda**\n\nCausa:\n- Toxina Shiga (E. coli O157:H7, Shigella) lesa o endotélio do capilar glomerular\n- Microtrombos consomem plaquetas e fragmentam hemácias",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Exame",
+          "Na SHU",
+          "Por quê"
+        ],
+        "linhas": [
+          [
+            "Esfregaço",
+            "!Esquizócitos",
+            "Hemácia cortada nos microtrombos"
+          ],
+          [
+            "LDH",
+            "!Muito ↑",
+            "Hemólise e lesão tecidual"
+          ],
+          [
+            "Haptoglobina",
+            "↓",
+            "Consumida pela hemoglobina livre"
+          ],
+          [
+            "Bilirrubina indireta",
+            "↑ discreta",
+            "Hemólise"
+          ],
+          [
+            "Reticulócitos",
+            "↑",
+            "Resposta medular"
+          ],
+          [
+            "Coombs direto",
+            "!Negativo",
+            "Hemólise mecânica, não imune"
+          ],
+          [
+            "Coagulograma",
+            "Normal",
+            "Diferencia de CIVD"
+          ]
+        ]
+      },
+      "pegadinha": "Coombs negativo + coagulograma normal separam SHU de anemia hemolítica autoimune e de CIVD.",
+      "uerj": "SHU caiu na UERJ em clínica (1×) e pediatria (2×) entre 2022 e 2026.",
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia\n\nPTT (púrpura trombocitopênica trombótica):\n- Deficiência de ADAMTS13 (< 10%), mais neurológica\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n\nComo cai:\n- Caso pós-diarreia com anemia, plaquetopenia e IRA, e tratamento de suporte.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "Tratamento da SHU típica (pós-diarreia)",
+      "verso": "**Suporte → hidratação, transfusão e diálise se indicada**\n\nO que NÃO fazer:\n- Antibiótico na diarreia por STEC → pode aumentar a liberação de toxina\n- Antidiarreicos/antiperistálticos\n- Transfundir plaquetas sem sangramento ou procedimento\n\nSHU atípica:\n- Eculizumabe (anti-C5) → bloqueia o complemento",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "SHU típica (STEC)",
+          "itens": [
+            "Pós-diarreia sanguinolenta",
+            "Criança",
+            "!Suporte (diálise se preciso)",
+            "Bom prognóstico"
+          ]
+        },
+        "b": {
+          "t": "SHU atípica (complemento)",
+          "itens": [
+            "Sem diarreia, recorrente",
+            "Familiar",
+            "!Eculizumabe",
+            "Evolui para DRC se não tratada"
+          ]
+        }
+      },
+      "pegadinha": "Plasmaférese é o tratamento da PTT, não da SHU típica.",
+      "uerj": "Conduta de suporte é a resposta mais cobrada.",
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia\n\nPTT (púrpura trombocitopênica trombótica):\n- Deficiência de ADAMTS13 (< 10%), mais neurológica\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n\nComo cai:\n- Caso pós-diarreia com anemia, plaquetopenia e IRA, e tratamento de suporte.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "SHU × PTT: como diferenciar",
+      "verso": "**SHU → rim domina (IRA grave), pós-diarreia**\n**PTT → neurológico domina, ADAMTS13 < 10%**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "SHU típica",
+          "PTT"
+        ],
+        "linhas": [
+          [
+            "Gatilho",
+            "Diarreia por toxina Shiga",
+            "Autoanticorpo anti-ADAMTS13"
+          ],
+          [
+            "Quem",
+            "Criança",
+            "Adulto, mulher"
+          ],
+          [
+            "Rim",
+            "!IRA grave (diálise)",
+            "Leve"
+          ],
+          [
+            "Neurológico",
+            "Menos comum",
+            "!Confusão, AVC, convulsão"
+          ],
+          [
+            "Febre",
+            "Pode ter",
+            "Pode ter"
+          ],
+          [
+            "ADAMTS13",
+            "Normal",
+            "!< 10%"
+          ],
+          [
+            "Tratamento",
+            "Suporte",
+            "!Plasmaférese + corticoide (± caplacizumabe, rituximabe)"
+          ]
+        ]
+      },
+      "pegadinha": "A pêntade clássica da PTT (febre + neuro + rim + anemia + plaquetopenia) aparece completa em minoria; não esperar a pêntade para tratar.",
+      "uerj": "Pode dar MAT em adulto e pedir para separar SHU de PTT.",
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia\n\nPTT (púrpura trombocitopênica trombótica):\n- Deficiência de ADAMTS13 (< 10%), mais neurológica\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n\nComo cai:\n- Caso pós-diarreia com anemia, plaquetopenia e IRA, e tratamento de suporte.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "shu-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Nefrologia",
+      "sub": "Síndrome hemolítico-urêmica (SHU) e microangiopatias trombóticas",
+      "frente": "Mulher, 28 anos, há 7 dias com diarreia sanguinolenta, evolui com oligúria, PA 160 × 100 mmHg, Hb 7,5 g/dL, plaquetas 45.000/mm³, creatinina 4,2 mg/dL, LDH muito elevada, haptoglobina baixa, esquizócitos no sangue periférico e Coombs direto negativo. O diagnóstico e o tratamento são:",
+      "opcoes": [
+        "Anemia hemolítica autoimune → corticoide em dose alta",
+        "Síndrome hemolítico-urêmica → suporte com transfusão e diálise se indicada",
+        "CIVD → plasma fresco e crioprecipitado",
+        "Glomerulonefrite pós-infecciosa → antibiótico"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Coombs negativo e esquizócitos falam contra hemólise imune.",
+        "Gabarito: diarreia sanguinolenta + MAT + IRA = SHU (STEC); tratamento de suporte.",
+        "CIVD altera o coagulograma e ocorre em sepse/doença grave.",
+        "GN pós-infecciosa não causa hemólise nem plaquetopenia; antibiótico na STEC pode piorar."
+      ],
+      "pegadinha": "Antibiótico para a diarreia é a alternativa-armadilha.",
+      "uerj": "Questão de SHU em adulto após diarreia.",
+      "fonte": "Harrison 21ª ed. / KDIGO Controversies Conference on aHUS and C3G (2017) / ISTH Guidelines for TTP (2020) / Tratado de Pediatria SBP",
+      "contexto": "**Microangiopatia trombótica (MAT) = lesão endotelial com microtrombos → anemia hemolítica microangiopática + plaquetopenia + lesão de órgão.**\n\nSHU típica:\n- Após diarreia sanguinolenta por E. coli produtora de toxina Shiga (STEC, O157:H7) ou Shigella\n- Tríade → anemia hemolítica microangiopática + plaquetopenia + lesão renal aguda\n- Mais comum em crianças < 5 anos\n\nSHU atípica:\n- Desregulação do complemento, sem diarreia\n\nPTT (púrpura trombocitopênica trombótica):\n- Deficiência de ADAMTS13 (< 10%), mais neurológica\n\nLaboratório de hemólise:\n- Esquizócitos, LDH ↑↑, haptoglobina ↓, bilirrubina indireta ↑, reticulócitos ↑, Coombs negativo\n\nComo cai:\n- Caso pós-diarreia com anemia, plaquetopenia e IRA, e tratamento de suporte.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Schistocytes.jpg",
+        "legenda": "Esquizócitos (hemácias fragmentadas) no sangue periférico",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Colangite aguda: tríade de Charcot e pêntade de Reynolds",
+      "verso": "**Charcot → febre + icterícia + dor em hipocôndrio direito**\n**Reynolds → Charcot + hipotensão + confusão mental**\n\nSignificado:\n- Reynolds = colangite grave/supurativa → drenagem de urgência",
+      "visual": {
+        "tipo": "vs",
+        "a": {
+          "t": "Tríade de Charcot",
+          "itens": [
+            "Febre (com calafrios)",
+            "Icterícia",
+            "Dor em hipocôndrio direito"
+          ]
+        },
+        "b": {
+          "t": "Pêntade de Reynolds",
+          "itens": [
+            "Os 3 de Charcot",
+            "!Hipotensão (choque)",
+            "!Confusão mental"
+          ]
+        }
+      },
+      "pegadinha": "Charcot completa aparece em só ~50–70% dos casos; Tóquio 2018 tem mais sensibilidade.",
+      "uerj": "Colangite aguda caiu 3× na UERJ (2022–2026), em clínica e cirurgia.",
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, enzimas canaliculares)\n- **C** → imagem com dilatação da via biliar ou causa\n\nTratamento:\n- Antibiótico (Gram-negativos entéricos e anaeróbios)\n- **Drenagem biliar → CPRE com papilotomia** (tempo depende da gravidade)\n\nComo cai:\n- Caso com Charcot/Reynolds e a conduta de drenagem.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-02",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Colangite aguda: gravidade (Tóquio 2018) e momento da drenagem",
+      "verso": "**Grau III → drenagem de urgência**\n**Grau II → drenagem precoce**\n**Grau I → antibiótico e drenar se não melhorar em 24 h**\n\nComo drenar:\n- 1ª escolha → CPRE com papilotomia (e retirada do cálculo)\n- Falhou ou sem acesso → drenagem trans-hepática percutânea\n- Colecistectomia depois (mesma internação quando possível)",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Grau",
+          "Definição",
+          "Drenagem"
+        ],
+        "linhas": [
+          [
+            "!III (grave)",
+            "Disfunção orgânica: hipotensão com droga vasoativa, confusão, PaO2/FiO2 < 300, oligúria/creatinina > 2, INR > 1,5, plaquetas < 100 mil",
+            "!Urgente, após estabilizar"
+          ],
+          [
+            "II (moderada)",
+            "Sem disfunção, com 2 de: leucócitos > 12 mil ou < 4 mil, febre ≥ 39 °C, idade ≥ 75, bilirrubina ≥ 5, albumina baixa",
+            "Precoce"
+          ],
+          [
+            "I (leve)",
+            "Não preenche II nem III",
+            "Se não responder ao antibiótico"
+          ]
+        ]
+      },
+      "pegadinha": "Colecistostomia percutânea drena a vesícula (colecistite de alto risco), NÃO a via biliar.",
+      "uerj": "A UERJ cobra a conduta: CPRE com papilotomia + antibiótico.",
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, enzimas canaliculares)\n- **C** → imagem com dilatação da via biliar ou causa\n\nTratamento:\n- Antibiótico (Gram-negativos entéricos e anaeróbios)\n- **Drenagem biliar → CPRE com papilotomia** (tempo depende da gravidade)\n\nComo cai:\n- Caso com Charcot/Reynolds e a conduta de drenagem.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-03",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Colangite × colecistite aguda: como diferenciar",
+      "verso": "**Colangite → icterícia, colestase e colédoco dilatado**\n**Colecistite → Murphy positivo e parede da vesícula espessada**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Colecistite",
+          "Colangite"
+        ],
+        "linhas": [
+          [
+            "Onde obstrui",
+            "Ducto cístico",
+            "!Colédoco"
+          ],
+          [
+            "Icterícia",
+            "Ausente ou leve",
+            "!Presente"
+          ],
+          [
+            "Exame",
+            "!Murphy positivo",
+            "Charcot / Reynolds"
+          ],
+          [
+            "USG",
+            "Parede espessada, líquido perivesicular",
+            "!Via biliar dilatada (colédoco > 6 mm)"
+          ],
+          [
+            "Conduta",
+            "Colecistectomia (colecistostomia se alto risco)",
+            "!Antibiótico + CPRE"
+          ]
+        ]
+      },
+      "pegadinha": "Icterícia na colecistite → pensar em Mirizzi ou coledocolitíase associada.",
+      "uerj": "Distratores de colecistite aparecem nas questões de colangite.",
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, enzimas canaliculares)\n- **C** → imagem com dilatação da via biliar ou causa\n\nTratamento:\n- Antibiótico (Gram-negativos entéricos e anaeróbios)\n- **Drenagem biliar → CPRE com papilotomia** (tempo depende da gravidade)\n\nComo cai:\n- Caso com Charcot/Reynolds e a conduta de drenagem.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "colg-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Vias biliares",
+      "sub": "Colangite aguda",
+      "frente": "Mulher, 70 anos, com febre, calafrios, icterícia e dor em hipocôndrio direito há 2 dias. PA 110 × 70 mmHg, lúcida. Bilirrubina total 6 mg/dL, FA e GGT muito elevadas. USG: colédoco de 12 mm com cálculo distal e vesícula com cálculos, sem espessamento da parede. A conduta é:",
+      "opcoes": [
+        "Antibiótico e CPRE com papilotomia para descompressão biliar",
+        "Colecistectomia videolaparoscópica de urgência",
+        "Colecistostomia percutânea",
+        "Antibiótico e colecistectomia eletiva em 6 semanas, sem abordar o colédoco"
+      ],
+      "certa": 0,
+      "comentarios": [
+        "Gabarito: colangite por coledocolitíase → antibiótico (Gram-negativos) + drenagem por CPRE com papilotomia.",
+        "Não resolve a obstrução do colédoco; vem depois da CPRE.",
+        "Colecistostomia é para colecistite de alto risco cirúrgico; não drena o colédoco.",
+        "Deixar o colédoco obstruído mantém a infecção."
+      ],
+      "pegadinha": "Colecistostomia e colecistectomia são distratores de colecistite.",
+      "uerj": "Questão de colangite com conduta (anotação dela).",
+      "fonte": "Tokyo Guidelines 2018 (TG18) / Sabiston Textbook of Surgery 21ª ed.",
+      "contexto": "**Colangite aguda = infecção da via biliar por obstrução (coledocolitíase é a principal causa).**\n\nCausas:\n- **Coledocolitíase** → principal\n- Estenose benigna, tumor (periampular, colangiocarcinoma), manipulação/prótese\n\nClínica:\n- **Tríade de Charcot** → febre + icterícia + dor em hipocôndrio direito\n- **Pêntade de Reynolds** → Charcot + hipotensão + confusão mental (colangite grave)\n\nDiagnóstico (Tóquio 2018):\n- **A** → inflamação sistêmica (febre, leucocitose, PCR)\n- **B** → colestase (icterícia, enzimas canaliculares)\n- **C** → imagem com dilatação da via biliar ou causa\n\nTratamento:\n- Antibiótico (Gram-negativos entéricos e anaeróbios)\n- **Drenagem biliar → CPRE com papilotomia** (tempo depende da gravidade)\n\nComo cai:\n- Caso com Charcot/Reynolds e a conduta de drenagem.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/ERCP_stone.jpg",
+        "legenda": "CPRE mostrando cálculo no colédoco",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Pulso paradoxal: definição e relação com o tamponamento cardíaco",
+      "verso": "**Queda da PA sistólica > 10 mmHg na inspiração**\n**Sinal clássico do tamponamento cardíaco**\n\nPor quê:\n- Inspiração aumenta o retorno ao VD\n- Com o pericárdio cheio, o VD só cresce empurrando o septo para a esquerda (interdependência ventricular)\n- VE enche menos → volume sistólico e PA caem na inspiração\n\nOutras causas:\n- Asma grave, DPOC exacerbado, TEP maciço, choque hipovolêmico\n\nPor que \"paradoxal\":\n- O pulso some na inspiração enquanto o coração continua batendo",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Inspiração → ↑ retorno venoso ao VD",
+          "Pericárdio tenso: VD só cresce para dentro",
+          "Septo desvia para o VE",
+          "↓ enchimento do VE → ↓ PAS > 10 mmHg"
+        ]
+      },
+      "pegadinha": "Na constritiva o pulso paradoxal é incomum (o pericárdio rígido isola o coração das variações da pressão torácica).",
+      "uerj": "Tamponamento (tríade de Beck, neoplásico) caiu na UERJ (2022–2026).",
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nTamponamento:\n- Acúmulo de líquido que comprime as câmaras (velocidade importa mais que volume)\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal**\n- ECG → baixa voltagem e alternância elétrica\n- Tratamento → pericardiocentese\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- **Sinal de Kussmaul**, **knock pericárdico**, **sinal de Broadbent**\n- Clínica de IC direita (ascite, edema, hepatomegalia)\n- Tratamento → pericardiectomia\n\nComo cai:\n- Definir o sinal e ligar à doença, ou caso de tamponamento com conduta.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Sinal de Kussmaul, knock pericárdico e sinal de Broadbent: definição e doença",
+      "verso": "**Os três → pericardite constritiva**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "O que é",
+          "Doença"
+        ],
+        "linhas": [
+          [
+            "!Pulso paradoxal",
+            "Queda da PAS > 10 mmHg na inspiração",
+            "!Tamponamento cardíaco"
+          ],
+          [
+            "!Sinal de Kussmaul",
+            "Pressão venosa jugular SOBE (ou não cai) na inspiração",
+            "!Pericardite constritiva (também infarto de VD e cardiomiopatia restritiva)"
+          ],
+          [
+            "!Knock pericárdico",
+            "Som protodiastólico, logo após B2, mais precoce e agudo que B3 — enchimento rápido que para de repente no pericárdio rígido",
+            "!Pericardite constritiva"
+          ],
+          [
+            "!Sinal de Broadbent",
+            "Retração sistólica da parede torácica posterior esquerda (região da 11ª–12ª costelas) pela aderência do pericárdio ao diafragma",
+            "!Pericardite constritiva"
+          ]
+        ]
+      },
+      "pegadinha": "Kussmaul é raro no tamponamento — é sinal de constrição. Pulso paradoxal é do tamponamento.",
+      "uerj": "Semiologia do pericárdio aparece como definição de sinal.",
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nTamponamento:\n- Acúmulo de líquido que comprime as câmaras (velocidade importa mais que volume)\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal**\n- ECG → baixa voltagem e alternância elétrica\n- Tratamento → pericardiocentese\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- **Sinal de Kussmaul**, **knock pericárdico**, **sinal de Broadbent**\n- Clínica de IC direita (ascite, edema, hepatomegalia)\n- Tratamento → pericardiectomia\n\nComo cai:\n- Definir o sinal e ligar à doença, ou caso de tamponamento com conduta.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Tamponamento cardíaco × pericardite constritiva",
+      "verso": "**Tamponamento → pulso paradoxal, descenso y ausente, pericardiocentese**\n**Constritiva → Kussmaul, knock, descenso y profundo, pericardiectomia**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Tamponamento",
+          "Constritiva"
+        ],
+        "linhas": [
+          [
+            "Instalação",
+            "Aguda/subaguda",
+            "Crônica (meses)"
+          ],
+          [
+            "Pulso paradoxal",
+            "!Presente",
+            "Incomum"
+          ],
+          [
+            "Kussmaul",
+            "Raro",
+            "!Presente"
+          ],
+          [
+            "Knock pericárdico",
+            "Ausente",
+            "!Presente"
+          ],
+          [
+            "Pulso venoso jugular",
+            "Descenso y ausente",
+            "!Descenso y profundo (Friedreich), padrão em W/M"
+          ],
+          [
+            "Imagem",
+            "Derrame pericárdico ao eco; colapso diastólico de AD/VD",
+            "Pericárdio espessado/calcificado (TC/RM)"
+          ],
+          [
+            "ECG",
+            "Baixa voltagem, alternância elétrica",
+            "Baixa voltagem, FA"
+          ],
+          [
+            "Tratamento",
+            "!Pericardiocentese",
+            "!Pericardiectomia"
+          ]
+        ]
+      },
+      "pegadinha": "No Brasil, tuberculose é causa importante de constritiva — e de derrame pericárdico.",
+      "uerj": "UERJ gosta de semiologia + doença.",
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nTamponamento:\n- Acúmulo de líquido que comprime as câmaras (velocidade importa mais que volume)\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal**\n- ECG → baixa voltagem e alternância elétrica\n- Tratamento → pericardiocentese\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- **Sinal de Kussmaul**, **knock pericárdico**, **sinal de Broadbent**\n- Clínica de IC direita (ascite, edema, hepatomegalia)\n- Tratamento → pericardiectomia\n\nComo cai:\n- Definir o sinal e ligar à doença, ou caso de tamponamento com conduta.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-04",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Tríade de Beck: quais são os sinais e o que indica",
+      "verso": "**Hipotensão**\n**Turgência jugular**\n**Abafamento de bulhas**\n\nSignifica:\n- Tamponamento cardíaco\n\nConduta:\n- Volume (expansão) enquanto prepara\n- Pericardiocentese guiada por eco (ou drenagem cirúrgica)\n- No trauma → toracotomia/janela pericárdica (ver baralho Trauma torácico)",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!Hipotensão → VE enche pouco",
+          "!Turgência jugular → sangue não entra no coração",
+          "!Abafamento de bulhas → líquido entre coração e estetoscópio",
+          "Eco: colapso diastólico de átrio e ventrículo direitos"
+        ]
+      },
+      "pegadinha": "Na hipovolemia associada (trauma com sangramento) pode faltar a turgência jugular.",
+      "uerj": "Tríade de Beck já caiu como semiologia.",
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nTamponamento:\n- Acúmulo de líquido que comprime as câmaras (velocidade importa mais que volume)\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal**\n- ECG → baixa voltagem e alternância elétrica\n- Tratamento → pericardiocentese\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- **Sinal de Kussmaul**, **knock pericárdico**, **sinal de Broadbent**\n- Clínica de IC direita (ascite, edema, hepatomegalia)\n- Tratamento → pericardiectomia\n\nComo cai:\n- Definir o sinal e ligar à doença, ou caso de tamponamento com conduta.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "peri-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
+      "frente": "Mulher, 62 anos, com câncer de pulmão, chega com dispneia, PA 85 × 60 mmHg, FC 120 bpm, turgência jugular e bulhas abafadas. A PA sistólica cai 18 mmHg na inspiração. ECG com baixa voltagem e alternância elétrica. A conduta imediata é:",
+      "opcoes": [
+        "Furosemida EV para aliviar a congestão",
+        "Pericardiocentese guiada por ecocardiograma",
+        "Pericardiectomia eletiva",
+        "Nitroglicerina EV"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Diurético reduz a pré-carga e piora o tamponamento.",
+        "Gabarito: tamponamento neoplásico (Beck + pulso paradoxal + alternância elétrica) → drenar o pericárdio.",
+        "Pericardiectomia é para constritiva.",
+        "Vasodilatador derruba ainda mais a PA."
+      ],
+      "pegadinha": "Turgência jugular com hipotensão parece IC — mas diurético e nitrato matam no tamponamento.",
+      "uerj": "Tamponamento neoplásico caiu na UERJ.",
+      "fonte": "2025 ESC Guidelines for the management of myocarditis and pericarditis / Braunwald's Heart Disease 12ª ed. / Porto — Semiologia Médica 8ª ed.",
+      "contexto": "**O pericárdio doente restringe o enchimento do coração de 2 formas: líquido sob pressão (tamponamento) ou pericárdio rígido (constrição).**\n\nTamponamento:\n- Acúmulo de líquido que comprime as câmaras (velocidade importa mais que volume)\n- **Tríade de Beck** → hipotensão + turgência jugular + abafamento de bulhas\n- **Pulso paradoxal**\n- ECG → baixa voltagem e alternância elétrica\n- Tratamento → pericardiocentese\n\nPericardite constritiva:\n- Pericárdio fibrosado/calcificado (TB, pós-cirurgia, radioterapia, idiopática)\n- **Sinal de Kussmaul**, **knock pericárdico**, **sinal de Broadbent**\n- Clínica de IC direita (ascite, edema, hepatomegalia)\n- Tratamento → pericardiectomia\n\nComo cai:\n- Definir o sinal e ligar à doença, ou caso de tamponamento com conduta.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PericardialeffusionUS.PNG",
+        "legenda": "Ecocardiograma com derrame pericárdico (faixa escura ao redor do coração)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "diss-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Dissecção aguda de aorta",
+      "frente": "Dissecção aguda de aorta: tratamento clínico inicial e metas",
+      "verso": "**1º betabloqueador EV → FC < 60 bpm**\n**Depois vasodilatador EV se preciso → PAS 100–120 mmHg**\n\nPor que nessa ordem:\n- Objetivo é reduzir a força de cisalhamento (dP/dt) na parede\n- Vasodilatador sozinho → taquicardia reflexa → piora a dissecção\n\nDrogas:\n- Betabloqueador → esmolol, labetalol ou metoprolol EV\n- Contraindicação a BB → diltiazem/verapamil\n- Vasodilatador → nitroprussiato\n- Analgesia com opioide",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Suspeita de dissecção → analgesia + 2 acessos + monitorização",
+          "Betabloqueador EV (FC < 60)",
+          "PAS ainda alta → + nitroprussiato (PAS 100–120)",
+          "AngioTC (ou eco transesofágico se instável)",
+          [
+            "Tipo A → cirurgia de emergência",
+            "Tipo B não complicada → clínico"
+          ]
+        ]
+      },
+      "pegadinha": "Hipotensão na dissecção → pensar em tamponamento, ruptura ou insuficiência aórtica grave (nunca fazer pericardiocentese isolada: vai para cirurgia).",
+      "uerj": "Dissecção de aorta caiu na UERJ (2022–2026) com conduta inicial.",
+      "fonte": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease / 2024 ESC Guidelines for peripheral arterial and aortic diseases",
+      "contexto": "**Dissecção de aorta = ruptura da íntima com sangue dissecando a camada média e criando uma falsa luz.**\n\nFatores de risco:\n- **Hipertensão** → principal\n- Doenças do colágeno → Marfan, Ehlers-Danlos, Loeys-Dietz\n- Valva aórtica bicúspide, coarctação, cocaína, gravidez, manipulação/cirurgia aórtica\n\nClassificação de Stanford:\n- **Tipo A** → acomete a aorta ascendente → cirurgia de emergência\n- **Tipo B** → não acomete a ascendente → tratamento clínico (endoprótese se complicada)\n\nQuadro:\n- Dor torácica súbita, lancinante, irradiada para o dorso\n- Assimetria de pulsos ou de PA entre os braços (> 20 mmHg)\n- Pode ter insuficiência aórtica, AVC, isquemia mesentérica/renal\n\nComo cai:\n- Caso típico (Marfan, dor para o dorso) e o tratamento inicial.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/DissectionCT.png",
+        "legenda": "AngioTC com flap da íntima separando luz verdadeira e falsa na aorta",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "diss-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Dissecção aguda de aorta",
+      "frente": "Classificação de Stanford e DeBakey da dissecção de aorta",
+      "verso": "**Stanford A → envolve a ascendente → cirurgia de emergência**\n**Stanford B → poupa a ascendente → tratamento clínico**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Classificação",
+          "Onde",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "!Stanford A",
+            "Aorta ascendente (com ou sem descendente)",
+            "!Cirurgia de emergência"
+          ],
+          [
+            "!Stanford B",
+            "Só depois da subclávia esquerda",
+            "Clínico; endoprótese (TEVAR) se complicada (ruptura, má perfusão, dor refratária)"
+          ],
+          [
+            "DeBakey I",
+            "Ascendente + arco + descendente",
+            "= Stanford A"
+          ],
+          [
+            "DeBakey II",
+            "Só ascendente",
+            "= Stanford A"
+          ],
+          [
+            "DeBakey III",
+            "Só descendente",
+            "= Stanford B"
+          ]
+        ]
+      },
+      "pegadinha": "O que define A × B é a aorta ascendente — não onde começou a ruptura.",
+      "uerj": "Pode pedir conduta conforme o tipo.",
+      "fonte": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease / 2024 ESC Guidelines for peripheral arterial and aortic diseases",
+      "contexto": "**Dissecção de aorta = ruptura da íntima com sangue dissecando a camada média e criando uma falsa luz.**\n\nFatores de risco:\n- **Hipertensão** → principal\n- Doenças do colágeno → Marfan, Ehlers-Danlos, Loeys-Dietz\n- Valva aórtica bicúspide, coarctação, cocaína, gravidez, manipulação/cirurgia aórtica\n\nClassificação de Stanford:\n- **Tipo A** → acomete a aorta ascendente → cirurgia de emergência\n- **Tipo B** → não acomete a ascendente → tratamento clínico (endoprótese se complicada)\n\nQuadro:\n- Dor torácica súbita, lancinante, irradiada para o dorso\n- Assimetria de pulsos ou de PA entre os braços (> 20 mmHg)\n- Pode ter insuficiência aórtica, AVC, isquemia mesentérica/renal\n\nComo cai:\n- Caso típico (Marfan, dor para o dorso) e o tratamento inicial.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/DissectionCT.png",
+        "legenda": "AngioTC com flap da íntima separando luz verdadeira e falsa na aorta",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "diss-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Dissecção aguda de aorta",
+      "frente": "Dissecção de aorta: exames diagnósticos",
+      "verso": "**Estável → angiotomografia de aorta**\n**Instável → ecocardiograma transesofágico (beira-leito)**\n\nApoio:\n- RX → alargamento do mediastino (normal não afasta)\n- ECG → afastar IAM; dissecção pode ocluir a coronária direita (IAM inferior)\n- D-dímero < 500 → torna dissecção improvável em baixo risco",
+      "visual": {
+        "tipo": "lista",
+        "itens": [
+          "!AngioTC → exame de escolha no estável",
+          "!ETE → instável ou sem contraste",
+          "RM → seguimento, crônico",
+          "RX → mediastino alargado"
+        ]
+      },
+      "pegadinha": "Trombolisar \"IAM inferior\" que era dissecção é catastrófico — dor para o dorso e assimetria de pulsos mudam tudo.",
+      "uerj": "Caso pode vir com ECG de IAM como pegadinha.",
+      "fonte": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease / 2024 ESC Guidelines for peripheral arterial and aortic diseases",
+      "contexto": "**Dissecção de aorta = ruptura da íntima com sangue dissecando a camada média e criando uma falsa luz.**\n\nFatores de risco:\n- **Hipertensão** → principal\n- Doenças do colágeno → Marfan, Ehlers-Danlos, Loeys-Dietz\n- Valva aórtica bicúspide, coarctação, cocaína, gravidez, manipulação/cirurgia aórtica\n\nClassificação de Stanford:\n- **Tipo A** → acomete a aorta ascendente → cirurgia de emergência\n- **Tipo B** → não acomete a ascendente → tratamento clínico (endoprótese se complicada)\n\nQuadro:\n- Dor torácica súbita, lancinante, irradiada para o dorso\n- Assimetria de pulsos ou de PA entre os braços (> 20 mmHg)\n- Pode ter insuficiência aórtica, AVC, isquemia mesentérica/renal\n\nComo cai:\n- Caso típico (Marfan, dor para o dorso) e o tratamento inicial.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/DissectionCT.png",
+        "legenda": "AngioTC com flap da íntima separando luz verdadeira e falsa na aorta",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "diss-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Dissecção aguda de aorta",
+      "frente": "Homem, 24 anos, alto, com membros longos e finos e antecedente de subluxação do cristalino, chega com dor torácica súbita, intensa, irradiada para o dorso. PA 170 × 100 mmHg no braço direito e 130 × 80 mmHg no esquerdo, FC 110 bpm. O tratamento inicial é:",
+      "opcoes": [
+        "Nitroprussiato de sódio isolado até PAS < 140 mmHg",
+        "Betabloqueador EV seguido de vasodilatador EV, com meta de PAS ≤ 120 mmHg",
+        "AAS + heparina e cateterismo coronariano",
+        "Trombólise com alteplase"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Vasodilatador isolado causa taquicardia reflexa e aumenta o cisalhamento; meta também está alta.",
+        "Gabarito: Marfan + dor para o dorso + assimetria de PA = dissecção → BB EV primeiro (FC < 60), depois nitroprussiato, PAS 100–120.",
+        "Antiagregante e anticoagulante pioram o sangramento da dissecção.",
+        "Trombólise é contraindicada (pode ser fatal)."
+      ],
+      "pegadinha": "Vasodilatador antes do betabloqueador é a alternativa errada mais plausível.",
+      "uerj": "Questão da anotação: Marfan com dissecção e conduta.",
+      "fonte": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease / 2024 ESC Guidelines for peripheral arterial and aortic diseases",
+      "contexto": "**Dissecção de aorta = ruptura da íntima com sangue dissecando a camada média e criando uma falsa luz.**\n\nFatores de risco:\n- **Hipertensão** → principal\n- Doenças do colágeno → Marfan, Ehlers-Danlos, Loeys-Dietz\n- Valva aórtica bicúspide, coarctação, cocaína, gravidez, manipulação/cirurgia aórtica\n\nClassificação de Stanford:\n- **Tipo A** → acomete a aorta ascendente → cirurgia de emergência\n- **Tipo B** → não acomete a ascendente → tratamento clínico (endoprótese se complicada)\n\nQuadro:\n- Dor torácica súbita, lancinante, irradiada para o dorso\n- Assimetria de pulsos ou de PA entre os braços (> 20 mmHg)\n- Pode ter insuficiência aórtica, AVC, isquemia mesentérica/renal\n\nComo cai:\n- Caso típico (Marfan, dor para o dorso) e o tratamento inicial.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/DissectionCT.png",
+        "legenda": "AngioTC com flap da íntima separando luz verdadeira e falsa na aorta",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cbp-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Colangite biliar primária",
+      "frente": "Colangite biliar primária: como fazer o diagnóstico",
+      "verso": "**FA elevada (≥ 1,5 × LSN) + anticorpo antimitocôndria (AMA) ≥ 1:40**\n**Com USG sem obstrução da via biliar**\n\nBiópsia:\n- Não é necessária quando os dois critérios estão presentes\n- Fica para AMA negativo ou suspeita de sobreposição com hepatite autoimune\n\nAMA negativo (~5–10%):\n- Pesquisar anti-sp100 e anti-gp210 (específicos de CBP)",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Colestase: FA e GGT ↑ desproporcionais às transaminases",
+          "USG: vias biliares não dilatadas (afasta obstrução)",
+          [
+            "AMA positivo → CBP",
+            "AMA negativo → anti-sp100/gp210 ou biópsia"
+          ]
+        ]
+      },
+      "pegadinha": "\"Colestase\" não é só icterícia: é FA + GGT elevadas — a CBP pode ter bilirrubina normal por anos.",
+      "uerj": "Cirrose biliar primária (CBP) caiu na UERJ (2022–2026).",
+      "fonte": "EASL Clinical Practice Guidelines on PBC (2025) / AASLD PBC Practice Guidance (2018, atualização 2021) / Harrison 21ª ed.",
+      "contexto": "**Colangite biliar primária (CBP, antiga cirrose biliar primária) = colestase crônica autoimune que destrói os pequenos ductos biliares intra-hepáticos.**\n\nQuem:\n- **Mulher de meia-idade** → ~90% mulheres, 40–60 anos\n\nClínica:\n- Fadiga e **prurido** (muitas vezes antes da icterícia)\n- Xantelasmas, hiperpigmentação, osteoporose\n- Má absorção de vitaminas lipossolúveis (A, D, E, K)\n- Associa a Sjögren, tireoidite de Hashimoto, esclerodermia (CREST)\n\nLaboratório:\n- Padrão colestático → **FA e GGT** muito elevadas\n- **Antimitocôndria (AMA, anti-M2)** → marcador (> 90%)\n- IgM elevada, colesterol alto\n- USG normal (vias biliares não dilatadas)\n\nComo cai:\n- Mulher de meia-idade com prurido, FA alta e AMA positivo.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Primary_biliary_cirrhosis_intermed_mag.jpg",
+        "legenda": "Biópsia de CBP: inflamação destruindo ducto biliar interlobular (lesão ductal florida)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cbp-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Colangite biliar primária",
+      "frente": "Colangite biliar primária × colangite esclerosante primária",
+      "verso": "**CBP → mulher, AMA positivo, ductos pequenos, USG/CPRM normal**\n**CEP → homem, retocolite ulcerativa, CPRM com estenoses em \"contas de rosário\"**",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "",
+          "Colangite biliar primária",
+          "Colangite esclerosante primária"
+        ],
+        "linhas": [
+          [
+            "Sexo",
+            "!Mulher (~90%)",
+            "!Homem (~2/3)"
+          ],
+          [
+            "Doença associada",
+            "Sjögren, Hashimoto, esclerodermia",
+            "!Retocolite ulcerativa"
+          ],
+          [
+            "Autoanticorpo",
+            "!AMA (anti-M2)",
+            "p-ANCA (inespecífico)"
+          ],
+          [
+            "Ductos",
+            "Pequenos intra-hepáticos",
+            "Intra e extra-hepáticos"
+          ],
+          [
+            "Imagem",
+            "Normal",
+            "!Estenoses e dilatações (contas de rosário) na CPRM"
+          ],
+          [
+            "Câncer",
+            "CHC (se cirrose)",
+            "!Colangiocarcinoma, câncer colorretal"
+          ],
+          [
+            "Tratamento",
+            "Ácido ursodesoxicólico",
+            "Sem droga que mude a história; transplante"
+          ]
+        ]
+      },
+      "pegadinha": "Na CEP, o diagnóstico é por imagem (CPRM); na CBP, por sorologia (AMA).",
+      "uerj": "As alternativas costumam misturar dados de CBP e CEP.",
+      "fonte": "EASL Clinical Practice Guidelines on PBC (2025) / AASLD PBC Practice Guidance (2018, atualização 2021) / Harrison 21ª ed.",
+      "contexto": "**Colangite biliar primária (CBP, antiga cirrose biliar primária) = colestase crônica autoimune que destrói os pequenos ductos biliares intra-hepáticos.**\n\nQuem:\n- **Mulher de meia-idade** → ~90% mulheres, 40–60 anos\n\nClínica:\n- Fadiga e **prurido** (muitas vezes antes da icterícia)\n- Xantelasmas, hiperpigmentação, osteoporose\n- Má absorção de vitaminas lipossolúveis (A, D, E, K)\n- Associa a Sjögren, tireoidite de Hashimoto, esclerodermia (CREST)\n\nLaboratório:\n- Padrão colestático → **FA e GGT** muito elevadas\n- **Antimitocôndria (AMA, anti-M2)** → marcador (> 90%)\n- IgM elevada, colesterol alto\n- USG normal (vias biliares não dilatadas)\n\nComo cai:\n- Mulher de meia-idade com prurido, FA alta e AMA positivo.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Primary_biliary_cirrhosis_intermed_mag.jpg",
+        "legenda": "Biópsia de CBP: inflamação destruindo ducto biliar interlobular (lesão ductal florida)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cbp-03",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Colangite biliar primária",
+      "frente": "Colangite biliar primária: tratamento",
+      "verso": "**Ácido ursodesoxicólico 13–15 mg/kg/dia → 1ª linha, por toda a vida**\n\nResposta inadequada após 12 meses (FA/bilirrubina ainda altas):\n- 2ª linha → agonistas PPAR (elafibranor, seladelpar) ou fibratos (bezafibrato, off-label)\n\nSintomas:\n- Prurido → colestiramina (1ª), rifampicina, naltrexona, sertralina\n- Osteoporose → cálcio, vitamina D, densitometria e bifosfonato se indicado\n- Doença avançada → transplante hepático",
+      "visual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Diagnóstico de CBP → ácido ursodesoxicólico",
+          "Reavaliar em 12 meses (FA e bilirrubina)",
+          [
+            "Respondeu → manter",
+            "Não respondeu → associar 2ª linha (PPAR / fibrato)"
+          ],
+          "Cirrose descompensada → transplante"
+        ]
+      },
+      "pegadinha": "Corticoide e imunossupressor NÃO são tratamento da CBP (só se sobreposição com hepatite autoimune).",
+      "uerj": "Pode perguntar a droga de 1ª linha.",
+      "fonte": "EASL Clinical Practice Guidelines on PBC (2025) / AASLD PBC Practice Guidance (2018, atualização 2021) / Harrison 21ª ed.",
+      "contexto": "**Colangite biliar primária (CBP, antiga cirrose biliar primária) = colestase crônica autoimune que destrói os pequenos ductos biliares intra-hepáticos.**\n\nQuem:\n- **Mulher de meia-idade** → ~90% mulheres, 40–60 anos\n\nClínica:\n- Fadiga e **prurido** (muitas vezes antes da icterícia)\n- Xantelasmas, hiperpigmentação, osteoporose\n- Má absorção de vitaminas lipossolúveis (A, D, E, K)\n- Associa a Sjögren, tireoidite de Hashimoto, esclerodermia (CREST)\n\nLaboratório:\n- Padrão colestático → **FA e GGT** muito elevadas\n- **Antimitocôndria (AMA, anti-M2)** → marcador (> 90%)\n- IgM elevada, colesterol alto\n- USG normal (vias biliares não dilatadas)\n\nComo cai:\n- Mulher de meia-idade com prurido, FA alta e AMA positivo.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Primary_biliary_cirrhosis_intermed_mag.jpg",
+        "legenda": "Biópsia de CBP: inflamação destruindo ducto biliar interlobular (lesão ductal florida)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
+    },
+    {
+      "id": "cbp-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Gastroenterologia",
+      "sub": "Colangite biliar primária",
+      "frente": "Mulher, 55 anos, obesa, com prurido e fadiga há 1 ano. FA 4 × e GGT 6 × o limite superior; transaminases discretamente elevadas; bilirrubina normal. USG: esteatose leve, vias biliares não dilatadas. Antimitocôndria positivo 1:320. O diagnóstico e o tratamento são:",
+      "opcoes": [
+        "Esteatose metabólica → perda de peso apenas",
+        "Colangite biliar primária → ácido ursodesoxicólico",
+        "Colangite esclerosante primária → CPRE com dilatação",
+        "Hepatite autoimune → prednisona e azatioprina"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Esteatose não explica colestase intensa com AMA positivo — a obesidade é distrator.",
+        "Gabarito: mulher de meia-idade + colestase + USG normal + AMA = CBP → ácido ursodesoxicólico.",
+        "CEP é mais em homens com retocolite, com estenoses na CPRM; AMA negativo.",
+        "Hepatite autoimune tem padrão hepatocelular (transaminases ↑↑), FAN/antimúsculo liso e IgG alta."
+      ],
+      "pegadinha": "Obesidade e esteatose na USG tentam desviar para MASLD.",
+      "uerj": "Questão da anotação: CBP em mulher de 55 anos.",
+      "fonte": "EASL Clinical Practice Guidelines on PBC (2025) / AASLD PBC Practice Guidance (2018, atualização 2021) / Harrison 21ª ed.",
+      "contexto": "**Colangite biliar primária (CBP, antiga cirrose biliar primária) = colestase crônica autoimune que destrói os pequenos ductos biliares intra-hepáticos.**\n\nQuem:\n- **Mulher de meia-idade** → ~90% mulheres, 40–60 anos\n\nClínica:\n- Fadiga e **prurido** (muitas vezes antes da icterícia)\n- Xantelasmas, hiperpigmentação, osteoporose\n- Má absorção de vitaminas lipossolúveis (A, D, E, K)\n- Associa a Sjögren, tireoidite de Hashimoto, esclerodermia (CREST)\n\nLaboratório:\n- Padrão colestático → **FA e GGT** muito elevadas\n- **Antimitocôndria (AMA, anti-M2)** → marcador (> 90%)\n- IgM elevada, colesterol alto\n- USG normal (vias biliares não dilatadas)\n\nComo cai:\n- Mulher de meia-idade com prurido, FA alta e AMA positivo.",
+      "ctxvisual": {
+        "tipo": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Primary_biliary_cirrhosis_intermed_mag.jpg",
+        "legenda": "Biópsia de CBP: inflamação destruindo ducto biliar interlobular (lesão ductal florida)",
+        "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
+      },
+      "add": "2026-10-24"
     }
   ],
   "rev": 1792759807234
