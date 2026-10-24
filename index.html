@@ -270,8 +270,27 @@ textarea.note:focus{border-color:var(--rose)}
 .mine .mh{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);font-weight:600;margin-bottom:3px}
 .mine .mt,.anot .mt{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:14px;line-height:1.5;white-space:pre-wrap}
 .anot{margin:6px 0 10px;padding:5px 10px 6px;border-left:2px dashed var(--rose);background:color-mix(in srgb,var(--rose) 8%,transparent);border-radius:0 10px 10px 0;overflow-wrap:anywhere}
-.anot .mimg,.mine .mimg{display:block;width:100%;max-width:440px;max-height:min(50vh,420px);height:auto;object-fit:contain;object-position:left center;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
-.anot.edit{display:flex;gap:6px;align-items:flex-end;padding:6px;cursor:auto}
+.anot .mimg.sp,.mine .mimg.sp{width:min(100%,150px)}
+.anot .mimg.sm,.mine .mimg.sm{width:min(100%,280px)}
+.mrow{display:flex;gap:8px;align-items:flex-start;margin:8px 0;max-width:100%}
+.mrow .mimg{flex:1 1 0;min-width:0;margin:0!important;max-height:min(40vh,300px)!important}
+.mrow .mimg.sp{flex:0 1 150px}.mrow .mimg.sm{flex:0 1 240px}
+.anot .mt b,.mine .mt b{font-weight:700}
+.vm{color:#C62828}
+@media (prefers-color-scheme:dark){.vm{color:#FF7A7A}}
+.antb{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.antb button{min-width:30px;height:28px;padding:0 8px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:14px}
+.antb .cr{background:#C62828;border-color:#C62828;width:28px;min-width:28px;padding:0;border-radius:50%}
+.antb .ck{background:#2A1E21;border-color:#2A1E21;width:28px;min-width:28px;padding:0;border-radius:50%}
+.antb .dica{font-size:11.5px;color:var(--mute);margin-left:auto}
+.anr{display:flex;gap:6px;align-items:flex-end}
+.anim{display:flex;flex-direction:column;gap:6px}
+.anim .ai{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--mute)}
+.anim img{width:46px;height:46px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+.anim button{height:26px;padding:0 8px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:12.5px}
+.anim button.on{background:var(--rose);border-color:var(--rose);color:#fff}
+.anot .mimg.sg,.mine .mimg.sg,.anot .mimg,.mine .mimg{display:block;width:100%;max-width:440px;max-height:min(50vh,420px);height:auto;object-fit:contain;object-position:left center;margin:8px 0;border-radius:10px;box-shadow:var(--shadow);cursor:zoom-in}
+.anot.edit{display:flex;flex-direction:column;gap:6px;padding:6px;cursor:auto}
 .anot.edit textarea{flex:1;min-height:42px;margin:0;resize:none;overflow:hidden;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;padding:7px 9px}
 .anot,.mine{position:relative}
 .aned{float:right;margin:-2px -4px 2px 8px;width:26px;height:26px;border-radius:50%;font-size:13px;line-height:26px;text-align:center;color:var(--rose);background:var(--card);border:1px solid var(--line);opacity:.75}
@@ -1168,10 +1187,17 @@ function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else r
 /* ===== Favorito e anotação pessoal no card ===== */
 function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 /* anotação pessoal: texto + fotos coladas, guardadas como ![](data/img/...) dentro do próprio texto */
-const IMG_RE=/!\[[^\]]*\]\(([^)\s]+)\)/g;
+const IMG_RE=/!\[([^\]]*)\]\(([^)\s]+)\)/g;
+/* anotação: **negrito**, __sublinhado__, {v}vermelho{/v}; fotos ![p|m|](src) = pequena/média/grande; fotos na mesma linha = lado a lado */
+const fmtNota=t=>esc(t).replace(/\*\*([\s\S]+?)\*\*/g,'<b>$1</b>').replace(/__([\s\S]+?)__/g,'<u>$1</u>').replace(/\{v\}([\s\S]*?)\{\/v\}/g,'<span class="vm">$1</span>').replace(/\{\/?v\}/g,'');
+const imgTag=(a,src)=>`<img class="mimg ${a==='p'?'sp':a==='m'?'sm':'sg'}" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`;
 function minhaCorpo(t){
-  let h='',i=0; String(t).replace(IMG_RE,(m,src,pos)=>{ const tx=t.slice(i,pos).replace(i?/^\n/:/^/,'').replace(/\n$/,''); if(tx) h+=`<div class="mt">${esc(tx)}</div>`; h+=`<img class="mimg" src="${esc(imgSrc(src))}" alt="" data-zoom onerror="this.style.display='none'">`; i=pos+m.length; return m; });
-  const tx=t.slice(i).replace(i?/^\n/:/^/,''); if(tx) h+=`<div class="mt">${esc(tx.replace(/\n$/,'\n\u200b'))}</div>`; return h;
+  t=String(t); let h='',i=0; const toks=[...t.matchAll(IMG_RE)];
+  for(let j=0;j<toks.length;){ const g=[toks[j]]; while(j+g.length<toks.length&&/^[ \t]*$/.test(t.slice(g[g.length-1].index+g[g.length-1][0].length,toks[j+g.length].index))) g.push(toks[j+g.length]);
+    const tx=t.slice(i,g[0].index).replace(i?/^\n/:/^/,'').replace(/\n$/,''); if(tx) h+=`<div class="mt">${fmtNota(tx)}</div>`;
+    h+=g.length>1?`<div class="mrow">${g.map(m=>imgTag(m[1],m[2])).join('')}</div>`:imgTag(g[0][1],g[0][2]);
+    const u=g[g.length-1]; i=u.index+u[0].length; j+=g.length; }
+  const tx=t.slice(i).replace(i?/^\n/:/^/,''); if(tx) h+=`<div class="mt">${fmtNota(tx.replace(/\n$/,'\n\u200b'))}</div>`; return h;
 }
 function minhaHTML(id){
   const t=anParse((BYID[id]||{}).minha).base;
@@ -1212,8 +1238,33 @@ function pintarAnots(){
 }
 function anEditor(id,k,txt,a,n){ const el=document.createElement('div'); el.className='anot edit'; el.dataset.mid=id; el.dataset.k=k;
   if(a!=null){ el.dataset.a=a; el.dataset.n=n; }
-  el.innerHTML=`<textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><span class="anbt">${k==='novo'?'':'<button class="andel" data-andel aria-label="Apagar anotação" title="Apagar">🗑</button>'}<button class="ansv" data-ansv aria-label="Salvar" title="Salvar (Shift+Enter)">✓</button></span>`;
-  return el; }
+  el.innerHTML=`<div class="antb"><button data-fm="b" title="Negrito (Ctrl+B)"><b>B</b></button><button data-fm="u" title="Sublinhado (Ctrl+U)"><u>S</u></button><button class="cr" data-fm="r" title="Vermelho" aria-label="Vermelho"></button><button class="ck" data-fm="k" title="Preto (cor normal)" aria-label="Preto"></button><span class="dica">selecione o texto e toque</span></div><div class="anr"><textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><span class="anbt">${k==='novo'?'':'<button class="andel" data-andel aria-label="Apagar anotação" title="Apagar">🗑</button>'}<button class="ansv" data-ansv aria-label="Salvar" title="Salvar (Shift+Enter)">✓</button></span></div><div class="anim"></div>`;
+  anFotos(el); return el; }
+/* barra de fonte: envolve a seleção (ou desfaz se já estiver) */
+function anFmt(ta,f){
+  const [o,c]=f==='b'?['**','**']:f==='u'?['__','__']:['{v}','{/v}'], v=ta.value; let a=ta.selectionStart,b=ta.selectionEnd;
+  if(f==='k'){ let s=v.slice(a,b); const antes=v.slice(0,a), depois=v.slice(b);
+    const ab=antes.lastIndexOf('{v}')>antes.lastIndexOf('{/v}'); s=s.replace(/\{\/?v\}/g,'');
+    ta.value=antes+(ab?'{/v}':'')+s+(ab&&!/^\{\/v\}/.test(depois)?'{v}':'')+depois; ta.setSelectionRange(a+(ab?4:0),a+(ab?4:0)+s.length); return; }
+  const sel=v.slice(a,b);
+  if(sel.startsWith(o)&&sel.endsWith(c)&&sel.length>=o.length+c.length){ const s=sel.slice(o.length,sel.length-c.length); ta.value=v.slice(0,a)+s+v.slice(b); ta.setSelectionRange(a,a+s.length); return; }
+  if(v.slice(a-o.length,a)===o&&v.slice(b,b+c.length)===c){ ta.value=v.slice(0,a-o.length)+sel+v.slice(b+c.length); ta.setSelectionRange(a-o.length,b-o.length); return; }
+  ta.value=v.slice(0,a)+o+sel+c+v.slice(b); ta.setSelectionRange(a+o.length,b+o.length);
+}
+/* fotos da anotação no editor: tamanho P/M/G e "ao lado da anterior" */
+function anFotos(ed){
+  const ta=ed.querySelector('textarea'), box=ed.querySelector('.anim'), v=ta.value, toks=[...v.matchAll(IMG_RE)];
+  box.innerHTML=toks.map((m,j)=>{ const lado=j>0&&/^[ \t]*$/.test(v.slice(toks[j-1].index+toks[j-1][0].length,m.index)), sz=m[1]==='p'||m[1]==='m'?m[1]:'g';
+    return `<div class="ai"><img src="${esc(imgSrc(m[2]))}" alt="">Foto ${j+1}:${['p','m','g'].map(z=>`<button data-fz="${z}" data-j="${j}" class="${sz===z?'on':''}">${z==='p'?'P':z==='m'?'M':'G'}</button>`).join('')}${j?`<button data-fl="${j}" class="${lado?'on':''}">${lado?'⇆ ao lado':'↓ embaixo'}</button>`:''}</div>`; }).join('');
+}
+function anFotoMuda(ed,j,sz,lado){
+  const ta=ed.querySelector('textarea'), v=ta.value, toks=[...v.matchAll(IMG_RE)], m=toks[j]; if(!m) return;
+  if(sz!=null){ const nt=`![${sz==='g'?'':sz}](${m[2]})`; ta.value=v.slice(0,m.index)+nt+v.slice(m.index+m[0].length); }
+  else { const p=toks[j-1], s=p.index+p[0].length, sep=v.slice(s,m.index), junto=/^[ \t]*$/.test(sep);
+    if(junto) ta.value=v.slice(0,s)+'\n'+v.slice(m.index);
+    else { const tx=sep.trim(); ta.value=v.slice(0,p.index)+(tx?tx+'\n':'')+p[0]+' '+v.slice(m.index); if(tx) toast('O texto que estava entre as fotos subiu para antes delas'); } }
+  anAltura(ta); anFotos(ed);
+}
 function anFocar(el){ const ta=el.querySelector('textarea'); anAltura(ta); ta.focus({preventScroll:true}); const n=ta.value.length; ta.setSelectionRange(n,n); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }
 const anAltura=ta=>{ ta.style.height='auto'; ta.style.height=ta.scrollHeight+2+'px'; };
 function anNova(root,alvo){
@@ -1243,17 +1294,18 @@ addEventListener('click',e=>{
   if(NT){ const root=e.target.closest('[data-an]'); modoNota(false); if(!root) return; e.preventDefault(); e.stopPropagation(); anNova(root,e.target); return; }
   const ae=e.target.closest('[data-aned]'); if(ae){ e.preventDefault(); e.stopPropagation(); const x=ae.closest('.anot,.mine'); x.classList.contains('anot')?anEditar(x):anEditarBase(x.closest('.mbx')); return; }
 },true);
-document.addEventListener('pointerdown',e=>{ if(e.target.closest('.anot.edit .anbt')) e.preventDefault(); },true);
+document.addEventListener('pointerdown',e=>{ if(e.target.closest('.anot.edit .anbt,.anot.edit .antb,.anot.edit .anim')) e.preventDefault(); },true);
 document.addEventListener('focusout',e=>{ const ed=e.target.closest&&e.target.closest('.anot.edit'); if(!ed) return;
   setTimeout(()=>{ if(ed.isConnected&&!ed.contains(document.activeElement)) anSalvar(ed); },150); });
-document.addEventListener('input',e=>{ if(e.target.matches&&e.target.matches('.anot.edit textarea')) anAltura(e.target); });
+document.addEventListener('input',e=>{ if(e.target.matches&&e.target.matches('.anot.edit textarea')){ anAltura(e.target); anFotos(e.target.closest('.anot.edit')); } });
 document.addEventListener('keydown',e=>{
   const a=document.activeElement;
   if(e.key.toLowerCase()==='t'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))&&!$('#sheet')&&!e.repeat){ if(!document.querySelector('[data-an]')){ if(PAG!=='anotar'&&PAG!=='criar') toast('Abra um card para anotar'); return; } e.preventDefault(); modoNota(); }
 });
 document.addEventListener('keydown',e=>{
   const t=e.target; if(!t.classList||!t.classList.contains('ned')||!t.closest('.anot.edit')) return;
-  if(e.key==='Enter'&&e.shiftKey&&!e.isComposing){ e.preventDefault(); anSalvar(t.closest('.anot.edit')); }
+  if(e.key==='Enter'&&e.shiftKey&&!e.isComposing){ e.preventDefault(); anSalvar(t.closest('.anot.edit')); return; }
+  const k=e.key.toLowerCase(); if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&(k==='b'||k==='u')){ e.preventDefault(); anFmt(t,k); }
 });
 /* colar foto (Ctrl+V) na anotação do card */
 document.addEventListener('paste',async e=>{
@@ -1267,7 +1319,7 @@ document.addEventListener('paste',async e=>{
     if(!path){ path='local:'+Date.now().toString(36); try{const c=imgCache(); c[path]=u; localStorage.setItem(IMGC_KEY,JSON.stringify(c));}catch(er){} toast('Sem conexão: a foto fica só neste aparelho'); }
     const p0=ta.selectionStart, v=ta.value, tok=(p0&&v[p0-1]!=='\n'?'\n':'')+`![](${path})`+'\n';
     ta.value=v.slice(0,p0)+tok+v.slice(ta.selectionEnd); ta.setSelectionRange(p0+tok.length,p0+tok.length); }
-  if(sv) sv.disabled=false; delete box.dataset.busy; anAltura(ta); ta.focus(); toast('Foto colada — Shift+Enter ou ✓ salva');
+  if(sv) sv.disabled=false; delete box.dataset.busy; anAltura(ta); anFotos(box); ta.focus(); toast('Foto colada — Shift+Enter ou ✓ salva');
 });
 document.addEventListener('click',e=>{
   const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ folha(`<img src="${esc(zm.getAttribute('src'))}" alt="" style="width:100%;height:auto;border-radius:12px;display:block">`); return; }
@@ -1275,6 +1327,9 @@ document.addEventListener('click',e=>{
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
+  const fm=e.target.closest('.anot.edit [data-fm]'); if(fm){ const ed=fm.closest('.anot.edit'), ta=ed.querySelector('textarea'); anFmt(ta,fm.dataset.fm); anAltura(ta); ta.focus(); return; }
+  const fz=e.target.closest('.anot.edit [data-fz]'); if(fz){ anFotoMuda(fz.closest('.anot.edit'),+fz.dataset.j,fz.dataset.fz); return; }
+  const fl=e.target.closest('.anot.edit [data-fl]'); if(fl){ anFotoMuda(fl.closest('.anot.edit'),+fl.dataset.fl,null,true); return; }
   const dl=e.target.closest('[data-andel]'); if(dl){ const ed=dl.closest('.anot.edit'); ed.querySelector('textarea').value=''; anSalvar(ed); return; }
 });
 
