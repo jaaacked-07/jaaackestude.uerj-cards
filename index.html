@@ -1364,11 +1364,16 @@ const ghTok=()=>{try{return localStorage.getItem(LS+'.gh')||''}catch(e){return '
 const enc=t=>btoa(unescape(encodeURIComponent(t)));
 const dec=b=>decodeURIComponent(escape(atob(b.replace(/\n/g,''))));
 const ghH=tk=>({Authorization:'Bearer '+tk,Accept:'application/vnd.github+json'});
+/* arquivo > 1 MB (cards.json): a API não manda o conteúdo junto — busca o arquivo "cru" (era isso que travava o envio das edições/anotações dos cards) */
+async function ghTexto(url,j,tk){
+  if(j.content&&j.encoding==='base64') return dec(j.content);
+  const r=await fetch(url+'?ref=main&t='+Date.now(),{headers:{Authorization:'Bearer '+tk,Accept:'application/vnd.github.raw'},cache:'no-store'});
+  if(!r.ok) throw new Error(r.status); return await r.text(); }
 async function ghGet(tk){
   const r=await fetch(GH_API+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'});
   if(r.status===404) return {sha:null,data:{pendentes:[],processadas:[]}};
   if(!r.ok) throw new Error(r.status);
-  const j=await r.json(); const d=JSON.parse(dec(j.content));
+  const j=await r.json(); const d=JSON.parse(await ghTexto(GH_API,j,tk));
   d.pendentes=d.pendentes||[]; d.processadas=d.processadas||[];
   return {sha:j.sha,data:d};
 }
@@ -1384,7 +1389,7 @@ async function ghModF(url,fn){
   for(let i=0;i<2;i++){
     try{
       const r=await fetch(url+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'}); if(!r.ok) throw new Error(r.status);
-      const j=await r.json(); const d=JSON.parse(dec(j.content)); fn(d);
+      const j=await r.json(); const d=JSON.parse(await ghTexto(url,j,tk)); fn(d);
       const w=await fetch(url,{method:'PUT',headers:{...ghH(tk),'Content-Type':'application/json'},body:JSON.stringify({message:'Edições feitas no app',content:enc(JSON.stringify(d,null,2)+'\n'),branch:'main',sha:j.sha})});
       if(!w.ok) throw new Error(w.status); return d;
     }catch(e){ if(i) throw e; }
@@ -1481,7 +1486,7 @@ async function syncProg(){
     try{
       const r=await fetch(GH_PROG+'?ref=main&t='+Date.now(),{headers:ghH(tk),cache:'no-store'});
       let sha=null,Rm=null;
-      if(r.ok){const j=await r.json(); sha=j.sha; Rm=JSON.parse(dec(j.content));} else if(r.status!==404) throw new Error(r.status);
+      if(r.ok){const j=await r.json(); sha=j.sha; Rm=JSON.parse(await ghTexto(GH_PROG,j,tk));} else if(r.status!==404) throw new Error(r.status);
       const mudou=mergeProg(Rm); saveLocal(); if(Extras()) reaplicar();
       const corpo=JSON.stringify(progSnap());
       if(!Rm||corpo!==JSON.stringify(Rm)){
