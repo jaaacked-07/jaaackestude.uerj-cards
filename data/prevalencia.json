@@ -369,6 +369,46 @@
     "Testes diagnósticos — sensibilidade, especificidade, valores preditivos e probabilidade pré-teste": {
       "q": 5,
       "temas": "Testes diagnósticos (atributos, sensibilidade); sensibilidade e especificidade; testes em série/paralelo; teste diagnóstico de COVID-19"
+    },
+    "Doença coronariana — angina estável, teste ergométrico e IAM": {
+      "q": 7,
+      "temas": "Angina estável; teste ergométrico inconclusivo/indicação (Bayes); IAM inferior e de VD; SCA por cocaína"
+    },
+    "Insuficiência cardíaca, edema agudo de pulmão e choque cardiogênico": {
+      "q": 4,
+      "temas": "EAP hipertensivo; ICFEp; troca IECA → sacubitril-valsartana; choque cardiogênico"
+    },
+    "Endocardite infecciosa": {
+      "q": 4,
+      "temas": "Estigmas (Osler × Janeway); Duke; germe por contexto; profilaxia (não no parto)"
+    },
+    "Dengue e arboviroses": {
+      "q": 5,
+      "temas": "Prova do laço (técnica); sinais de alarme e grupos; diferencial com zika/chikungunya; controle de surto"
+    },
+    "Atributos da APS (Starfield) e PNAB": {
+      "q": 3,
+      "temas": "Atributos essenciais e derivados (acesso, longitudinalidade, integralidade, coordenação); educação em saúde"
+    },
+    "Princípios do SUS e controle social": {
+      "q": 2,
+      "temas": "Princípios doutrinários × organizativos; integralidade; Lei 8.142 (conferências e conselhos)"
+    },
+    "Pré-eclâmpsia e síndromes hipertensivas da gestação": {
+      "q": 7,
+      "temas": "Critérios e gravidade; sulfato de magnésio (indicação e toxicidade); AAS na prevenção; sobreposta; DPP"
+    },
+    "Trabalho de parto — partograma, estática fetal e assistência": {
+      "q": 6,
+      "temas": "Partograma (distocias); manobras de Leopold; estática fetal; boas práticas; ocitocina; atonia"
+    },
+    "ATLS — avaliação primária (XABCDE)": {
+      "q": 1,
+      "temas": "Sequência do atendimento (X antes do A); via aérea definitiva; adjuntos"
+    },
+    "Desidratação e diarreia aguda na criança": {
+      "q": 1,
+      "temas": "Plano C na desidratação grave; planos A e B; zinco"
     }
   }
 }

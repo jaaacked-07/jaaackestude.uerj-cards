@@ -26114,7 +26114,1864 @@
         ]
       },
       "prio": "alta"
+    },
+    {
+      "id": "dac-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
+      "frente": "Angina típica: quais são os 3 critérios?",
+      "verso": "**Angina típica = 3 critérios:**\n- Desconforto retroesternal\n- Desencadeado por esforço ou estresse\n- Alívio com repouso ou nitrato\n\nClassificação:\n- 2 critérios → angina atípica.\n- 0–1 critério → dor torácica não anginosa.",
+      "macete": "Os 3 \"R\": Retroesternal, Relacionada ao esforço, Repouso (ou nitrato) alivia.",
+      "uerj": "Entra no cálculo da probabilidade pré-teste, que decide o exame.",
+      "prio": "alta",
+      "contexto": "**Doença arterial coronariana (DAC) = aterosclerose das coronárias; a apresentação crônica é a angina estável e a aguda é a síndrome coronariana aguda (SCA).**\n\nO que é:\n- Placa que reduz o fluxo → isquemia no esforço (angina estável).\n- Ruptura da placa + trombo → SCA (angina instável, IAM sem supra, IAM com supra).\n\nTipo de dor torácica:\n- **Típica** → 3 critérios: desconforto retroesternal + desencadeado por esforço/estresse + alívio com repouso/nitrato\n- **Atípica** → 2 critérios\n- **Não anginosa** → 0–1 critério\n\nInvestigação da angina estável:\n- A probabilidade pré-teste escolhe o exame (ver fluxograma)\n- Teste ergométrico → exige ECG basal interpretável e atingir 85% da FC máxima prevista\n- ECG basal não interpretável (BRE, WPW, marca-passo, digital, HVE com strain) → exame com imagem (cintilografia, eco de estresse) ou angio-TC\n- Lesão significativa → ≥ 70% (≥ 50% no tronco)\n\nTratamento da angina estável:\n- AAS + estatina de alta potência\n- Betabloqueador → 1ª linha antianginosa\n- Nitrato sublingual na dor\n- Revascularização → sintoma refratário ou anatomia de alto risco (tronco, triarterial com FE baixa)\n\nSCA:\n- ECG em até 10 min + troponina\n- Supra de ST → reperfusão: angioplastia primária (porta-balão ≤ 90 min) ou trombolítico em até 30 min se não houver hemodinâmica\n- Sem supra → estratificar o risco e cateterismo conforme o risco\n- Base → AAS + 2º antiagregante + anticoagulante + estatina\n\nIAM de parede inferior:\n- Supra em DII, DIII e aVF → coronária direita na maioria\n- Pedir V3R/V4R → pesquisar IAM de VD\n- IAM de VD (hipotensão + turgência jugular + pulmão limpo) → volume; evitar nitrato, diurético e morfina\n- Bradicardia e BAV são comuns\n\nSCA por cocaína:\n- Benzodiazepínico (1ª linha) + AAS + nitrato\n- Betabloqueador CONTRAINDICADO na fase aguda (estímulo alfa sem oposição → vasoespasmo)\n\nO que mais cai na UERJ:\n- Teste ergométrico que não atingiu 85% da FC máxima = inconclusivo, não negativo.\n- Não rastrear DAC com teste ergométrico em assintomático de baixo risco (Bayes: o VPP cai).\n- IAM inferior → pesquisar VD e não dar nitrato.\n- Cocaína → sem betabloqueador.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dor torácica estável",
+          "Probabilidade pré-teste (idade, sexo, tipo de dor)",
+          [
+            "Baixa → não testar; buscar outra causa",
+            "Intermediária → teste funcional (ergométrico ou com imagem)",
+            "Alta → tratar e estratificar (cateterismo se alto risco)"
+          ]
+        ]
+      },
+      "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "dac-02",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
+      "frente": "Teste ergométrico que não atingiu 85% da FC máxima: como interpretar?",
+      "verso": "**Inconclusivo — não é negativo.**\n\nConduta:\n- Exame com imagem (cintilografia ou eco de estresse) ou angio-TC.\n- O mesmo vale para ECG basal não interpretável (BRE, WPW, marca-passo, digital).\n\nPor quê:\n- Sem a FC submáxima, o coração não foi estressado o suficiente para mostrar isquemia.",
+      "macete": "Não chegou a 85%, não absolve: \"teste incompleto não tranquiliza\".",
+      "pegadinha": "Liberar o paciente como \"sem doença coronariana\" com teste ineficaz.",
+      "uerj": "Caso de paciente sintomático com teste \"normal\" que não atingiu a FC submáxima.",
+      "prio": "alta",
+      "contexto": "**Doença arterial coronariana (DAC) = aterosclerose das coronárias; a apresentação crônica é a angina estável e a aguda é a síndrome coronariana aguda (SCA).**\n\nO que é:\n- Placa que reduz o fluxo → isquemia no esforço (angina estável).\n- Ruptura da placa + trombo → SCA (angina instável, IAM sem supra, IAM com supra).\n\nTipo de dor torácica:\n- **Típica** → 3 critérios: desconforto retroesternal + desencadeado por esforço/estresse + alívio com repouso/nitrato\n- **Atípica** → 2 critérios\n- **Não anginosa** → 0–1 critério\n\nInvestigação da angina estável:\n- A probabilidade pré-teste escolhe o exame (ver fluxograma)\n- Teste ergométrico → exige ECG basal interpretável e atingir 85% da FC máxima prevista\n- ECG basal não interpretável (BRE, WPW, marca-passo, digital, HVE com strain) → exame com imagem (cintilografia, eco de estresse) ou angio-TC\n- Lesão significativa → ≥ 70% (≥ 50% no tronco)\n\nTratamento da angina estável:\n- AAS + estatina de alta potência\n- Betabloqueador → 1ª linha antianginosa\n- Nitrato sublingual na dor\n- Revascularização → sintoma refratário ou anatomia de alto risco (tronco, triarterial com FE baixa)\n\nSCA:\n- ECG em até 10 min + troponina\n- Supra de ST → reperfusão: angioplastia primária (porta-balão ≤ 90 min) ou trombolítico em até 30 min se não houver hemodinâmica\n- Sem supra → estratificar o risco e cateterismo conforme o risco\n- Base → AAS + 2º antiagregante + anticoagulante + estatina\n\nIAM de parede inferior:\n- Supra em DII, DIII e aVF → coronária direita na maioria\n- Pedir V3R/V4R → pesquisar IAM de VD\n- IAM de VD (hipotensão + turgência jugular + pulmão limpo) → volume; evitar nitrato, diurético e morfina\n- Bradicardia e BAV são comuns\n\nSCA por cocaína:\n- Benzodiazepínico (1ª linha) + AAS + nitrato\n- Betabloqueador CONTRAINDICADO na fase aguda (estímulo alfa sem oposição → vasoespasmo)\n\nO que mais cai na UERJ:\n- Teste ergométrico que não atingiu 85% da FC máxima = inconclusivo, não negativo.\n- Não rastrear DAC com teste ergométrico em assintomático de baixo risco (Bayes: o VPP cai).\n- IAM inferior → pesquisar VD e não dar nitrato.\n- Cocaína → sem betabloqueador.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dor torácica estável",
+          "Probabilidade pré-teste (idade, sexo, tipo de dor)",
+          [
+            "Baixa → não testar; buscar outra causa",
+            "Intermediária → teste funcional (ergométrico ou com imagem)",
+            "Alta → tratar e estratificar (cateterismo se alto risco)"
+          ]
+        ]
+      },
+      "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "dac-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
+      "frente": "Homem, 62 anos, dor torácica há 1 hora. ECG: supradesnivelamento de ST em DII, DIII e aVF. PA 82 × 50 mmHg, turgência jugular e pulmões limpos. Qual a conduta para a hipotensão?",
+      "opcoes": [
+        "Nitroglicerina EV para aliviar a dor",
+        "Furosemida EV",
+        "Expansão volêmica com cristaloide e ECG com V3R/V4R",
+        "Morfina EV"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errada: no IAM de VD o nitrato derruba a pré-carga e piora a hipotensão.",
+        "Errada: diurético reduz a pré-carga de que o VD depende.",
+        "Correta: IAM inferior + hipotensão + jugular cheia + pulmão limpo = IAM de VD → volume e pesquisar V3R/V4R.",
+        "Errada: morfina causa venodilatação e piora a hipotensão."
+      ],
+      "macete": "IAM de VD: \"o VD vive de volume\" — dá soro, tira nitrato.",
+      "prio": "alta",
+      "contexto": "**Doença arterial coronariana (DAC) = aterosclerose das coronárias; a apresentação crônica é a angina estável e a aguda é a síndrome coronariana aguda (SCA).**\n\nO que é:\n- Placa que reduz o fluxo → isquemia no esforço (angina estável).\n- Ruptura da placa + trombo → SCA (angina instável, IAM sem supra, IAM com supra).\n\nTipo de dor torácica:\n- **Típica** → 3 critérios: desconforto retroesternal + desencadeado por esforço/estresse + alívio com repouso/nitrato\n- **Atípica** → 2 critérios\n- **Não anginosa** → 0–1 critério\n\nInvestigação da angina estável:\n- A probabilidade pré-teste escolhe o exame (ver fluxograma)\n- Teste ergométrico → exige ECG basal interpretável e atingir 85% da FC máxima prevista\n- ECG basal não interpretável (BRE, WPW, marca-passo, digital, HVE com strain) → exame com imagem (cintilografia, eco de estresse) ou angio-TC\n- Lesão significativa → ≥ 70% (≥ 50% no tronco)\n\nTratamento da angina estável:\n- AAS + estatina de alta potência\n- Betabloqueador → 1ª linha antianginosa\n- Nitrato sublingual na dor\n- Revascularização → sintoma refratário ou anatomia de alto risco (tronco, triarterial com FE baixa)\n\nSCA:\n- ECG em até 10 min + troponina\n- Supra de ST → reperfusão: angioplastia primária (porta-balão ≤ 90 min) ou trombolítico em até 30 min se não houver hemodinâmica\n- Sem supra → estratificar o risco e cateterismo conforme o risco\n- Base → AAS + 2º antiagregante + anticoagulante + estatina\n\nIAM de parede inferior:\n- Supra em DII, DIII e aVF → coronária direita na maioria\n- Pedir V3R/V4R → pesquisar IAM de VD\n- IAM de VD (hipotensão + turgência jugular + pulmão limpo) → volume; evitar nitrato, diurético e morfina\n- Bradicardia e BAV são comuns\n\nSCA por cocaína:\n- Benzodiazepínico (1ª linha) + AAS + nitrato\n- Betabloqueador CONTRAINDICADO na fase aguda (estímulo alfa sem oposição → vasoespasmo)\n\nO que mais cai na UERJ:\n- Teste ergométrico que não atingiu 85% da FC máxima = inconclusivo, não negativo.\n- Não rastrear DAC com teste ergométrico em assintomático de baixo risco (Bayes: o VPP cai).\n- IAM inferior → pesquisar VD e não dar nitrato.\n- Cocaína → sem betabloqueador.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dor torácica estável",
+          "Probabilidade pré-teste (idade, sexo, tipo de dor)",
+          [
+            "Baixa → não testar; buscar outra causa",
+            "Intermediária → teste funcional (ergométrico ou com imagem)",
+            "Alta → tratar e estratificar (cateterismo se alto risco)"
+          ]
+        ]
+      },
+      "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "dac-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
+      "frente": "Qual droga é contraindicada na fase aguda da SCA por cocaína?",
+      "verso": "**Betabloqueador.**\n\nPor quê:\n- Bloqueia o beta e deixa o estímulo alfa da cocaína sem oposição → vasoespasmo e mais hipertensão.\n\nTratamento:\n- Benzodiazepínico (1ª linha) + AAS + nitrato.",
+      "resposta": "betabloqueador",
+      "aceitas": [
+        "betabloqueadores",
+        "beta bloqueador",
+        "propranolol",
+        "metoprolol"
+      ],
+      "macete": "Cocaína + beta = alfa sem freio.",
+      "prio": "alta",
+      "contexto": "**Doença arterial coronariana (DAC) = aterosclerose das coronárias; a apresentação crônica é a angina estável e a aguda é a síndrome coronariana aguda (SCA).**\n\nO que é:\n- Placa que reduz o fluxo → isquemia no esforço (angina estável).\n- Ruptura da placa + trombo → SCA (angina instável, IAM sem supra, IAM com supra).\n\nTipo de dor torácica:\n- **Típica** → 3 critérios: desconforto retroesternal + desencadeado por esforço/estresse + alívio com repouso/nitrato\n- **Atípica** → 2 critérios\n- **Não anginosa** → 0–1 critério\n\nInvestigação da angina estável:\n- A probabilidade pré-teste escolhe o exame (ver fluxograma)\n- Teste ergométrico → exige ECG basal interpretável e atingir 85% da FC máxima prevista\n- ECG basal não interpretável (BRE, WPW, marca-passo, digital, HVE com strain) → exame com imagem (cintilografia, eco de estresse) ou angio-TC\n- Lesão significativa → ≥ 70% (≥ 50% no tronco)\n\nTratamento da angina estável:\n- AAS + estatina de alta potência\n- Betabloqueador → 1ª linha antianginosa\n- Nitrato sublingual na dor\n- Revascularização → sintoma refratário ou anatomia de alto risco (tronco, triarterial com FE baixa)\n\nSCA:\n- ECG em até 10 min + troponina\n- Supra de ST → reperfusão: angioplastia primária (porta-balão ≤ 90 min) ou trombolítico em até 30 min se não houver hemodinâmica\n- Sem supra → estratificar o risco e cateterismo conforme o risco\n- Base → AAS + 2º antiagregante + anticoagulante + estatina\n\nIAM de parede inferior:\n- Supra em DII, DIII e aVF → coronária direita na maioria\n- Pedir V3R/V4R → pesquisar IAM de VD\n- IAM de VD (hipotensão + turgência jugular + pulmão limpo) → volume; evitar nitrato, diurético e morfina\n- Bradicardia e BAV são comuns\n\nSCA por cocaína:\n- Benzodiazepínico (1ª linha) + AAS + nitrato\n- Betabloqueador CONTRAINDICADO na fase aguda (estímulo alfa sem oposição → vasoespasmo)\n\nO que mais cai na UERJ:\n- Teste ergométrico que não atingiu 85% da FC máxima = inconclusivo, não negativo.\n- Não rastrear DAC com teste ergométrico em assintomático de baixo risco (Bayes: o VPP cai).\n- IAM inferior → pesquisar VD e não dar nitrato.\n- Cocaína → sem betabloqueador.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dor torácica estável",
+          "Probabilidade pré-teste (idade, sexo, tipo de dor)",
+          [
+            "Baixa → não testar; buscar outra causa",
+            "Intermediária → teste funcional (ergométrico ou com imagem)",
+            "Alta → tratar e estratificar (cateterismo se alto risco)"
+          ]
+        ]
+      },
+      "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "dac-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
+      "frente": "Supra de ST em DII, DIII e aVF indica IAM de qual parede?",
+      "verso": "**Parede inferior.**\n\nDetalhes:\n- Artéria → coronária direita na maioria.\n- Pedir V3R/V4R para ver o VD.",
+      "resposta": "inferior",
+      "aceitas": [
+        "parede inferior",
+        "iam inferior",
+        "infarto inferior"
+      ],
+      "macete": "DII, DIII e aVF são as derivações \"de baixo\" → parede de baixo.",
+      "prio": "alta",
+      "contexto": "**Doença arterial coronariana (DAC) = aterosclerose das coronárias; a apresentação crônica é a angina estável e a aguda é a síndrome coronariana aguda (SCA).**\n\nO que é:\n- Placa que reduz o fluxo → isquemia no esforço (angina estável).\n- Ruptura da placa + trombo → SCA (angina instável, IAM sem supra, IAM com supra).\n\nTipo de dor torácica:\n- **Típica** → 3 critérios: desconforto retroesternal + desencadeado por esforço/estresse + alívio com repouso/nitrato\n- **Atípica** → 2 critérios\n- **Não anginosa** → 0–1 critério\n\nInvestigação da angina estável:\n- A probabilidade pré-teste escolhe o exame (ver fluxograma)\n- Teste ergométrico → exige ECG basal interpretável e atingir 85% da FC máxima prevista\n- ECG basal não interpretável (BRE, WPW, marca-passo, digital, HVE com strain) → exame com imagem (cintilografia, eco de estresse) ou angio-TC\n- Lesão significativa → ≥ 70% (≥ 50% no tronco)\n\nTratamento da angina estável:\n- AAS + estatina de alta potência\n- Betabloqueador → 1ª linha antianginosa\n- Nitrato sublingual na dor\n- Revascularização → sintoma refratário ou anatomia de alto risco (tronco, triarterial com FE baixa)\n\nSCA:\n- ECG em até 10 min + troponina\n- Supra de ST → reperfusão: angioplastia primária (porta-balão ≤ 90 min) ou trombolítico em até 30 min se não houver hemodinâmica\n- Sem supra → estratificar o risco e cateterismo conforme o risco\n- Base → AAS + 2º antiagregante + anticoagulante + estatina\n\nIAM de parede inferior:\n- Supra em DII, DIII e aVF → coronária direita na maioria\n- Pedir V3R/V4R → pesquisar IAM de VD\n- IAM de VD (hipotensão + turgência jugular + pulmão limpo) → volume; evitar nitrato, diurético e morfina\n- Bradicardia e BAV são comuns\n\nSCA por cocaína:\n- Benzodiazepínico (1ª linha) + AAS + nitrato\n- Betabloqueador CONTRAINDICADO na fase aguda (estímulo alfa sem oposição → vasoespasmo)\n\nO que mais cai na UERJ:\n- Teste ergométrico que não atingiu 85% da FC máxima = inconclusivo, não negativo.\n- Não rastrear DAC com teste ergométrico em assintomático de baixo risco (Bayes: o VPP cai).\n- IAM inferior → pesquisar VD e não dar nitrato.\n- Cocaína → sem betabloqueador.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Dor torácica estável",
+          "Probabilidade pré-teste (idade, sexo, tipo de dor)",
+          [
+            "Baixa → não testar; buscar outra causa",
+            "Intermediária → teste funcional (ergométrico ou com imagem)",
+            "Alta → tratar e estratificar (cateterismo se alto risco)"
+          ]
+        ]
+      },
+      "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "icc-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Insuficiência cardíaca, edema agudo de pulmão e choque cardiogênico",
+      "frente": "ICFEr: quais os 4 pilares que reduzem mortalidade?",
+      "verso": "**4 pilares:**\n- IECA/BRA ou sacubitril-valsartana\n- Betabloqueador\n- Espironolactona\n- iSGLT2\n\nDetalhes:\n- Diurético alivia a congestão, mas não reduz mortalidade.\n- Betabloqueadores com evidência → carvedilol, bisoprolol, metoprolol succinato.",
+      "macete": "Os 4 que salvam: \"BRAS\" — Betabloqueador, Renina-angiotensina (IECA/BRA/INRA), Aldosterona (espironolactona), SGLT2.",
+      "pegadinha": "Achar que furosemida reduz mortalidade.",
+      "prio": "alta",
+      "contexto": "**Insuficiência cardíaca (IC) = o coração não bombeia ou não enche o suficiente para a demanda, com congestão e/ou baixo débito.**\n\nClassificação pela fração de ejeção:\n- **ICFEr** → FE ≤ 40%\n- **Levemente reduzida** → FE 41–49%\n- **ICFEp** → FE ≥ 50% (idosa, hipertensa, obesa, com FA)\n\nClínica:\n- Congestão → dispneia, ortopneia, DPN, estertores, edema, turgência jugular, B3\n- Baixo débito → extremidades frias, hipotensão, oligúria, confusão\n- Descompensada → classificar o perfil hemodinâmico (ver quadro)\n\nDiagnóstico:\n- BNP/NT-proBNP (normal praticamente exclui IC)\n- Ecocardiograma → FE e causa\n- Causas → isquêmica (principal), hipertensiva, valvar, chagásica, miocardite\n\nICFEr — tratamento que reduz mortalidade:\n- IECA/BRA ou sacubitril-valsartana\n- Betabloqueador (carvedilol, bisoprolol, metoprolol succinato)\n- Espironolactona\n- iSGLT2 (dapagliflozina, empagliflozina)\n- Diurético → só alivia a congestão\n\nICFEp:\n- Diurético para congestão\n- Controle da PA, FA e comorbidades\n- iSGLT2 reduz internação\n\nEAP hipertensivo:\n- Sentar o paciente, O₂ e VNI (CPAP/BiPAP)\n- Nitroglicerina EV em dose alta + furosemida EV\n- Reduzir a PA ~25% na 1ª hora\n- Morfina não é mais rotina\n\nChoque cardiogênico:\n- Hipotensão + hipoperfusão com pressões de enchimento ALTAS (POAP > 18), índice cardíaco < 2,2 e RVS alta\n- Causa nº 1 → IAM extenso\n- Conduta → revascularização precoce + noradrenalina ± dobutamina\n\nO que mais cai na UERJ:\n- Dispneia súbita com PA muito alta e crepitações = EAP, não TEP.\n- Trocar IECA por sacubitril-valsartana exige 36 h de intervalo; nunca associar.\n- Choque cardiogênico pelo perfil hemodinâmico (pulso sem variação respiratória afasta tamponamento).",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Quente e seco (A)",
+            "itens": [
+              "Compensado",
+              "Otimizar a medicação oral"
+            ]
+          },
+          {
+            "t": "Quente e úmido (B) — o mais comum",
+            "itens": [
+              "Congesto, perfusão boa",
+              "Diurético + vasodilatador"
+            ]
+          },
+          {
+            "t": "Frio e úmido (C)",
+            "itens": [
+              "Congesto e mal perfundido",
+              "Inotrópico (dobutamina) ± diurético"
+            ]
+          },
+          {
+            "t": "Frio e seco (L)",
+            "itens": [
+              "Hipoperfundido sem congestão",
+              "Volume com cautela"
+            ]
+          }
+        ]
+      },
+      "fonte": "Diretriz Brasileira de IC Crônica e Aguda (SBC 2018) e atualização 2021; ESC 2021/2023 IC",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "icc-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Insuficiência cardíaca, edema agudo de pulmão e choque cardiogênico",
+      "frente": "Mulher, 70 anos, hipertensa, chega com dispneia súbita há 1 hora e ortopneia. PA 210 × 120 mmHg, SatO₂ 86% e estertores até os ápices. Qual a conduta inicial mais adequada?",
+      "opcoes": [
+        "Anticoagulação plena por suspeita de TEP",
+        "VNI + nitroglicerina EV em dose alta + furosemida EV",
+        "Morfina EV e betabloqueador EV",
+        "Expansão volêmica com soro fisiológico"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: PA muito alta + crepitações difusas = EAP hipertensivo, não TEP.",
+        "Correta: VNI reduz intubação; nitrato em dose alta reduz pré e pós-carga; furosemida tira a congestão.",
+        "Errada: morfina não é rotina e betabloqueador EV piora a congestão aguda.",
+        "Errada: volume piora o edema pulmonar."
+      ],
+      "macete": "EAP: \"senta, VNI, nitro, furo\".",
+      "uerj": "A banca coloca a dispneia súbita para você pensar em TEP.",
+      "prio": "alta",
+      "contexto": "**Insuficiência cardíaca (IC) = o coração não bombeia ou não enche o suficiente para a demanda, com congestão e/ou baixo débito.**\n\nClassificação pela fração de ejeção:\n- **ICFEr** → FE ≤ 40%\n- **Levemente reduzida** → FE 41–49%\n- **ICFEp** → FE ≥ 50% (idosa, hipertensa, obesa, com FA)\n\nClínica:\n- Congestão → dispneia, ortopneia, DPN, estertores, edema, turgência jugular, B3\n- Baixo débito → extremidades frias, hipotensão, oligúria, confusão\n- Descompensada → classificar o perfil hemodinâmico (ver quadro)\n\nDiagnóstico:\n- BNP/NT-proBNP (normal praticamente exclui IC)\n- Ecocardiograma → FE e causa\n- Causas → isquêmica (principal), hipertensiva, valvar, chagásica, miocardite\n\nICFEr — tratamento que reduz mortalidade:\n- IECA/BRA ou sacubitril-valsartana\n- Betabloqueador (carvedilol, bisoprolol, metoprolol succinato)\n- Espironolactona\n- iSGLT2 (dapagliflozina, empagliflozina)\n- Diurético → só alivia a congestão\n\nICFEp:\n- Diurético para congestão\n- Controle da PA, FA e comorbidades\n- iSGLT2 reduz internação\n\nEAP hipertensivo:\n- Sentar o paciente, O₂ e VNI (CPAP/BiPAP)\n- Nitroglicerina EV em dose alta + furosemida EV\n- Reduzir a PA ~25% na 1ª hora\n- Morfina não é mais rotina\n\nChoque cardiogênico:\n- Hipotensão + hipoperfusão com pressões de enchimento ALTAS (POAP > 18), índice cardíaco < 2,2 e RVS alta\n- Causa nº 1 → IAM extenso\n- Conduta → revascularização precoce + noradrenalina ± dobutamina\n\nO que mais cai na UERJ:\n- Dispneia súbita com PA muito alta e crepitações = EAP, não TEP.\n- Trocar IECA por sacubitril-valsartana exige 36 h de intervalo; nunca associar.\n- Choque cardiogênico pelo perfil hemodinâmico (pulso sem variação respiratória afasta tamponamento).",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Quente e seco (A)",
+            "itens": [
+              "Compensado",
+              "Otimizar a medicação oral"
+            ]
+          },
+          {
+            "t": "Quente e úmido (B) — o mais comum",
+            "itens": [
+              "Congesto, perfusão boa",
+              "Diurético + vasodilatador"
+            ]
+          },
+          {
+            "t": "Frio e úmido (C)",
+            "itens": [
+              "Congesto e mal perfundido",
+              "Inotrópico (dobutamina) ± diurético"
+            ]
+          },
+          {
+            "t": "Frio e seco (L)",
+            "itens": [
+              "Hipoperfundido sem congestão",
+              "Volume com cautela"
+            ]
+          }
+        ]
+      },
+      "fonte": "Diretriz Brasileira de IC Crônica e Aguda (SBC 2018) e atualização 2021; ESC 2021/2023 IC",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "icc-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Insuficiência cardíaca, edema agudo de pulmão e choque cardiogênico",
+      "frente": "Qual intervalo é obrigatório ao trocar IECA por sacubitril-valsartana?",
+      "verso": "**36 horas.**\n\nPor quê:\n- IECA + inibidor de neprilisina → risco de angioedema.\n\nDetalhe:\n- Vindo de BRA → pode trocar direto.",
+      "resposta": "36 horas",
+      "aceitas": [
+        "36 h",
+        "36",
+        "36h"
+      ],
+      "macete": "36 h = \"um dia e meio\" para o IECA sair do corpo.",
+      "prio": "alta",
+      "contexto": "**Insuficiência cardíaca (IC) = o coração não bombeia ou não enche o suficiente para a demanda, com congestão e/ou baixo débito.**\n\nClassificação pela fração de ejeção:\n- **ICFEr** → FE ≤ 40%\n- **Levemente reduzida** → FE 41–49%\n- **ICFEp** → FE ≥ 50% (idosa, hipertensa, obesa, com FA)\n\nClínica:\n- Congestão → dispneia, ortopneia, DPN, estertores, edema, turgência jugular, B3\n- Baixo débito → extremidades frias, hipotensão, oligúria, confusão\n- Descompensada → classificar o perfil hemodinâmico (ver quadro)\n\nDiagnóstico:\n- BNP/NT-proBNP (normal praticamente exclui IC)\n- Ecocardiograma → FE e causa\n- Causas → isquêmica (principal), hipertensiva, valvar, chagásica, miocardite\n\nICFEr — tratamento que reduz mortalidade:\n- IECA/BRA ou sacubitril-valsartana\n- Betabloqueador (carvedilol, bisoprolol, metoprolol succinato)\n- Espironolactona\n- iSGLT2 (dapagliflozina, empagliflozina)\n- Diurético → só alivia a congestão\n\nICFEp:\n- Diurético para congestão\n- Controle da PA, FA e comorbidades\n- iSGLT2 reduz internação\n\nEAP hipertensivo:\n- Sentar o paciente, O₂ e VNI (CPAP/BiPAP)\n- Nitroglicerina EV em dose alta + furosemida EV\n- Reduzir a PA ~25% na 1ª hora\n- Morfina não é mais rotina\n\nChoque cardiogênico:\n- Hipotensão + hipoperfusão com pressões de enchimento ALTAS (POAP > 18), índice cardíaco < 2,2 e RVS alta\n- Causa nº 1 → IAM extenso\n- Conduta → revascularização precoce + noradrenalina ± dobutamina\n\nO que mais cai na UERJ:\n- Dispneia súbita com PA muito alta e crepitações = EAP, não TEP.\n- Trocar IECA por sacubitril-valsartana exige 36 h de intervalo; nunca associar.\n- Choque cardiogênico pelo perfil hemodinâmico (pulso sem variação respiratória afasta tamponamento).",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Quente e seco (A)",
+            "itens": [
+              "Compensado",
+              "Otimizar a medicação oral"
+            ]
+          },
+          {
+            "t": "Quente e úmido (B) — o mais comum",
+            "itens": [
+              "Congesto, perfusão boa",
+              "Diurético + vasodilatador"
+            ]
+          },
+          {
+            "t": "Frio e úmido (C)",
+            "itens": [
+              "Congesto e mal perfundido",
+              "Inotrópico (dobutamina) ± diurético"
+            ]
+          },
+          {
+            "t": "Frio e seco (L)",
+            "itens": [
+              "Hipoperfundido sem congestão",
+              "Volume com cautela"
+            ]
+          }
+        ]
+      },
+      "fonte": "Diretriz Brasileira de IC Crônica e Aguda (SBC 2018) e atualização 2021; ESC 2021/2023 IC",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "icc-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Insuficiência cardíaca, edema agudo de pulmão e choque cardiogênico",
+      "frente": "Qual a causa mais comum de choque cardiogênico?",
+      "verso": "**IAM extenso.**\n\nPerfil hemodinâmico:\n- POAP > 18 (pressão de enchimento alta).\n- Índice cardíaco < 2,2.\n- RVS alta.\n\nConduta:\n- Revascularização precoce + noradrenalina ± dobutamina.",
+      "resposta": "IAM",
+      "aceitas": [
+        "infarto",
+        "infarto agudo do miocardio",
+        "iam extenso",
+        "sindrome coronariana aguda",
+        "infarto do miocardio"
+      ],
+      "macete": "Coração \"infartado\" não bombeia: choque cardiogênico = IAM até prova em contrário.",
+      "prio": "alta",
+      "contexto": "**Insuficiência cardíaca (IC) = o coração não bombeia ou não enche o suficiente para a demanda, com congestão e/ou baixo débito.**\n\nClassificação pela fração de ejeção:\n- **ICFEr** → FE ≤ 40%\n- **Levemente reduzida** → FE 41–49%\n- **ICFEp** → FE ≥ 50% (idosa, hipertensa, obesa, com FA)\n\nClínica:\n- Congestão → dispneia, ortopneia, DPN, estertores, edema, turgência jugular, B3\n- Baixo débito → extremidades frias, hipotensão, oligúria, confusão\n- Descompensada → classificar o perfil hemodinâmico (ver quadro)\n\nDiagnóstico:\n- BNP/NT-proBNP (normal praticamente exclui IC)\n- Ecocardiograma → FE e causa\n- Causas → isquêmica (principal), hipertensiva, valvar, chagásica, miocardite\n\nICFEr — tratamento que reduz mortalidade:\n- IECA/BRA ou sacubitril-valsartana\n- Betabloqueador (carvedilol, bisoprolol, metoprolol succinato)\n- Espironolactona\n- iSGLT2 (dapagliflozina, empagliflozina)\n- Diurético → só alivia a congestão\n\nICFEp:\n- Diurético para congestão\n- Controle da PA, FA e comorbidades\n- iSGLT2 reduz internação\n\nEAP hipertensivo:\n- Sentar o paciente, O₂ e VNI (CPAP/BiPAP)\n- Nitroglicerina EV em dose alta + furosemida EV\n- Reduzir a PA ~25% na 1ª hora\n- Morfina não é mais rotina\n\nChoque cardiogênico:\n- Hipotensão + hipoperfusão com pressões de enchimento ALTAS (POAP > 18), índice cardíaco < 2,2 e RVS alta\n- Causa nº 1 → IAM extenso\n- Conduta → revascularização precoce + noradrenalina ± dobutamina\n\nO que mais cai na UERJ:\n- Dispneia súbita com PA muito alta e crepitações = EAP, não TEP.\n- Trocar IECA por sacubitril-valsartana exige 36 h de intervalo; nunca associar.\n- Choque cardiogênico pelo perfil hemodinâmico (pulso sem variação respiratória afasta tamponamento).",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Quente e seco (A)",
+            "itens": [
+              "Compensado",
+              "Otimizar a medicação oral"
+            ]
+          },
+          {
+            "t": "Quente e úmido (B) — o mais comum",
+            "itens": [
+              "Congesto, perfusão boa",
+              "Diurético + vasodilatador"
+            ]
+          },
+          {
+            "t": "Frio e úmido (C)",
+            "itens": [
+              "Congesto e mal perfundido",
+              "Inotrópico (dobutamina) ± diurético"
+            ]
+          },
+          {
+            "t": "Frio e seco (L)",
+            "itens": [
+              "Hipoperfundido sem congestão",
+              "Volume com cautela"
+            ]
+          }
+        ]
+      },
+      "fonte": "Diretriz Brasileira de IC Crônica e Aguda (SBC 2018) e atualização 2021; ESC 2021/2023 IC",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "ei-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Endocardite infecciosa",
+      "frente": "Nódulos de Osler × lesões de Janeway",
+      "verso": "**Osler → nódulo DOLOROSO na polpa digital (imunológico).**\n**Janeway → mácula INDOLOR palmoplantar (vascular).**\n\nOutros fenômenos:\n- Imunológicos → manchas de Roth, glomerulonefrite, fator reumatoide.\n- Vasculares → embolia, hemorragia conjuntival, aneurisma micótico.",
+      "macete": "Osler \"dói\" (O de \"ouch\"); Janeway é só uma mancha no caminho, sem dor.",
+      "pegadinha": "Trocar os pares: Osler vascular e Janeway imunológico.",
+      "uerj": "Estigmas de endocardite em caso clínico com sopro novo.",
+      "prio": "alta",
+      "contexto": "**Endocardite infecciosa = infecção do endocárdio (geralmente valvar) com vegetação, bacteremia e fenômenos embólicos e imunológicos.**\n\nO que é:\n- Lesão endotelial (valvopatia, prótese, cateter, droga injetável) + bacteremia → vegetação.\n- Aguda (S. aureus, destrutiva, dias) × subaguda (Streptococcus viridans, semanas).\n\nAgente pelo contexto:\n- **Valva nativa (comunidade)** → Streptococcus viridans e S. aureus\n- **Usuário de droga injetável** → S. aureus na TRICÚSPIDE (embolia pulmonar séptica)\n- **Prótese precoce** → S. epidermidis\n- **S. gallolyticus (bovis)** → investigar câncer de cólon\n- **Enterococo** → idoso, manipulação geniturinária\n- **Hemocultura negativa** → HACEK, Coxiella, Bartonella, antibiótico prévio\n\nClínica:\n- Febre + sopro novo de regurgitação\n- Fenômenos vasculares → Janeway, hemorragia conjuntival, embolia (AVC, rim, baço), aneurisma micótico\n- Fenômenos imunológicos → Osler, Roth, glomerulonefrite, fator reumatoide\n- Hemorragia \"em lasca\" subungueal\n\nDiagnóstico (Duke — ver quadro):\n- 3 pares de hemoculturas ANTES do antibiótico\n- Ecocardiograma transtorácico; transesofágico se prótese ou dúvida\n\nTratamento:\n- Antibiótico EV por 4–6 semanas, guiado pela hemocultura\n- Cirurgia → IC por disfunção valvar (principal), infecção não controlada (abscesso, fungo, germe resistente), vegetação > 10 mm com embolia\n\nProfilaxia antes de procedimento dentário com manipulação gengival:\n- Só alto risco → prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida\n- Amoxicilina 2 g VO 30–60 min antes\n- Parto vaginal e cesárea → NÃO fazer de rotina\n\nO que mais cai na UERJ:\n- Osler (doloroso, imunológico) × Janeway (indolor, vascular): a banca troca os pares.\n- Germe pelo contexto (UDI → tricúspide e S. aureus; S. gallolyticus → colonoscopia).\n- Endocardite como complicação de valvopatia prévia com quadro multissistêmico.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Critérios MAIORES",
+            "itens": [
+              "Hemoculturas: germe típico em 2 amostras",
+              "Imagem: vegetação, abscesso ou nova regurgitação"
+            ]
+          },
+          {
+            "t": "Critérios MENORES",
+            "itens": [
+              "Predisposição (valvopatia, prótese, UDI)",
+              "Febre ≥ 38 °C",
+              "Fenômenos vasculares",
+              "Fenômenos imunológicos",
+              "Hemocultura que não preenche critério maior"
+            ]
+          },
+          {
+            "t": "Diagnóstico definitivo",
+            "itens": [
+              "2 maiores",
+              "1 maior + 3 menores",
+              "5 menores"
+            ]
+          }
+        ]
+      },
+      "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "ei-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Endocardite infecciosa",
+      "frente": "Homem, 34 anos, usuário de drogas injetáveis, com febre há 10 dias, tosse e múltiplos nódulos pulmonares cavitados na TC. Sopro sistólico na borda esternal esquerda baixa que aumenta na inspiração. Qual o agente e a valva mais prováveis?",
+      "opcoes": [
+        "Streptococcus viridans — valva mitral",
+        "Staphylococcus aureus — valva tricúspide",
+        "Enterococcus — valva aórtica",
+        "Staphylococcus epidermidis — valva pulmonar"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: viridans é da valva nativa esquerda com doença prévia, curso subagudo.",
+        "Correta: UDI → S. aureus na tricúspide; êmbolos sépticos pulmonares; sopro de regurgitação tricúspide aumenta na inspiração (Rivero-Carvallo).",
+        "Errada: enterococo é do idoso com manipulação geniturinária.",
+        "Errada: S. epidermidis é da prótese valvar precoce."
+      ],
+      "macete": "Droga na veia → bactéria da pele (S. aureus) → 1ª valva do caminho (tricúspide).",
+      "prio": "alta",
+      "contexto": "**Endocardite infecciosa = infecção do endocárdio (geralmente valvar) com vegetação, bacteremia e fenômenos embólicos e imunológicos.**\n\nO que é:\n- Lesão endotelial (valvopatia, prótese, cateter, droga injetável) + bacteremia → vegetação.\n- Aguda (S. aureus, destrutiva, dias) × subaguda (Streptococcus viridans, semanas).\n\nAgente pelo contexto:\n- **Valva nativa (comunidade)** → Streptococcus viridans e S. aureus\n- **Usuário de droga injetável** → S. aureus na TRICÚSPIDE (embolia pulmonar séptica)\n- **Prótese precoce** → S. epidermidis\n- **S. gallolyticus (bovis)** → investigar câncer de cólon\n- **Enterococo** → idoso, manipulação geniturinária\n- **Hemocultura negativa** → HACEK, Coxiella, Bartonella, antibiótico prévio\n\nClínica:\n- Febre + sopro novo de regurgitação\n- Fenômenos vasculares → Janeway, hemorragia conjuntival, embolia (AVC, rim, baço), aneurisma micótico\n- Fenômenos imunológicos → Osler, Roth, glomerulonefrite, fator reumatoide\n- Hemorragia \"em lasca\" subungueal\n\nDiagnóstico (Duke — ver quadro):\n- 3 pares de hemoculturas ANTES do antibiótico\n- Ecocardiograma transtorácico; transesofágico se prótese ou dúvida\n\nTratamento:\n- Antibiótico EV por 4–6 semanas, guiado pela hemocultura\n- Cirurgia → IC por disfunção valvar (principal), infecção não controlada (abscesso, fungo, germe resistente), vegetação > 10 mm com embolia\n\nProfilaxia antes de procedimento dentário com manipulação gengival:\n- Só alto risco → prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida\n- Amoxicilina 2 g VO 30–60 min antes\n- Parto vaginal e cesárea → NÃO fazer de rotina\n\nO que mais cai na UERJ:\n- Osler (doloroso, imunológico) × Janeway (indolor, vascular): a banca troca os pares.\n- Germe pelo contexto (UDI → tricúspide e S. aureus; S. gallolyticus → colonoscopia).\n- Endocardite como complicação de valvopatia prévia com quadro multissistêmico.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Critérios MAIORES",
+            "itens": [
+              "Hemoculturas: germe típico em 2 amostras",
+              "Imagem: vegetação, abscesso ou nova regurgitação"
+            ]
+          },
+          {
+            "t": "Critérios MENORES",
+            "itens": [
+              "Predisposição (valvopatia, prótese, UDI)",
+              "Febre ≥ 38 °C",
+              "Fenômenos vasculares",
+              "Fenômenos imunológicos",
+              "Hemocultura que não preenche critério maior"
+            ]
+          },
+          {
+            "t": "Diagnóstico definitivo",
+            "itens": [
+              "2 maiores",
+              "1 maior + 3 menores",
+              "5 menores"
+            ]
+          }
+        ]
+      },
+      "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "ei-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Endocardite infecciosa",
+      "frente": "Qual germe da endocardite obriga a investigar câncer de cólon?",
+      "verso": "**Streptococcus gallolyticus (antigo S. bovis).**\n\nConduta:\n- Colonoscopia, mesmo sem sintomas intestinais.",
+      "resposta": "Streptococcus gallolyticus",
+      "aceitas": [
+        "streptococcus bovis",
+        "s bovis",
+        "s gallolyticus",
+        "gallolyticus",
+        "bovis",
+        "strepto bovis"
+      ],
+      "macete": "S. bovis → \"Boi\" → pede colonoscopia (o cólon do paciente).",
+      "prio": "alta",
+      "contexto": "**Endocardite infecciosa = infecção do endocárdio (geralmente valvar) com vegetação, bacteremia e fenômenos embólicos e imunológicos.**\n\nO que é:\n- Lesão endotelial (valvopatia, prótese, cateter, droga injetável) + bacteremia → vegetação.\n- Aguda (S. aureus, destrutiva, dias) × subaguda (Streptococcus viridans, semanas).\n\nAgente pelo contexto:\n- **Valva nativa (comunidade)** → Streptococcus viridans e S. aureus\n- **Usuário de droga injetável** → S. aureus na TRICÚSPIDE (embolia pulmonar séptica)\n- **Prótese precoce** → S. epidermidis\n- **S. gallolyticus (bovis)** → investigar câncer de cólon\n- **Enterococo** → idoso, manipulação geniturinária\n- **Hemocultura negativa** → HACEK, Coxiella, Bartonella, antibiótico prévio\n\nClínica:\n- Febre + sopro novo de regurgitação\n- Fenômenos vasculares → Janeway, hemorragia conjuntival, embolia (AVC, rim, baço), aneurisma micótico\n- Fenômenos imunológicos → Osler, Roth, glomerulonefrite, fator reumatoide\n- Hemorragia \"em lasca\" subungueal\n\nDiagnóstico (Duke — ver quadro):\n- 3 pares de hemoculturas ANTES do antibiótico\n- Ecocardiograma transtorácico; transesofágico se prótese ou dúvida\n\nTratamento:\n- Antibiótico EV por 4–6 semanas, guiado pela hemocultura\n- Cirurgia → IC por disfunção valvar (principal), infecção não controlada (abscesso, fungo, germe resistente), vegetação > 10 mm com embolia\n\nProfilaxia antes de procedimento dentário com manipulação gengival:\n- Só alto risco → prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida\n- Amoxicilina 2 g VO 30–60 min antes\n- Parto vaginal e cesárea → NÃO fazer de rotina\n\nO que mais cai na UERJ:\n- Osler (doloroso, imunológico) × Janeway (indolor, vascular): a banca troca os pares.\n- Germe pelo contexto (UDI → tricúspide e S. aureus; S. gallolyticus → colonoscopia).\n- Endocardite como complicação de valvopatia prévia com quadro multissistêmico.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Critérios MAIORES",
+            "itens": [
+              "Hemoculturas: germe típico em 2 amostras",
+              "Imagem: vegetação, abscesso ou nova regurgitação"
+            ]
+          },
+          {
+            "t": "Critérios MENORES",
+            "itens": [
+              "Predisposição (valvopatia, prótese, UDI)",
+              "Febre ≥ 38 °C",
+              "Fenômenos vasculares",
+              "Fenômenos imunológicos",
+              "Hemocultura que não preenche critério maior"
+            ]
+          },
+          {
+            "t": "Diagnóstico definitivo",
+            "itens": [
+              "2 maiores",
+              "1 maior + 3 menores",
+              "5 menores"
+            ]
+          }
+        ]
+      },
+      "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "ei-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Cardiologia",
+      "sub": "Endocardite infecciosa",
+      "frente": "Qual antibiótico se usa na profilaxia de endocardite antes de procedimento dentário em alto risco?",
+      "verso": "**Amoxicilina 2 g VO, 30–60 min antes.**\n\nQuem recebe:\n- Prótese valvar.\n- Endocardite prévia.\n- Cardiopatia congênita cianótica não corrigida.\n\nNão fazer:\n- No parto vaginal ou cesárea de rotina.",
+      "resposta": "amoxicilina",
+      "aceitas": [
+        "amoxicilina 2 g",
+        "amoxicilina 2g vo"
+      ],
+      "macete": "Dentista + prótese valvar = \"Amoxi 2 g, 1 h antes\".",
+      "prio": "alta",
+      "contexto": "**Endocardite infecciosa = infecção do endocárdio (geralmente valvar) com vegetação, bacteremia e fenômenos embólicos e imunológicos.**\n\nO que é:\n- Lesão endotelial (valvopatia, prótese, cateter, droga injetável) + bacteremia → vegetação.\n- Aguda (S. aureus, destrutiva, dias) × subaguda (Streptococcus viridans, semanas).\n\nAgente pelo contexto:\n- **Valva nativa (comunidade)** → Streptococcus viridans e S. aureus\n- **Usuário de droga injetável** → S. aureus na TRICÚSPIDE (embolia pulmonar séptica)\n- **Prótese precoce** → S. epidermidis\n- **S. gallolyticus (bovis)** → investigar câncer de cólon\n- **Enterococo** → idoso, manipulação geniturinária\n- **Hemocultura negativa** → HACEK, Coxiella, Bartonella, antibiótico prévio\n\nClínica:\n- Febre + sopro novo de regurgitação\n- Fenômenos vasculares → Janeway, hemorragia conjuntival, embolia (AVC, rim, baço), aneurisma micótico\n- Fenômenos imunológicos → Osler, Roth, glomerulonefrite, fator reumatoide\n- Hemorragia \"em lasca\" subungueal\n\nDiagnóstico (Duke — ver quadro):\n- 3 pares de hemoculturas ANTES do antibiótico\n- Ecocardiograma transtorácico; transesofágico se prótese ou dúvida\n\nTratamento:\n- Antibiótico EV por 4–6 semanas, guiado pela hemocultura\n- Cirurgia → IC por disfunção valvar (principal), infecção não controlada (abscesso, fungo, germe resistente), vegetação > 10 mm com embolia\n\nProfilaxia antes de procedimento dentário com manipulação gengival:\n- Só alto risco → prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida\n- Amoxicilina 2 g VO 30–60 min antes\n- Parto vaginal e cesárea → NÃO fazer de rotina\n\nO que mais cai na UERJ:\n- Osler (doloroso, imunológico) × Janeway (indolor, vascular): a banca troca os pares.\n- Germe pelo contexto (UDI → tricúspide e S. aureus; S. gallolyticus → colonoscopia).\n- Endocardite como complicação de valvopatia prévia com quadro multissistêmico.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Critérios MAIORES",
+            "itens": [
+              "Hemoculturas: germe típico em 2 amostras",
+              "Imagem: vegetação, abscesso ou nova regurgitação"
+            ]
+          },
+          {
+            "t": "Critérios MENORES",
+            "itens": [
+              "Predisposição (valvopatia, prótese, UDI)",
+              "Febre ≥ 38 °C",
+              "Fenômenos vasculares",
+              "Fenômenos imunológicos",
+              "Hemocultura que não preenche critério maior"
+            ]
+          },
+          {
+            "t": "Diagnóstico definitivo",
+            "itens": [
+              "2 maiores",
+              "1 maior + 3 menores",
+              "5 menores"
+            ]
+          }
+        ]
+      },
+      "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "den-01",
+      "tipo": "flash",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Dengue e arboviroses",
+      "frente": "Prova do laço: técnica e interpretação",
+      "verso": "**PA média por 5 min (adulto) ou 3 min (criança).**\n**Positiva → ≥ 20 petéquias (adulto) ou ≥ 10 (criança) em 2,5 cm.**\n\nSignificado:\n- Positiva → grupo B (sangramento de pele induzido).\n- NÃO é sinal de alarme.",
+      "macete": "Laço \"5-20\": 5 minutos, 20 petéquias (na criança: 3 e 10).",
+      "pegadinha": "Insuflar o manguito na PA sistólica — o certo é a PA MÉDIA.",
+      "uerj": "A banca troca a pressão (sistólica × média) e o número de petéquias.",
+      "prio": "alta",
+      "contexto": "**Dengue = arbovirose transmitida pelo Aedes aegypti (4 sorotipos) cuja gravidade vem do extravasamento plasmático na defervescência.**\n\nFases:\n- **Febril** (1º–3º dia) → febre alta, cefaleia, dor retro-orbitária, mialgia, exantema\n- **Crítica** (3º–7º dia, quando a febre cai) → extravasamento plasmático, choque, sangramento\n- **Recuperação** → reabsorção de líquidos, prurido, bradicardia\n\nSinais de alarme:\n- Dor abdominal intensa e contínua\n- Vômitos persistentes\n- Acúmulo de líquido (ascite, derrame)\n- Hipotensão postural ou lipotimia\n- Hepatomegalia > 2 cm\n- Sangramento de mucosa\n- Letargia ou irritabilidade\n- Aumento progressivo do hematócrito\n\nClassificação e conduta:\n- Grupos A a D (ver fluxograma)\n\nProva do laço:\n- Manguito na PA MÉDIA por 5 min (adulto) ou 3 min (criança)\n- Positiva → ≥ 20 petéquias em quadrado de 2,5 cm (adulto) ou ≥ 10 (criança)\n- Positiva NÃO é sinal de alarme → grupo B\n\nHidratação oral (grupo A):\n- Adulto → 60 mL/kg/dia (1/3 de SRO)\n- Criança → regra de Holliday-Segar\n\nEvitar:\n- AAS e AINE (sangramento)\n- Corticoide\n\nDiferencial das arboviroses:\n- **Dengue** → febre alta, mialgia, dor retro-orbitária, plaquetopenia\n- **Zika** → exantema pruriginoso precoce, conjuntivite não purulenta, febre baixa; microcefalia e Guillain-Barré\n- **Chikungunya** → artralgia intensa e incapacitante, que pode cronificar\n- Não esquecer → febre maculosa (carrapato → doxiciclina) e leptospirose (enchente, dor em panturrilha)\n\nDiagnóstico e vigilância:\n- NS1 ou RT-PCR até o 5º dia; sorologia IgM a partir do 6º dia\n- Caso → notificação semanal; óbito → imediata\n- Controle → eliminar criadouros; \"fumacê\" só em surto\n\nO que mais cai na UERJ:\n- Técnica e interpretação da prova do laço (PA média, 20 petéquias).\n- Sinal de alarme = grupo C → hidratação venosa já, nada de alta.\n- Febre sumindo não é melhora: é a fase crítica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Suspeita de dengue",
+          [
+            "Sem alarme, sem sangramento, sem risco → A: casa, hidratação oral",
+            "Sangramento de pele (laço +) ou condição de risco → B: hemograma e observar"
+          ],
+          [
+            "Sinal de alarme → C: SF 10 mL/kg na 1ª hora e internar",
+            "Choque ou sangramento grave → D: 20 mL/kg em 20 min (até 3×) e UTI"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "den-q1",
+      "tipo": "quiz",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Dengue e arboviroses",
+      "frente": "Mulher, 30 anos, 5º dia de dengue, agora afebril, com dor abdominal contínua e vômitos persistentes. PA 110 × 70 mmHg, sem sangramento. Qual a conduta?",
+      "opcoes": [
+        "Alta com hidratação oral e retorno em 48 h, pois a febre cessou",
+        "Hidratação venosa imediata (10 mL/kg na 1ª hora) e internação",
+        "Expansão de 20 mL/kg em 20 min e UTI",
+        "Transfusão profilática de plaquetas"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: febre sumindo é a fase crítica; dor abdominal e vômitos são sinais de alarme.",
+        "Correta: sinal de alarme sem choque = grupo C → hidratação venosa e internação.",
+        "Errada: não há choque (grupo D).",
+        "Errada: não se transfunde plaqueta profilaticamente na dengue."
+      ],
+      "macete": "Alarme = \"C de Cama no hospital e Cristaloide na veia\".",
+      "uerj": "Cai como \"conduta ambulatorial × internação\".",
+      "prio": "alta",
+      "contexto": "**Dengue = arbovirose transmitida pelo Aedes aegypti (4 sorotipos) cuja gravidade vem do extravasamento plasmático na defervescência.**\n\nFases:\n- **Febril** (1º–3º dia) → febre alta, cefaleia, dor retro-orbitária, mialgia, exantema\n- **Crítica** (3º–7º dia, quando a febre cai) → extravasamento plasmático, choque, sangramento\n- **Recuperação** → reabsorção de líquidos, prurido, bradicardia\n\nSinais de alarme:\n- Dor abdominal intensa e contínua\n- Vômitos persistentes\n- Acúmulo de líquido (ascite, derrame)\n- Hipotensão postural ou lipotimia\n- Hepatomegalia > 2 cm\n- Sangramento de mucosa\n- Letargia ou irritabilidade\n- Aumento progressivo do hematócrito\n\nClassificação e conduta:\n- Grupos A a D (ver fluxograma)\n\nProva do laço:\n- Manguito na PA MÉDIA por 5 min (adulto) ou 3 min (criança)\n- Positiva → ≥ 20 petéquias em quadrado de 2,5 cm (adulto) ou ≥ 10 (criança)\n- Positiva NÃO é sinal de alarme → grupo B\n\nHidratação oral (grupo A):\n- Adulto → 60 mL/kg/dia (1/3 de SRO)\n- Criança → regra de Holliday-Segar\n\nEvitar:\n- AAS e AINE (sangramento)\n- Corticoide\n\nDiferencial das arboviroses:\n- **Dengue** → febre alta, mialgia, dor retro-orbitária, plaquetopenia\n- **Zika** → exantema pruriginoso precoce, conjuntivite não purulenta, febre baixa; microcefalia e Guillain-Barré\n- **Chikungunya** → artralgia intensa e incapacitante, que pode cronificar\n- Não esquecer → febre maculosa (carrapato → doxiciclina) e leptospirose (enchente, dor em panturrilha)\n\nDiagnóstico e vigilância:\n- NS1 ou RT-PCR até o 5º dia; sorologia IgM a partir do 6º dia\n- Caso → notificação semanal; óbito → imediata\n- Controle → eliminar criadouros; \"fumacê\" só em surto\n\nO que mais cai na UERJ:\n- Técnica e interpretação da prova do laço (PA média, 20 petéquias).\n- Sinal de alarme = grupo C → hidratação venosa já, nada de alta.\n- Febre sumindo não é melhora: é a fase crítica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Suspeita de dengue",
+          [
+            "Sem alarme, sem sangramento, sem risco → A: casa, hidratação oral",
+            "Sangramento de pele (laço +) ou condição de risco → B: hemograma e observar"
+          ],
+          [
+            "Sinal de alarme → C: SF 10 mL/kg na 1ª hora e internar",
+            "Choque ou sangramento grave → D: 20 mL/kg em 20 min (até 3×) e UTI"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "den-d1",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Dengue e arboviroses",
+      "frente": "Em que fase da dengue ocorre o extravasamento plasmático?",
+      "verso": "**Na defervescência (fase crítica, 3º–7º dia).**\n\nNa prática:\n- Febre caindo + sinal de alarme = risco de choque.",
+      "resposta": "defervescência",
+      "aceitas": [
+        "fase critica",
+        "critica",
+        "quando a febre cai",
+        "fase de defervescencia",
+        "defervescencia"
+      ],
+      "macete": "A febre cai e o plasma \"vaza\": a hora perigosa é quando parece que melhorou.",
+      "prio": "alta",
+      "contexto": "**Dengue = arbovirose transmitida pelo Aedes aegypti (4 sorotipos) cuja gravidade vem do extravasamento plasmático na defervescência.**\n\nFases:\n- **Febril** (1º–3º dia) → febre alta, cefaleia, dor retro-orbitária, mialgia, exantema\n- **Crítica** (3º–7º dia, quando a febre cai) → extravasamento plasmático, choque, sangramento\n- **Recuperação** → reabsorção de líquidos, prurido, bradicardia\n\nSinais de alarme:\n- Dor abdominal intensa e contínua\n- Vômitos persistentes\n- Acúmulo de líquido (ascite, derrame)\n- Hipotensão postural ou lipotimia\n- Hepatomegalia > 2 cm\n- Sangramento de mucosa\n- Letargia ou irritabilidade\n- Aumento progressivo do hematócrito\n\nClassificação e conduta:\n- Grupos A a D (ver fluxograma)\n\nProva do laço:\n- Manguito na PA MÉDIA por 5 min (adulto) ou 3 min (criança)\n- Positiva → ≥ 20 petéquias em quadrado de 2,5 cm (adulto) ou ≥ 10 (criança)\n- Positiva NÃO é sinal de alarme → grupo B\n\nHidratação oral (grupo A):\n- Adulto → 60 mL/kg/dia (1/3 de SRO)\n- Criança → regra de Holliday-Segar\n\nEvitar:\n- AAS e AINE (sangramento)\n- Corticoide\n\nDiferencial das arboviroses:\n- **Dengue** → febre alta, mialgia, dor retro-orbitária, plaquetopenia\n- **Zika** → exantema pruriginoso precoce, conjuntivite não purulenta, febre baixa; microcefalia e Guillain-Barré\n- **Chikungunya** → artralgia intensa e incapacitante, que pode cronificar\n- Não esquecer → febre maculosa (carrapato → doxiciclina) e leptospirose (enchente, dor em panturrilha)\n\nDiagnóstico e vigilância:\n- NS1 ou RT-PCR até o 5º dia; sorologia IgM a partir do 6º dia\n- Caso → notificação semanal; óbito → imediata\n- Controle → eliminar criadouros; \"fumacê\" só em surto\n\nO que mais cai na UERJ:\n- Técnica e interpretação da prova do laço (PA média, 20 petéquias).\n- Sinal de alarme = grupo C → hidratação venosa já, nada de alta.\n- Febre sumindo não é melhora: é a fase crítica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Suspeita de dengue",
+          [
+            "Sem alarme, sem sangramento, sem risco → A: casa, hidratação oral",
+            "Sangramento de pele (laço +) ou condição de risco → B: hemograma e observar"
+          ],
+          [
+            "Sinal de alarme → C: SF 10 mL/kg na 1ª hora e internar",
+            "Choque ou sangramento grave → D: 20 mL/kg em 20 min (até 3×) e UTI"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "den-d2",
+      "tipo": "digitar",
+      "area": "Clínica Médica",
+      "tema": "Infectologia",
+      "sub": "Dengue e arboviroses",
+      "frente": "Qual arbovirose cursa com artralgia intensa e incapacitante?",
+      "verso": "**Chikungunya.**\n\nComparação:\n- Dengue → mialgia e dor retro-orbitária.\n- Zika → exantema pruriginoso e conjuntivite.",
+      "resposta": "chikungunya",
+      "aceitas": [
+        "chikungunya",
+        "chicungunha",
+        "chikungunha",
+        "chicungunya"
+      ],
+      "macete": "Chikungunya = \"aquele que se curva\" (de tanta dor nas juntas).",
+      "prio": "alta",
+      "contexto": "**Dengue = arbovirose transmitida pelo Aedes aegypti (4 sorotipos) cuja gravidade vem do extravasamento plasmático na defervescência.**\n\nFases:\n- **Febril** (1º–3º dia) → febre alta, cefaleia, dor retro-orbitária, mialgia, exantema\n- **Crítica** (3º–7º dia, quando a febre cai) → extravasamento plasmático, choque, sangramento\n- **Recuperação** → reabsorção de líquidos, prurido, bradicardia\n\nSinais de alarme:\n- Dor abdominal intensa e contínua\n- Vômitos persistentes\n- Acúmulo de líquido (ascite, derrame)\n- Hipotensão postural ou lipotimia\n- Hepatomegalia > 2 cm\n- Sangramento de mucosa\n- Letargia ou irritabilidade\n- Aumento progressivo do hematócrito\n\nClassificação e conduta:\n- Grupos A a D (ver fluxograma)\n\nProva do laço:\n- Manguito na PA MÉDIA por 5 min (adulto) ou 3 min (criança)\n- Positiva → ≥ 20 petéquias em quadrado de 2,5 cm (adulto) ou ≥ 10 (criança)\n- Positiva NÃO é sinal de alarme → grupo B\n\nHidratação oral (grupo A):\n- Adulto → 60 mL/kg/dia (1/3 de SRO)\n- Criança → regra de Holliday-Segar\n\nEvitar:\n- AAS e AINE (sangramento)\n- Corticoide\n\nDiferencial das arboviroses:\n- **Dengue** → febre alta, mialgia, dor retro-orbitária, plaquetopenia\n- **Zika** → exantema pruriginoso precoce, conjuntivite não purulenta, febre baixa; microcefalia e Guillain-Barré\n- **Chikungunya** → artralgia intensa e incapacitante, que pode cronificar\n- Não esquecer → febre maculosa (carrapato → doxiciclina) e leptospirose (enchente, dor em panturrilha)\n\nDiagnóstico e vigilância:\n- NS1 ou RT-PCR até o 5º dia; sorologia IgM a partir do 6º dia\n- Caso → notificação semanal; óbito → imediata\n- Controle → eliminar criadouros; \"fumacê\" só em surto\n\nO que mais cai na UERJ:\n- Técnica e interpretação da prova do laço (PA média, 20 petéquias).\n- Sinal de alarme = grupo C → hidratação venosa já, nada de alta.\n- Febre sumindo não é melhora: é a fase crítica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "Suspeita de dengue",
+          [
+            "Sem alarme, sem sangramento, sem risco → A: casa, hidratação oral",
+            "Sangramento de pele (laço +) ou condição de risco → B: hemograma e observar"
+          ],
+          [
+            "Sinal de alarme → C: SF 10 mL/kg na 1ª hora e internar",
+            "Choque ou sangramento grave → D: 20 mL/kg em 20 min (até 3×) e UTI"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "aps-01",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
+      "sub": "Atributos da APS (Starfield) e PNAB",
+      "frente": "Atributos essenciais e derivados da APS (Starfield)",
+      "verso": "**Essenciais:**\n- Acesso de primeiro contato\n- Longitudinalidade\n- Integralidade\n- Coordenação\n\n**Derivados:**\n- Orientação familiar\n- Orientação comunitária\n- Competência cultural",
+      "macete": "Essenciais \"ALIC\" (Acesso, Longitudinalidade, Integralidade, Coordenação); derivados \"FCC\" (Família, Comunidade, Cultura).",
+      "uerj": "Cai como caso para você nomear o atributo.",
+      "prio": "alta",
+      "contexto": "**Atenção Primária à Saúde (APS) = porta de entrada preferencial e coordenadora do cuidado na rede; seus atributos são os de Barbara Starfield.**\n\nAtributos essenciais (Starfield):\n- **Acesso de primeiro contato** → porta de entrada para cada novo problema\n- **Longitudinalidade** → vínculo com a PESSOA ao longo do tempo, não com uma doença\n- **Integralidade** → reconhece e resolve a maior parte das necessidades (promoção, prevenção, cura, reabilitação, paliativo) e encaminha o resto\n- **Coordenação** → integra o cuidado entre os serviços (ver esquema)\n\nAtributos derivados:\n- Orientação familiar\n- Orientação comunitária\n- Competência cultural\n\nPNAB (Portaria 2.436/2017):\n- Estratégia Saúde da Família (ESF) → modelo prioritário\n- Equipe mínima → médico, enfermeiro, técnico/auxiliar de enfermagem e agente comunitário de saúde\n- Território adscrito, com cadastro das famílias\n- Funções na rede → ser base, ser resolutiva, coordenar o cuidado, ordenar as redes\n- Equipe de Atenção Primária (eAP) também é reconhecida\n\nFerramentas e indicadores:\n- ICSAP → mede a efetividade da APS (baralho próprio)\n- Educação em saúde dialógica (Paulo Freire) → valoriza o saber popular e a autonomia; supera a palestra \"bancária\"\n\nO que mais cai na UERJ:\n- Reconhecer o atributo descrito no caso (acesso × longitudinalidade × integralidade × coordenação).\n- Longitudinalidade ≠ continuidade de um problema.\n- Essenciais × derivados.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><defs><marker id=\"ap\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0L10,5L0,10z\" fill=\"var(--mute)\"/></marker></defs>\n<rect x=\"8\" y=\"172\" width=\"324\" height=\"30\" rx=\"10\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--ink)\">Família e comunidade no território (acesso de 1º contato)</text>\n<line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"128\" stroke=\"var(--mute)\" stroke-width=\"1.5\" marker-end=\"url(#ap)\"/>\n<circle cx=\"170\" cy=\"98\" r=\"30\" fill=\"var(--wine)\"/><text x=\"170\" y=\"95\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#fff\">APS</text><text x=\"170\" y=\"110\" text-anchor=\"middle\" font-size=\"9\" fill=\"#fff\">coordena</text>\n<g font-size=\"10\" fill=\"var(--ink)\"><rect x=\"8\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"54\" y=\"29\" text-anchor=\"middle\">Especialista</text>\n<rect x=\"124\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"29\" text-anchor=\"middle\">Hospital</text>\n<rect x=\"240\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"286\" y=\"29\" text-anchor=\"middle\">Urgência</text></g>\n<g stroke=\"var(--mute)\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"148\" y1=\"78\" x2=\"70\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"170\" y1=\"68\" x2=\"170\" y2=\"44\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"192\" y1=\"78\" x2=\"270\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/></g>\n<text x=\"40\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">referência</text><text x=\"252\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">contrarreferência</text>\n<text x=\"170\" y=\"150\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--mute)\">longitudinalidade: a mesma equipe acompanha a pessoa</text></svg>",
+        "legenda": "A APS é porta de entrada e coordena a rede (referência e contrarreferência)."
+      },
+      "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "aps-q1",
+      "tipo": "quiz",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
+      "sub": "Atributos da APS (Starfield) e PNAB",
+      "frente": "Paciente acompanhada há 8 anos pela mesma equipe de Saúde da Família, que conhece sua história, sua família e suas preferências e a atende nos diferentes problemas ao longo do tempo. Esse cenário exemplifica principalmente qual atributo da APS?",
+      "opcoes": [
+        "Acesso de primeiro contato",
+        "Longitudinalidade",
+        "Coordenação do cuidado",
+        "Competência cultural"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: acesso é ser a porta de entrada para cada problema novo.",
+        "Correta: vínculo com a pessoa ao longo do tempo, independentemente do problema.",
+        "Errada: coordenação é integrar o cuidado entre serviços.",
+        "Errada: competência cultural é adaptar o cuidado à cultura da pessoa."
+      ],
+      "macete": "Longitudinalidade = \"linha do tempo\" com a mesma equipe.",
+      "pegadinha": "Confundir longitudinalidade com continuidade do tratamento de uma doença.",
+      "prio": "alta",
+      "contexto": "**Atenção Primária à Saúde (APS) = porta de entrada preferencial e coordenadora do cuidado na rede; seus atributos são os de Barbara Starfield.**\n\nAtributos essenciais (Starfield):\n- **Acesso de primeiro contato** → porta de entrada para cada novo problema\n- **Longitudinalidade** → vínculo com a PESSOA ao longo do tempo, não com uma doença\n- **Integralidade** → reconhece e resolve a maior parte das necessidades (promoção, prevenção, cura, reabilitação, paliativo) e encaminha o resto\n- **Coordenação** → integra o cuidado entre os serviços (ver esquema)\n\nAtributos derivados:\n- Orientação familiar\n- Orientação comunitária\n- Competência cultural\n\nPNAB (Portaria 2.436/2017):\n- Estratégia Saúde da Família (ESF) → modelo prioritário\n- Equipe mínima → médico, enfermeiro, técnico/auxiliar de enfermagem e agente comunitário de saúde\n- Território adscrito, com cadastro das famílias\n- Funções na rede → ser base, ser resolutiva, coordenar o cuidado, ordenar as redes\n- Equipe de Atenção Primária (eAP) também é reconhecida\n\nFerramentas e indicadores:\n- ICSAP → mede a efetividade da APS (baralho próprio)\n- Educação em saúde dialógica (Paulo Freire) → valoriza o saber popular e a autonomia; supera a palestra \"bancária\"\n\nO que mais cai na UERJ:\n- Reconhecer o atributo descrito no caso (acesso × longitudinalidade × integralidade × coordenação).\n- Longitudinalidade ≠ continuidade de um problema.\n- Essenciais × derivados.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><defs><marker id=\"ap\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0L10,5L0,10z\" fill=\"var(--mute)\"/></marker></defs>\n<rect x=\"8\" y=\"172\" width=\"324\" height=\"30\" rx=\"10\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--ink)\">Família e comunidade no território (acesso de 1º contato)</text>\n<line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"128\" stroke=\"var(--mute)\" stroke-width=\"1.5\" marker-end=\"url(#ap)\"/>\n<circle cx=\"170\" cy=\"98\" r=\"30\" fill=\"var(--wine)\"/><text x=\"170\" y=\"95\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#fff\">APS</text><text x=\"170\" y=\"110\" text-anchor=\"middle\" font-size=\"9\" fill=\"#fff\">coordena</text>\n<g font-size=\"10\" fill=\"var(--ink)\"><rect x=\"8\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"54\" y=\"29\" text-anchor=\"middle\">Especialista</text>\n<rect x=\"124\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"29\" text-anchor=\"middle\">Hospital</text>\n<rect x=\"240\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"286\" y=\"29\" text-anchor=\"middle\">Urgência</text></g>\n<g stroke=\"var(--mute)\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"148\" y1=\"78\" x2=\"70\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"170\" y1=\"68\" x2=\"170\" y2=\"44\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"192\" y1=\"78\" x2=\"270\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/></g>\n<text x=\"40\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">referência</text><text x=\"252\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">contrarreferência</text>\n<text x=\"170\" y=\"150\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--mute)\">longitudinalidade: a mesma equipe acompanha a pessoa</text></svg>",
+        "legenda": "A APS é porta de entrada e coordena a rede (referência e contrarreferência)."
+      },
+      "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "aps-d1",
+      "tipo": "digitar",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
+      "sub": "Atributos da APS (Starfield) e PNAB",
+      "frente": "Qual atributo da APS integra o cuidado entre os diferentes serviços da rede?",
+      "verso": "**Coordenação.**\n\nComo aparece:\n- Referência e contrarreferência.\n- Prontuário e informações compartilhadas.",
+      "resposta": "coordenação",
+      "aceitas": [
+        "coordenacao do cuidado",
+        "coordenacao"
+      ],
+      "macete": "Coordenação = a APS é a \"maestra\" da rede.",
+      "prio": "alta",
+      "contexto": "**Atenção Primária à Saúde (APS) = porta de entrada preferencial e coordenadora do cuidado na rede; seus atributos são os de Barbara Starfield.**\n\nAtributos essenciais (Starfield):\n- **Acesso de primeiro contato** → porta de entrada para cada novo problema\n- **Longitudinalidade** → vínculo com a PESSOA ao longo do tempo, não com uma doença\n- **Integralidade** → reconhece e resolve a maior parte das necessidades (promoção, prevenção, cura, reabilitação, paliativo) e encaminha o resto\n- **Coordenação** → integra o cuidado entre os serviços (ver esquema)\n\nAtributos derivados:\n- Orientação familiar\n- Orientação comunitária\n- Competência cultural\n\nPNAB (Portaria 2.436/2017):\n- Estratégia Saúde da Família (ESF) → modelo prioritário\n- Equipe mínima → médico, enfermeiro, técnico/auxiliar de enfermagem e agente comunitário de saúde\n- Território adscrito, com cadastro das famílias\n- Funções na rede → ser base, ser resolutiva, coordenar o cuidado, ordenar as redes\n- Equipe de Atenção Primária (eAP) também é reconhecida\n\nFerramentas e indicadores:\n- ICSAP → mede a efetividade da APS (baralho próprio)\n- Educação em saúde dialógica (Paulo Freire) → valoriza o saber popular e a autonomia; supera a palestra \"bancária\"\n\nO que mais cai na UERJ:\n- Reconhecer o atributo descrito no caso (acesso × longitudinalidade × integralidade × coordenação).\n- Longitudinalidade ≠ continuidade de um problema.\n- Essenciais × derivados.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><defs><marker id=\"ap\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0L10,5L0,10z\" fill=\"var(--mute)\"/></marker></defs>\n<rect x=\"8\" y=\"172\" width=\"324\" height=\"30\" rx=\"10\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--ink)\">Família e comunidade no território (acesso de 1º contato)</text>\n<line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"128\" stroke=\"var(--mute)\" stroke-width=\"1.5\" marker-end=\"url(#ap)\"/>\n<circle cx=\"170\" cy=\"98\" r=\"30\" fill=\"var(--wine)\"/><text x=\"170\" y=\"95\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#fff\">APS</text><text x=\"170\" y=\"110\" text-anchor=\"middle\" font-size=\"9\" fill=\"#fff\">coordena</text>\n<g font-size=\"10\" fill=\"var(--ink)\"><rect x=\"8\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"54\" y=\"29\" text-anchor=\"middle\">Especialista</text>\n<rect x=\"124\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"29\" text-anchor=\"middle\">Hospital</text>\n<rect x=\"240\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"286\" y=\"29\" text-anchor=\"middle\">Urgência</text></g>\n<g stroke=\"var(--mute)\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"148\" y1=\"78\" x2=\"70\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"170\" y1=\"68\" x2=\"170\" y2=\"44\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"192\" y1=\"78\" x2=\"270\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/></g>\n<text x=\"40\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">referência</text><text x=\"252\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">contrarreferência</text>\n<text x=\"170\" y=\"150\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--mute)\">longitudinalidade: a mesma equipe acompanha a pessoa</text></svg>",
+        "legenda": "A APS é porta de entrada e coordena a rede (referência e contrarreferência)."
+      },
+      "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "aps-d2",
+      "tipo": "digitar",
+      "area": "Medicina Preventiva",
+      "tema": "Atenção Primária",
+      "sub": "Atributos da APS (Starfield) e PNAB",
+      "frente": "Qual o modelo prioritário de organização da APS no Brasil?",
+      "verso": "**Estratégia Saúde da Família (ESF).**\n\nEquipe mínima:\n- Médico\n- Enfermeiro\n- Técnico ou auxiliar de enfermagem\n- Agente comunitário de saúde",
+      "resposta": "Estratégia Saúde da Família",
+      "aceitas": [
+        "esf",
+        "saude da familia",
+        "estrategia de saude da familia",
+        "programa saude da familia"
+      ],
+      "macete": "ESF = \"Equipe Sempre na Família\".",
+      "prio": "alta",
+      "contexto": "**Atenção Primária à Saúde (APS) = porta de entrada preferencial e coordenadora do cuidado na rede; seus atributos são os de Barbara Starfield.**\n\nAtributos essenciais (Starfield):\n- **Acesso de primeiro contato** → porta de entrada para cada novo problema\n- **Longitudinalidade** → vínculo com a PESSOA ao longo do tempo, não com uma doença\n- **Integralidade** → reconhece e resolve a maior parte das necessidades (promoção, prevenção, cura, reabilitação, paliativo) e encaminha o resto\n- **Coordenação** → integra o cuidado entre os serviços (ver esquema)\n\nAtributos derivados:\n- Orientação familiar\n- Orientação comunitária\n- Competência cultural\n\nPNAB (Portaria 2.436/2017):\n- Estratégia Saúde da Família (ESF) → modelo prioritário\n- Equipe mínima → médico, enfermeiro, técnico/auxiliar de enfermagem e agente comunitário de saúde\n- Território adscrito, com cadastro das famílias\n- Funções na rede → ser base, ser resolutiva, coordenar o cuidado, ordenar as redes\n- Equipe de Atenção Primária (eAP) também é reconhecida\n\nFerramentas e indicadores:\n- ICSAP → mede a efetividade da APS (baralho próprio)\n- Educação em saúde dialógica (Paulo Freire) → valoriza o saber popular e a autonomia; supera a palestra \"bancária\"\n\nO que mais cai na UERJ:\n- Reconhecer o atributo descrito no caso (acesso × longitudinalidade × integralidade × coordenação).\n- Longitudinalidade ≠ continuidade de um problema.\n- Essenciais × derivados.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><defs><marker id=\"ap\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0L10,5L0,10z\" fill=\"var(--mute)\"/></marker></defs>\n<rect x=\"8\" y=\"172\" width=\"324\" height=\"30\" rx=\"10\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--ink)\">Família e comunidade no território (acesso de 1º contato)</text>\n<line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"128\" stroke=\"var(--mute)\" stroke-width=\"1.5\" marker-end=\"url(#ap)\"/>\n<circle cx=\"170\" cy=\"98\" r=\"30\" fill=\"var(--wine)\"/><text x=\"170\" y=\"95\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#fff\">APS</text><text x=\"170\" y=\"110\" text-anchor=\"middle\" font-size=\"9\" fill=\"#fff\">coordena</text>\n<g font-size=\"10\" fill=\"var(--ink)\"><rect x=\"8\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"54\" y=\"29\" text-anchor=\"middle\">Especialista</text>\n<rect x=\"124\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"29\" text-anchor=\"middle\">Hospital</text>\n<rect x=\"240\" y=\"10\" width=\"92\" height=\"30\" rx=\"8\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"286\" y=\"29\" text-anchor=\"middle\">Urgência</text></g>\n<g stroke=\"var(--mute)\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"148\" y1=\"78\" x2=\"70\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"170\" y1=\"68\" x2=\"170\" y2=\"44\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/><line x1=\"192\" y1=\"78\" x2=\"270\" y2=\"43\" marker-end=\"url(#ap)\" marker-start=\"url(#ap)\"/></g>\n<text x=\"40\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">referência</text><text x=\"252\" y=\"78\" font-size=\"9\" fill=\"var(--mute)\">contrarreferência</text>\n<text x=\"170\" y=\"150\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--mute)\">longitudinalidade: a mesma equipe acompanha a pessoa</text></svg>",
+        "legenda": "A APS é porta de entrada e coordena a rede (referência e contrarreferência)."
+      },
+      "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "sus-01",
+      "tipo": "flash",
+      "area": "Medicina Preventiva",
+      "tema": "SUS",
+      "sub": "Princípios do SUS e controle social",
+      "frente": "Princípios doutrinários × organizativos do SUS",
+      "verso": "**Doutrinários:**\n- Universalidade\n- Integralidade\n- Equidade\n\n**Organizativos:**\n- Descentralização\n- Regionalização e hierarquização\n- Participação popular",
+      "macete": "Doutrinários \"UIE\" (Universalidade, Integralidade, Equidade); o resto é como o sistema se organiza.",
+      "uerj": "Afirmativas trocando um princípio de grupo.",
+      "prio": "alta",
+      "contexto": "**SUS = sistema público e universal criado pela Constituição de 1988 (saúde é direito de todos e dever do Estado) e regulamentado pelas Leis 8.080 e 8.142 de 1990.**\n\nPrincípios doutrinários:\n- **Universalidade** → acesso para todos\n- **Integralidade** → a pessoa como um todo + promoção, prevenção, tratamento e reabilitação articulados entre os níveis\n- **Equidade** → tratar desigualmente os desiguais (mais para quem precisa mais)\n\nPrincípios organizativos:\n- Descentralização com comando único em cada esfera\n- Regionalização e hierarquização\n- Participação popular (controle social)\n\nLei 8.080/1990 (Lei Orgânica):\n- Organização e funcionamento do SUS\n- Competências das 3 esferas, vigilância, saúde do trabalhador, assistência farmacêutica\n- Setor privado participa de forma complementar (preferência às filantrópicas)\n\nLei 8.142/1990:\n- Participação da comunidade e transferências financeiras\n- **Conferências** → a cada 4 anos; avaliam a situação e propõem diretrizes\n- **Conselhos** → permanentes e deliberativos; fiscalizam inclusive o financiamento\n- Paridade → usuários = 50%; demais = 50% (Resolução CNS 453/2012: 25% trabalhadores, 25% gestores/prestadores)\n\nOutros marcos:\n- Decreto 7.508/2011 → regiões de saúde, RENASES, RENAME, contrato de ação pública\n- Comissões intergestores → CIT, CIB e CIR (ver esquema)\n- LC 141/2012 → mínimo aplicado em saúde: municípios 15% e estados 12% da receita\n\nO que mais cai na UERJ:\n- Doutrinários × organizativos (a banca troca).\n- Integralidade × equidade no caso.\n- 8.080 (funcionamento) × 8.142 (participação e financiamento) e a composição do conselho.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<g font-size=\"10\" fill=\"var(--ink)\">\n<rect x=\"6\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"56\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">União</text><text x=\"56\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Ministério da Saúde</text><text x=\"56\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Nacional</text>\n<rect x=\"120\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Estado</text><text x=\"170\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Estadual</text><text x=\"170\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Estadual</text>\n<rect x=\"234\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"284\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Município</text><text x=\"284\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Municipal</text><text x=\"284\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Municipal</text>\n<rect x=\"6\" y=\"84\" width=\"328\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"102\" text-anchor=\"middle\">CIT = União + estados + municípios (pactuação nacional)</text>\n<rect x=\"120\" y=\"120\" width=\"214\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"227\" y=\"138\" text-anchor=\"middle\">CIB = estado + municípios</text>\n<rect x=\"234\" y=\"156\" width=\"100\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"284\" y=\"174\" text-anchor=\"middle\">CIR = região</text>\n<text x=\"6\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">Conselhos: 50% usuários × 50% demais</text><text x=\"6\" y=\"214\" font-size=\"9.5\" fill=\"var(--mute)\">(25% trabalhadores + 25% gestores/prestadores)</text></g></svg>",
+        "legenda": "Gestão tripartite: cada esfera com seu gestor e seu conselho; pactuação nas comissões intergestores."
+      },
+      "fonte": "Constituição Federal de 1988 (art. 196–200); Lei 8.080/1990; Lei 8.142/1990; Decreto 7.508/2011; Resolução CNS 453/2012",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "sus-q1",
+      "tipo": "quiz",
+      "area": "Medicina Preventiva",
+      "tema": "SUS",
+      "sub": "Princípios do SUS e controle social",
+      "frente": "Sobre a participação da comunidade no SUS (Lei 8.142/1990), é correto afirmar:",
+      "opcoes": [
+        "As Conferências de Saúde se reúnem anualmente e têm caráter deliberativo permanente",
+        "Os Conselhos de Saúde são permanentes e deliberativos, com paridade entre usuários e o conjunto dos demais segmentos",
+        "A Lei 8.142 define as competências de cada esfera de governo na assistência",
+        "Os gestores ocupam 50% das vagas dos Conselhos de Saúde"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: conferências acontecem a cada 4 anos e propõem diretrizes; permanente é o conselho.",
+        "Correta: conselho é permanente e deliberativo; usuários têm 50% das vagas.",
+        "Errada: competências das esferas estão na Lei 8.080.",
+        "Errada: usuários têm 50%; gestores e prestadores, 25%."
+      ],
+      "macete": "ConSelho = Sempre (permanente); ConFerência = de 4 em 4 anos (Futuro: propõe diretrizes).",
+      "prio": "alta",
+      "contexto": "**SUS = sistema público e universal criado pela Constituição de 1988 (saúde é direito de todos e dever do Estado) e regulamentado pelas Leis 8.080 e 8.142 de 1990.**\n\nPrincípios doutrinários:\n- **Universalidade** → acesso para todos\n- **Integralidade** → a pessoa como um todo + promoção, prevenção, tratamento e reabilitação articulados entre os níveis\n- **Equidade** → tratar desigualmente os desiguais (mais para quem precisa mais)\n\nPrincípios organizativos:\n- Descentralização com comando único em cada esfera\n- Regionalização e hierarquização\n- Participação popular (controle social)\n\nLei 8.080/1990 (Lei Orgânica):\n- Organização e funcionamento do SUS\n- Competências das 3 esferas, vigilância, saúde do trabalhador, assistência farmacêutica\n- Setor privado participa de forma complementar (preferência às filantrópicas)\n\nLei 8.142/1990:\n- Participação da comunidade e transferências financeiras\n- **Conferências** → a cada 4 anos; avaliam a situação e propõem diretrizes\n- **Conselhos** → permanentes e deliberativos; fiscalizam inclusive o financiamento\n- Paridade → usuários = 50%; demais = 50% (Resolução CNS 453/2012: 25% trabalhadores, 25% gestores/prestadores)\n\nOutros marcos:\n- Decreto 7.508/2011 → regiões de saúde, RENASES, RENAME, contrato de ação pública\n- Comissões intergestores → CIT, CIB e CIR (ver esquema)\n- LC 141/2012 → mínimo aplicado em saúde: municípios 15% e estados 12% da receita\n\nO que mais cai na UERJ:\n- Doutrinários × organizativos (a banca troca).\n- Integralidade × equidade no caso.\n- 8.080 (funcionamento) × 8.142 (participação e financiamento) e a composição do conselho.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<g font-size=\"10\" fill=\"var(--ink)\">\n<rect x=\"6\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"56\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">União</text><text x=\"56\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Ministério da Saúde</text><text x=\"56\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Nacional</text>\n<rect x=\"120\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Estado</text><text x=\"170\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Estadual</text><text x=\"170\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Estadual</text>\n<rect x=\"234\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"284\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Município</text><text x=\"284\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Municipal</text><text x=\"284\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Municipal</text>\n<rect x=\"6\" y=\"84\" width=\"328\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"102\" text-anchor=\"middle\">CIT = União + estados + municípios (pactuação nacional)</text>\n<rect x=\"120\" y=\"120\" width=\"214\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"227\" y=\"138\" text-anchor=\"middle\">CIB = estado + municípios</text>\n<rect x=\"234\" y=\"156\" width=\"100\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"284\" y=\"174\" text-anchor=\"middle\">CIR = região</text>\n<text x=\"6\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">Conselhos: 50% usuários × 50% demais</text><text x=\"6\" y=\"214\" font-size=\"9.5\" fill=\"var(--mute)\">(25% trabalhadores + 25% gestores/prestadores)</text></g></svg>",
+        "legenda": "Gestão tripartite: cada esfera com seu gestor e seu conselho; pactuação nas comissões intergestores."
+      },
+      "fonte": "Constituição Federal de 1988 (art. 196–200); Lei 8.080/1990; Lei 8.142/1990; Decreto 7.508/2011; Resolução CNS 453/2012",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "sus-d1",
+      "tipo": "digitar",
+      "area": "Medicina Preventiva",
+      "tema": "SUS",
+      "sub": "Princípios do SUS e controle social",
+      "frente": "Qual princípio do SUS significa tratar desigualmente os desiguais?",
+      "verso": "**Equidade.**\n\nComparação:\n- Universalidade → acesso para todos.\n- Integralidade → todas as ações para a pessoa inteira.",
+      "resposta": "equidade",
+      "aceitas": [
+        "equidade"
+      ],
+      "macete": "Equidade = \"Extra para quem tem menos\".",
+      "prio": "alta",
+      "contexto": "**SUS = sistema público e universal criado pela Constituição de 1988 (saúde é direito de todos e dever do Estado) e regulamentado pelas Leis 8.080 e 8.142 de 1990.**\n\nPrincípios doutrinários:\n- **Universalidade** → acesso para todos\n- **Integralidade** → a pessoa como um todo + promoção, prevenção, tratamento e reabilitação articulados entre os níveis\n- **Equidade** → tratar desigualmente os desiguais (mais para quem precisa mais)\n\nPrincípios organizativos:\n- Descentralização com comando único em cada esfera\n- Regionalização e hierarquização\n- Participação popular (controle social)\n\nLei 8.080/1990 (Lei Orgânica):\n- Organização e funcionamento do SUS\n- Competências das 3 esferas, vigilância, saúde do trabalhador, assistência farmacêutica\n- Setor privado participa de forma complementar (preferência às filantrópicas)\n\nLei 8.142/1990:\n- Participação da comunidade e transferências financeiras\n- **Conferências** → a cada 4 anos; avaliam a situação e propõem diretrizes\n- **Conselhos** → permanentes e deliberativos; fiscalizam inclusive o financiamento\n- Paridade → usuários = 50%; demais = 50% (Resolução CNS 453/2012: 25% trabalhadores, 25% gestores/prestadores)\n\nOutros marcos:\n- Decreto 7.508/2011 → regiões de saúde, RENASES, RENAME, contrato de ação pública\n- Comissões intergestores → CIT, CIB e CIR (ver esquema)\n- LC 141/2012 → mínimo aplicado em saúde: municípios 15% e estados 12% da receita\n\nO que mais cai na UERJ:\n- Doutrinários × organizativos (a banca troca).\n- Integralidade × equidade no caso.\n- 8.080 (funcionamento) × 8.142 (participação e financiamento) e a composição do conselho.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<g font-size=\"10\" fill=\"var(--ink)\">\n<rect x=\"6\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"56\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">União</text><text x=\"56\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Ministério da Saúde</text><text x=\"56\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Nacional</text>\n<rect x=\"120\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Estado</text><text x=\"170\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Estadual</text><text x=\"170\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Estadual</text>\n<rect x=\"234\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"284\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Município</text><text x=\"284\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Municipal</text><text x=\"284\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Municipal</text>\n<rect x=\"6\" y=\"84\" width=\"328\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"102\" text-anchor=\"middle\">CIT = União + estados + municípios (pactuação nacional)</text>\n<rect x=\"120\" y=\"120\" width=\"214\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"227\" y=\"138\" text-anchor=\"middle\">CIB = estado + municípios</text>\n<rect x=\"234\" y=\"156\" width=\"100\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"284\" y=\"174\" text-anchor=\"middle\">CIR = região</text>\n<text x=\"6\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">Conselhos: 50% usuários × 50% demais</text><text x=\"6\" y=\"214\" font-size=\"9.5\" fill=\"var(--mute)\">(25% trabalhadores + 25% gestores/prestadores)</text></g></svg>",
+        "legenda": "Gestão tripartite: cada esfera com seu gestor e seu conselho; pactuação nas comissões intergestores."
+      },
+      "fonte": "Constituição Federal de 1988 (art. 196–200); Lei 8.080/1990; Lei 8.142/1990; Decreto 7.508/2011; Resolução CNS 453/2012",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "sus-d2",
+      "tipo": "digitar",
+      "area": "Medicina Preventiva",
+      "tema": "SUS",
+      "sub": "Princípios do SUS e controle social",
+      "frente": "Qual lei trata da participação da comunidade e do financiamento do SUS?",
+      "verso": "**Lei 8.142/1990.**\n\nComparação:\n- Lei 8.080/1990 → organização e funcionamento do SUS.",
+      "resposta": "8.142/1990",
+      "aceitas": [
+        "8142",
+        "lei 8142",
+        "8.142",
+        "8142/90",
+        "lei 8.142",
+        "8142/1990"
+      ],
+      "macete": "8.142: \"P\" de Participação — 2 instâncias (conferência e conselho), conferência de 4 em 4 anos.",
+      "prio": "alta",
+      "contexto": "**SUS = sistema público e universal criado pela Constituição de 1988 (saúde é direito de todos e dever do Estado) e regulamentado pelas Leis 8.080 e 8.142 de 1990.**\n\nPrincípios doutrinários:\n- **Universalidade** → acesso para todos\n- **Integralidade** → a pessoa como um todo + promoção, prevenção, tratamento e reabilitação articulados entre os níveis\n- **Equidade** → tratar desigualmente os desiguais (mais para quem precisa mais)\n\nPrincípios organizativos:\n- Descentralização com comando único em cada esfera\n- Regionalização e hierarquização\n- Participação popular (controle social)\n\nLei 8.080/1990 (Lei Orgânica):\n- Organização e funcionamento do SUS\n- Competências das 3 esferas, vigilância, saúde do trabalhador, assistência farmacêutica\n- Setor privado participa de forma complementar (preferência às filantrópicas)\n\nLei 8.142/1990:\n- Participação da comunidade e transferências financeiras\n- **Conferências** → a cada 4 anos; avaliam a situação e propõem diretrizes\n- **Conselhos** → permanentes e deliberativos; fiscalizam inclusive o financiamento\n- Paridade → usuários = 50%; demais = 50% (Resolução CNS 453/2012: 25% trabalhadores, 25% gestores/prestadores)\n\nOutros marcos:\n- Decreto 7.508/2011 → regiões de saúde, RENASES, RENAME, contrato de ação pública\n- Comissões intergestores → CIT, CIB e CIR (ver esquema)\n- LC 141/2012 → mínimo aplicado em saúde: municípios 15% e estados 12% da receita\n\nO que mais cai na UERJ:\n- Doutrinários × organizativos (a banca troca).\n- Integralidade × equidade no caso.\n- 8.080 (funcionamento) × 8.142 (participação e financiamento) e a composição do conselho.",
+      "ctxvisual": {
+        "tipo": "svg",
+        "svg": "<svg viewBox=\"0 0 340 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\">\n<g font-size=\"10\" fill=\"var(--ink)\">\n<rect x=\"6\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"56\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">União</text><text x=\"56\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Ministério da Saúde</text><text x=\"56\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Nacional</text>\n<rect x=\"120\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"170\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Estado</text><text x=\"170\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Estadual</text><text x=\"170\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Estadual</text>\n<rect x=\"234\" y=\"8\" width=\"100\" height=\"62\" rx=\"10\" fill=\"var(--card)\" stroke=\"var(--line)\"/><text x=\"284\" y=\"28\" text-anchor=\"middle\" font-weight=\"700\" fill=\"var(--wine)\">Município</text><text x=\"284\" y=\"44\" text-anchor=\"middle\" font-size=\"9\">Sec. Municipal</text><text x=\"284\" y=\"59\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--mute)\">Conselho Municipal</text>\n<rect x=\"6\" y=\"84\" width=\"328\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"170\" y=\"102\" text-anchor=\"middle\">CIT = União + estados + municípios (pactuação nacional)</text>\n<rect x=\"120\" y=\"120\" width=\"214\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"227\" y=\"138\" text-anchor=\"middle\">CIB = estado + municípios</text>\n<rect x=\"234\" y=\"156\" width=\"100\" height=\"28\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"284\" y=\"174\" text-anchor=\"middle\">CIR = região</text>\n<text x=\"6\" y=\"200\" font-size=\"9.5\" fill=\"var(--mute)\">Conselhos: 50% usuários × 50% demais</text><text x=\"6\" y=\"214\" font-size=\"9.5\" fill=\"var(--mute)\">(25% trabalhadores + 25% gestores/prestadores)</text></g></svg>",
+        "legenda": "Gestão tripartite: cada esfera com seu gestor e seu conselho; pactuação nas comissões intergestores."
+      },
+      "fonte": "Constituição Federal de 1988 (art. 196–200); Lei 8.080/1990; Lei 8.142/1990; Decreto 7.508/2011; Resolução CNS 453/2012",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "pe-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Síndromes hipertensivas",
+      "sub": "Pré-eclâmpsia e síndromes hipertensivas da gestação",
+      "frente": "Pré-eclâmpsia: quais são os sinais de gravidade?",
+      "verso": "**Sinais de gravidade:**\n- PA ≥ 160/110\n- Cefaleia, escotomas ou epigastralgia\n- Plaquetas < 100 mil\n- Transaminases ≥ 2×\n- Creatinina > 1,1\n- Edema agudo de pulmão\n\nConduta:\n- ≥ 34 semanas → parto.\n- < 34 semanas → corticoide + MgSO₄ e interromper conforme a estabilidade.\n- Proteinúria alta isolada NÃO é critério de gravidade.",
+      "macete": "Gravidade = \"PACOTE\": PA ≥ 160/110, Alteração visual/cefaleia, Creatinina, O fígado (epigastralgia/transaminase), Trombocitopenia, Edema de pulmão.",
+      "pegadinha": "Classificar como grave só pelo valor da proteinúria.",
+      "uerj": "Caso com PA alta e exames normais = pré-eclâmpsia SEM gravidade.",
+      "prio": "alta",
+      "contexto": "**Pré-eclâmpsia = hipertensão após 20 semanas + proteinúria OU disfunção de órgão-alvo, causada por placentação defeituosa.**\n\nFisiopatologia:\n- Falha da 2ª onda de invasão trofoblástica nas artérias espiraladas → isquemia placentária\n- Desequilíbrio angiogênico (↑ sFlt-1, ↓ PlGF) → disfunção endotelial sistêmica\n\nClassificação:\n- **Hipertensão crônica** → prévia ou antes de 20 semanas\n- **Hipertensão gestacional** → após 20 semanas, sem proteinúria nem lesão de órgão\n- **Pré-eclâmpsia** → após 20 semanas + proteinúria (≥ 300 mg/24 h ou P/C ≥ 0,3) ou disfunção de órgão\n- **Sobreposta** → HAS crônica + após 20 semanas: proteinúria nova ou piora súbita, PA de difícil controle ou lesão de órgão\n- **Eclâmpsia** → convulsão; **HELLP** → hemólise, enzimas hepáticas altas, plaquetas baixas\n\nSinais de gravidade:\n- PA ≥ 160/110\n- Cefaleia, escotomas, epigastralgia\n- Plaquetas < 100 mil, transaminases ≥ 2×, creatinina > 1,1\n- Edema agudo de pulmão\n\nConduta:\n- Sem gravidade → expectante até 37 semanas\n- Com gravidade ≥ 34 semanas → parto\n- Com gravidade < 34 semanas → corticoide + MgSO₄, estabilizar e interromper conforme o quadro\n- Crise hipertensiva → hidralazina EV, nifedipino VO ou labetalol; meta < 160/110\n- Anti-hipertensivo de manutenção → metildopa ou nifedipino; IECA/BRA proibidos\n\nSulfato de magnésio (esquemas e monitorização no quadro):\n- Previne e trata eclâmpsia; neuroproteção fetal < 32 semanas\n- NÃO é anti-hipertensivo\n\nPrevenção:\n- AAS 100–150 mg à noite, de 12–16 semanas até 36 semanas\n- Indicação → ≥ 1 fator de ALTO risco ou ≥ 2 moderados\n- Alto risco → pré-eclâmpsia prévia, gemelar, HAS crônica, DM prévio, DRC, LES/SAF\n- Moderado → nuliparidade, obesidade, ≥ 35 anos, história familiar, FIV\n- Cálcio 1–2 g/dia se a ingestão for baixa\n\nComplicações:\n- DPP (hipertensão é o principal fator de risco)\n- Eclâmpsia, HELLP, AVC, EAP, restrição de crescimento fetal\n\nO que mais cai na UERJ:\n- Classificar o quadro (gestacional × pré-eclâmpsia sem/com gravidade × sobreposta).\n- Indicações e toxicidade do MgSO₄ (reflexo patelar; antídoto gluconato de cálcio).\n- Quem recebe AAS e quando começar.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Sulfato de magnésio — Zuspan",
+            "itens": [
+              "Ataque: 4 g EV em 10–20 min",
+              "Manutenção: 1 g/h EV"
+            ]
+          },
+          {
+            "t": "Sulfato de magnésio — Pritchard",
+            "itens": [
+              "Ataque: 4 g EV + 10 g IM",
+              "Manutenção: 5 g IM a cada 4 h"
+            ]
+          },
+          {
+            "t": "Monitorar (alterou → suspender)",
+            "itens": [
+              "Reflexo patelar presente",
+              "FR ≥ 16 irpm",
+              "Diurese ≥ 25–30 mL/h",
+              "Antídoto: gluconato de cálcio 10%"
+            ]
+          }
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manual de Gestação de Alto Risco (2022); FEBRASGO/RBEHG — Pré-eclâmpsia (2023); ISSHP 2021",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "pe-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Síndromes hipertensivas",
+      "sub": "Pré-eclâmpsia e síndromes hipertensivas da gestação",
+      "frente": "Gestante de 33 semanas em uso de sulfato de magnésio (Zuspan) por pré-eclâmpsia grave apresenta, após 12 horas, reflexo patelar abolido, FR 14 irpm e diurese de 20 mL/h. Qual a conduta?",
+      "opcoes": [
+        "Aumentar a infusão para 2 g/h",
+        "Suspender o sulfato e administrar gluconato de cálcio 10% EV",
+        "Associar hidralazina EV",
+        "Manter a infusão e repetir a dose de ataque"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: há sinais de intoxicação; aumentar a dose pode causar parada respiratória.",
+        "Correta: reflexo abolido + FR < 16 + oligúria = intoxicação → suspender e dar o antídoto.",
+        "Errada: o problema é a toxicidade do magnésio, não a PA.",
+        "Errada: piora a intoxicação."
+      ],
+      "macete": "Magnésio alto: primeiro \"cai o joelho\" (reflexo), depois a respiração, depois o coração.",
+      "prio": "alta",
+      "contexto": "**Pré-eclâmpsia = hipertensão após 20 semanas + proteinúria OU disfunção de órgão-alvo, causada por placentação defeituosa.**\n\nFisiopatologia:\n- Falha da 2ª onda de invasão trofoblástica nas artérias espiraladas → isquemia placentária\n- Desequilíbrio angiogênico (↑ sFlt-1, ↓ PlGF) → disfunção endotelial sistêmica\n\nClassificação:\n- **Hipertensão crônica** → prévia ou antes de 20 semanas\n- **Hipertensão gestacional** → após 20 semanas, sem proteinúria nem lesão de órgão\n- **Pré-eclâmpsia** → após 20 semanas + proteinúria (≥ 300 mg/24 h ou P/C ≥ 0,3) ou disfunção de órgão\n- **Sobreposta** → HAS crônica + após 20 semanas: proteinúria nova ou piora súbita, PA de difícil controle ou lesão de órgão\n- **Eclâmpsia** → convulsão; **HELLP** → hemólise, enzimas hepáticas altas, plaquetas baixas\n\nSinais de gravidade:\n- PA ≥ 160/110\n- Cefaleia, escotomas, epigastralgia\n- Plaquetas < 100 mil, transaminases ≥ 2×, creatinina > 1,1\n- Edema agudo de pulmão\n\nConduta:\n- Sem gravidade → expectante até 37 semanas\n- Com gravidade ≥ 34 semanas → parto\n- Com gravidade < 34 semanas → corticoide + MgSO₄, estabilizar e interromper conforme o quadro\n- Crise hipertensiva → hidralazina EV, nifedipino VO ou labetalol; meta < 160/110\n- Anti-hipertensivo de manutenção → metildopa ou nifedipino; IECA/BRA proibidos\n\nSulfato de magnésio (esquemas e monitorização no quadro):\n- Previne e trata eclâmpsia; neuroproteção fetal < 32 semanas\n- NÃO é anti-hipertensivo\n\nPrevenção:\n- AAS 100–150 mg à noite, de 12–16 semanas até 36 semanas\n- Indicação → ≥ 1 fator de ALTO risco ou ≥ 2 moderados\n- Alto risco → pré-eclâmpsia prévia, gemelar, HAS crônica, DM prévio, DRC, LES/SAF\n- Moderado → nuliparidade, obesidade, ≥ 35 anos, história familiar, FIV\n- Cálcio 1–2 g/dia se a ingestão for baixa\n\nComplicações:\n- DPP (hipertensão é o principal fator de risco)\n- Eclâmpsia, HELLP, AVC, EAP, restrição de crescimento fetal\n\nO que mais cai na UERJ:\n- Classificar o quadro (gestacional × pré-eclâmpsia sem/com gravidade × sobreposta).\n- Indicações e toxicidade do MgSO₄ (reflexo patelar; antídoto gluconato de cálcio).\n- Quem recebe AAS e quando começar.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Sulfato de magnésio — Zuspan",
+            "itens": [
+              "Ataque: 4 g EV em 10–20 min",
+              "Manutenção: 1 g/h EV"
+            ]
+          },
+          {
+            "t": "Sulfato de magnésio — Pritchard",
+            "itens": [
+              "Ataque: 4 g EV + 10 g IM",
+              "Manutenção: 5 g IM a cada 4 h"
+            ]
+          },
+          {
+            "t": "Monitorar (alterou → suspender)",
+            "itens": [
+              "Reflexo patelar presente",
+              "FR ≥ 16 irpm",
+              "Diurese ≥ 25–30 mL/h",
+              "Antídoto: gluconato de cálcio 10%"
+            ]
+          }
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manual de Gestação de Alto Risco (2022); FEBRASGO/RBEHG — Pré-eclâmpsia (2023); ISSHP 2021",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "pe-d1",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Síndromes hipertensivas",
+      "sub": "Pré-eclâmpsia e síndromes hipertensivas da gestação",
+      "frente": "Qual o primeiro sinal de intoxicação pelo sulfato de magnésio?",
+      "verso": "**Perda do reflexo patelar.**\n\nSequência:\n- Reflexo abolido → depressão respiratória → parada cardíaca.\n\nAntídoto:\n- Gluconato de cálcio 10% EV.",
+      "resposta": "perda do reflexo patelar",
+      "aceitas": [
+        "reflexo patelar abolido",
+        "abolicao do reflexo patelar",
+        "arreflexia patelar",
+        "hiporreflexia patelar",
+        "perda do reflexo"
+      ],
+      "macete": "Antes de cada dose: \"bate no joelho\".",
+      "prio": "alta",
+      "contexto": "**Pré-eclâmpsia = hipertensão após 20 semanas + proteinúria OU disfunção de órgão-alvo, causada por placentação defeituosa.**\n\nFisiopatologia:\n- Falha da 2ª onda de invasão trofoblástica nas artérias espiraladas → isquemia placentária\n- Desequilíbrio angiogênico (↑ sFlt-1, ↓ PlGF) → disfunção endotelial sistêmica\n\nClassificação:\n- **Hipertensão crônica** → prévia ou antes de 20 semanas\n- **Hipertensão gestacional** → após 20 semanas, sem proteinúria nem lesão de órgão\n- **Pré-eclâmpsia** → após 20 semanas + proteinúria (≥ 300 mg/24 h ou P/C ≥ 0,3) ou disfunção de órgão\n- **Sobreposta** → HAS crônica + após 20 semanas: proteinúria nova ou piora súbita, PA de difícil controle ou lesão de órgão\n- **Eclâmpsia** → convulsão; **HELLP** → hemólise, enzimas hepáticas altas, plaquetas baixas\n\nSinais de gravidade:\n- PA ≥ 160/110\n- Cefaleia, escotomas, epigastralgia\n- Plaquetas < 100 mil, transaminases ≥ 2×, creatinina > 1,1\n- Edema agudo de pulmão\n\nConduta:\n- Sem gravidade → expectante até 37 semanas\n- Com gravidade ≥ 34 semanas → parto\n- Com gravidade < 34 semanas → corticoide + MgSO₄, estabilizar e interromper conforme o quadro\n- Crise hipertensiva → hidralazina EV, nifedipino VO ou labetalol; meta < 160/110\n- Anti-hipertensivo de manutenção → metildopa ou nifedipino; IECA/BRA proibidos\n\nSulfato de magnésio (esquemas e monitorização no quadro):\n- Previne e trata eclâmpsia; neuroproteção fetal < 32 semanas\n- NÃO é anti-hipertensivo\n\nPrevenção:\n- AAS 100–150 mg à noite, de 12–16 semanas até 36 semanas\n- Indicação → ≥ 1 fator de ALTO risco ou ≥ 2 moderados\n- Alto risco → pré-eclâmpsia prévia, gemelar, HAS crônica, DM prévio, DRC, LES/SAF\n- Moderado → nuliparidade, obesidade, ≥ 35 anos, história familiar, FIV\n- Cálcio 1–2 g/dia se a ingestão for baixa\n\nComplicações:\n- DPP (hipertensão é o principal fator de risco)\n- Eclâmpsia, HELLP, AVC, EAP, restrição de crescimento fetal\n\nO que mais cai na UERJ:\n- Classificar o quadro (gestacional × pré-eclâmpsia sem/com gravidade × sobreposta).\n- Indicações e toxicidade do MgSO₄ (reflexo patelar; antídoto gluconato de cálcio).\n- Quem recebe AAS e quando começar.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Sulfato de magnésio — Zuspan",
+            "itens": [
+              "Ataque: 4 g EV em 10–20 min",
+              "Manutenção: 1 g/h EV"
+            ]
+          },
+          {
+            "t": "Sulfato de magnésio — Pritchard",
+            "itens": [
+              "Ataque: 4 g EV + 10 g IM",
+              "Manutenção: 5 g IM a cada 4 h"
+            ]
+          },
+          {
+            "t": "Monitorar (alterou → suspender)",
+            "itens": [
+              "Reflexo patelar presente",
+              "FR ≥ 16 irpm",
+              "Diurese ≥ 25–30 mL/h",
+              "Antídoto: gluconato de cálcio 10%"
+            ]
+          }
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manual de Gestação de Alto Risco (2022); FEBRASGO/RBEHG — Pré-eclâmpsia (2023); ISSHP 2021",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "pe-d2",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Síndromes hipertensivas",
+      "sub": "Pré-eclâmpsia e síndromes hipertensivas da gestação",
+      "frente": "Até quando se mantém o AAS na prevenção de pré-eclâmpsia?",
+      "verso": "**Até 36 semanas.**\n\nComo:\n- AAS 100–150 mg à noite.\n- Começar entre 12 e 16 semanas (até 20).",
+      "resposta": "36 semanas",
+      "aceitas": [
+        "36",
+        "ate 36 semanas",
+        "36 sem"
+      ],
+      "macete": "AAS \"de 12 a 36\" — começa no 1º trimestre, para no fim do 8º mês.",
+      "prio": "alta",
+      "contexto": "**Pré-eclâmpsia = hipertensão após 20 semanas + proteinúria OU disfunção de órgão-alvo, causada por placentação defeituosa.**\n\nFisiopatologia:\n- Falha da 2ª onda de invasão trofoblástica nas artérias espiraladas → isquemia placentária\n- Desequilíbrio angiogênico (↑ sFlt-1, ↓ PlGF) → disfunção endotelial sistêmica\n\nClassificação:\n- **Hipertensão crônica** → prévia ou antes de 20 semanas\n- **Hipertensão gestacional** → após 20 semanas, sem proteinúria nem lesão de órgão\n- **Pré-eclâmpsia** → após 20 semanas + proteinúria (≥ 300 mg/24 h ou P/C ≥ 0,3) ou disfunção de órgão\n- **Sobreposta** → HAS crônica + após 20 semanas: proteinúria nova ou piora súbita, PA de difícil controle ou lesão de órgão\n- **Eclâmpsia** → convulsão; **HELLP** → hemólise, enzimas hepáticas altas, plaquetas baixas\n\nSinais de gravidade:\n- PA ≥ 160/110\n- Cefaleia, escotomas, epigastralgia\n- Plaquetas < 100 mil, transaminases ≥ 2×, creatinina > 1,1\n- Edema agudo de pulmão\n\nConduta:\n- Sem gravidade → expectante até 37 semanas\n- Com gravidade ≥ 34 semanas → parto\n- Com gravidade < 34 semanas → corticoide + MgSO₄, estabilizar e interromper conforme o quadro\n- Crise hipertensiva → hidralazina EV, nifedipino VO ou labetalol; meta < 160/110\n- Anti-hipertensivo de manutenção → metildopa ou nifedipino; IECA/BRA proibidos\n\nSulfato de magnésio (esquemas e monitorização no quadro):\n- Previne e trata eclâmpsia; neuroproteção fetal < 32 semanas\n- NÃO é anti-hipertensivo\n\nPrevenção:\n- AAS 100–150 mg à noite, de 12–16 semanas até 36 semanas\n- Indicação → ≥ 1 fator de ALTO risco ou ≥ 2 moderados\n- Alto risco → pré-eclâmpsia prévia, gemelar, HAS crônica, DM prévio, DRC, LES/SAF\n- Moderado → nuliparidade, obesidade, ≥ 35 anos, história familiar, FIV\n- Cálcio 1–2 g/dia se a ingestão for baixa\n\nComplicações:\n- DPP (hipertensão é o principal fator de risco)\n- Eclâmpsia, HELLP, AVC, EAP, restrição de crescimento fetal\n\nO que mais cai na UERJ:\n- Classificar o quadro (gestacional × pré-eclâmpsia sem/com gravidade × sobreposta).\n- Indicações e toxicidade do MgSO₄ (reflexo patelar; antídoto gluconato de cálcio).\n- Quem recebe AAS e quando começar.",
+      "ctxvisual": {
+        "tipo": "grupos",
+        "grupos": [
+          {
+            "t": "Sulfato de magnésio — Zuspan",
+            "itens": [
+              "Ataque: 4 g EV em 10–20 min",
+              "Manutenção: 1 g/h EV"
+            ]
+          },
+          {
+            "t": "Sulfato de magnésio — Pritchard",
+            "itens": [
+              "Ataque: 4 g EV + 10 g IM",
+              "Manutenção: 5 g IM a cada 4 h"
+            ]
+          },
+          {
+            "t": "Monitorar (alterou → suspender)",
+            "itens": [
+              "Reflexo patelar presente",
+              "FR ≥ 16 irpm",
+              "Diurese ≥ 25–30 mL/h",
+              "Antídoto: gluconato de cálcio 10%"
+            ]
+          }
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manual de Gestação de Alto Risco (2022); FEBRASGO/RBEHG — Pré-eclâmpsia (2023); ISSHP 2021",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "tp-01",
+      "tipo": "flash",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Trabalho de parto — partograma, estática fetal e assistência",
+      "frente": "Partograma: parada secundária da dilatação × fase ativa prolongada",
+      "verso": "**Parada secundária da dilatação → desproporção → cesárea.**\n**Fase ativa prolongada → hipoatividade → ocitocina.**\n\nComo reconhecer:\n- Parada → mesma dilatação em 2 toques com 2 h de intervalo.\n- Prolongada → dilatação < 1 cm/h (cruza a linha de alerta).\n- Parada da descida → mesma altura em 2 toques com 1 h, com dilatação completa.",
+      "macete": "PARADA = \"Para tudo, opera\" (desproporção); PROLONGADA = \"Precisa de ocitocina\".",
+      "uerj": "Partograma desenhado no enunciado para nomear a distocia.",
+      "prio": "alta",
+      "contexto": "**Trabalho de parto = contrações regulares que dilatam o colo; a fase ativa começa por volta de 5 cm (OMS) e é acompanhada pelo partograma.**\n\nPeríodos:\n- **1º (dilatação)** → fase latente até ~5 cm; fase ativa até 10 cm\n- **2º (expulsivo)** → da dilatação completa ao nascimento\n- **3º (dequitação)** → até a saída da placenta (até 30 min)\n- **4º (Greenberg)** → 1ª hora após a dequitação; risco de hemorragia\n\nEstática fetal:\n- **Situação** → longitudinal, transversa ou oblíqua\n- **Apresentação** → cefálica, pélvica ou córmica\n- **Posição** → lado do dorso fetal (esquerda/direita)\n- **Atitude** → grau de flexão\n- **Variedade de posição** → referência fetal × pelve materna (occipital na cefálica fletida: OEA, ODP…)\n- **Altura** → planos de DeLee (0 = espinhas isquiáticas) ou de Hodge\n\nManobras de Leopold:\n- 1º tempo → fundo uterino (polo fúndico)\n- 2º → flancos (dorso → posição)\n- 3º → polo inferior (apresentação e mobilidade)\n- 4º → insinuação (examinador voltado para os pés da paciente)\n\nPartograma:\n- Abre na fase ativa; linha de ação 4 h à direita da de alerta\n- Distocias e condutas no quadro\n\nBoas práticas na assistência:\n- Liberdade de posição, deambulação, dieta leve, acompanhante (Lei 11.108)\n- Métodos não farmacológicos para dor; analgesia quando a mulher desejar\n- Contato pele a pele e clampeamento tardio (1–3 min)\n- Não fazer de rotina → enema, tricotomia, amniotomia precoce, episiotomia, ocitocina\n- Manobra de Kristeller é proscrita\n\n3º período e hemorragia:\n- Ocitocina 10 UI IM logo após o nascimento → previne hemorragia pós-parto\n- HPP → causa nº 1 é atonia (4 Ts: tônus, trauma, tecido, trombina)\n\nOcitocina:\n- Usos → indução/condução, prevenção e tratamento da atonia\n- Contraindicações = as do parto vaginal (placenta prévia total, situação transversa, cicatriz uterina corporal, desproporção, sofrimento fetal, taquissistolia)\n\nO que mais cai na UERJ:\n- Interpretar o partograma e nomear a distocia.\n- Leopold tempo a tempo e estática fetal.\n- O que não fazer de rotina na assistência ao parto.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Distocia",
+          "No partograma",
+          "Causa e conduta"
+        ],
+        "linhas": [
+          [
+            "Fase ativa prolongada",
+            "Dilatação < 1 cm/h; cruza a linha de alerta",
+            "Hipoatividade → ocitocina/amniotomia"
+          ],
+          [
+            "Parada secundária da dilatação",
+            "Mesma dilatação em 2 toques com 2 h",
+            "Desproporção → cesárea"
+          ],
+          [
+            "Período pélvico prolongado",
+            "Descida lenta com dilatação completa",
+            "Hipoatividade → ocitocina; fórcipe/vácuo se indicado"
+          ],
+          [
+            "Parada secundária da descida",
+            "Mesma altura em 2 toques com 1 h, dilatação completa",
+            "Desproporção → fórcipe (se condições) ou cesárea"
+          ],
+          [
+            "Parto precipitado",
+            "Dilatação + expulsão em < 4 h",
+            "Taquissistolia → laceração e hipóxia"
+          ]
+        ]
+      },
+      "fonte": "OMS — Intrapartum care for a positive childbirth experience (2018); MS — Diretrizes Nacionais de Assistência ao Parto Normal (2017); Zugaib Obstetrícia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "tp-q1",
+      "tipo": "quiz",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Trabalho de parto — partograma, estática fetal e assistência",
+      "frente": "Na palpação obstétrica, o examinador, voltado para os pés da gestante, procura avaliar a penetração do polo fetal na pelve. Trata-se de qual tempo das manobras de Leopold?",
+      "opcoes": [
+        "1º tempo",
+        "2º tempo",
+        "3º tempo",
+        "4º tempo"
+      ],
+      "certa": 3,
+      "comentarios": [
+        "Errada: o 1º tempo palpa o fundo uterino.",
+        "Errada: o 2º palpa os flancos para achar o dorso.",
+        "Errada: o 3º palpa o polo inferior e sua mobilidade.",
+        "Correta: no 4º tempo o examinador vira para os pés da paciente e avalia a insinuação."
+      ],
+      "macete": "Leopold em ordem: Fundo → Flancos → Fundo de baixo (polo) → \"Fim\": vira para os pés e vê a insinuação.",
+      "prio": "alta",
+      "contexto": "**Trabalho de parto = contrações regulares que dilatam o colo; a fase ativa começa por volta de 5 cm (OMS) e é acompanhada pelo partograma.**\n\nPeríodos:\n- **1º (dilatação)** → fase latente até ~5 cm; fase ativa até 10 cm\n- **2º (expulsivo)** → da dilatação completa ao nascimento\n- **3º (dequitação)** → até a saída da placenta (até 30 min)\n- **4º (Greenberg)** → 1ª hora após a dequitação; risco de hemorragia\n\nEstática fetal:\n- **Situação** → longitudinal, transversa ou oblíqua\n- **Apresentação** → cefálica, pélvica ou córmica\n- **Posição** → lado do dorso fetal (esquerda/direita)\n- **Atitude** → grau de flexão\n- **Variedade de posição** → referência fetal × pelve materna (occipital na cefálica fletida: OEA, ODP…)\n- **Altura** → planos de DeLee (0 = espinhas isquiáticas) ou de Hodge\n\nManobras de Leopold:\n- 1º tempo → fundo uterino (polo fúndico)\n- 2º → flancos (dorso → posição)\n- 3º → polo inferior (apresentação e mobilidade)\n- 4º → insinuação (examinador voltado para os pés da paciente)\n\nPartograma:\n- Abre na fase ativa; linha de ação 4 h à direita da de alerta\n- Distocias e condutas no quadro\n\nBoas práticas na assistência:\n- Liberdade de posição, deambulação, dieta leve, acompanhante (Lei 11.108)\n- Métodos não farmacológicos para dor; analgesia quando a mulher desejar\n- Contato pele a pele e clampeamento tardio (1–3 min)\n- Não fazer de rotina → enema, tricotomia, amniotomia precoce, episiotomia, ocitocina\n- Manobra de Kristeller é proscrita\n\n3º período e hemorragia:\n- Ocitocina 10 UI IM logo após o nascimento → previne hemorragia pós-parto\n- HPP → causa nº 1 é atonia (4 Ts: tônus, trauma, tecido, trombina)\n\nOcitocina:\n- Usos → indução/condução, prevenção e tratamento da atonia\n- Contraindicações = as do parto vaginal (placenta prévia total, situação transversa, cicatriz uterina corporal, desproporção, sofrimento fetal, taquissistolia)\n\nO que mais cai na UERJ:\n- Interpretar o partograma e nomear a distocia.\n- Leopold tempo a tempo e estática fetal.\n- O que não fazer de rotina na assistência ao parto.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Distocia",
+          "No partograma",
+          "Causa e conduta"
+        ],
+        "linhas": [
+          [
+            "Fase ativa prolongada",
+            "Dilatação < 1 cm/h; cruza a linha de alerta",
+            "Hipoatividade → ocitocina/amniotomia"
+          ],
+          [
+            "Parada secundária da dilatação",
+            "Mesma dilatação em 2 toques com 2 h",
+            "Desproporção → cesárea"
+          ],
+          [
+            "Período pélvico prolongado",
+            "Descida lenta com dilatação completa",
+            "Hipoatividade → ocitocina; fórcipe/vácuo se indicado"
+          ],
+          [
+            "Parada secundária da descida",
+            "Mesma altura em 2 toques com 1 h, dilatação completa",
+            "Desproporção → fórcipe (se condições) ou cesárea"
+          ],
+          [
+            "Parto precipitado",
+            "Dilatação + expulsão em < 4 h",
+            "Taquissistolia → laceração e hipóxia"
+          ]
+        ]
+      },
+      "fonte": "OMS — Intrapartum care for a positive childbirth experience (2018); MS — Diretrizes Nacionais de Assistência ao Parto Normal (2017); Zugaib Obstetrícia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "tp-d1",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Trabalho de parto — partograma, estática fetal e assistência",
+      "frente": "Qual a dose de ocitocina no manejo ativo do 3º período?",
+      "verso": "**10 UI IM logo após o nascimento.**\n\nPara quê:\n- Prevenir hemorragia pós-parto por atonia.",
+      "resposta": "10 UI IM",
+      "aceitas": [
+        "10 ui",
+        "10 unidades",
+        "10 ui intramuscular",
+        "10",
+        "10 ui im"
+      ],
+      "macete": "\"10 no músculo\" assim que o bebê sai.",
+      "prio": "alta",
+      "contexto": "**Trabalho de parto = contrações regulares que dilatam o colo; a fase ativa começa por volta de 5 cm (OMS) e é acompanhada pelo partograma.**\n\nPeríodos:\n- **1º (dilatação)** → fase latente até ~5 cm; fase ativa até 10 cm\n- **2º (expulsivo)** → da dilatação completa ao nascimento\n- **3º (dequitação)** → até a saída da placenta (até 30 min)\n- **4º (Greenberg)** → 1ª hora após a dequitação; risco de hemorragia\n\nEstática fetal:\n- **Situação** → longitudinal, transversa ou oblíqua\n- **Apresentação** → cefálica, pélvica ou córmica\n- **Posição** → lado do dorso fetal (esquerda/direita)\n- **Atitude** → grau de flexão\n- **Variedade de posição** → referência fetal × pelve materna (occipital na cefálica fletida: OEA, ODP…)\n- **Altura** → planos de DeLee (0 = espinhas isquiáticas) ou de Hodge\n\nManobras de Leopold:\n- 1º tempo → fundo uterino (polo fúndico)\n- 2º → flancos (dorso → posição)\n- 3º → polo inferior (apresentação e mobilidade)\n- 4º → insinuação (examinador voltado para os pés da paciente)\n\nPartograma:\n- Abre na fase ativa; linha de ação 4 h à direita da de alerta\n- Distocias e condutas no quadro\n\nBoas práticas na assistência:\n- Liberdade de posição, deambulação, dieta leve, acompanhante (Lei 11.108)\n- Métodos não farmacológicos para dor; analgesia quando a mulher desejar\n- Contato pele a pele e clampeamento tardio (1–3 min)\n- Não fazer de rotina → enema, tricotomia, amniotomia precoce, episiotomia, ocitocina\n- Manobra de Kristeller é proscrita\n\n3º período e hemorragia:\n- Ocitocina 10 UI IM logo após o nascimento → previne hemorragia pós-parto\n- HPP → causa nº 1 é atonia (4 Ts: tônus, trauma, tecido, trombina)\n\nOcitocina:\n- Usos → indução/condução, prevenção e tratamento da atonia\n- Contraindicações = as do parto vaginal (placenta prévia total, situação transversa, cicatriz uterina corporal, desproporção, sofrimento fetal, taquissistolia)\n\nO que mais cai na UERJ:\n- Interpretar o partograma e nomear a distocia.\n- Leopold tempo a tempo e estática fetal.\n- O que não fazer de rotina na assistência ao parto.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Distocia",
+          "No partograma",
+          "Causa e conduta"
+        ],
+        "linhas": [
+          [
+            "Fase ativa prolongada",
+            "Dilatação < 1 cm/h; cruza a linha de alerta",
+            "Hipoatividade → ocitocina/amniotomia"
+          ],
+          [
+            "Parada secundária da dilatação",
+            "Mesma dilatação em 2 toques com 2 h",
+            "Desproporção → cesárea"
+          ],
+          [
+            "Período pélvico prolongado",
+            "Descida lenta com dilatação completa",
+            "Hipoatividade → ocitocina; fórcipe/vácuo se indicado"
+          ],
+          [
+            "Parada secundária da descida",
+            "Mesma altura em 2 toques com 1 h, dilatação completa",
+            "Desproporção → fórcipe (se condições) ou cesárea"
+          ],
+          [
+            "Parto precipitado",
+            "Dilatação + expulsão em < 4 h",
+            "Taquissistolia → laceração e hipóxia"
+          ]
+        ]
+      },
+      "fonte": "OMS — Intrapartum care for a positive childbirth experience (2018); MS — Diretrizes Nacionais de Assistência ao Parto Normal (2017); Zugaib Obstetrícia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "tp-d2",
+      "tipo": "digitar",
+      "area": "Obstetrícia",
+      "tema": "Parto e puerpério",
+      "sub": "Trabalho de parto — partograma, estática fetal e assistência",
+      "frente": "Qual a referência de altura zero nos planos de DeLee?",
+      "verso": "**Espinhas isquiáticas.**\n\nNa prática:\n- Acima → negativo (−1, −2…).\n- Abaixo → positivo (+1, +2…).",
+      "resposta": "espinhas isquiáticas",
+      "aceitas": [
+        "espinha isquiatica",
+        "espinhas ciaticas",
+        "espinhas isquiaticas",
+        "espinha ciatica"
+      ],
+      "macete": "DeLee zero = \"entre as espinhas\".",
+      "prio": "alta",
+      "contexto": "**Trabalho de parto = contrações regulares que dilatam o colo; a fase ativa começa por volta de 5 cm (OMS) e é acompanhada pelo partograma.**\n\nPeríodos:\n- **1º (dilatação)** → fase latente até ~5 cm; fase ativa até 10 cm\n- **2º (expulsivo)** → da dilatação completa ao nascimento\n- **3º (dequitação)** → até a saída da placenta (até 30 min)\n- **4º (Greenberg)** → 1ª hora após a dequitação; risco de hemorragia\n\nEstática fetal:\n- **Situação** → longitudinal, transversa ou oblíqua\n- **Apresentação** → cefálica, pélvica ou córmica\n- **Posição** → lado do dorso fetal (esquerda/direita)\n- **Atitude** → grau de flexão\n- **Variedade de posição** → referência fetal × pelve materna (occipital na cefálica fletida: OEA, ODP…)\n- **Altura** → planos de DeLee (0 = espinhas isquiáticas) ou de Hodge\n\nManobras de Leopold:\n- 1º tempo → fundo uterino (polo fúndico)\n- 2º → flancos (dorso → posição)\n- 3º → polo inferior (apresentação e mobilidade)\n- 4º → insinuação (examinador voltado para os pés da paciente)\n\nPartograma:\n- Abre na fase ativa; linha de ação 4 h à direita da de alerta\n- Distocias e condutas no quadro\n\nBoas práticas na assistência:\n- Liberdade de posição, deambulação, dieta leve, acompanhante (Lei 11.108)\n- Métodos não farmacológicos para dor; analgesia quando a mulher desejar\n- Contato pele a pele e clampeamento tardio (1–3 min)\n- Não fazer de rotina → enema, tricotomia, amniotomia precoce, episiotomia, ocitocina\n- Manobra de Kristeller é proscrita\n\n3º período e hemorragia:\n- Ocitocina 10 UI IM logo após o nascimento → previne hemorragia pós-parto\n- HPP → causa nº 1 é atonia (4 Ts: tônus, trauma, tecido, trombina)\n\nOcitocina:\n- Usos → indução/condução, prevenção e tratamento da atonia\n- Contraindicações = as do parto vaginal (placenta prévia total, situação transversa, cicatriz uterina corporal, desproporção, sofrimento fetal, taquissistolia)\n\nO que mais cai na UERJ:\n- Interpretar o partograma e nomear a distocia.\n- Leopold tempo a tempo e estática fetal.\n- O que não fazer de rotina na assistência ao parto.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Distocia",
+          "No partograma",
+          "Causa e conduta"
+        ],
+        "linhas": [
+          [
+            "Fase ativa prolongada",
+            "Dilatação < 1 cm/h; cruza a linha de alerta",
+            "Hipoatividade → ocitocina/amniotomia"
+          ],
+          [
+            "Parada secundária da dilatação",
+            "Mesma dilatação em 2 toques com 2 h",
+            "Desproporção → cesárea"
+          ],
+          [
+            "Período pélvico prolongado",
+            "Descida lenta com dilatação completa",
+            "Hipoatividade → ocitocina; fórcipe/vácuo se indicado"
+          ],
+          [
+            "Parada secundária da descida",
+            "Mesma altura em 2 toques com 1 h, dilatação completa",
+            "Desproporção → fórcipe (se condições) ou cesárea"
+          ],
+          [
+            "Parto precipitado",
+            "Dilatação + expulsão em < 4 h",
+            "Taquissistolia → laceração e hipóxia"
+          ]
+        ]
+      },
+      "fonte": "OMS — Intrapartum care for a positive childbirth experience (2018); MS — Diretrizes Nacionais de Assistência ao Parto Normal (2017); Zugaib Obstetrícia",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "atls-01",
+      "tipo": "flash",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "ATLS — avaliação primária (XABCDE)",
+      "frente": "Quando indicar via aérea definitiva no trauma?",
+      "verso": "**Glasgow ≤ 8.**\n**Apneia, obstrução ou risco de perder a via aérea.**\n\nRisco de perder a via aérea:\n- Queimadura de via aérea (vibrissas queimadas, rouquidão, escarro carbonáceo).\n- Hematoma cervical em expansão.\n- Fratura grave de face.\n\nSe falhar IOT e ventilação:\n- Cricotireoidostomia cirúrgica (por punção em < 12 anos).",
+      "visual": {
+        "tipo": "tabela",
+        "cab": [
+          "Glasgow",
+          "Resposta",
+          "Pontos"
+        ],
+        "linhas": [
+          [
+            "Ocular",
+            "Espontânea",
+            "4"
+          ],
+          [
+            "Ocular",
+            "Ao som (voz)",
+            "3"
+          ],
+          [
+            "Ocular",
+            "À pressão",
+            "2"
+          ],
+          [
+            "Ocular",
+            "Nenhuma",
+            "1"
+          ],
+          [
+            "Verbal",
+            "Orientado",
+            "5"
+          ],
+          [
+            "Verbal",
+            "Confuso",
+            "4"
+          ],
+          [
+            "Verbal",
+            "Palavras",
+            "3"
+          ],
+          [
+            "Verbal",
+            "Sons",
+            "2"
+          ],
+          [
+            "Verbal",
+            "Nenhuma",
+            "1"
+          ],
+          [
+            "Motora",
+            "Obedece",
+            "6"
+          ],
+          [
+            "Motora",
+            "Localiza",
+            "5"
+          ],
+          [
+            "Motora",
+            "Flexão normal (retirada)",
+            "4"
+          ],
+          [
+            "Motora",
+            "Flexão anormal (decorticação)",
+            "3"
+          ],
+          [
+            "Motora",
+            "Extensão (descerebração)",
+            "2"
+          ],
+          [
+            "Motora",
+            "Nenhuma",
+            "1"
+          ],
+          [
+            "!Total",
+            "Leve 13–15 · moderado 9–12 · grave 3–8",
+            "3–15"
+          ]
+        ]
+      },
+      "macete": "\"Oito, intubo.\"",
+      "prio": "alta",
+      "contexto": "**ATLS = atendimento ao politraumatizado por prioridade: tratar o que mata primeiro, na ordem XABCDE, sem avançar antes de resolver o item anterior.**\n\nAvaliação primária:\n- Sequência no fluxograma\n- Reavaliar o ABC a cada intervenção ou piora\n\nVia aérea (A):\n- Fala normalmente → via aérea pérvia\n- Glasgow ≤ 8, apneia, obstrução ou risco de perda (queimadura de via aérea, hematoma cervical, fratura de face) → via aérea definitiva (IOT)\n- Impossível intubar e ventilar → cricotireoidostomia cirúrgica (por punção em < 12 anos)\n\nRespiração (B):\n- Lesões que matam aqui → pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço (baralho de trauma torácico)\n\nCirculação (C):\n- Hipotensão no trauma = hemorrágico até prova em contrário\n- Fontes → tórax, abdome, pelve, ossos longos e externo\n- 2 acessos calibrosos, cristaloide aquecido 1 L, sangue precoce (1:1:1)\n- Hipotensão permissiva até o controle (exceto TCE)\n- Ácido tranexâmico nas primeiras 3 h\n\nAdjuntos da avaliação primária:\n- Monitorização, oximetria, gasometria\n- FAST/eFAST, RX de tórax e pelve\n- Sonda vesical e gástrica (se não houver contraindicação)\n\nContraindicações às sondas:\n- Vesical → sangue no meato, hematoma perineal, próstata alta (lesão de uretra)\n- Gástrica pelo nariz → fratura de base de crânio (usar via oral)\n\nAvaliação secundária:\n- Só após estabilização → exame da cabeça aos pés + história AMPLA\n- AMPLA → Alergias, Medicamentos, Passado médico/prenhez, Líquidos e alimentos, Ambiente do trauma\n\nO que mais cai na UERJ:\n- A ordem do atendimento: o X vem antes do A e não se pula etapa.\n- Glasgow ≤ 8 → via aérea definitiva.\n- Contraindicações da sonda vesical e gástrica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "X — hemorragia externa grave (compressão, torniquete)",
+          "A — via aérea + proteção da coluna cervical",
+          "B — respiração e ventilação",
+          "C — circulação + controle da hemorragia",
+          "D — neurológico (Glasgow + pupilas)",
+          "E — exposição + prevenção de hipotermia"
+        ]
+      },
+      "fonte": "ATLS — Advanced Trauma Life Support, 10ª ed. (2018) e atualizações 2023 (X-ABCDE)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "atls-q1",
+      "tipo": "quiz",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "ATLS — avaliação primária (XABCDE)",
+      "frente": "Motociclista, 25 anos, com amputação traumática da perna direita e sangramento em jato, gemendo e com respiração ruidosa. Qual a primeira medida?",
+      "opcoes": [
+        "Intubação orotraqueal",
+        "Torniquete proximal à lesão",
+        "Colar cervical e prancha rígida",
+        "Dois acessos calibrosos e cristaloide"
+      ],
+      "certa": 1,
+      "comentarios": [
+        "Errada: a hemorragia exsanguinante externa (X) vem antes da via aérea.",
+        "Correta: X-ABCDE — controlar o sangramento externo grave primeiro.",
+        "Errada: a restrição da coluna entra no A, depois do X.",
+        "Errada: repor volume sem estancar não resolve; é o C."
+      ],
+      "macete": "X marca o sangue: estanca antes de tudo.",
+      "pegadinha": "Seguir o ABC clássico e intubar antes de parar a hemorragia exsanguinante.",
+      "prio": "alta",
+      "contexto": "**ATLS = atendimento ao politraumatizado por prioridade: tratar o que mata primeiro, na ordem XABCDE, sem avançar antes de resolver o item anterior.**\n\nAvaliação primária:\n- Sequência no fluxograma\n- Reavaliar o ABC a cada intervenção ou piora\n\nVia aérea (A):\n- Fala normalmente → via aérea pérvia\n- Glasgow ≤ 8, apneia, obstrução ou risco de perda (queimadura de via aérea, hematoma cervical, fratura de face) → via aérea definitiva (IOT)\n- Impossível intubar e ventilar → cricotireoidostomia cirúrgica (por punção em < 12 anos)\n\nRespiração (B):\n- Lesões que matam aqui → pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço (baralho de trauma torácico)\n\nCirculação (C):\n- Hipotensão no trauma = hemorrágico até prova em contrário\n- Fontes → tórax, abdome, pelve, ossos longos e externo\n- 2 acessos calibrosos, cristaloide aquecido 1 L, sangue precoce (1:1:1)\n- Hipotensão permissiva até o controle (exceto TCE)\n- Ácido tranexâmico nas primeiras 3 h\n\nAdjuntos da avaliação primária:\n- Monitorização, oximetria, gasometria\n- FAST/eFAST, RX de tórax e pelve\n- Sonda vesical e gástrica (se não houver contraindicação)\n\nContraindicações às sondas:\n- Vesical → sangue no meato, hematoma perineal, próstata alta (lesão de uretra)\n- Gástrica pelo nariz → fratura de base de crânio (usar via oral)\n\nAvaliação secundária:\n- Só após estabilização → exame da cabeça aos pés + história AMPLA\n- AMPLA → Alergias, Medicamentos, Passado médico/prenhez, Líquidos e alimentos, Ambiente do trauma\n\nO que mais cai na UERJ:\n- A ordem do atendimento: o X vem antes do A e não se pula etapa.\n- Glasgow ≤ 8 → via aérea definitiva.\n- Contraindicações da sonda vesical e gástrica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "X — hemorragia externa grave (compressão, torniquete)",
+          "A — via aérea + proteção da coluna cervical",
+          "B — respiração e ventilação",
+          "C — circulação + controle da hemorragia",
+          "D — neurológico (Glasgow + pupilas)",
+          "E — exposição + prevenção de hipotermia"
+        ]
+      },
+      "fonte": "ATLS — Advanced Trauma Life Support, 10ª ed. (2018) e atualizações 2023 (X-ABCDE)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "atls-d1",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "ATLS — avaliação primária (XABCDE)",
+      "frente": "Qual etapa da sequência do ATLS vem antes da via aérea?",
+      "verso": "**X — hemorragia externa exsanguinante.**\n\nComo:\n- Compressão direta.\n- Torniquete.\n\nDepois:\n- A → B → C → D → E.",
+      "resposta": "X",
+      "aceitas": [
+        "hemorragia exsanguinante",
+        "x hemorragia",
+        "hemorragia externa",
+        "controle da hemorragia externa"
+      ],
+      "macete": "X marca o sangue: estanca antes de tudo.",
+      "prio": "alta",
+      "contexto": "**ATLS = atendimento ao politraumatizado por prioridade: tratar o que mata primeiro, na ordem XABCDE, sem avançar antes de resolver o item anterior.**\n\nAvaliação primária:\n- Sequência no fluxograma\n- Reavaliar o ABC a cada intervenção ou piora\n\nVia aérea (A):\n- Fala normalmente → via aérea pérvia\n- Glasgow ≤ 8, apneia, obstrução ou risco de perda (queimadura de via aérea, hematoma cervical, fratura de face) → via aérea definitiva (IOT)\n- Impossível intubar e ventilar → cricotireoidostomia cirúrgica (por punção em < 12 anos)\n\nRespiração (B):\n- Lesões que matam aqui → pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço (baralho de trauma torácico)\n\nCirculação (C):\n- Hipotensão no trauma = hemorrágico até prova em contrário\n- Fontes → tórax, abdome, pelve, ossos longos e externo\n- 2 acessos calibrosos, cristaloide aquecido 1 L, sangue precoce (1:1:1)\n- Hipotensão permissiva até o controle (exceto TCE)\n- Ácido tranexâmico nas primeiras 3 h\n\nAdjuntos da avaliação primária:\n- Monitorização, oximetria, gasometria\n- FAST/eFAST, RX de tórax e pelve\n- Sonda vesical e gástrica (se não houver contraindicação)\n\nContraindicações às sondas:\n- Vesical → sangue no meato, hematoma perineal, próstata alta (lesão de uretra)\n- Gástrica pelo nariz → fratura de base de crânio (usar via oral)\n\nAvaliação secundária:\n- Só após estabilização → exame da cabeça aos pés + história AMPLA\n- AMPLA → Alergias, Medicamentos, Passado médico/prenhez, Líquidos e alimentos, Ambiente do trauma\n\nO que mais cai na UERJ:\n- A ordem do atendimento: o X vem antes do A e não se pula etapa.\n- Glasgow ≤ 8 → via aérea definitiva.\n- Contraindicações da sonda vesical e gástrica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "X — hemorragia externa grave (compressão, torniquete)",
+          "A — via aérea + proteção da coluna cervical",
+          "B — respiração e ventilação",
+          "C — circulação + controle da hemorragia",
+          "D — neurológico (Glasgow + pupilas)",
+          "E — exposição + prevenção de hipotermia"
+        ]
+      },
+      "fonte": "ATLS — Advanced Trauma Life Support, 10ª ed. (2018) e atualizações 2023 (X-ABCDE)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "atls-d2",
+      "tipo": "digitar",
+      "area": "Cirurgia",
+      "tema": "Trauma",
+      "sub": "ATLS — avaliação primária (XABCDE)",
+      "frente": "Qual achado contraindica a sondagem vesical no trauma?",
+      "verso": "**Sangue no meato uretral.**\n\nOutros sinais de lesão de uretra:\n- Hematoma perineal.\n- Próstata alta (\"flutuante\") ao toque.\n\nConduta:\n- Uretrografia retrógrada antes de sondar.",
+      "resposta": "sangue no meato uretral",
+      "aceitas": [
+        "uretrorragia",
+        "sangue no meato",
+        "sangue no meato uretral",
+        "sangue em meato"
+      ],
+      "macete": "Sangue na ponta = \"não passa a sonda\".",
+      "prio": "alta",
+      "contexto": "**ATLS = atendimento ao politraumatizado por prioridade: tratar o que mata primeiro, na ordem XABCDE, sem avançar antes de resolver o item anterior.**\n\nAvaliação primária:\n- Sequência no fluxograma\n- Reavaliar o ABC a cada intervenção ou piora\n\nVia aérea (A):\n- Fala normalmente → via aérea pérvia\n- Glasgow ≤ 8, apneia, obstrução ou risco de perda (queimadura de via aérea, hematoma cervical, fratura de face) → via aérea definitiva (IOT)\n- Impossível intubar e ventilar → cricotireoidostomia cirúrgica (por punção em < 12 anos)\n\nRespiração (B):\n- Lesões que matam aqui → pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço (baralho de trauma torácico)\n\nCirculação (C):\n- Hipotensão no trauma = hemorrágico até prova em contrário\n- Fontes → tórax, abdome, pelve, ossos longos e externo\n- 2 acessos calibrosos, cristaloide aquecido 1 L, sangue precoce (1:1:1)\n- Hipotensão permissiva até o controle (exceto TCE)\n- Ácido tranexâmico nas primeiras 3 h\n\nAdjuntos da avaliação primária:\n- Monitorização, oximetria, gasometria\n- FAST/eFAST, RX de tórax e pelve\n- Sonda vesical e gástrica (se não houver contraindicação)\n\nContraindicações às sondas:\n- Vesical → sangue no meato, hematoma perineal, próstata alta (lesão de uretra)\n- Gástrica pelo nariz → fratura de base de crânio (usar via oral)\n\nAvaliação secundária:\n- Só após estabilização → exame da cabeça aos pés + história AMPLA\n- AMPLA → Alergias, Medicamentos, Passado médico/prenhez, Líquidos e alimentos, Ambiente do trauma\n\nO que mais cai na UERJ:\n- A ordem do atendimento: o X vem antes do A e não se pula etapa.\n- Glasgow ≤ 8 → via aérea definitiva.\n- Contraindicações da sonda vesical e gástrica.",
+      "ctxvisual": {
+        "tipo": "fluxo",
+        "passos": [
+          "X — hemorragia externa grave (compressão, torniquete)",
+          "A — via aérea + proteção da coluna cervical",
+          "B — respiração e ventilação",
+          "C — circulação + controle da hemorragia",
+          "D — neurológico (Glasgow + pupilas)",
+          "E — exposição + prevenção de hipotermia"
+        ]
+      },
+      "fonte": "ATLS — Advanced Trauma Life Support, 10ª ed. (2018) e atualizações 2023 (X-ABCDE)",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "desid-01",
+      "tipo": "flash",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Desidratação e diarreia aguda na criança",
+      "frente": "Plano B de hidratação: como fazer?",
+      "verso": "**SRO 50–100 mL/kg em 4–6 h, na unidade de saúde.**\n\nComo:\n- Oferecer em colheradas ou goles frequentes.\n- Reavaliar periodicamente.\n- Hidratou → plano A (casa).\n- Piorou ou não tolera → plano C (venoso).",
+      "macete": "B de \"Banco da UBS\": fica sentado tomando SRO até hidratar.",
+      "prio": "alta",
+      "contexto": "**Diarreia aguda = ≥ 3 evacuações líquidas ou amolecidas em 24 h por menos de 14 dias; o que mata é a desidratação.**\n\nEtiologia:\n- Viral (rotavírus, norovírus) → a maioria\n- Bacteriana (E. coli, Shigella, Salmonella, Campylobacter) → disenteria (sangue nas fezes)\n- Antibiótico só em disenteria com comprometimento do estado geral, cólera, suspeita de sepse ou imunossupressão\n\nAvaliação da hidratação:\n- Classificar pelo quadro (2 ou mais sinais de uma coluna)\n\nPlanos de tratamento:\n- **A** → em casa: SRO após cada evacuação, manter alimentação e aleitamento, zinco, sinais de alerta\n- **B** → na unidade: SRO 50–100 mL/kg em 4–6 h, reavaliando; hidratou → plano A\n- **C** → hidratação venosa\n  - < 5 anos → SF 0,9% 20 mL/kg em 30 min, repetindo até hidratar\n  - ≥ 5 anos → 30 mL/kg em 30 min + 70 mL/kg em 2 h 30 min\n  - SRO assim que a criança conseguir beber\n\nZinco:\n- Por 10–14 dias\n- < 6 meses → 10 mg/dia; ≥ 6 meses → 20 mg/dia\n\nEvitar:\n- Antidiarreico (loperamida) na criança\n- Refrigerante, chá e suco industrializado\n- Antiemético de rotina (ondansetrona só se os vômitos impedem a TRO)\n\nComplicações:\n- Distúrbios de sódio e potássio, acidose metabólica, lesão renal pré-renal\n- Diarreia persistente (≥ 14 dias) → desnutrição; investigar\n\nO que mais cai na UERJ:\n- Classificar a desidratação pelo quadro clínico e escolher o plano.\n- Volume do plano B e hidratação venosa do plano C.\n- Zinco por idade.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "Sem desidratação",
+          "Desidratação",
+          "Grave"
+        ],
+        "linhas": [
+          [
+            "Estado geral",
+            "Alerta",
+            "Irritado, intranquilo",
+            "Letárgico, hipotônico"
+          ],
+          [
+            "Olhos",
+            "Normais",
+            "Fundos",
+            "Muito fundos"
+          ],
+          [
+            "Sede",
+            "Normal",
+            "Sedento, bebe rápido",
+            "Bebe mal ou não bebe"
+          ],
+          [
+            "Sinal da prega",
+            "Desaparece rápido",
+            "Desaparece lentamente",
+            "Muito lentamente (> 2 s)"
+          ],
+          [
+            "Pulso",
+            "Cheio",
+            "Rápido, fraco",
+            "Muito fraco ou ausente"
+          ],
+          [
+            "Enchimento capilar",
+            "≤ 3 s",
+            "3–5 s",
+            "> 5 s"
+          ],
+          [
+            "!Plano",
+            "A",
+            "B",
+            "C"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manejo do paciente com diarreia (2023); OMS — The treatment of diarrhoea (2005); SBP",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "desid-q1",
+      "tipo": "quiz",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Desidratação e diarreia aguda na criança",
+      "frente": "Lactente de 1 ano com diarreia há 2 dias, letárgico, olhos muito fundos, não consegue beber, sinal da prega desaparecendo muito lentamente e enchimento capilar de 6 s. Qual a conduta?",
+      "opcoes": [
+        "Plano A: SRO em casa e zinco",
+        "Plano B: SRO 100 mL/kg em 4 h na unidade",
+        "Plano C: hidratação venosa rápida com SF 0,9%",
+        "Ondansetrona e reavaliar em 1 hora"
+      ],
+      "certa": 2,
+      "comentarios": [
+        "Errada: há sinais de desidratação grave.",
+        "Errada: plano B é para desidratação sem gravidade e com a criança bebendo.",
+        "Correta: letargia + não bebe + prega muito lenta = desidratação grave → plano C.",
+        "Errada: atrasa a reidratação venosa."
+      ],
+      "macete": "Não bebe + letárgico = \"C de Cateter na veia\".",
+      "uerj": "Caso com sinais da tabela para escolher o plano.",
+      "prio": "alta",
+      "contexto": "**Diarreia aguda = ≥ 3 evacuações líquidas ou amolecidas em 24 h por menos de 14 dias; o que mata é a desidratação.**\n\nEtiologia:\n- Viral (rotavírus, norovírus) → a maioria\n- Bacteriana (E. coli, Shigella, Salmonella, Campylobacter) → disenteria (sangue nas fezes)\n- Antibiótico só em disenteria com comprometimento do estado geral, cólera, suspeita de sepse ou imunossupressão\n\nAvaliação da hidratação:\n- Classificar pelo quadro (2 ou mais sinais de uma coluna)\n\nPlanos de tratamento:\n- **A** → em casa: SRO após cada evacuação, manter alimentação e aleitamento, zinco, sinais de alerta\n- **B** → na unidade: SRO 50–100 mL/kg em 4–6 h, reavaliando; hidratou → plano A\n- **C** → hidratação venosa\n  - < 5 anos → SF 0,9% 20 mL/kg em 30 min, repetindo até hidratar\n  - ≥ 5 anos → 30 mL/kg em 30 min + 70 mL/kg em 2 h 30 min\n  - SRO assim que a criança conseguir beber\n\nZinco:\n- Por 10–14 dias\n- < 6 meses → 10 mg/dia; ≥ 6 meses → 20 mg/dia\n\nEvitar:\n- Antidiarreico (loperamida) na criança\n- Refrigerante, chá e suco industrializado\n- Antiemético de rotina (ondansetrona só se os vômitos impedem a TRO)\n\nComplicações:\n- Distúrbios de sódio e potássio, acidose metabólica, lesão renal pré-renal\n- Diarreia persistente (≥ 14 dias) → desnutrição; investigar\n\nO que mais cai na UERJ:\n- Classificar a desidratação pelo quadro clínico e escolher o plano.\n- Volume do plano B e hidratação venosa do plano C.\n- Zinco por idade.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "Sem desidratação",
+          "Desidratação",
+          "Grave"
+        ],
+        "linhas": [
+          [
+            "Estado geral",
+            "Alerta",
+            "Irritado, intranquilo",
+            "Letárgico, hipotônico"
+          ],
+          [
+            "Olhos",
+            "Normais",
+            "Fundos",
+            "Muito fundos"
+          ],
+          [
+            "Sede",
+            "Normal",
+            "Sedento, bebe rápido",
+            "Bebe mal ou não bebe"
+          ],
+          [
+            "Sinal da prega",
+            "Desaparece rápido",
+            "Desaparece lentamente",
+            "Muito lentamente (> 2 s)"
+          ],
+          [
+            "Pulso",
+            "Cheio",
+            "Rápido, fraco",
+            "Muito fraco ou ausente"
+          ],
+          [
+            "Enchimento capilar",
+            "≤ 3 s",
+            "3–5 s",
+            "> 5 s"
+          ],
+          [
+            "!Plano",
+            "A",
+            "B",
+            "C"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manejo do paciente com diarreia (2023); OMS — The treatment of diarrhoea (2005); SBP",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "desid-d1",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Desidratação e diarreia aguda na criança",
+      "frente": "Qual a dose de zinco na diarreia aguda da criança ≥ 6 meses?",
+      "verso": "**20 mg/dia por 10–14 dias.**\n\nDetalhe:\n- < 6 meses → 10 mg/dia.",
+      "resposta": "20 mg/dia",
+      "aceitas": [
+        "20 mg",
+        "20",
+        "20mg por dia",
+        "20 mg por dia"
+      ],
+      "macete": "Zinco \"10 antes dos 6 meses, 20 depois\", por 10–14 dias.",
+      "prio": "alta",
+      "contexto": "**Diarreia aguda = ≥ 3 evacuações líquidas ou amolecidas em 24 h por menos de 14 dias; o que mata é a desidratação.**\n\nEtiologia:\n- Viral (rotavírus, norovírus) → a maioria\n- Bacteriana (E. coli, Shigella, Salmonella, Campylobacter) → disenteria (sangue nas fezes)\n- Antibiótico só em disenteria com comprometimento do estado geral, cólera, suspeita de sepse ou imunossupressão\n\nAvaliação da hidratação:\n- Classificar pelo quadro (2 ou mais sinais de uma coluna)\n\nPlanos de tratamento:\n- **A** → em casa: SRO após cada evacuação, manter alimentação e aleitamento, zinco, sinais de alerta\n- **B** → na unidade: SRO 50–100 mL/kg em 4–6 h, reavaliando; hidratou → plano A\n- **C** → hidratação venosa\n  - < 5 anos → SF 0,9% 20 mL/kg em 30 min, repetindo até hidratar\n  - ≥ 5 anos → 30 mL/kg em 30 min + 70 mL/kg em 2 h 30 min\n  - SRO assim que a criança conseguir beber\n\nZinco:\n- Por 10–14 dias\n- < 6 meses → 10 mg/dia; ≥ 6 meses → 20 mg/dia\n\nEvitar:\n- Antidiarreico (loperamida) na criança\n- Refrigerante, chá e suco industrializado\n- Antiemético de rotina (ondansetrona só se os vômitos impedem a TRO)\n\nComplicações:\n- Distúrbios de sódio e potássio, acidose metabólica, lesão renal pré-renal\n- Diarreia persistente (≥ 14 dias) → desnutrição; investigar\n\nO que mais cai na UERJ:\n- Classificar a desidratação pelo quadro clínico e escolher o plano.\n- Volume do plano B e hidratação venosa do plano C.\n- Zinco por idade.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "Sem desidratação",
+          "Desidratação",
+          "Grave"
+        ],
+        "linhas": [
+          [
+            "Estado geral",
+            "Alerta",
+            "Irritado, intranquilo",
+            "Letárgico, hipotônico"
+          ],
+          [
+            "Olhos",
+            "Normais",
+            "Fundos",
+            "Muito fundos"
+          ],
+          [
+            "Sede",
+            "Normal",
+            "Sedento, bebe rápido",
+            "Bebe mal ou não bebe"
+          ],
+          [
+            "Sinal da prega",
+            "Desaparece rápido",
+            "Desaparece lentamente",
+            "Muito lentamente (> 2 s)"
+          ],
+          [
+            "Pulso",
+            "Cheio",
+            "Rápido, fraco",
+            "Muito fraco ou ausente"
+          ],
+          [
+            "Enchimento capilar",
+            "≤ 3 s",
+            "3–5 s",
+            "> 5 s"
+          ],
+          [
+            "!Plano",
+            "A",
+            "B",
+            "C"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manejo do paciente com diarreia (2023); OMS — The treatment of diarrhoea (2005); SBP",
+      "add": "2026-10-25"
+    },
+    {
+      "id": "desid-d2",
+      "tipo": "digitar",
+      "area": "Pediatria",
+      "tema": "Gastroenterologia pediátrica",
+      "sub": "Desidratação e diarreia aguda na criança",
+      "frente": "Qual o volume de SRO no plano B?",
+      "verso": "**50–100 mL/kg em 4–6 h.**\n\nOnde:\n- Na unidade de saúde, reavaliando.",
+      "resposta": "50 a 100 mL/kg",
+      "aceitas": [
+        "50-100 ml/kg",
+        "50 a 100",
+        "50 100 ml kg",
+        "50 a 100 ml/kg em 4 a 6 h",
+        "50 a 100 ml por kg"
+      ],
+      "macete": "Plano B: \"50 a 100 em 4 a 6\".",
+      "prio": "alta",
+      "contexto": "**Diarreia aguda = ≥ 3 evacuações líquidas ou amolecidas em 24 h por menos de 14 dias; o que mata é a desidratação.**\n\nEtiologia:\n- Viral (rotavírus, norovírus) → a maioria\n- Bacteriana (E. coli, Shigella, Salmonella, Campylobacter) → disenteria (sangue nas fezes)\n- Antibiótico só em disenteria com comprometimento do estado geral, cólera, suspeita de sepse ou imunossupressão\n\nAvaliação da hidratação:\n- Classificar pelo quadro (2 ou mais sinais de uma coluna)\n\nPlanos de tratamento:\n- **A** → em casa: SRO após cada evacuação, manter alimentação e aleitamento, zinco, sinais de alerta\n- **B** → na unidade: SRO 50–100 mL/kg em 4–6 h, reavaliando; hidratou → plano A\n- **C** → hidratação venosa\n  - < 5 anos → SF 0,9% 20 mL/kg em 30 min, repetindo até hidratar\n  - ≥ 5 anos → 30 mL/kg em 30 min + 70 mL/kg em 2 h 30 min\n  - SRO assim que a criança conseguir beber\n\nZinco:\n- Por 10–14 dias\n- < 6 meses → 10 mg/dia; ≥ 6 meses → 20 mg/dia\n\nEvitar:\n- Antidiarreico (loperamida) na criança\n- Refrigerante, chá e suco industrializado\n- Antiemético de rotina (ondansetrona só se os vômitos impedem a TRO)\n\nComplicações:\n- Distúrbios de sódio e potássio, acidose metabólica, lesão renal pré-renal\n- Diarreia persistente (≥ 14 dias) → desnutrição; investigar\n\nO que mais cai na UERJ:\n- Classificar a desidratação pelo quadro clínico e escolher o plano.\n- Volume do plano B e hidratação venosa do plano C.\n- Zinco por idade.",
+      "ctxvisual": {
+        "tipo": "tabela",
+        "cab": [
+          "Sinal",
+          "Sem desidratação",
+          "Desidratação",
+          "Grave"
+        ],
+        "linhas": [
+          [
+            "Estado geral",
+            "Alerta",
+            "Irritado, intranquilo",
+            "Letárgico, hipotônico"
+          ],
+          [
+            "Olhos",
+            "Normais",
+            "Fundos",
+            "Muito fundos"
+          ],
+          [
+            "Sede",
+            "Normal",
+            "Sedento, bebe rápido",
+            "Bebe mal ou não bebe"
+          ],
+          [
+            "Sinal da prega",
+            "Desaparece rápido",
+            "Desaparece lentamente",
+            "Muito lentamente (> 2 s)"
+          ],
+          [
+            "Pulso",
+            "Cheio",
+            "Rápido, fraco",
+            "Muito fraco ou ausente"
+          ],
+          [
+            "Enchimento capilar",
+            "≤ 3 s",
+            "3–5 s",
+            "> 5 s"
+          ],
+          [
+            "!Plano",
+            "A",
+            "B",
+            "C"
+          ]
+        ]
+      },
+      "fonte": "Ministério da Saúde — Manejo do paciente com diarreia (2023); OMS — The treatment of diarrhoea (2005); SBP",
+      "add": "2026-10-25"
     }
   ],
-  "rev": 1792950274140
+  "rev": 1792953419963
 }
