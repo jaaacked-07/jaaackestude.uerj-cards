@@ -91,7 +91,7 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
   - Mudou de assunto/definição dentro do card (ex.: "Por quê:", "Conduta:", "Via:") → nova linha em branco + rótulo curto + tópicos.
   - Cada item de classificação em sua própria linha: `- **IIA** → ...` / `- **IIB** → ...`.
   - Detalhe de um item → subtópico recuado com 2 espaços: `  - IIA1 → ≤ 4 cm`. Nunca separe itens com `·` na mesma linha.
-  - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque. Nunca junte várias definições numa frase só.
+  - O app entende: cada linha = uma linha; `- ` = tópico; `**texto**` = destaque; `__texto__` = sublinhado; `{v}texto{/v}` = vermelho (marcas sempre dentro da MESMA linha). Nunca junte várias definições numa frase só.
   - Exemplo:
     `**Sinal do Psoas.**\n\n- O apêndice retrocecal encosta no psoas.\n- Estender a coxa direita estira o músculo → dói.`
 - **ESCORES SEMPRE DESTRINCHADOS.** Nunca só cite um escore/classificação com pontuação (Alvarado, Apgar, Manning, Glasgow, Bishop, Silverman, Wells, CURB-65, Child-Pugh etc.). Sempre que um escore aparecer (no verso ou no contexto), mostre: cada item, quantos pontos vale, o total e a interpretação/conduta por faixa — em tabela (`Item | Pontos`) + faixas em tópicos. Se o baralho ainda não tem um card do escore, crie um.

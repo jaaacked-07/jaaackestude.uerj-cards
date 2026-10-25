@@ -321,6 +321,16 @@ body.ntmode [data-an]{cursor:crosshair}
 .seg button.on{background:var(--wine);color:var(--bg)}
 .seg button:disabled{opacity:.35}
 .ctool{display:flex;gap:4px;margin:2px 0 -2px}
+.ftb{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin:4px 0 6px}
+.ftb button,#ftf button{min-width:32px;height:30px;padding:0 8px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:14px;line-height:1}
+.ftb .fr,#ftf .fr{background:#C62828;border-color:#C62828;width:26px;min-width:26px;height:26px;padding:0;border-radius:50%}
+.ftb .fk,#ftf .fk{background:#2A1E21;border-color:#2A1E21;width:26px;min-width:26px;height:26px;padding:0;border-radius:50%}
+.ftb .czb,#ftf .czb{color:var(--wine);font-weight:600}
+.ftb .dica{font-size:11.5px;color:var(--mute);margin-left:auto}
+#ftf{position:fixed;z-index:9500;display:none;gap:5px;align-items:center;padding:6px;border-radius:12px;background:var(--card);border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+#ftf.on{display:flex}
+#fml{position:fixed;z-index:9400;pointer-events:none;overflow:hidden;color:transparent!important;background:transparent!important;border-color:transparent!important;white-space:pre-wrap;word-wrap:break-word}
+#fml mark{background:rgba(201,150,122,.45);color:transparent;border-radius:3px}
 .ctool button{min-width:34px;height:30px;border-radius:8px;background:var(--card);box-shadow:var(--shadow);font-size:14px;color:var(--ink);padding:0 8px}
 .ctool .czb{color:var(--wine);font-weight:600}
 .drop{width:100%;border:1.5px dashed var(--rose);border-radius:14px;padding:30px 14px;color:var(--wine);font-size:14px;background:var(--rose-soft)}
@@ -780,7 +790,8 @@ function conferirDig(c,v){ const u=normR(v); if(!u) return false;
   return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>bateR(u,a)); }
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
-const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/__(.+?)__/g,'<u>$1</u>').replace(/\{v\}(.*?)\{\/v\}/g,'<span class="vm">$1</span>').replace(/\{\/?v\}/g,'');
+const plano=t=>String(t||'').replace(/\*\*|__|\{\/?v\}/g,'');   // sem marcas de formatação (listas, títulos)
 const inlBr=t=>String(t||'').split('\n').map(x=>inl(x.trim())).filter(Boolean).join('<br>');
 /* "  - " (recuado) = subtópico do tópico de cima · linha terminando em ":" = rótulo do bloco */
 const paras=t=>String(t||'').split(/\n\s*\n/).map(b=>{
@@ -920,7 +931,7 @@ function pErros(){
   const mx=Math.max(1,...Object.values(cont)), temTipo=Object.values(cont).some(v=>v);
   const tile=c=>{const x=X(c),ok=!ehFraco(x),sg=ehSanguessuga(x),qn=quaseN(x);
     const bd=ok?'<span class="bd ok">dominado</span>':sg?`<span class="bd sg" title="${LEECH_TXT}">🩸 sanguessuga</span>`:(x.wrong?`<span class="bd e">errou ${x.wrong}×</span>`:'')+(qn&&!x.wrong?`<span class="bd q">quase ${qn}×</span>`:'');
-    return `<div class="tile ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${bd}</div>`};
+    return `<div class="tile ${ok?'dim':''}" role="button" data-card="${c.id}"><span class="tt">${esc(plano(c.frente))}</span>${bd}</div>`};
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Caderno de erros</h2>
     <p class="mute small" style="margin-top:-10px;margin-bottom:14px">Fraco = errou ou marcou "Quase" e ainda não acertou 3× seguidas. Os mais cobrados na UERJ vêm primeiro.</p>
@@ -979,7 +990,7 @@ function pEstudar(){
   const temaTxt=!sel.length?'Tudo':sel.length===1?sel[0]:sel.length+' assuntos';
   const nb=norm(DECK.busca.trim());
   const lista=nb?CARDS.filter(c=>norm(c.frente+' '+c.sub+' '+c.tema+' '+c.area+' '+(c.verso||'')).includes(nb)):CARDS;
-  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(c.frente)}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':c.tipo==='digitar'?'<span class="bd">⌨</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
+  const tile=c=>`<div class="tile" role="button" data-card="${c.id}"><span class="tt">${esc(plano(c.frente))}</span>${c.tipo==='quiz'?'<span class="bd">quiz</span>':c.tipo==='digitar'?'<span class="bd">⌨</span>':''}${c.fav?'<span class="st">⭐</span>':''}</div>`;
   const ocultos=Object.values(RAW).filter(oculto).length;
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Estudar</h2>
@@ -1270,10 +1281,10 @@ function editarCard(id){
   folha(`<div class="serif" style="font-size:21px;margin-bottom:6px">Editar card</div>
     <div class="tm">Baralho</div><button class="sel" id="eb" style="margin:6px 0 4px"><span class="sv" style="font-size:14px">${esc(c.area)} › ${esc(c.tema)} › ${esc(c.sub)}</span><span class="ch">▾</span></button>
     <p class="mute small" style="margin-top:4px">Formatação: cada linha = uma linha · "- " no começo = tópico · **texto** = destaque</p>
-    <div class="tm">Pergunta</div><textarea class="ned" id="ef">${esc(c.frente)}</textarea>
-    ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div><textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div><textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
-    <div class="tm">Pegadinha (opcional)</div><textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
-    <div class="tm">Na UERJ (opcional)</div><textarea class="ned" id="eu" style="min-height:56px">${esc(c.uerj||'')}</textarea>
+    <div class="tm">Pergunta</div>${barraFmtHTML()}<textarea class="ned" id="ef">${esc(c.frente)}</textarea>
+    ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div>${barraFmtHTML()}<textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div>${barraFmtHTML()}<textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
+    <div class="tm">Pegadinha (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
+    <div class="tm">Na UERJ (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="eu" style="min-height:56px">${esc(c.uerj||'')}</textarea>
     <button class="btn" id="es" style="margin-top:16px">Salvar</button>
     <div class="foot">${S.edit[id]?'<button class="link" id="eo">voltar ao original</button>':''}<button class="link" id="eh" style="color:var(--bad)">ocultar card</button></div>`);
   let dest={area:c.area,tema:c.tema,sub:c.sub};
@@ -1368,19 +1379,10 @@ function pintarAnots(){
 }
 function anEditor(id,k,txt,a,n){ const el=document.createElement('div'); el.className='anot edit'; el.dataset.mid=id; el.dataset.k=k;
   if(a!=null){ el.dataset.a=a; el.dataset.n=n; }
-  el.innerHTML=`<div class="antb"><button data-fm="b" title="Negrito (Ctrl+B)"><b>B</b></button><button data-fm="u" title="Sublinhado (Ctrl+U)"><u>S</u></button><button class="cr" data-fm="r" title="Vermelho" aria-label="Vermelho"></button><button class="ck" data-fm="k" title="Preto (cor normal)" aria-label="Preto"></button><span class="dica">selecione o texto e toque</span></div><div class="anr"><textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><span class="anbt">${k==='novo'?'':'<button class="andel" data-andel aria-label="Apagar anotação" title="Apagar">🗑</button>'}<button class="ansv" data-ansv aria-label="Salvar" title="Salvar (Shift+Enter)">✓</button></span></div><div class="anim"></div>`;
+  el.innerHTML=`${barraFmtHTML('<span class="dica">selecione o texto e toque</span>')}<div class="anr"><textarea class="ned" rows="1" placeholder="Sua anotação… (Shift+Enter ou toque fora para salvar)">${esc(txt||'')}</textarea><span class="anbt">${k==='novo'?'':'<button class="andel" data-andel aria-label="Apagar anotação" title="Apagar">🗑</button>'}<button class="ansv" data-ansv aria-label="Salvar" title="Salvar (Shift+Enter)">✓</button></span></div><div class="anim"></div>`;
   anFotos(el); return el; }
 /* barra de fonte: envolve a seleção (ou desfaz se já estiver) */
-function anFmt(ta,f){
-  const [o,c]=f==='b'?['**','**']:f==='u'?['__','__']:['{v}','{/v}'], v=ta.value; let a=ta.selectionStart,b=ta.selectionEnd;
-  if(f==='k'){ let s=v.slice(a,b); const antes=v.slice(0,a), depois=v.slice(b);
-    const ab=antes.lastIndexOf('{v}')>antes.lastIndexOf('{/v}'); s=s.replace(/\{\/?v\}/g,'');
-    ta.value=antes+(ab?'{/v}':'')+s+(ab&&!/^\{\/v\}/.test(depois)?'{v}':'')+depois; ta.setSelectionRange(a+(ab?4:0),a+(ab?4:0)+s.length); return; }
-  const sel=v.slice(a,b);
-  if(sel.startsWith(o)&&sel.endsWith(c)&&sel.length>=o.length+c.length){ const s=sel.slice(o.length,sel.length-c.length); ta.value=v.slice(0,a)+s+v.slice(b); ta.setSelectionRange(a,a+s.length); return; }
-  if(v.slice(a-o.length,a)===o&&v.slice(b,b+c.length)===c){ ta.value=v.slice(0,a-o.length)+sel+v.slice(b+c.length); ta.setSelectionRange(a-o.length,b-o.length); return; }
-  ta.value=v.slice(0,a)+o+sel+c+v.slice(b); ta.setSelectionRange(a+o.length,b+o.length);
-}
+function anFmt(ta,f){ aplicarFmt(ta,f); }
 /* fotos da anotação no editor: tamanho P/M/G e "ao lado da anterior" */
 function anFotos(ed){
   const ta=ed.querySelector('textarea'), box=ed.querySelector('.anim'), v=ta.value, toks=[...v.matchAll(IMG_RE)];
@@ -1457,7 +1459,6 @@ document.addEventListener('click',e=>{
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav,x=(S.extra||[]).find(e=>e.id===id&&!e.del); if(x){ if(v) x.fav=true; else delete x.fav; x.u=Date.now(); delete S.fav[id]; agendarSync(); } else S.fav[id]=v; save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
-  const fm=e.target.closest('.anot.edit [data-fm]'); if(fm){ const ed=fm.closest('.anot.edit'), ta=ed.querySelector('textarea'); anFmt(ta,fm.dataset.fm); anAltura(ta); ta.focus(); return; }
   const fz=e.target.closest('.anot.edit [data-fz]'); if(fz){ anFotoMuda(fz.closest('.anot.edit'),+fz.dataset.j,fz.dataset.fz); return; }
   const fl=e.target.closest('.anot.edit [data-fl]'); if(fl){ anFotoMuda(fl.closest('.anot.edit'),+fl.dataset.fl,null,true); return; }
   const dl=e.target.closest('[data-andel]'); if(dl){ const ed=dl.closest('.anot.edit'); ed.querySelector('textarea').value=''; anSalvar(ed); return; }
@@ -1836,11 +1837,11 @@ function pAnotar(){
   const tx0=$('#tx'), draft=tx0?tx0.value:rascunho(), foc=tx0&&document.activeElement===tx0, sel=tx0?[tx0.selectionStart,tx0.selectionEnd]:null;
   const tk=ghTok(), lista=S.notas.slice().reverse(), naoEnv=S.notas.filter(n=>!n.env), man=lista.filter(n=>n.manual), resto=lista.filter(n=>!n.manual);
   const est=n=>n.manual?(n.pronto?'Cards feitos ✓':'Aguardando cards'):n.env?'✓ enviada':tk?'enviando…':'não enviada';
-  const item=n=>`<div class="nt ${MODO_SEL&&!n.manual?'selmode':''} ${SELN.has(n.id)?'sel':''}" data-id="${n.id}">${MODO_SEL&&!n.manual?`<span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span>`:''}<div class="d"><span class="nb ${n.manual?(n.pronto?'pill ok':'pill cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${esc(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt=""></div>`).join('')}</div>`:''}</div>`;
+  const item=n=>`<div class="nt ${MODO_SEL&&!n.manual?'selmode':''} ${SELN.has(n.id)?'sel':''}" data-id="${n.id}">${MODO_SEL&&!n.manual?`<span class="ck" data-ck="${n.id}" role="button" aria-label="Selecionar">${SELN.has(n.id)?'✓':''}</span>`:''}<div class="d"><span class="nb ${n.manual?(n.pronto?'pill ok':'pill cp'):''}">${est(n)}</span><span>${n.d.split('-').reverse().slice(0,2).join('/')}</span></div><div class="p">${fmtNota(n.t)}</div>${n.imgs&&n.imgs.length?`<div class="nimgs">${n.imgs.map(i=>`<div class="th"><img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt=""></div>`).join('')}</div>`:''}</div>`;
   const ri=rascImgs();
   $('#app').innerHTML=`<div class="wrap">
     <h2 class="serif">Anotar</h2>
-    <textarea class="note" id="tx" placeholder="${tecladoFisico()?'Anote o erro desta questão… (Enter pula linha · Shift+Enter guarda · cole imagens com Ctrl+V)':'Anote o erro desta questão… (toque em Guardar para salvar)'}"></textarea>
+    ${barraFmtHTML()}<textarea class="note" id="tx" placeholder="${tecladoFisico()?'Anote o erro desta questão… (Enter pula linha · Shift+Enter guarda · cole imagens com Ctrl+V)':'Anote o erro desta questão… (toque em Guardar para salvar)'}"></textarea>
     ${ri.length?`<div class="nimgs">${ri.map((u,i)=>`<div class="th"><img src="${u}" alt=""><button data-rmi="${i}" aria-label="Remover">×</button></div>`).join('')}</div>`:''}
     <button class="addimg" id="ai">+ imagem</button><input type="file" id="fi" accept="image/*" multiple hidden>
     <button class="btn" id="sv" style="margin-top:12px">Guardar</button>
@@ -1891,7 +1892,7 @@ ${n.t}${n.imgs&&n.imgs.length?'\nImagens: '+n.imgs.map(x=>x.path||'(imagem ainda
   document.querySelectorAll('.nt').forEach(el=>el.onclick=()=>{
     if(el.classList.contains('selmode')){ togSel(+el.dataset.id); return; }
     const n=S.notas.find(x=>x.id==el.dataset.id);
-    folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div><textarea class="note" id="ne">${esc(n.t)}</textarea>${n.imgs&&n.imgs.length?`<div class="nfull">${n.imgs.map(i=>`<img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt="">`).join('')}</div>`:''}
+    folha(`<div class="tag">${n.d.split('-').reverse().join('/')}</div>${barraFmtHTML()}<textarea class="note" id="ne">${esc(n.t)}</textarea>${n.imgs&&n.imgs.length?`<div class="nfull">${n.imgs.map(i=>`<img src="${esc(srcImg(i))}" data-p="${esc(i.path||"")}" onerror="imgFalhou(this)" alt="">`).join('')}</div>`:''}
       <button class="btn" id="ns" style="margin-top:12px">Salvar</button>
       <div class="foot"><button class="link" id="del" style="color:var(--bad)">apagar</button></div>`);
     $('#ns').onclick=async()=>{const t=$('#ne').value.trim();fecharFolha();if(!t||t===n.t)return;n.t=t;n.u=Date.now();save();pAnotar();
@@ -1975,7 +1976,7 @@ function clozeHTML(t,n,rev){
   const toks=[]; const s=String(t||'').replace(CZ_RE,(m,k,ans,dica)=>{ toks.push(+k===n?(rev?`<b class="czv">${inl(ans)}</b>`:`<span class="czh">[${dica?inl(dica):'…'}]</span>`):inl(ans)); return '\u0001'+(toks.length-1)+'\u0002'; });
   return paras(s).replace(/\u0001(\d+)\u0002/g,(m,i)=>toks[+i]);
 }
-const czPlano=(t,n)=>String(t||'').replace(CZ_RE,(m,k,ans,dica)=>+k===n?'[…]':ans).replace(/\*\*/g,'').replace(/\n+/g,' ').trim();
+const czPlano=(t,n)=>plano(String(t||'').replace(CZ_RE,(m,k,ans,dica)=>+k===n?'[…]':ans)).replace(/\n+/g,' ').trim();
 function ioHTML(c,rev){
   return `<div class="io"><img src="${esc(imgSrc(c.img))}" alt="">${(c.rects||[]).map((r,i)=>`<div class="ior ${rev?'rev':'iot'}" ${rev?'':'data-iop role="button"'} style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%">${rev?'':i+1}</div>`).join('')}</div>`;
 }
@@ -2004,14 +2005,7 @@ function ctxDoBaralho(c){ if(c.contexto) return c; const o=CARDS.find(x=>x.conte
 function pCriar(){
   if(!CR) CR=crNovo();
   const d=CR.dest, T=CR.tipo;
-  const tool=(cz)=>`<div class="ctool" role="toolbar">
-      <button data-f="b" title="Negrito (Ctrl+B)"><b>B</b></button>
-      <button data-f="li" title="Tópico">•</button>
-      <button data-f="sub" title="Subtópico">◦</button>
-      <button data-f="seta" title="Seta">→</button>
-      ${cz?`<button data-f="cz" class="czb" title="Ocultar (Ctrl+Shift+C)">[…]</button><button data-f="czm" class="czb" title="Ocultar com o mesmo número">[…]=</button>`:''}
-      <button data-f="img" title="Imagem">▣</button>
-    </div>`;
+  const tool=(cz)=>barraFmtHTML((cz?`<button type="button" data-fx="cz" class="czb" title="Ocultar (Ctrl+Shift+C)">[…]</button><button type="button" data-fx="czm" class="czb" title="Ocultar com o mesmo número">[…]=</button>`:'')+`<button type="button" data-fx="img" title="Imagem">▣</button>`);
   const thumbs=(arr,k)=>arr.length?`<div class="nimgs" style="justify-content:flex-start">${arr.map((s,i)=>`<div class="th"><img src="${esc(imgSrc(s))}" alt=""><button data-rm="${k}:${i}" aria-label="Remover">×</button></div>`).join('')}</div>`:'';
   let campos='';
   if(T==='fv') campos=`
@@ -2065,12 +2059,10 @@ function ligarCriar(){
     ta.onfocus=()=>{ CR.foco=ta.id; };
     ta.onkeydown=e=>{
       if((e.ctrlKey||e.metaKey||e.shiftKey)&&e.key==='Enter'){ e.preventDefault(); salvarCriado(); }
-      else if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&e.key.toLowerCase()==='b'){ e.preventDefault(); fmt(ta,'b'); }
+      else if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&(e.key.toLowerCase()==='b'||e.key.toLowerCase()==='u')){ e.preventDefault(); aplicarFmt(ta,e.key.toLowerCase()); }
       else if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='c'&&ta.id==='ct'){ e.preventDefault(); fmt(ta,e.altKey?'czm':'cz'); }
     };
   });
-  document.querySelectorAll('.ctool [data-f]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{
-    const ta=b.closest('.ctool').nextElementSibling; if(b.dataset.f==='img') return escolherImg(ta.dataset.im||'vimg'); fmt(ta,b.dataset.f); }; });
   document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{ const [k,i]=b.dataset.rm.split(':'); CR[k].splice(+i,1); pCriar(); });
   const ip=$('#iopick'); if(ip) ip.onclick=()=>escolherImg('io');
   const it=$('#iotroca'); if(it) it.onclick=()=>escolherImg('io');
@@ -2094,16 +2086,7 @@ function novoDoCard(){
 function voltarRevisao(){ const v=VOLTA; if(!v) return; VOLTA=null; const ids=[...v.fila,...v.novos.filter(id=>BYID[id]&&!v.fila.includes(id))];
   sessao(ids,v.modo,{feitos:v.feitos,unicos:v.unicos+v.novos.length,acertos:v.acertos,t0:v.t0,nome:v.nome},v.nome); }
 function crDest(d){ CR.dest=d; try{localStorage.setItem(LS+'.crdest',JSON.stringify(d))}catch(e){} }
-function fmt(ta,k){
-  const s=ta.selectionStart,e=ta.selectionEnd,v=ta.value,sel=v.slice(s,e);
-  if(k==='b'){ if(sel){ ta.setRangeText('**'+sel+'**',s,e,'end'); } else { ta.setRangeText('****',s,e,'start'); ta.setSelectionRange(s+2,s+2); } }
-  else if(k==='li'||k==='sub'){ const ls=v.lastIndexOf('\n',s-1)+1, le=v.indexOf('\n',e), fim=le<0?v.length:le, p=k==='li'?'- ':'  - ';
-    ta.setRangeText(v.slice(ls,fim).split('\n').map(l=>p+l.replace(/^\s*[-•◦]\s+/,'')).join('\n'),ls,fim,'end'); }
-  else if(k==='seta') ta.setRangeText(' → ',s,e,'end');
-  else if(k==='cz'||k==='czm'){ const ns=czNums(v), n=k==='czm'&&ns.length?Math.max(...ns):(ns.length?Math.max(...ns)+1:1);
-    if(sel) ta.setRangeText(`{{c${n}::${sel}}}`,s,e,'end'); else { ta.setRangeText(`{{c${n}::}}`,s,e,'start'); const p=s+`{{c${n}::`.length; ta.setSelectionRange(p,p); } }
-  ta.dispatchEvent(new Event('input')); ta.focus();
-}
+function fmt(ta,k){ aplicarFmt(ta,k); }
 function escolherImg(alvo){
   const i=document.createElement('input'); i.type='file'; i.accept='image/*'; i.multiple=alvo!=='io';
   i.onchange=()=>addImgsCriar([...i.files],alvo); i.click();
@@ -2420,6 +2403,100 @@ document.addEventListener('click',e=>{
   if(HLT&&!e.target.closest('.hltool')&&getSelection().isCollapsed) esconderFerr();
 },true);
 addEventListener('scroll',()=>{ if(HLT&&HLT.style.display!=='none'&&!HLR) esconderFerr(); },{passive:true});
+
+/* ===== Formatação de texto — a MESMA em todas as caixas de texto do app =====
+   barra em cima da caixa + barra flutuante em cima do trecho selecionado.
+   Marcas: **negrito**, __sublinhado__, {v}vermelho{/v}; "- " tópico; "  - " subtópico.
+   PC: segure Ctrl (⌘ no Mac) e selecione outros trechos → todos ficam marcados e a formatação vale para todos. */
+const FMT_BTN=[['b','<b>B</b>','Negrito (Ctrl+B)',''],['u','<u>S</u>','Sublinhado (Ctrl+U)',''],['r','','Vermelho','fr'],['k','','Preto (cor normal)','fk'],['li','•','Tópico',''],['sub','◦','Subtópico',''],['seta','→','Seta','']];
+function barraFmtHTML(extra){ return `<div class="ftb" role="toolbar">${FMT_BTN.map(([k,h,t,c])=>`<button type="button" data-fx="${k}" class="${c}" title="${t}" aria-label="${t}">${h}</button>`).join('')}${extra||''}</div>`; }
+const ehFmt=t=>!!(t&&t.tagName==='TEXTAREA'&&t.matches('textarea.ned,textarea.note')&&t.id!=='bt');
+let MULTI={ta:null,r:[]};
+const wrapLinhas=(s,o,c)=>s.split('\n').map(l=>{ const m=l.match(/^(\s*(?:[-•◦]\s+)?)(.*?)(\s*)$/); return m[2]?m[1]+o+m[2]+c+m[3]:l; }).join('\n');
+function umFmt(v,a,b,f,n){
+  const sel=v.slice(a,b), antes=v.slice(0,a), depois=v.slice(b);
+  if(f==='li'||f==='sub'){ const ls=v.lastIndexOf('\n',a-1)+1, le=v.indexOf('\n',b), fim=le<0?v.length:le, pf=f==='li'?'- ':'  - ';
+    const novo=v.slice(ls,fim).split('\n').map(l=>pf+l.replace(/^\s*[-•◦]\s+/,'')).join('\n'); return {v:v.slice(0,ls)+novo+v.slice(fim),a:ls+novo.length,b:ls+novo.length}; }
+  if(f==='seta') return {v:antes+' → '+depois,a:a+3,b:a+3};
+  if(f==='cz'||f==='czm'){ const ab=`{{c${n}::`; return sel?{v:antes+ab+sel+'}}'+depois,a:a+ab.length+sel.length+2,b:a+ab.length+sel.length+2}:{v:antes+ab+'}}'+depois,a:a+ab.length,b:a+ab.length}; }
+  if(f==='k'){ const s2=sel.replace(/\{\/?v\}/g,''), ab=antes.lastIndexOf('{v}')>antes.lastIndexOf('{/v}');
+    return {v:antes+(ab?'{/v}':'')+s2+(ab&&!/^\{\/v\}/.test(depois)?'{v}':'')+depois,a:a+(ab?4:0),b:a+(ab?4:0)+s2.length}; }
+  const [o,c]=f==='b'?['**','**']:f==='u'?['__','__']:['{v}','{/v}'];
+  if(!sel) return {v:antes+o+c+depois,a:a+o.length,b:a+o.length};
+  if(sel.startsWith(o)&&sel.endsWith(c)&&sel.length>=o.length+c.length){ const t=sel.slice(o.length,sel.length-c.length); return {v:antes+t+depois,a,b:a+t.length}; }
+  if(antes.endsWith(o)&&depois.startsWith(c)) return {v:antes.slice(0,-o.length)+sel+depois.slice(c.length),a:a-o.length,b:b-o.length};
+  const w=sel.includes('\n')?wrapLinhas(sel,o,c):o+sel+c;   // várias linhas: marca linha por linha (o card lê linha a linha)
+  return {v:antes+w+depois,a,b:a+w.length};
+}
+function aplicarFmt(ta,f){
+  if(!ta) return;
+  let rs=MULTI.ta===ta?MULTI.r.slice():[]; const a=ta.selectionStart,b=ta.selectionEnd;
+  if(b>a||!rs.length) rs.push([a,b]);
+  rs=rs.filter((r,i)=>rs.findIndex(x=>x[0]===r[0]&&x[1]===r[1])===i).sort((x,y)=>y[0]-x[0]);
+  const ns=czNums(ta.value), base=f==='czm'&&ns.length?Math.max(...ns):(ns.length?Math.max(...ns)+1:1), asc=rs.slice().sort((x,y)=>x[0]-y[0]);
+  let v=ta.value, ult=null;
+  for(const r of rs){ ult=umFmt(v,r[0],r[1],f,f==='cz'?base+asc.indexOf(r):base); v=ult.v; }   // do fim para o começo: as posições não se perdem
+  ta.value=v; if(ult) ta.setSelectionRange(ult.a,ult.b);
+  limparMulti(); ta.focus(); ta.dispatchEvent(new Event('input',{bubbles:true})); setTimeout(atualizarFlut,0);
+}
+function alvoDaBarra(bar){ if(bar.id==='ftf') return MULTI.ta&&document.contains(MULTI.ta)?MULTI.ta:(ehFmt(document.activeElement)?document.activeElement:FLUT_TA);
+  const nx=bar.nextElementSibling; if(nx&&nx.tagName==='TEXTAREA') return nx; return (bar.closest('.anot.edit')||bar.parentElement).querySelector('textarea'); }
+document.addEventListener('pointerdown',e=>{ if(e.target.closest&&e.target.closest('.ftb button,#ftf button')) e.preventDefault(); },true);
+document.addEventListener('mousedown',e=>{ if(e.target.closest&&e.target.closest('.ftb button,#ftf button')) e.preventDefault(); },true);
+document.addEventListener('click',e=>{
+  const bt=e.target.closest&&e.target.closest('[data-fx]'); if(!bt) return; const bar=bt.closest('.ftb,#ftf'); if(!bar) return;
+  e.preventDefault(); e.stopPropagation(); const ta=alvoDaBarra(bar); if(!ta) return; const f=bt.dataset.fx;
+  if(f==='img'){ escolherImg(ta.dataset.im||'vimg'); return; }
+  aplicarFmt(ta,f);
+},true);
+/* atalhos Ctrl+B / Ctrl+U nas caixas que ainda não tinham */
+document.addEventListener('keydown',e=>{ const t=e.target; if(!ehFmt(t)||t.closest('.anot.edit')||t.classList.contains('cr')) return;
+  const k=e.key.toLowerCase(); if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&(k==='b'||k==='u')){ e.preventDefault(); aplicarFmt(t,k); } });
+/* seleção múltipla (PC): Ctrl/⌘ + selecionar outro trecho guarda o anterior */
+document.addEventListener('mousedown',e=>{
+  if(e.target.closest&&e.target.closest('.ftb,#ftf')) return;
+  const ta=e.target;
+  if(ehFmt(ta)&&(e.ctrlKey||e.metaKey)&&document.activeElement===ta){ const a=ta.selectionStart,b=ta.selectionEnd; if(MULTI.ta!==ta) MULTI={ta,r:[]};
+    if(b>a&&!MULTI.r.some(r=>r[0]===a&&r[1]===b)) MULTI.r.push([a,b]); desenharMulti(); return; }
+  limparMulti();
+},true);
+document.addEventListener('input',e=>{ if(MULTI.ta&&e.target===MULTI.ta) limparMulti(); },true);
+function limparMulti(){ MULTI={ta:null,r:[]}; const o=$('#fml'); if(o) o.remove(); }
+const MIRROR_P=['boxSizing','width','height','paddingTop','paddingRight','paddingBottom','paddingLeft','borderTopWidth','borderRightWidth','borderBottomWidth','borderLeftWidth','borderTopStyle','borderRightStyle','borderBottomStyle','borderLeftStyle','fontFamily','fontSize','fontWeight','fontStyle','letterSpacing','lineHeight','textTransform','wordSpacing','textIndent','tabSize'];
+function espelho(ta,el){ const cs=getComputedStyle(ta); MIRROR_P.forEach(k=>el.style[k]=cs[k]); el.style.whiteSpace='pre-wrap'; el.style.wordWrap='break-word'; el.style.overflowWrap='break-word'; return cs; }
+function desenharMulti(){
+  const ta=MULTI.ta; let o=$('#fml'); if(!ta||!MULTI.r.length||!document.contains(ta)){ if(o) o.remove(); return; }
+  if(!o){ o=document.createElement('div'); o.id='fml'; document.body.appendChild(o); }
+  espelho(ta,o); const r=ta.getBoundingClientRect(); Object.assign(o.style,{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px'});
+  const v=ta.value, rs=MULTI.r.slice().sort((x,y)=>x[0]-y[0]); let h='',i=0;
+  rs.forEach(([a,b])=>{ if(a<i) a=i; h+=esc(v.slice(i,a))+'<mark>'+esc(v.slice(a,b))+'</mark>'; i=Math.max(i,b); }); h+=esc(v.slice(i))+'\n';
+  o.innerHTML=h; o.scrollTop=ta.scrollTop;
+}
+/* barra flutuante em cima do trecho selecionado */
+let FLUT_TA=null;
+function coordTA(ta,pos){ const d=document.createElement('div'); espelho(ta,d); d.style.height='auto'; Object.assign(d.style,{position:'absolute',visibility:'hidden',top:'0',left:'-9999px'});
+  d.textContent=ta.value.slice(0,pos); const sp=document.createElement('span'); sp.textContent=ta.value.slice(pos,pos+1)||'.'; d.appendChild(sp); document.body.appendChild(d);
+  const r=ta.getBoundingClientRect(), cs=getComputedStyle(ta), x=r.left+sp.offsetLeft-ta.scrollLeft, y=r.top+sp.offsetTop-ta.scrollTop, lh=parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.35; d.remove(); return {x,y,lh,r}; }
+function atualizarFlut(){
+  let f=$('#ftf'); const ta=document.activeElement;
+  const ok=ehFmt(ta)&&!$('#lbx')&&((ta.selectionEnd>ta.selectionStart)||(MULTI.ta===ta&&MULTI.r.length));
+  if(!ok){ if(f) f.classList.remove('on'); FLUT_TA=null; return; }
+  if(!f){ f=document.createElement('div'); f.id='ftf'; f.setAttribute('role','toolbar'); document.body.appendChild(f); }
+  if(FLUT_TA!==ta){ const bar=ta.previousElementSibling&&ta.previousElementSibling.classList.contains('ftb')?ta.previousElementSibling:(ta.closest('.anot.edit')||{}).querySelector?.('.ftb');
+    f.innerHTML=(bar?[...bar.querySelectorAll('[data-fx]')].filter(b=>b.dataset.fx!=='img').map(b=>b.outerHTML).join(''):barraFmtHTML().replace(/^<div[^>]*>|<\/div>$/g,'')); FLUT_TA=ta; }
+  f.classList.add('on');
+  const toque=matchMedia('(pointer:coarse)').matches, p=coordTA(ta,toque?ta.selectionEnd:ta.selectionStart), W=f.offsetWidth, H=f.offsetHeight;
+  let y=toque?p.y+p.lh+12:p.y-H-8; if(!toque&&y<8) y=p.y+p.lh+8;           // no celular vai embaixo (o menu do sistema fica em cima)
+  const tb=ta.previousElementSibling&&ta.previousElementSibling.classList.contains('ftb')?ta.previousElementSibling.getBoundingClientRect():null;
+  if(tb&&y<tb.bottom+4&&y+H>tb.top-4&&tb.bottom>0){ f.classList.remove('on'); return; }   // seleção logo embaixo da barra de cima: usa a de cima (não cobre o texto)
+  y=Math.min(Math.max(y,8),innerHeight-H-8);
+  const x=Math.min(Math.max(8,p.x-12),innerWidth-W-8);
+  f.style.left=x+'px'; f.style.top=y+'px';
+}
+['selectionchange','mouseup','keyup','touchend','select'].forEach(ev=>document.addEventListener(ev,()=>setTimeout(atualizarFlut,0)));
+addEventListener('scroll',()=>{ if($('#ftf.on')) atualizarFlut(); if(MULTI.ta) desenharMulti(); },true);
+addEventListener('resize',()=>{ if($('#ftf.on')) atualizarFlut(); if(MULTI.ta) desenharMulti(); });
+document.addEventListener('focusout',()=>setTimeout(()=>{ if(!ehFmt(document.activeElement)){ const f=$('#ftf'); if(f) f.classList.remove('on'); FLUT_TA=null; } },120));
 
 /* ===== Foto ampliada: no meio da tela, ocupando quase toda a tela; tocar na foto amplia mais (2×, arrasta para ver); tocar fora, × ou Esc fecha ===== */
 function abrirFoto(src){
