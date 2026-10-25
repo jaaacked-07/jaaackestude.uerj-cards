@@ -1452,7 +1452,7 @@ document.addEventListener('click',e=>{
   const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ folha(`<img src="${esc(zm.getAttribute('src'))}" alt="" style="width:100%;height:auto;border-radius:12px;display:block">`); return; }
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
-  if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav;S.fav[id]=v;save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
+  if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav,x=(S.extra||[]).find(e=>e.id===id&&!e.del); if(x){ if(v) x.fav=true; else delete x.fav; x.u=Date.now(); delete S.fav[id]; agendarSync(); } else S.fav[id]=v; save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
   const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
   const fm=e.target.closest('.anot.edit [data-fm]'); if(fm){ const ed=fm.closest('.anot.edit'), ta=ed.querySelector('textarea'); anFmt(ta,fm.dataset.fm); anAltura(ta); ta.focus(); return; }
   const fz=e.target.closest('.anot.edit [data-fz]'); if(fz){ anFotoMuda(fz.closest('.anot.edit'),+fz.dataset.j,fz.dataset.fz); return; }
@@ -2040,7 +2040,8 @@ function pCriar(){
       <div class="tm">Pegadinha</div><textarea class="ned cr" id="cpg" data-k="peg" style="min-height:48px">${esc(CR.peg)}</textarea>
       <div class="tm">Na UERJ</div><textarea class="ned cr" id="cue" data-k="ue" style="min-height:48px">${esc(CR.ue)}</textarea>
     </details>
-    <button class="btn" id="csv" style="margin-top:16px">${CR.edit?'Salvar alterações':'Salvar card'}</button>
+    <button class="stc ${CR.fav?'on':''}" id="cfav" style="margin-top:14px">${CR.fav?'★ Favorito':'☆ Favoritar'}</button>
+    <button class="btn" id="csv" style="margin-top:12px">${CR.edit?'Salvar alterações':'Salvar card'}</button>
     ${CR.edit?'<div class="linkrow"><button class="link" id="ccan">cancelar</button><button class="link" id="cdel" style="color:var(--bad)">excluir card</button></div>':`<button class="btn ghost" id="cprev" style="margin-top:10px">Ver como fica</button>`}
     <p class="mute small" style="text-align:center;margin-top:12px">Shift+Enter salva · Ctrl+B negrito · cole imagens com Ctrl+V · <b>N</b> abre esta aba</p>
   </div>`;
@@ -2071,6 +2072,7 @@ function ligarCriar(){
   const ip=$('#iopick'); if(ip) ip.onclick=()=>escolherImg('io');
   const it=$('#iotroca'); if(it) it.onclick=()=>escolherImg('io');
   const ed=$('#ioed'); if(ed) ligarIO(ed);
+  $('#cfav').onclick=()=>{ CR.fav=!CR.fav; const b=$('#cfav'); b.classList.toggle('on',CR.fav); b.textContent=CR.fav?'★ Favorito':'☆ Favoritar'; vib(8); };
   $('#csv').onclick=salvarCriado;
   const pv=$('#cprev'); if(pv) pv.onclick=()=>{ const cs=montarCards(true); if(!cs) return; folha(`<div class="mute small" style="margin-bottom:8px">Prévia${cs.length>1?` · 1 de ${cs.length} cards`:''}</div>${frenteHTML(cs[0])}<div class="ans">${respHTML(cs[0])}</div>`); };
   const cc=$('#ccan'); if(cc) cc.onclick=()=>{ CR=null; ir('estudar'); };
@@ -2144,7 +2146,7 @@ function novoBaralhoCriar(){
 }
 function montarCards(previa){
   const d=CR.dest; if(!d&&!previa){ toast('Escolha o baralho'); return null; }
-  const base={area:d?d.area:'',tema:d?d.tema:'',sub:d?d.sub:'',...(d&&d.subt?{subt:d.subt}:{}),meu:true,add:hoje(),fonte:'Criado por mim'};
+  const base={area:d?d.area:'',tema:d?d.tema:'',sub:d?d.sub:'',...(d&&d.subt?{subt:d.subt}:{}),...(CR.fav?{fav:true}:{}),meu:true,add:hoje(),fonte:'Criado por mim'};
   if(CR.peg.trim()) base.pegadinha=CR.peg.trim(); if(CR.ue.trim()) base.uerj=CR.ue.trim();
   const vis=CR.vimg.length?CR.vimg.map(s=>({tipo:'img',src:s})):undefined;
   const g=CR.edit||('meu-'+Date.now().toString(36));
@@ -2175,7 +2177,7 @@ async function salvarCriado(){
   }
   const u=Date.now();
   if(CR.edit){ S.extra.forEach(x=>{ if(x.grupo===CR.edit&&!cs.some(c=>c.id===x.id)){ x.del=true; x.u=u; } }); S.extra=S.extra.filter(x=>!cs.some(c=>c.id===x.id)); }
-  cs.forEach(c=>{ c.u=u; S.extra.push(c); });
+  cs.forEach(c=>{ c.u=u; delete S.fav[c.id]; S.extra.push(c); });
   S.decks=S.decks.filter(x=>!(x.area===cs[0].area&&x.tema===cs[0].tema&&x.sub===cs[0].sub&&(!x.subt||x.subt===cs[0].subt))||(S.decksDel[x.id]=1,false));
   save(); reaplicar(); SALVANDO=false;
   const ed=CR.edit; if(VOLTA&&!ed) cs.forEach(c=>VOLTA.novos.push(c.id));
@@ -2188,7 +2190,7 @@ function abrirEdicaoMeu(id){
   const r=RAW[id]; if(!r) return; const g=r.grupo||r.id, irm=S.extra.filter(x=>(x.grupo||x.id)===g&&!x.del);
   CR={...crNovo(),tipo:r.tipo==='cloze'?'cz':r.tipo==='io'?'io':'fv',dest:{area:r.area,tema:r.tema,sub:r.sub,subt:r.subt||''},edit:g,
     frente:r.frente||'',verso:r.verso||'',texto:r.texto||'',img:r.img||null,rects:(r.rects||[]).map(x=>({...x})),perg:r.perg||'',peg:r.pegadinha||'',ue:r.uerj||'',
-    fimg:(r.fvis||[]).map(v=>v.src),vimg:(r.visual?[].concat(r.visual):[]).filter(v=>v.tipo==='img').map(v=>v.src)};
+    fav:!!(BYID[id]||r).fav, fimg:(r.fvis||[]).map(v=>v.src),vimg:(r.visual?[].concat(r.visual):[]).filter(v=>v.tipo==='img').map(v=>v.src)};
   if(r.tipo==='cloze') CR.texto=irm[0].texto;
   fecharFolha(); if(SS) sair(); ir('criar');
 }
