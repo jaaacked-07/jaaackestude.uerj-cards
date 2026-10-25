@@ -79,6 +79,9 @@ nav svg{width:24px;height:24px}
 .sess{position:fixed;inset:0;background:var(--bg);z-index:10;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
 .sbar .vt.hide{visibility:hidden}
 .sbar .nbtn{font:700 14px Inter,sans-serif;color:var(--wine);border:1.5px solid var(--line);background:var(--card)}
+.sel.tog .sw{width:38px;height:22px;border-radius:11px;background:var(--line);position:relative;flex:none;margin-left:8px;transition:background .15s}
+.sel.tog .sw i{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .15s}
+.sel.tog.on .sw{background:var(--wine)}.sel.tog.on .sw i{left:19px}
 .voltarev{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:0 0 12px;padding:11px;border-radius:14px;background:var(--wine-soft);color:var(--wine);font-weight:600;font-size:14.5px}
 .sbar{display:flex;align-items:center;gap:14px;padding:14px 16px;max-width:520px;width:100%;margin:0 auto}
 .sbar .x{width:32px;height:32px;display:grid;place-items:center;color:var(--mute);border-radius:10px}
@@ -893,7 +896,7 @@ function pErros(){
 }
 
 /* ===== Estudar (baralho livre) ===== */
-const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
+const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat',semDig:false}; try{DECK.semDig=localStorage.getItem(LS+'.semdig')==='1'}catch(e){}
 const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prioridade UERJ e fracos)',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
@@ -918,6 +921,7 @@ function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
   if(DECK.filtro==='ess') p=p.filter(essencial);
   if(['alta','media','baixa'].includes(DECK.filtro)) p=p.filter(c=>(c.prio||'media')===DECK.filtro);
+  if(DECK.semDig&&DECK.filtro!=='digitar') p=p.filter(c=>c.tipo!=='digitar');
   if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
@@ -943,6 +947,7 @@ function pEstudar(){
     ${!vesperaAtiva()&&filaVespera().length?`<div class="linkrow" style="justify-content:flex-start;margin:-6px 0 12px"><button class="link vespb">🌙 Modo véspera (${filaVespera().length}) — revisão final, sem novos</button></div>`:''}
     <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
     <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
+    <button class="sel tog ${DECK.semDig?'on':''}" id="sD" role="switch" aria-checked="${DECK.semDig}"><span class="sl">Exceto cards de digitar</span><span class="sv">${DECK.semDig?'Sim':'Não'}</span><span class="sw"><i></i></span></button>
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
     <button class="sel" id="sO"><span class="sl">Ordem</span><span class="sv">${ORDENS[DECK.ordem]}</span><span class="ch">▾</span></button>
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
@@ -953,6 +958,7 @@ function pEstudar(){
     ${ocultos?`<div class="linkrow"><button class="link" id="oc">cards ocultos (${ocultos})</button></div>`:''}
   </div>`;
   $('#sT').onclick=escolherTemas;
+  $('#sD').onclick=()=>{ DECK.semDig=!DECK.semDig; try{localStorage.setItem(LS+'.semdig',DECK.semDig?'1':'0')}catch(e){} pEstudar(); };
   $('#sF').onclick=()=>escolha('Quais cards',Object.keys(FILTROS).map(k=>({v:k,t:FILTROS[k]})),DECK.filtro,v=>{DECK.filtro=v;pEstudar()});
   $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
   $('#sO').onclick=()=>escolha('Ordem dos cards',Object.keys(ORDENS).map(k=>({v:k,t:ORDENS[k]})),DECK.ordem,v=>{DECK.ordem=v;pEstudar()});
