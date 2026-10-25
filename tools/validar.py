@@ -32,6 +32,7 @@ for c in cards:
         for l in ctx.split('\n'):
             if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'contexto: itens juntos com "·" na mesma linha → "{l.strip()[:60]}"')
         if len(ctx) > 3200: W(i, 'contexto longo demais (resumão direto, sem enrolação)')
+    if c.get('prio') not in ('alta','media','baixa'): E(i, 'falta "prio" (alta, media ou baixa) — prioridade para a prova da UERJ')
     if c.get('tipo') not in ('flash','quiz','digitar'): E(i, f'tipo inválido: {c.get("tipo")}')
     if (c.get('add') or '') >= '2026-10-25' and not (c.get('macete') or '').strip(): E(i, 'falta "macete" (mnemônico/associação para gravar) — obrigatório nos cards novos')
     if c.get('tipo') == 'digitar':
@@ -40,23 +41,25 @@ for c in cards:
         elif len(r) > 40 or len(r.split()) > 6: E(i, f'digitar: "resposta" tem que ser curta e direta (≤ 6 palavras) → "{r[:50]}"')
         if not isinstance(c.get('aceitas', []), list): E(i, 'digitar: "aceitas" tem que ser lista')
         if not (c.get('frente') or '').strip().endswith('?'): W(i, 'digitar: a frente deve ser uma pergunta direta terminando em "?"')
+    # regras de estilo do verso: ❌ só em card novo; em card antigo vira ⚠️ (ela pode ter editado o card pelo app — nunca desfazer)
+    Ev = E if (c.get('add') or '') >= '2026-10-25' else W
     if c.get('tipo') in ('flash','digitar'):
         v = c.get('verso') or ''
         b0 = v.split('\n\n')[0].strip().split('\n')
-        if not b0 or not b0[0].startswith('**'): E(i, 'verso: 1ª linha tem que ser a RESPOSTA DIRETA em **negrito** (é ela que fica em destaque)')
+        if not b0 or not b0[0].startswith('**'): Ev(i, 'verso: 1ª linha tem que ser a RESPOSTA DIRETA em **negrito** (é ela que fica em destaque)')
         for l in b0:
             core = l.strip().strip('*')
             if re.match(r'^\s*[-•◦]\s', l): continue
-            if ' · ' in core or re.search(r'[.;]\s+\**[A-ZÁÉÍÓÚÂÊÔÃÕÇ]', core): E(i, f'resposta em destaque com 2 ideias na mesma linha (quebre em linhas) → "{l.strip()[:70]}"')
-            if core.count(',') >= 2 and not re.search(r'\d,\d', core): E(i, f'resposta em destaque com lista por vírgula na mesma linha (use título + um item por linha) → "{l.strip()[:70]}"')
+            if ' · ' in core or re.search(r'[.;]\s+\**[A-ZÁÉÍÓÚÂÊÔÃÕÇ]', core): Ev(i, f'resposta em destaque com 2 ideias na mesma linha (quebre em linhas) → "{l.strip()[:70]}"')
+            if core.count(',') >= 2 and not re.search(r'\d,\d', core): Ev(i, f'resposta em destaque com lista por vírgula na mesma linha (use título + um item por linha) → "{l.strip()[:70]}"')
         if b0 and len(b0[0].strip().strip('*')) > 70: W(i, f'1ª linha da resposta longa — deixe objetiva (gatilho de memória) → "{b0[0].strip()[:70]}"')
         if len(v.split('\n\n')) < 2 and not c.get('visual'): W(i, 'verso sem explicação em tópicos e sem visual')
         for bl in v.split('\n\n')[1:]:
             ls = [x for x in bl.split('\n') if x.strip()]
             prosa = [x for x in ls if not re.match(r'^\s*[-•◦]\s', x) and not x.strip().endswith(':')]
-            if prosa and len(' '.join(prosa)) > 160: E(i, f'verso: explicação em texto corrido — use rótulo + tópicos "- " → "{prosa[0][:60]}"')
+            if prosa and len(' '.join(prosa)) > 160: Ev(i, f'verso: explicação em texto corrido — use rótulo + tópicos "- " → "{prosa[0][:60]}"')
         for l in v.split('\n'):
-            if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: E(i, f'verso: itens juntos com "·" no mesmo tópico → "{l.strip()[:60]}"')
+            if re.match(r'^\s*[-•◦]\s', l) and ' · ' in l: Ev(i, f'verso: itens juntos com "·" no mesmo tópico → "{l.strip()[:60]}"')
         if not c.get('visual'): W(i, 'card sem "visual" (imagem real, tabela, fluxo, vs, lista ou grupos)')
     for v in (c.get('visual') if isinstance(c.get('visual'), list) else [c.get('visual')] if c.get('visual') else []):
         if v.get('tipo') == 'tabela' and not v.get('linhas'): E(i, 'tabela sem linhas')
