@@ -578,7 +578,9 @@ const LEECH_TXT='Sanguessuga é o card que você já errou 4 ou mais vezes: só 
 function rating(id,r,tipoErro){
   const s=S.srs[id]||{box:0,seen:0,wrong:0};
   if(s.ease==null){s.ease=2.5;s.ivl=0;s.reps=0;s.lapses=0}
-  const h=hoje(); s.seen++; s.last=h; s.lr=r; s.t=Date.now();
+  const h=hoje(), jaHoje=s.last===h&&s.due; s.seen++; s.last=h; s.lr=r; s.t=Date.now();
+  /* card repetido no mesmo dia (outra rodada manual): acerto não "empurra" a revisão de novo; erro conta normalmente */
+  if(jaHoje&&r>0){ S.srs[id]=s; return; }
   let ivl;
   if(r===0){ s.wrong++; s.lapses++; s.box=0; s.reps=0; s.ease=Math.max(1.3,s.ease-0.2); if(tipoErro) s.et=tipoErro; ivl=1; }
   else if(r===1){ s.q=quaseN(s)+1; s.ease=Math.max(1.3,s.ease-0.15); ivl=s.reps===0?1:Math.max(1,Math.round((s.ivl||1)*1.2)); s.reps++; }
@@ -859,7 +861,9 @@ const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prior
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
 const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Só de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
-function ordenar(pool){
+/* revisão manual: o que você já respondeu HOJE vai para o fim — montar outra rodada traz cards diferentes */
+function ordenar(pool){ const h=hoje(), feito=c=>S.srs[c.id]&&S.srs[c.id].last===h, L=ordenar0(pool); return [...L.filter(c=>!feito(c)),...L.filter(feito)]; }
+function ordenar0(pool){
   const pos=new Map(CARDS.map((c,i)=>[c.id,i])), P=c=>S.srs[c.id]||{};
   const L=pool.slice(), o=DECK.ordem;
   if(o==='aleat') return intercalar(L,prioridade,60);   // aleatória, mas puxando o que mais cai na UERJ e o que está fraco
