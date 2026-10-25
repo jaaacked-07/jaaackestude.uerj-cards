@@ -465,6 +465,58 @@
     "Síndrome nefrítica — nefropatia por IgA × GNPE, GNRP e hipertensão renovascular": {
       "q": 2,
       "temas": "Nefropatia por IgA × glomerulonefrite pós-estreptocócica (latência e C3); hipertensão renovascular"
+    },
+    "Doença celíaca e diarreia crônica na criança": {
+      "q": 2,
+      "temas": "Doença celíaca (sorologia e biópsia); diarreia crônica na criança — investigação"
+    },
+    "Icterícia neonatal — fisiológica, patológica, fototerapia e colestase": {
+      "q": 2,
+      "temas": "Icterícia neonatal (fisiológica × patológica, incompatibilidade ABO/Rh, fototerapia); atresia de vias biliares"
+    },
+    "Hiperplasia adrenal congênita, estenose de piloro e puberdade precoce": {
+      "q": 2,
+      "temas": "HAC por deficiência de 21-hidroxilase × estenose hipertrófica de piloro; puberdade precoce central × periférica"
+    },
+    "Sangramento da 2ª metade — DPP, placenta prévia, acretismo, vasa prévia e rotura uterina": {
+      "q": 4,
+      "temas": "Descolamento prematuro de placenta; placenta prévia e acretismo; diagnóstico diferencial do sangramento do 3º trimestre"
+    },
+    "Pré-natal — exames de rotina, toxoplasmose, estreptococo do grupo B e vacinas": {
+      "q": 6,
+      "temas": "Exames do pré-natal por trimestre; toxoplasmose na gestação (avidez); profilaxia do estreptococo do grupo B; vacinação na gestação (dTpa); USG de 1º trimestre"
+    },
+    "Diabetes mellitus gestacional": {
+      "q": 2,
+      "temas": "Diabetes gestacional — diagnóstico (92/180/153), metas, insulina, repercussões fetais e TOTG pós-parto"
+    },
+    "Úlceras genitais — sífilis, herpes, cancro mole, LGV e donovanose": {
+      "q": 1,
+      "temas": "Úlcera genital — fluxograma do Ministério da Saúde e diagnóstico diferencial"
+    },
+    "Endometriose e adenomiose": {
+      "q": 2,
+      "temas": "Endometriose (diagnóstico, limites do tratamento clínico, infertilidade); adenomiose"
+    },
+    "Desenhos de estudo e medidas de associação": {
+      "q": 2,
+      "temas": "Tipos de estudo (ecológico, transversal, caso-controle, coorte, ensaio clínico); fases do ensaio clínico; RR, OR, RRA e NNT"
+    },
+    "Abordagem familiar e método clínico centrado na pessoa": {
+      "q": 3,
+      "temas": "Método clínico centrado na pessoa (SIFE); ferramentas de abordagem familiar (genograma, ecomapa, ciclo de vida, APGAR, FIRO, PRACTICE)"
+    },
+    "Rastreamento de câncer e níveis de prevenção": {
+      "q": 3,
+      "temas": "Rastreamento de câncer pelo Ministério da Saúde (colo, mama, próstata, colorretal); níveis de prevenção e prevenção quaternária; vieses do rastreamento"
+    },
+    "Saúde mental na APS — depressão, ansiedade e uso de álcool": {
+      "q": 3,
+      "temas": "Depressão (inclusive no idoso) e ansiedade na APS; uso de álcool (AUDIT, CAGE) e síndrome de abstinência; Wernicke"
+    },
+    "Divertículos — Zenker e doença diverticular dos cólons": {
+      "q": 2,
+      "temas": "Divertículo de Zenker; diverticulite aguda (TC, Hinchey, conduta)"
     }
   }
 }
