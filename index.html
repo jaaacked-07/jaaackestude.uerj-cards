@@ -529,12 +529,13 @@ const reaplicar=()=>setCards(LASTBASE);
 const oculto=c0=>c0.id in S.oculto ? !!S.oculto[c0.id] : !!c0.oculto;
 const abc=(a,b)=>a.localeCompare(b,'pt',{sensitivity:'base'});
 async function carregar(){
+  /* cards.json ficou grande (> 3 MB): não cabe mais no armazenamento local — a cópia offline fica com o service worker.
+     (antes a gravação falhava e o app continuava com a cópia velha, sem os cards novos) */
   let base=null;
-  try{base=JSON.parse(localStorage.getItem(LS+'.cache'))}catch(e){}
-  if(base) setCards(base.cards);
+  try{ localStorage.removeItem(LS+'.cache'); }catch(e){}
   try{
     const r=await fetch('data/cards.json?t='+Date.now(),{cache:'no-store'});
-    if(r.ok){const j=await r.json(); if((j.rev||0)>=((base&&base.rev)||0)){localStorage.setItem(LS+'.cache',JSON.stringify(j)); setCards(j.cards);}}
+    if(r.ok){ const j=await r.json(); base=j; setCards(j.cards); }
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
   migrarMarcasCtx(); migrarIO();
@@ -1421,7 +1422,7 @@ async function syncEdits(){
     const noRepo=new Set(novo.cards.map(c=>c.id)), igual=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
     ['edit','fav','minha','oculto'].forEach(f=>Object.keys(snap[f]).forEach(id=>{ if(noRepo.has(id)&&igual(S[f][id],snap[f][id])) delete S[f][id]; }));
     ['area','tema','sub'].forEach(f=>Object.keys(snap.ren[f]).forEach(k=>{ if(S.ren[f][k]===snap.ren[f][k]) delete S.ren[f][k]; }));
-    localStorage.setItem(LS+'.cache',JSON.stringify(novo)); save(); setCards(novo.cards);
+    save(); setCards(novo.cards);
   }catch(e){}
   SYNC=false;
 }
