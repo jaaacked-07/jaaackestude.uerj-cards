@@ -2433,7 +2433,7 @@ document.addEventListener('keydown',e=>{
   const k=e.key.toLowerCase();
   if(e.key===' '||e.code==='Space'){ const b=$('#sh')||$('#nx'); if(b){ e.preventDefault(); b.click(); } return; }
   if(k==='z'||e.key==='Backspace'){ e.preventDefault(); voltarCard(); return; }
-  if(k==='e'){ e.preventDefault(); if($('#sh')) $('#sh').click(); anEditarBase(document.querySelector('#ar .mbx')); return; }
+  if(k==='e'){ e.preventDefault(); const id=SS.fila[0]; if(id&&BYID[id]) editarCard(id); return; }   // E = editar o card (o mesmo do ✎)
   if(['1','2','3'].includes(k)){ const r=document.querySelector(`.rate [data-r="${+k-1}"]`); if(r){ e.preventDefault(); r.click(); } return; }
   if(['a','b','c','d','e'].includes(k)&&k!=='e'){ const o=document.querySelector(`.opt[data-i="${'abcd'.indexOf(k)}"]:not([disabled])`); if(o){ e.preventDefault(); o.click(); } }
 });
