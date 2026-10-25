@@ -308,6 +308,15 @@ body.ntmode [data-an]{cursor:crosshair}
 .mtfab .mtrow{display:flex;gap:8px}
 .mtfab .nfab{display:none;font:700 17px Inter,sans-serif;color:var(--wine)}
 .mtfab.comn .nfab{display:flex}
+.mtfab .sfab{display:none;font-size:22px;color:var(--mute)}
+.mtfab.comf .sfab{display:flex}
+.mtfab .sfab.on{color:#E0A800}
+#favav{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);z-index:9600;display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 26px;border-radius:18px;background:rgba(42,30,33,.92);color:#fff;pointer-events:none;animation:favin .18s ease forwards;transition:opacity .35s}
+#favav span{font-size:44px;line-height:1;color:#ccc}
+#favav.on span{color:#FFC93C}
+#favav b{font:600 15px Inter,system-ui,sans-serif}
+#favav.sai{opacity:0}
+@keyframes favin{to{transform:translate(-50%,-50%) scale(1)}}
 @media (pointer:coarse){.sbar .nbtn{display:none}}
 .mtfab .ntb.on{background:var(--rose);color:#fff}
 .addn{margin-top:14px;font-size:14px;color:var(--rose);font-weight:500}
@@ -1314,6 +1323,16 @@ function editarCard(id){
 function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else render(); }
 
 /* ===== Favorito e anotação pessoal no card ===== */
+/* favoritar: estrela no topo do card OU botão ☆ flutuante (aparece mesmo lendo o fim do card); sempre avisa na tela */
+function favAlternar(id){
+  const v=!(BYID[id]||{}).fav,x=(S.extra||[]).find(e=>e.id===id&&!e.del);
+  if(x){ if(v) x.fav=true; else delete x.fav; x.u=Date.now(); delete S.fav[id]; agendarSync(); } else S.fav[id]=v;
+  save(); reaplicar(); document.querySelectorAll(`[data-star="${id}"]`).forEach(b=>{ b.classList.toggle('on',v); b.textContent=v?'★':'☆'; });
+  fabMT(); vib(v?[10,40,10]:8); avisoFav(v); syncEdits();
+}
+function avisoFav(v){ let a=$('#favav'); if(a) a.remove(); a=document.createElement('div'); a.id='favav'; a.className=v?'on':'';
+  a.innerHTML=`<span>${v?'★':'☆'}</span><b>${v?'Card favoritado':'Favorito removido'}</b>`; document.body.appendChild(a); setTimeout(()=>a.classList.add('sai'),1300); setTimeout(()=>a.remove(),1700); }
+const cardAtualFav=()=>{ const b=document.querySelector('#sheet [data-star]')||(SS?document.querySelector('#sess [data-star]'):null); return b?b.dataset.star:null; };
 function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}${c.subt?' › '+esc(c.subt):''}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 /* anotação pessoal: texto + fotos coladas, guardadas como ![](data/img/...) dentro do próprio texto */
 const IMG_RE=/!\[([^\]]*)\]\(([^)\s]+)\)/g;
@@ -1457,7 +1476,7 @@ document.addEventListener('click',e=>{
   const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ abrirFoto(zm.getAttribute('src')); return; }
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
-  if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav,x=(S.extra||[]).find(e=>e.id===id&&!e.del); if(x){ if(v) x.fav=true; else delete x.fav; x.u=Date.now(); delete S.fav[id]; agendarSync(); } else S.fav[id]=v; save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
+  if(st){ favAlternar(st.dataset.star); return; }
   const sv=e.target.closest('[data-ansv]'); if(sv){ anSalvar(sv.closest('.anot.edit')); return; }
   const fz=e.target.closest('.anot.edit [data-fz]'); if(fz){ anFotoMuda(fz.closest('.anot.edit'),+fz.dataset.j,fz.dataset.fz); return; }
   const fl=e.target.closest('.anot.edit [data-fl]'); if(fl){ anFotoMuda(fl.closest('.anot.edit'),+fl.dataset.fl,null,true); return; }
@@ -2357,7 +2376,8 @@ function fabMT(){
   let f=$('#mtfab'); const tem=!!document.querySelector('.hlz,[data-an]');
   if(!tem){ if(f) f.remove(); return; }
   if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
-    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb nfab" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb sfab" aria-label="Favoritar card" title="Favoritar card">☆</button><button class="mtb nfab" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.querySelector('.sfab').onmousedown=e=>e.preventDefault(); f.querySelector('.sfab').onclick=()=>{ const id=cardAtualFav(); if(id) favAlternar(id); };
     f.querySelector('.nfab').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); novoDoCard(); };
     f.querySelector('.ntb').onmousedown=e=>e.preventDefault(); f.querySelector('.ntb').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); modoNota(); };
     f.querySelector('.mtm').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
@@ -2365,6 +2385,7 @@ function fabMT(){
     document.body.appendChild(f); }
   if(f.dataset.c!==(MT||'')){ f.dataset.c=MT||''; f.classList.toggle('on',!!MT); }
   f.classList.toggle('alto',!!(SS||$('#sheet'))); f.classList.toggle('comn',!!SS);
+  const fid=cardAtualFav(), sb=f.querySelector('.sfab'); if(f.classList.contains('comf')!==!!fid) f.classList.toggle('comf',!!fid); if(fid){ const on=!!(BYID[fid]||{}).fav, tx=on?'★':'☆'; if(sb.textContent!==tx) sb.textContent=tx; if(sb.classList.contains('on')!==on) sb.classList.toggle('on',on); }   // só mexe se mudou (o observador chama fabMT a cada mudança)
 }
 function marcarDireto(){
   const sel=getSelection(); if(!MT||!sel.rangeCount||sel.isCollapsed) return;
