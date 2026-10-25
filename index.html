@@ -708,13 +708,42 @@ const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,
 const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}" data-an="an:${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
 const macHTML=c=>c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'';
 /* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
-const normR=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9%+]+/g,' ').replace(/(\d)([a-z])/g,'$1 $2').replace(/\bhoras?\b/g,'h').replace(/\bminutos?\b/g,'min').replace(/\s+/g,' ').trim();
+/* ===== correção do card de digitar (tolerante) =====
+   - ignora acento, maiúscula, pontuação e palavras de ligação (de, da, o, e…)
+   - símbolos e palavras de comparação valem igual: ≥ >= "maior ou igual" "maior que" "acima de" "pelo menos"…
+   - erro de digitação: até ~30% das letras numa palavra longa; palavras curtas e números têm que bater
+   - ordem das palavras e palavras a mais não importam (se a resposta tiver 2+ palavras-chave) */
+const CMP=[[/≥|>=|=>|\bmaior ou igual( a| que)?\b|\bpelo menos\b|\bno minimo\b|\ba partir de\b/g,' MAIOR '],[/≤|<=|=<|\bmenor ou igual( a| que)?\b|\bno maximo\b|\bate\b/g,' MENOR '],
+  [/>|\bmaior (que|do que)\b|\bacima de\b|\bmais (de|que|do que)\b|\bsuperior a\b|\bmaior\b/g,' MAIOR '],[/<|\bmenor (que|do que)\b|\babaixo de\b|\bmenos (de|que|do que)\b|\binferior a\b|\bmenor\b/g,' MENOR ']];
+const STOP=new Set('de da do das dos a o as os e em na no nas nos com por para um uma ou the of'.split(' '));
+const ROM={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6'};
+function normR(t){
+  let x=String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  x=x.replace(/(\d{1,3})\.(\d{3})(?!\d)/g,'$1$2').replace(/(\d)[,.](\d)/g,'$1.$2');
+  CMP.forEach(([r,k])=>{ x=x.replace(r,k.toLowerCase()==' maior '?' MAIOR ':k); });
+  x=x.replace(/[^a-zA-Z0-9%+.]+/g,' ').replace(/(\d)([a-z])/g,'$1 $2').replace(/([a-z])(\d)/g,'$1 $2').replace(/\bhoras?\b/g,'h').replace(/\bminutos?\b/g,'min').replace(/\bml\b/g,'ml');
+  const ws=x.split(' ').map(w=>w.replace(/^\.+|\.+$/g,'')).filter(Boolean), sem=ws.filter(w=>!STOP.has(w));
+  return (sem.length?sem:ws).map(w=>ROM[w]||w).join(' ');
+}
 function levR(a,b){ const m=a.length,n=b.length; if(!m||!n) return 0; let p=[...Array(n+1).keys()];
   for(let i=1;i<=m;i++){ const q=[i]; for(let j=1;j<=n;j++) q[j]=Math.min(p[j]+1,q[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=q; } return 1-p[n]/Math.max(m,n); }
-function conferirDig(c,v){ const u=normR(v); if(!u) return false; const dig=x=>(x.match(/\d+/g)||[]).join(',');
-  /* erro de digitação só é tolerado em palavras longas; palavras curtas (tipo I × II, 3 × 4) têm que bater */
-  const parecido=(u,a)=>{ const x=u.split(' '), y=a.split(' '); return x.length===y.length&&x.every((w,i)=>w===y[i]||(w.length>=4&&y[i].length>=4&&levR(w,y[i])>=.8)); };
-  return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>u===a||(u+' ').startsWith(a+' ')||(dig(u)===dig(a)&&parecido(u,a))); }
+const ehNum=w=>/^\d/.test(w);
+const pareceP=(w,y)=>w===y||(!ehNum(w)&&!ehNum(y)&&w.length>=4&&y.length>=4&&levR(w,y)>=(Math.max(w.length,y.length)>=7?.7:.75));
+function bateR(u,a){
+  if(!u||!a) return false; if(u===a||(u+' ').startsWith(a+' ')) return true;
+  const U=u.split(' '), A=a.split(' '), cmp=L=>L.filter(w=>w==='MAIOR'||w==='MENOR');
+  const cu=cmp(U), ca=cmp(A); if(cu.length&&ca.length&&cu[0]!==ca[0]) return false;      // "maior" × "menor" = erro
+  const Uw=U.filter(w=>w!=='MAIOR'&&w!=='MENOR'), Aw=A.filter(w=>w!=='MAIOR'&&w!=='MENOR');
+  const nU=Uw.filter(ehNum).sort().join(','), nA=Aw.filter(ehNum).sort().join(','); if(nU!==nA) return false;
+  const pal=Aw.filter(w=>!ehNum(w)), pu=Uw.filter(w=>!ehNum(w));
+  if(!pal.length) return pu.length<=3;                                                     // resposta só numérica: o número decide
+  if(pal.length===1&&pu.length>1&&!nA) return false;                                       // 1 palavra-chave: não aceita "potencialmente contaminada" por "contaminada"
+  const usada=new Set(); const ok=pal.every(w=>{ const k=pu.findIndex((x,i)=>!usada.has(i)&&pareceP(x,w)); if(k<0) return false; usada.add(k); return true; });
+  return ok&&pu.length-pal.length<=3;
+}
+function conferirDig(c,v){ const u=normR(v); if(!u) return false;
+  const sinal=t=>(t.match(/MAIOR|MENOR/)||[''])[0], su=sinal(u), sr=sinal(normR(c.resposta)); if(su&&sr&&su!==sr) return false;   // sinal trocado = erro, mesmo que o número bata
+  return [c.resposta,...(c.aceitas||[])].map(normR).filter(Boolean).some(a=>bateR(u,a)); }
 const extrasUERJ=c=>(c.uerj?`<div class="uerj"><b>Na UERJ · </b>${inlBr(c.uerj)}</div>`:'')+(c.pegadinha?`<div class="pega"><b>Pegadinha · </b>${inlBr(c.pegadinha)}</div>`:'');
 /* texto estruturado: linha = linha · "- " = tópico · **x** = destaque */
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
