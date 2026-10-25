@@ -66,7 +66,8 @@ Cada card tem 3 níveis — o app mostra nessa ordem, abrindo conforme ela toca:
 - `area` (grande área), sempre uma destas: **Cirurgia**, **Clínica Médica**, **Ginecologia**, **Obstetrícia**, **Medicina Preventiva**, **Pediatria**. (Ginecologia e Obstetrícia são áreas SEPARADAS desde o primeiro nível.)
 - `tema` (matéria/sub-área dentro da área). **Clínica Médica usa SEMPRE uma destas sub-áreas, escritas exatamente assim:** Cardiologia, Dermatologia, Endocrinologia, Gastroenterologia, Hematologia, Infectologia, Nefrologia, Neurologia, Pneumologia, Psiquiatria, Reumatologia (o app já mostra todas). Outras áreas, ex.: Cirurgia → Abdome agudo, Trauma, Cirurgia vascular…; Medicina Preventiva → Vigilância em Saúde, Atenção Primária, Epidemiologia, SUS…; Pediatria → Neonatologia, Infectologia pediátrica…
 - `sub` (assunto = **baralho**). Baralhos são **abrangentes**: um baralho por doença/tema grande, com tudo dele dentro (quadro, diagnóstico, classificação, conduta). **Nunca** separe por aspecto ("Apendicite — sinais", "Apendicite — diagnóstico" ✗). Exemplos ✓: "Abdome agudo inflamatório — Apendicite", "Câncer de colo do útero", "Mama — nódulo, BI-RADS e rastreamento", "Sofrimento fetal crônico", "Sofrimento fetal agudo — CTG" (tudo de cardiotocografia vai para esse).
-- Ela também cria baralhos vazios pelo app para organizar: estão em `data/progresso.json` → `decks` (`{area, tema, sub}`). **Leia (sem editar) e use esses baralhos** quando o assunto couber neles.
+- Ela também cria baralhos vazios pelo app para organizar: estão em `data/progresso.json` → `decks` (`{area, tema, sub, subt?}`). **Leia (sem editar) e use esses baralhos** quando o assunto couber neles.
+- **Subtema (`subt`, opcional) = 4º nível, DENTRO de um baralho.** Ela organiza assim: baralho "Doenças Tubulointersticiais" → subtemas "NTA Necrose Tubular Aguda", "Necrose de papila"… Se o assunto da anotação for um subtema de um baralho que já existe (dela ou do arquivo), use o MESMO `sub` e ponha o subtema em `subt` — nunca crie baralho "Baralho - Subtema" separado. O contexto continua um só por baralho (`sub`).
 
 **Ginecologia e Obstetrícia são ÁREAS separadas** (nunca "GO" nem "Ginecologia e Obstetrícia"). Gestação, parto, puerpério, pré-natal, abortamento, vitalidade fetal e doenças da gravidez → área Obstetrícia (matérias ex.: Pré-natal, Vitalidade fetal, Parto e puerpério, Hemorragias da gestação, Síndromes hipertensivas, Prematuridade e RPMO). O resto → área Ginecologia (matérias ex.: Oncologia ginecológica, Mastologia, Sangramento uterino, Climatério, Infecções genitais, Reprodução humana, Uroginecologia).
 
@@ -126,7 +127,8 @@ Todo card leva o campo **`contexto`**: um resumo do que **ENVOLVE** o tema, para
   "tipo": "flash",                  // "flash", "quiz" ou "digitar"
   "area": "Medicina Preventiva",    // grande área (ver lista acima)
   "tema": "Vigilância em Saúde",    // matéria
-  "sub": "Notificação imediata",    // assunto (vira filtro no app)
+  "sub": "Notificação imediata",    // assunto = baralho (vira filtro no app)
+  "subt": "Prazos",                 // opcional: subtema dentro do baralho
   "frente": "Pergunta",
   "verso": "Resposta curta",        // só flash
   "opcoes": ["A", "B", "C", "D"],   // só quiz

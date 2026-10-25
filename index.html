@@ -362,6 +362,13 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .rowi.lv1 .tx{font-weight:600;color:var(--wine);letter-spacing:.005em}
 .rowi.lv1 .tx:before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--rose);margin-right:9px;vertical-align:2px}
 .lv2{padding-left:44px!important;background:color-mix(in srgb,var(--card) 30%,var(--bg))}
+.lv3{padding-left:60px!important;font-size:14px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
+.rowi.lv3 .tx:before{content:"↳ ";color:var(--rose)}
+.sts{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.stc{border:1.5px solid var(--line);border-radius:20px;padding:6px 12px;font-size:13px;background:var(--card);color:var(--ink)}
+.stc.on{border-color:var(--wine);background:var(--wine-soft);color:var(--wine);font-weight:600}
+.stc.nv{border-style:dashed;color:var(--mute)}
+.stc input{border:0;background:none;font:inherit;color:inherit;outline:0;width:170px}
 .lv3{padding-left:58px!important;font-size:14.5px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
 .opi.l1{padding-left:24px}.opi.l2{padding-left:48px}
 .opi .lab{flex:1;display:flex;align-items:center;gap:10px;text-align:left;min-width:0}
@@ -524,7 +531,7 @@ function setCards(base){
     const ed=S.edit[c0.id]||{}, c={...c0,...ed}; c.area=ed.area||dArea(c0); c.tema=ed.tema||dTema(c0); c.sub=ed.sub||dSub(c0);
     c.fav = c0.id in S.fav ? !!S.fav[c0.id] : !!c0.fav;
     c.minha = c0.id in S.minha ? S.minha[c0.id] : (c0.minha||'');
-    if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
+    if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj; if(!c.subt) delete c.subt;
     out[c.id]=c; });
   CARDS=Object.values(out); BYID=out;
 }
@@ -541,7 +548,7 @@ async function carregar(){
     if(r.ok){ const j=await r.json(); base=j; setCards(j.cards); }
   }catch(e){}
   if(!CARDS.length && !base) setCards([]);
-  migrarMarcasCtx(); migrarIO();
+  migrarMarcasCtx(); migrarIO(); migrarSubtemas();
   try{ PREV=JSON.parse(localStorage.getItem(LS+'.prev'))||PREV }catch(e){}
   try{ const r=await fetch('data/prevalencia.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ PREV=await r.json(); localStorage.setItem(LS+'.prev',JSON.stringify(PREV)); } }catch(e){}
 }
@@ -676,6 +683,20 @@ function marcarStreak(){ S.dias[hoje()]=1; recalc(); }
 function addXP(n){ S.xpDev[DEV]=(S.xpDev[DEV]||0)+n; recalc(); }
 /* marcações antigas feitas no contexto (gravadas no card) passam para o contexto */
 /* oclusão antiga (1 card por área) → 1 card só por imagem */
+/* uma vez: cards dela com baralho "X - Y" viram baralho X › subtema Y; edições de baralho de cards dela passam para o próprio card (sincroniza entre aparelhos) */
+function migrarSubtemas(){
+  if(!(S.extra||[]).length) return; let feito=false; try{feito=localStorage.getItem(LS+'.migst')==='1'}catch(e){}
+  const u=Date.now(); let mudou=false;
+  S.extra.forEach(x=>{ if(x.del) return; const e=S.edit[x.id];
+    if(e&&(e.area||e.tema||e.sub)){ ['area','tema','sub'].forEach(k=>{ if(e[k]){ x[k]=e[k]; delete e[k]; } }); if(!Object.keys(e).length) delete S.edit[x.id]; x.u=u; mudou=true; }
+    const m=!x.subt&&String(x.sub||'').match(/^(.+?)\s+[-–—]\s+(.+)$/);
+    if(m){ x.sub=m[1].trim(); x.subt=m[2].trim(); x.u=u; mudou=true; } });
+  if(!feito) S.extra.forEach(x=>{ if(x.del||x.subt) return;   // ex.: "NIA Nefrite Intersticial Aguda" → dentro de "Doenças Tubulointersticiais"
+    const alvo=S.extra.find(y=>!y.del&&y.subt&&y.area===x.area&&y.tema===x.tema&&/tubulointersticia/i.test(y.sub));
+    if(alvo&&/nefrite intersticial/i.test(norm(x.sub))){ x.subt=x.sub; x.sub=alvo.sub; x.u=u; mudou=true; } });
+  try{localStorage.setItem(LS+'.migst','1')}catch(e){}
+  if(mudou){ save(); reaplicar(); agendarSync(); }
+}
 function migrarIO(){
   const u=Date.now(), g={}; let mudou=false;
   (S.extra||[]).forEach(x=>{ if(x.tipo==='io'&&!x.del&&/-o\d+$/.test(x.id)) (g[x.grupo]=g[x.grupo]||[]).push(x); });
@@ -794,6 +815,7 @@ function ir(p){PAG=p;document.querySelectorAll('nav button').forEach(b=>b.classL
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>ir(b.dataset.p));
 
 function render(){
+  RENDER_PEND=false;
   montarPlano();
   const e=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong&&S.srs[c.id].box<3).length;
   $('#dotE').classList.toggle('hide',!e);
@@ -802,6 +824,11 @@ function render(){
   if(scrollY!==y) scrollTo(0,y);
 }
 
+let RENDER_PEND=false;
+/* redesenho vindo de sincronização em segundo plano: espera ela terminar de digitar um nome (senão o campo some no meio) */
+const digitandoNome=()=>{ const ae=document.activeElement; return !!(ae&&ae.classList&&ae.classList.contains('inl')); };
+function renderBg(){ if(digitandoNome()){ RENDER_PEND=true; return; } render(); }
+addEventListener('focusout',e=>{ if(RENDER_PEND&&e.target.classList&&e.target.classList.contains('inl')) setTimeout(()=>{ if(RENDER_PEND) render(); },60); });
 function pHome(){
   const h=hoje(), falta=diff(h,PROVA);
   const feito=estudadosHoje(), pend=pendentes().length;
@@ -837,20 +864,26 @@ function pHome(){
 const TIPOS={ns:'Não sabia',cf:'Confundi',lr:'Li errado'};
 /* ===== Árvore: grande área → matéria → assunto → cards ===== */
 function arv3(lista,vazios){
-  const t={}; (vazios||[]).forEach(d=>{const A=(t[d.area]=t[d.area]||{}),M=(A[d.tema]=A[d.tema]||{}); if(d.sub!=null) M[d.sub]=M[d.sub]||[]});
-  lista.forEach(c=>{const A=(t[c.area]=t[c.area]||{}),M=(A[c.tema]=A[c.tema]||{});(M[c.sub]=M[c.sub]||[]).push(c)});
-  return Object.keys(t).sort(abc).map(a=>({a,ms:Object.keys(t[a]).sort(abc).map(m=>({m,subs:Object.keys(t[a][m]).sort(abc).map(su=>({su,cards:t[a][m][su]}))}))}));
+  const t={}, st={}, addSt=(x)=>{ if(x.subt){ const k=x.area+'|'+x.tema+'|'+x.sub; (st[k]=st[k]||new Set()).add(x.subt); } };
+  (vazios||[]).forEach(d=>{const A=(t[d.area]=t[d.area]||{}),M=(A[d.tema]=A[d.tema]||{}); if(d.sub!=null){ M[d.sub]=M[d.sub]||[]; addSt(d); }});
+  lista.forEach(c=>{const A=(t[c.area]=t[c.area]||{}),M=(A[c.tema]=A[c.tema]||{});(M[c.sub]=M[c.sub]||[]).push(c); addSt(c);});
+  return Object.keys(t).sort(abc).map(a=>({a,ms:Object.keys(t[a]).sort(abc).map(m=>({m,subs:Object.keys(t[a][m]).sort(abc).map(su=>({su,cards:t[a][m][su],sts:[...(st[a+'|'+m+'|'+su]||[])].sort(abc)}))}))}));
 }
+/* subtemas (dentro de um baralho) que já existem: cards + baralhos vazios */
+function subtemasDe(a,t,su){ const s=new Set(); [...CARDS,...S.decks].forEach(x=>{ if(x.area===a&&x.tema===t&&x.sub===su&&x.subt) s.add(x.subt); }); return [...s].sort(abc); }
 function arvoreHTML(lista,aberto,o){
   const arv=arv3(lista,o.vazios); if(!arv.length) return '<p class="mute small">Nada encontrado.</p>';
-  const row=(lv,key,nome,n,ren,open)=>`<div class="rowi ${lv?'lv'+lv:''} ${open?'op':''}" role="button" data-k="${esc(key)}"><span class="chv">▶</span><span class="tx">${esc(nome)}</span><span class="ct">${n}</span>${o.pen?`<span class="acts">${lv<2?`<span class="pen" data-add title="${lv?'Novo baralho':'Nova matéria'}">＋</span>`:''}${lv===2&&!n?'<span class="pen" data-del title="Apagar baralho vazio">×</span>':''}<span class="pen" data-ren title="Renomear">✎</span></span>`:''}</div>`;
+  const row=(lv,key,nome,n,ren,open)=>`<div class="rowi ${lv?'lv'+lv:''} ${open?'op':''}" role="button" data-k="${esc(key)}"><span class="chv">▶</span><span class="tx">${esc(nome)}</span><span class="ct">${n}</span>${o.pen?`<span class="acts">${lv<3?`<span class="pen" data-add title="${['Nova matéria','Novo baralho','Novo subtema'][lv]}">＋</span>`:''}${lv>=2&&!n?`<span class="pen" data-del title="Apagar ${lv===3?'subtema':'baralho'} vazio">×</span>`:''}<span class="pen" data-ren title="Renomear">✎</span></span>`:''}</div>`;
+  const tiles=cs=>`<div class="tiles">${cs.map(o.tile).join('')}</div>`;
   return '<div class="rows">'+arv.map(({a,ms})=>{
     const ka='a:'+a, oa=o.forcar||aberto.has(ka), na=ms.reduce((s,x)=>s+x.subs.reduce((t,y)=>t+y.cards.length,0),0);
     return row(0,ka,a,na,`data-ren="area" data-a="${esc(a)}"`,oa)+(oa?ms.map(({m,subs})=>{
       const km='m:'+a+'|'+m, om=o.forcar||aberto.has(km), nm=subs.reduce((t,y)=>t+y.cards.length,0);
-      return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards})=>{
-        const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks);
-        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(cards.length?`<div class="tiles">${cards.map(o.tile).join('')}</div>`:`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Arraste cards ou baralhos para cá.</p></div>`):'');
+      return row(1,km,m,nm,`data-ren="tema" data-a="${esc(a)}" data-t="${esc(m)}"`,om)+(om?subs.map(({su,cards,sts})=>{
+        const ks='s:'+a+'|'+m+'|'+su, os=o.forcar||aberto.has(ks), soltos=cards.filter(c=>!c.subt);
+        const dentro=(soltos.length?tiles(soltos):'')+sts.map(st=>{ const ku='u:'+a+'|'+m+'|'+su+'|'+st, ou=o.forcar||aberto.has(ku), cs=cards.filter(c=>c.subt===st);
+            return row(3,ku,st,cs.length,'',ou)+(ou?(cs.length?tiles(cs):`<div class="tiles" style="display:block"><p class="mute small">Subtema vazio. Crie um card nele ou arraste cards para cá.</p></div>`):''); }).join('');
+        return row(2,ks,su,cards.length,`data-ren="sub" data-a="${esc(a)}" data-t="${esc(m)}" data-su="${esc(su)}"`,os)+(os?(dentro||`<div class="tiles" style="display:block"><p class="mute small">Baralho vazio. Arraste cards ou baralhos para cá, ou toque em ＋ para criar um subtema.</p></div>`):'');
       }).join(''):'');
     }).join(''):'');
   }).join('')+'</div>';
@@ -1029,13 +1062,13 @@ const normN=x=>norm(x).replace(/[^a-z0-9]+/g,' ').trim();
 function noGrupo(x,tipo,a,t,su){return x.area===a&&(tipo==='area'||x.tema===t)&&(tipo!=='sub'||x.sub===su)}
 function aplicarDestino(tipo,a,t,su,fn){
   CARDS.filter(c=>noGrupo(c,tipo,a,t,su)).forEach(c=>moverCard(c.id,fn(c)));
-  S.decks.forEach(d=>{ if(noGrupo(d,tipo,a,t,su)) { const n=fn(d); d.area=n.area; d.tema=n.tema; if(d.sub!=null) d.sub=n.sub; } });
+  S.decks.forEach(d=>{ if(noGrupo(d,tipo,a,t,su)) { const n=fn(d); d.area=n.area; d.tema=n.tema; if(d.sub!=null) d.sub=n.sub; if(n.subt!==undefined){ if(n.subt) d.subt=n.subt; else delete d.subt; } } });
 }
 function arrumarDecks(){
   reaplicar(); const vistos=new Set();
   S.decks=S.decks.filter(d=>{
-    const k=d.area+'|'+d.tema+'|'+(d.sub??''), temCard=CARDS.some(c=>c.area===d.area&&c.tema===d.tema&&(d.sub==null||c.sub===d.sub));
-    const temDeck=d.sub==null&&S.decks.some(x=>x!==d&&x.area===d.area&&x.tema===d.tema&&x.sub!=null);
+    const k=d.area+'|'+d.tema+'|'+(d.sub??'')+'|'+(d.subt||''), temCard=CARDS.some(c=>c.area===d.area&&c.tema===d.tema&&(d.sub==null||c.sub===d.sub)&&(!d.subt||c.subt===d.subt));
+    const temDeck=(d.sub==null&&S.decks.some(x=>x!==d&&x.area===d.area&&x.tema===d.tema&&x.sub!=null))||(d.sub!=null&&!d.subt&&S.decks.some(x=>x!==d&&x.area===d.area&&x.tema===d.tema&&x.sub===d.sub&&x.subt));
     if(vistos.has(k)||temCard||temDeck){S.decksDel[d.id]=1;return false} vistos.add(k); return true;});
 }
 function concluirOrg(msg){ DECK.subs.clear(); arrumarDecks(); save(); toast(msg); render(); syncEdits(); }
@@ -1056,7 +1089,12 @@ function renomearInline(row,k){
   const i=document.createElement('input'); i.className='inl'; i.value=atual; tx.replaceWith(i); i.focus(); i.select();
   let feito=false;
   const salvar=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(!v||v===atual){render();return}
+    if(t==='u'){ const [a,tm,su,st]=p; CARDS.filter(c=>c.area===a&&c.tema===tm&&c.sub===su&&c.subt===st).forEach(c=>moverCard(c.id,{area:a,tema:tm,sub:su,subt:v}));
+      S.decks.forEach(d=>{ if(d.area===a&&d.tema===tm&&d.sub===su&&d.subt===st) d.subt=v; }); abrir('s:'+a+'|'+tm+'|'+su,'u:'+a+'|'+tm+'|'+su+'|'+v); concluirOrg('Subtema renomeado'); return; }
     const tipo=t==='a'?'area':t==='m'?'tema':'sub', [a,tm,su]=p;
+    if(tipo==='sub'){ const r=resolverBaralho(a,tm,v); if(r.subt){   // "Baralho - Subtema": vira subtema de um baralho
+      aplicarDestino('sub',a,tm,su,()=>({area:a,tema:tm,sub:r.sub,subt:r.subt})); abrir('a:'+a,'m:'+a+'|'+tm,'s:'+a+'|'+tm+'|'+r.sub,'u:'+a+'|'+tm+'|'+r.sub+'|'+r.subt);
+      concluirOrg('Agora é o subtema “'+r.subt+'” de '+r.sub); return; } }
     const fn=tipo==='area'?x=>({area:v,tema:x.tema,sub:x.sub}):tipo==='tema'?x=>({area:a,tema:v,sub:x.sub}):x=>({area:a,tema:tm,sub:v});
     aplicarDestino(tipo,a,tm,su,fn);
     let msg='Renomeado';
@@ -1068,12 +1106,13 @@ function renomearInline(row,k){
   i.onblur=salvar; i.onclick=e=>e.stopPropagation();
 }
 function adicionarInline(row,k){
-  const {t,p}=parseK(k), a=p[0], tm=p[1], lv=t==='a'?1:2;
+  const {t,p}=parseK(k), a=p[0], tm=p[1], lv=t==='a'?1:t==='m'?2:3;
   ABERTO.add(k); 
   const r=document.createElement('div'); r.className='rowi lv'+lv;
-  r.innerHTML=`<span class="chv">＋</span><input class="inl" placeholder="${t==='a'?'Nome da nova matéria':'Nome do novo baralho'}">`;
+  r.innerHTML=`<span class="chv">＋</span><input class="inl" placeholder="${t==='a'?'Nome da nova matéria':t==='m'?'Nome do novo baralho':'Nome do novo subtema'}">`;
   row.after(r); const i=r.querySelector('input'); i.focus(); let feito=false;
   const salvar=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(!v){r.remove();return}
+    if(t==='s'){ const su=p[2]; if(!subtemasDe(a,tm,su).some(x=>norm(x)===norm(v))) S.decks.push({id:Date.now(),area:a,tema:tm,sub:su,subt:v}); abrir('u:'+a+'|'+tm+'|'+su+'|'+v); concluirOrg('Subtema criado em '+su); return; }
     if(t==='a'){ S.decks.push({id:Date.now(),area:a,tema:v}); abrir('a:'+a,'m:'+a+'|'+v); concluirOrg('Matéria criada'); return; }
     const res=encaixar(a,tm,v);
     if(!CARDS.some(c=>c.area===a&&c.tema===res.tema&&c.sub===v)) S.decks.push({id:Date.now(),area:a,tema:res.tema,sub:v});
@@ -1083,14 +1122,14 @@ function adicionarInline(row,k){
   i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();salvar()} if(e.key==='Escape'){feito=true;r.remove()} };
   i.onblur=salvar; i.onclick=e=>e.stopPropagation();
 }
-function apagarDeckVazio(k){ const {p}=parseK(k); S.decks.filter(d=>d.area===p[0]&&d.tema===p[1]&&d.sub===p[2]).forEach(d=>S.decksDel[d.id]=1); S.decks=S.decks.filter(d=>!S.decksDel[d.id]); save(); toast('Baralho apagado'); render(); }
+function apagarDeckVazio(k){ const {t,p}=parseK(k); S.decks.filter(d=>d.area===p[0]&&d.tema===p[1]&&d.sub===p[2]&&(t!=='u'||d.subt===p[3])).forEach(d=>S.decksDel[d.id]=1); S.decks=S.decks.filter(d=>!S.decksDel[d.id]); save(); toast('Baralho apagado'); render(); }
 /* arrastar: segure (toque) ou clique e arraste (mouse) */
 let DRAG=null, SUPRIME_CLICK=false;
 document.addEventListener('touchmove',e=>{ if(DRAG&&DRAG.ativo) e.preventDefault(); },{passive:false});
 function ligarDrag(el){
   el.onpointerdown=e=>{
     if(e.button>0||e.target.closest('input,.pen')) return;
-    const src=e.target.closest('[data-card],[data-k^="s:"],[data-k^="m:"]'); if(!src) return;
+    const src=e.target.closest('[data-card],[data-k^="u:"],[data-k^="s:"],[data-k^="m:"]'); if(!src) return;
     const st={src,x:e.clientX,y:e.clientY,ativo:false,toque:e.pointerType!=='mouse'};
     if(st.toque) st.timer=setTimeout(()=>iniciarDrag(st),380);
     DRAG=st;
@@ -1120,18 +1159,24 @@ addEventListener('pointerup',()=>{ const st=DRAG; DRAG=null; if(!st) return; cle
 addEventListener('pointercancel',()=>{ const st=DRAG; DRAG=null; if(st){clearTimeout(st.timer); clearInterval(st.scr); if(st.g) st.g.remove(); st.src.classList.remove('arrastando'); if(st.alvo) st.alvo.classList.remove('alvo');} });
 function podeSoltar(src,alvo){
   const at=alvo.dataset.k[0];
-  if(src.dataset.card) return at==='s';
+  if(src.dataset.card) return at==='s'||at==='u';
   const st=src.dataset.k[0];
+  if(st==='u') return at==='s'||at==='u';
   if(st==='s') return at==='s'||at==='m';
   if(st==='m') return at==='m'||at==='a';
   return false;
 }
 function soltar(src,alvo){
   const A=parseK(alvo.dataset.k);
-  if(src.dataset.card){ const [a,t,su]=A.p; moverCard(src.dataset.card,{area:a,tema:t,sub:su}); abrir('s:'+A.p.join('|')); concluirOrg('Card movido para '+su); return; }
+  if(src.dataset.card){ const [a,t,su,st]=A.p; moverCard(src.dataset.card,{area:a,tema:t,sub:su,subt:st||''}); abrir('s:'+a+'|'+t+'|'+su); if(st) abrir(alvo.dataset.k); concluirOrg('Card movido para '+(st||su)); return; }
   const S0=parseK(src.dataset.k);
+  if(S0.t==='u'){ const [a,t,su,st]=S0.p, [a2,t2,s2,st2]=A.p, novo=st2||st;
+    CARDS.filter(c=>c.area===a&&c.tema===t&&c.sub===su&&c.subt===st).forEach(c=>moverCard(c.id,{area:a2,tema:t2,sub:s2,subt:novo}));
+    S.decks.forEach(d=>{ if(d.area===a&&d.tema===t&&d.sub===su&&d.subt===st){ d.area=a2; d.tema=t2; d.sub=s2; d.subt=novo; } });
+    abrir('a:'+a2,'m:'+a2+'|'+t2,'s:'+a2+'|'+t2+'|'+s2,'u:'+a2+'|'+t2+'|'+s2+'|'+novo); concluirOrg(st2?'Juntado em '+st2:'Subtema movido para '+s2); return; }
   if(S0.t==='s'){ const [a,t,su]=S0.p;
-    if(A.t==='s'){ const [a2,t2,s2]=A.p; aplicarDestino('sub',a,t,su,()=>({area:a2,tema:t2,sub:s2})); abrir('a:'+a2,'m:'+a2+'|'+t2,'s:'+A.p.join('|')); concluirOrg('Juntado em '+s2); }
+    /* baralho solto em cima de outro baralho → vira SUBTEMA dele (os subtemas que ele já tinha continuam) */
+    if(A.t==='s'){ const [a2,t2,s2]=A.p; aplicarDestino('sub',a,t,su,x=>({area:a2,tema:t2,sub:s2,subt:x.subt||su})); abrir('a:'+a2,'m:'+a2+'|'+t2,'s:'+A.p.join('|')); concluirOrg('"'+su+'" virou subtema de '+s2); }
     else { const [a2,t2]=A.p; aplicarDestino('sub',a,t,su,()=>({area:a2,tema:t2,sub:su})); abrir('a:'+a2,'m:'+a2+'|'+t2); concluirOrg('Movido para '+t2); }
     return; }
   if(S0.t==='m'){ const [a,t]=S0.p;
@@ -1172,8 +1217,13 @@ function criarDeck(area,tema,sub){
   save(); fecharFolha(); toast('Baralho criado'); render();
 }
 function moverCard(id,d){
-  const r=RAW[id], e={...(S.edit[id]||{})};
+  const r=RAW[id]; if(!r) return; const atual=BYID[id]||r, st=d.subt===undefined?(atual.subt||''):(d.subt||'');
+  /* card criado por ela: muda o próprio card (vai para os outros aparelhos pelo progresso) */
+  const x=(S.extra||[]).find(e=>e.id===id&&!e.del);
+  if(x){ x.area=d.area; x.tema=d.tema; x.sub=d.sub; if(st) x.subt=st; else delete x.subt; x.u=Date.now(); delete S.edit[id]; agendarSync(); return; }
+  const e={...(S.edit[id]||{})};
   ['area','tema','sub'].forEach(k=>{ const orig=k==='area'?dArea(r):k==='tema'?dTema(r):dSub(r); if(d[k]!==orig) e[k]=d[k]; else delete e[k]; });
+  if(st!==(r.subt||'')) e.subt=st; else delete e.subt;
   if(Object.keys(e).length) S.edit[id]=e; else delete S.edit[id];
 }
 function depoisDeMover(d){
@@ -1250,7 +1300,7 @@ function editarCard(id){
 function depoisDeEditar(id){ if(SS){ if(SS.fila[0]===id) proximoCard(); } else render(); }
 
 /* ===== Favorito e anotação pessoal no card ===== */
-function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
+function tagHTML(c){return `<div class="tag">${esc(c.tema)} · ${esc(c.sub)}${c.subt?' › '+esc(c.subt):''}<span class="tacts"><button class="pen" data-pen="${c.id}" aria-label="Editar card">✎</button><button class="star ${c.fav?'on':''}" data-star="${c.id}" aria-label="Favoritar">${c.fav?'★':'☆'}</button></span></div>`}
 /* anotação pessoal: texto + fotos coladas, guardadas como ![](data/img/...) dentro do próprio texto */
 const IMG_RE=/!\[([^\]]*)\]\(([^)\s]+)\)/g;
 /* anotação: **negrito**, __sublinhado__, {v}vermelho{/v}; fotos ![p|m|](src) = pequena/média/grande; fotos na mesma linha = lado a lado */
@@ -1460,7 +1510,7 @@ async function syncEdits(){
         if(snap.ren.sub[k]) c.sub=snap.ren.sub[k];
         if(snap.ren.tema[c.tema]) c.tema=snap.ren.tema[c.tema];
         if(snap.edit[c.id]) Object.assign(c,snap.edit[c.id]);
-        if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj;
+        if(!c.pegadinha) delete c.pegadinha; if(!c.uerj) delete c.uerj; if(!c.subt) delete c.subt;
         [['fav',v=>!!v],['oculto',v=>!!v],['minha',v=>v||'']].forEach(([f,cv])=>{ if(c.id in snap[f]){const v=cv(snap[f][c.id]); if(v) c[f]=v; else delete c[f];} });
       });
       d.rev=Date.now();
@@ -1504,7 +1554,7 @@ async function syncNotas(){
   let prontos=0;
   S.notas.forEach(n=>{ if(n.manual&&!n.pronto&&ps.has(String(n.id))){ n.pronto=true; n.u=Date.now(); prontos++; } });
   S.notas=S.notas.filter(n=>{const x=!n.manual&&n.env&&ps.has(String(n.id)); if(x) S.notasDel[n.id]=1; return !x});
-  if(S.notas.length<antes||prontos){save();toast(prontos?'Cards das anotações copiadas prontos ✓':'Seus cards novos chegaram ✓');if(!SS)render()}
+  if(S.notas.length<antes||prontos){save();toast(prontos?'Cards das anotações copiadas prontos ✓':'Seus cards novos chegaram ✓');if(!SS)renderBg()}
 }
 
 /* ===== Sincronizar progresso entre aparelhos ===== */
@@ -1526,7 +1576,7 @@ function mergeProg(R){
     else if(R.plan.date===S.plan.date){ S.plan.ids=[...new Set([...S.plan.ids,...R.plan.ids])]; S.plan.done=[...new Set([...S.plan.done,...R.plan.done])]; S.plan.nv=Math.max(S.plan.nv||0,R.plan.nv||0); S.plan.v=Math.max(S.plan.v||2,R.plan.v||2);} }
   if(R.ret&&(!S.ret||(R.ret.t||0)>(S.ret.t||0))) S.ret=R.ret;
   const ex={}; [...(S.extra||[]),...(R.extra||[])].forEach(c=>{ const o=ex[c.id]; if(!o||(c.u||0)>(o.u||0)) ex[c.id]=c; }); S.extra=Object.values(ex);
-  recalc(); migrarMarcasCtx();
+  recalc(); migrarMarcasCtx(); migrarSubtemas();
   return JSON.stringify(progSnap())!==antes;
 }
 let PSYNC=false, PTIMER=null, PMUDOU=false;
@@ -1546,7 +1596,7 @@ async function syncProg(){
         if(!w.ok) throw new Error(w.status);
       }
       PMUDOU=false;
-      if(mudou&&!SS&&!$('#sheet')) render();
+      if(mudou&&!SS&&!$('#sheet')) renderBg();
       break;
     }catch(e){ if(i) break; }
   }
@@ -1983,6 +2033,8 @@ function pCriar(){
     <div class="tm">Baralho</div>
     <button class="sel" id="cb" style="margin:6px 0 2px"><span class="sv" style="font-size:14px">${d?esc(d.area)+' › '+esc(d.tema)+' › '+esc(d.sub):'<span class="mute">Escolher baralho…</span>'}</span><span class="ch">▾</span></button>
     <div class="linkrow" style="justify-content:flex-start;margin:0 0 8px"><button class="link" id="cnb">＋ novo baralho</button></div>
+    ${d?`<div class="tm">Subtema <span class="mute" style="font-weight:400">(opcional — fica dentro de ${esc(d.sub)})</span></div>
+    <div class="sts" id="csts">${subtemasDe(d.area,d.tema,d.sub).concat(d.subt&&!subtemasDe(d.area,d.tema,d.sub).includes(d.subt)?[d.subt]:[]).map(st=>`<button class="stc ${st===d.subt?'on':''}" data-st="${esc(st)}">${esc(st)}</button>`).join('')}<button class="stc nv" id="cnst">＋ novo subtema</button></div>`:''}
     ${campos}
     <details class="crx" ${CR.peg||CR.ue?'open':''}><summary>Pegadinha e Na UERJ (opcional)</summary>
       <div class="tm">Pegadinha</div><textarea class="ned cr" id="cpg" data-k="peg" style="min-height:48px">${esc(CR.peg)}</textarea>
@@ -1999,6 +2051,11 @@ function ligarCriar(){
   $('#cb').onclick=()=>escolherBaralho('Baralho do card',CR.dest,d=>{ crDest(d); fecharFolha(); pCriar(); });
   const vr=$('#vrev'); if(vr) vr.onclick=voltarRevisao;
   $('#cnb').onclick=novoBaralhoCriar;
+  document.querySelectorAll('#csts [data-st]').forEach(b=>b.onclick=()=>{ const st=b.dataset.st; crDest({...CR.dest,subt:CR.dest.subt===st?'':st}); pCriar(); });
+  const ns=$('#cnst'); if(ns) ns.onclick=()=>{
+    ns.innerHTML='<input class="inl" placeholder="Nome do subtema">'; const i=ns.querySelector('input'); i.focus(); let feito=false;
+    const ok=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(v){ const ja=subtemasDe(CR.dest.area,CR.dest.tema,CR.dest.sub).find(x=>norm(x)===norm(v)); crDest({...CR.dest,subt:ja||v}); toast((ja?'Subtema já existia: ':'Subtema: ')+(ja||v)); } pCriar(); };
+    i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();ok()} if(e.key==='Escape'){feito=true;pCriar()} }; i.onblur=ok; i.onclick=e=>e.stopPropagation(); };
   document.querySelectorAll('textarea.cr').forEach(ta=>{
     ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
     ta.onfocus=()=>{ CR.foco=ta.id; };
@@ -2027,7 +2084,7 @@ function novoDoCard(){
   if(!SS||!SS.fila.length) return; const c=BYID[SS.fila[0]]; if(!c) return;
   VOLTA={fila:[...new Set(SS.fila)],modo:SS.modo,nome:SS.nome,feitos:SS.feitos,unicos:SS.unicos,acertos:SS.acertos,t0:SS.t0,novos:[]};
   guardarRetomar(); const e=$('#sess'); if(e) e.remove(); document.body.style.overflow=''; document.documentElement.style.overflow=''; SS=null;
-  CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); crDest({area:c.area,tema:c.tema,sub:c.sub}); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
+  CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); crDest({area:c.area,tema:c.tema,sub:c.sub,subt:c.subt||''}); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
 }
 function voltarRevisao(){ const v=VOLTA; if(!v) return; VOLTA=null; const ids=[...v.fila,...v.novos.filter(id=>BYID[id]&&!v.fila.includes(id))];
   sessao(ids,v.modo,{feitos:v.feitos,unicos:v.unicos+v.novos.length,acertos:v.acertos,t0:v.t0,nome:v.nome},v.nome); }
@@ -2061,20 +2118,33 @@ function ligarIO(ed){
     if(r.w>1.5&&r.h>1.5) CR.rects.push(r); pCriar(); };
   ed.querySelectorAll('[data-rx]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); CR.rects.splice(+b.dataset.rx,1); pCriar(); });
 }
+/* nome digitado → baralho existente? "Baralho - Subtema" (ou —, –, :) põe o subtema DENTRO do baralho, sem criar baralho separado */
+const normD=x=>normN(x).split(' ').map(w=>w.length<=3?w:w.replace(/ais$/,'al').replace(/eis$/,'el').replace(/oes$/,'ao').replace(/ns$/,'m').replace(/s$/,'')).join(' ');   // singular/plural
+function resolverBaralho(a,t,v){
+  v=v.trim(); const decks=[...new Set([...CARDS,...S.decks].filter(x=>x.area===a&&x.tema===t&&x.sub!=null).map(x=>x.sub))];
+  const pre=x=>x.split(/\s+[-–—:]\s+|:\s+/)[0];
+  const achar=n=>decks.find(d=>normD(d)===normD(n))||decks.find(d=>normD(pre(d))===normD(n));
+  const ex=decks.find(d=>normD(d)===normD(v)); if(ex) return {sub:ex,ja:true};
+  const m=v.match(/^(.+?)\s+[-–—]\s+(.+)$/)||v.match(/^(.+?):\s+(.+)$/);
+  if(m){ const d=achar(m[1]); const st=m[2].trim(); if(d){ const j=subtemasDe(a,t,d).find(x=>norm(x)===norm(st)); return {sub:d,subt:j||st,ja:true}; } return {sub:m[1].trim(),subt:st,ja:false}; }
+  return {sub:v,ja:false};
+}
 function novoBaralhoCriar(){
   escolha('Grande área',AREAS.map(a=>({v:a,t:a})),CR.dest&&CR.dest.area,a=>{
     const temas=[...new Set([...(MATERIAS_FIXAS[a]||[]),...CARDS.filter(c=>c.area===a).map(c=>c.tema),...S.decks.filter(x=>x.area===a).map(x=>x.tema)])].sort(abc);
     const ops=temas.map(t=>({v:t,t})); if(!MATERIAS_FIXAS[a]) ops.push({v:'+',t:'＋ Nova matéria'});
-    const pedirSub=t=>pedirNome('Novo baralho em '+t,'Um baralho por tema grande. Ex.: Abdome agudo inflamatório — Apendicite',v=>{
-      const ex=[...CARDS,...S.decks].find(x=>x.area===a&&x.tema===t&&norm(x.sub)===norm(v)); const sub=ex?ex.sub:v.trim();
-      if(!ex) S.decks.push({id:Date.now(),area:a,tema:t,sub}); save(); crDest({area:a,tema:t,sub}); fecharFolha(); pCriar(); toast(ex?'Esse baralho já existia: vou usar ele':'Baralho criado'); });
+    const pedirSub=t=>pedirNome('Novo baralho em '+t,'Ex.: Doenças tubulointersticiais (ou "Baralho - Subtema")',v=>{
+      const r=resolverBaralho(a,t,v);
+      if(!r.ja) S.decks.push({id:Date.now(),area:a,tema:t,sub:r.sub,...(r.subt?{subt:r.subt}:{})}); else if(r.subt&&!subtemasDe(a,t,r.sub).includes(r.subt)) S.decks.push({id:Date.now(),area:a,tema:t,sub:r.sub,subt:r.subt});
+      save(); crDest({area:a,tema:t,sub:r.sub,subt:r.subt||''}); fecharFolha(); pCriar();
+      toast(r.subt?(r.ja?'Entrou no baralho “'+r.sub+'” › subtema “'+r.subt+'”':'Baralho “'+r.sub+'” criado com o subtema “'+r.subt+'”'):(r.ja?'Esse baralho já existia: vou usar ele':'Baralho criado')); });
     setTimeout(()=>escolha('Matéria em '+a,ops,null,t=>{ if(t!=='+') return setTimeout(()=>pedirSub(t),0);
       setTimeout(()=>pedirNome('Nova matéria em '+a,'Ex.: Mastologia',m=>{ const ex=temas.find(x=>norm(x)===norm(m)); setTimeout(()=>pedirSub(ex||m.trim()),0); }),0); }),0);
   });
 }
 function montarCards(previa){
   const d=CR.dest; if(!d&&!previa){ toast('Escolha o baralho'); return null; }
-  const base={area:d?d.area:'',tema:d?d.tema:'',sub:d?d.sub:'',meu:true,add:hoje(),fonte:'Criado por mim'};
+  const base={area:d?d.area:'',tema:d?d.tema:'',sub:d?d.sub:'',...(d&&d.subt?{subt:d.subt}:{}),meu:true,add:hoje(),fonte:'Criado por mim'};
   if(CR.peg.trim()) base.pegadinha=CR.peg.trim(); if(CR.ue.trim()) base.uerj=CR.ue.trim();
   const vis=CR.vimg.length?CR.vimg.map(s=>({tipo:'img',src:s})):undefined;
   const g=CR.edit||('meu-'+Date.now().toString(36));
@@ -2106,7 +2176,7 @@ async function salvarCriado(){
   const u=Date.now();
   if(CR.edit){ S.extra.forEach(x=>{ if(x.grupo===CR.edit&&!cs.some(c=>c.id===x.id)){ x.del=true; x.u=u; } }); S.extra=S.extra.filter(x=>!cs.some(c=>c.id===x.id)); }
   cs.forEach(c=>{ c.u=u; S.extra.push(c); });
-  S.decks=S.decks.filter(x=>!(x.area===cs[0].area&&x.tema===cs[0].tema&&x.sub===cs[0].sub)||(S.decksDel[x.id]=1,false));
+  S.decks=S.decks.filter(x=>!(x.area===cs[0].area&&x.tema===cs[0].tema&&x.sub===cs[0].sub&&(!x.subt||x.subt===cs[0].subt))||(S.decksDel[x.id]=1,false));
   save(); reaplicar(); SALVANDO=false;
   const ed=CR.edit; if(VOLTA&&!ed) cs.forEach(c=>VOLTA.novos.push(c.id));
   toast(ed?'Card atualizado':(cs.length>1?cs.length+' cards criados':'Card criado')+(falhou?' (imagem só neste aparelho até conectar)':'')+(VOLTA&&!ed?' — ↩ Voltar à revisão quando terminar':''));
@@ -2116,7 +2186,7 @@ async function salvarCriado(){
 }
 function abrirEdicaoMeu(id){
   const r=RAW[id]; if(!r) return; const g=r.grupo||r.id, irm=S.extra.filter(x=>(x.grupo||x.id)===g&&!x.del);
-  CR={...crNovo(),tipo:r.tipo==='cloze'?'cz':r.tipo==='io'?'io':'fv',dest:{area:r.area,tema:r.tema,sub:r.sub},edit:g,
+  CR={...crNovo(),tipo:r.tipo==='cloze'?'cz':r.tipo==='io'?'io':'fv',dest:{area:r.area,tema:r.tema,sub:r.sub,subt:r.subt||''},edit:g,
     frente:r.frente||'',verso:r.verso||'',texto:r.texto||'',img:r.img||null,rects:(r.rects||[]).map(x=>({...x})),perg:r.perg||'',peg:r.pegadinha||'',ue:r.uerj||'',
     fimg:(r.fvis||[]).map(v=>v.src),vimg:(r.visual?[].concat(r.visual):[]).filter(v=>v.tipo==='img').map(v=>v.src)};
   if(r.tipo==='cloze') CR.texto=irm[0].texto;
@@ -2376,12 +2446,12 @@ function confete(n){
 
 /* ===== Início ===== */
 carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits).then(convidarEntrar).then(()=>setTimeout(reenviarFotosLocais,3000));
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(render).then(syncProg).then(syncNotas).then(syncEdits)}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!SS){carregar().then(renderBg).then(syncProg).then(syncNotas).then(syncEdits)}});
 if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{}));
   /* versão nova do app: recarrega sozinho (na rodada, espera você sair; o "Retomar" já fica salvo) */
   let NOVA=false; const recarregar=()=>{ if(!SS&&!document.querySelector('.anot.edit')) location.reload(); else NOVA=true; };
   if(navigator.serviceWorker.controller) navigator.serviceWorker.addEventListener('controllerchange',recarregar);
-  setInterval(()=>{ if(NOVA) recarregar(); },5000); }
+  setInterval(()=>{ if(NOVA&&!digitandoNome()) recarregar(); },5000); }
 </script>
 </body>
 </html>
