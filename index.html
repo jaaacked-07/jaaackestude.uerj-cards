@@ -303,6 +303,9 @@ textarea.note:focus{border-color:var(--rose)}
 .ansv{flex:none;width:30px;height:30px;border-radius:50%;background:var(--rose);color:#fff;font-size:15px;line-height:30px;text-align:center}
 body.ntmode [data-an]{cursor:crosshair}
 .mtfab .mtrow{display:flex;gap:8px}
+.mtfab .nfab{display:none;font:700 17px Inter,sans-serif;color:var(--wine)}
+.mtfab.comn .nfab{display:flex}
+@media (pointer:coarse){.sbar .nbtn{display:none}}
 .mtfab .ntb.on{background:var(--rose);color:#fff}
 .addn{margin-top:14px;font-size:14px;color:var(--rose);font-weight:500}
 .mine textarea,.ned{width:100%;min-height:80px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-size:15px;outline:none;margin-top:6px}
@@ -2249,13 +2252,14 @@ function fabMT(){
   let f=$('#mtfab'); const tem=!!document.querySelector('.hlz,[data-an]');
   if(!tem){ if(f) f.remove(); return; }
   if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
-    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb nfab" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.querySelector('.nfab').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); novoDoCard(); };
     f.querySelector('.ntb').onmousedown=e=>e.preventDefault(); f.querySelector('.ntb').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); modoNota(); };
     f.querySelector('.mtm').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
     f.querySelectorAll('[data-mc]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ MT=b.dataset.mc||null; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(e){} f.querySelector('.mtops').classList.add('hide'); fabMT(); toast(MT?'Marca-texto ligado: é só selecionar':'Marca-texto desligado'); }; });
     document.body.appendChild(f); }
   if(f.dataset.c!==(MT||'')){ f.dataset.c=MT||''; f.classList.toggle('on',!!MT); }
-  f.classList.toggle('alto',!!(SS||$('#sheet')));
+  f.classList.toggle('alto',!!(SS||$('#sheet'))); f.classList.toggle('comn',!!SS);
 }
 function marcarDireto(){
   const sel=getSelection(); if(!MT||!sel.rangeCount||sel.isCollapsed) return;
