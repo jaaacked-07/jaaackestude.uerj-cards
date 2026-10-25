@@ -99,8 +99,8 @@
       "temas": ""
     },
     "Avaliação geriátrica ampla e polifarmácia": {
-      "q": 6,
-      "temas": "Polifarmácia (4×); avaliação geriátrica ampla; quedas"
+      "q": 8,
+      "temas": "Polifarmácia (4×); avaliação geriátrica ampla; quedas; quedas, demência e pseudodemência"
     },
     "Notificação imediata": {
       "q": 1,
@@ -409,6 +409,62 @@
     "Desidratação e diarreia aguda na criança": {
       "q": 1,
       "temas": "Plano C na desidratação grave; planos A e B; zinco"
+    },
+    "Valvopatias — estenose aórtica, cardiomiopatia hipertrófica e estenose mitral": {
+      "q": 3,
+      "temas": "Estenose aórtica × cardiomiopatia hipertrófica (manobras); estenose mitral e gestação; valvoplastia mitral (Wilkins)"
+    },
+    "Adrenal — hiperaldosteronismo, insuficiência adrenal e incidentaloma": {
+      "q": 3,
+      "temas": "Hiperaldosteronismo primário (relação aldosterona/renina); doença de Addison (teste da cortrosina); incidentaloma adrenal e feocromocitoma"
+    },
+    "Diabetes mellitus — diagnóstico, cetoacidose e iSGLT2": {
+      "q": 3,
+      "temas": "Cetoacidose diabética (potássio antes da insulina); iSGLT2 (efeitos e cetoacidose euglicêmica); pré-diabetes e critérios diagnósticos"
+    },
+    "Tireoide — hipotireoidismo subclínico, tireoidites e hipertireoidismo": {
+      "q": 3,
+      "temas": "Hipotireoidismo subclínico (quando tratar); tireoidites e captação de iodo; hipertireoidismo (Graves) e gestação"
+    },
+    "Doenças neuromusculares — Guillain-Barré, miastenia, Lambert-Eaton e ELA": {
+      "q": 3,
+      "temas": "Síndrome de Guillain-Barré; miastenia gravis × Lambert-Eaton; esclerose lateral amiotrófica"
+    },
+    "Cefaleia e vertigem — sinais de alarme, enxaqueca e VPPB": {
+      "q": 2,
+      "temas": "Cefaleia com sinais de alarme (SNOOP) e cefaleia em trovoada; enxaqueca (crise e profilaxia); VPPB e HINTS na vertigem aguda"
+    },
+    "AIT, AVC isquêmico agudo e encefalite herpética": {
+      "q": 3,
+      "temas": "AIT (definição tecidual e investigação); trombólise no AVC isquêmico; encefalite herpética (aciclovir imediato)"
+    },
+    "Úlcera péptica, H. pylori, hemorragia digestiva alta e acalasia": {
+      "q": 3,
+      "temas": "Úlcera péptica e erradicação do H. pylori; HDA não varicosa (Forrest); acalasia (manometria e tratamento)"
+    },
+    "Síndromes paraneoplásicas, emergências oncológicas e cuidados paliativos": {
+      "q": 7,
+      "temas": "Hipercalcemia da malignidade (PTHrP); síndromes paraneoplásicas do pulmão; comunicação de más notícias (SPIKES); delirium, dor e caquexia em cuidados paliativos"
+    },
+    "Artrites — artrite reumatoide, espondiloartrites, artrite gonocócica e osteoartrite": {
+      "q": 4,
+      "temas": "Artrite reumatoide (padrão e metotrexato); artrite gonocócica disseminada; artrite reativa e espondilite anquilosante; osteoartrite × AR"
+    },
+    "Lombalgia, hérnia de disco e síndrome da cauda equina": {
+      "q": 4,
+      "temas": "Lombalgia aguda e sinais de alarme; hérnia de disco L4-L5 × L5-S1 (raiz acometida); síndrome da cauda equina"
+    },
+    "Pneumonia adquirida na comunidade e nódulo pulmonar": {
+      "q": 4,
+      "temas": "PAC — CURB-65 e local de tratamento; agentes atípicos (Mycoplasma, Legionella); antibioticoterapia; nódulo pulmonar solitário"
+    },
+    "Anemias — classificação, megaloblástica, hemolíticas, von Willebrand e transfusão": {
+      "q": 7,
+      "temas": "Anemia microcítica (ferropriva × talassemia, índice de Mentzer); anemia megaloblástica (B12 × folato); hemólise (G6PD, esferocitose, autoimune); doença de von Willebrand; reações transfusionais (TRALI × TACO)"
+    },
+    "Síndrome nefrítica — nefropatia por IgA × GNPE, GNRP e hipertensão renovascular": {
+      "q": 2,
+      "temas": "Nefropatia por IgA × glomerulonefrite pós-estreptocócica (latência e C3); hipertensão renovascular"
     }
   }
 }
