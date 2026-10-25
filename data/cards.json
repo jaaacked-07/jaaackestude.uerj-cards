@@ -10717,7 +10717,8 @@
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aerochamber_inhaler.jpg/600px-Aerochamber_inhaler.jpg",
         "legenda": "Spray dosimetrado acoplado a espaçador — dispositivo de escolha na criança",
         "fonte": "Wikimedia Commons · Wikimedia Commons · CC BY-SA 4.0"
-      }
+      },
+      "minha": "@@nota|0|EtapaPreferidoAlternativa1SABA se necessárioCI intermitente \nSABA SE NECESSARIO -> AKA SOS"
     },
     {
       "id": "asmi-02",
@@ -25580,5 +25581,5 @@
       "add": "2026-10-25"
     }
   ],
-  "rev": 1792899855164
+  "rev": 1792900097222
 }
