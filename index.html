@@ -78,6 +78,8 @@ nav svg{width:24px;height:24px}
 /* session */
 .sess{position:fixed;inset:0;background:var(--bg);z-index:10;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
 .sbar .vt.hide{visibility:hidden}
+.sbar .nbtn{font:700 14px Inter,sans-serif;color:var(--wine);border:1.5px solid var(--line);background:var(--card)}
+.voltarev{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:0 0 12px;padding:11px;border-radius:14px;background:var(--wine-soft);color:var(--wine);font-weight:600;font-size:14.5px}
 .sbar{display:flex;align-items:center;gap:14px;padding:14px 16px;max-width:520px;width:100%;margin:0 auto}
 .sbar .x{width:32px;height:32px;display:grid;place-items:center;color:var(--mute);border-radius:10px}
 .prog{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
@@ -1925,6 +1927,7 @@ function pCriar(){
     <div class="tm">Pergunta (opcional)</div><textarea class="ned cr" id="cp" data-k="perg" style="min-height:48px" placeholder="O que está oculto?">${esc(CR.perg)}</textarea>
     <div class="tm">Explicação no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" style="min-height:60px">${esc(CR.verso)}</textarea>`;
   $('#app').innerHTML=`<div class="wrap">
+    ${VOLTA&&!CR.edit?`<button class="voltarev" id="vrev">↩ Voltar à revisão${VOLTA.novos.length?` · +${VOLTA.novos.length} card${VOLTA.novos.length>1?'s':''} criado${VOLTA.novos.length>1?'s':''}`:''}</button>`:''}
     <h2 class="serif">${CR.edit?'Editar card':'Criar card'} <span class="kbd" title="Atalho: N">N</span></h2>
     <div class="seg">${Object.keys(CR_TIPOS).map(k=>`<button data-t="${k}" class="${k===T?'on':''}" ${CR.edit&&k!==T?'disabled':''}>${CR_TIPOS[k]}</button>`).join('')}</div>
     <div class="tm">Baralho</div>
@@ -1944,6 +1947,7 @@ function pCriar(){
 function ligarCriar(){
   document.querySelectorAll('.seg [data-t]').forEach(b=>b.onclick=()=>{ if(CR.edit) return; CR.tipo=b.dataset.t; pCriar(); });
   $('#cb').onclick=()=>escolherBaralho('Baralho do card',CR.dest,d=>{ crDest(d); fecharFolha(); pCriar(); });
+  const vr=$('#vrev'); if(vr) vr.onclick=voltarRevisao;
   $('#cnb').onclick=novoBaralhoCriar;
   document.querySelectorAll('textarea.cr').forEach(ta=>{
     ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
@@ -1967,6 +1971,16 @@ function ligarCriar(){
     const u=Date.now(); S.extra.forEach(x=>{ if(x.grupo===CR.edit) { x.del=true; x.u=u; } }); save(); reaplicar(); CR=null; toast('Card excluído'); ir('estudar'); syncProg(); };
   const f=CR.foco&&$('#'+CR.foco); if(f) f.focus({preventScroll:true});
 }
+/* N durante a revisão: pausa a rodada, abre Criar já no baralho do card atual; "Voltar à revisão" retoma e põe os cards criados no fim da rodada */
+let VOLTA=null;
+function novoDoCard(){
+  if(!SS||!SS.fila.length) return; const c=BYID[SS.fila[0]]; if(!c) return;
+  VOLTA={fila:[...new Set(SS.fila)],modo:SS.modo,nome:SS.nome,feitos:SS.feitos,unicos:SS.unicos,acertos:SS.acertos,t0:SS.t0,novos:[]};
+  guardarRetomar(); const e=$('#sess'); if(e) e.remove(); document.body.style.overflow=''; document.documentElement.style.overflow=''; SS=null;
+  CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); crDest({area:c.area,tema:c.tema,sub:c.sub}); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
+}
+function voltarRevisao(){ const v=VOLTA; if(!v) return; VOLTA=null; const ids=[...v.fila,...v.novos.filter(id=>BYID[id]&&!v.fila.includes(id))];
+  sessao(ids,v.modo,{feitos:v.feitos,unicos:v.unicos+v.novos.length,acertos:v.acertos,t0:v.t0,nome:v.nome},v.nome); }
 function crDest(d){ CR.dest=d; try{localStorage.setItem(LS+'.crdest',JSON.stringify(d))}catch(e){} }
 function fmt(ta,k){
   const s=ta.selectionStart,e=ta.selectionEnd,v=ta.value,sel=v.slice(s,e);
@@ -2044,7 +2058,8 @@ async function salvarCriado(){
   cs.forEach(c=>{ c.u=u; S.extra.push(c); });
   S.decks=S.decks.filter(x=>!(x.area===cs[0].area&&x.tema===cs[0].tema&&x.sub===cs[0].sub)||(S.decksDel[x.id]=1,false));
   save(); reaplicar(); SALVANDO=false;
-  const ed=CR.edit; toast(ed?'Card atualizado':(cs.length>1?cs.length+' cards criados':'Card criado')+(falhou?' (imagem só neste aparelho até conectar)':''));
+  const ed=CR.edit; if(VOLTA&&!ed) cs.forEach(c=>VOLTA.novos.push(c.id));
+  toast(ed?'Card atualizado':(cs.length>1?cs.length+' cards criados':'Card criado')+(falhou?' (imagem só neste aparelho até conectar)':'')+(VOLTA&&!ed?' — ↩ Voltar à revisão quando terminar':''));
   const tipo=CR.tipo; CR=crNovo(tipo); CR.foco={fv:'cf',cz:'ct',io:null}[tipo];
   if(ed){ CR=null; ir('estudar'); } else pCriar();
   syncProg();
@@ -2061,9 +2076,9 @@ function abrirEdicaoMeu(id){
 document.addEventListener('click',e=>{ const r=e.target.closest('[data-iop]'); if(r) r.classList.toggle('peek'); });
 /* N = novo card (fora de campos de texto) · colar imagem na aba Criar */
 document.addEventListener('keydown',e=>{
-  if(e.key.toLowerCase()!=='n'||e.ctrlKey||e.metaKey||e.altKey||SS||$('#sheet')) return;
+  if(e.key.toLowerCase()!=='n'||e.ctrlKey||e.metaKey||e.altKey||$('#sheet')) return;
   const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return;
-  e.preventDefault(); if(PAG!=='criar'||!CR||CR.edit) CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
+  e.preventDefault(); if(SS){ novoDoCard(); return; } if(PAG!=='criar'||!CR||CR.edit) CR=crNovo(CR&&!CR.edit?CR.tipo:'fv'); if(CR.tipo!=='io') CR.foco=CR.tipo==='cz'?'ct':'cf'; ir('criar');
 });
 document.addEventListener('paste',e=>{
   if(PAG!=='criar'||SS||$('#sheet')) return;
@@ -2077,13 +2092,13 @@ let SS=null, CFSTOP=false;
 function ajustaPe(){const f=$('#sf'),w=$('#sw');if(f&&w){const p=(f.offsetHeight+110)+'px'; if(w.style.paddingBottom!==p) w.style.paddingBottom=p;}}
 new MutationObserver(()=>{ajustaPe();aplicarZonas();pintarAnots();fabMT()}).observe(document.body,{childList:true,subtree:true});
 function sessao(ids,modo,prev,nome){
-  ids=ids.filter(id=>BYID[id]); if(!ids.length) return;
+  ids=ids.filter(id=>BYID[id]); if(!ids.length) return; VOLTA=null;
   SS={unicos:ids.length,fila:ids.slice(),total:ids.length,feitos:0,xp:0,combo:0,maxCombo:0,acertos:0,modo,repetidos:new Set(),nome:nome||(prev&&prev.nome)||'',t0:(prev&&prev.t0)||Date.now()};
   if(prev){ SS.feitos=prev.feitos||0; SS.total=SS.feitos+ids.length; SS.unicos=(prev.unicos||0)||SS.total; SS.acertos=prev.acertos||0; }
   const el=document.createElement('div');el.className='sess';el.id='sess';
-  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="x vt hide" id="svt" aria-label="Voltar ao card anterior" title="Voltar ao card anterior (Z)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
+  el.innerHTML=`<div class="sbar"><button class="x" id="sx" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="x vt hide" id="svt" aria-label="Voltar ao card anterior" title="Voltar ao card anterior (Z)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button><div class="prog"><i id="pg"></i></div><span class="pcount" id="pc"></span><span class="combo" id="cb"></span><button class="x nbtn" id="snv" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button></div><div class="sbody" id="sb"><div class="wrap" id="sw"></div></div><div class="sfoot"><div class="in" id="sf"></div></div>`;
   document.body.appendChild(el); document.body.style.overflow='hidden'; document.documentElement.style.overflow='hidden';
-  $('#sx').onclick=sair; $('#svt').onclick=voltarCard; SS.hist=[];
+  $('#sx').onclick=sair; $('#svt').onclick=voltarCard; $('#snv').onclick=novoDoCard; SS.hist=[];
   proximoCard();
 }
 /* "Retomar": tira o que já foi respondido hoje (mesmo se o app fechou no meio, sem passar pelo "sair") */
