@@ -699,7 +699,7 @@ const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 /* ===== Visuais ===== */
 /* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
 const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
-const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
+const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}" data-an="an:${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
 const macHTML=c=>c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'';
 /* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
 const normR=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9%+]+/g,' ').replace(/(\d)([a-z])/g,'$1 $2').replace(/\bhoras?\b/g,'h').replace(/\bminutos?\b/g,'min').replace(/\s+/g,' ').trim();
@@ -1236,15 +1236,27 @@ function anInserir(root,blk,el){
 }
 /* cada anotação é uma "zona" própria do marca-texto (chave = card + texto da nota) */
 const hashT=t=>{ let h=5381; for(const ch of String(t)) h=((h<<5)+h+ch.codePointAt(0))|0; return (h>>>0).toString(36); };
+/* dono da anotação: card (campo "minha") ou CONTEXTO do tema ("an:ctx-…", vale para todos os cards que mostram esse contexto; sincroniza junto com o marca-texto) */
+const anDoCtx=id=>String(id).startsWith('an:');
+const anGet=id=>anDoCtx(id)?((S.marks[id]||{}).txt||''):((BYID[id]||{}).minha||'');
+function anSet(id,t){ if(anDoCtx(id)){ S.marks[id]={l:[],txt:t,u:Date.now()}; save(); } else { S.minha[id]=t; save(); reaplicar(); syncEdits(); } }
+/* nota antiga de card que foi feita dentro do contexto → passa a ser nota do contexto */
+function anMigrar(root,p){
+  const subs=[...root.querySelectorAll('[data-an^="an:"]')]; if(!subs.length) return false; let mov=false;
+  p.l.forEach(o=>{ if(!o.t||!o.a||o.mov) return; for(const sr of subs){ const bl=anBlocos(sr).filter(b=>anTxt(b)===o.a); if(!bl.length) continue;
+    const cid=sr.dataset.an, q=anParse(anGet(cid)); q.l.push({n:Math.min(o.n||0,bl.length-1),a:o.a,t:o.t}); anSet(cid,anJoin(q)); o.mov=1; mov=true; break; } });
+  if(!mov) return false; const id=root.dataset.an; p.l=p.l.filter(o=>!o.mov); anSet(id,anJoin(p)); return true; }
 function pintarAnots(){
   document.querySelectorAll('[data-an]').forEach(root=>{
-    const id=root.dataset.an, raw=(BYID[id]||{}).minha||'', p=anParse(raw);
+    const id=root.dataset.an, raw=anGet(id), p=anParse(raw);
     if(root.dataset.av!==raw){ root.querySelectorAll('.anot:not(.edit)').forEach(x=>{ if(x.closest('[data-an]')===root) x.remove(); }); root.dataset.av=raw; }
     if(!p.l.length) return; let bl=null;
-    p.l.forEach((o,k)=>{ if(!o.t||root.querySelector(`.anot[data-k="${k}"]`)) return;
-      bl=bl||anBlocos(root); let hit=null, n=0;
-      if(o.a) for(const b of bl){ if(anTxt(b)===o.a){ if(n===o.n){hit=b;break} n++; } }
-      if(!hit&&!root.querySelector('.mbx')) return;
+    if(!anDoCtx(id)&&root.querySelector('.mbx')){ bl=anBlocos(root); const fora=p.l.filter(o=>o.t&&o.a&&!bl.some(b=>anTxt(b)===o.a)); if(fora.length&&anMigrar(root,p)){ document.querySelectorAll('[data-an]').forEach(r=>delete r.dataset.av); return; } }
+    p.l.forEach((o,k)=>{ if(!o.t||[...root.querySelectorAll(`.anot[data-k="${k}"]`)].some(x=>x.closest('[data-an]')===root)) return;
+      bl=bl||anBlocos(root); let hit=null, n=0, ult=null;
+      if(o.a) for(const b of bl){ if(anTxt(b)===o.a){ ult=b; if(n===o.n){hit=b;break} n++; } }
+      if(!hit&&anDoCtx(id)) hit=ult;
+      if(!hit&&!anDoCtx(id)&&!root.querySelector('.mbx')) return;
       const el=document.createElement('div'); el.className='anot hlz'; el.dataset.hl=id+'#'+hashT(o.t); el.dataset.mid=id; el.dataset.k=k; el.innerHTML='<button class="aned" data-aned aria-label="Editar ou apagar anotação" title="Editar / apagar">✎</button>'+minhaCorpo(o.t);
       anInserir(root,hit,el); });
   });
@@ -1287,16 +1299,16 @@ function anNova(root,alvo){
   let a='',n=0; if(blk){ a=anTxt(blk); for(const b of anBlocos(root)){ if(b===blk) break; if(anTxt(b)===a) n++; } }
   const el=anEditor(id,'novo','',a,n); anInserir(root,blk,el); anFocar(el);
 }
-function anEditar(x){ const p=anParse((BYID[x.dataset.mid]||{}).minha), k=+x.dataset.k, el=anEditor(x.dataset.mid,k,(p.l[k]||{}).t);
+function anEditar(x){ const p=anParse(anGet(x.dataset.mid)), k=+x.dataset.k, el=anEditor(x.dataset.mid,k,(p.l[k]||{}).t);
   x.replaceWith(el); anFocar(el); }
 function anEditarBase(box){ if(!box||box.querySelector('.anot.edit')) return; const id=box.dataset.mid, el=anEditor(id,'b',anParse((BYID[id]||{}).minha).base);
   box.innerHTML=''; box.appendChild(el); anFocar(el); }
 function anSalvar(ed){
   if(!ed||!ed.isConnected||ed.dataset.saving||ed.dataset.busy) return; ed.dataset.saving=1;
-  const id=ed.dataset.mid, k=ed.dataset.k, t0=ed.querySelector('textarea').value.replace(/\r/g,''), t=t0.trim()?t0.replace(/\s+$/,m=>m.replace(/[^\n]/g,'')):'', antes=(BYID[id]||{}).minha||'', p=anParse(antes);
+  const id=ed.dataset.mid, k=ed.dataset.k, t0=ed.querySelector('textarea').value.replace(/\r/g,''), t=t0.trim()?t0.replace(/\s+$/,m=>m.replace(/[^\n]/g,'')):'', antes=anGet(id), p=anParse(antes);
   if(k==='b') p.base=t; else if(k==='novo'){ if(t) p.l.push({n:+ed.dataset.n||0,a:ed.dataset.a||'',t}); } else if(p.l[+k]) p.l[+k].t=t;
   const novo=anJoin(p); ed.remove();
-  if(novo!==antes){ S.minha[id]=novo; save(); reaplicar(); toast(t?'Anotação salva':'Anotação apagada'); syncEdits(); }
+  if(novo!==antes){ anSet(id,novo); toast(t?(anDoCtx(id)?'Anotação salva no contexto (aparece em todos os cards do tema)':'Anotação salva'):'Anotação apagada'); }
   document.querySelectorAll(`.mbx[data-mid="${id}"]`).forEach(b=>{ if(!b.querySelector('.anot.edit')) b.outerHTML=minhaHTML(id); });
   document.querySelectorAll(`[data-an="${id}"]`).forEach(r=>delete r.dataset.av); pintarAnots();
 }
@@ -1832,6 +1844,9 @@ async function reenviarFotosLocais(){
       for(const l of locs){ const u=c[l]||MEMIMG[l]; if(!u) continue; const p=await subirImgCard(u,'minha-'+id.replace(/[^\w-]/g,'')+'-'+l.slice(6)); if(!p) continue;
         t=t.split(l).join(p); delete c[l]; mudou=true; }
       if(t!==S.minha[id]) S.minha[id]=t; }
+    for(const k of Object.keys(S.marks||{})){ if(!anDoCtx(k)||!S.marks[k].txt) continue; let t=S.marks[k].txt;
+      for(const l of [...new Set(t.match(/local:[a-z0-9]+/g)||[])]){ const u=c[l]||MEMIMG[l]; if(!u) continue; const p=await subirImgCard(u,'ctx-'+k.slice(7)+'-'+l.slice(6)); if(!p) continue; t=t.split(l).join(p); delete c[l]; mudou=true; }
+      if(t!==S.marks[k].txt) S.marks[k]={...S.marks[k],txt:t,u:Date.now()}; }
     if(mudou){ try{localStorage.setItem(IMGC_KEY,JSON.stringify(c))}catch(e){} save(); reaplicar(); syncEdits(); toast('Fotos pendentes enviadas'); }
   }finally{ REENV=false; } }
 addEventListener('online',()=>setTimeout(reenviarFotosLocais,1500));
