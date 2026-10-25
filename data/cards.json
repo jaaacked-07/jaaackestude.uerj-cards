@@ -10107,7 +10107,7 @@
       "tema": "Gastroenterologia pediátrica",
       "sub": "Doença inflamatória intestinal na infância",
       "frente": "Doença de Crohn × retocolite ulcerativa",
-      "verso": "**Crohn → transmural e salteado (íleo terminal)**\n**Retocolite → mucosa e contínua desde o reto**",
+      "verso": "**Crohn → transmural, salteado, qualquer parte do tubo digestivo (íleo terminal), fístulas e doença perianal.**\n**Retocolite → mucosa, contínua a partir do reto, só cólon, sangue nas fezes, *TENESMO**",
       "visual": {
         "tipo": "tabela",
         "cab": [
@@ -25582,5 +25582,5 @@
       "add": "2026-10-25"
     }
   ],
-  "rev": 1792900410351
+  "rev": 1792900444379
 }
