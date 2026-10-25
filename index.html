@@ -866,7 +866,9 @@ const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat'};
 const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prioridade UERJ e fracos)',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
-const FILTROS={todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Só de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
+/* 🎯 Essenciais: temas que mais caem na UERJ (≥ 4 questões em 2022–2026) + o que é seu ponto fraco (errou/quase, sanguessuga), favoritos e marcados */
+const essencial=c=>qUERJ(c)>=4||ehFraco(S.srs[c.id])||ehSanguessuga(S.srs[c.id])||c.fav||marcado(c.id);
+const FILTROS={ess:'🎯 Essenciais (mais cai na UERJ + seus fracos)',todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Só de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 /* revisão manual: o que você já respondeu HOJE vai para o fim — montar outra rodada traz cards diferentes */
 function ordenar(pool){ const h=hoje(), feito=c=>S.srs[c.id]&&S.srs[c.id].last===h, L=ordenar0(pool); return [...L.filter(c=>!feito(c)),...L.filter(feito)]; }
 function ordenar0(pool){
@@ -883,6 +885,7 @@ function ordenar0(pool){
 }
 function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
+  if(DECK.filtro==='ess') p=p.filter(essencial);
   if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
