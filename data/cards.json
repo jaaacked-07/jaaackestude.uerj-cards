@@ -10167,7 +10167,8 @@
         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Crohn's_Disease_vs_Colitis_ulcerosa.svg/600px-Crohn's_Disease_vs_Colitis_ulcerosa.svg.png",
         "legenda": "Distribuição das lesões: Crohn (salteada, da boca ao ânus) × retocolite (contínua a partir do reto)",
         "fonte": "Wikimedia Commons · Samir / Fvasconcellos · CC BY-SA 3.0"
-      }
+      },
+      "fav": true
     },
     {
       "id": "dii-02",
@@ -25581,5 +25582,5 @@
       "add": "2026-10-25"
     }
   ],
-  "rev": 1792900097222
+  "rev": 1792900410351
 }
