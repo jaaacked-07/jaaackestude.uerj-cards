@@ -127,8 +127,8 @@
       "temas": ""
     },
     "Crescimento e baixa estatura": {
-      "q": 1,
-      "temas": "Variante normal de crescimento"
+      "q": 2,
+      "temas": "Variante normal de crescimento; dor em crescimento (ASLO isolada)"
     },
     "Desenvolvimento neuropsicomotor — marcos": {
       "q": 2,
@@ -309,6 +309,66 @@
     "Abortamento": {
       "q": 3,
       "temas": "Abortamento retido; abortamento habitual (etiologia); aborto legal (violência sexual)"
+    },
+    "Aleitamento materno — Dez Passos e IHAC": {
+      "q": 3,
+      "temas": "Boas práticas de amamentação; aleitamento materno (IHAC); contraindicação de amamentação (HIV)"
+    },
+    "Corioamnionite (infecção intra-amniótica)": {
+      "q": 1,
+      "temas": "Corioamnionite"
+    },
+    "Osteomielite aguda e artrite séptica": {
+      "q": 1,
+      "temas": "Osteomielite aguda"
+    },
+    "Síndrome de Fanconi e acidoses tubulares renais": {
+      "q": 2,
+      "temas": "Síndrome de Fanconi; acidose tubular renal"
+    },
+    "Febre reumática": {
+      "q": 2,
+      "temas": "Febre reumática; dor em crescimento/febre reumática"
+    },
+    "Doença de Kawasaki": {
+      "q": 2,
+      "temas": "Doença de Kawasaki; síndrome de Kawasaki"
+    },
+    "Síndrome inflamatória multissistêmica pediátrica (SIM-P)": {
+      "q": 1,
+      "temas": "Síndrome inflamatória multissistêmica (PIMS)"
+    },
+    "Impetigo e piodermites": {
+      "q": 1,
+      "temas": "Impetigo"
+    },
+    "Doenças exantemáticas": {
+      "q": 3,
+      "temas": "Sarampo; escarlatina; síndrome da rubéola congênita"
+    },
+    "Síndrome alcoólica fetal (TEAF)": {
+      "q": 0,
+      "temas": "Sem questão no Foco UERJ 2022–2026"
+    },
+    "Doença inflamatória intestinal — RCU × Crohn": {
+      "q": 1,
+      "temas": "Doença de Crohn"
+    },
+    "Doença falciforme — crises e síndrome torácica aguda": {
+      "q": 2,
+      "temas": "Doença falciforme (crise); síndrome torácica aguda"
+    },
+    "Violência — tipos, notificação e condutas": {
+      "q": 4,
+      "temas": "Violência estrutural; violência contra criança; violência contra o idoso; violência sexual"
+    },
+    "Risco social e vulnerabilidade na criança": {
+      "q": 1,
+      "temas": "Vulnerabilidade social infantil"
+    },
+    "Testes diagnósticos — sensibilidade, especificidade, valores preditivos e probabilidade pré-teste": {
+      "q": 5,
+      "temas": "Testes diagnósticos (atributos, sensibilidade); sensibilidade e especificidade; testes em série/paralelo; teste diagnóstico de COVID-19"
     }
   }
 }
