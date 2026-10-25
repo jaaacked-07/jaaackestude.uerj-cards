@@ -368,6 +368,12 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .stc.on{border-color:var(--wine);background:var(--wine-soft);color:var(--wine);font-weight:600}
 .stc.nv{border-style:dashed;color:var(--mute)}
 .stc input{border:0;background:none;font:inherit;color:inherit;outline:0;width:170px}
+#lbx{position:fixed;inset:0;z-index:9999;background:rgba(20,12,14,.88);display:flex;align-items:center;justify-content:center;animation:fd .15s ease}
+#lbx .lbw{width:100%;height:100%;overflow:auto;display:flex;align-items:center;justify-content:center;touch-action:pinch-zoom pan-x pan-y;-webkit-overflow-scrolling:touch}
+#lbx img{width:96vw;height:90vh;object-fit:contain;border-radius:8px;cursor:zoom-in;flex:none}
+#lbx.z2 .lbw{display:block}
+#lbx.z2 img{width:auto;height:auto;min-width:192vw;max-width:none;object-fit:initial;cursor:zoom-out}
+#lbx .lbx{position:fixed;top:max(12px,env(safe-area-inset-top));right:14px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:26px;line-height:1;border:0}
 .lv3{padding-left:58px!important;font-size:14.5px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
 .opi.l1{padding-left:24px}.opi.l2{padding-left:48px}
 .opi .lab{flex:1;display:flex;align-items:center;gap:10px;text-align:left;min-width:0}
@@ -1446,7 +1452,7 @@ document.addEventListener('paste',async e=>{
   if(sv) sv.disabled=false; delete box.dataset.busy; anAltura(ta); anFotos(box); ta.focus(); toast('Foto colada — Shift+Enter ou ✓ salva');
 });
 document.addEventListener('click',e=>{
-  const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ folha(`<img src="${esc(zm.getAttribute('src'))}" alt="" style="width:100%;height:auto;border-radius:12px;display:block">`); return; }
+  const zm=e.target.closest('img[data-zoom]'); if(zm&&getSelection().isCollapsed){ abrirFoto(zm.getAttribute('src')); return; }
   const pe=e.target.closest('[data-pen]'); if(pe){editarCard(pe.dataset.pen);return}
   const st=e.target.closest('[data-star]');
   if(st){const id=st.dataset.star,v=!(BYID[id]||{}).fav,x=(S.extra||[]).find(e=>e.id===id&&!e.del); if(x){ if(v) x.fav=true; else delete x.fav; x.u=Date.now(); delete S.fav[id]; agendarSync(); } else S.fav[id]=v; save();reaplicar();st.classList.toggle('on',v);st.textContent=v?'★':'☆';vib(8);syncEdits();return}
@@ -2414,6 +2420,19 @@ document.addEventListener('click',e=>{
   if(HLT&&!e.target.closest('.hltool')&&getSelection().isCollapsed) esconderFerr();
 },true);
 addEventListener('scroll',()=>{ if(HLT&&HLT.style.display!=='none'&&!HLR) esconderFerr(); },{passive:true});
+
+/* ===== Foto ampliada: no meio da tela, ocupando quase toda a tela; tocar na foto amplia mais (2×, arrasta para ver); tocar fora, × ou Esc fecha ===== */
+function abrirFoto(src){
+  fecharFoto(); const o=document.createElement('div'); o.id='lbx';
+  o.innerHTML=`<div class="lbw"><img src="${esc(src)}" alt=""></div><button class="lbx" aria-label="Fechar">×</button>`;
+  document.body.appendChild(o); document.documentElement.style.overflow='hidden';
+  const w=o.querySelector('.lbw'), im=o.querySelector('img');
+  im.onclick=ev=>{ ev.stopPropagation(); const z=!o.classList.contains('z2'); const r=im.getBoundingClientRect(), fx=(ev.clientX-r.left)/r.width, fy=(ev.clientY-r.top)/r.height;
+    o.classList.toggle('z2',z); if(z) requestAnimationFrame(()=>{ w.scrollLeft=w.scrollWidth*fx-w.clientWidth/2; w.scrollTop=w.scrollHeight*fy-w.clientHeight/2; }); };
+  o.onclick=ev=>{ if(ev.target===o||ev.target===w||ev.target.classList.contains('lbx')) fecharFoto(); };
+}
+function fecharFoto(){ const o=$('#lbx'); if(o){ o.remove(); if(!SS) document.documentElement.style.overflow=''; } }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#lbx')){ e.preventDefault(); e.stopImmediatePropagation(); fecharFoto(); } },true);
 
 /* ===== Atalhos (PC) durante a rodada ===== */
 /* ESC: fecha a folha aberta; na rodada, sai e volta pro início (o que faltou fica em "Retomar") */
