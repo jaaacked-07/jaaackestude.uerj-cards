@@ -3144,7 +3144,8 @@
         "tipo": "svg",
         "svg": "<svg viewBox=\"0 0 340 212\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"20\" y=\"190\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">24</text><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"178\" stroke=\"var(--line)\"/><text x=\"106\" y=\"190\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">28</text><line x1=\"106\" y1=\"20\" x2=\"106\" y2=\"178\" stroke=\"var(--line)\"/><text x=\"191\" y=\"190\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">32</text><line x1=\"191\" y1=\"20\" x2=\"191\" y2=\"178\" stroke=\"var(--line)\"/><text x=\"234\" y=\"190\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">34</text><line x1=\"234\" y1=\"20\" x2=\"234\" y2=\"178\" stroke=\"var(--line)\"/><text x=\"299\" y=\"190\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">37</text><line x1=\"299\" y1=\"20\" x2=\"299\" y2=\"178\" stroke=\"var(--line)\"/><text x=\"170\" y=\"206\" font-size=\"9\" font-weight=\"400\" fill=\"var(--mute)\" text-anchor=\"middle\">semanas</text><rect x=\"20\" y=\"28\" width=\"214\" height=\"24\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"127\" y=\"44\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Expectante (internada)</text><rect x=\"20\" y=\"62\" width=\"214\" height=\"24\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"127\" y=\"78\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Corticoide</text><rect x=\"20\" y=\"96\" width=\"171\" height=\"24\" rx=\"8\" fill=\"var(--rose)\"/><text x=\"106\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">MgSO4 (neuroproteção)</text><rect x=\"20\" y=\"130\" width=\"214\" height=\"24\" rx=\"8\" fill=\"var(--rose-soft)\"/><text x=\"127\" y=\"146\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">ATB de latência</text><rect x=\"234\" y=\"62\" width=\"64\" height=\"24\" rx=\"8\" fill=\"var(--wine)\"/><text x=\"266\" y=\"78\" font-size=\"10\" font-weight=\"700\" fill=\"var(--bg)\" text-anchor=\"middle\">Interromper</text></svg>",
         "legenda": "RPMO pré-termo sem infecção: o que fazer em cada idade gestacional."
-      }
+      },
+      "fav": true
     },
     {
       "id": "rpmo-02",
@@ -25577,5 +25578,5 @@
       "add": "2026-10-25"
     }
   ],
-  "rev": 1792899460731
+  "rev": 1792899590354
 }
