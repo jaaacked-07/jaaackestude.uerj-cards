@@ -16764,7 +16764,7 @@
       },
       "add": "2026-10-24",
       "fav": true,
-      "minha": "@@nota|0|Caso com mamas, pelos e útero para você dar o diagnóstico (M\nA Síndrome de Mayer-Rokitansky-Küster-Hauser (MRKH) é uma malformação congênita rara que afeta o desenvolvimento do sistema reprodutor feminino por uma falha na formação dos ductos de Müller durante a embriogênese\n\n\n![](data/img/minha-amp-02-mvn4fkrc.jpg)\n![](data/img/minha-amp-02-mvn4fuvh.jpg)\n\n\n@@nota|0|Mamas + sem útero + pelos normais → MRKH\n**Síndrome de Mayer-Rokitansky-Küster-Hauser (MRKH):**\nMalformação congênita rara que afeta o desenvolvimento do sistema reprodutor feminino por uma **{v}falha na formação dos ductos de Müller durante a embriogênese (aka AGENESIA MULLERIANA){/v}**\n\n@@nota|0|Mamas + sem útero + pelos escassos → Morris\n**INSENSIBILIDADE ANDROGENICA / SD DE MORRIS \n{v}(\"morri\"){/v}:**\n- **mmm**orris -> **mmm**ama -> logo, **{v}TEM MAMA{/v}**\n- \"morri\" -> **{v}SEM {/v}UTERO E {v}SEM {/v}PELO**\n\n@@nota|0|Amenorreia primária = ausência de menarca aos 15 anos com ca\n\n**Ductos de Muller:\n- {v}Trompas\n- Utero\n- 2/3 superior da vagina{/v}**\n\n![m](data/img/minha-amp-02-mvn4gwju.jpg)\n\n",
+      "minha": "@@nota|0|Caso com mamas, pelos e útero para você dar o diagnóstico (M\nA Síndrome de Mayer-Rokitansky-Küster-Hauser (MRKH) é uma malformação congênita rara que afeta o desenvolvimento do sistema reprodutor feminino por uma falha na formação dos ductos de Müller durante a embriogênese\n\n\n![](data/img/minha-amp-02-mvn4fkrc.jpg)\n![](data/img/minha-amp-02-mvn4fuvh.jpg)\n\n\n@@nota|0|Mamas + sem útero + pelos normais → MRKH\n**Síndrome de Mayer-Rokitansky-Küster-Hauser (MRKH):**\nMalformação congênita rara que afeta o desenvolvimento do sistema reprodutor feminino por uma **{v}falha na formação dos ductos de Müller durante a embriogênese (aka AGENESIA MULLERIANA){/v}**\n\n@@nota|0|Mamas + sem útero + pelos escassos → Morris\n**INSENSIBILIDADE ANDROGENICA / SD DE MORRIS \n{v}(\"morri\"){/v}:**\n- **mmm**orris -> **mmm**ama -> logo, **{v}TEM MAMA{/v}**\n- \"morri\" -> **{v}SEM {/v}UTERO E {v}SEM {/v}PELO**",
       "prio": "alta"
     },
     {
@@ -33642,5 +33642,5 @@
       "add": "2026-10-25"
     }
   ],
-  "rev": 1792968631517
+  "rev": 1792968748358
 }
