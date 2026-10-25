@@ -362,7 +362,6 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 .rowi.lv1 .tx{font-weight:600;color:var(--wine);letter-spacing:.005em}
 .rowi.lv1 .tx:before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--rose);margin-right:9px;vertical-align:2px}
 .lv2{padding-left:44px!important;background:color-mix(in srgb,var(--card) 30%,var(--bg))}
-.lv3{padding-left:60px!important;font-size:14px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
 .rowi.lv3 .tx:before{content:"↳ ";color:var(--rose)}
 .sts{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
 .stc{border:1.5px solid var(--line);border-radius:20px;padding:6px 12px;font-size:13px;background:var(--card);color:var(--ink)}
@@ -687,10 +686,10 @@ function addXP(n){ S.xpDev[DEV]=(S.xpDev[DEV]||0)+n; recalc(); }
 /* uma vez: cards dela com baralho "X - Y" viram baralho X › subtema Y; edições de baralho de cards dela passam para o próprio card (sincroniza entre aparelhos) */
 function migrarSubtemas(){
   if(!(S.extra||[]).length) return; let feito=false; try{feito=localStorage.getItem(LS+'.migst')==='1'}catch(e){}
-  const u=Date.now(); let mudou=false;
+  const u=Date.now(), baseSubs=new Set((LASTBASE||[]).map(c=>c.sub)); let mudou=false;
   S.extra.forEach(x=>{ if(x.del) return; const e=S.edit[x.id];
     if(e&&(e.area||e.tema||e.sub)){ ['area','tema','sub'].forEach(k=>{ if(e[k]){ x[k]=e[k]; delete e[k]; } }); if(!Object.keys(e).length) delete S.edit[x.id]; x.u=u; mudou=true; }
-    const m=!x.subt&&String(x.sub||'').match(/^(.+?)\s+[-–—]\s+(.+)$/);
+    const m=!x.subt&&!baseSubs.has(x.sub)&&String(x.sub||'').match(/^(.+?)\s+[-–—]\s+(.+)$/);   // baralho oficial com hífen no nome (ex.: "Inflamatório - Apendicite") não se divide
     if(m){ x.sub=m[1].trim(); x.subt=m[2].trim(); x.u=u; mudou=true; } });
   if(!feito) S.extra.forEach(x=>{ if(x.del||x.subt) return;   // ex.: "NIA Nefrite Intersticial Aguda" → dentro de "Doenças Tubulointersticiais"
     const alvo=S.extra.find(y=>!y.del&&y.subt&&y.area===x.area&&y.tema===x.tema&&/tubulointersticia/i.test(y.sub));
