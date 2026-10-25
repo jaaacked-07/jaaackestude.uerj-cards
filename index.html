@@ -634,7 +634,8 @@ function intercalar(lista,score,jitter){
 /* prioridade do card: campo prio; card que ela mesma criou (aba Criar) conta como alta */
 const prioDe=c=>c.prio||(c.meu?'alta':'media');
 const PRIO_P={alta:40,media:0,baixa:-40}, prioP=c=>PRIO_P[prioDe(c)]||0;
-function novos(){ const L=CARDS.filter(c=>!S.srs[c.id]); return [...intercalar(L.filter(c=>prioDe(c)!=='baixa'),c=>pesoUERJ(c)+prioP(c)),...intercalar(L.filter(c=>prioDe(c)==='baixa'),pesoUERJ)]; }
+/* jitter pequeno: dentro do mesmo baralho os empates (flash × quiz × digitar) saem sorteados — antes os de digitar, por estarem no fim do arquivo, quase nunca entravam como novos */
+function novos(){ const L=CARDS.filter(c=>!S.srs[c.id]); return [...intercalar(L.filter(c=>prioDe(c)!=='baixa'),c=>pesoUERJ(c)+prioP(c),4),...intercalar(L.filter(c=>prioDe(c)==='baixa'),pesoUERJ,4)]; }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
 /* Fila do dia: TODOS os erros vencidos + 15 novos (se houver) + revisões vencidas (pelo menos 5) até completar a meta.
    Novos e revisões escolhidos pela prioridade combinada (UERJ + fraqueza), intercalando baralhos.
@@ -931,14 +932,14 @@ function pErros(){
 }
 
 /* ===== Estudar (baralho livre) ===== */
-const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat',semDig:false,prio:'todas'};
-const PRIOS={todas:'Todas',alta:'🔴 Alta',am:'🔴 Alta + 🟡 Média',media:'🟡 Média',baixa:'⚪ Baixa'}; try{const v=localStorage.getItem(LS+'.dprio'); if(PRIOS[v]) DECK.prio=v;}catch(e){} try{DECK.semDig=localStorage.getItem(LS+'.semdig')==='1'}catch(e){}
+const DECK={subs:new Set(),filtro:'todos',qtd:20,busca:'',ordem:'aleat',prio:'todas'};
+const PRIOS={todas:'Todas',alta:'🔴 Alta',am:'🔴 Alta + 🟡 Média',media:'🟡 Média',baixa:'⚪ Baixa'}; try{const v=localStorage.getItem(LS+'.dprio'); if(PRIOS[v]) DECK.prio=v;}catch(e){} try{localStorage.removeItem(LS+'.semdig')}catch(e){}
 const ORDENS={uerj:'Mais cobrados na UERJ primeiro',aleat:'Aleatória (com prioridade UERJ e fracos)',antigo:'Mais antigos primeiro',novo:'Mais recentes primeiro',errados:'Mais errados primeiro',fracos:'Mais fracos primeiro',assunto:'Por assunto (em sequência)'};
 const ABERTO=new Set();
 const kSub=c=>c.area+'|'+c.tema+'|'+c.sub;
 /* 🎯 Essenciais: temas que mais caem na UERJ (≥ 4 questões em 2022–2026) + o que é seu ponto fraco (errou/quase, sanguessuga), favoritos e marcados */
 const essencial=c=>prioDe(c)==='alta'||ehFraco(S.srs[c.id])||ehSanguessuga(S.srs[c.id])||c.fav||marcado(c.id);
-const FILTROS={ess:'🎯 Essenciais (prioridade alta + seus fracos)',todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Só de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
+const FILTROS={ess:'🎯 Essenciais (prioridade alta + seus fracos)',todos:'Todos',hoje:'Criados hoje',erros:'Só erros',quiz:'Só questões',digitar:'⌨ Somente cards de digitar',fav:'⭐ Favoritos',novos:'Nunca vistos'};
 /* revisão manual: o que você já respondeu HOJE vai para o fim — montar outra rodada traz cards diferentes */
 function ordenar(pool){ const h=hoje(), feito=c=>S.srs[c.id]&&S.srs[c.id].last===h, L=ordenar0(pool); return [...L.filter(c=>!feito(c)),...L.filter(feito)]; }
 function ordenar0(pool){
@@ -957,7 +958,6 @@ function deckPool(){
   let p=CARDS.filter(c=>!DECK.subs.size||DECK.subs.has(kSub(c)));
   if(DECK.filtro==='ess') p=p.filter(essencial);
   if(DECK.prio!=='todas'){ const ok=DECK.prio==='am'?['alta','media']:[DECK.prio]; p=p.filter(c=>ok.includes(prioDe(c))); }
-  if(DECK.semDig&&DECK.filtro!=='digitar') p=p.filter(c=>c.tipo!=='digitar');
   if(DECK.filtro==='hoje') p=p.filter(c=>c.add===hoje());
   if(DECK.filtro==='erros') p=p.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong);
   if(DECK.filtro==='quiz') p=p.filter(c=>c.tipo==='quiz');
@@ -984,7 +984,6 @@ function pEstudar(){
     <button class="sel" id="sT"><span class="sl">Temas</span><span class="sv">${esc(temaTxt)}</span><span class="ch">▾</span></button>
     <button class="sel" id="sF"><span class="sl">Quais cards</span><span class="sv">${FILTROS[DECK.filtro]}</span><span class="ch">▾</span></button>
     <button class="sel" id="sP"><span class="sl">Prioridade</span><span class="sv">${PRIOS[DECK.prio]}</span><span class="ch">▾</span></button>
-    <button class="sel tog ${DECK.semDig?'on':''}" id="sD" role="switch" aria-checked="${DECK.semDig}"><span class="sl">Exceto cards de digitar</span><span class="sv">${DECK.semDig?'Sim':'Não'}</span><span class="sw"><i></i></span></button>
     <button class="sel" id="sQ"><span class="sl">Quantos</span><span class="sv">${DECK.qtd||'Todos'}</span><span class="ch">▾</span></button>
     <button class="sel" id="sO"><span class="sl">Ordem</span><span class="sv">${ORDENS[DECK.ordem]}</span><span class="ch">▾</span></button>
     <button class="btn" id="dk" style="margin-top:12px;${n?'':'opacity:.45'}">${n?`Estudar · ${n}`:'Nenhum card nesse filtro'}</button>
@@ -996,7 +995,6 @@ function pEstudar(){
   </div>`;
   $('#sT').onclick=escolherTemas;
   $('#sP').onclick=()=>escolha('Prioridade',Object.keys(PRIOS).map(k=>({v:k,t:PRIOS[k]})),DECK.prio,v=>{DECK.prio=v; try{localStorage.setItem(LS+'.dprio',v)}catch(e){} pEstudar()});
-  $('#sD').onclick=()=>{ DECK.semDig=!DECK.semDig; try{localStorage.setItem(LS+'.semdig',DECK.semDig?'1':'0')}catch(e){} pEstudar(); };
   $('#sF').onclick=()=>escolha('Quais cards',Object.keys(FILTROS).map(k=>({v:k,t:FILTROS[k]})),DECK.filtro,v=>{DECK.filtro=v;pEstudar()});
   $('#sQ').onclick=()=>escolha('Quantos cards',[{v:'10',t:'10'},{v:'20',t:'20'},{v:'30',t:'30'},{v:'0',t:'Todos'}],String(DECK.qtd),v=>{DECK.qtd=+v;pEstudar()});
   $('#sO').onclick=()=>escolha('Ordem dos cards',Object.keys(ORDENS).map(k=>({v:k,t:ORDENS[k]})),DECK.ordem,v=>{DECK.ordem=v;pEstudar()});
