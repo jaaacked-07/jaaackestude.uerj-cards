@@ -21531,7 +21531,8 @@
       },
       "fonte": "OMS/UNICEF — Ten Steps to Successful Breastfeeding (revisão 2018) / MS Portaria 1.153/2014 (IHAC) / MS Caderno de Atenção Básica 23 (2015) / SBP 2023",
       "add": "2026-10-25",
-      "prio": "alta"
+      "prio": "alta",
+      "minha": "@@nota|0|No bebê → galactosemia clássica\nBebê não metaboliza a galactose do leite."
     },
     {
       "id": "am-d1",
@@ -39838,5 +39839,5 @@
       }
     }
   ],
-  "rev": 1792984445929
+  "rev": 1792984587726
 }
