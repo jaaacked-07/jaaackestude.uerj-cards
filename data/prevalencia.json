@@ -517,6 +517,54 @@
     "Divertículos — Zenker e doença diverticular dos cólons": {
       "q": 2,
       "temas": "Divertículo de Zenker; diverticulite aguda (TC, Hinchey, conduta)"
+    },
+    "Gestação gemelar — corionicidade, STFF, TAPS e TRAP": {
+      "q": 2,
+      "temas": "Síndrome TAPS; gemelaridade dicoriônica (sinal do lambda)"
+    },
+    "Triagem neonatal — testes do pezinho, coraçãozinho, olhinho, orelhinha e linguinha": {
+      "q": 1,
+      "temas": "Triagem de cardiopatia congênita por oximetria"
+    },
+    "Infecção urinária na criança": {
+      "q": 3,
+      "temas": "ITU febril — coleta de amostra; ITU por Gram-positivo (enterococo); disfunção vesical e intestinal"
+    },
+    "Tumores ósseos na infância — osteoma osteoide, osteossarcoma e Ewing": {
+      "q": 1,
+      "temas": "Osteoma osteoide"
+    },
+    "PTI e leucemia aguda na infância": {
+      "q": 1,
+      "temas": "Leucemia aguda — pancitopenia"
+    },
+    "Síndrome de Down": {
+      "q": 2,
+      "temas": "Seguimento da síndrome de Down"
+    },
+    "Coqueluche": {
+      "q": 2,
+      "temas": "Coqueluche (tosse e leucocitose com linfocitose); profilaxia pós-exposição"
+    },
+    "Leishmaniose visceral (calazar)": {
+      "q": 1,
+      "temas": "Leishmaniose visceral — amastigotas em macrófagos × tricoleucemia e doença de depósito"
+    },
+    "Síndrome de Ogilvie — pseudo-obstrução colônica aguda": {
+      "q": 1,
+      "temas": "Pseudo-obstrução colônica (Ogilvie): segmentos dilatados na imagem"
+    },
+    "Tumores de ovário": {
+      "q": 1,
+      "temas": "Tumor de células de Sertoli-Leydig: virilização e origem estromal"
+    },
+    "Neoplasia intraepitelial vulvar e câncer de vulva": {
+      "q": 2,
+      "temas": "Neoplasia intraepitelial vulvar (conduta); HSIL vulvar e fator de risco HPV/tabagismo"
+    },
+    "Lei dos 60 dias e direitos do paciente com câncer": {
+      "q": 0,
+      "temas": "Lei 12.732/2012 e Lei 13.896/2019 (sem questão contada no Foco UERJ 2022–2026)"
     }
   }
 }
