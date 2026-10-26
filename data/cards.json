@@ -26973,7 +26973,7 @@
       },
       "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
       "add": "2026-10-25",
-      "minha": "@@nota|0|Coordenação\n**Essenciais da {v}AAA{/v}ps -> __{v}AAA{/v}LIC**__\n- **{v}A{/v}cesso de 1 contato**\n- **{v}L{/v}ongitudinalidade**\n- **{v}I{/v}ntegralidade**\n- **{v}C{/v}oordenação**"
+      "minha": "@@nota|0|Coordenação\n**Essenciais da {v}AAA{/v}ps -> __{v}AAA{/v}LIC**__\n- **{v}A{/v}cesso de 1 contato**\n- **{v}L{/v}ongitudinalidade**\n- **{v}I{/v}ntegralidade**\n- **{v}C{/v}oordenação**\n\n**Derivados da APS ->__ {v}OOC{/v}**__\n- **{v}O{/v}rientação familiar**\n- **{v}O{/v}rientação Comunitária**\n- **{v}C{/v}ompetencia cultural**"
     },
     {
       "id": "aps-q1",
@@ -39850,5 +39850,5 @@
       }
     }
   ],
-  "rev": 1792987698462
+  "rev": 1792987752577
 }
