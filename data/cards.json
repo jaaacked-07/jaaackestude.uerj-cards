@@ -17476,7 +17476,7 @@
       },
       "add": "2026-10-24",
       "fav": true,
-      "minha": "@@nota|0|\nNenem tem SACÃOv -> numero é maior (25mm) do que o proprio embriao (7mm)\n\n@@nota|0|Sem embrião com batimento ≥ 11 dias após USG com saco e vesí\nSACO gestacional -> 4 sem\nVesícula vitelinica -> 5 sem\nEmbrião -> 6/7 sem\n\n@@nota|0|Infectado → febre, secreção fétida, dor\nAberto (III): \nIncompleto / Inevitavel / Infectado\n\nFechado (CAR):\nCompleto / Ameaça / Retido",
+      "minha": "@@nota|0|\nNenem tem SACÃOv -> numero é maior (25mm) do que o proprio embriao (7mm)\n\n@@nota|0|Sem embrião com batimento ≥ 11 dias após USG com saco e vesí\nSACO gestacional -> 4 sem\nVesícula vitelinica -> 5 sem\nEmbrião -> 6/7 sem",
       "prio": "alta"
     },
     {
@@ -39846,5 +39846,5 @@
       }
     }
   ],
-  "rev": 1792986092595
+  "rev": 1792986409828
 }
