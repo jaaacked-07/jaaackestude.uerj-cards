@@ -26973,7 +26973,8 @@
       },
       "fonte": "Starfield B. Atenção Primária (UNESCO/MS, 2002); PNAB — Portaria 2.436/2017 (Consolidação nº 2/2017)",
       "add": "2026-10-25",
-      "minha": "@@nota|0|Coordenação\n**Essenciais da {v}AAA{/v}ps -> __{v}AAA{/v}LIC**__\n- **{v}A{/v}cesso de 1 contato**\n- **{v}L{/v}ongitudinalidade**\n- **{v}I{/v}ntegralidade**\n- **{v}C{/v}oordenação**\n\n**Derivados da APS ->__ {v}OOC{/v}**__\n- **{v}O{/v}rientação familiar**\n- **{v}O{/v}rientação Comunitária**\n- **{v}C{/v}ompetencia cultural**"
+      "minha": "@@nota|0|Coordenação\n**Essenciais da {v}AAA{/v}ps -> __{v}AAA{/v}LIC**__\n- **{v}A{/v}cesso de 1 contato**\n- **{v}L{/v}ongitudinalidade**\n- **{v}I{/v}ntegralidade**\n- **{v}C{/v}oordenação**\n\n**Derivados da APS ->__ {v}OOC{/v}**__\n- **{v}O{/v}rientação familiar**\n- **{v}O{/v}rientação Comunitária**\n- **{v}C{/v}ompetencia cultural**",
+      "fav": true
     },
     {
       "id": "aps-q1",
@@ -32883,7 +32884,8 @@
         ]
       },
       "fonte": "Stewart et al. — Medicina Centrada na Pessoa (3ª ed., 2017); Gusso & Lopes — Tratado de Medicina de Família e Comunidade (2ª ed., 2019)",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "fam-01",
@@ -39850,5 +39852,5 @@
       }
     }
   ],
-  "rev": 1792987752577
+  "rev": 1792987879487
 }
