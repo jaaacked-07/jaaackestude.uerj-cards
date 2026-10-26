@@ -308,6 +308,8 @@ body.ntmode [data-an]{cursor:crosshair}
 .mtfab .mtrow{display:flex;gap:8px}
 .mtfab .nfab{display:none;font:700 17px Inter,sans-serif;color:var(--wine)}
 .mtfab.comn .nfab{display:flex}
+.atg{margin:10px 0 4px}.att{font-size:12px;font-weight:600;color:var(--wine);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.atr{display:flex;align-items:center;gap:10px;padding:4px 0;font-size:14px}.atr .kbd{min-width:62px;text-align:center;margin:0}
 .chip .ktec{margin-left:6px;padding:2px 5px;font-size:10px}
 @media (pointer:coarse){.chip .ktec{display:none}}
 .mtfab .sfab{display:none;font-size:22px;color:var(--mute)}
@@ -881,8 +883,10 @@ function pHome(){
     ${acao}
     ${retBtn(ret)}
     ${CARDS.length&&!pend?`<button class="btn ghost" id="mais" style="margin-top:14px">Estudar mais 20</button>`:''}
+    ${tecladoFisico()?'<div class="linkrow" style="margin-top:10px"><button class="link mute small" id="vat" style="opacity:.7">⌨ atalhos do teclado</button></div>':''}
     <div class="stats">${(()=>{const n=S.streak.last&&diff(S.streak.last,h)<=1?S.streak.n:0;return `<span>🔥 <b>${n}</b> ${n===1?'dia':'dias'}</span>`})()}<span>✦ nível <b>${nivel(S.xp)}</b></span><span><b>${S.xp}</b> XP</span></div>
   </div>`;
+  const va=$('#vat'); if(va) va.onclick=verAtalhos;
   const g=$('#go'); if(g) g.onclick=()=>sessao(shuffle(pendentes()),'dia');
   ligarRet(ret);
   ligarVespera();
@@ -2383,7 +2387,7 @@ function fabMT(){
     f.querySelector('.nfab').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); novoDoCard(); };
     f.querySelector('.ntb').onmousedown=e=>e.preventDefault(); f.querySelector('.ntb').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); modoNota(); };
     f.querySelector('.mtm').onclick=()=>f.querySelector('.mtops').classList.toggle('hide');
-    f.querySelectorAll('[data-mc]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ MT=b.dataset.mc||null; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(e){} f.querySelector('.mtops').classList.add('hide'); fabMT(); toast(MT?'Marca-texto ligado: é só selecionar':'Marca-texto desligado'); }; });
+    f.querySelectorAll('[data-mc]').forEach(b=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ MT=b.dataset.mc||null; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(e){} if(MT) mtUlt(MT); f.querySelector('.mtops').classList.add('hide'); fabMT(); toast(MT?'Marca-texto ligado: é só selecionar':'Marca-texto desligado'); }; });
     document.body.appendChild(f); }
   if(f.dataset.c!==(MT||'')){ f.dataset.c=MT||''; f.classList.toggle('on',!!MT); }
   f.classList.toggle('alto',!!(SS||$('#sheet'))); f.classList.toggle('comn',!!SS);
@@ -2533,6 +2537,28 @@ function abrirFoto(src){
 }
 function fecharFoto(){ const o=$('#lbx'); if(o){ o.remove(); if(!SS) document.documentElement.style.overflow=''; } }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#lbx')){ e.preventDefault(); e.stopImmediatePropagation(); fecharFoto(); } },true);
+
+/* M = marca-texto: liga/desliga (última cor); com texto selecionado, marca na hora. Shift+M = troca a cor */
+const MT_NOME={y:'amarelo',g:'verde',p:'rosa'};
+let MT_U='y'; try{MT_U=localStorage.getItem(LS+'.mtu')||MT||'y'}catch(e){}
+function mtUlt(c){ MT_U=c; try{localStorage.setItem(LS+'.mtu',c)}catch(e){} }
+document.addEventListener('keydown',e=>{
+  if(e.code!=='KeyM'||e.ctrlKey||e.metaKey||e.altKey||e.repeat) return;
+  const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return;
+  if(!document.querySelector('.hlz')) return; e.preventDefault();
+  if(e.shiftKey){ const o=['y','g','p'], c=o[(o.indexOf(MT_U)+1)%3]; mtUlt(c); if(MT){ MT=c; try{localStorage.setItem(LS+'.mt',MT)}catch(er){} } fabMT(); toast('Cor do marca-texto: '+MT_NOME[c]); return; }
+  const sel=getSelection();
+  if(sel.rangeCount&&!sel.isCollapsed&&sel.toString().trim()){ const r=sel.getRangeAt(0), base=r.commonAncestorContainer.nodeType===1?r.commonAncestorContainer:r.commonAncestorContainer.parentNode;
+    if(base.closest('.hlz')){ HLR=r.cloneRange(); marcarSelecao(MT||MT_U); esconderFerr(); return; } }
+  MT=MT?null:MT_U; try{MT?localStorage.setItem(LS+'.mt',MT):localStorage.removeItem(LS+'.mt')}catch(er){} fabMT(); toast(MT?'Marca-texto '+MT_NOME[MT]+' ligado: é só selecionar':'Marca-texto desligado');
+});
+/* ? = lista de atalhos */
+const ATALHOS=[['Revisão',[['Espaço','mostrar resposta / próximo'],['1  2  3','errei · quase · sabia'],['A B C D','alternativa do quiz'],['Z','card anterior'],['Esc','sair da rodada']]],
+  ['No card',[['*','favoritar'],['E','editar'],['T','anotação'],['N','novo card neste baralho'],['M','marca-texto (liga/desliga ou marca a seleção)'],['Shift+M','trocar cor do marca-texto']]],
+  ['Por que errou?',[['1  2  3  4','não sabia · confundi · li errado · só seguir']]],
+  ['Escrevendo',[['Shift+Enter','salvar'],['Ctrl+B · Ctrl+U','negrito · sublinhado'],['Ctrl + selecionar','vários trechos de uma vez']]]];
+function verAtalhos(){ folha(`<div class="serif" style="font-size:21px;margin-bottom:10px">Atalhos do teclado</div>${ATALHOS.map(([t,l])=>`<div class="atg"><div class="att">${t}</div>${l.map(([k,d])=>`<div class="atr"><span class="kbd">${esc(k)}</span><span>${esc(d)}</span></div>`).join('')}</div>`).join('')}<p class="mute small" style="margin-top:10px">Aperte <span class="kbd">?</span> para ver esta lista de novo.</p>`); }
+document.addEventListener('keydown',e=>{ if(e.key!=='?'||e.ctrlKey||e.metaKey||e.altKey) return; const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return; e.preventDefault(); if($('#sheet')) fecharFolha(); else verAtalhos(); });
 
 /* ===== Atalhos (PC) durante a rodada ===== */
 /* * = favoritar / desfavoritar o card aberto (revisão ou card aberto da lista); funciona com o * do teclado numérico e Shift+8 */
