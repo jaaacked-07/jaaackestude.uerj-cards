@@ -2087,7 +2087,8 @@ function ligarCriar(){
   $('#cnb').onclick=novoBaralhoCriar;
   document.querySelectorAll('#csts [data-st]').forEach(b=>b.onclick=()=>{ const st=b.dataset.st; crDest({...CR.dest,subt:CR.dest.subt===st?'':st}); pCriar(); });
   const ns=$('#cnst'); if(ns) ns.onclick=()=>{
-    ns.innerHTML='<input class="inl" placeholder="Nome do subtema">'; const i=ns.querySelector('input'); i.focus(); let feito=false;
+    const cx=document.createElement('span'); cx.className='stc nv'; cx.innerHTML='<input class="inl" placeholder="Nome do subtema (Enter salva)">'; ns.replaceWith(cx);   // fora do botão: o espaço não "clica" no botão
+    const i=cx.querySelector('input'); i.focus(); let feito=false;
     const ok=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(v){ const ja=subtemasDe(CR.dest.area,CR.dest.tema,CR.dest.sub).find(x=>norm(x)===norm(v)); crDest({...CR.dest,subt:ja||v}); toast((ja?'Subtema já existia: ':'Subtema: ')+(ja||v)); } pCriar(); };
     i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();ok()} if(e.key==='Escape'){feito=true;pCriar()} }; i.onblur=ok; i.onclick=e=>e.stopPropagation(); };
   document.querySelectorAll('textarea.cr').forEach(ta=>{
