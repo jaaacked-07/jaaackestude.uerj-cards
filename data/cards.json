@@ -6678,7 +6678,7 @@
         "legenda": "Domínios da Avaliação Geriátrica Ampla."
       },
       "fav": true,
-      "minha": "@@nota|0|DomínioInstrumentoAVD básicasKatzAVD instrumentaisLawtonCogn\nBásicas: Katz -> a KARLA minha prima é muito básica\n\n\n@@nota|0|Funcio-nalidadeAVD (Katz)AIVD (Lawton)CogniçãoHumorQuedas/ma\n![](data/img/minha-aga-01-mvn9lthv.jpg)\n\n",
+      "minha": "@@nota|0|DomínioInstrumentoAVD básicasKatzAVD instrumentaisLawtonCogn\nBásicas: Katz -> a KARLA minha prima é muito básica\n",
       "prio": "alta"
     },
     {
@@ -39846,5 +39846,5 @@
       }
     }
   ],
-  "rev": 1792986409828
+  "rev": 1792986484008
 }
