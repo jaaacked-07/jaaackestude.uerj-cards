@@ -23750,7 +23750,8 @@
       "fonte": "MS — Guia de Vigilância em Saúde 6ª ed. (2023/2024) / SBP — Tratado de Pediatria 5ª ed. (2022), Doenças exantemáticas / Red Book AAP 2024 / Nelson 22ª ed.",
       "add": "2026-10-25",
       "prio": "alta",
-      "fav": true
+      "fav": true,
+      "minha": "@@nota|0|DoençaAgentePistaSarampoMorbillivirus3 Cs (tosse, coriza, co\nFilatov: Palidez Perioral\nPastia: nas dobras"
     },
     {
       "id": "exa-02",
@@ -39840,5 +39841,5 @@
       }
     }
   ],
-  "rev": 1792984852477
+  "rev": 1792984957396
 }
