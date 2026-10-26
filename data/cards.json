@@ -25919,7 +25919,8 @@
       },
       "fonte": "Medronho — Epidemiologia 2ª ed. (2009) / Fletcher — Epidemiologia Clínica 5ª ed. (2014) / Rouquayrol — Epidemiologia & Saúde 8ª ed. (2018) / Duncan — Medicina Ambulatorial 5ª ed. (2022)",
       "add": "2026-10-25",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "td-02",
@@ -39846,5 +39847,5 @@
       }
     }
   ],
-  "rev": 1792986831485
+  "rev": 1792987011404
 }
