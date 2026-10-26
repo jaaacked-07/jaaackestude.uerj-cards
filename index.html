@@ -2378,7 +2378,7 @@ function fabMT(){
   let f=$('#mtfab'); const tem=!!document.querySelector('.hlz,[data-an]');
   if(!tem){ if(f) f.remove(); return; }
   if(!f){ f=document.createElement('div'); f.id='mtfab'; f.className='mtfab';
-    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb sfab" aria-label="Favoritar card" title="Favoritar card">☆</button><button class="mtb nfab" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
+    f.innerHTML=`<div class="mtops hide">${['y','g','p'].map(c=>`<button class="${c}" data-mc="${c}" aria-label="Cor"></button>`).join('')}<button class="off" data-mc="">desligar</button></div><div class="mtrow"><button class="mtb sfab" aria-label="Favoritar card (*)" title="Favoritar card (*)">☆</button><button class="mtb nfab" aria-label="Novo card neste baralho (N)" title="Novo card neste baralho (N)">N</button><button class="mtb ntb${NT?' on':''}" aria-label="Nova anotação (T)" title="Nova anotação (T)">${NT_SVG}</button><button class="mtb mtm" aria-label="Marca-texto">${MT_SVG}</button></div>`;
     f.querySelector('.sfab').onmousedown=e=>e.preventDefault(); f.querySelector('.sfab').onclick=()=>{ const id=cardAtualFav(); if(id) favAlternar(id); };
     f.querySelector('.nfab').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); novoDoCard(); };
     f.querySelector('.ntb').onmousedown=e=>e.preventDefault(); f.querySelector('.ntb').onclick=()=>{ f.querySelector('.mtops').classList.add('hide'); modoNota(); };
@@ -2535,6 +2535,13 @@ function fecharFoto(){ const o=$('#lbx'); if(o){ o.remove(); if(!SS) document.do
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#lbx')){ e.preventDefault(); e.stopImmediatePropagation(); fecharFoto(); } },true);
 
 /* ===== Atalhos (PC) durante a rodada ===== */
+/* * = favoritar / desfavoritar o card aberto (revisão ou card aberto da lista); funciona com o * do teclado numérico e Shift+8 */
+document.addEventListener('keydown',e=>{
+  const ehAst=e.key==='*'||e.code==='NumpadMultiply'||(e.shiftKey&&e.code==='Digit8'&&e.key!=='(');   // ( = Shift+8 no teclado americano
+  if(!ehAst||e.ctrlKey||e.metaKey||e.altKey||e.repeat) return;
+  const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return;
+  const id=cardAtualFav(); if(!id) return; e.preventDefault(); favAlternar(id);
+});
 /* ESC: fecha a folha aberta; na rodada, sai e volta pro início (o que faltou fica em "Retomar") */
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape'||e.defaultPrevented) return;
