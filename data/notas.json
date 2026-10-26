@@ -17,6 +17,14 @@
       "id": 1793046637963,
       "d": "2026-10-26",
       "t": "Sindrome de Pancoast e Sindrome de Claude-Bernard-Horner"
+    },
+    {
+      "id": 1793046840830,
+      "d": "2026-10-26",
+      "t": "O primeiro passo para responder a essa questão é fazer o diagnóstico correto: trata-se de um AVE isquêmico ou ataque isquêmico transitório? Durante muito tempo, o AIT foi definido pela presença de deficit neurológico reversível em menos de 24h (a maioria, na prática, dura menos de 15min). Contudo, esta definição sempre foi criticada devido ao conceito de que pode haver infarto cerebral mesmo em isquemias breves (< 1h). Assim, teríamos muitos AVE isquêmicos com pouca ou nenhuma sequela clínica que estariam sendo diagnosticados como AIT a partir dos antigos critérios clínicos — estima-se que 1/3 dos AIT diagnosticados pelo critério antigo (deficit neurológico reversível em < 24h) evoluíam com infarto cerebral, ou seja, dano irreversível e não transitório. Desde então, nas diretrizes de AIT da AHA/ASA, a ausência de infarto cerebral, e não mais a duração do deficit neurológico, passou a ser a definição aceita para caracterizar um AIT. Da mesma forma, o AVE isquêmico passou a ser definido pela presença de infarto cerebral.\nNo caso da questão, a descrição de uma\n\"pequena área de restrição à difusão em região parietal esquerda\" é compatível com infarto cerebral. Ou seja, embora o exame neurológico esteja normal, estamos diante de um AVE isquêmico!\nPróximo passo: definir se o paciente possui indicação de dupla antiagregação (aspirina +\nclopidogrel) ou não. Em geral, recomenda-se o uso de aspirina isolada nos casos de AIT de baixo risco (escore ABCD2 < 4) ou AVE isquêmico moderado-grave (NIHSS > 5). Por outro lado, a dupla antiagregação é indicada se: AIT de alto risco (escore ABCD2 > ou - 4),AVE isquêmico menor (NIHSS < ou = 5) ou\nAVE por aterosclerose intracraniana de\ngrandes arterias (oclusao 70-99%).\nUma dúvida que poderia surgir: e se o paciente já usar aspirina e clopidogrel e evoluir com AVE moderado-grave? Neste caso, manteremos a dupla antiagregação!\nVeja que, na questão, o paciente apresenta exame neurológico normal, reforçando seu escore de NIHSS < 5. Logo, é um candidato à dupla antiagregação com aspirina\ne\nclopidogrel.",
+      "imgs": [
+        "data/img/1793046840830-0.jpg"
+      ]
     }
   ],
   "processadas": [
