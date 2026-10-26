@@ -25429,7 +25429,8 @@
       },
       "fonte": "OMS — Relatório Mundial sobre Violência e Saúde (2002) / MS — Portaria de Consolidação nº 4/2017 (LNCI, atualizada pela Portaria GM/MS nº 5.201/2024) / MS — Viva: Instrutivo de notificação de violência (2016) / Norma Técnica Atenção às pessoas em situação de violência sexual (MS 2012) / PCDT PEP (MS 2024) / ECA, Estatuto da Pessoa Idosa e Lei 13.931/2019",
       "add": "2026-10-25",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "vio-03",
@@ -39848,5 +39849,5 @@
       }
     }
   ],
-  "rev": 1792987224072
+  "rev": 1792987394353
 }
