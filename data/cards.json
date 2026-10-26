@@ -4675,7 +4675,7 @@
         "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
       },
       "prio": "alta",
-      "fav": true
+      "minha": "@@nota|0|Mistas → esofagite eosinofílica, dermatite atópica.\n**1- IGE MEDIADA**\n\n**2- NÃO IGE MEDIADA: **\n- Proctocolite alérgica\n- Enterocolite induzida por ptn (FPIES)\n- Enteropatia\n\n**3- MISTAS**"
     },
     {
       "id": "aplv-02",
@@ -39837,5 +39837,5 @@
       }
     }
   ],
-  "rev": 1792984145811
+  "rev": 1792984344423
 }
