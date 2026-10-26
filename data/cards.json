@@ -27401,7 +27401,8 @@
         ]
       },
       "fonte": "OMS — Intrapartum care for a positive childbirth experience (2018); MS — Diretrizes Nacionais de Assistência ao Parto Normal (2017); Zugaib Obstetrícia",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "tp-q1",
@@ -39845,5 +39846,5 @@
       }
     }
   ],
-  "rev": 1792985916416
+  "rev": 1792986092595
 }
