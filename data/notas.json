@@ -1,5 +1,14 @@
 {
-  "pendentes": [],
+  "pendentes": [
+    {
+      "id": 1793046424579,
+      "d": "2026-10-26",
+      "t": "Nossa paciente apresenta um exame de imagem compatível com tromboembolia pulmonar. Qual deve ser a nossa conduta?\nLetra A: incorreta. Trombolíticos estão indicados nos casos de instabilidade\nhemodinâmica! Outras indicações incluem parada cardiorrespiratória em pacientes com TEP, comprometimento de 50% ou mais da vasculatura pulmonar na cintilografia\n(embolia maciça) e disfunção de VD no ECO (discutível). A droga de escolha é o rtPA e pode ser prescrita até 14 dias após o início dos sintomas. O problema é que nossa paciente realizou uma cirurgia recente de grande porte, o que contraindica a trombólisel Aliás, aproveitando para recordar, as principais contraindicações são: PA maior ou igual a 185 x 110 mmHg; glicemia < 50 ou\n› 400 mg/dl; coagulopatia (plaquetas < 100.000, INR e/ou PTTa elevados); hemorragia cerebral prévia em qualquer época); AVE isquêmico ou TCE grave nos últimos três meses; grande cirurgia ou hemorragia gastrointestinal recente (últimas\n2-3 semanas); estupor ou coma.\nLetra B: correta. A embolectomia fica indicada justamente para os pacientes com tromboembolia\nmaciça,\ninstáveis\nhemodinamicamente e que apresentam contraindicação\nrefratariedade ao\ntrombolitico!\nLetra\nCincorreta. As duas principais indicações de filtro de Veia Cava Inferior (VCI) são embolia pulmonar na presença de sangramento ativo (o que contraindica a anticoagulação)\ne trombose\nvenosa\nrecorrente a despeito de anticoagulação. Tal \nmedida não seria útil para uma paciente instável e crítica como a nossa.\nLetra D: incorreta. Como discutido, temos uma paciente crítica que precisa de uma intervenção mais invasiva do que apenas anticoagulação com heparina.\nResposta: letra B.\nAvaliar texto",
+      "imgs": [
+        "data/img/1793046424579-0.jpg"
+      ]
+    }
+  ],
   "processadas": [
     1792528528241,
     1792529105511,
