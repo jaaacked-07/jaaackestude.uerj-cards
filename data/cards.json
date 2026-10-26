@@ -4675,7 +4675,7 @@
         "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
       },
       "prio": "alta",
-      "minha": "@@nota|0|Mistas → esofagite eosinofílica, dermatite atópica.\n**1- IGE MEDIADA**\n\n**2- NÃO IGE MEDIADA: **\n- Proctocolite alérgica\n- Enterocolite induzida por ptn (FPIES)\n- Enteropatia\n\n**3- MISTAS**"
+      "minha": "@@nota|0|Mistas → esofagite eosinofílica, dermatite atópica.\n**1- IGE MEDIADA**\n\n**2- NÃO IGE MEDIADA: **\n- {v}Proctocolite alérgica{/v}\n- {v}Enterocolite induzida por ptn (FPIES){/v}\n- {v}Enteropatia{/v}\n\n**3- MISTAS**"
     },
     {
       "id": "aplv-02",
@@ -10778,7 +10778,8 @@
         "legenda": "Aplicação da prova tuberculínica (Mantoux): injeção intradérmica no antebraço",
         "fonte": "Wikimedia Commons · Greg Knobloch / CDC · Domínio público"
       },
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "tbi-inf-02",
@@ -39837,5 +39838,5 @@
       }
     }
   ],
-  "rev": 1792984344423
+  "rev": 1792984445929
 }
