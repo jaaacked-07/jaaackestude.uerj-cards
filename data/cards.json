@@ -6755,7 +6755,7 @@
         "legenda": "Domínios da Avaliação Geriátrica Ampla."
       },
       "prio": "alta",
-      "minha": "@@nota|0|Baixa atividade física\nFRIED -> mnemonico PALEF\nP: Perda de peso\nA: Atividade fisica baixa\nL: Lentidao na marcha\nE: Exaustao autorrelatada\nF: Fraqueza (força de preensao baixa)"
+      "minha": "@@nota|0|Baixa atividade física\nFRIED -> mnemonico PALEF\nP: Perda de peso\nA: Atividade fisica baixa\nL: Lentidao na marcha\nE: Exaustao autorrelatada\nF: Fraqueza (força de preensao baixa)\n\n>ou=3 -> FRÁGIL\n1-2 -> PRÉ-FRAGIL\n0 -> ROBUSTP"
     },
     {
       "id": "aga-04",
@@ -39848,5 +39848,5 @@
       }
     }
   ],
-  "rev": 1792987135492
+  "rev": 1792987158847
 }
