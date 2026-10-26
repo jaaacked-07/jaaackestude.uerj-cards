@@ -27197,7 +27197,8 @@
         ]
       },
       "fonte": "Ministério da Saúde — Manual de Gestação de Alto Risco (2022); FEBRASGO/RBEHG — Pré-eclâmpsia (2023); ISSHP 2021",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "minha": "@@nota|0|Edema agudo de pulmão\n**{v}PACCOTE{/v} de gravidade:**\n{v}**P**{/v} : PA >ou= 160x110\n{v}**A**{/v} : Alteração visual\n{v}**C**{/v} : Cefaleia\n{v}**C** {/v}: Creatinina\n{v}**O**{/v} : O fígado -> epigastralgia / transaminases\n{v}**T**{/v} : Trombocitopenia (plaq <100.000)\n{v}**E**{/v} : Edema agudo de pulmão"
     },
     {
       "id": "pe-q1",
@@ -39843,5 +39844,5 @@
       }
     }
   ],
-  "rev": 1792985552563
+  "rev": 1792985743189
 }
