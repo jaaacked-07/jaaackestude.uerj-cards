@@ -40037,7 +40037,7 @@
       },
       "fonte": "ESC Guidelines for acute pulmonary embolism 2019; questão UERJ 2024",
       "id": "a-tep-d1",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual o trombolítico de escolha no TEP de alto risco?",
       "resposta": "Alteplase",
       "aceitas": [
@@ -40108,7 +40108,7 @@
       },
       "fonte": "ESC Guidelines for acute pulmonary embolism 2019; questão UERJ 2024",
       "id": "a-tep-d2",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Qual a principal indicação de filtro de veia cava inferior no TEP?",
       "resposta": "Contraindicação à anticoagulação",
       "aceitas": [
@@ -40196,7 +40196,7 @@
       },
       "fonte": "Light RW, Pleural Diseases; Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
       "id": "a-dp-d2",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Exsudato linfocítico com mais de 5% de células mesoteliais fala contra TB e a favor de quê?",
       "resposta": "Neoplasia",
       "aceitas": [
@@ -40298,7 +40298,7 @@
       },
       "fonte": "INCA 2022; NCCN Non-Small Cell Lung Cancer 2025; Harrison 21ª ed.",
       "id": "a-pul-02",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Síndrome de Claude-Bernard-Horner: quais os achados e por quê?",
       "verso": "**Tríade (mesmo lado da lesão):**\n- Ptose palpebral leve\n- Miose\n- Anidrose facial\n\nPor quê:\n- Lesão da via SIMPÁTICA do olho\n- Sem simpático → músculo de Müller fraco (ptose) e dilatador da pupila fraco (miose)\n- Anisocoria piora no escuro (a pupila doente não dilata)",
       "visual": {
@@ -40375,7 +40375,7 @@
       },
       "fonte": "INCA 2022; NCCN Non-Small Cell Lung Cancer 2025; Harrison 21ª ed.",
       "id": "a-pul-d1",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual a tríade da síndrome de Horner?",
       "resposta": "Ptose, miose e anidrose",
       "aceitas": [
@@ -40409,7 +40409,7 @@
       },
       "fonte": "INCA 2022; NCCN Non-Small Cell Lung Cancer 2025; Harrison 21ª ed.",
       "id": "a-pul-d2",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Em que região do pulmão fica o tumor de Pancoast?",
       "resposta": "Ápice (sulco superior)",
       "aceitas": [
@@ -40810,7 +40810,7 @@
       "fonte": "IMWG — critérios diagnósticos de mieloma (Rajkumar, Lancet Oncol 2014); NCCN Multiple Myeloma 2025",
       "id": "a-mm-02",
       "tipo": "flash",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Mieloma múltiplo: como as cadeias leves lesam o rim e qual síndrome tubular aparece?",
       "verso": "**Proteínas de Bence-Jones (cadeias leves filtradas)**\n**Síndrome de Fanconi no túbulo proximal**\n\nMecanismos:\n- Nefropatia por cilindros → a mais comum (cadeia leve + proteína de Tamm-Horsfall obstruem o túbulo)\n- Toxicidade no túbulo proximal → Fanconi\n- Hipercalcemia → depósito de cálcio e vasoconstrição\n- Amiloidose AL → síndrome nefrótica\n\nFanconi (perde na urina):\n- Glicose (com glicemia normal)\n- Aminoácidos\n- Fosfato → hipofosfatemia\n- Bicarbonato → ATR tipo 2\n- Ácido úrico → hipouricemia",
       "macete": "Fanconi = \"o túbulo proximal vira peneira\": GAFBU — Glicose, Aminoácido, Fosfato, Bicarbonato, Urato.",
@@ -40887,7 +40887,7 @@
       "fonte": "IMWG — critérios diagnósticos de mieloma (Rajkumar, Lancet Oncol 2014); NCCN Multiple Myeloma 2025",
       "id": "a-mm-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual o nome das cadeias leves de imunoglobulina eliminadas na urina no mieloma?",
       "resposta": "Proteínas de Bence-Jones",
       "aceitas": [
@@ -40929,7 +40929,7 @@
       "fonte": "IMWG — critérios diagnósticos de mieloma (Rajkumar, Lancet Oncol 2014); NCCN Multiple Myeloma 2025",
       "id": "a-mm-d2",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual o achado clássico do mieloma na eletroforese de proteínas séricas?",
       "resposta": "Pico monoclonal (componente M)",
       "aceitas": [
@@ -41216,7 +41216,7 @@
       },
       "id": "b-fan-01",
       "tipo": "flash",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Anti-Ro (SSA): quais as associações que a prova cobra?",
       "verso": "**Anti-Ro (SSA):**\n- Lúpus neonatal\n- Bloqueio cardíaco congênito\n- Rash por fotossensibilidade\n- Lúpus cutâneo subagudo\n\nPor quê:\n- O anti-Ro materno (IgG) atravessa a placenta.\n- Lesa o sistema de condução do feto → BAV total, irreversível.\n- Rash e citopenias do neonato são transitórios (somem em ~6 meses, quando o anticorpo materno sai).\n\nGestante anti-Ro positivo:\n- Ecocardiograma fetal seriado (entre 16 e 26 semanas).\n- Hidroxicloroquina reduz o risco de bloqueio.\n\nOutras associações:\n- Síndrome de Sjögren (com anti-La).\n- LES com FAN negativo (raro) → pensar em anti-Ro.",
       "visual": {
@@ -41243,7 +41243,7 @@
       },
       "id": "b-fan-d1",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Qual autoanticorpo se associa à psicose lúpica?",
       "resposta": "Anti-P ribossomal",
       "aceitas": [
@@ -41304,7 +41304,7 @@
       },
       "id": "b-fan-d2",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual autoanticorpo materno causa bloqueio cardíaco congênito?",
       "resposta": "Anti-Ro (SSA)",
       "aceitas": [
@@ -41412,7 +41412,7 @@
       },
       "id": "b-les-02",
       "tipo": "flash",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Critérios de classificação do LES (EULAR/ACR 2019): como funcionam?",
       "verso": "**Entrada: FAN ≥ 1:80 (alguma vez)**\n**Classifica: ≥ 10 pontos + ≥ 1 item clínico**\n\nRegras:\n- Em cada domínio conta só o item de MAIOR peso.\n- Os itens não precisam ocorrer ao mesmo tempo.\n- Não pontua item que tenha explicação mais provável que o LES.\n\nO que pesa mais:\n- Nefrite classe III ou IV na biópsia (10) + FAN → já classifica.\n- Rash agudo, pericardite aguda e artrite (6) são os clínicos de maior peso fora do rim.",
       "visual": {
@@ -41528,7 +41528,7 @@
       },
       "id": "b-les-q1",
       "tipo": "quiz",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Mulher, 26 anos, com dor e edema em mãos há 4 meses, simétricos. Apresenta desvio ulnar e dedos em pescoço de cisne que se corrigem passivamente. Refere úlceras orais indolores e vermelhidão no rosto após exposição ao sol. RX das mãos sem erosões. FAN 1:640 homogêneo; EAS com proteína 2+. O diagnóstico mais provável e o exame que mais o reforça são:",
       "opcoes": [
         "Artrite reumatoide; anti-CCP",
@@ -41561,7 +41561,7 @@
       },
       "id": "b-les-d1",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Qual a artropatia deformante NÃO erosiva típica do LES?",
       "resposta": "Artropatia de Jaccoud",
       "aceitas": [
@@ -41606,7 +41606,7 @@
       },
       "id": "b-les-d2",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual título mínimo de FAN é critério de entrada para classificar LES?",
       "resposta": "1:80",
       "aceitas": [
@@ -41691,7 +41691,7 @@
       },
       "id": "b-es-02",
       "tipo": "flash",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Crise renal esclerodérmica: quadro e tratamento",
       "verso": "**IECA (captopril) em dose crescente**\n\nQuadro:\n- HAS acelerada/maligna de início súbito.\n- Lesão renal aguda com sedimento pouco alterado.\n- Anemia hemolítica microangiopática e plaquetopenia (esquizócitos).\n\nQuem tem risco:\n- Forma difusa nos primeiros anos.\n- Anti-RNA polimerase III.\n- Corticoide em dose alta (≥ 15 mg/dia de prednisona).\n\nPor que IECA:\n- Vasculopatia renal → isquemia → hiper-reninemia.\n- Manter o IECA mesmo se precisar de diálise (a função pode voltar).",
       "visual": {
@@ -41757,7 +41757,7 @@
       },
       "id": "b-es-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual a manifestação inicial mais comum da esclerose sistêmica?",
       "resposta": "Fenômeno de Raynaud",
       "aceitas": [
@@ -41796,7 +41796,7 @@
       },
       "id": "b-es-d2",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual classe de droga trata a crise renal esclerodérmica?",
       "resposta": "IECA",
       "aceitas": [
@@ -42072,7 +42072,7 @@
       },
       "id": "b-pa-02",
       "tipo": "flash",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Classificação de Atlanta revisada: gravidade e coleções da pancreatite aguda",
       "verso": "**Grave = falência orgânica persistente (> 48 h)**\n**Coleções mudam de nome com 4 semanas**\n\nLógica:\n- Falência orgânica = choque, insuficiência respiratória ou renal.\n- O que define antes de 4 semanas → se há necrose ou não.\n- Depois de 4 semanas → formou parede (encapsulou).\n\nPseudocisto:\n- Só aparece na pancreatite intersticial (sem necrose).\n- Assintomático → observar, mesmo grande.",
       "visual": [
@@ -42136,7 +42136,7 @@
       },
       "id": "b-pa-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual achado na TC indica infecção da necrose pancreática?",
       "resposta": "Gás na coleção",
       "aceitas": [
@@ -42176,7 +42176,7 @@
       },
       "id": "b-pa-d2",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Após quantas semanas a necrose pancreática fica encapsulada (WON)?",
       "resposta": "4 semanas",
       "aceitas": [
@@ -42305,7 +42305,7 @@
       },
       "id": "b-cg-02",
       "tipo": "flash",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Câncer gástrico: qual o tratamento conforme o estádio?",
       "verso": "**Precoce intramucoso → ressecção endoscópica**\n**Ressecável → gastrectomia + linfadenectomia D2**\n**≥ T2 ou N+ → somar QT perioperatória (FLOT)**\n**Metastático → QT paliativa**\n\nRessecção endoscópica (critério clássico):\n- T1a, adenocarcinoma diferenciado.\n- Sem úlcera e ≤ 2 cm.\n\nCirurgia:\n- Antro → gastrectomia subtotal.\n- Corpo proximal/fundo ou difuso extenso → gastrectomia total.\n- D2 → retirar ≥ 16 linfonodos.\n\nMetastático:\n- Cirurgia só para complicação (sangramento, obstrução).",
       "visual": {
@@ -42370,7 +42370,7 @@
       },
       "id": "b-cg-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Quantos linfonodos, no mínimo, devem ser avaliados no câncer gástrico?",
       "resposta": "16",
       "aceitas": [
@@ -42425,7 +42425,7 @@
       },
       "id": "b-cg-d2",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Qual o T do câncer gástrico que invade a submucosa?",
       "resposta": "T1b",
       "aceitas": [
@@ -42613,7 +42613,7 @@
         ]
       },
       "pegadinha": "Por isso a cirurgia de estadiamento inclui omentectomia, lavado e biópsias peritoneais.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Tumores de ovário: classificados pela célula de origem (epitelial, germinativa, estroma-cordões sexuais ou metástase); o hormônio produzido aponta o tipo.**\n\nEpiteliais (~90% dos malignos):\n- Seroso (o mais comum), mucinoso, endometrioide, células claras, Brenner\n- Pós-menopausa; marcador → CA-125\n- Fatores de risco → BRCA1/2, Lynch, nuliparidade, endometriose (endometrioide e células claras)\n- Proteção → ACO, gestação, amamentação, salpingectomia\n\nGerminativos (jovens):\n- Teratoma cístico maduro → tumor ovariano benigno mais comum na menacme; risco de torção\n- Disgerminoma → LDH; muito radiossensível\n- Tumor do seio endodérmico (saco vitelino) → alfafetoproteína\n- Coriocarcinoma → hCG\n- Tratamento → cirurgia conservadora da fertilidade + quimioterapia (BEP)\n\nEstroma-cordões sexuais (produtores de hormônio):\n- **Células da granulosa** → estrogênio e inibina; corpúsculos de Call-Exner; puberdade precoce ou sangramento pós-menopausa e hiperplasia/câncer de endométrio\n- **Tecoma** → benigno, pós-menopausa, produz estrogênio (~75%); às vezes androgênio\n- **Fibroma** → síndrome de Meigs (ascite + derrame pleural direito)\n- **Sertoli-Leydig** → maligno de baixo grau, jovem (20–30 anos), produz ANDROGÊNIO → virilização em > 70%\n\nMetastáticos:\n- Krukenberg → células em anel de sinete, de origem gástrica, bilaterais\n\nVirilização na mulher (investigar):\n- Rápida e intensa → clitoromegalia, voz grossa, calvície\n- Testosterona total > 150–200 ng/dL → tumor\n- DHEA-S normal → ovário\n- DHEA-S muito alto → adrenal\n\nMassa anexial suspeita de malignidade (USG / IOTA / O-RADS):\n- Componente sólido, papilas, septos grossos, Doppler com fluxo central\n- Ascite, bilateralidade, pós-menopausa, CA-125 elevado\n\nTratamento do câncer epitelial:\n- Cirurgia de estadiamento FIGO → histerectomia + salpingo-ooforectomia bilateral + omentectomia + linfadenectomia + biópsias peritoneais e lavado\n- Citorredução máxima (sem tumor residual) + quimioterapia (carboplatina + paclitaxel)\n- Disseminação → principalmente peritoneal (transcelômica)\n- Omental cake → omento espessado por implantes tumorais (carcinomatose)\n- Não há rastreamento eficaz (nem CA-125 nem USG em população geral)\n\nEstadiamento FIGO (cirúrgico, 2014):\n- **I** → restrito ao(s) ovário(s)/tuba(s)\n- **II** → extensão pélvica (útero, anexos, peritônio pélvico)\n- **III** → peritônio fora da pelve e/ou linfonodo retroperitoneal\n  - IIIA → só linfonodo ou implante microscópico\n  - IIIB → implante macroscópico ≤ 2 cm\n  - IIIC → implante > 2 cm (inclui cápsula de fígado/baço)\n- **IV** → à distância (derrame pleural maligno, parênquima hepático)\n\nO que mais cai na UERJ:\n- Virilização + massa ovariana sólida → Sertoli-Leydig (estroma-cordões sexuais), não epitelial.\n- Sangramento pós-menopausa + massa ovariana → granulosa ou tecoma (estrogênio).\n- Marcadores → CA-125 (epitelial), AFP (seio endodérmico), LDH (disgerminoma), hCG (coriocarcinoma), inibina (granulosa).\n- Não se rastreia câncer de ovário.\n- Ascite + omental cake + CA-125 alto em pós-menopausa → câncer epitelial de ovário avançado (FIGO III).",
       "ctxvisual": {
         "tipo": "grupos",
@@ -42694,7 +42694,7 @@
         ]
       },
       "pegadinha": "Cápsula do fígado = IIIC; parênquima do fígado = IV.",
-      "prio": "media",
+      "prio": "baixa",
       "contexto": "**Tumores de ovário: classificados pela célula de origem (epitelial, germinativa, estroma-cordões sexuais ou metástase); o hormônio produzido aponta o tipo.**\n\nEpiteliais (~90% dos malignos):\n- Seroso (o mais comum), mucinoso, endometrioide, células claras, Brenner\n- Pós-menopausa; marcador → CA-125\n- Fatores de risco → BRCA1/2, Lynch, nuliparidade, endometriose (endometrioide e células claras)\n- Proteção → ACO, gestação, amamentação, salpingectomia\n\nGerminativos (jovens):\n- Teratoma cístico maduro → tumor ovariano benigno mais comum na menacme; risco de torção\n- Disgerminoma → LDH; muito radiossensível\n- Tumor do seio endodérmico (saco vitelino) → alfafetoproteína\n- Coriocarcinoma → hCG\n- Tratamento → cirurgia conservadora da fertilidade + quimioterapia (BEP)\n\nEstroma-cordões sexuais (produtores de hormônio):\n- **Células da granulosa** → estrogênio e inibina; corpúsculos de Call-Exner; puberdade precoce ou sangramento pós-menopausa e hiperplasia/câncer de endométrio\n- **Tecoma** → benigno, pós-menopausa, produz estrogênio (~75%); às vezes androgênio\n- **Fibroma** → síndrome de Meigs (ascite + derrame pleural direito)\n- **Sertoli-Leydig** → maligno de baixo grau, jovem (20–30 anos), produz ANDROGÊNIO → virilização em > 70%\n\nMetastáticos:\n- Krukenberg → células em anel de sinete, de origem gástrica, bilaterais\n\nVirilização na mulher (investigar):\n- Rápida e intensa → clitoromegalia, voz grossa, calvície\n- Testosterona total > 150–200 ng/dL → tumor\n- DHEA-S normal → ovário\n- DHEA-S muito alto → adrenal\n\nMassa anexial suspeita de malignidade (USG / IOTA / O-RADS):\n- Componente sólido, papilas, septos grossos, Doppler com fluxo central\n- Ascite, bilateralidade, pós-menopausa, CA-125 elevado\n\nTratamento do câncer epitelial:\n- Cirurgia de estadiamento FIGO → histerectomia + salpingo-ooforectomia bilateral + omentectomia + linfadenectomia + biópsias peritoneais e lavado\n- Citorredução máxima (sem tumor residual) + quimioterapia (carboplatina + paclitaxel)\n- Disseminação → principalmente peritoneal (transcelômica)\n- Omental cake → omento espessado por implantes tumorais (carcinomatose)\n- Não há rastreamento eficaz (nem CA-125 nem USG em população geral)\n\nEstadiamento FIGO (cirúrgico, 2014):\n- **I** → restrito ao(s) ovário(s)/tuba(s)\n- **II** → extensão pélvica (útero, anexos, peritônio pélvico)\n- **III** → peritônio fora da pelve e/ou linfonodo retroperitoneal\n  - IIIA → só linfonodo ou implante microscópico\n  - IIIB → implante macroscópico ≤ 2 cm\n  - IIIC → implante > 2 cm (inclui cápsula de fígado/baço)\n- **IV** → à distância (derrame pleural maligno, parênquima hepático)\n\nO que mais cai na UERJ:\n- Virilização + massa ovariana sólida → Sertoli-Leydig (estroma-cordões sexuais), não epitelial.\n- Sangramento pós-menopausa + massa ovariana → granulosa ou tecoma (estrogênio).\n- Marcadores → CA-125 (epitelial), AFP (seio endodérmico), LDH (disgerminoma), hCG (coriocarcinoma), inibina (granulosa).\n- Não se rastreia câncer de ovário.\n- Ascite + omental cake + CA-125 alto em pós-menopausa → câncer epitelial de ovário avançado (FIGO III).",
       "ctxvisual": {
         "tipo": "grupos",
@@ -42793,7 +42793,7 @@
         ]
       },
       "pegadinha": "A mais COMUM é a hipocalcemia; a mais TEMIDA é o hematoma.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Câncer de tireoide: o papilífero é o mais comum e o de melhor prognóstico; o anaplásico é raro e o mais agressivo.**\n\nOrigem celular:\n- **Folicular (diferenciados)** → papilífero e folicular, captam iodo, produzem tireoglobulina\n- **Células C (parafoliculares)** → medular, produz calcitonina\n- **Indiferenciado** → anaplásico\n\nOs 4 tipos:\n- **Papilífero** → radiação na infância; disseminação LINFÁTICA\n  - Citologia → núcleos em vidro fosco, fendas, pseudoinclusões, psamomas (ver imagem)\n- **Folicular** → carência de iodo; disseminação HEMATOGÊNICA (osso, pulmão)\n  - PAAF não distingue adenoma de carcinoma → precisa de invasão capsular/vascular\n- **Medular** → calcitonina e CEA; esporádico ou NEM 2 (RET)\n  - NEM 2 → pesquisar feocromocitoma ANTES da cirurgia\n- **Anaplásico** → idoso, massa de crescimento rápido, mau prognóstico\n\nInvestigação do nódulo:\n- **TSH** → se baixo, cintilografia (nódulo quente raramente é câncer)\n- **USG** → TI-RADS decide a PAAF\n- **PAAF** → resultado pela classificação de Bethesda\n\nTratamento:\n- Tireoidectomia (total ou lobectomia conforme o risco)\n- Iodo radioativo só nos diferenciados de maior risco\n- Levotiroxina (supressão do TSH conforme o risco)\n- Seguimento → tireoglobulina (diferenciados), calcitonina (medular)\n\nComplicações da tireoidectomia:\n- Hipocalcemia (paratireoides) → parestesia perioral, Chvostek, Trousseau → gluconato de cálcio\n- Laríngeo recorrente → rouquidão (unilateral) ou estridor (bilateral)\n- Laríngeo superior (ramo externo) → perda do agudo da voz\n- Hematoma cervical com desconforto respiratório → abrir a ferida à BEIRA DO LEITO\n\nO que mais cai na UERJ:\n- Achados citológicos do papilífero.\n- Disseminação linfática × hematogênica.\n- Hematoma pós-tireoidectomia: descomprimir antes de qualquer exame ou intubação.",
       "ctxvisual": {
         "tipo": "img",
@@ -42833,7 +42833,7 @@
         ]
       },
       "pegadinha": "O que asfixia é o edema de laringe pela estase venosa, não a traqueia esmagada.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Câncer de tireoide: o papilífero é o mais comum e o de melhor prognóstico; o anaplásico é raro e o mais agressivo.**\n\nOrigem celular:\n- **Folicular (diferenciados)** → papilífero e folicular, captam iodo, produzem tireoglobulina\n- **Células C (parafoliculares)** → medular, produz calcitonina\n- **Indiferenciado** → anaplásico\n\nOs 4 tipos:\n- **Papilífero** → radiação na infância; disseminação LINFÁTICA\n  - Citologia → núcleos em vidro fosco, fendas, pseudoinclusões, psamomas (ver imagem)\n- **Folicular** → carência de iodo; disseminação HEMATOGÊNICA (osso, pulmão)\n  - PAAF não distingue adenoma de carcinoma → precisa de invasão capsular/vascular\n- **Medular** → calcitonina e CEA; esporádico ou NEM 2 (RET)\n  - NEM 2 → pesquisar feocromocitoma ANTES da cirurgia\n- **Anaplásico** → idoso, massa de crescimento rápido, mau prognóstico\n\nInvestigação do nódulo:\n- **TSH** → se baixo, cintilografia (nódulo quente raramente é câncer)\n- **USG** → TI-RADS decide a PAAF\n- **PAAF** → resultado pela classificação de Bethesda\n\nTratamento:\n- Tireoidectomia (total ou lobectomia conforme o risco)\n- Iodo radioativo só nos diferenciados de maior risco\n- Levotiroxina (supressão do TSH conforme o risco)\n- Seguimento → tireoglobulina (diferenciados), calcitonina (medular)\n\nComplicações da tireoidectomia:\n- Hipocalcemia (paratireoides) → parestesia perioral, Chvostek, Trousseau → gluconato de cálcio\n- Laríngeo recorrente → rouquidão (unilateral) ou estridor (bilateral)\n- Laríngeo superior (ramo externo) → perda do agudo da voz\n- Hematoma cervical com desconforto respiratório → abrir a ferida à BEIRA DO LEITO\n\nO que mais cai na UERJ:\n- Achados citológicos do papilífero.\n- Disseminação linfática × hematogênica.\n- Hematoma pós-tireoidectomia: descomprimir antes de qualquer exame ou intubação.",
       "ctxvisual": {
         "tipo": "img",
@@ -43032,7 +43032,7 @@
         }
       },
       "pegadinha": "Alguns livros falam em 4–6 semanas; a ideia é a mesma (longo prazo = ostomia).",
-      "prio": "media",
+      "prio": "baixa",
       "contexto": "**Nutrição perioperatória = identificar o desnutrido, usar o intestino sempre que possível e não deixar em jejum à toa.**\n\nO que é:\n- Desnutrição aumenta deiscência, infecção e mortalidade.\n- O trauma cirúrgico gera catabolismo; jejum longo piora resistência à insulina.\n\nQuem precisa antes:\n- Triagem → NRS-2002 ≥ 3 = risco\n- Desnutrido grave (perda > 10–15% em 6 meses, IMC < 18,5, albumina < 3) → 7–14 dias de terapia nutricional\n\nVia:\n- Oral > enteral > parenteral\n- Sonda (< 4–6 semanas) × ostomia (mais tempo)\n- Parenteral só se o TGI não pode ser usado (obstrução, fístula de alto débito, íleo, isquemia)\n\nPor que enteral:\n- Mantém trofismo, GALT e IgA → menos translocação e infecção\n- Iniciar precoce (24–48 h) se estável\n\nJejum (ACERTO/ERAS):\n- Sólidos até 6–8 h; líquido com carboidrato até 2 h antes\n- Realimentar em até 24 h, inclusive após anastomose\n\nImunonutrição:\n- Arginina + ômega-3 + nucleotídeos em grandes cirurgias oncológicas digestivas\n\nSíndrome de realimentação:\n- Hipofosfatemia (marca), ↓ K, ↓ Mg, falta de tiamina\n- Prevenir → começar devagar (10–20 kcal/kg/dia) + tiamina antes\n\nCicatrização:\n- Vitamina C, zinco, proteína; vitamina A reverte o efeito do corticoide\n\nO que mais cai na UERJ:\n- Enteral × parenteral: a enteral protege a mucosa (resultado que parece contraintuitivo).\n- Na realimentação o fósforo CAI (não sobe).\n- Aminoácidos: arginina e glutamina são condicionalmente essenciais; valina, leucina e isoleucina são essenciais.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43210,7 +43210,7 @@
         ]
       },
       "pegadinha": "Testosterona tópica não é tratamento.",
-      "prio": "media",
+      "prio": "baixa",
       "contexto": "**Neoplasia intraepitelial vulvar (NIV): precursora do carcinoma escamoso de vulva, com 2 vias — HPV (HSIL, jovem e tabagista) e não HPV (NIV diferenciada, idosa com líquen escleroso).**\n\nNomenclatura (LAST/ISSVD 2015):\n- LSIL vulvar → efeito do HPV (condiloma), não é precursora\n- HSIL vulvar (antiga NIV usual) → precursora ligada ao HPV\n- NIV diferenciada (dVIN) → precursora NÃO ligada ao HPV\n\nHSIL vulvar (NIV usual):\n- HPV de alto risco (16)\n- Mulher jovem (30–50 anos), multifocal, multicêntrica (colo, vagina, ânus)\n- Fatores de risco → tabagismo (60–80% das pacientes), imunossupressão (HIV, transplante), múltiplos parceiros\n- Diabetes, obesidade e HAS → NÃO são fatores de risco\n\nNIV diferenciada:\n- Idosa (pós-menopausa), unifocal\n- Associada a líquen escleroso (e líquen plano)\n- Evolui mais rápido e com mais frequência para câncer\n\nClínica:\n- Prurido vulvar → queixa mais comum\n- Lesões pleomórficas: brancas, avermelhadas, pigmentadas, elevadas ou úlceras\n- Muitas assintomáticas\n\nDiagnóstico:\n- Vulvoscopia (ácido acético) + BIÓPSIA de toda lesão suspeita\n- Lesão vulvar que não melhora com tratamento, úlcera persistente ou pigmentada → biopsiar\n- Avaliar colo, vagina e ânus (multicentricidade do HPV)\n\nTratamento da NIV:\n- Excisão local ampla → padrão (exclui invasão)\n- Vaporização a laser ou imiquimode tópico → HSIL multifocal, sem suspeita de invasão\n- Seguimento prolongado (recidiva frequente)\n\nCâncer de vulva:\n- 90% carcinoma escamoso; idosa; grande lábio\n- Disseminação linfática → linfonodos inguinofemorais\n- Estadiamento cirúrgico (FIGO 2021)\n- Tratamento → excisão radical local + linfonodo sentinela/linfadenectomia inguinal\n\nPrevenção:\n- Vacina HPV, cessar tabagismo, tratar líquen escleroso (corticoide potente tópico)\n\nO que mais cai na UERJ:\n- HSIL vulvar → HPV + tabagismo; DM, obesidade e HAS não são fator de risco.\n- NIV diferenciada → idosa com líquen escleroso.\n- Prurido vulvar é o sintoma mais comum.\n- Lesão vulvar suspeita → biópsia.",
       "ctxvisual": {
         "tipo": "vs",
@@ -43363,7 +43363,7 @@
       },
       "pegadinha": "Aa e Ap são pontos FIXOS (sempre 3 cm do hímen, só variam de −3 a +3); Ba e Bp são móveis e podem chegar a +tvl.",
       "uerj": "A UERJ cobra a lógica do POP-Q aplicada ao caso: localizar o compartimento pelo ponto (anterior, apical ou posterior) e daí escolher a cirurgia.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Prolapso genital: descida da parede vaginal anterior, posterior, do útero ou da cúpula por falha do suporte do assoalho pélvico; o POP-Q mede e estadia.**\n\nO que é:\n- Falha dos ligamentos (uterossacros e cardinais), da fáscia endopélvica e do músculo levantador do ânus\n- Níveis de suporte de DeLancey:\n  - Nível I (apical) → complexo uterossacro-cardinal\n  - Nível II (médio) → fáscias pubocervical e retovaginal\n  - Nível III (distal) → corpo perineal\n\nFatores de risco:\n- **Parto vaginal** → o principal (paridade, macrossomia, fórceps)\n- Idade e hipoestrogenismo (pós-menopausa)\n- Pressão abdominal crônica → obesidade, tosse crônica, constipação, esforço físico\n- Histerectomia prévia → prolapso de cúpula\n- Doenças do colágeno\n\nCompartimentos:\n- **Anterior** → cistocele (o mais comum)\n- **Apical** → prolapso uterino ou de cúpula vaginal (pós-histerectomia)\n- **Posterior** → retocele (baixa) e enterocele (alta, alça no fundo de saco)\n\nClínica:\n- \"Bola na vagina\" e peso que pioram no fim do dia e melhoram deitada\n- Urinários → jato fraco, esvaziamento incompleto, reduzir o prolapso com o dedo para urinar\n- Incontinência oculta → aparece só após reduzir o prolapso\n- Evacuatórios → digitação vaginal para evacuar (retocele)\n- Colo exteriorizado → úlcera de decúbito\n\nDiagnóstico:\n- Clínico → exame com Valsalva (deitada e, se preciso, em pé)\n- Quantificação → POP-Q (ICS, 1996), com o hímen como referência\n- Urodinâmica → antes da cirurgia se houver sintoma urinário (pesquisar incontinência oculta)\n\nTratamento:\n- Assintomático → observar (prolapso sem queixa não se opera)\n- Conservador → fisioterapia do assoalho pélvico, pessário, estrogênio vaginal\n- Cirurgia reconstrutiva → corrige o compartimento afetado\n- Cirurgia obliterativa → colpocleise, se não há desejo de coito\n- Telas transvaginais para prolapso → retiradas do mercado americano (FDA, 2019)\n\nPrevenção do prolapso de cúpula:\n- Na histerectomia → fixar a cúpula nos uterossacros (culdoplastia de McCall)\n\nO que mais cai na UERJ:\n- Prolapso de cúpula vaginal pós-histerectomia → sacrocolpopexia abdominal (padrão-ouro).\n- Estádio do POP-Q pelo ponto mais distal em relação ao hímen.\n- Idosa sem vida sexual e com alto risco cirúrgico → pessário ou colpocleise.\n- O que indica tratamento é o sintoma, não o estádio sozinho.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43467,7 +43467,7 @@
       },
       "pegadinha": "Colpocleise impede o coito: nunca em mulher com vida sexual ativa. E a cirurgia de Manchester exige útero (não serve para cúpula).",
       "uerj": "Já caiu prolapso de cúpula vaginal: o enunciado traz histerectomia prévia e pede a melhor cirurgia (sacrocolpopexia).",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Prolapso genital: descida da parede vaginal anterior, posterior, do útero ou da cúpula por falha do suporte do assoalho pélvico; o POP-Q mede e estadia.**\n\nO que é:\n- Falha dos ligamentos (uterossacros e cardinais), da fáscia endopélvica e do músculo levantador do ânus\n- Níveis de suporte de DeLancey:\n  - Nível I (apical) → complexo uterossacro-cardinal\n  - Nível II (médio) → fáscias pubocervical e retovaginal\n  - Nível III (distal) → corpo perineal\n\nFatores de risco:\n- **Parto vaginal** → o principal (paridade, macrossomia, fórceps)\n- Idade e hipoestrogenismo (pós-menopausa)\n- Pressão abdominal crônica → obesidade, tosse crônica, constipação, esforço físico\n- Histerectomia prévia → prolapso de cúpula\n- Doenças do colágeno\n\nCompartimentos:\n- **Anterior** → cistocele (o mais comum)\n- **Apical** → prolapso uterino ou de cúpula vaginal (pós-histerectomia)\n- **Posterior** → retocele (baixa) e enterocele (alta, alça no fundo de saco)\n\nClínica:\n- \"Bola na vagina\" e peso que pioram no fim do dia e melhoram deitada\n- Urinários → jato fraco, esvaziamento incompleto, reduzir o prolapso com o dedo para urinar\n- Incontinência oculta → aparece só após reduzir o prolapso\n- Evacuatórios → digitação vaginal para evacuar (retocele)\n- Colo exteriorizado → úlcera de decúbito\n\nDiagnóstico:\n- Clínico → exame com Valsalva (deitada e, se preciso, em pé)\n- Quantificação → POP-Q (ICS, 1996), com o hímen como referência\n- Urodinâmica → antes da cirurgia se houver sintoma urinário (pesquisar incontinência oculta)\n\nTratamento:\n- Assintomático → observar (prolapso sem queixa não se opera)\n- Conservador → fisioterapia do assoalho pélvico, pessário, estrogênio vaginal\n- Cirurgia reconstrutiva → corrige o compartimento afetado\n- Cirurgia obliterativa → colpocleise, se não há desejo de coito\n- Telas transvaginais para prolapso → retiradas do mercado americano (FDA, 2019)\n\nPrevenção do prolapso de cúpula:\n- Na histerectomia → fixar a cúpula nos uterossacros (culdoplastia de McCall)\n\nO que mais cai na UERJ:\n- Prolapso de cúpula vaginal pós-histerectomia → sacrocolpopexia abdominal (padrão-ouro).\n- Estádio do POP-Q pelo ponto mais distal em relação ao hímen.\n- Idosa sem vida sexual e com alto risco cirúrgico → pessário ou colpocleise.\n- O que indica tratamento é o sintoma, não o estádio sozinho.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43533,7 +43533,7 @@
         ]
       },
       "pegadinha": "Sem útero não se mede D.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Prolapso genital: descida da parede vaginal anterior, posterior, do útero ou da cúpula por falha do suporte do assoalho pélvico; o POP-Q mede e estadia.**\n\nO que é:\n- Falha dos ligamentos (uterossacros e cardinais), da fáscia endopélvica e do músculo levantador do ânus\n- Níveis de suporte de DeLancey:\n  - Nível I (apical) → complexo uterossacro-cardinal\n  - Nível II (médio) → fáscias pubocervical e retovaginal\n  - Nível III (distal) → corpo perineal\n\nFatores de risco:\n- **Parto vaginal** → o principal (paridade, macrossomia, fórceps)\n- Idade e hipoestrogenismo (pós-menopausa)\n- Pressão abdominal crônica → obesidade, tosse crônica, constipação, esforço físico\n- Histerectomia prévia → prolapso de cúpula\n- Doenças do colágeno\n\nCompartimentos:\n- **Anterior** → cistocele (o mais comum)\n- **Apical** → prolapso uterino ou de cúpula vaginal (pós-histerectomia)\n- **Posterior** → retocele (baixa) e enterocele (alta, alça no fundo de saco)\n\nClínica:\n- \"Bola na vagina\" e peso que pioram no fim do dia e melhoram deitada\n- Urinários → jato fraco, esvaziamento incompleto, reduzir o prolapso com o dedo para urinar\n- Incontinência oculta → aparece só após reduzir o prolapso\n- Evacuatórios → digitação vaginal para evacuar (retocele)\n- Colo exteriorizado → úlcera de decúbito\n\nDiagnóstico:\n- Clínico → exame com Valsalva (deitada e, se preciso, em pé)\n- Quantificação → POP-Q (ICS, 1996), com o hímen como referência\n- Urodinâmica → antes da cirurgia se houver sintoma urinário (pesquisar incontinência oculta)\n\nTratamento:\n- Assintomático → observar (prolapso sem queixa não se opera)\n- Conservador → fisioterapia do assoalho pélvico, pessário, estrogênio vaginal\n- Cirurgia reconstrutiva → corrige o compartimento afetado\n- Cirurgia obliterativa → colpocleise, se não há desejo de coito\n- Telas transvaginais para prolapso → retiradas do mercado americano (FDA, 2019)\n\nPrevenção do prolapso de cúpula:\n- Na histerectomia → fixar a cúpula nos uterossacros (culdoplastia de McCall)\n\nO que mais cai na UERJ:\n- Prolapso de cúpula vaginal pós-histerectomia → sacrocolpopexia abdominal (padrão-ouro).\n- Estádio do POP-Q pelo ponto mais distal em relação ao hímen.\n- Idosa sem vida sexual e com alto risco cirúrgico → pessário ou colpocleise.\n- O que indica tratamento é o sintoma, não o estádio sozinho.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43571,7 +43571,7 @@
         ]
       },
       "pegadinha": "Exatamente no hímen (0) também é estádio II.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Prolapso genital: descida da parede vaginal anterior, posterior, do útero ou da cúpula por falha do suporte do assoalho pélvico; o POP-Q mede e estadia.**\n\nO que é:\n- Falha dos ligamentos (uterossacros e cardinais), da fáscia endopélvica e do músculo levantador do ânus\n- Níveis de suporte de DeLancey:\n  - Nível I (apical) → complexo uterossacro-cardinal\n  - Nível II (médio) → fáscias pubocervical e retovaginal\n  - Nível III (distal) → corpo perineal\n\nFatores de risco:\n- **Parto vaginal** → o principal (paridade, macrossomia, fórceps)\n- Idade e hipoestrogenismo (pós-menopausa)\n- Pressão abdominal crônica → obesidade, tosse crônica, constipação, esforço físico\n- Histerectomia prévia → prolapso de cúpula\n- Doenças do colágeno\n\nCompartimentos:\n- **Anterior** → cistocele (o mais comum)\n- **Apical** → prolapso uterino ou de cúpula vaginal (pós-histerectomia)\n- **Posterior** → retocele (baixa) e enterocele (alta, alça no fundo de saco)\n\nClínica:\n- \"Bola na vagina\" e peso que pioram no fim do dia e melhoram deitada\n- Urinários → jato fraco, esvaziamento incompleto, reduzir o prolapso com o dedo para urinar\n- Incontinência oculta → aparece só após reduzir o prolapso\n- Evacuatórios → digitação vaginal para evacuar (retocele)\n- Colo exteriorizado → úlcera de decúbito\n\nDiagnóstico:\n- Clínico → exame com Valsalva (deitada e, se preciso, em pé)\n- Quantificação → POP-Q (ICS, 1996), com o hímen como referência\n- Urodinâmica → antes da cirurgia se houver sintoma urinário (pesquisar incontinência oculta)\n\nTratamento:\n- Assintomático → observar (prolapso sem queixa não se opera)\n- Conservador → fisioterapia do assoalho pélvico, pessário, estrogênio vaginal\n- Cirurgia reconstrutiva → corrige o compartimento afetado\n- Cirurgia obliterativa → colpocleise, se não há desejo de coito\n- Telas transvaginais para prolapso → retiradas do mercado americano (FDA, 2019)\n\nPrevenção do prolapso de cúpula:\n- Na histerectomia → fixar a cúpula nos uterossacros (culdoplastia de McCall)\n\nO que mais cai na UERJ:\n- Prolapso de cúpula vaginal pós-histerectomia → sacrocolpopexia abdominal (padrão-ouro).\n- Estádio do POP-Q pelo ponto mais distal em relação ao hímen.\n- Idosa sem vida sexual e com alto risco cirúrgico → pessário ou colpocleise.\n- O que indica tratamento é o sintoma, não o estádio sozinho.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43616,7 +43616,7 @@
         }
       },
       "pegadinha": "A proibição da FDA (2019) foi da tela TRANSVAGINAL; a tela da sacrocolpopexia abdominal continua indicada.",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Prolapso genital: descida da parede vaginal anterior, posterior, do útero ou da cúpula por falha do suporte do assoalho pélvico; o POP-Q mede e estadia.**\n\nO que é:\n- Falha dos ligamentos (uterossacros e cardinais), da fáscia endopélvica e do músculo levantador do ânus\n- Níveis de suporte de DeLancey:\n  - Nível I (apical) → complexo uterossacro-cardinal\n  - Nível II (médio) → fáscias pubocervical e retovaginal\n  - Nível III (distal) → corpo perineal\n\nFatores de risco:\n- **Parto vaginal** → o principal (paridade, macrossomia, fórceps)\n- Idade e hipoestrogenismo (pós-menopausa)\n- Pressão abdominal crônica → obesidade, tosse crônica, constipação, esforço físico\n- Histerectomia prévia → prolapso de cúpula\n- Doenças do colágeno\n\nCompartimentos:\n- **Anterior** → cistocele (o mais comum)\n- **Apical** → prolapso uterino ou de cúpula vaginal (pós-histerectomia)\n- **Posterior** → retocele (baixa) e enterocele (alta, alça no fundo de saco)\n\nClínica:\n- \"Bola na vagina\" e peso que pioram no fim do dia e melhoram deitada\n- Urinários → jato fraco, esvaziamento incompleto, reduzir o prolapso com o dedo para urinar\n- Incontinência oculta → aparece só após reduzir o prolapso\n- Evacuatórios → digitação vaginal para evacuar (retocele)\n- Colo exteriorizado → úlcera de decúbito\n\nDiagnóstico:\n- Clínico → exame com Valsalva (deitada e, se preciso, em pé)\n- Quantificação → POP-Q (ICS, 1996), com o hímen como referência\n- Urodinâmica → antes da cirurgia se houver sintoma urinário (pesquisar incontinência oculta)\n\nTratamento:\n- Assintomático → observar (prolapso sem queixa não se opera)\n- Conservador → fisioterapia do assoalho pélvico, pessário, estrogênio vaginal\n- Cirurgia reconstrutiva → corrige o compartimento afetado\n- Cirurgia obliterativa → colpocleise, se não há desejo de coito\n- Telas transvaginais para prolapso → retiradas do mercado americano (FDA, 2019)\n\nPrevenção do prolapso de cúpula:\n- Na histerectomia → fixar a cúpula nos uterossacros (culdoplastia de McCall)\n\nO que mais cai na UERJ:\n- Prolapso de cúpula vaginal pós-histerectomia → sacrocolpopexia abdominal (padrão-ouro).\n- Estádio do POP-Q pelo ponto mais distal em relação ao hímen.\n- Idosa sem vida sexual e com alto risco cirúrgico → pessário ou colpocleise.\n- O que indica tratamento é o sintoma, não o estádio sozinho.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43780,7 +43780,7 @@
       "pegadinha": "Sulfato de magnésio é o distrator: hipertensão + proteinúria com 15 semanas não é pré-eclâmpsia.",
       "uerj": "Caso clínico de gestante lúpica com HAS e proteinúria antes de 20 semanas — a banca quer que você reconheça nefrite e não pré-eclâmpsia.",
       "fonte": "EULAR Recommendations for women's health in SLE/APS (2017); ACR Reproductive Health Guideline (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**LES na gestação = doença autoimune que pode reativar na gravidez e aumenta pré-eclâmpsia, perda fetal, prematuridade e restrição de crescimento.**\n\nPlanejamento:\n- Engravidar com doença inativa há ≥ 6 meses (menos reativação e nefrite)\n- Rastrear anti-Ro/SSA, anti-La/SSB e anticorpos antifosfolípides\n- Trocar drogas teratogênicas antes da concepção\n\nMedicações:\n- **Manter** → hidroxicloroquina (suspender aumenta reativação), azatioprina, prednisona/prednisolona, tacrolimo ou ciclosporina\n- **Proibidos** → micofenolato, ciclofosfamida, metotrexato, leflunomida, IECA/BRA\n- **AAS em baixa dose** → todas (LES é fator de alto risco para pré-eclâmpsia)\n- **SAF associada** → AAS + heparina (profilática ou plena conforme trombose prévia)\n\nReativação (flare):\n- Sinais → artrite, rash, serosite, citopenias, nefrite\n- Laboratório → complemento (C3/C4) caindo e anti-DNA subindo\n- Tratamento → corticoide na menor dose eficaz pelo menor tempo; caso grave → pulso de metilprednisolona EV\n- Nefrite grave → corticoide + azatioprina ou tacrolimo\n\nNefrite lúpica × pré-eclâmpsia:\n- Antes de 20 semanas pensar em nefrite (pré-eclâmpsia não existe antes de 20 semanas, salvo mola)\n- Sedimento ativo (hematúria dismórfica, cilindros), complemento baixo e anti-DNA alto → nefrite\n- Ácido úrico alto, plaquetopenia, transaminases altas e complemento normal → pré-eclâmpsia\n- As duas podem coexistir\n\nLúpus neonatal:\n- Anti-Ro/SSA materno atravessa a placenta\n- Bloqueio atrioventricular congênito (irreversível) → ecocardiograma fetal seriado entre 16 e 26 semanas\n- Rash e citopenias transitórios no RN\n- Hidroxicloroquina reduz o risco de bloqueio\n\nComplicações obstétricas:\n- Pré-eclâmpsia, restrição de crescimento, óbito fetal, prematuridade\n- Acompanhar com USG seriada e Doppler\n\nO que mais cai na UERJ:\n- Gestante lúpica com HAS + proteinúria antes de 20 semanas → nefrite, tratar com corticoide (não MgSO₄).\n- Hidroxicloroquina e azatioprina NÃO devem ser suspensas na gestação.\n- Anti-Ro → bloqueio cardíaco congênito.\n- LES indica AAS profilático.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43846,7 +43846,7 @@
       "pegadinha": "Hipertensão + proteinúria antes de 20 semanas em lúpica = nefrite (não pré-eclâmpsia).",
       "uerj": "Cobra o diferencial pelo tempo de gestação e pelos marcadores de atividade (complemento e anti-DNA).",
       "fonte": "EULAR Recommendations for women's health in SLE/APS (2017); ACR Reproductive Health Guideline (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**LES na gestação = doença autoimune que pode reativar na gravidez e aumenta pré-eclâmpsia, perda fetal, prematuridade e restrição de crescimento.**\n\nPlanejamento:\n- Engravidar com doença inativa há ≥ 6 meses (menos reativação e nefrite)\n- Rastrear anti-Ro/SSA, anti-La/SSB e anticorpos antifosfolípides\n- Trocar drogas teratogênicas antes da concepção\n\nMedicações:\n- **Manter** → hidroxicloroquina (suspender aumenta reativação), azatioprina, prednisona/prednisolona, tacrolimo ou ciclosporina\n- **Proibidos** → micofenolato, ciclofosfamida, metotrexato, leflunomida, IECA/BRA\n- **AAS em baixa dose** → todas (LES é fator de alto risco para pré-eclâmpsia)\n- **SAF associada** → AAS + heparina (profilática ou plena conforme trombose prévia)\n\nReativação (flare):\n- Sinais → artrite, rash, serosite, citopenias, nefrite\n- Laboratório → complemento (C3/C4) caindo e anti-DNA subindo\n- Tratamento → corticoide na menor dose eficaz pelo menor tempo; caso grave → pulso de metilprednisolona EV\n- Nefrite grave → corticoide + azatioprina ou tacrolimo\n\nNefrite lúpica × pré-eclâmpsia:\n- Antes de 20 semanas pensar em nefrite (pré-eclâmpsia não existe antes de 20 semanas, salvo mola)\n- Sedimento ativo (hematúria dismórfica, cilindros), complemento baixo e anti-DNA alto → nefrite\n- Ácido úrico alto, plaquetopenia, transaminases altas e complemento normal → pré-eclâmpsia\n- As duas podem coexistir\n\nLúpus neonatal:\n- Anti-Ro/SSA materno atravessa a placenta\n- Bloqueio atrioventricular congênito (irreversível) → ecocardiograma fetal seriado entre 16 e 26 semanas\n- Rash e citopenias transitórios no RN\n- Hidroxicloroquina reduz o risco de bloqueio\n\nComplicações obstétricas:\n- Pré-eclâmpsia, restrição de crescimento, óbito fetal, prematuridade\n- Acompanhar com USG seriada e Doppler\n\nO que mais cai na UERJ:\n- Gestante lúpica com HAS + proteinúria antes de 20 semanas → nefrite, tratar com corticoide (não MgSO₄).\n- Hidroxicloroquina e azatioprina NÃO devem ser suspensas na gestação.\n- Anti-Ro → bloqueio cardíaco congênito.\n- LES indica AAS profilático.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43888,7 +43888,7 @@
       "pegadinha": "O caso clássico traz a paciente que SUSPENDEU tudo ao descobrir a gravidez — erro que precipita o surto.",
       "uerj": "Questões de LES na gestação usam a suspensão das drogas como pista da reativação.",
       "fonte": "EULAR Recommendations for women's health in SLE/APS (2017); ACR Reproductive Health Guideline (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "media",
+      "prio": "baixa",
       "contexto": "**LES na gestação = doença autoimune que pode reativar na gravidez e aumenta pré-eclâmpsia, perda fetal, prematuridade e restrição de crescimento.**\n\nPlanejamento:\n- Engravidar com doença inativa há ≥ 6 meses (menos reativação e nefrite)\n- Rastrear anti-Ro/SSA, anti-La/SSB e anticorpos antifosfolípides\n- Trocar drogas teratogênicas antes da concepção\n\nMedicações:\n- **Manter** → hidroxicloroquina (suspender aumenta reativação), azatioprina, prednisona/prednisolona, tacrolimo ou ciclosporina\n- **Proibidos** → micofenolato, ciclofosfamida, metotrexato, leflunomida, IECA/BRA\n- **AAS em baixa dose** → todas (LES é fator de alto risco para pré-eclâmpsia)\n- **SAF associada** → AAS + heparina (profilática ou plena conforme trombose prévia)\n\nReativação (flare):\n- Sinais → artrite, rash, serosite, citopenias, nefrite\n- Laboratório → complemento (C3/C4) caindo e anti-DNA subindo\n- Tratamento → corticoide na menor dose eficaz pelo menor tempo; caso grave → pulso de metilprednisolona EV\n- Nefrite grave → corticoide + azatioprina ou tacrolimo\n\nNefrite lúpica × pré-eclâmpsia:\n- Antes de 20 semanas pensar em nefrite (pré-eclâmpsia não existe antes de 20 semanas, salvo mola)\n- Sedimento ativo (hematúria dismórfica, cilindros), complemento baixo e anti-DNA alto → nefrite\n- Ácido úrico alto, plaquetopenia, transaminases altas e complemento normal → pré-eclâmpsia\n- As duas podem coexistir\n\nLúpus neonatal:\n- Anti-Ro/SSA materno atravessa a placenta\n- Bloqueio atrioventricular congênito (irreversível) → ecocardiograma fetal seriado entre 16 e 26 semanas\n- Rash e citopenias transitórios no RN\n- Hidroxicloroquina reduz o risco de bloqueio\n\nComplicações obstétricas:\n- Pré-eclâmpsia, restrição de crescimento, óbito fetal, prematuridade\n- Acompanhar com USG seriada e Doppler\n\nO que mais cai na UERJ:\n- Gestante lúpica com HAS + proteinúria antes de 20 semanas → nefrite, tratar com corticoide (não MgSO₄).\n- Hidroxicloroquina e azatioprina NÃO devem ser suspensas na gestação.\n- Anti-Ro → bloqueio cardíaco congênito.\n- LES indica AAS profilático.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43921,7 +43921,7 @@
       "macete": "HCQ = \"Hoje Continua Querida\".",
       "pegadinha": "Não é droga para o surto agudo (aí é corticoide).",
       "fonte": "EULAR Recommendations for women's health in SLE/APS (2017); ACR Reproductive Health Guideline (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**LES na gestação = doença autoimune que pode reativar na gravidez e aumenta pré-eclâmpsia, perda fetal, prematuridade e restrição de crescimento.**\n\nPlanejamento:\n- Engravidar com doença inativa há ≥ 6 meses (menos reativação e nefrite)\n- Rastrear anti-Ro/SSA, anti-La/SSB e anticorpos antifosfolípides\n- Trocar drogas teratogênicas antes da concepção\n\nMedicações:\n- **Manter** → hidroxicloroquina (suspender aumenta reativação), azatioprina, prednisona/prednisolona, tacrolimo ou ciclosporina\n- **Proibidos** → micofenolato, ciclofosfamida, metotrexato, leflunomida, IECA/BRA\n- **AAS em baixa dose** → todas (LES é fator de alto risco para pré-eclâmpsia)\n- **SAF associada** → AAS + heparina (profilática ou plena conforme trombose prévia)\n\nReativação (flare):\n- Sinais → artrite, rash, serosite, citopenias, nefrite\n- Laboratório → complemento (C3/C4) caindo e anti-DNA subindo\n- Tratamento → corticoide na menor dose eficaz pelo menor tempo; caso grave → pulso de metilprednisolona EV\n- Nefrite grave → corticoide + azatioprina ou tacrolimo\n\nNefrite lúpica × pré-eclâmpsia:\n- Antes de 20 semanas pensar em nefrite (pré-eclâmpsia não existe antes de 20 semanas, salvo mola)\n- Sedimento ativo (hematúria dismórfica, cilindros), complemento baixo e anti-DNA alto → nefrite\n- Ácido úrico alto, plaquetopenia, transaminases altas e complemento normal → pré-eclâmpsia\n- As duas podem coexistir\n\nLúpus neonatal:\n- Anti-Ro/SSA materno atravessa a placenta\n- Bloqueio atrioventricular congênito (irreversível) → ecocardiograma fetal seriado entre 16 e 26 semanas\n- Rash e citopenias transitórios no RN\n- Hidroxicloroquina reduz o risco de bloqueio\n\nComplicações obstétricas:\n- Pré-eclâmpsia, restrição de crescimento, óbito fetal, prematuridade\n- Acompanhar com USG seriada e Doppler\n\nO que mais cai na UERJ:\n- Gestante lúpica com HAS + proteinúria antes de 20 semanas → nefrite, tratar com corticoide (não MgSO₄).\n- Hidroxicloroquina e azatioprina NÃO devem ser suspensas na gestação.\n- Anti-Ro → bloqueio cardíaco congênito.\n- LES indica AAS profilático.",
       "ctxvisual": {
         "tipo": "svg",
@@ -43958,7 +43958,7 @@
       "macete": "\"Ro\" de \"Ritmo\" — o anti-Ro trava o ritmo do feto.",
       "pegadinha": "Bradicardia fetal fixa (~60 bpm) em mãe lúpica = BAV congênito, não sofrimento fetal.",
       "fonte": "EULAR Recommendations for women's health in SLE/APS (2017); ACR Reproductive Health Guideline (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "media",
+      "prio": "baixa",
       "contexto": "**LES na gestação = doença autoimune que pode reativar na gravidez e aumenta pré-eclâmpsia, perda fetal, prematuridade e restrição de crescimento.**\n\nPlanejamento:\n- Engravidar com doença inativa há ≥ 6 meses (menos reativação e nefrite)\n- Rastrear anti-Ro/SSA, anti-La/SSB e anticorpos antifosfolípides\n- Trocar drogas teratogênicas antes da concepção\n\nMedicações:\n- **Manter** → hidroxicloroquina (suspender aumenta reativação), azatioprina, prednisona/prednisolona, tacrolimo ou ciclosporina\n- **Proibidos** → micofenolato, ciclofosfamida, metotrexato, leflunomida, IECA/BRA\n- **AAS em baixa dose** → todas (LES é fator de alto risco para pré-eclâmpsia)\n- **SAF associada** → AAS + heparina (profilática ou plena conforme trombose prévia)\n\nReativação (flare):\n- Sinais → artrite, rash, serosite, citopenias, nefrite\n- Laboratório → complemento (C3/C4) caindo e anti-DNA subindo\n- Tratamento → corticoide na menor dose eficaz pelo menor tempo; caso grave → pulso de metilprednisolona EV\n- Nefrite grave → corticoide + azatioprina ou tacrolimo\n\nNefrite lúpica × pré-eclâmpsia:\n- Antes de 20 semanas pensar em nefrite (pré-eclâmpsia não existe antes de 20 semanas, salvo mola)\n- Sedimento ativo (hematúria dismórfica, cilindros), complemento baixo e anti-DNA alto → nefrite\n- Ácido úrico alto, plaquetopenia, transaminases altas e complemento normal → pré-eclâmpsia\n- As duas podem coexistir\n\nLúpus neonatal:\n- Anti-Ro/SSA materno atravessa a placenta\n- Bloqueio atrioventricular congênito (irreversível) → ecocardiograma fetal seriado entre 16 e 26 semanas\n- Rash e citopenias transitórios no RN\n- Hidroxicloroquina reduz o risco de bloqueio\n\nComplicações obstétricas:\n- Pré-eclâmpsia, restrição de crescimento, óbito fetal, prematuridade\n- Acompanhar com USG seriada e Doppler\n\nO que mais cai na UERJ:\n- Gestante lúpica com HAS + proteinúria antes de 20 semanas → nefrite, tratar com corticoide (não MgSO₄).\n- Hidroxicloroquina e azatioprina NÃO devem ser suspensas na gestação.\n- Anti-Ro → bloqueio cardíaco congênito.\n- LES indica AAS profilático.",
       "ctxvisual": {
         "tipo": "svg",
@@ -44069,7 +44069,7 @@
       "macete": "Colestase = \"Coça pelos ácidos\".",
       "pegadinha": "Fosfatase alcalina sobe normalmente na gestação (placenta) — não serve para diagnóstico.",
       "fonte": "RCOG Green-top Guideline 43 — Intrahepatic Cholestasis of Pregnancy (2022); SMFM Consult Series #53 (2021); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Colestase intra-hepática da gravidez = prurido no 3º trimestre com ácidos biliares elevados, sem outra causa, que some após o parto.**\n\nO que é:\n- Doença hepática mais comum e específica da gestação\n- 2ª causa de icterícia na gravidez (atrás das hepatites virais)\n- Fatores → predisposição genética (transportadores biliares), estrogênio e progesterona altos, gemelar, história familiar\n- Recorre em 45–90% das gestações seguintes\n\nClínica:\n- Prurido sem lesão de pele, pior à noite, começa em palmas e plantas e generaliza\n- Surge no fim do 2º ou no 3º trimestre\n- Icterícia leve em poucas (10–15%), após o prurido\n- Escoriações apenas por coçadura\n\nDiagnóstico:\n- **Ácidos biliares séricos ≥ 10 µmol/L** → exame mais característico\n- Transaminases podem subir; fosfatase alcalina alta tem pouco valor (placentária)\n- Bilirrubina direta pode subir\n- Excluir hepatites virais, colelitíase (USG), pré-eclâmpsia/HELLP e esteatose aguda\n\nGravidade (risco fetal):\n- Risco fetal acompanha o nível de ácidos biliares\n- ≥ 100 µmol/L → risco de óbito fetal súbito bem maior\n- Feto → prematuridade (espontânea e iatrogênica), mecônio, sofrimento e óbito súbito\n- Mãe → prognóstico bom; deficiência de vitamina K se colestase prolongada\n\nTratamento:\n- **Ácido ursodesoxicólico** (10–15 mg/kg/dia) → alivia prurido e melhora exames\n- Anti-histamínico e emolientes como sintomáticos\n- Vitamina K se TAP alargado\n- Vigilância fetal (CTG/perfil) não prevê o óbito súbito\n\nMomento do parto (pelo pico de ácidos biliares):\n- < 100 µmol/L → parto entre 36 e 39 semanas conforme o nível (RCOG 2022: 40–99 → 38–39 semanas)\n- ≥ 100 µmol/L → parto com 35–36 semanas\n\nPós-parto:\n- Prurido some em dias; exames normalizam em semanas\n- Persistência → investigar doença hepática crônica (colangite biliar primária)\n- Evitar anticoncepcional com estrogênio (pode recorrer)\n\nO que mais cai na UERJ:\n- Prurido palmoplantar noturno no 3º trimestre sem lesão de pele = colestase.\n- Exame-chave → ácidos biliares.\n- Risco é FETAL (óbito súbito); mãe evolui bem.\n- Tratamento → ácido ursodesoxicólico; antecipar o parto se ácidos biliares altos.",
       "ctxvisual": {
         "tipo": "svg",
@@ -44211,7 +44211,7 @@
       "macete": "\"Beta dá Tempo\" à mitral estreita.",
       "pegadinha": "Atenolol é evitado (associado a restrição de crescimento fetal).",
       "fonte": "ESC Guidelines for the management of cardiovascular diseases during pregnancy (2018); SBC — Posicionamento sobre Gravidez e Planejamento Familiar na Mulher Portadora de Cardiopatia (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Cardiopatia na gestação = principal causa não obstétrica de morte materna; a sobrecarga de volume da gravidez descompensa lesões obstrutivas como a estenose mitral.**\n\nAdaptações cardiovasculares:\n- Volume plasmático ↑ 40–50% e débito cardíaco ↑ 30–50% (pico entre 28 e 34 semanas)\n- Frequência cardíaca ↑ 10–20 bpm\n- Resistência vascular sistêmica ↓ → PA cai no 2º trimestre\n- Trabalho de parto → cada contração devolve 300–500 mL à circulação\n- Pós-parto imediato → \"autotransfusão\" (útero contraído + reabsorção de edema + fim da compressão da cava) → maior pico de pré-carga\n\nMomentos de maior risco:\n- 28–34 semanas (pico de volemia)\n- Trabalho de parto e período expulsivo\n- Puerpério imediato (primeiras 24–72 h) → onde ocorre a maioria das descompensações e mortes\n\nEstenose mitral (a mais cobrada):\n- Causa principal no Brasil → febre reumática\n- Gestação ↑ FC (menos tempo de diástole para encher o VE) e ↑ volume → ↑ pressão no átrio esquerdo → congestão e edema pulmonar\n- Risco de fibrilação atrial e tromboembolismo\n- Sopro diastólico em ruflar no foco mitral\n\nTratamento da estenose mitral na gestação:\n- **Betabloqueador** (metoprolol, propranolol) → aumenta o tempo de diástole\n- Furosemida se congestão; restrição de sal\n- Anticoagular se FA ou trombo atrial\n- Refratária com área < 1,5 cm² → valvoplastia mitral por balão (após 20 semanas, se possível)\n\nClassificação de risco (mWHO, ESC 2018):\n- **I** → lesões simples corrigidas, sem risco aumentado\n- **II–III** → risco moderado; acompanhamento em centro de referência\n- **IV** → gestação contraindicada: hipertensão pulmonar, FE < 30%, estenose mitral grave, estenose aórtica grave sintomática, Marfan com aorta > 45 mm, miocardiopatia periparto prévia com disfunção residual\n\nVia de parto:\n- Preferência → parto vaginal com analgesia peridural precoce\n- Abreviar período expulsivo (fórceps/vácuo) para reduzir esforço\n- Cesárea → indicação obstétrica (exceções: aorta dilatada, anticoagulação plena em curso, IC grave)\n- Evitar sobrecarga hídrica; ocitocina em infusão lenta\n- Profilaxia de endocardite não é rotina no parto\n\nO que mais cai na UERJ:\n- Edema agudo de pulmão no pós-parto imediato em estenose mitral → aumento do débito cardíaco/retorno venoso (autotransfusão).\n- Puerpério é a fase de maior risco de descompensação.\n- Betabloqueador é a base do tratamento da estenose mitral na gestação.\n- Hipertensão pulmonar contraindica a gestação.",
       "ctxvisual": {
         "tipo": "svg",
@@ -44250,7 +44250,7 @@
       "macete": "O bebê saiu, o sangue voltou: o coração recebe tudo de uma vez.",
       "pegadinha": "Não é no pico de 28–34 semanas: o maior risco é logo após o parto.",
       "fonte": "ESC Guidelines for the management of cardiovascular diseases during pregnancy (2018); SBC — Posicionamento sobre Gravidez e Planejamento Familiar na Mulher Portadora de Cardiopatia (2020); Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
-      "prio": "alta",
+      "prio": "media",
       "contexto": "**Cardiopatia na gestação = principal causa não obstétrica de morte materna; a sobrecarga de volume da gravidez descompensa lesões obstrutivas como a estenose mitral.**\n\nAdaptações cardiovasculares:\n- Volume plasmático ↑ 40–50% e débito cardíaco ↑ 30–50% (pico entre 28 e 34 semanas)\n- Frequência cardíaca ↑ 10–20 bpm\n- Resistência vascular sistêmica ↓ → PA cai no 2º trimestre\n- Trabalho de parto → cada contração devolve 300–500 mL à circulação\n- Pós-parto imediato → \"autotransfusão\" (útero contraído + reabsorção de edema + fim da compressão da cava) → maior pico de pré-carga\n\nMomentos de maior risco:\n- 28–34 semanas (pico de volemia)\n- Trabalho de parto e período expulsivo\n- Puerpério imediato (primeiras 24–72 h) → onde ocorre a maioria das descompensações e mortes\n\nEstenose mitral (a mais cobrada):\n- Causa principal no Brasil → febre reumática\n- Gestação ↑ FC (menos tempo de diástole para encher o VE) e ↑ volume → ↑ pressão no átrio esquerdo → congestão e edema pulmonar\n- Risco de fibrilação atrial e tromboembolismo\n- Sopro diastólico em ruflar no foco mitral\n\nTratamento da estenose mitral na gestação:\n- **Betabloqueador** (metoprolol, propranolol) → aumenta o tempo de diástole\n- Furosemida se congestão; restrição de sal\n- Anticoagular se FA ou trombo atrial\n- Refratária com área < 1,5 cm² → valvoplastia mitral por balão (após 20 semanas, se possível)\n\nClassificação de risco (mWHO, ESC 2018):\n- **I** → lesões simples corrigidas, sem risco aumentado\n- **II–III** → risco moderado; acompanhamento em centro de referência\n- **IV** → gestação contraindicada: hipertensão pulmonar, FE < 30%, estenose mitral grave, estenose aórtica grave sintomática, Marfan com aorta > 45 mm, miocardiopatia periparto prévia com disfunção residual\n\nVia de parto:\n- Preferência → parto vaginal com analgesia peridural precoce\n- Abreviar período expulsivo (fórceps/vácuo) para reduzir esforço\n- Cesárea → indicação obstétrica (exceções: aorta dilatada, anticoagulação plena em curso, IC grave)\n- Evitar sobrecarga hídrica; ocitocina em infusão lenta\n- Profilaxia de endocardite não é rotina no parto\n\nO que mais cai na UERJ:\n- Edema agudo de pulmão no pós-parto imediato em estenose mitral → aumento do débito cardíaco/retorno venoso (autotransfusão).\n- Puerpério é a fase de maior risco de descompensação.\n- Betabloqueador é a base do tratamento da estenose mitral na gestação.\n- Hipertensão pulmonar contraindica a gestação.",
       "ctxvisual": {
         "tipo": "svg",
@@ -44683,7 +44683,7 @@
         "svg": "<svg viewBox=\"0 0 340 175\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><text x=\"170\" y=\"13\" font-size=\"10\" font-weight=\"700\" fill=\"var(--wine)\" text-anchor=\"middle\">Posterior (palato mole, úvula, pilares) → HERPANGINA</text><ellipse cx=\"170\" cy=\"92\" rx=\"125\" ry=\"66\" fill=\"var(--rose-soft)\" stroke=\"var(--wine)\" stroke-width=\"2\"/><ellipse cx=\"170\" cy=\"88\" rx=\"78\" ry=\"44\" fill=\"var(--card)\" stroke=\"var(--line)\"/><path d=\"M160 46 Q170 84 180 46\" fill=\"var(--rose)\" stroke=\"var(--wine)\"/><ellipse cx=\"112\" cy=\"92\" rx=\"11\" ry=\"24\" fill=\"var(--rose)\"/><ellipse cx=\"228\" cy=\"92\" rx=\"11\" ry=\"24\" fill=\"var(--rose)\"/><circle cx=\"148\" cy=\"58\" r=\"4\" fill=\"var(--wine)\"/><circle cx=\"194\" cy=\"60\" r=\"4\" fill=\"var(--wine)\"/><circle cx=\"171\" cy=\"88\" r=\"4\" fill=\"var(--wine)\"/><circle cx=\"118\" cy=\"76\" r=\"4\" fill=\"var(--wine)\"/><circle cx=\"224\" cy=\"108\" r=\"4\" fill=\"var(--wine)\"/><circle cx=\"70\" cy=\"70\" r=\"4.5\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><circle cx=\"78\" cy=\"125\" r=\"4.5\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><circle cx=\"268\" cy=\"72\" r=\"4.5\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><circle cx=\"262\" cy=\"124\" r=\"4.5\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"150\" r=\"4.5\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"170\" y=\"170\" font-size=\"10\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">Anterior (gengiva, lábios, língua) → HSV-1</text></svg>"
       },
       "fonte": "Nelson Textbook of Pediatrics, 21ª ed. (2020); SBP — Tratado de Pediatria, 5ª ed. (2022); AAP Red Book (2024–2027)",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Febre + faringite + conjuntivite + linfonodo pré-auricular: qual o agente?",
       "resposta": "adenovírus",
       "aceitas": [
@@ -44858,7 +44858,7 @@
         "legenda": "APLV: o tempo entre o leite e o sintoma separa as formas."
       },
       "fonte": "Consenso Brasileiro sobre Alergia Alimentar 2018 (SBP/ASBAI); Consenso Internacional de FPIES (2017); Nelson Textbook of Pediatrics, 21ª ed. (2020)",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Na intolerância à lactose, como fica o pH das fezes?",
       "resposta": "ácido",
       "aceitas": [
@@ -45009,7 +45009,7 @@
         "svg": "<svg viewBox=\"0 0 340 165\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"30\" y=\"62\" width=\"40\" height=\"78\" rx=\"4\" fill=\"var(--wine)\"/><text x=\"50\" y=\"104\" font-size=\"11\" font-weight=\"700\" fill=\"var(--card)\" text-anchor=\"middle\">65%</text><text x=\"50\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">RN policitêmico</text><rect x=\"110\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"110\" y=\"74\" width=\"40\" height=\"66\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"130\" y=\"110\" font-size=\"11\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">55%</text><text x=\"130\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">alvo pós-troca</text><path d=\"M76 80 L104 80\" stroke=\"var(--mute)\" stroke-width=\"2\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L6 3 L0 6z\" fill=\"var(--mute)\"/></marker></defs><text x=\"170\" y=\"36\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Ht ≥ 65% → hiperviscosidade</text><text x=\"170\" y=\"56\" font-size=\"10\" fill=\"var(--ink)\">↓ perfusão dos tecidos:</text><text x=\"170\" y=\"73\" font-size=\"10\" fill=\"var(--ink)\">pletora, desconforto resp.</text><text x=\"170\" y=\"90\" font-size=\"10\" fill=\"var(--ink)\">hipoglicemia, icterícia</text><text x=\"170\" y=\"107\" font-size=\"10\" fill=\"var(--ink)\">convulsão, ECN, trombose</text><text x=\"170\" y=\"132\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Sintomático → troca</text><text x=\"170\" y=\"147\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">parcial com SF 0,9%</text></svg>"
       },
       "fonte": "Cloherty and Stark's Manual of Neonatal Care, 8ª ed. (2017); Ministério da Saúde — Atenção à Saúde do Recém-Nascido, 2ª ed. (2014)",
-      "prio": "alta",
+      "prio": "media",
       "frente": "RN a termo, AIG, nascido em casa com clampeamento tardio do cordão, chega com 24 h de vida com pletora, palmas e plantas eritematosas, icterícia e glicemia de 35 mg/dL. Ht capilar 72%, confirmado em amostra venosa (70%). Após correção da glicemia, persiste letárgico. A conduta indicada é:",
       "opcoes": [
         "Fototerapia isolada e reavaliação do Ht em 24 h",
@@ -45042,7 +45042,7 @@
         "svg": "<svg viewBox=\"0 0 340 165\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"30\" y=\"62\" width=\"40\" height=\"78\" rx=\"4\" fill=\"var(--wine)\"/><text x=\"50\" y=\"104\" font-size=\"11\" font-weight=\"700\" fill=\"var(--card)\" text-anchor=\"middle\">65%</text><text x=\"50\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">RN policitêmico</text><rect x=\"110\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"110\" y=\"74\" width=\"40\" height=\"66\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"130\" y=\"110\" font-size=\"11\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">55%</text><text x=\"130\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">alvo pós-troca</text><path d=\"M76 80 L104 80\" stroke=\"var(--mute)\" stroke-width=\"2\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L6 3 L0 6z\" fill=\"var(--mute)\"/></marker></defs><text x=\"170\" y=\"36\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Ht ≥ 65% → hiperviscosidade</text><text x=\"170\" y=\"56\" font-size=\"10\" fill=\"var(--ink)\">↓ perfusão dos tecidos:</text><text x=\"170\" y=\"73\" font-size=\"10\" fill=\"var(--ink)\">pletora, desconforto resp.</text><text x=\"170\" y=\"90\" font-size=\"10\" fill=\"var(--ink)\">hipoglicemia, icterícia</text><text x=\"170\" y=\"107\" font-size=\"10\" fill=\"var(--ink)\">convulsão, ECN, trombose</text><text x=\"170\" y=\"132\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Sintomático → troca</text><text x=\"170\" y=\"147\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">parcial com SF 0,9%</text></svg>"
       },
       "fonte": "Cloherty and Stark's Manual of Neonatal Care, 8ª ed. (2017); Ministério da Saúde — Atenção à Saúde do Recém-Nascido, 2ª ed. (2014)",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Policitemia neonatal: definição e quando indicar a exsanguineotransfusão parcial?",
       "verso": "**Ht venoso ≥ 65% (Hb ≥ 22 g/dL)**\n**Sintomático → exsanguineotransfusão parcial com SF**\n\nFórmula do volume:\n- Volume = volemia (80–90 mL/kg × peso) × (Ht real − Ht desejado) ÷ Ht real.\n- Ht desejado → cerca de 55%.\n\nPor que soro fisiológico:\n- Tão eficaz quanto albumina ou plasma.\n- Sem risco de hemoderivado.",
       "visual": {
@@ -45074,7 +45074,7 @@
         "svg": "<svg viewBox=\"0 0 340 165\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"30\" y=\"62\" width=\"40\" height=\"78\" rx=\"4\" fill=\"var(--wine)\"/><text x=\"50\" y=\"104\" font-size=\"11\" font-weight=\"700\" fill=\"var(--card)\" text-anchor=\"middle\">65%</text><text x=\"50\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">RN policitêmico</text><rect x=\"110\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"110\" y=\"74\" width=\"40\" height=\"66\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"130\" y=\"110\" font-size=\"11\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">55%</text><text x=\"130\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">alvo pós-troca</text><path d=\"M76 80 L104 80\" stroke=\"var(--mute)\" stroke-width=\"2\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L6 3 L0 6z\" fill=\"var(--mute)\"/></marker></defs><text x=\"170\" y=\"36\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Ht ≥ 65% → hiperviscosidade</text><text x=\"170\" y=\"56\" font-size=\"10\" fill=\"var(--ink)\">↓ perfusão dos tecidos:</text><text x=\"170\" y=\"73\" font-size=\"10\" fill=\"var(--ink)\">pletora, desconforto resp.</text><text x=\"170\" y=\"90\" font-size=\"10\" fill=\"var(--ink)\">hipoglicemia, icterícia</text><text x=\"170\" y=\"107\" font-size=\"10\" fill=\"var(--ink)\">convulsão, ECN, trombose</text><text x=\"170\" y=\"132\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Sintomático → troca</text><text x=\"170\" y=\"147\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">parcial com SF 0,9%</text></svg>"
       },
       "fonte": "Cloherty and Stark's Manual of Neonatal Care, 8ª ed. (2017); Ministério da Saúde — Atenção à Saúde do Recém-Nascido, 2ª ed. (2014)",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual hematócrito venoso define policitemia neonatal?",
       "resposta": "65%",
       "aceitas": [
@@ -45112,7 +45112,7 @@
         "svg": "<svg viewBox=\"0 0 340 165\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Inter,system-ui,sans-serif\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"30\" y=\"62\" width=\"40\" height=\"78\" rx=\"4\" fill=\"var(--wine)\"/><text x=\"50\" y=\"104\" font-size=\"11\" font-weight=\"700\" fill=\"var(--card)\" text-anchor=\"middle\">65%</text><text x=\"50\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">RN policitêmico</text><rect x=\"110\" y=\"20\" width=\"40\" height=\"120\" rx=\"6\" fill=\"var(--rose-soft)\" stroke=\"var(--ink)\"/><rect x=\"110\" y=\"74\" width=\"40\" height=\"66\" rx=\"4\" fill=\"var(--rose)\"/><text x=\"130\" y=\"110\" font-size=\"11\" font-weight=\"700\" fill=\"var(--ink)\" text-anchor=\"middle\">55%</text><text x=\"130\" y=\"155\" font-size=\"9\" font-weight=\"600\" fill=\"var(--ink)\" text-anchor=\"middle\">alvo pós-troca</text><path d=\"M76 80 L104 80\" stroke=\"var(--mute)\" stroke-width=\"2\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L6 3 L0 6z\" fill=\"var(--mute)\"/></marker></defs><text x=\"170\" y=\"36\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Ht ≥ 65% → hiperviscosidade</text><text x=\"170\" y=\"56\" font-size=\"10\" fill=\"var(--ink)\">↓ perfusão dos tecidos:</text><text x=\"170\" y=\"73\" font-size=\"10\" fill=\"var(--ink)\">pletora, desconforto resp.</text><text x=\"170\" y=\"90\" font-size=\"10\" fill=\"var(--ink)\">hipoglicemia, icterícia</text><text x=\"170\" y=\"107\" font-size=\"10\" fill=\"var(--ink)\">convulsão, ECN, trombose</text><text x=\"170\" y=\"132\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">Sintomático → troca</text><text x=\"170\" y=\"147\" font-size=\"10.5\" font-weight=\"700\" fill=\"var(--wine)\">parcial com SF 0,9%</text></svg>"
       },
       "fonte": "Cloherty and Stark's Manual of Neonatal Care, 8ª ed. (2017); Ministério da Saúde — Atenção à Saúde do Recém-Nascido, 2ª ed. (2014)",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Com que líquido se faz a exsanguineotransfusão parcial na policitemia neonatal?",
       "resposta": "soro fisiológico",
       "aceitas": [
@@ -45220,7 +45220,7 @@
       "macete": "Marsh sobe como escada: 1 Linfócito, 2 Cripta, 3 Vilo (\"L-C-V\").",
       "pegadinha": "Linfocitose intraepitelial isolada (Marsh 1) não fecha celíaca: precisa de sorologia positiva e, de preferência, Marsh 2–3.",
       "uerj": "A UERJ cobra a sequência sorologia de triagem → confirmação por biópsia, e quando a biópsia pode ser dispensada.",
-      "prio": "media",
+      "prio": "baixa",
       "add": "2026-10-27"
     },
     {
@@ -45261,7 +45261,7 @@
       },
       "macete": "Marsh = \"Marcha\" da lesão: linfócito → cripta → vilo.",
       "pegadinha": "Marsh 1 isolado é inespecífico.",
-      "prio": "media",
+      "prio": "baixa",
       "add": "2026-10-27"
     },
     {
@@ -45405,7 +45405,7 @@
       },
       "macete": "\"IRT duas vezes, suor uma vez\": pezinho triagem, suor confirma.",
       "pegadinha": "Teste do pezinho positivo NÃO é diagnóstico; e triagem negativa não exclui FC se houver clínica.",
-      "prio": "media",
+      "prio": "baixa",
       "add": "2026-10-27"
     },
     {
@@ -45469,7 +45469,7 @@
         ]
       },
       "macete": "CFTR = \"Cloro Fica Travado no Receptor\".",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27",
       "pegadinha": "Herança autossômica recessiva: pais portadores são saudáveis (risco de 25% a cada gestação)."
     },
@@ -45505,7 +45505,7 @@
         ]
       },
       "macete": "\"Sessenta salgado\": ≥ 60 é FC.",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27",
       "pegadinha": "Valor de 30–59 mmol/L não exclui FC: repetir o teste e pesquisar mutações do CFTR."
     },
@@ -45604,7 +45604,7 @@
         ]
       },
       "macete": "Hipsarritmia = \"ritmo em hipérbole\": alto e bagunçado.",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27",
       "pegadinha": "Polipontas temporais não é o EEG da síndrome de West (distrator da UERJ 2024)."
     },
@@ -45644,7 +45644,7 @@
         }
       },
       "macete": "\"Tuberosa → TV\": Tuberosa Vigabatrina.",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27",
       "pegadinha": "Sem esclerose tuberosa, a 1ª linha é ACTH/corticoide, não vigabatrina."
     },
@@ -45738,7 +45738,7 @@
       "macete": "\"Olhos que dançam e olhos de guaxinim = Neuroblastoma\".",
       "pegadinha": "Olhos de guaxinim na criança sem trauma: pense em neuroblastoma, não em fratura de base de crânio.",
       "uerj": "UERJ: ponto cobrado = opsoclono-mioclono (síndrome de Kinsbourne).",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27"
     },
     {
@@ -45838,7 +45838,7 @@
         ]
       },
       "macete": "\"Olhos que dançam\" = neuroblastoma.",
-      "prio": "alta",
+      "prio": "media",
       "add": "2026-10-27",
       "pegadinha": "É síndrome autoimune: pode persistir mesmo após retirar o tumor."
     },
@@ -45871,7 +45871,7 @@
         ]
       },
       "macete": "Wilms mora no rim.",
-      "prio": "media",
+      "prio": "baixa",
       "add": "2026-10-27",
       "pegadinha": "Não biopsiar por agulha nem palpar repetidamente: risco de rotura e disseminação."
     },
@@ -46024,7 +46024,7 @@
         ]
       },
       "macete": "Rubéola \"atrás da orelha e da nuca\".",
-      "prio": "media",
+      "prio": "baixa",
       "add": "2026-10-27",
       "pegadinha": "Linfonodo retroauricular/occipital não é exclusivo, mas é a pista mais cobrada da rubéola."
     },
@@ -46213,7 +46213,7 @@
       "fonte": "MS — PCDT para Prevenção da Transmissão Vertical de HIV, Sífilis e Hepatites Virais (2022); SBP — Tratado de Pediatria (5ª ed., 2021); Nelson Textbook of Pediatrics (22ª ed.)",
       "id": "g-torch-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual penicilina é obrigatória no RN com neurossífilis congênita?",
       "resposta": "penicilina cristalina",
       "aceitas": [
@@ -46286,7 +46286,7 @@
       "fonte": "MS — PCDT para Prevenção da Transmissão Vertical de HIV, Sífilis e Hepatites Virais (2022); SBP — Tratado de Pediatria (5ª ed., 2021); Nelson Textbook of Pediatrics (22ª ed.)",
       "id": "g-torch-d3",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual a cardiopatia mais comum na síndrome da rubéola congênita?",
       "resposta": "persistência do canal arterial",
       "aceitas": [
@@ -46356,7 +46356,7 @@
       "fonte": "MS — PCDT para Prevenção da Transmissão Vertical de HIV, Sífilis e Hepatites Virais (2022); SBP — Tratado de Pediatria (5ª ed., 2021); Nelson Textbook of Pediatrics (22ª ed.)",
       "id": "g-torch-d5",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Onde ficam as calcificações intracranianas do CMV congênito?",
       "resposta": "periventriculares",
       "aceitas": [
@@ -46402,7 +46402,7 @@
       "fonte": "MS — PCDT para Prevenção da Transmissão Vertical de HIV, Sífilis e Hepatites Virais (2022); SBP — Tratado de Pediatria (5ª ed., 2021); Nelson Textbook of Pediatrics (22ª ed.)",
       "id": "g-torch-d6",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Como se chama a tríade coriorretinite + hidrocefalia + calcificações da toxoplasmose congênita?",
       "resposta": "tríade de Sabin",
       "aceitas": [
@@ -46511,7 +46511,7 @@
       "fonte": "Portaria GM/MS nº 3.005/2024 (altera a Portaria de Consolidação nº 5/2017); Portaria GM/MS nº 825/2016; MS — Nota Técnica nº 50/2026-CGADOM/DAHUD/SAES",
       "id": "g-ad-d1",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "Qual equipe é responsável pela modalidade AD1 de atenção domiciliar?",
       "resposta": "Atenção Primária",
       "aceitas": [
@@ -46559,7 +46559,7 @@
       "fonte": "Portaria GM/MS nº 3.005/2024 (altera a Portaria de Consolidação nº 5/2017); Portaria GM/MS nº 825/2016; MS — Nota Técnica nº 50/2026-CGADOM/DAHUD/SAES",
       "id": "g-ad-d2",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Qual a frequência mínima de cuidado na modalidade AD2?",
       "resposta": "semanal",
       "aceitas": [
@@ -46723,7 +46723,7 @@
       "fonte": "Medronho — Epidemiologia (2ª ed.); Fletcher — Epidemiologia Clínica (5ª ed.)",
       "id": "g-nnt-d2",
       "tipo": "digitar",
-      "prio": "alta",
+      "prio": "media",
       "frente": "O NNT calculado deu 16,2: qual o valor a informar?",
       "resposta": "17",
       "aceitas": [
@@ -46871,7 +46871,7 @@
       "fonte": "MS — Cadernos de Atenção Primária nº 29: Rastreamento (2010); Wilson & Jungner — Principles and practice of screening for disease (OMS, 1968)",
       "id": "g-rast-d1",
       "tipo": "digitar",
-      "prio": "media",
+      "prio": "baixa",
       "frente": "Quem propôs os critérios clássicos de rastreamento da OMS (1968)?",
       "resposta": "Wilson e Jungner",
       "aceitas": [

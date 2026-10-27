@@ -785,7 +785,7 @@ const CMP=[[/≥|>=|=>|\bmaior ou igual( a| que)?\b|\bpelo menos\b|\bno minimo\b
 const STOP=new Set('de da do das dos a o as os e em na no nas nos com por para um uma ou the of'.split(' '));
 const ROM={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6'};
 function normR(t){
-  let x=String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  let x=String(t||'').toLowerCase().replace(/λ/g,' lambda ').replace(/κ/g,' kappa ').replace(/α/g,' alfa ').replace(/β/g,' beta ').replace(/γ/g,' gama ').normalize('NFD').replace(/[̀-ͯ]/g,'');
   x=x.replace(/(\d{1,3})\.(\d{3})(?!\d)/g,'$1$2').replace(/(\d)[,.](\d)/g,'$1.$2');
   CMP.forEach(([r,k])=>{ x=x.replace(r,k.toLowerCase()==' maior '?' MAIOR ':k); });
   x=x.replace(/[^a-zA-Z0-9%+.]+/g,' ').replace(/(\d)([a-z])/g,'$1 $2').replace(/([a-z])(\d)/g,'$1 $2').replace(/\bhoras?\b/g,'h').replace(/\bminutos?\b/g,'min').replace(/\bml\b/g,'ml');
@@ -795,18 +795,32 @@ function normR(t){
 function levR(a,b){ const m=a.length,n=b.length; if(!m||!n) return 0; let p=[...Array(n+1).keys()];
   for(let i=1;i<=m;i++){ const q=[i]; for(let j=1;j<=n;j++) q[j]=Math.min(p[j]+1,q[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=q; } return 1-p[n]/Math.max(m,n); }
 const ehNum=w=>/^\d/.test(w);
-const pareceP=(w,y)=>w===y||(!ehNum(w)&&!ehNum(y)&&w.length>=4&&y.length>=4&&levR(w,y)>=(Math.max(w.length,y.length)>=7?.7:.75));
+/* palavras "de categoria": podem faltar (ou sobrar) — "papilífero" vale por "carcinoma papilífero", "Horner" por "síndrome de Horner" */
+const GEN=new Set('carcinoma carcinomas adenocarcinoma cancer neoplasia tumor tumores sindrome sindromes doenca doencas virus bacteria deficiencia teste exame sinal sinais classificacao criterio criterios escala escore tipo grau estadio droga drogas medicamento farmaco tratamento terapia cirurgia procedimento celula celulas infeccao anticorpo anticorpos hormonio padrao reflexo manobra metodo'.split(' '));
+GEN.add('acido');
+/* unidades podem faltar ("60" vale por "≥ 60 mmol/L"), mas unidade trocada ("21 semanas" por "21 dias") é erro */
+const UNI=new Set('mmol l mg dl ml meq g kg mcg ug h min dia dias semana semanas mes meses ano anos cm mm mmhg ui u vezes x'.split(' '));
+/* pares que diferem por pouca letra mas são coisas opostas: nunca valem como erro de digitação */
+const OPOSTOS=[['hiper','hipo'],['nefrot','nefrit'],['bradi','taqui'],['micro','macro'],['inter','intra'],['hipo','hiper'],['endo','exo'],['ante','retro'],['pre','pos'],['anti','pro']];
+const PARECIDOS=[['prednisolona','prednisona'],['metilprednisolona','prednisolona'],['hidroxicloroquina','cloroquina']];
+const oposto=(w,y)=>PARECIDOS.some(([p,q])=>w===p&&y===q||w===q&&y===p)||OPOSTOS.some(([p,q])=>w.startsWith(p)&&y.startsWith(q)||w.startsWith(q)&&y.startsWith(p));
+const pareceP=(w,y)=>w===y||(!ehNum(w)&&!ehNum(y)&&!oposto(w,y)&&w.length>=4&&y.length>=4&&(w.startsWith(y)||y.startsWith(w)&&w.length>=5&&w.length>=y.length*.75||levR(w,y)>=(Math.max(w.length,y.length)>=7?.65:.7)));
 function bateR(u,a){
-  if(!u||!a) return false; if(u===a||(u+' ').startsWith(a+' ')) return true;
+  if(!u||!a) return false; if(u===a||(u+' ').startsWith(a+' ')||u.replace(/ /g,'')===a.replace(/ /g,'')) return true;   // "beta bloqueador" = "betabloqueador"
   const U=u.split(' '), A=a.split(' '), cmp=L=>L.filter(w=>w==='MAIOR'||w==='MENOR');
   const cu=cmp(U), ca=cmp(A); if(cu.length&&ca.length&&cu[0]!==ca[0]) return false;      // "maior" × "menor" = erro
   const Uw=U.filter(w=>w!=='MAIOR'&&w!=='MENOR'), Aw=A.filter(w=>w!=='MAIOR'&&w!=='MENOR');
   const nU=Uw.filter(ehNum).sort().join(','), nA=Aw.filter(ehNum).sort().join(','); if(nU!==nA) return false;
-  const pal=Aw.filter(w=>!ehNum(w)), pu=Uw.filter(w=>!ehNum(w));
+  let pal=Aw.filter(w=>!ehNum(w)), pu=Uw.filter(w=>!ehNum(w));
+  if(nA){ const ua=pal.filter(w=>UNI.has(w)); if(pu.some(w=>UNI.has(w)&&ua.length&&!ua.includes(w))) return false;   // unidade trocada
+    pal=pal.filter(w=>!UNI.has(w)); pu=pu.filter(w=>!UNI.has(w)); }
+  const esp=pal.filter(w=>!GEN.has(w));
+  if(esp.length&&esp.length<pal.length){ pal=esp; pu=pu.filter(w=>!GEN.has(w)); }          // tira as palavras de categoria dos dois lados
   if(!pal.length) return pu.length<=3;                                                     // resposta só numérica: o número decide
   if(pal.length===1&&pu.length>1&&!nA) return false;                                       // 1 palavra-chave: não aceita "potencialmente contaminada" por "contaminada"
-  const usada=new Set(); const ok=pal.every(w=>{ const k=pu.findIndex((x,i)=>!usada.has(i)&&pareceP(x,w)); if(k<0) return false; usada.add(k); return true; });
-  return ok&&pu.length-pal.length<=3;
+  const usada=new Set(); let falta=0; pal.forEach(w=>{ const k=pu.findIndex((x,i)=>!usada.has(i)&&pareceP(x,w)); if(k<0) falta++; else usada.add(k); });
+  const tol=pal.length>=3?1:0;                                                             // resposta com 3+ palavras-chave: pode faltar 1
+  return falta<=tol&&usada.size>=1&&pu.length-usada.size<=3;
 }
 function conferirDig(c,v){ const u=normR(v); if(!u) return false;
   const sinal=t=>(t.match(/MAIOR|MENOR/)||[''])[0], su=sinal(u), sr=sinal(normR(c.resposta)); if(su&&sr&&su!==sr) return false;   // sinal trocado = erro, mesmo que o número bata
@@ -2585,15 +2599,17 @@ function abrirFoto(src){
 function fecharFoto(){ const o=$('#lbx'); if(o){ o.remove(); if(!SS) document.documentElement.style.overflow=''; } }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#lbx')){ e.preventDefault(); e.stopImmediatePropagation(); fecharFoto(); } },true);
 
-/* M = marca-texto: liga/desliga (última cor); com texto selecionado, marca na hora. Shift+M = troca a cor */
+/* M = marca-texto: liga/desliga (última cor); com texto selecionado, marca na hora. Shift+; (:) = troca a cor */
 const MT_NOME={y:'amarelo',g:'verde',p:'rosa'};
 let MT_U='y'; try{MT_U=localStorage.getItem(LS+'.mtu')||MT||'y'}catch(e){}
 function mtUlt(c){ MT_U=c; try{localStorage.setItem(LS+'.mtu',c)}catch(e){} }
 document.addEventListener('keydown',e=>{
-  if(e.code!=='KeyM'||e.ctrlKey||e.metaKey||e.altKey||e.repeat) return;
+  const troca=e.shiftKey&&(e.key===':'||e.key===';');   // Shift + tecla do ponto e vírgula (ABNT2 e americano)
+  if((e.code!=='KeyM'&&!troca)||e.ctrlKey||e.metaKey||e.altKey||e.repeat) return;
+  if(e.code==='KeyM'&&e.shiftKey) return;
   const a=document.activeElement; if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)) return;
   if(!document.querySelector('.hlz')) return; e.preventDefault();
-  if(e.shiftKey){ const o=['y','g','p'], c=o[(o.indexOf(MT_U)+1)%3]; mtUlt(c); if(MT){ MT=c; try{localStorage.setItem(LS+'.mt',MT)}catch(er){} } fabMT(); toast('Cor do marca-texto: '+MT_NOME[c]); return; }
+  if(troca){ const o=['y','g','p'], c=o[(o.indexOf(MT_U)+1)%3]; mtUlt(c); if(MT){ MT=c; try{localStorage.setItem(LS+'.mt',MT)}catch(er){} } fabMT(); toast('Cor do marca-texto: '+MT_NOME[c]); return; }
   const sel=getSelection();
   if(sel.rangeCount&&!sel.isCollapsed&&sel.toString().trim()){ const r=sel.getRangeAt(0), base=r.commonAncestorContainer.nodeType===1?r.commonAncestorContainer:r.commonAncestorContainer.parentNode;
     if(base.closest('.hlz')){ HLR=r.cloneRange(); marcarSelecao(MT||MT_U); esconderFerr(); return; } }
@@ -2601,7 +2617,7 @@ document.addEventListener('keydown',e=>{
 });
 /* ? = lista de atalhos */
 const ATALHOS=[['Revisão',[['Espaço','mostrar resposta / próximo'],['1  2  3','errei · quase · sabia'],['A B C D','alternativa do quiz'],['Z','card anterior'],['Esc','sair da rodada']]],
-  ['No card',[['*','favoritar'],['E','editar'],['T','anotação'],['N','novo card neste baralho'],['M','marca-texto (liga/desliga ou marca a seleção)'],['Shift+M','trocar cor do marca-texto']]],
+  ['No card',[['*','favoritar'],['E','editar'],['T','anotação'],['N','novo card neste baralho'],['M','marca-texto (liga/desliga ou marca a seleção)'],['Shift + ;','trocar cor do marca-texto']]],
   ['Por que errou?',[['1  2  3  4','não sabia · confundi · li errado · só seguir']]],
   ['Escrevendo',[['Shift+Enter','salvar'],['Ctrl+B · Ctrl+U','negrito · sublinhado'],['Ctrl + selecionar','vários trechos de uma vez']]]];
 function verAtalhos(){ folha(`<div class="serif" style="font-size:21px;margin-bottom:10px">Atalhos do teclado</div>${ATALHOS.map(([t,l])=>`<div class="atg"><div class="att">${t}</div>${l.map(([k,d])=>`<div class="atr"><span class="kbd">${esc(k)}</span><span>${esc(d)}</span></div>`).join('')}</div>`).join('')}<p class="mute small" style="margin-top:10px">Aperte <span class="kbd">?</span> para ver esta lista de novo.</p>`); }
