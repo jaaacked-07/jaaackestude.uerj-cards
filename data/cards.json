@@ -62458,7 +62458,7 @@
       "id": "b-hh-01",
       "tipo": "flash",
       "prio": "alta",
-      "frente": "Cirurgia antirrefluxo: quem tem o melhor e quem tem o pior resultado?",
+      "frente": "Cirurgia antirrefluxo: quais pacientes têm o melhor e quem tem o pior resultado?",
       "verso": "**Melhor → sintoma típico que respondeu ao IBP**\n**Pior → manifestação atípica (extraesofágica)**\n\nPreditores de bom resultado:\n- Sintoma típico (pirose e regurgitação).\n- Boa resposta prévia ao IBP.\n- pHmetria anormal (refluxo comprovado).\n\nPor que o atípico responde pior:\n- Tosse, rouquidão e asma têm muitas outras causas → o refluxo pode ser só coincidência.\n- O que não melhorou com IBP tende a não melhorar com a válvula.\n\nRegurgitação:\n- A cirurgia controla melhor que o IBP (é um problema mecânico, não ácido).",
       "visual": {
         "tipo": "fluxo",
@@ -69685,5 +69685,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793112735587
+  "rev": 1793112786310
 }
