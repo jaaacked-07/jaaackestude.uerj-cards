@@ -1586,7 +1586,7 @@
         }
       ],
       "prio": "media",
-      "minha": "@@nota|0|Passar de 4 cm (IB3): a cirurgia deixa de ser a primeira opç\n\nOBS:\nÉ aquele mesmo CA do \"paramétrio\" , etc.\nMas o estagio I (restrito ao colo) é subdividido - isso q ta perguntando"
+      "minha": "@@nota|0|Passar de 4 cm (IB3): a cirurgia deixa de ser a primeira opç\n\nOBS:\nÉ aquele mesmo CA do \"paramétrio\" , etc.\nMas o estagio I (restrito ao colo) é subdividido - isso q ta perguntando\n\n@@nota|0|IB → dividido pelo tamanho do tumor.\n![](data/img/minha-figo-colo-02-mvquhxbf.jpg)\n"
     },
     {
       "id": "figo-colo-03",
@@ -69690,5 +69690,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793115103067
+  "rev": 1793115215850
 }
