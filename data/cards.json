@@ -29152,7 +29152,8 @@
       ],
       "fonte": "FIGO 2018 (Int J Gynaecol Obstet)",
       "add": "2026-10-24",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "figo-colo-d3",
@@ -69688,5 +69689,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793114730497
+  "rev": 1793114829020
 }
