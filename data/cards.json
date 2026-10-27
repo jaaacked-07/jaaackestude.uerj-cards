@@ -44155,7 +44155,8 @@
       },
       "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
       "add": "2026-10-25",
-      "fav": true
+      "fav": true,
+      "minha": "@@nota|0|Janeway → mácula INDOLOR palmoplantar (vascular).\n**OOOSLER: **\n- tem DOOOR;\n- Vogal com vogal: {v}**O**{/v}sler e {v}**I**{/v}munologico\n\n**JANEWAY:**\n- Jacke -> não dói\n- Consoante com consoante: {v}**J**{/v}aneway e {v}**V**{/v}ascular"
     },
     {
       "id": "ei-q1",
@@ -69698,5 +69699,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793119439184
+  "rev": 1793119543550
 }
