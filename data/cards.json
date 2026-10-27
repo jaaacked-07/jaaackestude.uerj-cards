@@ -8387,7 +8387,8 @@
         "legenda": "Momento de iniciar a TARV conforme a infecção oportunista"
       },
       "fav": true,
-      "prio": "alta"
+      "prio": "alta",
+      "minha": "@@nota|0|Com rifampicina → DTG 50 mg 12/12 h.\n**RIFAMPICINA: é da TUBERCULOSE!**\n**Se tratar com 1ª linha de TB (que contém Rifampicina),{v} DEVE DOBRAR A DOSE DO DOLUTEGRAVIR (50mg 12/12H)**{/v}"
     },
     {
       "id": "hiv-03",
@@ -46967,5 +46968,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793071245360
+  "rev": 1793071324386
 }
