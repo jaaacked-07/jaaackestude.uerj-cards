@@ -53045,7 +53045,7 @@
       "fonte": "Harrison — Medicina Interna, 21ª ed. (Choque); Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (SBC 2018, atualização 2021); ESC 2019 — Embolia pulmonar aguda",
       "add": "2026-10-26",
       "fav": true,
-      "minha": "@@nota|0|PVC → enchimento do coração DIREITO\n**P{v}VC{/v} -> \"{v}pra você{/v}\" -> coração direito**\n**PCP ou POAP -> esquerdo**"
+      "minha": "@@nota|0|PVC → enchimento do coração DIREITO\n**P{v}VC{/v} -> \"{v}pra você{/v}\" -> coração direito**\n**PCP ou POAP -> esquerdo**\n\n@@nota|0|ChoqueDCRVSPOAPPVCHipovolêmico↓↑↓↓Cardiogênico (VE/IAM)↓↑↑↑ \nExplicação no final do contexto do tema!!\n"
     },
     {
       "area": "Clínica Médica",
@@ -69695,5 +69695,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793117246807
+  "rev": 1793118160773
 }
