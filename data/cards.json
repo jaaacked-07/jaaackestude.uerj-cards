@@ -32459,7 +32459,7 @@
       "area": "Pediatria",
       "tema": "Infectologia pediátrica",
       "sub": "Tuberculose na infância",
-      "frente": "Qual o escore do MS que fecha TB muito provável na criança?",
+      "frente": "Qual pontuação do escore do MS que fecha TB muito provável na criança?",
       "resposta": "40 pontos",
       "aceitas": [
         "40",
@@ -69692,5 +69692,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793115766568
+  "rev": 1793115813534
 }
