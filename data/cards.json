@@ -21696,7 +21696,6 @@
       },
       "add": "2026-10-24",
       "fav": true,
-      "minha": "@@nota|0|Ecocardiograma com derrame pericárdico (faixa escura ao redo\nSinal de Kussmaul: \nÉ o aumento paradoxal (ou a não queda) da pressão venosa jugular durante a inspiração. Normalmente, as veias do pescoço esvaziam na inspiração; neste sinal, elas se tornam mais turgidas. É comum na pericardite constritiva e na insuficiência ventricular direita crônica.\n\nKnock Pericárdico (ou Golpe Pericárdico): \nÉ um ruído cardíaco acessório de alta frequência que ocorre no início da diástole, logo após a segunda bulha (B2). Ele é causado pelo estiramento abrupto e interrupção do enchimento ventricular devido a um pericárdio rígido e espessado. É o achado clássico da pericardite constritiva.\n\nSinal de Broadbent: \nÉ a retração sistólica visível da parede póstero-lateral do tórax (próximo às costelas 11ª e 12ª na região dorsal). Essa retração ocorre porque as adesões pericárdicas puxam o diafragma a cada contração do coração. Também é um sinal clássico de pericardite constritiva crônica.",
       "prio": "alta"
     },
     {
@@ -69694,5 +69693,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793117014028
+  "rev": 1793117023741
 }
