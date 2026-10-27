@@ -32566,7 +32566,8 @@
       ],
       "fonte": "Doc. Científico SBP — Tuberculose na infância no Brasil: atualização (2026) / MS — Manual de Recomendações (2019) e Notas Informativas 2024",
       "add": "2026-10-24",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "tbi-inf-d3",
@@ -69692,5 +69693,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793115813534
+  "rev": 1793116619565
 }
