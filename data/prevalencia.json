@@ -565,6 +565,78 @@
     "Lei dos 60 dias e direitos do paciente com câncer": {
       "q": 0,
       "temas": "Lei 12.732/2012 e Lei 13.896/2019 (sem questão contada no Foco UERJ 2022–2026)"
+    },
+    "Tromboembolismo pulmonar (TEP)": {
+      "q": 1,
+      "temas": "TEP (Cirurgia > Trauma/ATLS > Tromboembolismo pulmonar)"
+    },
+    "Câncer de pulmão": {
+      "q": 2,
+      "temas": "Síndrome de Horner (Pancoast), TB x neoplasia pulmonar"
+    },
+    "Câncer Hematológico": {
+      "q": 1,
+      "temas": "Mieloma múltiplo"
+    },
+    "Lúpus eritematoso sistêmico": {
+      "q": 1,
+      "temas": "LES na gestação (Obstetrícia > Alto risco)"
+    },
+    "Esclerose sistêmica": {
+      "q": 1,
+      "temas": "Esclerose sistêmica"
+    },
+    "Pancreatite aguda": {
+      "q": 1,
+      "temas": "Necrose pancreática infectada"
+    },
+    "Câncer gástrico": {
+      "q": 1,
+      "temas": "Câncer gástrico (estadiamento)"
+    },
+    "Prolapso genital e POP-Q": {
+      "q": 1,
+      "temas": "Prolapso de cúpula vaginal"
+    },
+    "Lúpus eritematoso sistêmico na gestação": {
+      "q": 0,
+      "temas": "LES na gestação — reativação, nefrite lúpica × pré-eclâmpsia, drogas permitidas, lúpus neonatal"
+    },
+    "Colestase intra-hepática da gravidez": {
+      "q": 1,
+      "temas": "Colestase gravídica"
+    },
+    "Cardiopatia na gestação": {
+      "q": 1,
+      "temas": "Cardiopatia materna (estenose mitral)"
+    },
+    "Faringoamigdalites na infância": {
+      "q": 2,
+      "temas": "Herpangina; Resfriado comum/faringite viral"
+    },
+    "Policitemia neonatal": {
+      "q": 0,
+      "temas": "Policitemia neonatal (sem questão no Foco UERJ 2022–2026)"
+    },
+    "Fibrose Cística": {
+      "q": 1,
+      "temas": "Fibrose cística — azoospermia obstrutiva (sinusopatia + esteatorreia + infertilidade)"
+    },
+    "Síndrome de West (espasmos epilépticos infantis)": {
+      "q": 1,
+      "temas": "Síndrome de West — hipsarritmia e ACTH"
+    },
+    "Tumores abdominais — neuroblastoma × Wilms": {
+      "q": 1,
+      "temas": "Neuroblastoma — opsoclono-mioclono"
+    },
+    "Infecções congênitas (TORCH) e sífilis congênita": {
+      "q": 4,
+      "temas": "Sífilis congênita; Síndrome da rubéola congênita; TORCH; Toxoplasmose congênita"
+    },
+    "Atenção domiciliar — AD1, AD2, AD3 e Melhor em Casa": {
+      "q": 1,
+      "temas": "Critérios de atenção domiciliar"
     }
   }
 }

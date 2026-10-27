@@ -1,272 +1,5 @@
 {
-  "pendentes": [
-    {
-      "id": 1793046424579,
-      "d": "2026-10-26",
-      "t": "Nossa paciente apresenta um exame de imagem compatível com tromboembolia pulmonar. Qual deve ser a nossa conduta?\nLetra A: incorreta. Trombolíticos estão indicados nos casos de instabilidade\nhemodinâmica! Outras indicações incluem parada cardiorrespiratória em pacientes com TEP, comprometimento de 50% ou mais da vasculatura pulmonar na cintilografia\n(embolia maciça) e disfunção de VD no ECO (discutível). A droga de escolha é o rtPA e pode ser prescrita até 14 dias após o início dos sintomas. O problema é que nossa paciente realizou uma cirurgia recente de grande porte, o que contraindica a trombólisel Aliás, aproveitando para recordar, as principais contraindicações são: PA maior ou igual a 185 x 110 mmHg; glicemia < 50 ou\n› 400 mg/dl; coagulopatia (plaquetas < 100.000, INR e/ou PTTa elevados); hemorragia cerebral prévia em qualquer época); AVE isquêmico ou TCE grave nos últimos três meses; grande cirurgia ou hemorragia gastrointestinal recente (últimas\n2-3 semanas); estupor ou coma.\nLetra B: correta. A embolectomia fica indicada justamente para os pacientes com tromboembolia\nmaciça,\ninstáveis\nhemodinamicamente e que apresentam contraindicação\nrefratariedade ao\ntrombolitico!\nLetra\nCincorreta. As duas principais indicações de filtro de Veia Cava Inferior (VCI) são embolia pulmonar na presença de sangramento ativo (o que contraindica a anticoagulação)\ne trombose\nvenosa\nrecorrente a despeito de anticoagulação. Tal \nmedida não seria útil para uma paciente instável e crítica como a nossa.\nLetra D: incorreta. Como discutido, temos uma paciente crítica que precisa de uma intervenção mais invasiva do que apenas anticoagulação com heparina.\nResposta: letra B.\nAvaliar texto",
-      "imgs": [
-        "data/img/1793046424579-0.jpg"
-      ]
-    },
-    {
-      "id": 1793046561709,
-      "d": "2026-10-26",
-      "t": "A TB pleural é a forma mais comum de tuberculose extrapulmonar em adultos não portadores do HIV. O diagnóstico deve ser pesquisado pela toracocentese, que revela um líquido amarelo-citrino, turvo ou\nraramente serossanguinolento (< 10% dos casos). Quando aplicamos os critérios de Light, tipicamente encontramos um\nexsudato; basta a presença de um dos critérios abaixo:\n1. Relação\nproteína\ndo pleural/proteína sérica > 0,5;\nlíquido\n2. Relação LDH do líquido pleural/LDH\nsérica > 0,6;\n3. LDH no líquido pleural > 2/3 do limite superior do LDH sérico ou > 200.\nRepare que temos uma relação LDH do liquido pleural/LDH sérica de 0,68 e uma concentração sérica › 200, configurando um exsudato.\nQue outras características\npodemos esperar na TB pleural? A\ncelularidade\né alta (1.000-6.000\nleucócitos/mm?), com predomínio de\nLinfócitos (exceto nos primeiros 15 dias de instalação, quando os polimorfonucleares sobressaem). Outras características do\nderrame pleural da TB: glicose baixa (média de 40-80 mg/dl, mas raramente < 20 mg/dl); pH normal (7,30-7,40); ausência de eosinófilos; e < 5% de células mesoteliais (frequentemente encontradas em um\nderrame neoplásico). Veja que está tudo\n\"batendo\" com a descrição no enunciado!"
-    },
-    {
-      "id": 1793046637963,
-      "d": "2026-10-26",
-      "t": "Sindrome de Pancoast e Sindrome de Claude-Bernard-Horner"
-    },
-    {
-      "id": 1793046840830,
-      "d": "2026-10-26",
-      "t": "O primeiro passo para responder a essa questão é fazer o diagnóstico correto: trata-se de um AVE isquêmico ou ataque isquêmico transitório? Durante muito tempo, o AIT foi definido pela presença de deficit neurológico reversível em menos de 24h (a maioria, na prática, dura menos de 15min). Contudo, esta definição sempre foi criticada devido ao conceito de que pode haver infarto cerebral mesmo em isquemias breves (< 1h). Assim, teríamos muitos AVE isquêmicos com pouca ou nenhuma sequela clínica que estariam sendo diagnosticados como AIT a partir dos antigos critérios clínicos — estima-se que 1/3 dos AIT diagnosticados pelo critério antigo (deficit neurológico reversível em < 24h) evoluíam com infarto cerebral, ou seja, dano irreversível e não transitório. Desde então, nas diretrizes de AIT da AHA/ASA, a ausência de infarto cerebral, e não mais a duração do deficit neurológico, passou a ser a definição aceita para caracterizar um AIT. Da mesma forma, o AVE isquêmico passou a ser definido pela presença de infarto cerebral.\nNo caso da questão, a descrição de uma\n\"pequena área de restrição à difusão em região parietal esquerda\" é compatível com infarto cerebral. Ou seja, embora o exame neurológico esteja normal, estamos diante de um AVE isquêmico!\nPróximo passo: definir se o paciente possui indicação de dupla antiagregação (aspirina +\nclopidogrel) ou não. Em geral, recomenda-se o uso de aspirina isolada nos casos de AIT de baixo risco (escore ABCD2 < 4) ou AVE isquêmico moderado-grave (NIHSS > 5). Por outro lado, a dupla antiagregação é indicada se: AIT de alto risco (escore ABCD2 > ou - 4),AVE isquêmico menor (NIHSS < ou = 5) ou\nAVE por aterosclerose intracraniana de\ngrandes arterias (oclusao 70-99%).\nUma dúvida que poderia surgir: e se o paciente já usar aspirina e clopidogrel e evoluir com AVE moderado-grave? Neste caso, manteremos a dupla antiagregação!\nVeja que, na questão, o paciente apresenta exame neurológico normal, reforçando seu escore de NIHSS < 5. Logo, é um candidato à dupla antiagregação com aspirina\ne\nclopidogrel.",
-      "imgs": [
-        "data/img/1793046840830-0.jpg"
-      ]
-    },
-    {
-      "id": 1793047309465,
-      "d": "2026-10-26",
-      "t": "O enunciado descreve uma paciente com anemia hiperproliferativa - ou seja, a medula está tentando compensar a anemia com hiperprodução de reticulócitos. Como os reticulócitos são células maiores do que as hemácias maduras, o VCM pode ficar um pouco mais alto (exatamente como ilustrado na questão).\nOk, mas qual seria a etiologia do quadro?\nSempre que estivermos diante de uma anemia hiperproliferativa, temos duas possibilidades: (1) sangramento agudo ou (2) hemólise.\nDito isso, vamos analisar as alternativas:\nLetra A: correta. Na hemólise, além da reticulocitose, esperamos encontrar hiperbilirrubinemia indireta, LDH elevado e haptoglobina baixa.\nLetra B: incorreta. A haptoglobina deveria estar baixa, e não elevada.\nLetra C: incorreta. Essa alternativa misturou vários conceitos! Plurisegmentação de polimorfonucleares é uma característica da anemia megaloblástica, uma forma de anemia HIPOproliferativa. Por outro lado, o teste de Coombs direto positivo indica anemia hemolitica autoimune.\nLetra D: incorreta. As características deste item são compatíveis com anemia megaloblástica. Entretanto, como ressaltamos acima, trata-se de uma anemia hipoproliferativa, e não hiperproliferativa.\nResposta: letra A."
-    },
-    {
-      "id": 1793047401810,
-      "d": "2026-10-26",
-      "t": "O enunciado descreve um quadro típico de mieloma múltiplo! Trata-se de uma neoplasia de plasmócitos (células produtoras de anticorpos), que acarreta níveis elevados de imunoglobulinas circulantes — geralmente existe um pico monoclonal (componente M) na eletroforese de proteínas séricas. Como há um aumento na quantidade de gamaglobulinas (imunoglobulinas) e uma redução da albumina (pela inflamação sistêmica), podemos ter uma inversão no padrão albumina-globulina. Além disso, o quadro clínico é marcado pelo famoso acrônimo \"CARO\": Cálcio (hipercalcemia por destruição óssea); Anemia (por ocupação medular); Renal (insuficiência renal multifatorial); e Osso (lesões ósseas líticas).\nNo caso da questão, a paciente apresenta anemia, lombalgia (provavelmente por lesão óssea lítica), hipercalcemia PTH-independente e inversão no padrão albumina-globulina com albumina no limite inferior da normalidade.\nDito isso, vamos analisar as opções.\nLetra A: correta. Os principais exames de imagem utilizados para avaliação óssea do paciente com mieloma são TC e RM (mais sensível para lesões focais ósseas). Além disso, a glicosúria e aminoacidúria podem aparecer no cenário de disfunção do túbulo proximal. Entenda: as cadeias leves de imunoglubulinas são filtradas pelo glomérulo e, quando em excesso, lesam os túbulos renais — as cadeias leves do filtrado glomerular recebem o nome de \"proteínas de Bence-Jones\". Como as células tubulares proximais absorvem essas proteínas, pode haver uma disfunção tubular proximal conhecida como \"síndrome de Fanconi\": acidose tubular tipo lI (bicarbonatúria); aminoacidúria; glicosúria; hipofosfatemia (veja que a paciente da questão apresenta fósforo no limite inferior da normalidade); e hipouricemia. Para completar, a hipercalcemia que ocorre pela destruição óssea pode contribuir para a lesão renal, promovendo a deposição intratubular de cálcio ou aumentando a toxicidade das cadeias leves filtradas."
-    },
-    {
-      "id": 1793047996843,
-      "d": "2026-10-26",
-      "t": "A questão traz paciente de 80 anos com quadro sugestivo de insuficiência cardíaca.\n(IC) de fração de ejeção preservada (ICFEp - fração de ejeção ≥ 50%), caracterizada por dispneia progressivamente mais grave, edema de membros inferiores e aumento do pró-BNP.\nAlém disso, observe que há uma amplitude reduzida do QRS no eletrocardiograma (a onda R mede menos de um \"quadradão\") e há hipertrofia do septo. Com esses dados, devemos pensar num quadro de IC secundária a uma clássica doença infiltrativa: a amiloidose cardíaca (AC).\nA amiloidose sistêmica é uma doença causada pela deposição tecidual de agregados proteicos fibrilares e insolúveis em diferentes órgãos incluindo o coração, levando à disfunção orgânica. Mais de 30 tipos de proteínas amiloidogênicas são descritas, sendo que dois tipos são responsáveis por 95% dos casos de AC: a cadeia leve de imunoglobulinas (forma AL) e a transtirretina (forma ATTR). A forma ATTR é atualmente a forma mais comum.\nSegundo a Sociedade Brasileira de Cardiologia, há algumas pistas clínicas que nos devem fazer pensar no diagnóstico de AC em pacientes com manifestações de IC. São elas:\n• ICFEp, particularmente em homens;. idosos (acima de 65 anos)\n• Intolerância a iECA/BRA/INRA e/ou betabloqueadores\n• Bloqueio AV inexplicado com implante prévio de marca-passo\n• Síndrome do túnel do carpo bilateral\n• Estenose do canal vertebral\n• Ruptura do tendão do bíceps\n• Polineuropatia sensorial/motora não explicada (parestesia, dor neuropática, fraqueza)\n• Disfunção autonômica (hipotensão postural, diarreia pós-prandial alternando com constipação, disfunção erétil)\n• Púrpura periorbitária espontânea ou com traumatismo mínimo\n• Macroglossia\n• Opacidade vitrea e alterações pupilares\n• História familiar de miocardiopatia ou polineuropatia\n• Fenótipo infiltrativo ao ecocardiograma (septo interventricular ≥ 12 mm), hipertrofia biventricular, hiperrefringência do miocárdio, espessamento valvar, espessamento do septo interatrial\n• Espessamento concêntrico das paredes do VE com amplitude do QRS reduzida ou não aumentada na proporção do aumento da espessura das paredes do\nVE\n• Estenose aórtica em pacientes idosos (acima de 60 anos) com baixo fluxo/baixo gradiente Apresentação clínica de miocardiopatia hipertrófica iniciada tardiamente (acima de 60 anos)\n\nFrente à principal hipótese de AC, observe que o paciente já fez os exames iniciais recomendados, como eletrocardiograma e ecocardiograma. Nesse contexto, atualmente, o exame mais útil para estabelecer a confirmação diagnóstica é a ressonância magnética cardiaca com contraste. A ressonância magnética cardiovascular dispõe de técnicas que permitem avaliar de forma precisa as alterações teciduais miocárdicas que ocorrem na amiloidose cardíaca."
-    },
-    {
-      "id": 1793048155028,
-      "d": "2026-10-26",
-      "t": "quadro classico esclerose sistermica"
-    },
-    {
-      "id": 1793048314731,
-      "d": "2026-10-26",
-      "t": "(imagem)",
-      "imgs": [
-        "data/img/1793048314731-0.jpg"
-      ]
-    },
-    {
-      "id": 1793048519338,
-      "d": "2026-10-26",
-      "t": "Artrite reumatoide x lupus"
-    },
-    {
-      "id": 1793048641286,
-      "d": "2026-10-26",
-      "t": "Agora, o resultado do tratamento cirúrgico a nas manifestações atípicas da DRGE costuma ser menos satisfatório do que o resultado do tratamento cirúrgico nas manifestações típicas do refluxo. Geralmente, aqueles pacientes que apresentam resposta a terapia medicamentosa, apresentam melhores resultados após a cirurgia.\nPor fim, vale lembrar que os sintomas atípicos da DRGE são:\n• Esofágicas: \"dor torácica não cardíaca\"; globus (descrito comumente como \"nó na garganta\").\n• Pulmonares: tosse crônica; hemoptise; broncoespasmo; pneumonias de repetição; bronquiectasias. A DRGE é a causa de 20% dos casos de tosse crônica. O broncoespasmo pode ser desencadeado também pela irritação da mucosa esofágica, sem haver refluxo traqueobrônquico — o chamado reflexo laringo-esôfago-pulmonar.\n• Otorrinolaringológicas: rouquidão; pigarro; laringite crônica; sinusite crônica; otalgia.\n• Orais: desgaste do esmalte dentário; halitose; hipersalivação; aftas.\nJá os sintomas típicos da DRGE são:\n• Pirose: significa queimação retroesternal, sendo a queixa mais comum. Ocorre geralmente de 30 a 60 minutos após a alimentação, especialmente se a refeição for copiosa, rica em gordura, condimentada e ácida (cítricos). Situações que elevam a pressão intra-abdominal podem, também, exacerbar o sintoma. A ingestão de antiácidos ou até mesmo de água alivia a pirose na maioria dos casos. Não é incomum que pacientes ingiram constantemente pequenas quantidades de água para aliviar o refluxo. Com esse mesmo raciocínio, podemos observar indivíduos que mantêm os pulmões insuflados (quase em sua capacidade vital), para retificar o diafragma e aumentar o tônus do EEI.\n• Regurgitação: de conteúdo ácido para a boca, que pode vir misturado com pouca quantidade de alimento não digerido. Geralmente o paciente refere um \"gosto amargo na garganta\"."
-    },
-    {
-      "id": 1793048868658,
-      "d": "2026-10-26",
-      "t": "A questão apresenta uma mulher de 28 anos com uma pancreatite aguda grave biliar em tratamento há três semanas, clinicamente estável, febril, com uma tomografia evidenciando uma coleção peripancreatica com gás em seu interior e realce periférico ao contraste, compatível com uma necrose pancreática infectada.\nA presença de gás no interior de uma coleção peripancreática é um sinal tomográfico patognomônico de infecção da necrose pancreática. O protocolo step-up approach, recomendado pelas diretrizes da IAP e do American Pancreatic Association e validado pelos estudos PANTER e TENSION, preconiza uma abordagem escalonada: o primeiro passo é a drenagem percutânea ou endoscópica guiada por imagem para controle do foco infeccioso com mínima invasão; o segundo passo é a necrosectomia minimamente invasiva (videolaparoscopia retroperitoneal, necrosectomia endoscópica transgástrica), reservada para falha da drenagem; e o terceiro passo, a necrosectomia aberta por laparotomia, é reservado para falha das etapas anteriores. Em uma paciente hemodinamicamente estável com necrose encapsulada, a laparotomia imediata é contraindicada como primeira abordagem. A mudança isolada do esquema de antibióticos sem drenagem é insuficiente para a necrose infectada com gás intraluminal. A CPRE tem papel no tratamento da coledocolitíase residual, mas não no manejo direto da necrose infectada."
-    },
-    {
-      "id": 1793048808386,
-      "d": "2026-10-26",
-      "t": "TNM cancer gastrico"
-    },
-    {
-      "id": 1793048991402,
-      "d": "2026-10-26",
-      "t": "Cancer de ovario \nFenomeno \"omental cake\""
-    },
-    {
-      "id": 1793048996309,
-      "d": "2026-10-26",
-      "t": "Cancer que invade omento"
-    },
-    {
-      "id": 1793049064199,
-      "d": "2026-10-26",
-      "t": "Questão que aborda as complicações da tireoidectomia! Neste contexto, as mais comuns são a hipocalcemia (hipoparatireoidismo) e a rouquidão (lesão unilateral do nervo laríngeo recorrente). Por outro lado, o hematoma cervical é a mais temida e pode evoluir com insuficiência respiratória por asfixia! Apesar de muitos acreditarem que tudo é causado por uma compressão direta do hematoma sobre a traqueia, não é bem isso que acontece. Isso porque a traqueia é uma estrutura rígida e dificilmente deformável. O que ocorre é que, com o sangramento residual, acumula-se sangue na região cervical e, com isso, ocorre um aumento da pressão nessa região. O aumento da pressão na região cervical tem como consequência imediata a diminuição do Retorno Venoso (RV) de todo o sangue acumulado na região da cabeça e pescoço.\nPor sua vez, a diminuição do RV acaba levando ao edema de glote e vias aéreas superiores, que acaba levando à asfixia. A conduta imediata deve ser abertura da ferida para que o hematoma descomprima a traqueia, exatamente como descrito na letra\nA. De todo modo, o nosso paciente, após a descompressão inicial, deve ser submetidaoa uma nova exploração cirúrgica da região cervical para realizar a revisão da hemostasia."
-    },
-    {
-      "id": 1793049097587,
-      "d": "2026-10-26",
-      "t": "A profilaxia antibiótica em cirurgia tem como objetivo a redução do risco de infecção em sítio cirúrgico. Não é concebida para prevenir outras infecções pós-cirúrgicas como pneumonia ou de trato urinário. Considera-se que o momento principal da contaminação da ferida operatória é durante o ato operatório.\nAssim, deve haver um bom nível sérico e tecidual no momento da incisão que dure até o final do ato operatório. Por outro lado, a instituição muito precoce de antibiótico com finalidade profilática levará à seleção de flora microbiana do paciente contribuindo para a ineficácia do esquema antimicrobiano.\nHabitualmente, não se utiliza a profilaxia antimicrobiana nas cirurgias limpas em que o risco de infecção é baixo. A exceção é o seu uso em cirurgias limpas com colocação de prótese. A profilaxia é geralmente indicada para cirurgias potencialmente contaminadas ou contaminadas. No caso de cirurgias infectadas, faz-se o tratamento do processo infeccioso. Assim, os princípios básicos da profilaxia antibiótica em cirurgia são: a) utilizar sempre a via endovenosa; b) iniciar o esquema profilático durante a indução anestésica (em obstetrícia a primeira dose é dada após o clampeamento do cordão umbilical); c) manter as doses suplementares durante todo o ato operatório; d) suspender a profilaxia após o final do ato operatório ou, no máximo, com 24 horas de uso, especialmente quando houver uso de próteses.\nResposta: letra C"
-    },
-    {
-      "id": 1793049317733,
-      "d": "2026-10-26",
-      "t": "A alimentação enteral envolve a administração de nutrientes diretamente no trato gastrointestinal através de diferentes rotas, como sondas (nasogástrica, nasoentérica, Dobbhoff) ou ostomias digestivas (gastrostomia e jejunostomia), para pacientes com o Trato Gastrointestinal (TG) funcionante, mas que não queiram ou não possam se alimentar por via oral.\nImportante lembrar que a utilização de sondas deve ser preferida quando temos expectativa de ‹ 4 semanas de suporte nutricional. Caso contrário (expectativa > 4 semanas), devemos preferir as ostomias (gastrostomia ou jejunostomia).\nQuando um paciente está gravemente doente ou passa por várias cirurgias abdominais, o trato gastrointestinal pode ser afetado negativamente. A alimentação enteral fornece nutrientes diretamente ao intestino, estimulando a manutenção da mucosa intestinal, preservando a altura das vilosidades (estruturas responsáveis pela absorção de nutrientes), evitando a atrofia do tecido linfoide associado ao intestino e promovendo a produção adequada de imunoglobulina A, um anticorpo importante para a imunidade local no intestino. Essa abordagem ajuda a prevenir complicações decorrentes da atrofia e disfunção intestinal, garantindo uma melhor recuperação do paciente.\nResposta: letra B."
-    },
-    {
-      "id": 1793049403373,
-      "d": "2026-10-26",
-      "t": "Temos uma paciente de 72 anos com queixa de prurido vulvar e lesão unifocal hipocrômica de 2 cm em grande lábio esquerdo. Após realização de biópsia, foi constatada neoplasia intraepitelial vulvar (NIV) diferenciada.\nA NIV diferenciada tende a ser unifocal em pacientes idosas, em alguns casos, se desenvolve sobre um substrato de líquen escleroso. A lesão pode ser uma úlcera, pápula verrucosa ou placa hiperceratótica.\nPor outro lado, a NIV indiferenciada pode se apresentar como uma lesão levemente elevada, demarcada, uni ou multifocal, nas cores preta, branca, cinza, vermelha ou marrom, dependendo da raça, da idade e das características da pele da paciente.\nO tratamento tem os seguintes objetivos:\n- Controlar os sintomas e prevenir a progressão para o carcinoma invasor;\n- Empregar os métodos mais conservadores possíveis, considerando a idade da paciente, localização, extensão e multifocalidade das\nLesões.\n\nLetra D: correta. A exérese da lesão é o método de escolha em pacientes com NIV diferenciada e doença unifocal. Já em pacientes idosas com lesões extensas, recomenda-se a vulvectomia simples.\nImportante destacar que a exérese da lesão deve ser realizada com margem de segurança de pelo menos 1 cm."
-    },
-    {
-      "id": 1793049709974,
-      "d": "2026-10-26",
-      "t": "POP-Q"
-    },
-    {
-      "id": 1793049716517,
-      "d": "2026-10-26",
-      "t": "Prolapsos genitais e conduta"
-    },
-    {
-      "id": 1793049809926,
-      "d": "2026-10-26",
-      "t": "Letra A: correta. Diversos estudos sugerem a efetividade da administração de baixas doses de aspirina (60-150 mg ao dia) em diminuir a incidência dos distúrbios hipertensivos na gestação em pacientes de alto risco para desenvolvimento da doença. São consideradas pacientes de alto risco: história prévia de pré-eclâmpsia (especialmente se acompanhada de desfecho adverso); gestação multifetal; hipertensão crônica; diabetes tipo 1 e 2; doença renal; e doença autoimune (lúpus e síndrome do anticorpo antifosfolipídio). Assim, a paciente em questão, de fato, tem indicação de profilaxia para PE com Ácido Acetilsalicílico (AAS) em baixa dose.\nA aspirina em baixa dose deve ser iniciada até 16 semanas, sendo que alguns autores recomendam seu início a partir de 12\nsemanas. Ela pode ser suspensa com 36 semanas ou mantida até o momento do parto, sem relatos de aumento de sangramento mesmo na cesariana.\nLetra B: incorreta. A prescrição de heparina de baixo peso molecular não foi capaz de reduzir o risco de PE, mesmo em pacientes de alto risco."
-    },
-    {
-      "id": 1793049944071,
-      "d": "2026-10-26",
-      "t": "Temos uma gestante de 15 semanas de • gestação com diagnóstico de lúpus eritematoso sistêmico (LES) há oito anos, com queixa de edema generalizado e elevação da pressão arterial (PA). Refere uso prévio de azatioprina e hidroxicloroquina, que foram suspensos quando descobriu a gestação. Ao exame, apresenta-se hipertensa\n(PA maior/igual 160 mmHg e 110 mmHg), altura uterina compatível com idade gestacional, batimento cardíaco dentro da normalidade, além de edemas de mãos, membros inferiores e face. Há elevação dos níveis séricos de anti-DNA dupla hélice. Na emergência, foi evidenciada proteinúria e hematúria dismórfica, que são indicativas de nefrite lúpica.\nSobre a medicação indicada para tratamento da nefrite lúpica na gestante, vamos às alternativas.\nLetra A: incorreta. Sulfato de magnésio é indicado para profilaxia das convulsões na paciente com pré-eclâmpsia (PE) grave.\nLembre-se que a PE é alteração pressórica que surge após as 20 semanas de gestação, não sendo compatível com idade gestacional de 15 semanas.\nLetra B: incorreta. A hidroxicloroquina é o tratamento padrão para o lúpus na gestação, prevenindo a reativação da doença. No entanto, não é a droga de escolha para resolução do quadro agudo, ou seja, para o tratamento inicial da nefrite lúpica. \n\nLetra B: incorreta. A hidroxicloroquina é o tratamento padrão para o lúpus na gestação, prevenindo a reativação da doença. No entanto, não é a droga de escolha para resolução do quadro agudo, ou seja, para o tratamento inicial da nefrite lúpica.\nLetra C: correta. Os corticosteroides constituem a terapia de escolha nos casos de reativação do lúpus na gestação. São indicados por um curto período de tempo, na menor dose efetiva, sob a forma de prednisona ou prednisolona. Nos casos graves, alguns autores recomendam o uso de metilprednisolona venosa, por sua ação mais rápida.",
-      "imgs": [
-        "data/img/1793049944071-0.jpg"
-      ]
-    },
-    {
-      "id": 1793050032612,
-      "d": "2026-10-26",
-      "t": "colestase intra hepatica da gravidez"
-    },
-    {
-      "id": 1793050056160,
-      "d": "2026-10-26",
-      "t": "colestase gravídica ou colestase intra-hepática da gravidez, também chamada de colestase obstétrica, é a doença hepática mais comum na gravidez com resolução espontânea pós-parto. É a segunda causa mais frequente de quadros ictéricos na gravidez, sendo superada apenas pelas hepatites virais. Acomete 0,3% a 5,6% das gestantes e sua recorrência, na forma clínica mais severa, pode acontecer em 45% a 90% das gestações subsequentes. Sua etiopatogenia ainda não é bem esclarecida.\nEssa afecção tem sido associada a desfechos obstétricos inexplicavelmente insatisfatórios, como prematuridade, alterações de vitalidade fetal e até o óbito intrauterino. A mortalidade materna é rara, mas o risco de hipóxia fetal tem relação com a gravidade da doença.\nNa avaliação laboratorial, o achado mais característico é a elevação dos ácidos biliares, que são o produto final do metabolismo hepático do colesterol. Também podemos encontrar elevação das transaminases, fosfatase alcalina e bilirrubina, às custas da sua fração direta.\nEmbora o prognóstico materno seja favorável na grande maioria dos casos, o feto, por outro lado, está em maior risco de parto prematuro e morte súbita intraútero, de tal maneira que alguns estudos indiquem que o principal fator de prognóstico fetal adverso seja a dosagem dos ácidos biliares."
-    },
-    {
-      "id": 1793050266649,
-      "d": "2026-10-26",
-      "t": "Temos uma paciente com estenose mitral valvar com área valvar de 20 mm que evolui no primeiro dia após o parto com dispneia e ortopneia. Ao exame físico encontra-se estável hemodinamicamente, taquipneica e afebril; ausculta cardíaca com sopro diastólico 3+/6+ e pulmonar com estertores bolhosos bibasais, compatível com edema agudo de pulmão. Útero contraído na cicatriz umbilical e loquiação fisiológica.\nNesse contexto, a maioria dos casos de descompensação e morte materna ocorrem no puerpério. No pós-parto imediato, o débito cardíaco se\neleva\nainda mais,\nindependentemente da via de parto, e as alterações volêmicas podem complicar a condição clínica da paciente. Nesse momento, ocorre o que chamamos de\n\"autotransfusão\", decorrente da reabsorção do líquido retido no espaço extra-vascular e represado nos vasos de grande capacitância da pelve e membros inferiores. Pelo aumento do retorno venoso e, consequentemente, da pré-carga e do débito cardíaco, há aumento da pressão capilar dos vasos pulmonares, levando ao edema pulmonar, o que ocorre de forma praticamente imediata no puerpério.\nVamos às alternativas.\nLetra A: incorreta. Conforme discutido acima, o edema agudo de pulmão em questão não se associa à diminuição da capacidade residual funcional pulmonar, mas sim, ao aumento do retorno venoso.\nLetra B: incorreta. Níveis plasmáticos fatores da coagulação como os II, VII, VIII, X e de von Willebrand estão elevados durante a gravidez e contribuem para o estado pró-trombótico, assim como a produção elevada de fibrinogênio. Após o parto, há tendência ao retorno ao estado pré-gestacional.\nPorém, os fatores da coagulação em nada se associam ao edema agudo de pulmão na puérpera em questão.\nLetra C: incorreta. Há aumento, e não diminuição, do retorno venoso.\nLetra D: correta. O que explica a descompensação clínica apresentada por essa puérpera é justamente o aumento do débito cardíaco, ao passo que a diminuição da capacidade residual funcional do pulmão e o aumento dos fatores pró-coagulantes não estejam diretamente ligados à essa alteração.",
-      "imgs": [
-        "data/img/1793050266649-0.jpg"
-      ]
-    },
-    {
-      "id": 1793050311648,
-      "d": "2026-10-26",
-      "t": "(imagem)",
-      "imgs": [
-        "data/img/1793050311648-0.jpg"
-      ]
-    },
-    {
-      "id": 1793050473549,
-      "d": "2026-10-26",
-      "t": "causas de aborto de repetição, incluindo translocação robertsoniana materna (oq e isso?)"
-    },
-    {
-      "id": 1793050667900,
-      "d": "2026-10-26",
-      "t": "A galactosemia é causada pela deficiência de galactose-1-fosfato uridil transferase (responsável pela conversão da galactose em glicose) e cursa com vômitos e diarreia após a ingestão de lactose ou galactose, baixo ganho ponderoestatural, icterícia, disfunção hepática e catarata - bem diferente do quadro do enunciado. Além disso, o tratamento consiste em supressão da lactose da alimentação, ou seja, o aleitamento materno é contraindicado."
-    },
-    {
-      "id": 1793050678502,
-      "d": "2026-10-26",
-      "t": "Na intolerância à lactose há má absorção deste açúcar, um carboidrato encontrado no leite, cuja digestão depende da enzima lactase (presente na borda em escova do delgado). O quadro pode ser causado por uma deficiência de lactase primária (redução ou ausência de lactase genética) ou por uma deficiência de lactase secundária (como nas doenças de mucosa do delgado). O quadro clínico irá variar de acordo com o nivel residual de lactase do paciente e com a quantidade de lactose ingerida; em geral, encontramos diarreia, dor abdominal, distensão abdominal e flatulência. A lactose não completamente hidrolisada é fermentada pelas bactérias colônicas, resultando na produção de ácidos orgânicos, butirato e gases voláteis, gerando fezes ácidas e assaduras perianais. Apesar de ser frequentemente confundida pelo leigo com a APLV, perceba que são quadros distintos, e a intolerância à lactose não cursa com sangramento gastrointestinal."
-    },
-    {
-      "id": 1793050696368,
-      "d": "2026-10-26",
-      "t": "Como vimos acima, a principal hipótese é a proctocolite alérgica, uma forma de APLV cujo diagnóstico é substancialmente clínico, presumido quando os pacientes respondem positivamente à exclusão do leite de vaca da dieta, em geral por duas a quatro semanas. Em seguida, está indicado o teste de provocação oral; este teste confirma o diagnóstico quando os sintomas reaparecem, e permite que uma parcela dos lactentes seja liberada da dieta de exclusão após essa condição ser descartada. O tratamento da APLV se baseia na exclusão deste alimento na dieta. Assim, no caso da criança em aleitamento materno, este deve ser mantido e a mãe deve ser orientada a excluir leite e derivados da dieta.\nQuando o paciente está em uso de fórmula infantil, esta deve ser substituída por fórmulas nas quais a proteína intacta foi quebrada em peptídeos pequenos ou até em aminoácidos, através de hidrólise. Quanto menor a cadeia de peptídeos, menor o potencial de alergenicidade; assim, devem ser usadas fórmulas extensamente hidrolisadas ou, em alguns casos, fórmula à base de aminoácidos."
-    },
-    {
-      "id": 1793050704034,
-      "d": "2026-10-26",
-      "t": "A síndrome da enterocolite induzida por proteína alimentar (FPIES, do inglês Food Protein Induced Enterocolitis\nSyndrome) é uma forma de alergia alimentar não mediada por IgE e potencialmente grave, que em geral surge no início no primeiro ano de vida, dias ou semanas após a introdução do alimento na dieta do lactente. O quadro é bem diferente do descrito no enunciado, definido quando o alimento é ingerido de forma intermitente e desencadeia sintomas agudos: vômitos repetitivos em projétil, uma a quatro horas (tipicamente duas horas) após sua ingestão. Comumente, associa-se a letargia, hipotonia, palidez, hipotermia, desidratação, choque, acidose metabólica e/ou cianose, esta por metemoglobinemia. A diarreia pode surgir dentro de seis a oito horas. Entre os episódios as crianças não apresentam alterações."
-    },
-    {
-      "id": 1793050808523,
-      "d": "2026-10-26",
-      "t": "Letra A: incorreta. A infecção por estreptococos do grupo A é virtualmente inexistente em lactentes. É uma infecção comum nos escolares e adolescentes. O quadro clínico também fala contra amigdalite bacteriana, uma vez que há lesões ulceradas, e não placas exsudativas em amígdalas. A amigdalite estreptocócica também cursa comumente com febre alta, porém há tinfonodomegalia cervical, o que não é o caso relatado.\nLetra B: incorreta. O quadro clínico da infecção por herpes simples em lactentes é o de gengivoestomatite herpética. Ocorrem lesões por toda a cavidade oral, gengiva e região perioral. As lesões iniciais consistem em vesículas, que coalescem e evoluem com úlceras dolorosas e importante edema com eventual sangramento gengival. O tratamento pode ser feito com aciclovir oral, sendo este indicado especialmente para casos mais graves, ou venoso, para os imunocomprometidos.\nLetra C: correta. Quando pensamos em coxsackievirus, logo vem à cabeça a síndrome mão-pé-boca. Mas esse vírus também pode causar herpangina, que é caracterizada por início súbito de febre alta, dor de garganta e vômitos. As lesões em orofaringe são inicialmente vesiculares, com aréola eritematosa, acometendo pilares das tonsilas, palato mole e úvula. Após 24 horas, as lesões se transformam em úlceras rasas, que evoluem para cura em 1 a 7 dias. \nLetra D: incorreta. A infecção por adenovírus causa diversos quadros, sendo comum na infância a febre faringoconjuntival.\nApresenta-se com febre alta, faringoamigdalite que pode ser exsudativa, conjuntivite e linfonodomegalia pré-auricular.\nA faringite é autolimitada e se resolve em até sete dias, enquanto a conjuntivite pode persistir por até duas semanas."
-    },
-    {
-      "id": 1793050835036,
-      "d": "2026-10-26",
-      "t": "Quando pensamos em coxsackievirus, logo vem à cabeça a síndrome mão-pé-boca. Mas esse vírus também pode causar herpangina, que é caracterizada por início súbito de febre alta, dor de garganta e vômitos. As lesões em orofaringe são inicialmente vesiculares, com aréola eritematosa, acometendo pilares das tonsilas, palato mole e úvula. Após 24 horas, as lesões se transformam em úlceras rasas, que evoluem para cura em 1 a 7 dias."
-    },
-    {
-      "id": 1793050882154,
-      "d": "2026-10-26",
-      "t": "O nosso paciente é um escolar de 9 anos que, após uso de sulfametoxazol-trimetoprima, apresenta anemia presumivelmente aguda e hemácias mordidas (\"bite cells\") no sangue periférico. O diagnóstico neste caso só pode ser deficiência de G6PD. Esta enzima protege a hemácia do estresse oxidativo. A hemólise ocorre por falha na geração de NADPH, levando a níveis insuficientes de glutation reduzido. Isto deixa o eritrócito suscetível à oxidação da hemoglobina por radicais oxidativos, como peróxido de hidrogênio. A hemoglobina desnaturada se agrega e forma os corpúsculos de Heinz dentro do eritrócito.\nAlgumas proteínas de membrana também são oxidadas e, com isso, ocorre diminuição da deformabilidade celular. Células que contêm corpúsculo de Heinz são destruídas parcial ou completamente no baço, resultando em células mordidas (bite cells — visualizadas no esfregaço do sangue periférico) e em hemólise. Vamos às opções.\nLetra A: correta. O diagnóstico é deficiência de G6PD. Este deve ser confirmado através da avaliação da atividade da G6PD. Além disso, deve ser feita a eletroforese em acetato de celulose e, nos casos em que revelarem alterações, pode ser realizado o estudo molecular do gene da G6PD em busca das mutações mais frequentes. Na variante africana, grande parte das hemácias mais velhas é destruída durante a crise, restando apenas as jovens, que possuem G6PD. Dessa forma, nesses pacientes, o diagnóstico por avaliação da atividade enzimática só poderá ser feito com acurácia com o sangue coletado após 6-8 semanas da crise, quando as hemácias já se tornaram mais velhas."
-    },
-    {
-      "id": 1793050998808,
-      "d": "2026-10-26",
-      "t": "A policitemia neonatal é definida como hemoglobina central ou hematócrito (Ht): maior que 2 desvios padrão (DP) acima do valor normal para idade pós-natal. Um bebê a termo tem policitemia quando a concentração de hemoglobina é ≥ 22 g/dL ou o Ht é ≥ 65%. Os sinais e sintomas de policitemia podem resultar de hiperviscosidade (lentidão fluxo sanguíneo causando diminuição da perfusão tecidual), distúrbios metabólicos ou ambos. A maioria dos bebês policitêmicos é assintomática.\nQuando sintomática, os sintomas aparecem frequentemente nas primeiras horas de vida, mas podem aparecer mais tardiamente com 2 a 3 dias de vida. Os sintomas incluem irritabilidade, letargia, taquipneia, dificuldade respiratória, cianose, hiperbilirrubinemia, hipoglicemia e trombocitopenia.\nComplicações mais graves incluem convulsões, acidente vascular cerebral, hipertensão pulmonar, enterocolite necrotizante (NEC), trombose da veia renal e insuficiência renal. Note que a questão apresenta um bebê a termo, de peso adequado à idade gestacional ao nascer, com nascimento fora do hospital e atraso no clampeamento do cordão (possível causa da policitemia), com manifestações clínicas de policitemia (icterícia, hipoglicemia, palmas e plantas eritematosas). Vamos às alternativas.\n\nLetra C: correta. Apesar de o tratamento de recém-nascidos policitêmicos sintomáticos não estar bem definido, a\nexsanquinitransfusão parcial (com solução salina normal) pode ser usada em bebês com policitemia grave e sintomas de hiperviscosidade. Deve ser considerada também se o Ht for ≥70-75% ou os sintomas piorarem apesar da hidratação intravenosa agressiva. A exsanguinitransfusão reduz o Ht e a viscosidade de forma aguda e melhora os sintomas mais rapidamente, mas pode não afetar o resultado a longo prazo em bebês policitêmicos. É importante mencionar que há recomendação de sempre confirmar o Ht capilar > 65% com uma amostra central."
-    },
-    {
-      "id": 1793051043034,
-      "d": "2026-10-26",
-      "t": "Doença celiaca"
-    },
-    {
-      "id": 1793051072407,
-      "d": "2026-10-26",
-      "t": "Em relação ao diagnóstico da Doença Celíaca\n(DC), entenda o seguinte conceito: a sorologia funciona como exame de triagem inicial, mas, para confirmação definitiva, antes de retirar os alimentos com glúten da dieta para o resto da vida do paciente, o exame de escolha é a endoscopia digestiva alta com biópsia de duodeno, tanto em crianças como em adultos. A avaliação histopatológica deve ser caracterizada pela classificação de Marsh.\nPodem ser encontradas desde alterações mais discretas, apenas com aumento dos Linfócitos intraepiteliais, até quadros mais graves, com mucosa totalmente atrófica, perda das vilosidades, aumento da apoptose epitelial e hiperplasia das criptas.\nNo entanto, em pacientes adultos ou crianças que não possam ou não queiram ser submetidos à endoscopia digestiva alta, atualmente, permite-se a realização do diagnóstico de doença celíaca de forma não invasiva, por meio da combinação de dois exames sorológicos. Para que isso ocorra, o paciente obrigatoriamente precisa ter títulos elevados de antitransglutaminase IgA acima de 10 vezes o limite superior da normalidade e, além disso, deve ter a positividade do anticorpo antiendomísio numa segunda amostra de sangue.\nA positividade adicional do HLA DQ2 ou DQ8 pode ser utilizada como critério de suporte adicional nesse cenário, pois a sua negatividade exclui o diagnóstico. No entanto, as diretrizes mais atuais sobre o tema não obrigam a sua pesquisa, pois a presença do HLA DQ2 e/ou DQ8 está presente em cerca de 99% dos pacientes com doença celíaca"
-    },
-    {
-      "id": 1793051107566,
-      "d": "2026-10-26",
-      "t": "fibrose cistica"
-    },
-    {
-      "id": 1793051267886,
-      "d": "2026-10-26",
-      "t": "A síndrome de West é uma grave síndrome epiléptica que, em geral, surge antes do primeiro ano de vida e se vincula ao clássico padrão de hipsarritmia.no\neletroencefalograma, a espasmos epilépticos (por vezes, caracterizados como \"sustos\") e a comprometimento do desenvolvimento neuropsicomotor.\nRara, a síndrome afeta igualmente homens e mulheres, embora haja estudos demonstrando discreta predileção pelo sexo masculino. De fisiopatologia pouco elucidada, ela deve ser suspeitada sempre que a criança apresentar contração flexora ou extensora de músculos axiais ou apendiculares, especialmente se de forma simétrica.\nA maior parte dos casos de sindrome de West é esporádica, entretanto, ela pode compor quadro clínico associado a doenças genéticas, dentre as quais esclerose tuberosa.\nO tratamento da mazela deve se dar a partir da suspeita diagnóstica, em caráter de urgência, dada a conhecida morbimortalidade vinculada à condição. Para a maior parte dos pacientes, este se baseia em hormonoterapia com ACTH ou corticites via oral. Para aqueles com esclerose tuberosa, entretanto, vigabatrina é o fármaco de escolha.\nResposta: letra A.",
-      "imgs": [
-        "data/img/1793051267886-0.jpg"
-      ]
-    },
-    {
-      "id": 1793051291302,
-      "d": "2026-10-26",
-      "t": "NEUROBLASTOMA X TUMOR DE WILMS (qual q ultrapassa a linha meeeeeeediaaaaaaaaa)"
-    },
-    {
-      "id": 1793051333303,
-      "d": "2026-10-26",
-      "t": "Letra C: incorreta. O tumor de Wilms é o tumor renal maligno mais frequente da infância. Suas principais manifestações clínicas são: massa palpável, hipertensão arterial, hematúria, dor abdominal, obstipação, perda de peso e infecção do trato urinário.\nLetra D: correta. O neuroblastoma é o tumor sólido mais comum entre os lactentes e tem pico de incidência ao redor dos dois anos de idade. O achado mais comum é o de massa palpável com origem ao longo da cadeia simpática periférica, na maioria das vezes assintomática ou oligossintomática, com a presença de metástases ao diagnóstico em 75% dos casos. É comum encontrar sintomas referentes à liberação de catecolaminas produzidas pelo tumor, como sudorese, hipertensão arterial, irritabilidade, rubor e palpitação. Ptose palpebral (síndrome de Horner) pode ocorrer no neuroblastoma cervical. Outra manifestação observada em neuroblastoma é a síndrome da opsomioclonia, também conhecida como síndrome da dança dos olhos, secundária ao comprometimento cerebelar, por anticorpos direcionados aos epitopos das células dessa região (síndrome de Kinsbourne)."
-    },
-    {
-      "id": 1793051365158,
-      "d": "2026-10-26",
-      "t": "comparação entre as principais doencas exantematicas pediatricas"
-    },
-    {
-      "id": 1793051449249,
-      "d": "2026-10-26",
-      "t": "1) MÃE NÃO TRATADA OU TRATADA DE FORMA NÃO ADEQUADA: O RN de mulher não tratada ou tratada inadequadamente é, por definição, um caso de sífilis congênita e deve ser feita a notificação do caso. Devem ser feitos exames complementares (VDRL do sangue periférico, radiografia de ossos longos, hemograma e análise do líquor) e, em todos os casos, será feito algum tratamento. A definição do tratamento é feita da seguinte forma:\n• Alteração no líquor (neurossífilis; células\n>25/mm* OU proteínas →150mg/dl OU VDRL reagente): o tratamento deve ser feito com dez dias de benzilpenicilina cristalina intravenosa, sendo obrigatória a internação hospitalar.\n• Ausência de neurossífilis e presença de qualquer outra alteração (no exame físico ou exames complementares): o tratamento pode ser feito com benzilpenicilina procaína por via intramuscular (com a possibilidade de realização ambulatorial) ou benzilpenicilina cristalina intravenosa, também por dez dias.\n• Ausência de sintomas e exames complementares normais (incluindo\nVDRL não reagente): o tratamento poderá ser feito com benzilpenicilina benzatina em dose única por via intramuscular.\n2) MÃE TRATADA DE FORMA ADEQUADA:\nNos casos em que o tratamento materno foi adequado, como o nosso, alguns passos são necessários para diferenciarmos a criança com sifilis congênita, que deverá ser tratada, daquela crianca apenas exposta à sífilis, que será apenas acompanhada ambulatorialmente.\no primeiro exame é o VDRL do sangue periférico da criança, que deverá ser comparada ao VDRL materno. Observe que esta comparação é necessária para a definição de conduta apenas quando o tratamento materno foi adequado! A partir daí, temos as seguintes possibilidades.\n• VDRL do RN maior ou igual ao materno em pelo menos duas diluições: o RN é um caso de sífilis congênita; serão feitos os mesmos exames indicados para o RN de gestante não tratada adequadamente e será feito o tratamento com penicilina por 10 dias (se houve alteração no líquor, poderá ser usada apenas a benzilpenicilina cristalina, se não houver, poderá ser usada a cristalina ou a procaína).\n• VDRL do RN NÃO maior ou igual ao materno em pelo menos duas diluições: aqui temos três possibilidades:\n1) se RN assintomático, é considerado exposto à sífilis e é feito o acompanhamento ambulatorial. É aqui que nosso bebê se encaixa!\n2) se RN sintomático com teste não treponêmico reagente, é considerado um caso de sifilis congênita, são feitos os exames adicionais, e é indicado o tratamento por dez dias;\n3) se RN sintomático com teste não reagente, outras infecções congênitas devem ser investigadas."
-    },
-    {
-      "id": 1793051601257,
-      "d": "2026-10-26",
-      "t": "Letra A: incorreta. Na Síndrome da Rubéola* Congênita (SRC), há combinação de anormalidades oftalmológicas, otológicas e cardíacas, juntamente com microcefalia e deficiência mental. A tríade clássica é a presença de catarata, surdez neurosensorial e malformação cardíaca. A alteração cardíaca mais comum é a persistência do canal arterial. O achado retiniano clássico é a retinopatia em sal e pimenta, aspecto que ocorre devido à despigmentação do epitélio pigmentado sem inflamação associada.\nDiversas outras alterações oftalmológicas podem ocorrer, como microftalmia, glaucoma e estrabismo.\nLetra B: incorreta. Quando sintomático, o recém-nascido com Sífilis Congênita (SC) pode apresentar sinais gerais (prematuridade, restrição do crescimento intrauterino, hepatoesplenomegalia, adenomegalia, icterícia, edema, hidropisia, pneumonite, anemia) e outros mais específicos de SC (lesões cutaneomucosas: pênfigo palmoplantar, exantema maculopapular, rinite serossanguinolenta; lesões ósseas: periostite, osteite ou osteocondrite acompanhadas de dor e pseudoparalisia de membros [pseudoparalisia de Parrot] e meningoencefalite assintomática). E apesar de não ser tão comum, a infecção congênita pelo Treponema pallidum pode ter como manifestação a síndrome nefrótica.\nLetra C: incorreta. Em se tratando de parvovírus B19, em geral, conhecemos as alterações do eritema infeccioso. Mas a infecção congênita por esse vírus pode ser grave, levando à anemia intensa e à hidropsia fetal (edema). A miocardite pode ocorrer tanto em casos congênitos como adquiridos.\nLetra D: correta. Esta é a única alternativa errada. O Citomegalovírus (CMV) é o agente etiológico mais comum de infecção congênita. As manifestações clínicas sistêmicas incluem crescimento intrauterino retardado, púrpura trombocitopênica, icterícia, hepatoesplenomegalia, surdez neurossensorial e microcefalia (com calcificações periventriculares ao exame de imagem). O acometimento ocular mais comum é a coriorretinite. Não há associação de infecção congênita por CMV e persistência do canal arterial, sendo essa alteração mais típica da síndrome da rubéola congênita."
-    },
-    {
-      "id": 1793051680537,
-      "d": "2026-10-26",
-      "t": "diferenciar as principais caracteristicas das sindromes congenitas (rubeola, CMV etc) com MACETE OU MNEMONICO para gravar\n(como gravar a triade de sabiston etc - n tenho ctz se é isso msm)"
-    },
-    {
-      "id": 1793052171193,
-      "d": "2026-10-26",
-      "t": "A questão aborda um tema essencial na atenção à saúde: a atenção domiciliar. Esta forma de atenção à saúde pode ser substitutiva ou complementar às já existentes, e é caracterizada por um conjunto de ações de promoção à saúde, prevenção e tratamento de doenças, e reabilitação prestadas em domicílio. A atenção domiciliar é integrada aos demais serviços e unidades de saúde e garante a continuidade de cuidados. Existem três modalidades de assistência na atenção domiciliar: AD1, AD2 e AD3, cada uma com critérios específicos de inclusão. Vamos revisá-las:\nModalidade AD1: A modalidade AD1 destina-se aos usuários que:\n• possuam problemas de saúde controlados/compensados e com dificuldade ou impossibilidade física de locomoção até uma unidade de saúde;\n• necessitem de cuidados de menor complexidade, incluídos os de recuperação nutricional, de menor frequência, com menor necessidade de recursos de saúde e dentro da capacidade de atendimento das Unidades Básicas de Saúde (UBS); e\n• não se enquadrem nos critérios previstos para as modalidades AD2 e AD3 descritos nesta Portaria.\nA prestação da assistência à saúde na modalidade AD1 é de responsabilidade das equipes de atenção básica, por meio de visitas regulares em domicílio, no mínimo, 1 (uma) vez por mês.\n\nModalidade AD2: A modalidade AD2 destina-se aos usuários que possuam problemas de saúde e dificuldade ou impossibilidade física de locomoção até uma unidade de saúde e que necessitem de maior frequência de cuidado, recursos de saúde e acompanhamento contínuo, podendo ser oriundos de diferentes serviços da rede de atenção.\nA inclusão para cuidados na modalidade AD2 será baseada na análise da necessidade de saúde do usuário, tomando-se como base as situações abaixo listadas:\n• demanda por procedimentos de maior complexidade, que podem ser realizados no domicilio, tais como: curativos complexos e drenagem de abscesso, entre outros;\n• dependência de monitoramento frequente de sinais vitais;\n• necessidade frequente de exames de laboratório de menor complexidade;\n• adaptação do usuário e/ou cuidador ao uso do dispositivo de traqueostomia;\n• adaptação do usuário ao uso de orteses/próteses;\n• adaptação de usuários ao uso de sondas e ostomias;\n• acompanhamento domiciliar em pós-operatório;\n• reabilitação de pessoas com deficiência permanente ou transitória, que necessitem de atendimento contínuo, até apresentarem condições de frequentarem outros serviços de reabilitação;\n• uso de aspirador pra vias aéreas pra higiene brônquica \n- acompanhamento de ganho ponderal de recém nascido de baixo peso \n\nNa modalidade AD2 será garantido, se necessário, transporte sanitário e retaguarda para as unidades assistenciais de funcionamento 24 (vinte e quatro) horas/dia, definidas previamente como referência para o usuário, nos casos de intercorrências.\nModalidade AD3: A modalidade AD3 destina-se aos usuários que possuam problemas de saúde e dificuldade ou impossibilidade física de locomoção até uma unidade de saúde, com necessidade de maior frequência de cuidado, recursos de saúde, acompanhamento contínuo e uso de equipamentos, podendo ser oriundos de diferentes serviços da rede de atenção à saúde.\nPara que o usuário seja incluído para cuidados na modalidade AD3, é necessário que se verifique:\n• existência de pelo menos uma das situações admitidas como critério de inclusão para cuidados na modalidade\nAD2; e\n• necessidade do uso de, no mínimo, um dos seguintes\nequipamentos/procedimentos:\na) Suporte Ventilatório não invasivo:\ni. Pressão Positiva Contínua nas Vias Aéreas\n(CPAP);\nil. Pressão Aérea Positiva por dois Níveis (BIPAP);\nb) diálise peritoneal; ou\nc) paracentese.\nNa modalidade AD3 será garantido transporte sanitário e retaguarda para as unidades assistenciais de funcionamento 24 (vinte e quatro) horas/dia, definidas previamente como referência para o usuário, nos casos de intercorrências."
-    },
-    {
-      "id": 1793052238435,
-      "d": "2026-10-26",
-      "t": "NNT (formula, calculo destrinchado e explicado de forma muito facil) e exemplos de calculos)"
-    },
-    {
-      "id": 1793052317978,
-      "d": "2026-10-26",
-      "t": "Para decidir ou não pela implementação de uma estratégia de rastreamento, é preciso atender a alguns critérios:\n1) A doença deve representar um importante problema de saúde pública;\n2) A história natural da doença ou do problema clínico deve ser bem conhecida;\n3) Deve existir um estágio pré-clínico (assintomático) bem definido, durante o qual a doença possa ser diagnosticada;\n4) O benefício da detecção e do tratamento precoce com o rastreamento deve ser maior do que se a condição fosse tratada no momento habitual de diagnóstico;\n5) Os exames que detectam a condição no estágio\nassintomático\ndevem\nestar\ndisponíveis e serem aceitáveis e confiáveis;\n6) O custo do rastreamento e tratamento de uma condição deve ser razoável e compatível com o orçamento destinado ao sistema de saúde como um todo;\n7) O rastreamento deve ser um processo contínuo e sistemático."
-    }
-  ],
+  "pendentes": [],
   "processadas": [
     1792528528241,
     1792529105511,
@@ -428,6 +161,55 @@
     1792957520134,
     1792957704934,
     1792957923273,
-    1792958081780
+    1792958081780,
+    1793046424579,
+    1793046561709,
+    1793046637963,
+    1793046840830,
+    1793047309465,
+    1793047401810,
+    1793047996843,
+    1793048155028,
+    1793048314731,
+    1793048519338,
+    1793048641286,
+    1793048868658,
+    1793048808386,
+    1793048991402,
+    1793048996309,
+    1793049064199,
+    1793049097587,
+    1793049317733,
+    1793049403373,
+    1793049709974,
+    1793049716517,
+    1793049809926,
+    1793049944071,
+    1793050032612,
+    1793050056160,
+    1793050266649,
+    1793050311648,
+    1793050473549,
+    1793050667900,
+    1793050678502,
+    1793050696368,
+    1793050704034,
+    1793050808523,
+    1793050835036,
+    1793050882154,
+    1793050998808,
+    1793051043034,
+    1793051072407,
+    1793051107566,
+    1793051267886,
+    1793051291302,
+    1793051333303,
+    1793051365158,
+    1793051449249,
+    1793051601257,
+    1793051680537,
+    1793052171193,
+    1793052238435,
+    1793052317978
   ]
 }
