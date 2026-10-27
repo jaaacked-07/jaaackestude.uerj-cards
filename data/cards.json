@@ -2796,7 +2796,8 @@
           ]
         ]
       },
-      "prio": "baixa"
+      "prio": "baixa",
+      "minha": "@@nota|0|Classificação molecular\n(ENDOMÉTRIO)"
     },
     {
       "id": "endom-05",
@@ -46968,5 +46969,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793111931603
+  "rev": 1793112001269
 }
