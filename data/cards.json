@@ -43732,7 +43732,8 @@
           "Quantas vezes o positivo é mais provável no doente que no sadio."
         ]
       },
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "dac-01",
@@ -69690,5 +69691,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793115215850
+  "rev": 1793115715217
 }
