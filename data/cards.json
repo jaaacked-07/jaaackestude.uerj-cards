@@ -53044,7 +53044,8 @@
       "uerj": "Cobra o tipo de choque pelo perfil hemodinâmico (Swan-Ganz) e pelos sinais de beira de leito, como jugular túrgida sem congestão pulmonar.",
       "fonte": "Harrison — Medicina Interna, 21ª ed. (Choque); Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (SBC 2018, atualização 2021); ESC 2019 — Embolia pulmonar aguda",
       "add": "2026-10-26",
-      "fav": true
+      "fav": true,
+      "minha": "@@nota|0|PVC → enchimento do coração DIREITO\n**P{v}VC{/v} -> \"{v}pra você{/v}\" -> coração direito**\n**PCP -> esquerdo**"
     },
     {
       "area": "Clínica Médica",
@@ -69694,5 +69695,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793117056115
+  "rev": 1793117155655
 }
