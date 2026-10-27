@@ -26260,7 +26260,8 @@
         ]
       },
       "fonte": "SBC — Diretriz de Doença Coronária Estável; ESC 2024 Chronic Coronary Syndromes; SBC 2025 SCA",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "dac-02",
@@ -46967,5 +46968,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793070077877
+  "rev": 1793071032567
 }
