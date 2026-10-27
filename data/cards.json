@@ -53277,7 +53277,8 @@
       "prio": "alta",
       "fonte": "Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (SBC 2018, atualização 2021); ESC 2021 Heart Failure Guidelines",
       "add": "2026-10-26",
-      "pegadinha": "Morfina não é mais rotina no EAP."
+      "pegadinha": "Morfina não é mais rotina no EAP.",
+      "minha": "@@nota|0|Nitroglicerina EV.\nMinha mae teve edema agudo.. ela gostava de GLICOSE\nlogo: NITRO__GLICERINA__"
     },
     {
       "area": "Clínica Médica",
@@ -69695,5 +69696,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793118463504
+  "rev": 1793118564420
 }
