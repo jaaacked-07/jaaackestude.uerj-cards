@@ -141,6 +141,7 @@ table.t{width:100%;table-layout:auto;overflow-wrap:break-word;word-break:normal;
 .t tr:last-child td{border-bottom:0}
 .t td:first-child{font-weight:600;color:var(--wine)}
 .t td.hl{font-weight:700;color:var(--wine)}
+.tcap{display:none}
 .flow{display:flex;flex-direction:column;align-items:center;gap:0}
 .fn{background:var(--card);box-shadow:var(--shadow);border-radius:12px;padding:9px 16px;font-size:14.5px;text-align:center;min-width:60%}
 .fr{display:flex;gap:8px;width:100%;justify-content:center}.fr .fn{min-width:0;flex:1}
@@ -171,6 +172,8 @@ table.t{width:100%;table-layout:auto;overflow-wrap:break-word;word-break:normal;
   table.t.larga td{border:0;padding:2px 0}
   table.t.larga td[data-l]:not(:first-child)::before{content:attr(data-l) ' · ';font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
   table.t.larga td:first-child{font-size:15px;margin-bottom:2px}
+  table.t.larga td.vz{display:none}
+  table.t.larga .tcap{display:block;text-align:left;padding:10px 12px 8px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);border-bottom:1px solid var(--line)}
   .vs{grid-template-columns:1fr;gap:6px}
   .vs .o{justify-self:center}
 }
@@ -844,7 +847,7 @@ function visual(v){
   if(v.tipo==='svg') return `<div class="vis vsvg">${v.svg}${v.legenda?`<div class="vcap" style="padding:8px 2px 0">${esc(v.legenda)}</div>`:''}</div>`;
   if(v.tipo==='img') return `<div class="vis vimg"><img src="${esc(imgSrc(v.src))}" alt="${esc(v.legenda||'')}" loading="lazy" onerror="this.parentNode.style.display='none'">${v.legenda||v.fonte?`<div class="vcap">${esc(v.legenda||'')}${v.fonte?` · ${esc(v.fonte)}`:''}</div>`:''}</div>`;
   if(v.tipo==='tabela'){ const nc=Math.max(...v.linhas.map(r=>r.length),(v.cab||[]).length), cab=v.cab&&v.cab.some(x=>x)?v.cab:null;
-    return `<div class="vis"><table class="t ${nc>=3?'larga':''} ${cab?'':'semcab'}">${cab?'<tr>'+cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map((c,i)=>{ const d=String(c), hl=d[0]==='!'; return `<td${cab&&cab[i]?` data-l="${esc(cab[i])}"`:''}${hl?' class="hl"':''}>${esc(hl?d.slice(1):d)}</td>`; }).join('')+'</tr>').join('')}</table></div>`; }
+    return `<div class="vis"><table class="t ${nc>=3?'larga':''} ${cab?'':'semcab'}">${cab&&cab[0]?`<caption class="tcap">${esc(cab[0])}</caption>`:''}${cab?'<tr>'+cab.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr>':''}${v.linhas.map(r=>'<tr>'+r.map((c,i)=>{ const d=String(c), hl=d[0]==='!'; return `<td${cab&&cab[i]?` data-l="${esc(cab[i])}"`:''}${hl||!d.trim()?` class="${hl?'hl':''}${d.trim()?'':' vz'}"`:''}>${esc(hl?d.slice(1):d)}</td>`; }).join('')+'</tr>').join('')}</table></div>`; }
   if(v.tipo==='fluxo') return `<div class="vis flow">${v.passos.map((p,i)=>(i?'<div class="fa"></div>':'')+(Array.isArray(p)?`<div class="fr">${p.map(x=>`<div class="fn">${esc(x)}</div>`).join('')}</div>`:`<div class="fn">${esc(p)}</div>`)).join('')}</div>`;
   if(v.tipo==='vs') return `<div class="vis vs"><div class="s"><h4>${esc(v.a.t)}</h4>${v.a.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div><div class="o">×</div><div class="s"><h4>${esc(v.b.t)}</h4>${v.b.itens.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`;
   if(v.tipo==='lista') return `<div class="vis li">${v.itens.map(x=>x[0]==='!'?`<div class="hl">${esc(x.slice(1))}</div>`:`<div>${esc(x)}</div>`).join('')}</div>`;
