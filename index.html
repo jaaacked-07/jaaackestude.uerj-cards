@@ -876,16 +876,29 @@ function render(){
   montarPlano();
   const e=CARDS.filter(c=>S.srs[c.id]&&S.srs[c.id].wrong&&S.srs[c.id].box<3).length;
   $('#dotE').classList.toggle('hide',!e);
-  const y=scrollY;
+  const y=scrollY, ae=document.activeElement, ak=curKey(ae), am=ak&&{s:ae.selectionStart,e:ae.selectionEnd,t:ae.scrollTop,v:ae.value};
+  if(ak) curGuardar(ae);
   ({home:pHome,estudar:pEstudar,erros:pErros,pct:pPct,anotar:pAnotar,criar:pCriar})[PAG]();
+  /* o campo em que ela escrevia volta com o cursor e a rolagem no mesmo lugar */
+  if(ak){ const n=qSeg(ak); if(n&&n!==ae&&n.value===am.v){ n.focus({preventScroll:true}); try{n.setSelectionRange(am.s,am.e)}catch(e){} n.scrollTop=am.t; } }
+  curRolagens();
   if(scrollY!==y) scrollTo(0,y);
 }
+/* ===== Memória do cursor: cada caixa de texto lembra onde estava o cursor e a rolagem ===== */
+const CUR={}, qSeg=k=>{ try{ return document.querySelector(k); }catch(e){ return null; } };
+const curKey=el=>{ if(!el||!/^(TEXTAREA|INPUT)$/.test(el.tagName)||(el.type&&!/^(text|search|textarea)$/.test(el.type))) return null;
+  if(el.id) return '#'+CSS.escape(el.id); if(el.dataset.op!=null) return '[data-op="'+el.dataset.op+'"]'; if(el.dataset.k) return '[data-k="'+el.dataset.k+'"]'; return null; };
+function curGuardar(el){ const k=curKey(el); if(!k||el.selectionStart==null) return; CUR[k]={s:el.selectionStart,e:el.selectionEnd,t:el.scrollTop,v:el.value}; }
+['input','keyup','mouseup','select','scroll','focusout'].forEach(ev=>document.addEventListener(ev,e=>curGuardar(e.target),true));
+function curRestaurar(el){ const m=CUR[curKey(el)]; if(!m||m.v!==el.value) return false; try{el.setSelectionRange(m.s,m.e)}catch(e){} el.scrollTop=m.t; return true; }
+function curRolagens(){ Object.entries(CUR).forEach(([k,m])=>{ const n=qSeg(k); if(n&&n!==document.activeElement&&n.value===m.v&&m.t) n.scrollTop=m.t; }); }
 
 let RENDER_PEND=false;
 /* redesenho vindo de sincronização em segundo plano: espera ela terminar de digitar um nome (senão o campo some no meio) */
-const digitandoNome=()=>{ const ae=document.activeElement; return !!(ae&&ae.classList&&ae.classList.contains('inl')); };
+const digitandoNome=()=>{ const ae=document.activeElement; return !!(ae&&ae.classList&&(ae.classList.contains('inl')||(ae.closest&&ae.closest('.anot.edit')))); };
+const digitando=()=>!!curKey(document.activeElement);
 function renderBg(){ if(digitandoNome()){ RENDER_PEND=true; return; } render(); }
-addEventListener('focusout',e=>{ if(RENDER_PEND&&e.target.classList&&e.target.classList.contains('inl')) setTimeout(()=>{ if(RENDER_PEND) render(); },60); });
+addEventListener('focusout',e=>{ if(RENDER_PEND&&e.target.classList&&(e.target.classList.contains('inl')||e.target.closest('.anot.edit'))&&document.hasFocus()) setTimeout(()=>{ if(RENDER_PEND) render(); },60); });
 function pHome(){
   const h=hoje(), falta=diff(h,PROVA);
   const feito=estudadosHoje(), pend=pendentes().length;
@@ -1323,9 +1336,9 @@ function editarCard(id){
     <div class="tm">Baralho</div><button class="sel" id="eb" style="margin:6px 0 4px"><span class="sv" style="font-size:14px">${esc(c.area)} › ${esc(c.tema)} › ${esc(c.sub)}</span><span class="ch">▾</span></button>
     <p class="mute small" style="margin-top:4px">Formatação: cada linha = uma linha · "- " no começo = tópico · **texto** = destaque</p>
     <div class="tm">Pergunta</div>${barraFmtHTML()}<textarea class="ned" id="ef">${esc(c.frente)}</textarea>
-    ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div>${barraFmtHTML()}<textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div>${barraFmtHTML()}<textarea class="ned" id="ev">${esc(c.verso||'')}</textarea>`}
-    <div class="tm">Pegadinha (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="ep" style="min-height:56px">${esc(c.pegadinha||'')}</textarea>
-    <div class="tm">Na UERJ (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="eu" style="min-height:56px">${esc(c.uerj||'')}</textarea>
+    ${c.tipo==='quiz'?c.opcoes.map((o,i)=>`<div class="tm">Alternativa ${'ABCDE'[i]}${i===c.certa?' · certa':''}</div>${barraFmtHTML()}<textarea class="ned" data-op="${i}" style="min-height:56px">${esc(o)}</textarea>`).join(''):`<div class="tm">Resposta</div>${barraFmtHTML()}<textarea class="ned" id="ev" style="min-height:180px">${esc(c.verso||'')}</textarea>`}
+    <div class="tm">Pegadinha (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="ep" style="min-height:80px">${esc(c.pegadinha||'')}</textarea>
+    <div class="tm">Na UERJ (opcional)</div>${barraFmtHTML()}<textarea class="ned" id="eu" style="min-height:80px">${esc(c.uerj||'')}</textarea>
     <button class="btn" id="es" style="margin-top:16px">Salvar</button>
     <div class="foot">${S.edit[id]?'<button class="link" id="eo">voltar ao original</button>':''}<button class="link" id="eh" style="color:var(--bad)">ocultar card</button></div>`);
   let dest={area:c.area,tema:c.tema,sub:c.sub};
@@ -1449,7 +1462,10 @@ function anFotoMuda(ed,j,sz,lado){
   anAltura(ta); anFotos(ed);
 }
 function anFocar(el){ const ta=el.querySelector('textarea'); anAltura(ta); ta.focus({preventScroll:true}); const n=ta.value.length; ta.setSelectionRange(n,n); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }
-const anAltura=ta=>{ ta.style.height='auto'; ta.style.height=ta.scrollHeight+2+'px'; };
+/* cresce com o texto SEM a tela pular: guarda a rolagem da página e das caixas de fora antes de medir */
+const anAltura=ta=>{ if(!ta) return; const sc=[]; for(let p=ta.parentElement;p;p=p.parentElement) if(p.scrollTop) sc.push([p,p.scrollTop]);
+  const wy=scrollY, mh=ta.style.minHeight; ta.style.height='auto'; const nh=ta.scrollHeight+2; ta.style.minHeight=mh; ta.style.height=nh+'px';
+  sc.forEach(([p,t])=>{ if(p.scrollTop!==t) p.scrollTop=t; }); if(scrollY!==wy) scrollTo(0,wy); };
 function anNova(root,alvo){
   const id=root.dataset.an, ja=alvo.closest('.anot:not(.edit)'), mn=alvo.closest('.mbx .mine');
   if(ja) return anEditar(ja); if(mn) return anEditarBase(mn.closest('.mbx'));
@@ -1864,7 +1880,7 @@ const tecladoFisico=()=>{try{return matchMedia('(pointer:fine)').matches}catch(e
 function focarNota(){
   const t=$('#tx'); if(!t||PAG!=='anotar'||$('#sheet')||SS||!tecladoFisico()) return;
   if(document.activeElement===t) return;
-  t.focus({preventScroll:true}); const n=t.value.length; t.setSelectionRange(n,n);
+  t.focus({preventScroll:true}); if(!curRestaurar(t)){ const n=t.value.length; t.setSelectionRange(n,n); }
 }
 addEventListener('focus',()=>{setTimeout(focarNota,0);setTimeout(focarNota,150)});
 addEventListener('pageshow',()=>setTimeout(focarNota,50));
@@ -1879,7 +1895,7 @@ document.addEventListener('keydown',e=>{
   const t=$('#tx'), at=document.activeElement;
   if(!t||at===t||(at&&/^(INPUT|TEXTAREA|SELECT)$/.test(at.tagName))) return;
   if(e.key.length===1||e.key==='Backspace'||e.key==='Enter'){
-    t.focus(); const n=t.value.length; t.setSelectionRange(n,n);
+    t.focus({preventScroll:true}); if(!curRestaurar(t)){ const n=t.value.length; t.setSelectionRange(n,n); }
     if(e.key==='Enter'&&e.shiftKey){ e.preventDefault(); $('#sv').click(); }
   }
 },true);
@@ -2063,19 +2079,19 @@ function pCriar(){
   let campos='';
   if(T==='fv') campos=`
     <div class="tm">Frente</div>${tool()}<textarea class="ned cr" id="cf" data-k="frente" data-im="fimg" placeholder="Pergunta">${esc(CR.frente)}</textarea>${thumbs(CR.fimg,'fimg')}
-    <div class="tm">Verso</div>${tool()}<textarea class="ned cr" id="cv" data-k="verso" data-im="vimg" style="min-height:120px" placeholder="Resposta direta na 1ª linha&#10;- tópicos embaixo">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`;
+    <div class="tm">Verso</div>${tool()}<textarea class="ned cr" id="cv" data-k="verso" data-im="vimg" style="min-height:220px" placeholder="Resposta direta na 1ª linha&#10;- tópicos embaixo">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`;
   if(T==='cz'){ const ns=czNums(CR.texto); campos=`
-    <div class="tm">Texto</div>${tool(true)}<textarea class="ned cr" id="ct" data-k="texto" data-im="vimg" style="min-height:130px" placeholder="Selecione a parte que quer esconder e toque em […]">${esc(CR.texto)}</textarea>
+    <div class="tm">Texto</div>${tool(true)}<textarea class="ned cr" id="ct" data-k="texto" data-im="vimg" style="min-height:170px" placeholder="Selecione a parte que quer esconder e toque em […]">${esc(CR.texto)}</textarea>
     <p class="mute small" id="czinfo" style="margin-top:4px">${ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda. […] cria uma lacuna nova; […]= esconde junto com a anterior (mesmo card).'}</p>
-    <div class="tm">Extra no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" data-im="vimg" style="min-height:60px">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`; }
+    <div class="tm">Extra no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" data-im="vimg" style="min-height:160px">${esc(CR.verso)}</textarea>${thumbs(CR.vimg,'vimg')}`; }
   if(T==='io') campos=`
     <div class="tm">Imagem</div>
     ${CR.img?`<div class="ioed" id="ioed"><img src="${esc(imgSrc(CR.img))}" alt="" draggable="false">${CR.rects.map((r,i)=>`<div class="ior ed" data-r="${i}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%"><span>${i+1}</span><button data-rx="${i}" aria-label="Apagar">×</button></div>`).join('')}</div>
       <p class="mute small" style="margin-top:6px">Arraste sobre a imagem para cobrir cada estrutura · tudo fica num card só · × apaga.</p>
       <button class="link" id="iotroca" style="margin-top:4px">trocar imagem</button>`
     :`<button class="drop" id="iopick">Cole a imagem (Ctrl+V) ou toque para escolher</button>`}
-    <div class="tm">Pergunta (opcional)</div><textarea class="ned cr" id="cp" data-k="perg" style="min-height:48px" placeholder="O que está oculto?">${esc(CR.perg)}</textarea>
-    <div class="tm">Explicação no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" style="min-height:60px">${esc(CR.verso)}</textarea>`;
+    <div class="tm">Pergunta (opcional)</div><textarea class="ned cr" id="cp" data-k="perg" style="min-height:64px" placeholder="O que está oculto?">${esc(CR.perg)}</textarea>
+    <div class="tm">Explicação no verso (opcional)</div>${tool()}<textarea class="ned cr" id="cx" data-k="verso" style="min-height:160px">${esc(CR.verso)}</textarea>`;
   $('#app').innerHTML=`<div class="wrap">
     ${VOLTA&&!CR.edit?`<button class="voltarev" id="vrev">↩ Voltar à revisão${VOLTA.novos.length?` · +${VOLTA.novos.length} card${VOLTA.novos.length>1?'s':''} criado${VOLTA.novos.length>1?'s':''}`:''}</button>`:''}
     <h2 class="serif">${CR.edit?'Editar card':'Criar card'} <span class="kbd" title="Atalho: N">N</span></h2>
@@ -2087,8 +2103,8 @@ function pCriar(){
     <div class="sts" id="csts">${subtemasDe(d.area,d.tema,d.sub).concat(d.subt&&!subtemasDe(d.area,d.tema,d.sub).includes(d.subt)?[d.subt]:[]).map(st=>`<button class="stc ${st===d.subt?'on':''}" data-st="${esc(st)}">${esc(st)}</button>`).join('')}<button class="stc nv" id="cnst">＋ novo subtema</button></div>`:''}
     ${campos}
     <details class="crx" ${CR.peg||CR.ue?'open':''}><summary>Pegadinha e Na UERJ (opcional)</summary>
-      <div class="tm">Pegadinha</div><textarea class="ned cr" id="cpg" data-k="peg" style="min-height:48px">${esc(CR.peg)}</textarea>
-      <div class="tm">Na UERJ</div><textarea class="ned cr" id="cue" data-k="ue" style="min-height:48px">${esc(CR.ue)}</textarea>
+      <div class="tm">Pegadinha</div><textarea class="ned cr" id="cpg" data-k="peg" style="min-height:80px">${esc(CR.peg)}</textarea>
+      <div class="tm">Na UERJ</div><textarea class="ned cr" id="cue" data-k="ue" style="min-height:80px">${esc(CR.ue)}</textarea>
     </details>
     <button class="stc ${CR.fav?'on':''}" id="cfav" style="margin-top:14px">${CR.fav?'★ Favorito':'☆ Favoritar'}</button>
     <button class="btn" id="csv" style="margin-top:12px">${CR.edit?'Salvar alterações':'Salvar card'}</button>
@@ -2109,8 +2125,9 @@ function ligarCriar(){
     const ok=()=>{ if(feito) return; feito=true; const v=i.value.trim(); if(v){ const ja=subtemasDe(CR.dest.area,CR.dest.tema,CR.dest.sub).find(x=>norm(x)===norm(v)); crDest({...CR.dest,subt:ja||v}); toast((ja?'Subtema já existia: ':'Subtema: ')+(ja||v)); } pCriar(); };
     i.onkeydown=e=>{ if(e.key==='Enter'){e.preventDefault();ok()} if(e.key==='Escape'){feito=true;pCriar()} }; i.onblur=ok; i.onclick=e=>e.stopPropagation(); };
   document.querySelectorAll('textarea.cr').forEach(ta=>{
-    ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
+    ta.oninput=()=>{ CR[ta.dataset.k]=ta.value; crCresce(ta); if(ta.id==='ct'){ const ns=czNums(ta.value),i=$('#czinfo'); if(i) i.innerHTML=ns.length?`Vai gerar <b>${ns.length}</b> card${ns.length>1?'s':''} (um por número).`:'Nenhuma lacuna ainda.'; } };
     ta.onfocus=()=>{ CR.foco=ta.id; };
+    crCresce(ta);
     ta.onkeydown=e=>{
       if((e.ctrlKey||e.metaKey||e.shiftKey)&&e.key==='Enter'){ e.preventDefault(); salvarCriado(); }
       else if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&(e.key.toLowerCase()==='b'||e.key.toLowerCase()==='u')){ e.preventDefault(); aplicarFmt(ta,e.key.toLowerCase()); }
@@ -2127,8 +2144,10 @@ function ligarCriar(){
   const cc=$('#ccan'); if(cc) cc.onclick=()=>{ CR=null; ir('estudar'); };
   const cd=$('#cdel'); if(cd) cd.onclick=async()=>{ if(!await confirmar('Excluir este card?','Excluir','Sai das revisões em todos os aparelhos.')) return;
     const u=Date.now(); S.extra.forEach(x=>{ if(x.grupo===CR.edit) { x.del=true; x.u=u; } }); save(); reaplicar(); CR=null; toast('Card excluído'); ir('estudar'); syncProg(); };
-  const f=CR.foco&&$('#'+CR.foco); if(f) f.focus({preventScroll:true});
+  const f=CR.foco&&$('#'+CR.foco); if(f&&document.activeElement!==f){ f.focus({preventScroll:true}); if(!curRestaurar(f)){ const n=f.value.length; f.setSelectionRange(n,n); } }
 }
+/* caixa do Criar cresce com o texto (até 65% da tela; depois rola dentro) sem a tela pular */
+function crCresce(ta){ if(!ta.isConnected) return; const mx=innerHeight*.65; if(ta.scrollHeight>ta.clientHeight+2&&ta.offsetHeight<mx){ anAltura(ta); if(ta.offsetHeight>mx) ta.style.height=mx+'px'; } }
 /* N durante a revisão: pausa a rodada, abre Criar já no baralho do card atual; "Voltar à revisão" retoma e põe os cards criados no fim da rodada */
 let VOLTA=null;
 function novoDoCard(){
@@ -2673,7 +2692,7 @@ if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceW
   /* versão nova do app: recarrega sozinho (na rodada, espera você sair; o "Retomar" já fica salvo) */
   let NOVA=false; const recarregar=()=>{ if(!SS&&!document.querySelector('.anot.edit')) location.reload(); else NOVA=true; };
   if(navigator.serviceWorker.controller) navigator.serviceWorker.addEventListener('controllerchange',recarregar);
-  setInterval(()=>{ if(NOVA&&!digitandoNome()) recarregar(); },5000); }
+  setInterval(()=>{ if(NOVA&&!digitando()) recarregar(); },5000); }
 </script>
 </body>
 </html>

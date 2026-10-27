@@ -401,16 +401,16 @@
       "sub": "ICSAP",
       "frente": "Qual das condições abaixo NÃO faz parte da lista brasileira de internações por condições sensíveis à Atenção Primária?",
       "opcoes": [
-        "Epilepsia",
-        "Úlcera gastrintestinal",
         "Apendicite aguda",
+        "Úlcera gastrintestinal",
+        "Epilepsia",
         "Doença inflamatória pélvica"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Está na lista (epilepsias).",
-        "Está na lista.",
         "Gabarito: apendicite é cirúrgica e não é evitável pela APS.",
+        "Está na lista.",
+        "Está na lista (epilepsias).",
         "Está na lista (DIP)."
       ],
       "fonte": "Portaria SAS/MS 221/2008",
@@ -1293,15 +1293,15 @@
       "sub": "Notificação imediata",
       "frente": "Qual dos agravos abaixo é de notificação imediata APENAS para a Secretaria Municipal de Saúde?",
       "opcoes": [
-        "Coqueluche",
         "Tentativa de suicídio",
+        "Coqueluche",
         "Febre amarela",
         "Doença meningocócica"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "SMS + SES.",
         "Gabarito: violência sexual e tentativa de suicídio → só SMS.",
+        "SMS + SES.",
         "SMS + SES + MS.",
         "SMS + SES."
       ],
@@ -1324,15 +1324,15 @@
       "frente": "Paciente com dengue clássica, sem sinais de alarme, atendido na UBS. A notificação deve ser:",
       "opcoes": [
         "Imediata à SMS, SES e MS",
-        "Imediata apenas à SMS",
         "Semanal",
+        "Imediata apenas à SMS",
         "Dispensada, pois não há gravidade"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Só os óbitos por dengue vão imediatamente até o MS.",
-        "Não há essa categoria para dengue.",
         "Gabarito: casos de dengue são de notificação semanal.",
+        "Não há essa categoria para dengue.",
         "Dengue é de notificação compulsória — sempre notifica."
       ],
       "fonte": "Portaria GM/MS 217/2023",
@@ -2095,15 +2095,15 @@
       "opcoes": [
         "IB2",
         "IIB",
-        "IIIB",
-        "IVA"
+        "IVA",
+        "IIIB"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Seria IB2 pelo tamanho, mas a hidronefrose sobe o estádio.",
         "Paramétrio não foi descrito; e hidronefrose já é III.",
-        "Gabarito: hidronefrose ou rim não funcionante sem outra causa = IIIB, independentemente do tamanho.",
-        "IVA exige invasão de mucosa de bexiga ou reto comprovada por biópsia."
+        "IVA exige invasão de mucosa de bexiga ou reto comprovada por biópsia.",
+        "Gabarito: hidronefrose ou rim não funcionante sem outra causa = IIIB, independentemente do tamanho."
       ],
       "fonte": "FIGO 2018",
       "add": "2026-10-20",
@@ -2663,16 +2663,16 @@
       "sub": "Sangramento uterino anormal",
       "frente": "Mulher, 38 anos, em uso de rivaroxabana por trombose venosa profunda, com aumento do fluxo menstrual. Ultrassom e histeroscopia normais. Pela FIGO (revisão 2018), o sangramento é classificado como:",
       "opcoes": [
-        "SUA-C (coagulopatia)",
-        "SUA-O (ovulatória)",
         "SUA-I (iatrogênica)",
+        "SUA-O (ovulatória)",
+        "SUA-C (coagulopatia)",
         "SUA-N (não classificada)"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Era assim até 2018; hoje C é para distúrbio de coagulação da paciente.",
-        "Ela não tem disfunção ovulatória descrita.",
         "Gabarito: anticoagulante = causa iatrogênica (revisão FIGO 2018).",
+        "Ela não tem disfunção ovulatória descrita.",
+        "Era assim até 2018; hoje C é para distúrbio de coagulação da paciente.",
         "N é para causas raras ou mal definidas (ex.: malformação arteriovenosa, istmocele)."
       ],
       "fonte": "FIGO 2018",
@@ -3981,15 +3981,15 @@
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Mulher, 52 anos, assintomática, faz mamografia de rastreamento com laudo BI-RADS 3 (nódulo oval, circunscrito, 8 mm). A conduta é:",
       "opcoes": [
-        "Core biopsy guiada por ultrassom",
         "Nova mamografia em 6 meses",
+        "Core biopsy guiada por ultrassom",
         "Mamografia de rotina em 2 anos",
         "Ressonância magnética das mamas"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Biópsia é para BI-RADS 4 e 5.",
         "Gabarito: BI-RADS 3 = controle de curto intervalo (6 meses, depois 12 e 24).",
+        "Biópsia é para BI-RADS 4 e 5.",
         "Rotina é para BI-RADS 1 e 2.",
         "RM não é o passo indicado para BI-RADS 3."
       ],
@@ -4079,16 +4079,16 @@
       "sub": "Mama — nódulo, BI-RADS e rastreamento",
       "frente": "Mamografia de rastreamento de mulher de 58 anos é laudada como BI-RADS 0. A conduta é:",
       "opcoes": [
-        "Repetir a mamografia em 6 meses",
-        "Biópsia por estereotaxia",
         "Complementar a avaliação com incidências adicionais e/ou ultrassom",
+        "Biópsia por estereotaxia",
+        "Repetir a mamografia em 6 meses",
         "Considerar o exame normal e manter o rastreamento"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Repetir em 6 meses é BI-RADS 3.",
-        "Sem lesão caracterizada, não há indicação de biópsia.",
         "Gabarito: BI-RADS 0 = incompleto — compressão localizada, magnificação, ultrassom ou comparação com exames anteriores.",
+        "Sem lesão caracterizada, não há indicação de biópsia.",
+        "Repetir em 6 meses é BI-RADS 3.",
         "BI-RADS 0 não é negativo."
       ],
       "fonte": "ACR BI-RADS, 5ª ed.",
@@ -4178,16 +4178,16 @@
       "frente": "Mulher, 23 anos, nota nódulo na mama direita há 2 meses: 2 cm, fibroelástico, móvel, indolor, sem alterações na pele. O exame inicial mais adequado e a hipótese mais provável são:",
       "opcoes": [
         "Mamografia — carcinoma ductal",
-        "Ultrassonografia — fibroadenoma",
+        "Ultrassonografia — cisto complexo",
         "Ressonância — tumor filoides",
-        "Ultrassonografia — cisto complexo"
+        "Ultrassonografia — fibroadenoma"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Em jovem, mamografia não é o primeiro exame, e o quadro é benigno.",
-        "Gabarito: jovem + nódulo móvel e elástico = fibroadenoma; ultrassom é o primeiro exame abaixo dos 30 anos.",
+        "O exame clínico descreve nódulo sólido típico, não cisto.",
         "Filoides costuma ser maior e de crescimento rápido; RM não é inicial.",
-        "O exame clínico descreve nódulo sólido típico, não cisto."
+        "Gabarito: jovem + nódulo móvel e elástico = fibroadenoma; ultrassom é o primeiro exame abaixo dos 30 anos."
       ],
       "fonte": "ACR Appropriateness Criteria",
       "add": "2026-10-20",
@@ -5177,15 +5177,15 @@
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Gestante de 38 semanas em trabalho de parto com bolsa rota há 18 horas. Temperatura 38,4 °C. CTG: linha de base de 175 bpm, variabilidade moderada, acelerações presentes, sem desacelerações. A principal hipótese para a alteração é:",
       "opcoes": [
-        "Hipóxia fetal grave, com indicação de cesárea imediata",
         "Corioamnionite",
+        "Hipóxia fetal grave, com indicação de cesárea imediata",
         "Anemia fetal",
         "Bloqueio atrioventricular fetal"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Variabilidade moderada e acelerações presentes falam contra acidemia; não há indicação de cesárea pelo traçado.",
         "Gabarito: febre materna + bolsa rota prolongada → corioamnionite é a causa mais comum de taquicardia fetal. Tratar com antibiótico; não indica cesárea por si só.",
+        "Variabilidade moderada e acelerações presentes falam contra acidemia; não há indicação de cesárea pelo traçado.",
         "Anemia fetal grave dá padrão sinusoidal.",
         "BAV causa bradicardia fixa, não taquicardia."
       ],
@@ -5667,16 +5667,16 @@
       "frente": "Gestante de 31 semanas, pré-eclâmpsia, feto com peso estimado abaixo do percentil 3. Doppler: artéria umbilical com diástole reversa; ducto venoso com onda \"a\" positiva; perfil biofísico 8/10. A conduta mais adequada é:",
       "opcoes": [
         "Manter a gestação com Doppler semanal até 34 semanas",
-        "Corticoide, sulfato de magnésio para neuroproteção e interrupção por cesariana",
+        "Aguardar alteração do ducto venoso para interromper",
         "Indução do parto com misoprostol",
-        "Aguardar alteração do ducto venoso para interromper"
+        "Corticoide, sulfato de magnésio para neuroproteção e interrupção por cesariana"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Diástole reversa na umbilical a partir de ~30 semanas indica interrupção; esperar até 34 é para diástole zero.",
-        "Gabarito: diástole reversa ≥ 30 semanas → interromper. Corticoide (< 34 sem) e MgSO4 para neuroproteção (< 32 sem); via alta pela gravidade.",
+        "Esperar o ducto venoso só se justifica muito longe do termo (< 30 sem); com 31 semanas, o risco de óbito supera o da prematuridade.",
         "Feto com diástole reversa não tolera as contrações de uma indução: a via é cesárea.",
-        "Esperar o ducto venoso só se justifica muito longe do termo (< 30 sem); com 31 semanas, o risco de óbito supera o da prematuridade."
+        "Gabarito: diástole reversa ≥ 30 semanas → interromper. Corticoide (< 34 sem) e MgSO4 para neuroproteção (< 32 sem); via alta pela gravidade."
       ],
       "pegadinha": "Perfil biofísico normal não \"anula\" um Doppler com diástole reversa.",
       "fonte": "FEBRASGO — Restrição de crescimento fetal / Protocolo Barcelona (Figueras & Gratacós) / ISUOG 2020",
@@ -5755,15 +5755,15 @@
       "sub": "Sofrimento fetal crônico",
       "frente": "No perfil biofísico fetal, o parâmetro que reflete hipóxia crônica e o primeiro a desaparecer na hipóxia aguda são, respectivamente:",
       "opcoes": [
-        "Tônus fetal e movimentos respiratórios",
         "Volume de líquido amniótico e reatividade da FCF (CTG)",
+        "Tônus fetal e movimentos respiratórios",
         "Movimentos corpóreos e tônus fetal",
         "Volume de líquido amniótico e tônus fetal"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "O tônus é marcador agudo e é o ÚLTIMO a desaparecer.",
         "Gabarito: LA é o marcador crônico (redistribuição de fluxo renal); a reatividade da FCF é a última a surgir e a primeira a sumir.",
+        "O tônus é marcador agudo e é o ÚLTIMO a desaparecer.",
         "Ambos são agudos; o tônus é o último a sumir.",
         "O LA está certo, mas o tônus é o último a desaparecer, não o primeiro."
       ],
@@ -6936,16 +6936,16 @@
       "frente": "Mulher, 58 anos, menopausa aos 50, sem uso de medicações. Densitometria: T-score de -2,7 em colo do fêmur e Z-score de -2,3. Sem fraturas prévias. A conduta e a interpretação corretas são:",
       "opcoes": [
         "Osteopenia; repetir o exame em 2 anos.",
-        "Osteoporose; investigar causas secundárias antes/junto do tratamento.",
+        "Osteoporose grave; iniciar teriparatida.",
         "Baixa massa óssea para a idade; o diagnóstico de osteoporose exige fratura.",
-        "Osteoporose grave; iniciar teriparatida."
+        "Osteoporose; investigar causas secundárias antes/junto do tratamento."
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errado: T ≤ -2,5 já é osteoporose.",
-        "Gabarito: T ≤ -2,5 na pós-menopausa = osteoporose; Z ≤ -2,0 indica perda maior que a esperada para a idade → pesquisar causa secundária.",
+        "Errado: osteoporose grave/estabelecida exige fratura por fragilidade.",
         "Errado: \"abaixo do esperado para a idade\" é linguagem do Z-score para pré-menopausa; na pós-menopausa usa-se o T-score.",
-        "Errado: osteoporose grave/estabelecida exige fratura por fragilidade."
+        "Gabarito: T ≤ -2,5 na pós-menopausa = osteoporose; Z ≤ -2,0 indica perda maior que a esperada para a idade → pesquisar causa secundária."
       ],
       "fonte": "ISCD 2019 / FEBRASGO — Osteoporose na pós-menopausa / PCDT Osteoporose (MS)",
       "add": "2026-10-21",
@@ -7366,15 +7366,15 @@
       "frente": "Mulher de 34 anos deseja congelar óvulos e pergunta qual exame avalia sua reserva ovariana e pode ser colhido em qualquer fase do ciclo menstrual. A resposta é:",
       "opcoes": [
         "Estradiol sérico",
-        "Progesterona sérica",
         "Hormônio antimülleriano",
+        "Progesterona sérica",
         "FSH sérico"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errado: estradiol isolado não avalia reserva; usa-se junto ao FSH no 3º dia.",
-        "Errado: progesterona avalia ovulação, no meio da fase lútea.",
         "Gabarito: o AMH varia pouco no ciclo e se correlaciona com a contagem de folículos antrais.",
+        "Errado: progesterona avalia ovulação, no meio da fase lútea.",
         "Errado: FSH avalia reserva, mas precisa ser colhido no início do ciclo (2º–4º dia)."
       ],
       "pegadinha": "FSH também avalia reserva — o detalhe que derruba é \"em qualquer fase do ciclo\".",
@@ -7508,17 +7508,17 @@
       "sub": "Sofrimento fetal agudo — CTG",
       "frente": "Gestante de 37 semanas e 5 dias, com rotura de membranas e líquido tinto de mecônio, colo com 2 cm. CTG: linha de base 140 bpm, variabilidade de 12 bpm, acelerações transitórias presentes e uma desaceleração variável isolada. A explicação mais provável para a desaceleração é:",
       "opcoes": [
-        "Compressão do polo cefálico",
+        "Compressão do cordão umbilical favorecida pela rotura das membranas",
         "Insuficiência uteroplacentária com asfixia fetal",
         "Hipertensão arterial crônica materna",
-        "Compressão do cordão umbilical favorecida pela rotura das membranas"
+        "Compressão do polo cefálico"
       ],
-      "certa": 3,
+      "certa": 0,
       "comentarios": [
-        "Errado: compressão cefálica dá DIP I (precoce), espelhando a contração, no período mais avançado do trabalho de parto e em quase todas as contrações.",
+        "Gabarito: DIP III = compressão funicular, mais fácil com bolsa rota/oligodrâmnio.",
         "Errado: variabilidade moderada e acelerações afastam asfixia; a insuficiência placentária gera DIP II.",
         "Errado: HAS crônica isolada não explica uma DIP III.",
-        "Gabarito: DIP III = compressão funicular, mais fácil com bolsa rota/oligodrâmnio."
+        "Errado: compressão cefálica dá DIP I (precoce), espelhando a contração, no período mais avançado do trabalho de parto e em quase todas as contrações."
       ],
       "pegadinha": "O mecônio no enunciado é o distrator para você marcar asfixia.",
       "fonte": "FEBRASGO — Avaliação da vitalidade fetal intraparto / ACOG Practice Bulletin 106 / MS — Diretriz Nacional de Assistência ao Parto Normal",
@@ -7820,15 +7820,15 @@
       "opcoes": [
         "Betametasona",
         "Sulfato de magnésio",
-        "Azitromicina",
-        "Ampicilina"
+        "Ampicilina",
+        "Azitromicina"
       ],
-      "certa": 3,
+      "certa": 2,
       "comentarios": [
         "Errado: o corticoide é indicado para partos < 34 semanas.",
         "Errado: a neuroproteção com MgSO4 é para partos < 32 semanas.",
-        "Errado: azitromicina fez parte da latência e não cobre o GBS.",
-        "Gabarito: ampicilina (ou penicilina) como profilaxia do GBS no parto pré-termo com bolsa rota prolongada."
+        "Gabarito: ampicilina (ou penicilina) como profilaxia do GBS no parto pré-termo com bolsa rota prolongada.",
+        "Errado: azitromicina fez parte da latência e não cobre o GBS."
       ],
       "fonte": "MS — Manual de Gestação de Alto Risco (2022) / FEBRASGO / ACOG Practice Bulletin 217 (RPMO) / CDC-ACOG — prevenção do GBS",
       "add": "2026-10-21",
@@ -8395,15 +8395,15 @@
       "sub": "Anemia ferropriva e suplementação de ferro",
       "frente": "Lactente de 6 meses, nascido a termo com 3.300 g, em aleitamento materno e iniciando alimentação complementar, sem fatores de risco. Segundo a atualização 2026 da SBP, a profilaxia de ferro deve ser:",
       "opcoes": [
-        "1 mg/kg/dia de ferro elementar, contínuo, até 24 meses",
         "10 a 12,5 mg/dia de ferro elementar por 3 meses, pausa de 3 meses e novo ciclo aos 12 meses",
+        "1 mg/kg/dia de ferro elementar, contínuo, até 24 meses",
         "Desnecessária, pois está em aleitamento materno",
         "2 mg/kg/dia a partir de 30 dias até 1 ano"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errado: era o esquema da SBP 2021 (substituído em 2026).",
         "Gabarito: dois ciclos de 3 meses (6–9 e 12–15 meses) com dose fixa.",
+        "Errado: era o esquema da SBP 2021 (substituído em 2026).",
         "Errado: o leite materno não supre o ferro após os 6 meses; a profilaxia é universal.",
         "Errado: esquema do prematuro/baixo peso."
       ],
@@ -8578,15 +8578,15 @@
       "frente": "Menino de 12 anos, saudável, estatura no percentil 3, velocidade de crescimento de 5 cm/ano e sem sinais puberais. Pai com 1,75 m e mãe com 1,63 m; o pai relata ter entrado na puberdade aos 16 anos. Idade óssea de 10 anos. O diagnóstico mais provável é:",
       "opcoes": [
         "Baixa estatura familiar",
-        "Retardo constitucional do crescimento e da puberdade",
         "Deficiência de hormônio do crescimento",
+        "Retardo constitucional do crescimento e da puberdade",
         "Hipotireoidismo adquirido"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errado: na familiar os pais são baixos e a idade óssea é igual à cronológica.",
-        "Gabarito: pais com altura normal, puberdade tardia no pai, IO atrasada e velocidade normal.",
         "Errado: deficiência de GH tem velocidade de crescimento baixa e costuma ter excesso de peso relativo.",
+        "Gabarito: pais com altura normal, puberdade tardia no pai, IO atrasada e velocidade normal.",
         "Errado: hipotireoidismo também reduz a velocidade e dá outros sinais (ganho de peso, constipação, bradicardia)."
       ],
       "pegadinha": "Alvo do menino = (175 + 163 + 13) ÷ 2 ≈ 175,5 cm → a criança está abaixo do canal familiar, mas com IO atrasada e velocidade normal.",
@@ -8699,15 +8699,15 @@
       "opcoes": [
         "Faz perguntas simples sobre o ambiente",
         "Compreende conceitos como grande/pequeno e muito/pouco",
-        "Nomeia objetos do dia a dia, como alimentos e roupas",
-        "Vocabulário de cerca de 50 palavras, com frases de 2 palavras"
+        "Vocabulário de cerca de 50 palavras, com frases de 2 palavras",
+        "Nomeia objetos do dia a dia, como alimentos e roupas"
       ],
-      "certa": 3,
+      "certa": 2,
       "comentarios": [
         "Esperado: fazer perguntas é típico a partir dos 3 anos.",
         "Esperado: conceitos básicos fazem parte dessa faixa.",
-        "Esperado: nomeia objetos comuns e partes do corpo.",
-        "Gabarito: 50 palavras e frases de 2 palavras é marco dos 2 anos; aos 3,5 anos espera-se ~1.000 palavras e frases de 3–5."
+        "Gabarito: 50 palavras e frases de 2 palavras é marco dos 2 anos; aos 3,5 anos espera-se ~1.000 palavras e frases de 3–5.",
+        "Esperado: nomeia objetos comuns e partes do corpo."
       ],
       "fonte": "SBP — Tratado de Pediatria / Caderneta da Criança (MS) / OMS 2006-2007",
       "add": "2026-10-21",
@@ -9124,15 +9124,15 @@
       "opcoes": [
         "Soro antirrábico + vacina nos dias 0, 3, 7 e 14",
         "Vacina nos dias 0, 3, 7 e 14",
-        "Lavar a ferida e observar o cão por 10 dias, sem iniciar profilaxia",
-        "Vacina nos dias 0 e 3 e observar o cão"
+        "Vacina nos dias 0 e 3 e observar o cão",
+        "Lavar a ferida e observar o cão por 10 dias, sem iniciar profilaxia"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Errado: seria a conduta se o cão não fosse observável (ou suspeito) com acidente grave.",
         "Errado: vacina isolada é para acidente leve com animal não observável.",
-        "Gabarito: cão/gato sadio e observável → observar 10 dias, mesmo em acidente grave; se adoecer/morrer/sumir, iniciar vacina + soro.",
-        "Errado: esquema de 2 doses é de reexposição."
+        "Errado: esquema de 2 doses é de reexposição.",
+        "Gabarito: cão/gato sadio e observável → observar 10 dias, mesmo em acidente grave; se adoecer/morrer/sumir, iniciar vacina + soro."
       ],
       "pegadinha": "A gravidade (mão, profundo) é o distrator: com cão observável, primeiro observa.",
       "fonte": "MS — Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS (protocolo de profilaxia pré, pós e reexposição da raiva)",
@@ -9293,15 +9293,15 @@
       "frente": "Lactente de 2 meses, em aleitamento materno exclusivo, ativo e ganhando peso, apresenta fezes com rajas de sangue e muco há 1 semana. Exame físico normal. A conduta mais adequada é:",
       "opcoes": [
         "Suspender o aleitamento materno e iniciar fórmula de aminoácidos",
-        "Manter o aleitamento materno e orientar dieta materna isenta de leite de vaca e derivados",
         "Trocar o aleitamento por fórmula de soja",
+        "Manter o aleitamento materno e orientar dieta materna isenta de leite de vaca e derivados",
         "Dosar IgE específica para proteínas do leite antes de qualquer mudança"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errado: não se suspende o aleitamento materno.",
-        "Gabarito: proctocolite alérgica — manter AM e excluir leite da dieta da mãe (com reposição de cálcio).",
         "Errado: soja não é indicada < 6 meses nem nas formas gastrointestinais.",
+        "Gabarito: proctocolite alérgica — manter AM e excluir leite da dieta da mãe (com reposição de cálcio).",
         "Errado: na forma não IgE a IgE específica é negativa; o diagnóstico é clínico."
       ],
       "pegadinha": "O bebê está bem e ganhando peso — o detalhe que aponta proctocolite (forma benigna).",
@@ -9573,15 +9573,15 @@
       "frente": "Homem, 30 anos, colisão moto × carro. FR 34 irpm, SatO2 86%, PA 80 × 50 mmHg, FC 130 bpm. Murmúrio vesicular abolido e MACICEZ à percussão no hemitórax direito; jugulares colabadas; traqueia central. A conduta imediata é:",
       "opcoes": [
         "Punção com agulha no 2º espaço intercostal direito",
-        "Drenagem torácica à direita com reposição volêmica, avaliando o débito do dreno",
         "Pericardiocentese de alívio",
+        "Drenagem torácica à direita com reposição volêmica, avaliando o débito do dreno",
         "Radiografia de tórax antes de qualquer procedimento"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Punção é para pneumotórax hipertensivo (timpanismo, jugulares túrgidas).",
-        "Gabarito: hemotórax maciço (choque + MV abolido + macicez + jugulares colabadas). Drena e repõe; ≥ 1.500 mL de imediato ou > 200 mL/h → toracotomia.",
         "Tamponamento cursa com jugulares túrgidas e MV preservado.",
+        "Gabarito: hemotórax maciço (choque + MV abolido + macicez + jugulares colabadas). Drena e repõe; ≥ 1.500 mL de imediato ou > 200 mL/h → toracotomia.",
         "Lesões da avaliação primária são tratadas pelo diagnóstico clínico, sem esperar imagem."
       ],
       "pegadinha": "Percussão + jugulares definem o diagnóstico.",
@@ -9603,15 +9603,15 @@
       "sub": "Trauma torácico",
       "frente": "Mulher, 45 anos, queda de altura com fraturas de 4ª a 7ª costelas esquerdas em dois pontos cada, com movimento paradoxal. Evolui com SatO2 88% em ar ambiente. O principal mecanismo da hipoxemia é:",
       "opcoes": [
-        "Movimento paradoxal do segmento, que impede a ventilação do pulmão",
         "Contusão pulmonar subjacente, com aumento do shunt intrapulmonar",
+        "Movimento paradoxal do segmento, que impede a ventilação do pulmão",
         "Dor torácica que impede a expansão pulmonar",
         "Pneumotórax oculto obrigatório nesse tipo de trauma"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Era a explicação antiga (\"pendelluft\"); hoje se sabe que o movimento paradoxal pesa pouco.",
         "Gabarito: hemorragia e edema alveolar → áreas perfundidas e não ventiladas → shunt → hipoxemia.",
+        "Era a explicação antiga (\"pendelluft\"); hoje se sabe que o movimento paradoxal pesa pouco.",
         "A dor contribui (hipoventilação, atelectasia), mas não é o principal.",
         "Pneumotórax pode coexistir, mas não é obrigatório nem o mecanismo principal."
       ],
@@ -9789,15 +9789,15 @@
       "frente": "Homem, 25 anos, vítima de colisão automobilística. PA 78 × 40 mmHg, FC 140 bpm após 1 L de cristaloide e início de hemocomponentes. Tórax sem alterações na radiografia, pelve estável. FAST com líquido no espaço hepatorrenal. A conduta é:",
       "opcoes": [
         "TC de abdome com contraste para graduar a lesão",
-        "Laparotomia exploradora",
         "Lavado peritoneal diagnóstico para confirmar",
+        "Laparotomia exploradora",
         "Arteriografia com embolização hepática"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "TC só para paciente estável.",
-        "Gabarito: trauma contuso, instável e FAST positivo → laparotomia.",
         "O FAST já mostrou sangue; LPD não acrescenta e atrasa.",
+        "Gabarito: trauma contuso, instável e FAST positivo → laparotomia.",
         "Angioembolização é para paciente estável com blush."
       ],
       "fonte": "ATLS 10ª ed. (ACS)",
@@ -10789,15 +10789,15 @@
       "frente": "Homem, 22 anos, atingido por bastão na região temporal esquerda. Perdeu a consciência por 2 minutos, recuperou e conversava normalmente. Duas horas depois, cefaleia intensa, vômitos e Glasgow 9 com midríase à esquerda. A TC mostra lesão hiperdensa biconvexa temporal esquerda com desvio da linha média de 7 mm. A conduta é:",
       "opcoes": [
         "Manitol e observação com TC em 6 horas",
-        "Craniotomia de urgência para drenagem do hematoma",
         "Trepanação para drenagem do hematoma subdural",
+        "Craniotomia de urgência para drenagem do hematoma",
         "Corticoide em dose alta e monitorização da PIC"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Manitol serve como ponte, não como tratamento definitivo de hematoma expansivo.",
-        "Gabarito: hematoma extradural (intervalo lúcido + lente biconvexa) com anisocoria e desvio → craniotomia o mais rápido possível.",
         "Não é subdural (seria crescente) e trepanação não é o tratamento padrão do extradural agudo.",
+        "Gabarito: hematoma extradural (intervalo lúcido + lente biconvexa) com anisocoria e desvio → craniotomia o mais rápido possível.",
         "Corticoide não tem papel no TCE."
       ],
       "pegadinha": "Intervalo lúcido + imagem biconvexa = extradural.",
@@ -10927,15 +10927,15 @@
       "sub": "TCE",
       "frente": "Motociclista, 19 anos, colisão em alta velocidade. Glasgow 6 desde o local do acidente, pupilas isocóricas. TC de crânio sem hematomas ou desvio de linha média. RM mostra pequenos focos hemorrágicos no corpo caloso e na transição córtico-subcortical. O diagnóstico mais provável é:",
       "opcoes": [
-        "Hematoma subdural agudo",
         "Lesão axonal difusa",
+        "Hematoma subdural agudo",
         "Hemorragia subaracnoide aneurismática",
         "Concussão cerebral"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "O subdural seria visível na TC como crescente.",
         "Gabarito: coma desproporcional à TC + micro-hemorragias no corpo caloso em trauma de aceleração-desaceleração.",
+        "O subdural seria visível na TC como crescente.",
         "Não há história de cefaleia súbita nem sangue em cisternas.",
         "Concussão é disfunção transitória, sem coma prolongado nem lesão na RM."
       ],
@@ -12253,15 +12253,15 @@
       "frente": "Paciente em UTI após múltiplas laparotomias, hemodinamicamente estável há 24 h, com trato gastrointestinal funcionante. A melhor forma de evitar atrofia da mucosa intestinal, preservar o tecido linfoide intestinal e a produção de IgA é:",
       "opcoes": [
         "Nutrição parenteral total por cateter central",
-        "Nutrição enteral",
         "Glutamina venosa isolada",
+        "Nutrição enteral",
         "Manter jejum até o retorno completo do trânsito intestinal"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "A parenteral nutre o paciente, mas não o enterócito: a mucosa atrofia.",
-        "Gabarito: a enteral mantém vilosidades, GALT e IgA secretória e reduz a translocação bacteriana.",
         "Glutamina isolada não substitui a presença de nutrientes na luz.",
+        "Gabarito: a enteral mantém vilosidades, GALT e IgA secretória e reduz a translocação bacteriana.",
         "Esperar o trânsito completo é desnecessário e piora o trofismo."
       ],
       "fonte": "ESPEN Guideline: Clinical nutrition in surgery (2017, atualização 2021) / Projeto ACERTO",
@@ -12533,17 +12533,17 @@
       "sub": "Antibioticoprofilaxia cirúrgica",
       "frente": "Paciente de 50 anos fará colecistectomia aberta eletiva. Sobre a antibioticoprofilaxia, é correto:",
       "opcoes": [
-        "Iniciar cefazolina na indução anestésica, até 60 minutos antes da incisão, sem necessidade de manter no pós-operatório",
+        "Iniciar cefazolina após o fechamento da pele e manter enquanto houver dreno",
         "Iniciar ceftriaxona na véspera e manter por 7 dias",
         "Não há indicação, pois a cirurgia é limpa",
-        "Iniciar cefazolina após o fechamento da pele e manter enquanto houver dreno"
+        "Iniciar cefazolina na indução anestésica, até 60 minutos antes da incisão, sem necessidade de manter no pós-operatório"
       ],
-      "certa": 0,
+      "certa": 3,
       "comentarios": [
-        "Gabarito: cirurgia potencialmente contaminada; cefazolina até 60 min antes da incisão, dose única/≤ 24 h.",
+        "Após o fechamento não há benefício; dreno não prolonga a profilaxia.",
         "Profilaxia não começa na véspera nem dura 7 dias.",
         "Abrir a via biliar a classifica como potencialmente contaminada, não limpa.",
-        "Após o fechamento não há benefício; dreno não prolonga a profilaxia."
+        "Gabarito: cirurgia potencialmente contaminada; cefazolina até 60 min antes da incisão, dose única/≤ 24 h."
       ],
       "fonte": "ASHP/IDSA/SIS/SHEA 2013 / CDC 2017 (prevenção de infecção do sítio cirúrgico)",
       "add": "2026-10-21",
@@ -13064,15 +13064,15 @@
       "frente": "Homem, 68 anos, hipertenso e diabético em uso de metformina, losartana, atenolol e sinvastatina, com stent farmacológico coronariano há 3 anos em uso de AAS. Fará herniorrafia inguinal eletiva. Assintomático, sobe 3 lances de escada sem sintomas. Qual a conduta?",
       "opcoes": [
         "Suspender o atenolol 7 dias antes",
-        "Solicitar cintilografia miocárdica antes da cirurgia",
         "Manter atenolol, sinvastatina e AAS; suspender a metformina no dia da cirurgia",
+        "Solicitar cintilografia miocárdica antes da cirurgia",
         "Suspender o AAS 7 dias antes e fazer ponte com enoxaparina"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Suspender betabloqueador crônico causa rebote isquêmico.",
-        "Capacidade funcional ≥ 4 METs e cirurgia de baixo risco: teste não invasivo não muda conduta.",
         "Gabarito: mantém betabloqueador, estatina e AAS (stent); metformina suspensa no dia.",
+        "Capacidade funcional ≥ 4 METs e cirurgia de baixo risco: teste não invasivo não muda conduta.",
         "AAS deve ser mantido em portador de stent; ponte com heparina não substitui antiagregante."
       ],
       "fonte": "Diretriz de Avaliação Cardiovascular Perioperatória SBC 2024 / ACC-AHA 2024 / ASA",
@@ -14557,15 +14557,15 @@
       "frente": "Homem, 35 anos, dor intensa e localizada na fossa ilíaca esquerda há 1 dia, afebril, sem leucocitose e com PCR levemente elevada. A TC mostra lesão ovalada paracólica de densidade de gordura com halo hiperdenso, adjacente ao cólon descendente, com densificação da gordura ao redor. A conduta é:",
       "opcoes": [
         "Ciprofloxacino e metronidazol por 7 dias",
-        "Laparoscopia com ressecção do apêndice epiploico",
         "Analgésicos e anti-inflamatório não esteroidal",
+        "Laparoscopia com ressecção do apêndice epiploico",
         "Internação com antibiótico venoso e dieta zero"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Antibiótico não faz parte do tratamento: é necrose gordurosa estéril.",
-        "A cirurgia não é indicada na imensa maioria dos casos.",
         "Gabarito: apendagite epiploica é autolimitada; trata-se a dor.",
+        "A cirurgia não é indicada na imensa maioria dos casos.",
         "É o tratamento da diverticulite complicada, não da apendagite."
       ],
       "visual": {
@@ -14881,15 +14881,15 @@
       "frente": "Paciente em tratamento para tuberculose intestinal ileocecal. Qual é a principal indicação de tratamento cirúrgico nessa doença?",
       "opcoes": [
         "Fístula enterocutânea",
-        "Obstrução intestinal",
         "Diarreia crônica refratária",
+        "Obstrução intestinal",
         "Linfadenomegalia mesentérica"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "A maioria das fístulas fecha com o tratamento medicamentoso.",
-        "Gabarito: a estenose ileocecal com obstrução é a principal indicação cirúrgica.",
         "Diarreia é tratada clinicamente.",
+        "Gabarito: a estenose ileocecal com obstrução é a principal indicação cirúrgica.",
         "Linfonodos respondem ao RIPE; não indicam cirurgia."
       ],
       "fonte": "Sabiston / Manual de Recomendações para o Controle da TB no Brasil (MS, 2019)",
@@ -15024,15 +15024,15 @@
       "frente": "Homem, 32 anos, febre vespertina, emagrecimento e dor pleurítica há 1 mês. Toracocentese: líquido amarelo-citrino, proteína pleural/sérica 0,7, LDH pleural/sérica 0,68, 2.800 células/mm³ com 85% de linfócitos, glicose 70 mg/dL, sem eosinófilos e 2% de células mesoteliais. A hipótese mais provável e o exame que mais ajuda são:",
       "opcoes": [
         "Transudato por hipoalbuminemia; dosar albumina sérica",
-        "Exsudato tuberculoso; dosar ADA no líquido",
         "Empiema; pH do líquido para indicar drenagem",
+        "Exsudato tuberculoso; dosar ADA no líquido",
         "Derrame neoplásico; citologia oncótica, pela predominância linfocítica"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Os dois critérios de Light estão positivos: é exsudato.",
-        "Gabarito: exsudato linfocítico, sem eosinófilos, mesoteliais < 5% e quadro subagudo → TB pleural; ADA > 40 reforça.",
         "Empiema teria pus/neutrófilos e glicose baixa.",
+        "Gabarito: exsudato linfocítico, sem eosinófilos, mesoteliais < 5% e quadro subagudo → TB pleural; ADA > 40 reforça.",
         "Neoplasia também é linfocítica, mas o quadro febril subagudo em jovem e as mesoteliais < 5% apontam TB."
       ],
       "pegadinha": "Mesoteliais < 5% é pista de TB.",
@@ -15583,15 +15583,15 @@
       "frente": "Mulher, 34 anos, vivendo com HIV, CD4 = 480 células/mm³, carga viral indetectável. Tratou ILTB com isoniazida há 3 anos, após PT de 12 mm. Assintomática, RX de tórax normal, sem contato recente com TB. A conduta em relação à ILTB é:",
       "opcoes": [
         "Repetir a PT e tratar se ≥ 5 mm",
-        "Tratar novamente com 3HP, pois toda PVHIV deve receber tratamento anual",
         "Não tratar novamente",
+        "Tratar novamente com 3HP, pois toda PVHIV deve receber tratamento anual",
         "Fazer IGRA e tratar se positivo"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "A PT continuará positiva (memória imunológica) e não indica novo tratamento.",
-        "Não existe tratamento anual de rotina.",
         "Gabarito: já tratou e não teve nova exposição após o diagnóstico de HIV → não repete.",
+        "Não existe tratamento anual de rotina.",
         "O IGRA também permanece positivo após o tratamento."
       ],
       "fonte": "Fluxograma de condutas de AIDS avançada (MS, 2026)",
@@ -15743,16 +15743,16 @@
       "sub": "HIV — TARV e infecções oportunistas",
       "frente": "Homem, 36 anos, diagnóstico recente de HIV, CD4 = 45 células/mm³. Internado com cefaleia há 3 semanas; líquor com tinta da China positiva. Iniciou anfotericina B + flucitosina. Sobre a TARV, a conduta correta é:",
       "opcoes": [
-        "Iniciar a TARV imediatamente, pois o CD4 é muito baixo",
-        "Iniciar a TARV em até 7 dias do antifúngico",
         "Iniciar a TARV 4 a 6 semanas após o início do antifúngico",
+        "Iniciar a TARV em até 7 dias do antifúngico",
+        "Iniciar a TARV imediatamente, pois o CD4 é muito baixo",
         "Só iniciar a TARV após cultura do líquor negativa e término da manutenção"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "TARV imediata na meningite criptocócica aumenta a mortalidade (SIRI no SNC).",
-        "Até 7 dias é a regra geral e a da TB fora do SNC.",
         "Gabarito: meningite criptocócica → TARV 4–6 semanas após o início do antifúngico.",
+        "Até 7 dias é a regra geral e a da TB fora do SNC.",
+        "TARV imediata na meningite criptocócica aumenta a mortalidade (SIRI no SNC).",
         "Não se espera o fim da manutenção (meses)."
       ],
       "fonte": "Fluxograma de condutas de AIDS avançada (MS, 2026) / PCDT HIV em adultos (MS, 2024)",
@@ -16098,15 +16098,15 @@
       "sub": "Meningites",
       "frente": "Criança de 4 anos com febre, vômitos e rigidez de nuca há 1 dia. Líquor: 1.200 células/mm³ (85% neutrófilos), proteína 180 mg/dL, glicose 20 mg/dL (glicemia 100 mg/dL). O diagnóstico e o tratamento empírico mais adequados são:",
       "opcoes": [
-        "Meningite viral; suporte clínico",
         "Meningite bacteriana; ceftriaxona (± vancomicina) com dexametasona",
+        "Meningite viral; suporte clínico",
         "Meningite tuberculosa; RIPE + corticoide",
         "Meningite bacteriana; ampicilina + gentamicina"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Glicose de 20 e neutrófilos > 1.000 não são de viral.",
         "Gabarito: padrão bacteriano; nessa idade, ceftriaxona (vancomicina associada nas referências americanas) e dexametasona antes ou junto do antibiótico.",
+        "Glicose de 20 e neutrófilos > 1.000 não são de viral.",
         "TB tem linfócitos e evolução arrastada.",
         "Ampicilina + gentamicina é esquema de recém-nascido."
       ],
@@ -16357,15 +16357,15 @@
       "frente": "Homem, 62 anos, em tratamento de insuficiência cardíaca com FE reduzida e TFG de 55 mL/min, com dor intensa, edema e rubor na 1ª metatarsofalângica há 12 horas. Não usa hipouricemiante. A melhor conduta para a crise é:",
       "opcoes": [
         "Naproxeno em dose plena",
-        "Colchicina em dose baixa",
         "Alopurinol 300 mg/dia, sem anti-inflamatório",
+        "Colchicina em dose baixa",
         "Indometacina associada a alopurinol"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "AINE é contraindicado na IC (retenção de sódio, descompensação) e na TFG < 60.",
-        "Gabarito: colchicina em dose baixa nas primeiras 24–36 h, com ajuste pela função renal.",
         "Alopurinol não trata a crise; iniciá-lo sozinho piora a crise.",
+        "Gabarito: colchicina em dose baixa nas primeiras 24–36 h, com ajuste pela função renal.",
         "Indometacina também é AINE."
       ],
       "fonte": "ACR Guideline for the Management of Gout (2020) / EULAR 2016 / Consenso SBR",
@@ -16562,15 +16562,15 @@
       "frente": "Mulher, 30 anos, assintomática, com FAN 1/320 padrão nuclear pontilhado fino denso em exame de rotina. Exame físico, hemograma, função renal e EAS normais. A interpretação mais adequada é:",
       "opcoes": [
         "Lúpus eritematoso sistêmico em fase inicial; iniciar hidroxicloroquina",
-        "Achado compatível com anti-DFS70, comum em pessoas saudáveis; não indica doença autoimune",
         "Síndrome de Sjögren; pedir biópsia de glândula salivar",
+        "Achado compatível com anti-DFS70, comum em pessoas saudáveis; não indica doença autoimune",
         "Esclerose sistêmica; pedir anti-centrômero e capilaroscopia"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Não há clínica nem critério para LES; FAN não se trata.",
-        "Gabarito: o pontilhado fino denso (anti-DFS70) é típico de pessoas sem doença autoimune.",
         "Sjögren dá pontilhado fino (anti-Ro/La), com sintomas secos.",
+        "Gabarito: o pontilhado fino denso (anti-DFS70) é típico de pessoas sem doença autoimune.",
         "Esclerose sistêmica limitada dá padrão centromérico."
       ],
       "fonte": "Consenso Brasileiro de FAN HEp-2 (5º Consenso) / ICAP — International Consensus on ANA Patterns",
@@ -16941,15 +16941,15 @@
       "sub": "DPOC",
       "frente": "Homem, 64 anos, tabagista (50 maços-ano), sem diagnóstico prévio, chega com coriza, dor de garganta, febre e piora da dispneia há 3 dias, escarro amarelado. Sibilos difusos, expiração prolongada, SatO2 86% em ar ambiente. RX: hiperinsuflação, sem consolidação. Teste rápido para influenza negativo. Já recebeu salbutamol, ipratrópio, corticoide e O2. O tratamento antimicrobiano mais adequado é:",
       "opcoes": [
-        "Azitromicina oral e alta",
         "Ceftriaxona e oseltamivir",
+        "Azitromicina oral e alta",
         "Piperacilina-tazobactam e oseltamivir",
         "Ceftriaxona, sem oseltamivir, pois o teste rápido foi negativo"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Precisa de internação (hipoxemia com O2 suplementar); macrolídeo oral e alta não bastam.",
         "Gabarito: exacerbação com indicação de internação, sem risco de Pseudomonas → ceftriaxona; DPOC é risco para influenza grave → oseltamivir mesmo com teste rápido negativo.",
+        "Precisa de internação (hipoxemia com O2 suplementar); macrolídeo oral e alta não bastam.",
         "Sem fator de risco para Pseudomonas, pip-tazo é desnecessária e induz resistência.",
         "Teste rápido tem muito falso-negativo; não exclui influenza."
       ],
@@ -16974,16 +16974,16 @@
       "frente": "Paciente com exacerbação de DPOC mantém dispneia intensa e sibilância apesar de salbutamol, ipratrópio, corticoide sistêmico e oxigênio. Não há indicação imediata de ventilação. Qual medida pode ser acrescentada?",
       "opcoes": [
         "N-acetilcisteína venosa",
-        "Sulfato de magnésio 2 g IV em 20 minutos",
+        "Teofilina como primeira opção",
         "Adrenalina subcutânea",
-        "Teofilina como primeira opção"
+        "Sulfato de magnésio 2 g IV em 20 minutos"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Não há evidência de benefício da N-acetilcisteína na exacerbação.",
-        "Gabarito da questão: magnésio IV como broncodilatador adjuvante nos refratários (evidência limitada; não é rotina pelo GOLD).",
+        "Teofilina é 2ª linha, com náusea, vômitos e arritmias.",
         "Adrenalina sistêmica causa arritmia e isquemia; praticamente não se usa.",
-        "Teofilina é 2ª linha, com náusea, vômitos e arritmias."
+        "Gabarito da questão: magnésio IV como broncodilatador adjuvante nos refratários (evidência limitada; não é rotina pelo GOLD)."
       ],
       "fonte": "GOLD Report 2025 / Diretrizes SBPT DPOC",
       "add": "2026-10-23",
@@ -17187,16 +17187,16 @@
       "frente": "Homem, 66 anos, tabagista, com massa hilar à direita, sódio de 118 mEq/L, osmolaridade sérica de 250 mOsm/kg, osmolaridade urinária de 520 mOsm/kg e sódio urinário de 60 mEq/L. Está euvolêmico, sem sintomas neurológicos. TSH e cortisol normais. A conduta inicial mais adequada é:",
       "opcoes": [
         "Soro fisiológico 0,9% em infusão rápida",
-        "Restrição hídrica",
+        "Furosemida isolada",
         "Salina hipertônica 3% em bolus",
-        "Furosemida isolada"
+        "Restrição hídrica"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Na SIADH com Uosm alta, SF 0,9% pode piorar o sódio (rim excreta o Na e retém água).",
-        "Gabarito: SIADH (provável carcinoma de pequenas células) sem sintomas graves → restrição hídrica é a 1ª medida.",
+        "Furosemida isolada não é a 1ª linha; associa-se a sal oral.",
         "Salina 3% só com sintomas graves.",
-        "Furosemida isolada não é a 1ª linha; associa-se a sal oral."
+        "Gabarito: SIADH (provável carcinoma de pequenas células) sem sintomas graves → restrição hídrica é a 1ª medida."
       ],
       "fonte": "Diretriz Europeia de Hiponatremia (ESE/ESICM/ERA, 2014) / Recomendações do painel de especialistas (Verbalis, 2013) / Harrison 21ª ed.",
       "add": "2026-10-23",
@@ -17550,15 +17550,15 @@
       "frente": "Na avaliação de uma idosa de 78 anos, independente para todas as atividades, qual achado é considerado SENESCÊNCIA (envelhecimento normal)?",
       "opcoes": [
         "Incontinência urinária de urgência",
-        "Esquecimento de nomes recém-apresentados, recuperados depois, sem prejuízo nas atividades",
         "Duas quedas no último semestre",
+        "Esquecimento de nomes recém-apresentados, recuperados depois, sem prejuízo nas atividades",
         "Perda de 8% do peso em 6 meses"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Incontinência é senilidade (gigante da geriatria), deve ser investigada.",
-        "Gabarito: lentificação e esquecimento benigno, sem prejuízo funcional, fazem parte da senescência.",
         "Quedas recorrentes são senilidade (instabilidade postural).",
+        "Gabarito: lentificação e esquecimento benigno, sem prejuízo funcional, fazem parte da senescência.",
         "Perda de peso não intencional é sinal de doença/fragilidade."
       ],
       "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / Tratado de Geriatria e Gerontologia (Freitas)",
@@ -17756,16 +17756,16 @@
       "frente": "Mulher, 38 anos, IMC 42 kg/m², submetida a bypass gástrico em Y de Roux há 36 horas. Refere apenas leve desconforto abdominal, afebril, mas com FC de 128 bpm persistente e FR de 24 irpm. A hipótese que deve ser investigada primeiro é:",
       "opcoes": [
         "Dumping precoce",
-        "Fístula da anastomose gastrojejunal",
+        "Úlcera marginal",
         "Hérnia interna de Petersen",
-        "Úlcera marginal"
+        "Fístula da anastomose gastrojejunal"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Dumping ocorre após refeições, com a dieta já em andamento.",
-        "Gabarito: taquicardia persistente no pós-operatório precoce é o sinal mais precoce de fístula (o obeso tem pouca dor e defesa).",
+        "Úlcera marginal é tardia (semanas a meses), associada a tabagismo e AINE.",
         "Hérnia interna costuma ser tardia, após perda de peso.",
-        "Úlcera marginal é tardia (semanas a meses), associada a tabagismo e AINE."
+        "Gabarito: taquicardia persistente no pós-operatório precoce é o sinal mais precoce de fístula (o obeso tem pouca dor e defesa)."
       ],
       "fonte": "CFM — Resolução nº 2.429/2025 / Sabiston / ASMBS 2022",
       "add": "2026-10-23",
@@ -17971,15 +17971,15 @@
       "frente": "Mulher, 32 anos, com nódulo tireoidiano de 2 cm. A PAAF sugere carcinoma medular; a calcitonina está muito elevada. O pai teve \"tumor de suprarrenal\". Antes da tireoidectomia, é obrigatório:",
       "opcoes": [
         "Cintilografia com iodo radioativo",
-        "Dosar metanefrinas plasmáticas ou urinárias",
         "Iniciar levotiroxina para suprimir o TSH",
+        "Dosar metanefrinas plasmáticas ou urinárias",
         "Fazer pesquisa de tireoglobulina sérica"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "O medular não capta iodo; cintilografia não ajuda.",
-        "Gabarito: suspeita de NEM 2 → excluir feocromocitoma antes da cirurgia (e operá-lo primeiro, se presente).",
         "Supressão de TSH não tem papel no medular (células C não dependem de TSH).",
+        "Gabarito: suspeita de NEM 2 → excluir feocromocitoma antes da cirurgia (e operá-lo primeiro, se presente).",
         "Tireoglobulina é marcador dos diferenciados; no medular usam-se calcitonina e CEA."
       ],
       "fonte": "Sabiston / ATA Guidelines 2015 / Consenso Brasileiro de Nódulo e Câncer de Tireoide (SBEM)",
@@ -18661,16 +18661,16 @@
       "sub": "Tuberculose na infância",
       "frente": "Menino de 6 anos com febre há 15 dias, emagrecimento e linfonodomegalia cervical que não melhorou com cefalexina. Avó com tosse há 2 meses mora na mesma casa. PT de 14 mm. O diagnóstico mais provável e o tratamento são:",
       "opcoes": [
-        "Doença da arranhadura do gato; azitromicina",
-        "Toxoplasmose ganglionar; sulfametoxazol-trimetoprima",
         "Tuberculose ganglionar; esquema com rifampicina, isoniazida e pirazinamida (sem etambutol)",
+        "Toxoplasmose ganglionar; sulfametoxazol-trimetoprima",
+        "Doença da arranhadura do gato; azitromicina",
         "Tuberculose ganglionar; esquema com rifampicina, isoniazida, pirazinamida e etambutol"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Bartonella costuma ter pápula de inoculação e contato com gato, febre mais curta.",
-        "Toxoplasmose dá febre baixa e quadro brando, sem emagrecimento importante.",
         "Gabarito: TB ganglionar (forma extrapulmonar mais comum na criança) em < 10 anos → RHZ. Por ser forma não grave, hoje cabe o esquema de 4 meses.",
+        "Toxoplasmose dá febre baixa e quadro brando, sem emagrecimento importante.",
+        "Bartonella costuma ter pápula de inoculação e contato com gato, febre mais curta.",
         "Etambutol só a partir dos 10 anos."
       ],
       "pegadinha": "Contato com adulto tossidor + PT reatora = pulo do gato da questão.",
@@ -18964,16 +18964,16 @@
       "frente": "Menina de 3 anos com edema e limitação do joelho direito há 2 meses, sem febre. FAN positivo 1/320, FR negativo, hemograma normal. Após o diagnóstico, a medida mais importante para prevenir sequela é:",
       "opcoes": [
         "Dosar anti-CCP",
-        "Exame oftalmológico periódico com lâmpada de fenda",
+        "Biópsia sinovial",
         "Ecocardiograma",
-        "Biópsia sinovial"
+        "Exame oftalmológico periódico com lâmpada de fenda"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Anti-CCP não muda conduta nesse subtipo.",
-        "Gabarito: AIJ oligoarticular com FAN positivo → alto risco de uveíte anterior crônica, assintomática, que pode causar cegueira.",
+        "Biópsia não é necessária para o diagnóstico.",
         "Ecocardiograma é mais relevante na forma sistêmica (pericardite).",
-        "Biópsia não é necessária para o diagnóstico."
+        "Gabarito: AIJ oligoarticular com FAN positivo → alto risco de uveíte anterior crônica, assintomática, que pode causar cegueira."
       ],
       "fonte": "Tratado de Pediatria SBP / ILAR (classificação da AIJ) / Nelson 21ª ed.",
       "add": "2026-10-23",
@@ -19163,17 +19163,17 @@
       "sub": "Doença inflamatória intestinal na infância",
       "frente": "Menino de 9 anos com dor abdominal e diarreia com sangue vivo há 6 semanas. Há 6 semanas também teve dor, calor e edema em joelho esquerdo e cotovelo direito. PCR elevada, anemia normocítica leve e calprotectina fecal muito aumentada. A hipótese mais provável é:",
       "opcoes": [
-        "Doença inflamatória intestinal; indicar colonoscopia com biópsias",
+        "Doença celíaca",
         "Porfiria intermitente aguda",
         "Artrite idiopática juvenil sistêmica",
-        "Doença celíaca"
+        "Doença inflamatória intestinal; indicar colonoscopia com biópsias"
       ],
-      "certa": 0,
+      "certa": 3,
       "comentarios": [
-        "Gabarito: diarreia crônica inflamatória (sangue, PCR e calprotectina altas) + artrite → DII; Crohn × retocolite só se define pela colonoscopia com biópsia.",
+        "Celíaca dá diarreia aquosa, sem sangue e sem marcadores inflamatórios.",
         "Porfiria dá dor abdominal, hiperatividade simpática, neuropatia e sintomas psiquiátricos, sem diarreia com sangue.",
         "AIJ sistêmica explica a artrite, mas não a diarreia inflamatória; teria febre diária, rash e visceromegalias.",
-        "Celíaca dá diarreia aquosa, sem sangue e sem marcadores inflamatórios."
+        "Gabarito: diarreia crônica inflamatória (sangue, PCR e calprotectina altas) + artrite → DII; Crohn × retocolite só se define pela colonoscopia com biópsia."
       ],
       "uerj": "DII pediátrica caiu na UERJ.",
       "fonte": "ESPGHAN — Porto criteria (revisão 2014) / Tratado de Pediatria SBP / Nelson 21ª ed.",
@@ -19388,16 +19388,16 @@
       "frente": "Homem, 67 anos, DPOC (VEF1 38%), chega com piora da dispneia e escarro purulento. Em uso de O2 a 2 L/min: SatO2 89%, FR 30 irpm, consciente e colaborativo. Gasometria: pH 7,29; PaCO2 62 mmHg; HCO3 30. Já recebeu broncodilatador e corticoide. A próxima conduta é:",
       "opcoes": [
         "Aumentar o O2 para manter SatO2 > 96%",
-        "Iniciar ventilação não invasiva",
+        "Aminofilina venosa",
         "Intubação orotraqueal imediata",
-        "Aminofilina venosa"
+        "Iniciar ventilação não invasiva"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "O2 em excesso piora a hipercapnia; alvo 88–92%.",
-        "Gabarito: acidose respiratória (pH ≤ 7,35, PaCO2 ≥ 45) em paciente consciente → VNI.",
+        "Metilxantina é 2ª linha e não trata a acidose respiratória.",
         "IOT fica para falha da VNI, rebaixamento ou instabilidade.",
-        "Metilxantina é 2ª linha e não trata a acidose respiratória."
+        "Gabarito: acidose respiratória (pH ≤ 7,35, PaCO2 ≥ 45) em paciente consciente → VNI."
       ],
       "pegadinha": "HCO3 de 30 mostra que já havia retenção crônica: é uma acidose respiratória crônica agudizada.",
       "uerj": "Exacerbação com gasometria para decidir VNI é um formato frequente nas bancas.",
@@ -19658,15 +19658,15 @@
       "sub": "Asma",
       "frente": "Mulher, 28 anos, asmática, em uso apenas de salbutamol quando precisa. Nas últimas 4 semanas, sintomas diurnos 3×/semana, 1 despertar noturno e uso de salbutamol 4×/semana. Técnica inalatória correta. A melhor conduta é:",
       "opcoes": [
-        "Manter salbutamol e acrescentar montelucaste",
         "Iniciar budesonida-formoterol em dose baixa como manutenção e alívio",
+        "Manter salbutamol e acrescentar montelucaste",
         "Iniciar corticoide oral por 5 dias e manter salbutamol isolado",
         "Iniciar LABA isolado (formoterol) de manutenção"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Montelucaste é alternativa menos eficaz que o corticoide inalatório.",
         "Gabarito: asma não controlada (3 de 4 critérios) em paciente sem controlador → corticoide inalatório; pela trilha 1, budesonida-formoterol (etapa 3: manutenção + alívio).",
+        "Montelucaste é alternativa menos eficaz que o corticoide inalatório.",
         "Corticoide oral é para crise, não para controle.",
         "LABA sem corticoide inalatório aumenta risco de morte na asma."
       ],
@@ -20000,15 +20000,15 @@
       "frente": "Homem, 40 anos, 5º dia de laparotomia, com hiperemia, calor e saída de secreção purulenta pela ferida operatória. Afebril, sem sinais de deiscência aponeurótica. A conduta mais adequada é:",
       "opcoes": [
         "Manter os pontos e iniciar antibiótico oral",
-        "Retirar os pontos da pele, drenar, lavar e deixar cicatrizar por segunda intenção",
         "Ressuturar a pele após lavagem no centro cirúrgico",
+        "Retirar os pontos da pele, drenar, lavar e deixar cicatrizar por segunda intenção",
         "Aplicar corticoide tópico para reduzir a inflamação"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Pus coletado precisa de drenagem; antibiótico sozinho não resolve.",
-        "Gabarito: infecção superficial de sítio cirúrgico → abrir, drenar e deixar fechar por 2ª intenção (antibiótico só se celulite extensa ou repercussão sistêmica).",
         "Fechar ferida infectada mantém a infecção; só se fecha depois de limpa (3ª intenção).",
+        "Gabarito: infecção superficial de sítio cirúrgico → abrir, drenar e deixar fechar por 2ª intenção (antibiótico só se celulite extensa ou repercussão sistêmica).",
         "Corticoide atrasa a cicatrização (inibe a fase inflamatória)."
       ],
       "pegadinha": "Antibiótico não substitui a abertura da ferida.",
@@ -20165,16 +20165,16 @@
       "frente": "Homem, 58 anos, em hemodiálise há 8 anos, com dor óssea e prurido. Exames: cálcio 8,0 mg/dL, fósforo 7,2 mg/dL, PTH 850 pg/mL. O diagnóstico mais provável é:",
       "opcoes": [
         "Hiperparatireoidismo primário por adenoma",
-        "Hiperparatireoidismo secundário à doença renal crônica",
+        "Hiperparatireoidismo terciário",
         "Hipoparatireoidismo",
-        "Hiperparatireoidismo terciário"
+        "Hiperparatireoidismo secundário à doença renal crônica"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Primário tem cálcio ALTO e fósforo baixo.",
-        "Gabarito: DRC → retém fósforo, ↓ calcitriol → cálcio baixo → PTH sobe (doença mineral e óssea da DRC).",
+        "Terciário exige cálcio alto (glândula autônoma); aqui o cálcio está baixo.",
         "PTH está muito alto, não baixo.",
-        "Terciário exige cálcio alto (glândula autônoma); aqui o cálcio está baixo."
+        "Gabarito: DRC → retém fósforo, ↓ calcitriol → cálcio baixo → PTH sobe (doença mineral e óssea da DRC)."
       ],
       "pegadinha": "PTH muito alto em renal crônico só vira terciário quando o cálcio sobe.",
       "uerj": "UERJ cobra interpretação de Ca, P e PTH em caso clínico.",
@@ -20377,16 +20377,16 @@
       "frente": "RN a termo, 3 dias, com Síndrome de Down, ainda não eliminou mecônio. Apresenta distensão abdominal e vômitos biliosos. Ao toque retal, saída explosiva de fezes e gases. O exame que confirma o diagnóstico mais provável é:",
       "opcoes": [
         "Enema opaco",
-        "Biópsia retal por sucção",
+        "Teste do suor",
         "Manometria anorretal",
-        "Teste do suor"
+        "Biópsia retal por sucção"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Mostra a zona de transição, mas pode ser normal no RN; não confirma.",
-        "Gabarito: Hirschsprung → biópsia retal (ausência de células ganglionares) é o padrão-ouro.",
+        "Teste do suor é para fibrose cística (íleo meconial) — distrator plausível em RN que não elimina mecônio.",
         "Ausência do reflexo inibitório sugere, mas não confirma e é pouco usada no RN.",
-        "Teste do suor é para fibrose cística (íleo meconial) — distrator plausível em RN que não elimina mecônio."
+        "Gabarito: Hirschsprung → biópsia retal (ausência de células ganglionares) é o padrão-ouro."
       ],
       "pegadinha": "Íleo meconial (fibrose cística) também cursa com retardo do mecônio — mas o toque com \"esguicho\" + Down aponta Hirschsprung.",
       "uerj": "Questão clássica de RN com retardo na eliminação do mecônio.",
@@ -20563,15 +20563,15 @@
       "sub": "Meningites",
       "frente": "Homem, 68 anos, etilista, com febre, cefaleia e confusão há 2 dias. Líquor: 400 células/mm³ (60% mononucleares), proteína 160 mg/dL e glicose 20 mg/dL. Além da ceftriaxona, qual antibiótico não pode faltar no esquema empírico?",
       "opcoes": [
-        "Aciclovir",
         "Ampicilina",
+        "Aciclovir",
         "Vancomicina isolada sem ceftriaxona",
         "Nenhum: o líquor é de meningite viral"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Cobre herpes (encefalite), mas o líquor com glicose muito baixa é bacteriano.",
         "Gabarito: idoso + etilista → cobrir Listeria com ampicilina; cefalosporinas não têm ação contra ela.",
+        "Cobre herpes (encefalite), mas o líquor com glicose muito baixa é bacteriano.",
         "Vancomicina cobre pneumococo resistente, não Listeria, e não substitui a ceftriaxona.",
         "Predomínio de mononucleares é a pegadinha: glicose 20 e proteína 160 apontam bacteriana."
       ],
@@ -20786,15 +20786,15 @@
       "sub": "Síndrome nefrótica",
       "frente": "Menino de 4 anos com edema palpebral que evoluiu para anasarca em 1 semana. PA normal. Urina: proteína 4+, sem hematúria. Albumina 1,8 g/dL, colesterol 380 mg/dL, complemento normal. A conduta mais adequada é:",
       "opcoes": [
-        "Biópsia renal antes de qualquer tratamento",
         "Prednisolona 60 mg/m²/dia",
+        "Biópsia renal antes de qualquer tratamento",
         "Ciclofosfamida",
         "Antibiótico para glomerulonefrite pós-estreptocócica"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Biópsia só nas atípicas ou corticorresistentes.",
         "Gabarito: quadro típico de lesão mínima → corticoide empírico.",
+        "Biópsia só nas atípicas ou corticorresistentes.",
         "Imunossupressor é reservado a recidivas frequentes ou corticodependência/resistência.",
         "GNPE é nefrítica (hematúria, HAS, complemento baixo)."
       ],
@@ -21066,15 +21066,15 @@
       "frente": "Homem, 60 anos, obeso, diabético tipo 2, sem etilismo e com sorologias virais negativas. TC: nódulo hepático de 3 cm com realce arterial e washout na fase portal. Elastografia sem cirrose. O diagnóstico mais provável e o fator de risco são:",
       "opcoes": [
         "Hemangioma, sem relação com a síndrome metabólica",
-        "Carcinoma hepatocelular associado à doença hepática esteatótica metabólica (MASLD/MASH)",
         "Metástase de cólon, pois CHC só ocorre em cirrótico",
+        "Carcinoma hepatocelular associado à doença hepática esteatótica metabólica (MASLD/MASH)",
         "Hiperplasia nodular focal ligada à obesidade"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Hemangioma tem realce periférico globular e enchimento centrípeto, sem washout.",
-        "Gabarito: realce arterial + washout = CHC; MASH (obesidade e DM2) causa CHC mesmo sem cirrose.",
         "CHC pode surgir sem cirrose (MASH, hepatite B); metástase de cólon é hipovascular.",
+        "Gabarito: realce arterial + washout = CHC; MASH (obesidade e DM2) causa CHC mesmo sem cirrose.",
         "HNF tem cicatriz central e não faz washout."
       ],
       "pegadinha": "Sem cirrose, a confirmação costuma exigir biópsia — mas o padrão de imagem continua sendo de CHC.",
@@ -21275,16 +21275,16 @@
       "frente": "Mulher, 28 anos, há 7 dias com diarreia sanguinolenta, evolui com oligúria, PA 160 × 100 mmHg, Hb 7,5 g/dL, plaquetas 45.000/mm³, creatinina 4,2 mg/dL, LDH muito elevada, haptoglobina baixa, esquizócitos no sangue periférico e Coombs direto negativo. O diagnóstico e o tratamento são:",
       "opcoes": [
         "Anemia hemolítica autoimune → corticoide em dose alta",
-        "Síndrome hemolítico-urêmica → suporte com transfusão e diálise se indicada",
+        "Glomerulonefrite pós-infecciosa → antibiótico",
         "CIVD → plasma fresco e crioprecipitado",
-        "Glomerulonefrite pós-infecciosa → antibiótico"
+        "Síndrome hemolítico-urêmica → suporte com transfusão e diálise se indicada"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Coombs negativo e esquizócitos falam contra hemólise imune.",
-        "Gabarito: diarreia sanguinolenta + MAT + IRA = SHU (STEC); tratamento de suporte.",
+        "GN pós-infecciosa não causa hemólise nem plaquetopenia; antibiótico na STEC pode piorar.",
         "CIVD altera o coagulograma e ocorre em sepse/doença grave.",
-        "GN pós-infecciosa não causa hemólise nem plaquetopenia; antibiótico na STEC pode piorar."
+        "Gabarito: diarreia sanguinolenta + MAT + IRA = SHU (STEC); tratamento de suporte."
       ],
       "pegadinha": "Antibiótico para a diarreia é a alternativa-armadilha.",
       "uerj": "Questão de SHU em adulto após diarreia.",
@@ -21594,15 +21594,15 @@
       "sub": "Colangite aguda",
       "frente": "Mulher, 70 anos, com febre, calafrios, icterícia e dor em hipocôndrio direito há 2 dias. PA 110 × 70 mmHg, lúcida. Bilirrubina total 6 mg/dL, FA e GGT muito elevadas. USG: colédoco de 12 mm com cálculo distal e vesícula com cálculos, sem espessamento da parede. A conduta é:",
       "opcoes": [
-        "Antibiótico e CPRE com papilotomia para descompressão biliar",
         "Colecistectomia videolaparoscópica de urgência",
+        "Antibiótico e CPRE com papilotomia para descompressão biliar",
         "Colecistostomia percutânea",
         "Antibiótico e colecistectomia eletiva em 6 semanas, sem abordar o colédoco"
       ],
-      "certa": 0,
+      "certa": 1,
       "comentarios": [
-        "Gabarito: colangite por coledocolitíase → antibiótico (Gram-negativos) + drenagem por CPRE com papilotomia.",
         "Não resolve a obstrução do colédoco; vem depois da CPRE.",
+        "Gabarito: colangite por coledocolitíase → antibiótico (Gram-negativos) + drenagem por CPRE com papilotomia.",
         "Colecistostomia é para colecistite de alto risco cirúrgico; não drena o colédoco.",
         "Deixar o colédoco obstruído mantém a infecção."
       ],
@@ -21859,15 +21859,15 @@
       "sub": "Doenças do pericárdio — tamponamento e pericardite constritiva",
       "frente": "Mulher, 62 anos, com câncer de pulmão, chega com dispneia, PA 85 × 60 mmHg, FC 120 bpm, turgência jugular e bulhas abafadas. A PA sistólica cai 18 mmHg na inspiração. ECG com baixa voltagem e alternância elétrica. A conduta imediata é:",
       "opcoes": [
-        "Furosemida EV para aliviar a congestão",
         "Pericardiocentese guiada por ecocardiograma",
+        "Furosemida EV para aliviar a congestão",
         "Pericardiectomia eletiva",
         "Nitroglicerina EV"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Diurético reduz a pré-carga e piora o tamponamento.",
         "Gabarito: tamponamento neoplásico (Beck + pulso paradoxal + alternância elétrica) → drenar o pericárdio.",
+        "Diurético reduz a pré-carga e piora o tamponamento.",
         "Pericardiectomia é para constritiva.",
         "Vasodilatador derruba ainda mais a PA."
       ],
@@ -22303,16 +22303,16 @@
       "frente": "Mulher, 55 anos, obesa, com prurido e fadiga há 1 ano. FA 4 × e GGT 6 × o limite superior; transaminases discretamente elevadas; bilirrubina normal. USG: esteatose leve, vias biliares não dilatadas. Antimitocôndria positivo 1:320. O diagnóstico e o tratamento são:",
       "opcoes": [
         "Esteatose metabólica → perda de peso apenas",
-        "Colangite biliar primária → ácido ursodesoxicólico",
+        "Hepatite autoimune → prednisona e azatioprina",
         "Colangite esclerosante primária → CPRE com dilatação",
-        "Hepatite autoimune → prednisona e azatioprina"
+        "Colangite biliar primária → ácido ursodesoxicólico"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Esteatose não explica colestase intensa com AMA positivo — a obesidade é distrator.",
-        "Gabarito: mulher de meia-idade + colestase + USG normal + AMA = CBP → ácido ursodesoxicólico.",
+        "Hepatite autoimune tem padrão hepatocelular (transaminases ↑↑), FAN/antimúsculo liso e IgG alta.",
         "CEP é mais em homens com retocolite, com estenoses na CPRM; AMA negativo.",
-        "Hepatite autoimune tem padrão hepatocelular (transaminases ↑↑), FAN/antimúsculo liso e IgG alta."
+        "Gabarito: mulher de meia-idade + colestase + USG normal + AMA = CBP → ácido ursodesoxicólico."
       ],
       "pegadinha": "Obesidade e esteatose na USG tentam desviar para MASLD.",
       "uerj": "Questão da anotação: CBP em mulher de 55 anos.",
@@ -22459,17 +22459,17 @@
       "sub": "Hiperparatireoidismo",
       "frente": "Mulher, 50 anos, em hemodiálise, submetida a paratireoidectomia subtotal por hiperparatireoidismo secundário grave. No 2º dia de pós-operatório, a manifestação mais precoce e frequente esperada da principal complicação metabólica é:",
       "opcoes": [
-        "Parestesia perioral e de extremidades",
+        "Encurtamento do intervalo QT",
         "Poliúria e polidipsia",
         "Constipação e dor abdominal",
-        "Encurtamento do intervalo QT"
+        "Parestesia perioral e de extremidades"
       ],
-      "certa": 0,
+      "certa": 3,
       "comentarios": [
-        "Gabarito: fome óssea → hipocalcemia (com ↓ P e ↓ Mg); sintomas neuromusculares (parestesia perioral) são os mais precoces.",
+        "Hipocalcemia ALONGA o QT; QT curto é de hipercalcemia.",
         "Poliúria/polidipsia são de HIPERcalcemia (diabetes insípido nefrogênico).",
         "Constipação e dor abdominal também são de hipercalcemia.",
-        "Hipocalcemia ALONGA o QT; QT curto é de hipercalcemia."
+        "Gabarito: fome óssea → hipocalcemia (com ↓ P e ↓ Mg); sintomas neuromusculares (parestesia perioral) são os mais precoces."
       ],
       "pegadinha": "Todas as distratoras são de hipercalcemia — o quadro antes da cirurgia, não depois.",
       "uerj": "Hipocalcemia pós-paratireoidectomia caiu na UERJ.",
@@ -22926,16 +22926,16 @@
       "frente": "Mulher, 62 anos, submetida a colecistectomia videolaparoscópica por colecistite aguda calculosa. O histopatológico mostra adenocarcinoma de vesícula invadindo a camada muscular, com margem do ducto cístico livre. Estadiamento sem doença à distância. A conduta é:",
       "opcoes": [
         "Apenas seguimento, pois a colecistectomia foi curativa",
-        "Colecistectomia radical: ressecção do leito hepático (IVb/V) com linfadenectomia do pedículo",
+        "Hepatectomia direita com ressecção do colédoco em todos os casos",
         "Quimioterapia paliativa exclusiva",
-        "Hepatectomia direita com ressecção do colédoco em todos os casos"
+        "Colecistectomia radical: ressecção do leito hepático (IVb/V) com linfadenectomia do pedículo"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Só Tis/T1a dispensam ressecção adicional.",
-        "Gabarito: invasão da muscular = T1b → reabordagem radical em paciente apto.",
+        "Ressecção maior/do colédoco só se necessária para margem livre.",
         "Doença localizada e ressecável deve ser operada (R0 é a chance de cura).",
-        "Ressecção maior/do colédoco só se necessária para margem livre."
+        "Gabarito: invasão da muscular = T1b → reabordagem radical em paciente apto."
       ],
       "pegadinha": "Achar que T1 inteiro é tratado só com colecistectomia — o T1b não é.",
       "uerj": "Questão da anotação: carcinoma incidental de vesícula.",
@@ -23426,15 +23426,15 @@
       "frente": "Mulher, 40 anos, sem hepatopatia, com nódulo hepático de 4 cm achado em USG. Na TC trifásica: realce periférico nodular e descontínuo na fase arterial, com enchimento progressivo centrípeto nas fases portal e tardia, ficando com a mesma densidade dos vasos. O diagnóstico e a conduta são:",
       "opcoes": [
         "Carcinoma hepatocelular → ressecção",
-        "Hemangioma → conduta expectante, sem biópsia",
         "Metástase hipervascular → biópsia percutânea",
+        "Hemangioma → conduta expectante, sem biópsia",
         "Hiperplasia nodular focal → suspender anticoncepcional e ressecar"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "CHC tem realce arterial difuso e washout (fica escuro), em geral em cirrótico.",
-        "Gabarito: realce periférico globular com enchimento centrípeto = hemangioma; assintomático → observar.",
         "Metástase não faz enchimento centrípeto; biopsiar hemangioma pode sangrar.",
+        "Gabarito: realce periférico globular com enchimento centrípeto = hemangioma; assintomático → observar.",
         "HNF realça homogêneo no arterial e tem cicatriz central; não precisa ressecar."
       ],
       "pegadinha": "Nódulo que \"brilha\" no arterial não é sempre CHC — o padrão (periférico × difuso) e o washout decidem.",
@@ -23600,16 +23600,16 @@
       "frente": "Homem, 63 anos, com febre (38,4 °C), icterícia e dor em hipocôndrio direito há 1 dia. PA 130 × 80 mmHg, lúcido. Leucócitos 14.500/mm³, bilirrubina total 3,2 mg/dL, creatinina e plaquetas normais. USG: colédoco de 11 mm com cálculo. Qual a conduta inicial mais adequada?",
       "opcoes": [
         "Colangiopancreatografia retrógrada endoscópica de urgência nas primeiras horas, antes do antibiótico",
-        "Hemoculturas e início precoce de antibioticoterapia, com drenagem biliar se não melhorar em 24 h",
+        "Drenagem trans-hepática percutânea imediata, pois há pêntade de Reynolds",
         "Colecistectomia videolaparoscópica com exploração da via biliar na mesma internação, sem antibiótico",
-        "Drenagem trans-hepática percutânea imediata, pois há pêntade de Reynolds"
+        "Hemoculturas e início precoce de antibioticoterapia, com drenagem biliar se não melhorar em 24 h"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: drenagem de urgência é para o grau III (disfunção orgânica). Ele tem só 1 critério de grau II (leucocitose) → grau I.",
-        "Correta: grau I (leve) → hemoculturas + antibiótico precoce. Drenar se não responder em ~24 h (e tratar a coledocolitíase depois).",
+        "Errada: não há hipotensão nem confusão mental → não é Reynolds. E a 1ª escolha de drenagem seria CPRE, não a percutânea.",
         "Errada: colangite exige antibiótico; a colecistectomia vem depois de resolver o quadro agudo e a via biliar.",
-        "Errada: não há hipotensão nem confusão mental → não é Reynolds. E a 1ª escolha de drenagem seria CPRE, não a percutânea."
+        "Correta: grau I (leve) → hemoculturas + antibiótico precoce. Drenar se não responder em ~24 h (e tratar a coledocolitíase depois)."
       ],
       "pegadinha": "Grau II exige 2 ou mais critérios (leucócitos > 12 mil ou < 4 mil, febre ≥ 39 °C, idade ≥ 75, bilirrubina ≥ 5, albumina baixa). Um critério isolado = grau I.",
       "uerj": "A UERJ dá os números do exame para você classificar por Tóquio e escolher entre antibiótico e drenagem.",
@@ -23935,15 +23935,15 @@
       "frente": "Mulher, 68 anos, asma leve, 24 h após hernioplastia inguinal eletiva, apresenta náuseas, fraqueza e depois crise convulsiva generalizada. No perioperatório recebeu apenas soro glicosado 5%. Está estável, obnubilada e com hiper-reflexia. Sódio sérico: 116 mEq/L. A conduta imediata é:",
       "opcoes": [
         "Restrição hídrica isolada e reavaliação do sódio em 6 horas",
-        "Salina 3% em bolus (cerca de 150 mL em 20 min), repetindo se necessário, com meta de elevar o sódio 4–6 mEq/L",
         "Soro fisiológico 0,9% com meta de normalizar o sódio em 24 horas",
+        "Salina 3% em bolus (cerca de 150 mL em 20 min), repetindo se necessário, com meta de elevar o sódio 4–6 mEq/L",
         "Furosemida e tolvaptano para aumentar a excreção de água livre"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: restrição hídrica é lenta demais para hiponatremia com convulsão.",
-        "Correta: hiponatremia aguda sintomática grave → salina hipertônica em bolus; subir 4–6 mEq/L já reverte o edema cerebral. Limite: até 10 mEq/L em 24 h.",
         "Errada: SF 0,9% sobe pouco o sódio quando o ADH está alto e normalizar em 24 h ultrapassa o limite seguro de correção.",
+        "Correta: hiponatremia aguda sintomática grave → salina hipertônica em bolus; subir 4–6 mEq/L já reverte o edema cerebral. Limite: até 10 mEq/L em 24 h.",
         "Errada: vaptanos não são tratamento de emergência e podem corrigir rápido demais."
       ],
       "pegadinha": "A asma é distrator. O que importa é o soro glicosado + ADH alto do pós-operatório.",
@@ -24030,15 +24030,15 @@
       "opcoes": [
         "Glutamina",
         "Arginina",
-        "Leucina",
-        "Alanina"
+        "Alanina",
+        "Leucina"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Errada: glutamina é condicionalmente essencial (vira necessária no estresse metabólico).",
         "Errada: arginina é condicionalmente essencial (usada na imunonutrição).",
-        "Correta: leucina é um dos 9 essenciais (aminoácido de cadeia ramificada, com isoleucina e valina).",
-        "Errada: alanina é não essencial."
+        "Errada: alanina é não essencial.",
+        "Correta: leucina é um dos 9 essenciais (aminoácido de cadeia ramificada, com isoleucina e valina)."
       ],
       "pegadinha": "Arginina e glutamina aparecem muito em nutrição cirúrgica e parecem \"essenciais\", mas não são.",
       "uerj": "Pergunta direta de classificação (caiu na UERJ).",
@@ -24062,15 +24062,15 @@
       "opcoes": [
         "Cistectomia ovariana prévia por endometrioma",
         "Tabagismo",
-        "Uso prolongado de anticoncepcional oral combinado",
-        "Quimioterapia com ciclofosfamida"
+        "Quimioterapia com ciclofosfamida",
+        "Uso prolongado de anticoncepcional oral combinado"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "É fator de risco: a cirurgia retira tecido ovariano saudável junto com a cápsula do endometrioma.",
         "É fator de risco: antecipa a menopausa em 1–2 anos.",
-        "Correta (não é fator de risco): o anticoncepcional só reduz temporariamente o AMH e a contagem de folículos antrais; a reserva real não muda.",
-        "É fator de risco: alquilantes são os quimioterápicos mais gonadotóxicos."
+        "É fator de risco: alquilantes são os quimioterápicos mais gonadotóxicos.",
+        "Correta (não é fator de risco): o anticoncepcional só reduz temporariamente o AMH e a contagem de folículos antrais; a reserva real não muda."
       ],
       "pegadinha": "AMH baixo em usuária de anticoncepcional não é baixa reserva: repetir após suspender (cerca de 2–3 meses).",
       "uerj": "Baixa reserva ovariana caiu 2× na UERJ (fatores de risco e marcadores).",
@@ -24407,15 +24407,15 @@
       "frente": "Homem, 45 anos, com pirose há 2 anos. EDA: erosões longitudinais maiores que 5 mm, que se unem entre o topo de duas pregas e ocupam cerca de 40% da circunferência do esôfago distal. A classificação e a conduta são:",
       "opcoes": [
         "Los Angeles B; IBP sob demanda",
-        "Los Angeles C; IBP em dose plena por 8 semanas, manutenção e EDA de controle",
         "Los Angeles D; fundoplicatura imediata",
+        "Los Angeles C; IBP em dose plena por 8 semanas, manutenção e EDA de controle",
         "Los Angeles A; pHmetria antes de qualquer tratamento"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: no B as erosões NÃO se unem entre pregas.",
-        "Correta: erosões contínuas entre pregas e < 75% da circunferência = LA C → IBP 8 semanas, manutenção e EDA para ver cicatrização/Barrett.",
         "Errada: D é ≥ 75% da circunferência, e esofagite não é indicação de cirurgia imediata.",
+        "Correta: erosões contínuas entre pregas e < 75% da circunferência = LA C → IBP 8 semanas, manutenção e EDA para ver cicatrização/Barrett.",
         "Errada: A é erosão ≤ 5 mm; aqui são > 5 mm e confluentes."
       ],
       "pegadinha": "O que separa B de C é a continuidade entre pregas; o que separa C de D é 75% da circunferência.",
@@ -25656,16 +25656,16 @@
       "sub": "Choque hemorrágico e transfusão maciça",
       "frente": "(UERJ 2026) Pacientes politraumatizados em choque hemorrágico podem necessitar de grande volume de transfusões em curto período, com acúmulo de substâncias presentes nas bolsas. As alterações decorrentes do acúmulo de citrato podem acarretar:",
       "opcoes": [
-        "Hipernatremia e acidose metabólica",
-        "Hipercalcemia e arritmias cardíacas",
         "Hipocalcemia e distúrbios da coagulação",
+        "Hipercalcemia e arritmias cardíacas",
+        "Hipernatremia e acidose metabólica",
         "Hipermagnesemia e bradicardia acentuada"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada: o citrato não causa hipernatremia relevante e, ao ser metabolizado, gera ALCALOSE (vira bicarbonato).",
-        "Errada: arritmia pode ocorrer, mas por HIPOcalcemia.",
         "Correta: o citrato quela cálcio ionizado → hipocalcemia, que piora a coagulação e a contratilidade (diamante letal).",
+        "Errada: arritmia pode ocorrer, mas por HIPOcalcemia.",
+        "Errada: o citrato não causa hipernatremia relevante e, ao ser metabolizado, gera ALCALOSE (vira bicarbonato).",
         "Errada: o citrato também quela magnésio → HIPOmagnesemia."
       ],
       "pegadinha": "Você marcou D na prova: o citrato \"sequestra\" cátions (Ca e Mg), então tudo é HIPO.",
@@ -26162,15 +26162,15 @@
       "frente": "Mulher, 57 anos, com carcinoma mamário invasivo de tipo não especial (ductal). Imuno-histoquímica: receptores de estrogênio e progesterona negativos e HER2 positivo (3+). Qual terapia deve compor o tratamento adjuvante?",
       "opcoes": [
         "Tamoxifeno por 5 anos",
-        "Trastuzumabe por 1 ano",
         "Desogestrel contínuo",
+        "Trastuzumabe por 1 ano",
         "Anastrozol por 5 anos"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: hormonioterapia só funciona com receptores hormonais positivos.",
-        "Correta: subtipo HER2 superexpresso → trastuzumabe (anticorpo anti-HER2) por 1 ano, junto com quimioterapia.",
         "Errada: progestagênio é contraindicado no câncer de mama.",
+        "Correta: subtipo HER2 superexpresso → trastuzumabe (anticorpo anti-HER2) por 1 ano, junto com quimioterapia.",
         "Errada: inibidor de aromatase também é hormonioterapia; sem RH+ não tem alvo."
       ],
       "pegadinha": "\"Pós-menopausa\" puxa para inibidor de aromatase, mas sem receptor hormonal ele não serve.",
@@ -27281,15 +27281,15 @@
       "frente": "Mulher, 29 anos, queixa-se de corrimento vaginal acinzentado com odor fétido, pior após as relações sexuais, sem prurido. Exame especular: corrimento homogêneo aderido às paredes, pH 5,0, teste das aminas positivo. Qual o diagnóstico e o tratamento?",
       "opcoes": [
         "Candidíase; fluconazol 150 mg VO dose única para ela e o parceiro",
-        "Vaginose bacteriana; metronidazol 500 mg VO 12/12 h por 7 dias, sem tratar o parceiro",
         "Tricomoníase; metronidazol 2 g VO dose única para ela e o parceiro",
+        "Vaginose bacteriana; metronidazol 500 mg VO 12/12 h por 7 dias, sem tratar o parceiro",
         "Vaginose bacteriana; metronidazol para ela e o parceiro"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: candidíase tem pH ≤ 4,5, prurido e corrimento grumoso; o parceiro não é tratado de rotina.",
-        "Correta: 3 de 4 critérios de Amsel (corrimento homogêneo, pH > 4,5, aminas +) → vaginose; não é IST, parceiro não é tratado.",
         "Errada: tricomoníase costuma ter corrimento amarelo-esverdeado bolhoso, prurido e muitos leucócitos.",
+        "Correta: 3 de 4 critérios de Amsel (corrimento homogêneo, pH > 4,5, aminas +) → vaginose; não é IST, parceiro não é tratado.",
         "Errada: tratar o parceiro na vaginose não reduz recorrência."
       ],
       "pegadinha": "Piora após o coito (sêmen alcalino libera as aminas) é pista de vaginose, não de IST.",
@@ -27757,16 +27757,16 @@
       "frente": "Puérpera Rh negativo, Coombs indireto negativo no pré-natal, teve RN Rh positivo e recebeu 300 µg de imunoglobulina anti-D no 1º dia pós-parto. Se a profilaxia foi eficaz, os resultados esperados de Coombs indireto e teste de Kleihauer são, respectivamente:",
       "opcoes": [
         "Negativo e positivo",
-        "Positivo e negativo",
+        "Positivo e positivo",
         "Negativo e negativo, obrigatoriamente",
-        "Positivo e positivo"
+        "Positivo e negativo"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: Kleihauer positivo indicaria hemácias fetais remanescentes, ou seja, dose insuficiente.",
-        "Correta: Coombs indireto pode positivar pelo anti-D passivo; Kleihauer negativo mostra que as hemácias fetais foram destruídas.",
+        "Errada: Kleihauer positivo = profilaxia insuficiente → dose adicional.",
         "Errada: o Coombs indireto pode positivar pelo anticorpo da própria medicação; não precisa ser negativo.",
-        "Errada: Kleihauer positivo = profilaxia insuficiente → dose adicional."
+        "Correta: Coombs indireto pode positivar pelo anti-D passivo; Kleihauer negativo mostra que as hemácias fetais foram destruídas."
       ],
       "pegadinha": "Coombs indireto positivo aqui não é sensibilização: é o anticorpo injetado.",
       "uerj": "Questão no formato UERJ (interpretação de exames após anti-D).",
@@ -28073,17 +28073,17 @@
       "sub": "Abortamento",
       "frente": "Gestante de 8 semanas pela DUM, assintomática, faz USG transvaginal: saco gestacional único, embrião normoinserido com comprimento cabeça-nádegas de 19 mm e ausência de atividade cardíaca. O diagnóstico é:",
       "opcoes": [
-        "Abortamento retido",
+        "Gestação inicial de evolução incerta",
         "Gestação anembrionada",
         "Ameaça de abortamento; repetir a USG em 7 dias",
-        "Gestação inicial de evolução incerta"
+        "Abortamento retido"
       ],
-      "certa": 0,
+      "certa": 3,
       "comentarios": [
-        "Correta: CCN ≥ 7 mm sem batimento cardíaco = gestação inviável. Com colo fechado e sem sangramento = abortamento retido.",
+        "Errada: CCN de 19 mm sem batimento já é diagnóstico de certeza, não há incerteza.",
         "Errada: anembrionada é saco ≥ 25 mm SEM embrião; aqui há embrião.",
         "Errada: ameaça tem embrião vivo e sangramento; e repetir USG só vale abaixo do corte de 7 mm.",
-        "Errada: CCN de 19 mm sem batimento já é diagnóstico de certeza, não há incerteza."
+        "Correta: CCN ≥ 7 mm sem batimento cardíaco = gestação inviável. Com colo fechado e sem sangramento = abortamento retido."
       ],
       "pegadinha": "O corte de 25 mm é do saco gestacional (anembrionada); para embrião visível o corte é 7 mm.",
       "uerj": "Questão no formato UERJ (critério de CCN ≥ 7 mm).",
@@ -35204,16 +35204,16 @@
       "sub": "Aleitamento materno — Dez Passos e IHAC",
       "frente": "Uma maternidade candidata ao título de Hospital Amigo da Criança é avaliada. Qual das práticas abaixo CONTRARIA os Dez Passos para o Sucesso do Aleitamento Materno?",
       "opcoes": [
-        "Colocar o RN a termo e vigoroso em contato pele a pele com a mãe logo após o parto",
-        "Manter mãe e bebê juntos em alojamento conjunto 24 horas por dia",
         "Oferecer fórmula ou soro glicosado a todos os RN na primeira noite, enquanto o leite \"não desce\"",
+        "Manter mãe e bebê juntos em alojamento conjunto 24 horas por dia",
+        "Colocar o RN a termo e vigoroso em contato pele a pele com a mãe logo após o parto",
         "Orientar a mãe sobre os riscos do uso de mamadeiras, bicos e chupetas"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Correta: é o passo 4 (pele a pele imediato e início precoce da mamada).",
-        "Correta: é o passo 7 (alojamento conjunto 24 h).",
         "ERRADA (é a resposta): o passo 6 proíbe dar ao RN outro alimento ou líquido além do leite materno sem indicação médica. Colostro em pequeno volume é suficiente nos primeiros dias.",
+        "Correta: é o passo 7 (alojamento conjunto 24 h).",
+        "Correta: é o passo 4 (pele a pele imediato e início precoce da mamada).",
         "Correta: é o passo 9 na versão de 2018 (orientar sobre riscos, não apenas proibir)."
       ],
       "macete": "\"Leite não desceu\" não é indicação médica de fórmula.",
@@ -36380,15 +36380,15 @@
       "sub": "Osteomielite aguda e artrite séptica",
       "frente": "Menino de 7 anos com osteomielite aguda hematogênica da metáfise distal do fêmur, em uso de oxacilina EV há 10 dias. Está afebril há 5 dias, deambula sem dor, aceita bem a dieta, leucograma normal, PCR 5 mg/L (inicial 140 mg/L) e VHS 42 mm/h. Hemocultura inicial positiva para S. aureus sensível à oxacilina, controle negativo. A conduta mais adequada é:",
       "opcoes": [
-        "Manter oxacilina EV até a normalização da VHS",
         "Trocar para cefalexina VO e completar o tratamento em casa, com reavaliação clínica e nova PCR",
+        "Manter oxacilina EV até a normalização da VHS",
         "Suspender o antibiótico, pois a PCR normalizou",
         "Solicitar RM antes de qualquer decisão, pois a VHS elevada indica abscesso"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: a VHS demora a normalizar e não é critério para a mudança de via.",
         "Correta: melhora clínica, PCR em queda, hemocultura negativa, sem complicação, VO disponível e boa aceitação → transição para VO e alta com seguimento.",
+        "Errada: a VHS demora a normalizar e não é critério para a mudança de via.",
         "Errada: o tratamento total é de 3–4 semanas; a PCR normal não autoriza suspender.",
         "Errada: VHS moderadamente elevada com boa evolução é esperada; RM só se piora clínica ou suspeita de complicação."
       ],
@@ -36742,15 +36742,15 @@
       "sub": "Síndrome de Cushing",
       "frente": "Paciente de 58 anos, sem diabetes prévio, internado por exacerbação de DPOC, recebe prednisona 40 mg às 8 h. Glicemias capilares: jejum 108 mg/dL, pré-almoço 210, pré-jantar 285 e 22 h 260 mg/dL. A melhor estratégia é:",
       "opcoes": [
-        "Iniciar metformina e reavaliar só a glicemia de jejum",
         "Insulina NPH pela manhã, junto com a prednisona, com correção com insulina rápida",
+        "Iniciar metformina e reavaliar só a glicemia de jejum",
         "Insulina glargina à noite, para controlar a glicemia de jejum",
         "Suspender a prednisona, pois a hiperglicemia contraindica o corticoide"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: o jejum já está quase normal; a metformina age devagar e não cobre o pico vespertino.",
         "Correta: a NPH dada com a prednisona tem pico no mesmo período da ação do corticoide (tarde/noite). Dose ~0,1 UI/kg por 10 mg de prednisona.",
+        "Errada: o jejum já está quase normal; a metformina age devagar e não cobre o pico vespertino.",
         "Errada: insulina basal noturna trata o jejum, que é justamente o horário menos afetado; risco de hipoglicemia de madrugada.",
         "Errada: o corticoide está indicado na exacerbação; trata-se a hiperglicemia."
       ],
@@ -37041,16 +37041,16 @@
       "frente": "Menino de 2 anos com baixo ganho de peso e estatura, poliúria, polidipsia e episódios de desidratação. Exame: alargamento de punhos e joelhos e fotofobia. Laboratório: glicemia 85 mg/dL com glicosúria, acidose metabólica hiperclorêmica, K 2,9 mEq/L, fósforo baixo e aminoacidúria. O diagnóstico mais provável é:",
       "opcoes": [
         "Diabetes mellitus tipo 1",
-        "Síndrome de Fanconi secundária a cistinose",
+        "Anemia de Fanconi",
         "Acidose tubular renal distal (tipo 1) isolada",
-        "Anemia de Fanconi"
+        "Síndrome de Fanconi secundária a cistinose"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: a glicemia é normal — a glicosúria é tubular.",
-        "Correta: disfunção global do túbulo proximal (glicose, fosfato, aminoácidos, bicarbonato, potássio) + fotofobia por cristais de cistina na córnea.",
+        "Errada: anemia de Fanconi é falência medular hereditária com malformações de polegar/rádio, sem tubulopatia.",
         "Errada: a ATR distal não causa glicosúria nem aminoacidúria; costuma dar nefrocalcinose.",
-        "Errada: anemia de Fanconi é falência medular hereditária com malformações de polegar/rádio, sem tubulopatia."
+        "Correta: disfunção global do túbulo proximal (glicose, fosfato, aminoácidos, bicarbonato, potássio) + fotofobia por cristais de cistina na córnea."
       ],
       "macete": "Glicosúria + aminoacidúria + fosfatúria = Fanconi; fotofobia = cistinose.",
       "contexto": "**Síndrome de Fanconi = disfunção generalizada do túbulo proximal, que perde na urina o que deveria reabsorver.**\n\nO que se perde:\n- Glicose → glicosúria com glicemia NORMAL\n- Aminoácidos → aminoacidúria generalizada\n- Fosfato → hipofosfatemia → raquitismo/osteomalácia\n- Bicarbonato → acidose metabólica hiperclorêmica (ATR tipo 2)\n- Ácido úrico, potássio, água, proteínas de baixo peso molecular\n\nClínica na criança:\n- Déficit de crescimento, poliúria, polidipsia, desidratação e febre por desidratação\n- Raquitismo hipofosfatêmico, fraqueza (hipocalemia)\n\nCausas:\n- Hereditárias → **cistinose** (principal), tirosinemia tipo 1, galactosemia, intolerância à frutose, Wilson, síndrome de Lowe, doença de Dent, mitocondriais\n- Adquiridas → tenofovir, ifosfamida, cisplatina, aminoglicosídeo, valproato, tetraciclina vencida, chumbo e cádmio; no adulto, mieloma múltiplo\n\nLaboratório:\n- Acidose metabólica com ânion gap normal + hipocalemia + hipofosfatemia + hipouricemia\n- pH urinário < 5,5 quando o bicarbonato sérico já caiu abaixo do limiar (o distal funciona)\n\nTratamento:\n- Tratar a causa (cisteamina na cistinose; dieta na galactosemia/tirosinemia + nitisinona)\n- Repor bicarbonato ou citrato em dose alta, fosfato, calcitriol, potássio e água\n\nNão confundir:\n- **Anemia de Fanconi** → doença DIFERENTE: falência medular hereditária, alterações de polegar/rádio, manchas café com leite, baixa estatura, risco de leucemia\n\nO que mais cai na UERJ:\n- Criança que não cresce + poliúria + raquitismo + glicosúria normoglicêmica → Fanconi.\n- Achar a ATR do caso pelo potássio e pelo pH urinário.\n- Cistinose como causa principal (cristais na córnea, fotofobia).",
@@ -37603,15 +37603,15 @@
       "sub": "Febre reumática",
       "frente": "Menina de 10 anos com dor e edema em joelho direito há 4 dias, que passou para o tornozelo esquerdo, e febre de 38,5 °C. Teve dor de garganta há 3 semanas, sem tratamento. Ausculta cardíaca normal. ECG com PR prolongado; VHS 70 mm/h; ASLO elevada. A conduta mais adequada é:",
       "opcoes": [
-        "Diagnosticar febre reumática, aplicar penicilina benzatina, iniciar AAS, solicitar ecocardiograma e manter profilaxia secundária a cada 21 dias",
         "Diagnosticar artrite idiopática juvenil e iniciar metotrexato",
+        "Diagnosticar febre reumática, aplicar penicilina benzatina, iniciar AAS, solicitar ecocardiograma e manter profilaxia secundária a cada 21 dias",
         "Tratar como artrite reativa pós-estreptocócica com AINE, sem profilaxia",
         "Iniciar prednisona 2 mg/kg/dia para todos os casos de febre reumática"
       ],
-      "certa": 0,
+      "certa": 1,
       "comentarios": [
-        "Correta: infecção estreptocócica prévia (ASLO) + 1 maior (poliartrite migratória) + 2 menores (febre, VHS alta; PR longo também conta pois não há cardite) → FR. Eco pode revelar cardite subclínica (que é critério maior).",
         "Errada: AIJ exige artrite ≥ 6 semanas e não é migratória com resposta rápida ao AAS.",
+        "Correta: infecção estreptocócica prévia (ASLO) + 1 maior (poliartrite migratória) + 2 menores (febre, VHS alta; PR longo também conta pois não há cardite) → FR. Eco pode revelar cardite subclínica (que é critério maior).",
         "Errada: o quadro preenche Jones; artrite reativa pós-estreptocócica é diagnóstico de exclusão.",
         "Errada: corticoide é reservado para cardite moderada/grave."
       ],
@@ -37967,15 +37967,15 @@
       "opcoes": [
         "Iniciar penicilina benzatina a cada 21 dias, pela ASLO elevada",
         "Solicitar ecocardiograma e iniciar AAS por suspeita de febre reumática",
-        "Tranquilizar a família, explicar a natureza benigna, orientar massagem, calor, alongamento e analgésico nas crises, e sinais de retorno",
-        "Encaminhar ao reumatologista para investigar artrite idiopática juvenil"
+        "Encaminhar ao reumatologista para investigar artrite idiopática juvenil",
+        "Tranquilizar a família, explicar a natureza benigna, orientar massagem, calor, alongamento e analgésico nas crises, e sinais de retorno"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Errada: profilaxia secundária exige FR diagnosticada por Jones; ASLO isolada indica apenas contato prévio com o estreptococo.",
         "Errada: não há nenhum critério maior de Jones (sem artrite, cardite, coreia, pele).",
-        "Correta: quadro clássico de dor de crescimento (bilateral, noturna, muscular, exame normal); orientar retorno se dor focal, claudicação, febre ou perda de peso.",
-        "Errada: AIJ cursa com artrite (edema/limitação) e rigidez matinal, ausentes aqui."
+        "Errada: AIJ cursa com artrite (edema/limitação) e rigidez matinal, ausentes aqui.",
+        "Correta: quadro clássico de dor de crescimento (bilateral, noturna, muscular, exame normal); orientar retorno se dor focal, claudicação, febre ou perda de peso."
       ],
       "macete": "\"ASLO não é diagnóstico\" — ASLO só conta história.",
       "contexto": "**Crescimento = melhor indicador de saúde da criança; avaliado em curvas (OMS) e pela velocidade.**\n\nMarcadores:\n- **Peso** → agravo agudo\n- **Estatura** → agravo crônico\n\nVelocidade de crescimento:\n- ~25 cm no 1º ano\n- ~12 cm no 2º ano\n- 5–7 cm/ano dos 3 anos à puberdade\n- Estirão → menina mais cedo (~8–9 cm/ano), menino mais tarde (~10 cm/ano)\n\nBaixa estatura:\n- Estatura < p3 (z < -2), velocidade baixa ou queda de canal\n- Comparar com o **alvo genético** → (pai + mãe ± 13) ÷ 2, faixa ± 8,5 cm\n- Cruzar percentis para baixo preocupa mais que estar baixo (ver ilustração)\n\nVariantes normais (velocidade normal):\n- **Familiar** → pais baixos, idade óssea = cronológica, estatura final no alvo\n- **Constitucional (RCCP)** → idade óssea atrasada, puberdade tardia na família, altura final normal\n\nPatológicas:\n- Desproporcionada → displasias esqueléticas\n- Proporcionada com peso caindo antes → desnutrição/doença crônica (celíaca, DII, renal)\n- Proporcionada com peso preservado → endócrina (hipotireoidismo, deficiência de GH, Cushing)\n- Sindrômica → Turner (sempre cariótipo na menina baixa)\n\nInvestigação:\n- Idade óssea (RX de mão e punho)\n- Hemograma, função renal, TSH/T4, anticorpo da celíaca, IGF-1, cariótipo na menina\n\nDor de crescimento:\n- 3–12 anos, bilateral, membros inferiores (não articular), noturna, melhora com massagem\n- Exame normal e sem limitação no dia seguinte\n- Unilateral, articular, claudicação ou inflamação → investigar\n- ASLO alto isolado não fecha febre reumática (precisa de Jones)\n\nO que mais cai na UERJ:\n- Diferenciar familiar × constitucional × patológica pelo caso.\n- Crescer paralelo abaixo de −2 DP com velocidade normal é variante.",
@@ -38453,15 +38453,15 @@
       "frente": "Menino de 2 anos com febre de 39 °C há 6 dias, irritado. Exame: hiperemia conjuntival bilateral sem secreção, lábios vermelhos e fissurados, língua em framboesa, edema endurecido de mãos e pés e linfonodo cervical de 2 cm à direita. PCR 12 mg/dL. A conduta mais adequada é:",
       "opcoes": [
         "Amoxicilina para adenite cervical e reavaliação em 48 horas",
-        "Imunoglobulina EV 2 g/kg + AAS e ecocardiograma",
         "Prednisona isolada e alta com retorno",
+        "Imunoglobulina EV 2 g/kg + AAS e ecocardiograma",
         "Aguardar a descamação das extremidades para confirmar o diagnóstico"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: o quadro preenche Kawasaki (febre ≥ 5 dias + 4 critérios); antibiótico não trata e atrasa a IGIV.",
-        "Correta: Kawasaki clássico → IGIV + AAS até o 10º dia e eco para avaliar coronárias.",
         "Errada: corticoide não é o tratamento inicial isolado.",
+        "Correta: Kawasaki clássico → IGIV + AAS até o 10º dia e eco para avaliar coronárias.",
         "Errada: a descamação é tardia (2–3 semanas); esperar aumenta o risco de aneurisma."
       ],
       "macete": "Febre ≥ 5 dias + CRASH = IGIV agora.",
@@ -38989,16 +38989,16 @@
       "frente": "Pré-escolar de 4 anos com três lesões ao redor do nariz e do lábio superior, que começaram como pequenas pústulas e evoluíram com crostas amareladas, pruriginosas. Sem febre, bom estado geral, sem outras lesões. A conduta mais adequada é:",
       "opcoes": [
         "Cefalexina oral por 10 dias e manter na escola",
-        "Limpeza local, remoção das crostas e mupirocina tópica; afastar da escola até 24 h após o início do tratamento",
+        "Aciclovir oral pela suspeita de herpes simples",
         "Penicilina benzatina IM dose única para prevenir febre reumática",
-        "Aciclovir oral pela suspeita de herpes simples"
+        "Limpeza local, remoção das crostas e mupirocina tópica; afastar da escola até 24 h após o início do tratamento"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: lesões poucas e localizadas, sem febre → tratamento tópico basta; e o afastamento é recomendado.",
-        "Correta: impetigo crostoso localizado → higiene + antibiótico tópico (mupirocina ou ácido fusídico) e afastamento por 24 h.",
+        "Errada: as crostas melicéricas são de impetigo; herpes dá vesículas agrupadas em base eritematosa.",
         "Errada: impetigo não causa febre reumática e o principal agente é o S. aureus.",
-        "Errada: as crostas melicéricas são de impetigo; herpes dá vesículas agrupadas em base eritematosa."
+        "Correta: impetigo crostoso localizado → higiene + antibiótico tópico (mupirocina ou ácido fusídico) e afastamento por 24 h."
       ],
       "macete": "Poucas lesões, sem febre = pomada + 24 h em casa.",
       "contexto": "**Impetigo = infecção bacteriana superficial da epiderme, muito contagiosa; a piodermite mais comum da infância.**\n\nQuem e onde:\n- Crianças de 2 a 5 anos; calor, umidade, aglomeração, picada de inseto, escabiose e dermatite atópica facilitam\n- Face (ao redor do nariz e da boca) e membros; autoinoculação pelo prurido\n\nFormas:\n- **Não bolhoso (crostoso, ~70%)** → S. aureus e/ou S. pyogenes; mácula/pápula → vesícula ou pústula efêmera → **crosta melicérica** (cor de mel); sem febre\n- **Bolhoso** → S. aureus (toxina esfoliativa local); bolhas flácidas que deixam colarete; RN, lactentes, área de fralda\n- **Ectima** → S. pyogenes; úlcera mais profunda \"em saca-bocado\" com crosta aderente; pernas; deixa cicatriz\n\nDiagnóstico:\n- Clínico; cultura só se falha terapêutica, surto ou suspeita de MRSA\n\nTratamento:\n- Limpeza com água e sabão e remoção das crostas\n- Localizado/leve → tópico: mupirocina ou ácido fusídico, 5–7 dias\n- Extenso, muitas lesões, bolhoso extenso, ectima, febre, surto ou imunossupressão → sistêmico: cefalexina (ou amoxicilina-clavulanato); clindamicina ou SMX-TMP se MRSA\n- Afastar da creche/escola até 24 h após iniciar o antibiótico\n\nComplicações:\n- **Glomerulonefrite pós-estreptocócica** (cepas nefritogênicas; o ATB não previne)\n- Celulite, linfangite, síndrome da pele escaldada estafilocócica, sepse\n- NÃO causa febre reumática (só a faringite causa)\n\nOutras piodermites:\n- Foliculite e furúnculo → S. aureus no folículo\n- Erisipela → S. pyogenes, borda elevada e bem delimitada, derme superficial\n- Celulite → derme profunda/subcutâneo, bordas mal definidas\n\nO que mais cai na UERJ:\n- Reconhecer a crosta melicérica perioral e tratar com tópico no caso localizado.\n- Quando indicar ATB sistêmico.\n- Impetigo → GNPE sim, febre reumática não.",
@@ -39357,16 +39357,16 @@
       "frente": "Lactente de 10 meses com febre de 39,5 °C há 3 dias, ativo e mamando bem entre os picos, sem foco ao exame. No 4º dia a febre desaparece e surge exantema maculopapular róseo no tronco, que se espalha para pescoço e membros. O diagnóstico mais provável é:",
       "opcoes": [
         "Sarampo",
-        "Exantema súbito",
+        "Escarlatina",
         "Rubéola",
-        "Escarlatina"
+        "Exantema súbito"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: no sarampo há tosse, coriza, conjuntivite e o exantema surge COM febre alta, em criança prostrada.",
-        "Correta: febre alta por 3–5 dias em lactente em bom estado e exantema quando a febre cede = HHV-6.",
+        "Errada: escarlatina é rara no lactente e cursa com faringite e exantema em lixa.",
         "Errada: a rubéola tem pródromo leve, linfonodos retroauriculares e exantema craniocaudal com febre baixa.",
-        "Errada: escarlatina é rara no lactente e cursa com faringite e exantema em lixa."
+        "Correta: febre alta por 3–5 dias em lactente em bom estado e exantema quando a febre cede = HHV-6."
       ],
       "macete": "Roséola: \"a febre vai, a rosa vem\".",
       "contexto": "**Doenças exantemáticas = infecções (quase todas virais) com febre + exantema; o diagnóstico vem da relação febre × exantema e do sinal típico.**\n\nComo raciocinar:\n- Tipo de lesão → maculopapular (morbiliforme/rubeoliforme), micropapular (escarlatiniforme) ou vesicular\n- Quando aparece em relação à febre e como progride (craniocaudal, centrípeto)\n- Sinal patognomônico/sugestivo (Koplik, Filatov, face esbofeteada)\n- Vacinação, idade, contato, gestante na família\n\nPrincipais:\n- **Sarampo** → pródromo de febre alta + tosse, coriza e conjuntivite; Koplik; exantema craniocaudal com febre\n- **Rubéola** → pródromo leve, linfonodos retroauriculares/occipitais, exantema róseo que some em 3 dias; risco na gestante\n- **Eritema infeccioso** (parvovírus B19) → face esbofeteada → rendilhado em tronco/membros\n- **Exantema súbito** (HHV-6) → lactente com febre alta 3–5 dias; exantema quando a febre cai\n- **Escarlatina** (S. pyogenes) → faringite + exantema áspero em lixa, Filatov, Pastia, língua em framboesa\n- **Varicela** → vesículas pruriginosas em estágios diferentes, centrípetas, couro cabeludo e mucosas\n- Diferenciais → mão-pé-boca, dengue, Kawasaki, SIM-P, farmacodermia, mononucleose (exantema com amoxicilina)\n\nVigilância:\n- Sarampo e rubéola → notificação IMEDIATA (até 24 h) do caso SUSPEITO + isolamento respiratório + bloqueio vacinal dos contatos em até 72 h\n- Caso suspeito de sarampo → febre + exantema maculopapular + tosse, coriza ou conjuntivite\n\nComplicações a lembrar:\n- Sarampo → pneumonia (principal causa de morte), OMA, encefalite, panencefalite esclerosante subaguda (anos depois)\n- Varicela → infecção bacteriana da pele (mais comum), pneumonia (adulto), ataxia cerebelar, Reye com AAS\n- Parvovírus → crise aplásica (falciforme), hidropsia fetal\n- Escarlatina → febre reumática, GNPE\n\nO que mais cai na UERJ:\n- Reconhecer a doença pelo caso (Koplik, exantema após a febre, face esbofeteada, lixa).\n- Sarampo: notificação imediata, vitamina A, bloqueio vacinal.\n- Síndrome da rubéola congênita (surdez, catarata, cardiopatia).",
@@ -39724,15 +39724,15 @@
       "frente": "RN a termo, pequeno para a idade gestacional, com perímetro cefálico abaixo do percentil 3, fissuras palpebrais curtas, filtro nasolabial liso e lábio superior fino. Ecocardiograma: CIV pequena. Mãe com consumo diário de cerveja durante toda a gestação. O diagnóstico mais provável é:",
       "opcoes": [
         "Síndrome de Down",
-        "Síndrome alcoólica fetal",
         "Síndrome de Williams",
+        "Síndrome alcoólica fetal",
         "Infecção congênita por citomegalovírus"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: Down tem fendas palpebrais oblíquas para cima, hipotonia, prega palmar única e braquicefalia.",
-        "Correta: tríade facial (fissura curta, filtro liso, lábio fino) + PIG + microcefalia + cardiopatia, com exposição ao álcool.",
         "Errada: Williams tem lábios GROSSOS, \"face de duende\", estenose aórtica supravalvar e hipercalcemia.",
+        "Correta: tríade facial (fissura curta, filtro liso, lábio fino) + PIG + microcefalia + cardiopatia, com exposição ao álcool.",
         "Errada: CMV congênito dá microcefalia, calcificações periventriculares, surdez e hepatoesplenomegalia, sem a face típica."
       ],
       "macete": "Lábio FINO = álcool; lábio GROSSO = Williams.",
@@ -40892,16 +40892,16 @@
       "frente": "Homem de 28 anos com RCU (pancolite) apresenta 9 evacuações/dia com sangue, FC 112 bpm, temperatura 38,2 °C, Hb 9,4 g/dL e PCR 80 mg/L. RX simples de abdome sem dilatação colônica. A conduta mais adequada é:",
       "opcoes": [
         "Mesalazina oral em dose alta e acompanhamento ambulatorial",
-        "Internação, corticoide EV, profilaxia de TEV e afastar infecção (C. difficile); se não responder em 3–5 dias, infliximabe/ciclosporina ou colectomia",
+        "Loperamida e ciprofloxacino por 7 dias",
         "Colectomia total de urgência",
-        "Loperamida e ciprofloxacino por 7 dias"
+        "Internação, corticoide EV, profilaxia de TEV e afastar infecção (C. difficile); se não responder em 3–5 dias, infliximabe/ciclosporina ou colectomia"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: é RCU grave (Truelove-Witts); exige internação.",
-        "Correta: RCU aguda grave → corticoide EV + suporte, profilaxia de TEV, pesquisa de C. difficile/CMV; reavaliar no 3º–5º dia para resgate.",
+        "Errada: antidiarreico pode precipitar megacólon tóxico; antibiótico isolado não trata RCU.",
         "Errada: cirurgia de urgência fica para megacólon tóxico, perfuração, hemorragia maciça ou falha do resgate.",
-        "Errada: antidiarreico pode precipitar megacólon tóxico; antibiótico isolado não trata RCU."
+        "Correta: RCU aguda grave → corticoide EV + suporte, profilaxia de TEV, pesquisa de C. difficile/CMV; reavaliar no 3º–5º dia para resgate."
       ],
       "macete": "RCU grave: \"interna, corticoide na veia, reavalia no D3\".",
       "contexto": "**Doença inflamatória intestinal (DII) = inflamação crônica imunomediada do intestino: retocolite ulcerativa (RCU) e doença de Crohn (DC).**\n\nO que é:\n- Predisposição genética + microbiota + resposta imune desregulada\n- Pico entre 15 e 30 anos (2º pico menor aos 50–70)\n- **RCU** → só cólon, mucosa, contínua a partir do reto\n- **Crohn** → qualquer ponto da boca ao ânus (íleo terminal é o mais comum), transmural, salteada\n\nClínica:\n- RCU → diarreia com sangue, muco, tenesmo, urgência\n- Crohn → dor em fossa ilíaca direita, diarreia, emagrecimento, febre, massa, fístulas e doença perianal\n- Extraintestinais → artrite, eritema nodoso, uveíte, colangite esclerosante (RCU), cálculos (Crohn)\n\nDiagnóstico:\n- Afastar infecção (coprocultura, C. difficile, parasitológico)\n- Calprotectina fecal\n- **Colonoscopia com ileoscopia + biópsias** (exame principal)\n- Enterografia por TC ou RM → delgado e complicações (estenose, fístula, abscesso)\n\nClassificação e gravidade:\n- Montreal → extensão (RCU) e idade/localização/comportamento (DC)\n- RCU grave → critérios de Truelove-Witts (ver card)\n\nTratamento:\n- RCU leve/moderada → mesalazina (5-ASA) oral + tópica\n- Moderada/grave → corticoide para induzir; manutenção com azatioprina ou biológico\n- Crohn → 5-ASA não funciona; budesonida (ileocecal leve), corticoide, imunossupressor, biológico precoce no alto risco\n- Biológicos → anti-TNF (infliximabe, adalimumabe), vedolizumabe, ustequinumabe; pequenas moléculas (tofacitinibe, upadacitinibe)\n- Antes de biológico → rastrear TB latente e hepatite B\n- Corticoide NÃO serve para manutenção\n\nComplicações:\n- RCU → megacólon tóxico, hemorragia, câncer colorretal\n- Crohn → estenose/obstrução, fístulas, abscessos, má absorção (B12, sais biliares), câncer\n\nO que mais cai na UERJ:\n- Diferenciar RCU × Crohn pelo caso (sangue/tenesmo × dor FID/fístula/perianal).\n- Cirurgia: curativa na RCU, não curativa no Crohn.\n- RCU grave → internação + corticoide EV; megacólon tóxico.",
@@ -41453,15 +41453,15 @@
       "sub": "Doença falciforme — crises e síndrome torácica aguda",
       "frente": "Menino de 10 anos com anemia falciforme (HbSS), internado há 2 dias por crise álgica em uso de morfina, evolui com febre de 38,6 °C, taquipneia, dor torácica e SpO₂ 91% em ar ambiente. RX: infiltrado novo em base direita. Hb 7,2 g/dL (basal 8). A conduta mais adequada é:",
       "opcoes": [
-        "Aumentar a dose de morfina e hidratar vigorosamente com 2× a manutenção",
         "Ceftriaxona + azitromicina, O₂, analgesia com vigilância respiratória, espirometria de incentivo e transfusão simples",
+        "Aumentar a dose de morfina e hidratar vigorosamente com 2× a manutenção",
         "Exsanguineotransfusão imediata, que é indicada em todo caso de STA",
         "Anticoagulação plena por suspeita de tromboembolismo pulmonar"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: hiper-hidratação pode causar edema pulmonar, e opioide em excesso causa hipoventilação.",
         "Correta: STA (febre + sintomas respiratórios + infiltrado novo) → ATB (cefalosporina 3ª + macrolídeo), O₂, analgesia cuidadosa e transfusão simples (SpO₂ < 95%).",
+        "Errada: hiper-hidratação pode causar edema pulmonar, e opioide em excesso causa hipoventilação.",
         "Errada: exsanguineotransfusão fica para casos graves (multilobar, progressão rápida, SpO₂ ≤ 85%).",
         "Errada: TEP é uma das causas, mas o tratamento inicial da STA é o pacote ATB + O₂ + transfusão."
       ],
@@ -41968,15 +41968,15 @@
       "frente": "Idosa de 78 anos, analfabeta, independente para atividades básicas e instrumentais, vem à consulta de rotina. Família não percebe esquecimentos. Na AGA obtém 15 pontos no Mini-Exame do Estado Mental. A interpretação mais adequada é:",
       "opcoes": [
         "Diagnóstico de demência; iniciar inibidor da colinesterase",
-        "Resultado acima do ponto de corte para analfabetos; não sugere déficit cognitivo",
         "O MEEM não pode ser aplicado em analfabetos",
+        "Resultado acima do ponto de corte para analfabetos; não sugere déficit cognitivo",
         "Resultado sugere depressão; iniciar antidepressivo"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: o MEEM é rastreio, não diagnóstico; e 15 está acima do corte de 13 para analfabetos.",
-        "Correta: o ponto de corte varia com a escolaridade (13 para analfabetos pelo critério usado pelo MS); sem queixa nem perda funcional, não há indicação de investigação.",
         "Errada: pode ser aplicado, com corte ajustado pela escolaridade.",
+        "Correta: o ponto de corte varia com a escolaridade (13 para analfabetos pelo critério usado pelo MS); sem queixa nem perda funcional, não há indicação de investigação.",
         "Errada: humor se avalia com GDS-15, não com o MEEM."
       ],
       "macete": "MEEM: \"corte anda com a escola\".",
@@ -42498,16 +42498,16 @@
       "frente": "Mulher de 74 anos, viúva há 4 meses, vem sozinha queixando-se de \"esquecimento\" de início há 2 meses, insônia e falta de interesse. Nos testes cognitivos responde \"não sei\" com pouco esforço. TSH e B12 normais. Qual a hipótese e a conduta?",
       "opcoes": [
         "Doença de Alzheimer → iniciar donepezila",
-        "Pseudodemência depressiva → tratar a depressão (ISRS)",
+        "Delirium → investigar infecção urinária",
         "Demência por corpos de Lewy → iniciar haloperidol",
-        "Delirium → investigar infecção urinária"
+        "Pseudodemência depressiva → tratar a depressão (ISRS)"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: no Alzheimer o início é insidioso e o paciente costuma minimizar a perda; quem se queixa é a família.",
-        "Correta: início recente após luto, queixa ativa de memória, pouco esforço nos testes → pseudodemência; melhora com antidepressivo.",
+        "Errada: não há início agudo, flutuação nem desatenção.",
         "Errada: não há flutuação, alucinação ou parkinsonismo; e antipsicótico é perigoso no Lewy.",
-        "Errada: não há início agudo, flutuação nem desatenção."
+        "Correta: início recente após luto, queixa ativa de memória, pouco esforço nos testes → pseudodemência; melhora com antidepressivo."
       ],
       "macete": "Pseudodemência: \"o próprio paciente reclama\"; demência: \"a família reclama\".",
       "pegadinha": "Rotular como Alzheimer e iniciar anticolinesterásico.",
@@ -43135,16 +43135,16 @@
       "frente": "Adolescente de 14 anos chega ao pronto-socorro 20 horas após violência sexual por desconhecido. Está estável, sem lesões graves e sem vacinação completa para hepatite B. Não registrou boletim de ocorrência. A conduta mais adequada é:",
       "opcoes": [
         "Aguardar o boletim de ocorrência e o exame do IML antes de iniciar as profilaxias",
-        "Iniciar PEP para HIV, profilaxia de IST, contracepção de emergência, vacina e imunoglobulina para hepatite B; notificar imediatamente e comunicar ao Conselho Tutelar",
+        "Iniciar só a contracepção de emergência, pois a PEP é indicada apenas se o agressor for HIV positivo conhecido",
         "Realizar apenas notificação semanal e encaminhar ao ambulatório",
-        "Iniciar só a contracepção de emergência, pois a PEP é indicada apenas se o agressor for HIV positivo conhecido"
+        "Iniciar PEP para HIV, profilaxia de IST, contracepção de emergência, vacina e imunoglobulina para hepatite B; notificar imediatamente e comunicar ao Conselho Tutelar"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: o atendimento de saúde não depende de BO nem de IML; atrasar a PEP reduz a eficácia.",
-        "Correta: dentro de 72 h → todas as profilaxias; violência sexual é de notificação imediata e, por ser adolescente, comunica-se ao Conselho Tutelar.",
+        "Errada: com agressor desconhecido a PEP está indicada.",
         "Errada: violência sexual é de notificação imediata (24 h).",
-        "Errada: com agressor desconhecido a PEP está indicada."
+        "Correta: dentro de 72 h → todas as profilaxias; violência sexual é de notificação imediata e, por ser adolescente, comunica-se ao Conselho Tutelar."
       ],
       "macete": "Violência sexual: \"atende primeiro, notifica em 24 h, nunca espera BO\".",
       "contexto": "**Violência = uso intencional de força ou poder, real ou em ameaça, contra si, outra pessoa ou grupo, que resulte ou possa resultar em lesão, morte, dano psicológico, privação ou mau desenvolvimento (OMS).**\n\nTipologia OMS (quem pratica):\n- **Autoprovocada** → suicídio, tentativa, autoagressão\n- **Interpessoal** → intrafamiliar/doméstica (parceiro, filhos, idosos) e comunitária (conhecidos ou estranhos)\n- **Coletiva** → social, política, econômica (grupos, Estado)\n\nNatureza:\n- Física, sexual, psicológica/moral, negligência/abandono\n- Também (SINAN) → financeira/patrimonial, tortura, tráfico de pessoas, trabalho infantil, intervenção legal\n- **Estrutural** → desigualdades sociais e econômicas que negam direitos (fome, exclusão, falta de acesso); naturalizada e difícil de ver\n\nNotificação (ficha SINAN de violência interpessoal/autoprovocada):\n- Notifica-se a SUSPEITA ou a confirmação; notificação ≠ denúncia\n- Semanal → violência doméstica e outras violências\n- **Imediata (24 h, à Secretaria Municipal)** → violência sexual e tentativa de suicídio\n- Comunicação obrigatória:\n  - Criança/adolescente → Conselho Tutelar (ECA)\n  - Pessoa idosa → autoridade policial, Ministério Público ou Conselho do Idoso (Estatuto da Pessoa Idosa)\n  - Mulher → comunicar à autoridade policial em 24 h (Lei 13.931/2019)\n\nCriança — sinais de alerta:\n- História incompatível com a lesão ou com o desenvolvimento, demora em procurar atendimento\n- Lesões em vários estágios, em áreas protegidas, marcas de objeto, queimaduras em luva/meia\n- Fraturas de costela, metafisárias \"em canto\", hematoma subdural + hemorragia retiniana (bebê sacudido)\n- Negligência é a forma mais notificada\n\nIdoso — fatores de risco:\n- Dependência funcional, demência, isolamento, cuidador sobrecarregado ou usuário de álcool/drogas, dependência financeira do agressor\n- Agressor mais comum → familiar (filhos)\n\nViolência sexual — atendimento:\n- Urgente, sem exigir boletim de ocorrência\n- Profilaxias até 72 h (ver card), contracepção de emergência, coleta de vestígios, apoio psicológico\n- Gestação decorrente → direito ao aborto legal (sem BO nem autorização judicial)\n\nO que mais cai na UERJ:\n- Classificar o tipo de violência no caso (inclusive estrutural).\n- Notificação: o que é imediato × semanal e a quem comunicar.\n- Fatores de risco de violência contra o idoso e sinais na criança.",
@@ -43334,16 +43334,16 @@
       "sub": "Risco social e vulnerabilidade na criança",
       "frente": "Na primeira consulta de puericultura, a equipe de saúde da família identifica diversos fatores na família de um lactente. Segundo Duncan, qual deles, ISOLADAMENTE, já caracteriza risco social?",
       "opcoes": [
-        "Mãe com 17 anos",
-        "Mãe com menos de 8 anos de estudo",
         "Criança manifestamente indesejada pela família",
+        "Mãe com menos de 8 anos de estudo",
+        "Mãe com 17 anos",
         "Pai desempregado há 3 meses"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada: mãe adolescente é fator de risco, mas precisa de associação com outros fatores para definir risco social.",
-        "Errada: baixa escolaridade materna também exige associação.",
         "Correta: criança manifestamente indesejada (assim como mãe dependente de álcool/drogas) é critério absoluto — revela ruptura do vínculo e risco de negligência, abandono e maus-tratos.",
+        "Errada: baixa escolaridade materna também exige associação.",
+        "Errada: mãe adolescente é fator de risco, mas precisa de associação com outros fatores para definir risco social.",
         "Errada: desemprego é fator relevante, mas não absoluto."
       ],
       "macete": "Sozinhos: \"indesejada\" e \"dependente química\".",
@@ -43644,15 +43644,15 @@
       "sub": "Testes diagnósticos — sensibilidade, especificidade, valores preditivos e probabilidade pré-teste",
       "frente": "Um teste rápido com sensibilidade de 90% e especificidade de 95% é usado em duas populações: um ambulatório especializado (prevalência 40%) e uma campanha na população geral (prevalência 1%). Na campanha, em comparação com o ambulatório:",
       "opcoes": [
-        "A sensibilidade será menor",
         "O valor preditivo positivo será menor",
+        "A sensibilidade será menor",
         "O valor preditivo negativo será menor",
         "A especificidade será maior"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: sensibilidade é propriedade do teste; não muda com a prevalência.",
         "Correta: com prevalência baixa, a maioria dos positivos é falso-positivo → VPP cai.",
+        "Errada: sensibilidade é propriedade do teste; não muda com a prevalência.",
         "Errada: com prevalência baixa o VPN AUMENTA.",
         "Errada: especificidade também não muda com a prevalência."
       ],
@@ -43799,16 +43799,16 @@
       "sub": "Doença coronariana — angina estável, teste ergométrico e IAM",
       "frente": "Homem, 62 anos, dor torácica há 1 hora. ECG: supradesnivelamento de ST em DII, DIII e aVF. PA 82 × 50 mmHg, turgência jugular e pulmões limpos. Qual a conduta para a hipotensão?",
       "opcoes": [
-        "Nitroglicerina EV para aliviar a dor",
-        "Furosemida EV",
         "Expansão volêmica com cristaloide e ECG com V3R/V4R",
+        "Furosemida EV",
+        "Nitroglicerina EV para aliviar a dor",
         "Morfina EV"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada: no IAM de VD o nitrato derruba a pré-carga e piora a hipotensão.",
-        "Errada: diurético reduz a pré-carga de que o VD depende.",
         "Correta: IAM inferior + hipotensão + jugular cheia + pulmão limpo = IAM de VD → volume e pesquisar V3R/V4R.",
+        "Errada: diurético reduz a pré-carga de que o VD depende.",
+        "Errada: no IAM de VD o nitrato derruba a pré-carga e piora a hipotensão.",
         "Errada: morfina causa venodilatação e piora a hipotensão."
       ],
       "macete": "IAM de VD: \"o VD vive de volume\" — dá soro, tira nitrato.",
@@ -43951,16 +43951,16 @@
       "frente": "Mulher, 70 anos, hipertensa, chega com dispneia súbita há 1 hora e ortopneia. PA 210 × 120 mmHg, SatO₂ 86% e estertores até os ápices. Qual a conduta inicial mais adequada?",
       "opcoes": [
         "Anticoagulação plena por suspeita de TEP",
-        "VNI + nitroglicerina EV em dose alta + furosemida EV",
+        "Expansão volêmica com soro fisiológico",
         "Morfina EV e betabloqueador EV",
-        "Expansão volêmica com soro fisiológico"
+        "VNI + nitroglicerina EV em dose alta + furosemida EV"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: PA muito alta + crepitações difusas = EAP hipertensivo, não TEP.",
-        "Correta: VNI reduz intubação; nitrato em dose alta reduz pré e pós-carga; furosemida tira a congestão.",
+        "Errada: volume piora o edema pulmonar.",
         "Errada: morfina não é rotina e betabloqueador EV piora a congestão aguda.",
-        "Errada: volume piora o edema pulmonar."
+        "Correta: VNI reduz intubação; nitrato em dose alta reduz pré e pós-carga; furosemida tira a congestão."
       ],
       "macete": "EAP: \"senta, VNI, nitro, furo\".",
       "uerj": "A banca coloca a dispneia súbita para você pensar em TEP.",
@@ -44164,15 +44164,15 @@
       "sub": "Endocardite infecciosa",
       "frente": "Homem, 34 anos, usuário de drogas injetáveis, com febre há 10 dias, tosse e múltiplos nódulos pulmonares cavitados na TC. Sopro sistólico na borda esternal esquerda baixa que aumenta na inspiração. Qual o agente e a valva mais prováveis?",
       "opcoes": [
-        "Streptococcus viridans — valva mitral",
         "Staphylococcus aureus — valva tricúspide",
+        "Streptococcus viridans — valva mitral",
         "Enterococcus — valva aórtica",
         "Staphylococcus epidermidis — valva pulmonar"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: viridans é da valva nativa esquerda com doença prévia, curso subagudo.",
         "Correta: UDI → S. aureus na tricúspide; êmbolos sépticos pulmonares; sopro de regurgitação tricúspide aumenta na inspiração (Rivero-Carvallo).",
+        "Errada: viridans é da valva nativa esquerda com doença prévia, curso subagudo.",
         "Errada: enterococo é do idoso com manipulação geniturinária.",
         "Errada: S. epidermidis é da prótese valvar precoce."
       ],
@@ -44718,15 +44718,15 @@
       "frente": "Gestante de 33 semanas em uso de sulfato de magnésio (Zuspan) por pré-eclâmpsia grave apresenta, após 12 horas, reflexo patelar abolido, FR 14 irpm e diurese de 20 mL/h. Qual a conduta?",
       "opcoes": [
         "Aumentar a infusão para 2 g/h",
-        "Suspender o sulfato e administrar gluconato de cálcio 10% EV",
         "Associar hidralazina EV",
+        "Suspender o sulfato e administrar gluconato de cálcio 10% EV",
         "Manter a infusão e repetir a dose de ataque"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: há sinais de intoxicação; aumentar a dose pode causar parada respiratória.",
-        "Correta: reflexo abolido + FR < 16 + oligúria = intoxicação → suspender e dar o antídoto.",
         "Errada: o problema é a toxicidade do magnésio, não a PA.",
+        "Correta: reflexo abolido + FR < 16 + oligúria = intoxicação → suspender e dar o antídoto.",
         "Errada: piora a intoxicação."
       ],
       "macete": "Magnésio alto: primeiro \"cai o joelho\" (reflexo), depois a respiração, depois o coração.",
@@ -45318,15 +45318,15 @@
       "frente": "Motociclista, 25 anos, com amputação traumática da perna direita e sangramento em jato, gemendo e com respiração ruidosa. Qual a primeira medida?",
       "opcoes": [
         "Intubação orotraqueal",
-        "Torniquete proximal à lesão",
         "Colar cervical e prancha rígida",
+        "Torniquete proximal à lesão",
         "Dois acessos calibrosos e cristaloide"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: a hemorragia exsanguinante externa (X) vem antes da via aérea.",
-        "Correta: X-ABCDE — controlar o sangramento externo grave primeiro.",
         "Errada: a restrição da coluna entra no A, depois do X.",
+        "Correta: X-ABCDE — controlar o sangramento externo grave primeiro.",
         "Errada: repor volume sem estancar não resolve; é o C."
       ],
       "macete": "X marca o sangue: estanca antes de tudo.",
@@ -45810,16 +45810,16 @@
       "sub": "Desidratação e diarreia aguda na criança",
       "frente": "Lactente de 1 ano com diarreia há 2 dias, letárgico, olhos muito fundos, não consegue beber, sinal da prega desaparecendo muito lentamente e enchimento capilar de 6 s. Qual a conduta?",
       "opcoes": [
-        "Plano A: SRO em casa e zinco",
-        "Plano B: SRO 100 mL/kg em 4 h na unidade",
         "Plano C: hidratação venosa rápida com SF 0,9%",
+        "Plano B: SRO 100 mL/kg em 4 h na unidade",
+        "Plano A: SRO em casa e zinco",
         "Ondansetrona e reavaliar em 1 hora"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada: há sinais de desidratação grave.",
-        "Errada: plano B é para desidratação sem gravidade e com a criança bebendo.",
         "Correta: letargia + não bebe + prega muito lenta = desidratação grave → plano C.",
+        "Errada: plano B é para desidratação sem gravidade e com a criança bebendo.",
+        "Errada: há sinais de desidratação grave.",
         "Errada: atrasa a reidratação venosa."
       ],
       "macete": "Não bebe + letárgico = \"C de Cateter na veia\".",
@@ -46040,15 +46040,15 @@
       "frente": "Atleta de 19 anos tem síncope durante o treino. Sopro sistólico ejetivo na borda esternal esquerda, sem irradiação para carótidas, que AUMENTA com a manobra de Valsalva e DIMINUI ao agachar. O pai morreu subitamente aos 40 anos. Qual o diagnóstico mais provável?",
       "opcoes": [
         "Estenose aórtica por valva bicúspide",
-        "Cardiomiopatia hipertrófica",
         "Comunicação interventricular",
+        "Cardiomiopatia hipertrófica",
         "Insuficiência mitral reumática"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: o sopro da estenose aórtica DIMINUI com Valsalva e irradia para as carótidas.",
-        "Correta: o sopro da CMH aumenta quando o VE fica menor (Valsalva, ficar de pé) e diminui ao agachar; jovem + síncope + morte súbita familiar.",
         "Errada: o sopro da CIV é holossistólico e não aumenta com Valsalva.",
+        "Correta: o sopro da CMH aumenta quando o VE fica menor (Valsalva, ficar de pé) e diminui ao agachar; jovem + síncope + morte súbita familiar.",
         "Errada: a insuficiência mitral é holossistólica apical e diminui com Valsalva."
       ],
       "macete": "CMH é a \"do contra\": tudo que esvazia o coração (Valsalva, ficar de pé) faz o sopro crescer.",
@@ -46497,16 +46497,16 @@
       "frente": "Mulher de 38 anos com fraqueza, emagrecimento e escurecimento da pele e das gengivas. PA 90 × 60 mmHg, Na 128 mEq/L, K 5,9 mEq/L, glicemia 62 mg/dL. Qual exame confirma o diagnóstico?",
       "opcoes": [
         "Cortisol salivar às 23 h",
-        "Teste de estímulo com ACTH sintético (cortrosina)",
+        "Relação aldosterona/renina",
         "Supressão com 1 mg de dexametasona",
-        "Relação aldosterona/renina"
+        "Teste de estímulo com ACTH sintético (cortrosina)"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: o cortisol salivar noturno rastreia Cushing (excesso), não falta de cortisol.",
-        "Correta: quadro de Addison; cortisol < 18 µg/dL após a cortrosina confirma a insuficiência adrenal.",
+        "Errada: a relação aldosterona/renina rastreia hiperaldosteronismo (HAS com hipocalemia), o oposto deste caso.",
         "Errada: a supressão com dexametasona investiga Cushing.",
-        "Errada: a relação aldosterona/renina rastreia hiperaldosteronismo (HAS com hipocalemia), o oposto deste caso."
+        "Correta: quadro de Addison; cortisol < 18 µg/dL após a cortrosina confirma a insuficiência adrenal."
       ],
       "macete": "Addison \"escurece e esvazia\": pele escura, PA baixa, sódio baixo, potássio alto.",
       "pegadinha": "Escolher um teste de supressão: na falta de hormônio se ESTIMULA; no excesso se SUPRIME.",
@@ -46724,15 +46724,15 @@
       "frente": "Jovem com DM1 chega com vômitos e dor abdominal. Glicemia 480 mg/dL, pH 7,10, bicarbonato 8 mEq/L, cetonúria +++ e K 3,0 mEq/L. Após iniciar soro fisiológico, qual o próximo passo?",
       "opcoes": [
         "Insulina regular EV 0,1 U/kg/h imediatamente",
-        "Bicarbonato de sódio EV",
         "Repor potássio e só depois iniciar a insulina",
+        "Bicarbonato de sódio EV",
         "Trocar para soro glicosado 5%"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errada: insulina joga o potássio para dentro da célula; com K 3,0 pode causar arritmia grave.",
-        "Errada: bicarbonato só com pH < 6,9.",
         "Correta: K < 3,3 → repor primeiro e adiar a insulina até K ≥ 3,3.",
+        "Errada: bicarbonato só com pH < 6,9.",
         "Errada: soro glicosado entra quando a glicemia cai para ≤ 250."
       ],
       "macete": "CAD: \"água, potássio, insulina\" — nessa ordem.",
@@ -47000,15 +47000,15 @@
       "frente": "Homem de 32 anos, 2 semanas após diarreia, tem fraqueza que começou nos pés e subiu até as coxas em 5 dias, com arreflexia global. Sensibilidade pouco alterada. LCR: proteína 110 mg/dL, 2 células. Qual o tratamento?",
       "opcoes": [
         "Pulsoterapia com metilprednisolona",
-        "Imunoglobulina EV",
         "Piridostigmina",
+        "Imunoglobulina EV",
         "Imunoglobulina EV associada a plasmaférese"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: corticoide não melhora a SGB.",
-        "Correta: SGB → imunoglobulina EV (ou plasmaférese) e monitorar a CVF.",
         "Errada: piridostigmina trata miastenia, não neuropatia.",
+        "Correta: SGB → imunoglobulina EV (ou plasmaférese) e monitorar a CVF.",
         "Errada: combinar não traz benefício; escolhe-se uma das duas."
       ],
       "macete": "Guillain-Barré: \"Gama ou troca\" (gamaglobulina ou troca de plasma) — nunca corticoide.",
@@ -47224,15 +47224,15 @@
       "frente": "Mulher de 42 anos com cefaleia súbita e intensa, \"a pior da vida\", iniciada há 3 horas durante esforço. Rigidez de nuca leve, sem déficit focal. Qual a primeira conduta?",
       "opcoes": [
         "Sumatriptano SC e observação",
-        "TC de crânio sem contraste",
         "Punção lombar imediata",
+        "TC de crânio sem contraste",
         "RM de crânio eletiva"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: cefaleia em trovoada é sinal de alarme; não se trata como enxaqueca.",
-        "Correta: suspeita de hemorragia subaracnoide → TC sem contraste; se normal, punção lombar.",
         "Errada: a punção vem DEPOIS da TC normal (e exclui hipertensão intracraniana).",
+        "Correta: suspeita de hemorragia subaracnoide → TC sem contraste; se normal, punção lombar.",
         "Errada: é emergência; RM eletiva atrasa o diagnóstico."
       ],
       "macete": "Trovoada na cabeça: \"TC primeiro, agulha depois\".",
@@ -47440,15 +47440,15 @@
       "frente": "Homem de 30 anos com febre há 3 dias, confusão, comportamento estranho e uma crise convulsiva. LCR: 120 células (90% linfócitos), hemácias, proteína 90 mg/dL, glicose normal. A RM mostra hipersinal em lobo temporal. Qual a conduta?",
       "opcoes": [
         "Aguardar a PCR para HSV no LCR",
-        "Ceftriaxona isolada",
         "Aciclovir EV imediatamente",
+        "Ceftriaxona isolada",
         "Corticoide em pulso"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errada: o atraso do aciclovir aumenta a mortalidade e as sequelas.",
-        "Errada: o LCR é viral (linfocítico, glicose normal); ceftriaxona sozinha não cobre HSV.",
         "Correta: suspeita de encefalite herpética → aciclovir EV 10 mg/kg 8/8 h já.",
+        "Errada: o LCR é viral (linfocítico, glicose normal); ceftriaxona sozinha não cobre HSV.",
         "Errada: corticoide não é o tratamento da encefalite herpética."
       ],
       "macete": "Encefalite + temporal = \"Aciclovir Antes de Ajuda do laboratório\".",
@@ -47822,16 +47822,16 @@
       "frente": "Homem de 66 anos, tabagista, com massa pulmonar central escavada, está confuso e desidratado. Cálcio 14,2 mg/dL, PTH suprimido, fósforo normal-baixo. Qual o mecanismo e a primeira conduta?",
       "opcoes": [
         "Hiperparatireoidismo primário → paratireoidectomia",
-        "PTHrP do carcinoma epidermoide → hidratação vigorosa com SF + bisfosfonato",
+        "Excesso de vitamina D → corticoide isolado",
         "Metástase óssea → furosemida isolada",
-        "Excesso de vitamina D → corticoide isolado"
+        "PTHrP do carcinoma epidermoide → hidratação vigorosa com SF + bisfosfonato"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: no hiperparatireoidismo o PTH está alto, não suprimido.",
-        "Correta: carcinoma epidermoide (massa central escavada) secreta PTHrP → hidratar e depois bisfosfonato.",
+        "Errada: a hipercalcemia por vitamina D (linfoma, granuloma) não é o quadro deste tumor.",
         "Errada: furosemida sem hidratar piora a desidratação; não é a 1ª medida.",
-        "Errada: a hipercalcemia por vitamina D (linfoma, granuloma) não é o quadro deste tumor."
+        "Correta: carcinoma epidermoide (massa central escavada) secreta PTHrP → hidratar e depois bisfosfonato."
       ],
       "macete": "Epidermoide \"Eleva o cálcio\"; pequenas células \"Pequenas\" no sódio (SIADH).",
       "pegadinha": "Dar furosemida antes de hidratar.",
@@ -48068,15 +48068,15 @@
       "sub": "Artrites — artrite reumatoide, espondiloartrites, artrite gonocócica e osteoartrite",
       "frente": "Mulher de 22 anos, sexualmente ativa, com febre, poliartralgia migratória, tenossinovite no punho direito e pústulas hemorrágicas nas extremidades. Qual a conduta?",
       "opcoes": [
-        "Metotrexato",
         "Ceftriaxona + tratamento para Chlamydia",
+        "Metotrexato",
         "AINE e repouso",
         "Oxacilina EV"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: não é AR; é infecção.",
         "Correta: gonococcemia disseminada (tríade tenossinovite + dermatite + artralgia) → ceftriaxona e cobertura de Chlamydia.",
+        "Errada: não é AR; é infecção.",
         "Errada: deixa uma infecção sistêmica sem tratamento.",
         "Errada: oxacilina cobre S. aureus, não Neisseria gonorrhoeae."
       ],
@@ -48317,15 +48317,15 @@
       "frente": "Homem de 45 anos com lombalgia intensa há 2 dias, agora com dor irradiada para as duas pernas, retenção urinária e hipoestesia perineal. Qual a conduta?",
       "opcoes": [
         "AINE e fisioterapia por 6 semanas",
-        "RM urgente e descompressão cirúrgica",
         "RX de coluna e retorno ambulatorial",
+        "RM urgente e descompressão cirúrgica",
         "Corticoide oral e reavaliação em 1 semana"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: o conservador é para hérnia sem sinal de alarme.",
-        "Correta: síndrome da cauda equina → RM de urgência e descompressão (ideal em até 48 h).",
         "Errada: RX não mostra a compressão e o retorno atrasa a cirurgia.",
+        "Correta: síndrome da cauda equina → RM de urgência e descompressão (ideal em até 48 h).",
         "Errada: atrasar a descompressão deixa sequela esfincteriana."
       ],
       "macete": "Cauda equina: \"bexiga presa, sela dormente, centro cirúrgico urgente\".",
@@ -48911,15 +48911,15 @@
       "frente": "Mulher de 50 anos, 2 horas após transfusão de plasma, tem dispneia súbita, hipoxemia, febre e hipotensão. RX com infiltrado bilateral. Turgência jugular ausente e BNP normal. Qual o diagnóstico?",
       "opcoes": [
         "TACO (sobrecarga circulatória)",
-        "TRALI (lesão pulmonar aguda relacionada à transfusão)",
         "Reação hemolítica aguda",
+        "TRALI (lesão pulmonar aguda relacionada à transfusão)",
         "Reação alérgica"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: na TACO há hipertensão, jugular cheia e BNP alto.",
-        "Correta: edema pulmonar não cardiogênico em até 6 h, com hipotensão, febre e BNP normal → TRALI (plasma é o principal hemocomponente).",
         "Errada: a hemolítica aguda dá dor lombar, hemoglobinúria e choque, sem predomínio pulmonar.",
+        "Correta: edema pulmonar não cardiogênico em até 6 h, com hipotensão, febre e BNP normal → TRALI (plasma é o principal hemocomponente).",
         "Errada: a alérgica dá urticária e prurido."
       ],
       "macete": "TRALI = \"Tudo baixo\" (PA e BNP); TACO = \"Tudo Alto\" (PA, jugular, BNP).",
@@ -49043,15 +49043,15 @@
       "sub": "Síndrome nefrítica — nefropatia por IgA × GNPE, GNRP e hipertensão renovascular",
       "frente": "Homem de 22 anos com hematúria macroscópica 2 dias após faringite. PA normal, sem edema. C3 e C4 normais, creatinina normal. Qual o diagnóstico mais provável?",
       "opcoes": [
-        "Glomerulonefrite pós-estreptocócica",
         "Nefropatia por IgA",
+        "Glomerulonefrite pós-estreptocócica",
         "Nefrite lúpica",
         "Doença anti-MBG"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: na GNPE a latência é de 10–21 dias e o C3 está baixo.",
         "Correta: hematúria macroscópica 1–3 dias após IVAS, com C3 normal, em adulto jovem → nefropatia por IgA.",
+        "Errada: na GNPE a latência é de 10–21 dias e o C3 está baixo.",
         "Errada: o lúpus consome complemento (C3 e C4 baixos).",
         "Errada: anti-MBG cursa com perda rápida de função e, às vezes, hemorragia pulmonar."
       ],
@@ -49269,15 +49269,15 @@
       "sub": "Doença celíaca e diarreia crônica na criança",
       "frente": "Criança de 18 meses com diarreia crônica, distensão abdominal, irritabilidade e queda no ganho de peso desde a introdução de pães e biscoitos, aos 8 meses. Qual a melhor conduta inicial?",
       "opcoes": [
-        "Anti-transglutaminase IgA + IgA total, mantendo o glúten",
         "Teste do suor",
+        "Anti-transglutaminase IgA + IgA total, mantendo o glúten",
         "Retirar o glúten e observar a resposta",
         "Apenas parasitológico de fezes"
       ],
-      "certa": 0,
+      "certa": 1,
       "comentarios": [
-        "Correta: suspeita de doença celíaca → triagem sorológica com dosagem de IgA total, com o glúten na dieta.",
         "Errada: fibrose cística é diferencial, mas o quadro ligado ao glúten aponta celíaca.",
+        "Correta: suspeita de doença celíaca → triagem sorológica com dosagem de IgA total, com o glúten na dieta.",
         "Errada: tirar o glúten antes negativa a sorologia e a biópsia.",
         "Errada: o parasitológico pode entrar, mas não substitui a investigação da celíaca."
       ],
@@ -49595,15 +49595,15 @@
       "sub": "Icterícia neonatal — fisiológica, patológica, fototerapia e colestase",
       "frente": "RN a termo, 20 horas de vida, com icterícia até o abdome. Mãe O positivo, RN A positivo, Coombs direto positivo. Qual a interpretação e a conduta?",
       "opcoes": [
-        "Icterícia fisiológica → observar",
         "Incompatibilidade ABO → dosar bilirrubina e indicar fototerapia pelo nomograma",
+        "Icterícia fisiológica → observar",
         "Icterícia do leite materno → suspender a amamentação",
         "Atresia de vias biliares → cirurgia de Kasai"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: icterícia antes de 24 h nunca é fisiológica.",
         "Correta: mãe O e RN A com Coombs positivo → doença hemolítica ABO; dosar bilirrubina e seguir o nomograma.",
+        "Errada: icterícia antes de 24 h nunca é fisiológica.",
         "Errada: icterícia do leite materno aparece após a 1ª semana, e não se suspende a amamentação.",
         "Errada: atresia cursa com bilirrubina DIRETA alta e acolia, após a 2ª semana."
       ],
@@ -50091,15 +50091,15 @@
       "opcoes": [
         "USG para confirmar antes de qualquer conduta",
         "Tocólise com nifedipina",
-        "Amniotomia e cesárea de urgência",
-        "Corticoide e conduta expectante"
+        "Corticoide e conduta expectante",
+        "Amniotomia e cesárea de urgência"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Errada: o DPP é diagnóstico clínico; o USG atrasa e pode ser normal.",
         "Errada: tocólise é contraindicada no DPP.",
-        "Correta: DPP com feto vivo em sofrimento e parto não iminente → amniotomia e cesárea de urgência.",
-        "Errada: com sofrimento fetal não há espaço para expectante."
+        "Errada: com sofrimento fetal não há espaço para expectante.",
+        "Correta: DPP com feto vivo em sofrimento e parto não iminente → amniotomia e cesárea de urgência."
       ],
       "macete": "DPP: \"Dói, Duro, Desce sangue escuro\" → tira o bebê.",
       "pegadinha": "Pedir USG para \"confirmar\" o descolamento.",
@@ -50989,15 +50989,15 @@
       "sub": "Endometriose e adenomiose",
       "frente": "Mulher de 29 anos com dismenorreia progressiva e dispareunia de profundidade. Toque com nódulo doloroso em ligamento uterossacro. USG transvaginal: endometrioma de 3 cm. Não deseja gestar agora. Qual a conduta inicial?",
       "opcoes": [
-        "Videolaparoscopia obrigatória antes de tratar",
         "Progestagênio contínuo (dienogeste) ou ACO contínuo",
+        "Videolaparoscopia obrigatória antes de tratar",
         "Histerectomia com anexectomia",
         "CA-125 para confirmar o diagnóstico"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: o diagnóstico clínico e de imagem permite iniciar o tratamento.",
         "Correta: endometriose com dor, sem desejo de gestar → bloqueio hormonal contínuo + AINE.",
+        "Errada: o diagnóstico clínico e de imagem permite iniciar o tratamento.",
         "Errada: radical demais para mulher jovem.",
         "Errada: CA-125 não confirma endometriose."
       ],
@@ -51200,15 +51200,15 @@
       "sub": "Desenhos de estudo e medidas de associação",
       "frente": "Pesquisadores compararam 200 pacientes com câncer de esôfago e 400 pessoas sem a doença quanto ao hábito prévio de tomar bebidas muito quentes. Qual o desenho do estudo?",
       "opcoes": [
-        "Coorte retrospectiva",
         "Caso-controle",
+        "Coorte retrospectiva",
         "Transversal",
         "Ecológico"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: a coorte parte da exposição, não da doença.",
         "Correta: parte de doentes e não doentes e investiga a exposição passada → caso-controle (odds ratio).",
+        "Errada: a coorte parte da exposição, não da doença.",
         "Errada: o transversal mede exposição e doença no mesmo momento.",
         "Errada: a unidade de análise é o indivíduo, não a população."
       ],
@@ -51350,15 +51350,15 @@
       "sub": "Abordagem familiar e método clínico centrado na pessoa",
       "frente": "Durante a consulta, a médica de família pergunta ao paciente com lombalgia: \"O que o senhor acha que está causando essa dor?\". Qual dimensão da experiência da doença (SIFE) ela está explorando?",
       "opcoes": [
-        "Sentimentos",
         "Ideias",
+        "Sentimentos",
         "Funcionamento",
         "Expectativas"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: sentimentos seriam medos e preocupações (\"o que mais o preocupa?\").",
         "Correta: \"o que acha que tem\" explora as ideias (crenças sobre a causa).",
+        "Errada: sentimentos seriam medos e preocupações (\"o que mais o preocupa?\").",
         "Errada: funcionamento é o impacto na vida diária (\"o que deixou de fazer?\").",
         "Errada: expectativas é o que espera da consulta (\"como posso ajudar?\")."
       ],
@@ -51564,15 +51564,15 @@
       "frente": "Homem de 55 anos, assintomático, pede PSA \"de rotina\". Segundo o Ministério da Saúde, qual a conduta?",
       "opcoes": [
         "PSA anual a partir dos 50 anos",
-        "PSA e toque retal anuais",
         "Não há rastreamento populacional; discutir riscos e benefícios e decidir junto",
+        "PSA e toque retal anuais",
         "Apenas toque retal anual"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errada: o MS não recomenda rastreamento organizado de próstata.",
-        "Errada: PSA + toque não reduziram mortalidade de forma que compense os danos no rastreamento populacional.",
         "Correta: decisão compartilhada, explicando sobrediagnóstico, biópsias e efeitos do tratamento.",
+        "Errada: PSA + toque não reduziram mortalidade de forma que compense os danos no rastreamento populacional.",
         "Errada: toque isolado não é recomendado como rastreamento."
       ],
       "macete": "Próstata: \"não se rastreia, se conversa\".",
@@ -51996,15 +51996,15 @@
       "frente": "Homem de 50 anos, etilista, internado para cirurgia eletiva, 60 horas após a última dose apresenta confusão, alucinações visuais, febre, taquicardia, sudorese e tremor intenso. Qual a conduta?",
       "opcoes": [
         "Haloperidol isolado",
-        "Diazepam EV + tiamina",
         "Glicose 50% EV antes de qualquer outra medida",
+        "Diazepam EV + tiamina",
         "Naltrexona oral"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: antipsicótico isolado reduz o limiar convulsivo e não trata a abstinência.",
-        "Correta: delirium tremens → benzodiazepínico em dose adequada + tiamina e suporte.",
         "Errada: glicose sem tiamina pode precipitar Wernicke.",
+        "Correta: delirium tremens → benzodiazepínico em dose adequada + tiamina e suporte.",
         "Errada: naltrexona é para manter a abstinência, não para a síndrome aguda."
       ],
       "macete": "Abstinência: \"Benzo e B1 Bem antes da glicose\".",
@@ -52663,16 +52663,16 @@
       "frente": "Lactente de 4 meses, com 1 dose de pentavalente, tem há 10 dias acessos de tosse em salvas seguidos de cianose e vômitos. Entre as crises fica corado, eupneico e afebril. Ausculta pulmonar normal. Hemograma: leucócitos 32.000/mm³ com 72% de linfócitos. Qual a conduta mais adequada?",
       "opcoes": [
         "Amoxicilina-clavulanato por pneumonia bacteriana e alta com retorno em 48 h",
-        "Internação, azitromicina e coleta de swab de nasofaringe para PCR",
+        "Tratamento sintomático domiciliar, por ser síndrome coqueluchoide viral",
         "Mielograma por suspeita de leucemia linfoide aguda",
-        "Tratamento sintomático domiciliar, por ser síndrome coqueluchoide viral"
+        "Internação, azitromicina e coleta de swab de nasofaringe para PCR"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Incorreta. Sem febre, sem estertores e com linfocitose (não neutrofilia): não é pneumonia bacteriana, e betalactâmico não age na Bordetella.",
-        "Correta. Quadro clássico de coqueluche em lactente < 6 meses com cianose: internar, iniciar azitromicina e colher swab (PCR) — e fazer profilaxia dos contatos.",
+        "Incorreta. Lactente pequeno com cianose tem risco de apneia e morte: precisa de internação e antibiótico.",
         "Incorreta. A linfocitose é reacional (toxina pertussis); criança bem entre as crises, sem citopenias nem visceromegalias, não sugere leucemia.",
-        "Incorreta. Lactente pequeno com cianose tem risco de apneia e morte: precisa de internação e antibiótico."
+        "Correta. Quadro clássico de coqueluche em lactente < 6 meses com cianose: internar, iniciar azitromicina e colher swab (PCR) — e fazer profilaxia dos contatos."
       ],
       "macete": "Lactente + tosse em salvas + cianose + linfocitose = coqueluche → interna + azitro.",
       "pegadinha": "A leucocitose intensa é o distrator para leucemia ou pneumonia; o diferencial está na LINFOCITOSE e na criança bem entre as crises.",
@@ -56828,15 +56828,15 @@
       "frente": "Mulher de 37 anos, obesa, tabagista, hipertensa e diabética, com prurido vulvar e lesões pleomórficas em vulva. A biópsia mostra lesão intraepitelial escamosa de alto grau (HSIL). Qual fator está mais associado a essa lesão?",
       "opcoes": [
         "Diabetes mellitus",
-        "Obesidade",
         "Tabagismo",
+        "Obesidade",
         "Hipertensão arterial"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Incorreta: DM favorece candidíase vulvar, não NIV.",
-        "Incorreta: obesidade é fator de risco para câncer de endométrio, não para HSIL vulvar.",
         "Correta: HSIL vulvar é induzida por HPV, e o tabagismo está presente em 60–80% das pacientes.",
+        "Incorreta: obesidade é fator de risco para câncer de endométrio, não para HSIL vulvar.",
         "Incorreta: HAS não tem relação com NIV (é da tríade do câncer de endométrio com obesidade e DM)."
       ],
       "macete": "Os distratores formam a \"tríade do endométrio\" (obesidade, HAS, DM); a vulva HSIL é do HPV + cigarro.",
@@ -57977,15 +57977,15 @@
       "prio": "alta",
       "frente": "Gestante de 26 semanas, gemelar monocoriônica diamniótica. USG: líquido amniótico normal nos dois sacos. Doppler: pico sistólico da artéria cerebral média de 1,7 MoM no feto 1 e de 0,8 MoM no feto 2. O diagnóstico mais provável é:",
       "opcoes": [
-        "Síndrome de transfusão feto-fetal estágio I",
         "Sequência anemia-policitemia (TAPS)",
+        "Síndrome de transfusão feto-fetal estágio I",
         "Sequência de perfusão arterial reversa (TRAP)",
         "Restrição de crescimento seletiva tipo II"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: STFF exige discrepância de líquido (polidrâmnio no receptor e oligoidrâmnio no doador), ausente aqui.",
         "Correta: monocoriônica com líquido normal e discordância do PSV-ACM (doador > 1,5 MoM anêmico; receptor < 1,0 MoM policitêmico) = TAPS.",
+        "Errada: STFF exige discrepância de líquido (polidrâmnio no receptor e oligoidrâmnio no doador), ausente aqui.",
         "Errada: TRAP é o gêmeo acárdico perfundido pelo gêmeo bomba; o Doppler da ACM não é o critério.",
         "Errada: RCF seletiva se define por peso fetal discordante e Doppler umbilical, não pela ACM."
       ],
@@ -58197,15 +58197,15 @@
       "frente": "RN a termo, 30 h de vida, assintomático, faz o teste do coraçãozinho: SpO₂ 97% no membro superior direito e 93% no membro inferior esquerdo. A conduta é:",
       "opcoes": [
         "Teste normal, pois uma das medidas é ≥ 95%; alta com rotina",
-        "Repetir a oximetria em 1 hora",
         "Dar alta e agendar ecocardiograma ambulatorial",
+        "Repetir a oximetria em 1 hora",
         "Iniciar prostaglandina E1 imediatamente"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada: normal exige ≥ 95% nas DUAS medidas e diferença < 3%; aqui o MI está < 95% e a diferença é 4%.",
-        "Correta: teste alterado (< 95% no MI e diferença ≥ 3%) → repetir em 1 h; se persistir, ecocardiograma antes da alta.",
         "Errada: com teste alterado confirmado, o RN não deve ter alta antes do ecocardiograma.",
+        "Correta: teste alterado (< 95% no MI e diferença ≥ 3%) → repetir em 1 h; se persistir, ecocardiograma antes da alta.",
         "Errada: RN assintomático com primeira medida alterada → repetir e investigar; prostaglandina só com cardiopatia canal-dependente suspeita/confirmada ou instabilidade."
       ],
       "macete": "Alterado uma vez = repete em 1 h; alterado de novo = eco.",
@@ -58514,15 +58514,15 @@
       "frente": "Menina de 4 anos com o 3º episódio de ITU afebril (disúria, polaciúria; EAS com nitrito e esterase positivos). Desfraldou aos 3 anos, mas molha a calcinha de dia e usa fralda à noite. Evacua com dificuldade e tem escape fecal 3–4 vezes por semana. A causa mais provável das infecções é:",
       "opcoes": [
         "Refluxo vesicoureteral",
-        "Imunodeficiência primária",
         "Disfunção vesical e intestinal",
+        "Imunodeficiência primária",
         "Estenose da junção pieloureteral"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errada: RVU se associa a pielonefrites febris; aqui as ITUs são afebris e há constipação com escapes, que apontam DVI.",
-        "Errada: imunodeficiência daria infecções graves em vários sítios, não ITU baixa isolada.",
         "Correta: incontinência diurna + enurese + constipação + escape fecal + ITU recorrente = DVI (ICCS).",
+        "Errada: imunodeficiência daria infecções graves em vários sítios, não ITU baixa isolada.",
         "Errada: estenose de JUP causa hidronefrose e dor lombar intermitente, não sintomas miccionais e intestinais."
       ],
       "macete": "ITU de repetição: pergunte sempre \"e o cocô?\".",
@@ -58755,16 +58755,16 @@
       "frente": "Menino de 14 anos com dor no terço proximal da coxa direita há meses, pior à noite, que melhora com anti-inflamatório não esteroide. Exame físico normal, exceto dor à digitopressão local. A hipótese mais provável é:",
       "opcoes": [
         "Doença de Osgood-Schlatter",
-        "Artrite idiopática juvenil",
+        "Osteoma osteoide",
         "Dor de crescimento",
-        "Osteoma osteoide"
+        "Artrite idiopática juvenil"
       ],
-      "certa": 3,
+      "certa": 1,
       "comentarios": [
         "Errada: Osgood-Schlatter dói na tuberosidade da tíbia (joelho anterior) e piora com atividade física.",
-        "Errada: AIJ dá rigidez matinal e sinais articulares (calor, edema, limitação), não dor noturna óssea localizada.",
+        "Correta: dor noturna localizada que cede com AINE em menino jovem = osteoma osteoide.",
         "Errada: dor de crescimento é bilateral, mais precoce, sem ponto doloroso e melhora com massagem/analgésico comum.",
-        "Correta: dor noturna localizada que cede com AINE em menino jovem = osteoma osteoide."
+        "Errada: AIJ dá rigidez matinal e sinais articulares (calor, edema, limitação), não dor noturna óssea localizada."
       ],
       "macete": "Noturna + AINE + ponto doloroso = osteoma osteoide.",
       "pegadinha": "\"Dor de crescimento\" é o distrator: ela não tem ponto doloroso nem é unilateral.",
@@ -58967,17 +58967,17 @@
       "prio": "alta",
       "frente": "Menino de 4 anos com febre há 3 semanas, palidez, dor nas pernas e petéquias. Exame: hepatoesplenomegalia e linfonodos cervicais aumentados. Hemograma: Hb 7,2 g/dL, leucócitos 2.100/mm³, plaquetas 28.000/mm³. A hipótese mais provável é:",
       "opcoes": [
-        "Leucemia linfoide aguda",
+        "Vasculite por IgA (púrpura de Henoch-Schönlein)",
         "Púrpura trombocitopênica imune",
         "Artrite idiopática juvenil sistêmica",
-        "Vasculite por IgA (púrpura de Henoch-Schönlein)"
+        "Leucemia linfoide aguda"
       ],
-      "certa": 0,
+      "certa": 3,
       "comentarios": [
-        "Correta: pancitopenia + febre + dor óssea + hepatoesplenomegalia + linfonodomegalia = LLA; confirmar com mielograma.",
+        "Errada: vasculite por IgA tem púrpura palpável com plaquetas NORMAIS e sem citopenias.",
         "Errada: na PTI só as plaquetas caem; não há anemia, leucopenia, febre arrastada nem visceromegalia.",
         "Errada: AIJ sistêmica dá rash evanescente, leucocitose e trombocitose (fora de síndrome de ativação macrofágica).",
-        "Errada: vasculite por IgA tem púrpura palpável com plaquetas NORMAIS e sem citopenias."
+        "Correta: pancitopenia + febre + dor óssea + hepatoesplenomegalia + linfonodomegalia = LLA; confirmar com mielograma."
       ],
       "macete": "Três séries caídas + criança doente = medula invadida.",
       "pegadinha": "Dor nas pernas faz pensar em AIJ ou dor de crescimento; a pancitopenia muda tudo.",
@@ -59222,15 +59222,15 @@
       "frente": "No acompanhamento de uma criança de 3 anos com síndrome de Down, qual das condições abaixo é esperada com maior frequência?",
       "opcoes": [
         "Plaquetopenia crônica",
-        "Hipertensão arterial sistêmica",
         "Pé plano",
+        "Hipertensão arterial sistêmica",
         "Hipertireoidismo"
       ],
-      "certa": 2,
+      "certa": 1,
       "comentarios": [
         "Errada: a alteração hematológica típica é leucemia/mielopoese anormal transitória, não plaquetopenia crônica.",
-        "Errada: a cardiopatia típica é congênita estrutural (DSAV), não hipertensão arterial.",
         "Correta: hipotonia e frouxidão ligamentar tornam o pé plano extremamente comum.",
+        "Errada: a cardiopatia típica é congênita estrutural (DSAV), não hipertensão arterial.",
         "Errada: a disfunção tireoidiana mais comum é o HIPOtireoidismo."
       ],
       "macete": "Down = tudo \"frouxo e baixo\": tônus baixo, tireoide baixa, arco do pé baixo.",
@@ -59660,15 +59660,15 @@
       "frente": "Mulher de 60 anos, 7 dias após gastrectomia total por adenocarcinoma gástrico, apresenta dispneia súbita. Está taquicárdica, taquipneica, hipoxêmica e hipotensa apesar da hidratação. A angio-TC mostra falha de enchimento na artéria pulmonar esquerda proximal e VD aumentado. Além da estabilização e do suporte ventilatório, a conduta mais apropriada é:",
       "opcoes": [
         "Trombólise endovenosa",
-        "Embolectomia por cateter",
         "Instalação de filtro de veia cava inferior",
+        "Embolectomia por cateter",
         "Anticoagulação com heparina de baixo peso molecular"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Incorreta: seria a 1ª escolha no TEP instável, mas cirurgia de grande porte nas últimas 3 semanas contraindica o trombolítico.",
-        "Correta: TEP de alto risco com contraindicação (ou falha) à trombólise → embolectomia (por cateter ou cirúrgica).",
         "Incorreta: filtro de VCI só quando não se pode anticoagular ou há TEP recorrente apesar da anticoagulação; não desobstrui a artéria.",
+        "Correta: TEP de alto risco com contraindicação (ou falha) à trombólise → embolectomia (por cateter ou cirúrgica).",
         "Incorreta: só anticoagular não reverte o choque obstrutivo; além disso, no instável usa-se HNF, não HBPM."
       ],
       "macete": "Instável + operou há < 3 semanas → não lisa, TIRA o trombo.",
@@ -60034,15 +60034,15 @@
       "prio": "alta",
       "frente": "Homem de 64 anos, tabagista (50 maços-ano), com dor no ombro direito há 3 meses irradiando para o 4º e 5º dedos, sem melhora com anti-inflamatório. Ao exame, ptose palpebral e miose à direita. O diagnóstico mais provável é:",
       "opcoes": [
-        "Lesão do nervo oculomotor por aneurisma",
         "Tumor do sulco superior do pulmão (Pancoast)",
+        "Lesão do nervo oculomotor por aneurisma",
         "Síndrome da veia cava superior",
         "Radiculopatia cervical C6 por hérnia discal"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Incorreta: lesão do III par dá ptose com MIDRÍASE e olho desviado para baixo e para fora.",
         "Correta: tumor apical invade o plexo braquial (C8–T1 → borda ulnar) e a cadeia simpática (Horner ipsilateral).",
+        "Incorreta: lesão do III par dá ptose com MIDRÍASE e olho desviado para baixo e para fora.",
         "Incorreta: VCS causa edema de face e membros superiores e circulação colateral, sem Horner.",
         "Incorreta: C6 dá dor no polegar; e hérnia não explica ptose com miose."
       ],
@@ -61885,16 +61885,16 @@
       "frente": "Mulher, 26 anos, com dor e edema em mãos há 4 meses, simétricos. Apresenta desvio ulnar e dedos em pescoço de cisne que se corrigem passivamente. Refere úlceras orais indolores e vermelhidão no rosto após exposição ao sol. RX das mãos sem erosões. FAN 1:640 homogêneo; EAS com proteína 2+. O diagnóstico mais provável e o exame que mais o reforça são:",
       "opcoes": [
         "Artrite reumatoide; anti-CCP",
-        "Lúpus eritematoso sistêmico; anti-DNA nativo",
+        "Artrite psoriásica; HLA-B27",
         "Osteoartrite erosiva; VHS",
-        "Artrite psoriásica; HLA-B27"
+        "Lúpus eritematoso sistêmico; anti-DNA nativo"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada. Deformidade redutível sem erosão + rash fotossensível + úlcera oral + proteinúria não é AR; a AR deforma de forma fixa e erosiva.",
-        "Certa. Artropatia de Jaccoud (redutível, não erosiva) + manifestações sistêmicas + FAN alto homogêneo → LES; anti-DNA nativo é específico e se associa a nefrite.",
+        "Errada. Artrite psoriásica tem lesões de psoríase, dactilite e acometimento de IFD; HLA-B27 não se relaciona a esse quadro.",
         "Errada. Osteoartrite erosiva acomete IFD/IFP de idosas, sem rash, úlcera oral ou proteinúria.",
-        "Errada. Artrite psoriásica tem lesões de psoríase, dactilite e acometimento de IFD; HLA-B27 não se relaciona a esse quadro."
+        "Certa. Artropatia de Jaccoud (redutível, não erosiva) + manifestações sistêmicas + FAN alto homogêneo → LES; anti-DNA nativo é específico e se associa a nefrite."
       ],
       "macete": "Deformidade que \"volta\" com a mão = Jaccoud = Lúpus.",
       "pegadinha": "O desvio ulnar e o pescoço de cisne induzem a marcar AR; o que separa é a deformidade ser redutível e o RX sem erosões.",
@@ -62297,16 +62297,16 @@
       "frente": "Mulher, 41 anos, com fenômeno de Raynaud há 1 ano e espessamento da pele de mãos, antebraços, braços e tórax nos últimos meses. Iniciou prednisona 40 mg/dia há 2 semanas. Chega com cefaleia, PA 210 × 125 mmHg, creatinina 3,1 mg/dL (era 0,8), plaquetas 90.000/mm³ e esquizócitos no sangue periférico. A conduta é:",
       "opcoes": [
         "Pulsoterapia com metilprednisolona",
-        "Captopril com aumento progressivo da dose",
+        "Nitroprussiato e hemodiálise, evitando IECA pela lesão renal",
         "Plasmaférese de urgência",
-        "Nitroprussiato e hemodiálise, evitando IECA pela lesão renal"
+        "Captopril com aumento progressivo da dose"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada. Corticoide em dose alta é o gatilho da crise renal esclerodérmica; aumentar a dose piora.",
-        "Certa. Crise renal esclerodérmica (difusa recente + corticoide alto + HAS maligna + LRA + microangiopatia) → IECA, que mudou o prognóstico.",
+        "Errada. A lesão renal não contraindica o IECA na crise esclerodérmica; ele é mantido mesmo em diálise.",
         "Errada. Plasmaférese é do PTT; aqui a microangiopatia é secundária à crise renal e responde ao IECA.",
-        "Errada. A lesão renal não contraindica o IECA na crise esclerodérmica; ele é mantido mesmo em diálise."
+        "Certa. Crise renal esclerodérmica (difusa recente + corticoide alto + HAS maligna + LRA + microangiopatia) → IECA, que mudou o prognóstico."
       ],
       "macete": "Esclerodermia + rim + PA alta = ECA (IECA).",
       "pegadinha": "Esquizócitos e plaquetopenia lembram PTT/SHU, mas na esclerodermia difusa com HAS maligna o diagnóstico é crise renal.",
@@ -62886,15 +62886,15 @@
       "frente": "Mulher, 28 anos, internada há 3 semanas por pancreatite aguda grave biliar. Está hemodinamicamente estável, mas voltou a ter febre. TC: coleção peripancreática com gás em seu interior e realce periférico ao contraste. A conduta mais adequada é:",
       "opcoes": [
         "Laparotomia imediata com necrosectomia aberta",
-        "Antibiótico + drenagem percutânea ou endoscópica guiada por imagem (step-up)",
         "Trocar o esquema antibiótico e manter observação, sem drenar",
+        "Antibiótico + drenagem percutânea ou endoscópica guiada por imagem (step-up)",
         "CPRE com papilotomia"
       ],
-      "certa": 1,
+      "certa": 2,
       "comentarios": [
         "Errada. A necrosectomia aberta é o último degrau (falha das etapas menos invasivas); como 1ª abordagem aumenta falência orgânica e morte (PANTER).",
-        "Certa. Gás na coleção = necrose infectada; em paciente estável, step-up: drenagem guiada por imagem primeiro, necrosectomia minimamente invasiva se falhar.",
         "Errada. Antibiótico isolado pode bastar em alguns casos selecionados, mas com coleção infectada com gás e febre persistente a drenagem é necessária.",
+        "Certa. Gás na coleção = necrose infectada; em paciente estável, step-up: drenagem guiada por imagem primeiro, necrosectomia minimamente invasiva se falhar.",
         "Errada. A CPRE trata colangite/coledocolitíase; não trata a necrose infectada."
       ],
       "macete": "Step-up = \"subir a escada\": drena → mínima → aberta.",
@@ -63737,16 +63737,16 @@
       "prio": "alta",
       "frente": "Homem, 63 anos, submetido a gastrectomia subtotal com linfadenectomia D2 por adenocarcinoma de antro. Anatomopatológico: tumor que invade o tecido conjuntivo subseroso, sem atingir o peritônio visceral; 5 de 28 linfonodos comprometidos; citologia peritoneal negativa e TC sem metástases. O estadiamento TNM é:",
       "opcoes": [
-        "T3 N2 M0",
-        "T4a N2 M0",
         "T3 N3a M0",
+        "T4a N2 M0",
+        "T3 N2 M0",
         "T2 N1 M0"
       ],
-      "certa": 0,
+      "certa": 2,
       "comentarios": [
-        "Certa. Subserosa sem atingir o peritônio visceral = T3; 5 linfonodos (3–6) = N2; sem metástase = M0.",
-        "Errada. T4a exige invasão da serosa (peritônio visceral), o que não ocorreu.",
         "Errada. N3a é de 7 a 15 linfonodos positivos; aqui são 5.",
+        "Errada. T4a exige invasão da serosa (peritônio visceral), o que não ocorreu.",
+        "Certa. Subserosa sem atingir o peritônio visceral = T3; 5 linfonodos (3–6) = N2; sem metástase = M0.",
         "Errada. T2 é invasão só da muscular própria; N1 é 1–2 linfonodos."
       ],
       "macete": "N do estômago: \"2, 6, 15\".",
@@ -65745,15 +65745,15 @@
       "sub": "Prolapso genital e POP-Q",
       "frente": "Mulher de 64 anos, vida sexual ativa, sem comorbidades, histerectomia total abdominal há 12 anos, refere \"bola na vagina\" que piora ao fim do dia. POP-Q: Aa −1, Ba +1, C +5, gh 4, pb 3, tvl 8, Ap −2, Bp −1. Qual o estádio e a melhor conduta?",
       "opcoes": [
-        "Estádio IV; colpocleise de LeFort",
         "Estádio III; sacrocolpopexia abdominal",
+        "Estádio IV; colpocleise de LeFort",
         "Estádio III; cirurgia de Manchester",
         "Estádio II; colporrafia anterior isolada"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada. C = +5 é menor que tvl−2 (+6), então é estádio III, não IV. E colpocleise impede o coito — contraindicada em mulher com vida sexual ativa.",
         "Correta. O ponto mais distal é C = +5 (> +1 e < +6) → estádio III. Sem útero, C é a cúpula: prolapso de cúpula vaginal em mulher ativa e sem comorbidade → sacrocolpopexia abdominal, o padrão-ouro.",
+        "Errada. C = +5 é menor que tvl−2 (+6), então é estádio III, não IV. E colpocleise impede o coito — contraindicada em mulher com vida sexual ativa.",
         "Errada. O estádio está certo, mas a cirurgia de Manchester amputa o colo e plica os cardinais — exige útero; ela é histerectomizada.",
         "Errada. Usa-se o ponto mais distal (C = +5), não Ba; e a colporrafia anterior não corrige o defeito apical, que é o principal."
       ],
@@ -66197,16 +66197,16 @@
       "sub": "Lúpus eritematoso sistêmico na gestação",
       "frente": "Gestante de 15 semanas, com LES há 8 anos, suspendeu azatioprina e hidroxicloroquina ao descobrir a gravidez. Chega com edema generalizado e PA 170 × 110 mmHg, AFU 14 cm, BCF 144 bpm. Exames: complemento baixo, anti-DNA elevado, proteinúria 4,3 mg/dL na fita e hematúria dismórfica. A medicação a ser iniciada para resolver o quadro agudo é:",
       "opcoes": [
-        "Sulfato de magnésio",
-        "Hidroxicloroquina",
         "Prednisolona",
+        "Hidroxicloroquina",
+        "Sulfato de magnésio",
         "Metildopa"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada. MgSO₄ previne eclâmpsia; com 15 semanas não há pré-eclâmpsia (só após 20 semanas) — o quadro é nefrite lúpica.",
-        "Errada. Hidroxicloroquina deve ser mantida para prevenir reativação, mas não resolve o surto agudo de nefrite.",
         "Correta. Corticoide é a terapia de escolha da reativação lúpica na gestação (menor dose eficaz; caso grave → pulso de metilprednisolona).",
+        "Errada. Hidroxicloroquina deve ser mantida para prevenir reativação, mas não resolve o surto agudo de nefrite.",
+        "Errada. MgSO₄ previne eclâmpsia; com 15 semanas não há pré-eclâmpsia (só após 20 semanas) — o quadro é nefrite lúpica.",
         "Errada. Metildopa controla a PA, mas não trata a causa (nefrite ativa)."
       ],
       "macete": "Antes de 20 semanas, \"lúpus que incha e sobe a PA\" = nefrite → Corticoide (C de Complemento baixo, C de Corticoide).",
@@ -66555,17 +66555,17 @@
       "sub": "Cardiopatia na gestação",
       "frente": "(UERJ 2024) Mulher de 30 anos, com estenose mitral, evolui no 1º dia pós-parto com dispneia e ortopneia. PA 100 × 60 mmHg, FC 100 bpm, FR 28 irpm, afebril; sopro diastólico 3+/6+ e estertores bolhosos bibasais; útero contraído na cicatriz umbilical, lóquios fisiológicos. A principal modificação do organismo materno responsável pela complicação é:",
       "opcoes": [
-        "Diminuição da capacidade residual funcional pulmonar",
+        "Aumento do débito cardíaco",
         "Aumento dos fatores pró-coagulantes",
         "Diminuição do retorno venoso",
-        "Aumento do débito cardíaco"
+        "Diminuição da capacidade residual funcional pulmonar"
       ],
-      "certa": 3,
+      "certa": 0,
       "comentarios": [
-        "Errada. A CRF cai na gestação pelo útero elevando o diafragma, mas não explica edema pulmonar cardiogênico.",
+        "Correta. A autotransfusão do pós-parto aumenta pré-carga e débito cardíaco; com a mitral estenótica, a pressão no átrio esquerdo sobe → edema agudo de pulmão.",
         "Errada. O estado pró-trombótico (II, VII, VIII, X, fibrinogênio) existe, mas não causa edema agudo de pulmão.",
         "Errada. No pós-parto o retorno venoso AUMENTA (autotransfusão), não diminui.",
-        "Correta. A autotransfusão do pós-parto aumenta pré-carga e débito cardíaco; com a mitral estenótica, a pressão no átrio esquerdo sobe → edema agudo de pulmão."
+        "Errada. A CRF cai na gestação pelo útero elevando o diafragma, mas não explica edema pulmonar cardiogênico."
       ],
       "macete": "Pós-parto = \"Pós-PUXA sangue de volta\": útero contrai, retorno venoso sobe, débito sobe, a mitral estreita não dá conta.",
       "pegadinha": "\"Diminuição do retorno venoso\" inverte o mecanismo — no puerpério imediato ele aumenta.",
@@ -67447,15 +67447,15 @@
       "opcoes": [
         "Fototerapia isolada e reavaliação do Ht em 24 h",
         "Sangria simples (flebotomia) sem reposição",
-        "Exsanguineotransfusão parcial com soro fisiológico",
-        "Transfusão de plasma fresco congelado"
+        "Transfusão de plasma fresco congelado",
+        "Exsanguineotransfusão parcial com soro fisiológico"
       ],
-      "certa": 2,
+      "certa": 3,
       "comentarios": [
         "Errado: a fototerapia trata só a icterícia; não reduz a hiperviscosidade de um RN sintomático.",
         "Errado: retirar sangue sem repor volume causa hipovolemia; a troca é isovolêmica.",
-        "Gabarito: policitemia sintomática (Ht venoso ≥ 65%) → exsanguineotransfusão parcial com SF 0,9%, alvo Ht ~55%.",
-        "Errado: plasma não traz vantagem sobre o SF e expõe a hemoderivado."
+        "Errado: plasma não traz vantagem sobre o SF e expõe a hemoderivado.",
+        "Gabarito: policitemia sintomática (Ht venoso ≥ 65%) → exsanguineotransfusão parcial com SF 0,9%, alvo Ht ~55%."
       ],
       "pegadinha": "Ht capilar superestima: sempre confirmar com amostra venosa antes de tratar.",
       "uerj": "Caso de RN com pletora + hipoglicemia + icterícia após clampeamento tardio; pede o diagnóstico e a conduta (troca parcial com SF).",
@@ -68001,16 +68001,16 @@
       "frente": "Homem de 26 anos procura atendimento por infertilidade conjugal. Refere sinusite crônica desde a infância, várias pneumonias e fezes volumosas e gordurosas. Espermograma: azoospermia com volume ejaculado baixo. Qual exame confirma a principal hipótese?",
       "opcoes": [
         "Dosagem de imunoglobulinas séricas",
-        "Teste do suor (cloreto)",
+        "Anti-transglutaminase IgA",
         "Biópsia testicular",
-        "Anti-transglutaminase IgA"
+        "Teste do suor (cloreto)"
       ],
-      "certa": 1,
+      "certa": 3,
       "comentarios": [
         "Errada: infecções de repetição sugerem imunodeficiência, mas ela não explica azoospermia obstrutiva; é o distrator clássico.",
-        "Correta: sinusopatia + esteatorreia + azoospermia obstrutiva (agenesia dos deferentes) = fibrose cística; cloreto ≥ 60 mmol/L confirma.",
+        "Errada: celíaca explica a esteatorreia, mas não a doença sinopulmonar nem a azoospermia.",
         "Errada: a produção de espermatozoides é normal; o problema é obstrutivo (ausência dos ductos deferentes).",
-        "Errada: celíaca explica a esteatorreia, mas não a doença sinopulmonar nem a azoospermia."
+        "Correta: sinusopatia + esteatorreia + azoospermia obstrutiva (agenesia dos deferentes) = fibrose cística; cloreto ≥ 60 mmol/L confirma."
       ],
       "macete": "Homem com \"nariz, pulmão, cocô gorduroso e sem esperma\" → suor.",
       "pegadinha": "A banca coloca imunodeficiência como alternativa: azoospermia obstrutiva aponta FC.",
@@ -68134,15 +68134,15 @@
       "fonte": "ILAE 2022 — classificação das síndromes epilépticas de início neonatal e no lactente (Zuberi et al., Epilepsia 2022); SBP — Tratado de Pediatria 5ª ed. (2022); Nelson 22ª ed. (2024); comentário UERJ 2024 (Q75)",
       "frente": "Lactente de 7 meses com vários episódios diários descritos pela mãe como \"sustos\", sobretudo ao adormecer ou despertar. Ao exame, múltiplos espasmos em flexão do pescoço, tronco e membros. O achado eletroencefalográfico esperado e o melhor tratamento são, respectivamente:",
       "opcoes": [
-        "Hipsarritmia / ACTH",
         "Hipsarritmia / lamotrigina",
+        "Hipsarritmia / ACTH",
         "Polipontas temporais / ACTH",
         "Polipontas temporais / vigabatrina"
       ],
-      "certa": 0,
+      "certa": 1,
       "comentarios": [
-        "Correta: síndrome de West → hipsarritmia no EEG; 1ª linha = ACTH (ou corticoide oral em dose alta).",
         "Errada: o EEG está certo, mas lamotrigina não é tratamento de 1ª linha dos espasmos (foi a pegadinha que mais derrubou).",
+        "Correta: síndrome de West → hipsarritmia no EEG; 1ª linha = ACTH (ou corticoide oral em dose alta).",
         "Errada: polipontas temporais não é o padrão de West; o tratamento estaria certo.",
         "Errada: EEG errado; vigabatrina é 1ª escolha só se houver esclerose tuberosa (não citada)."
       ],
@@ -68333,15 +68333,15 @@
       "fonte": "Nelson Textbook of Pediatrics 22ª ed. (2024) — neuroblastoma e tumores renais; SBP — Tratado de Pediatria 5ª ed. (2022); INCA — Câncer infantojuvenil (2024)",
       "frente": "Menino de 16 meses com irritabilidade e perda de peso. A mãe notou movimentos oculares rápidos e desordenados e abalos musculares. Ao exame, massa abdominal endurecida e irregular que ultrapassa a linha média. Qual o diagnóstico mais provável?",
       "opcoes": [
-        "Tumor de Wilms",
         "Neuroblastoma",
+        "Tumor de Wilms",
         "Hepatoblastoma",
         "Linfoma de Burkitt"
       ],
-      "certa": 1,
+      "certa": 0,
       "comentarios": [
-        "Errada: Wilms é massa lisa de flanco que não cruza a linha média, em criança de 3–4 anos em bom estado; não causa opsoclonia.",
         "Correta: lactente + massa irregular que cruza a linha média + opsoclonia-mioclonia (síndrome de Kinsbourne) = neuroblastoma.",
+        "Errada: Wilms é massa lisa de flanco que não cruza a linha média, em criança de 3–4 anos em bom estado; não causa opsoclonia.",
         "Errada: hepatoblastoma é massa em hipocôndrio direito com AFP elevada.",
         "Errada: Burkitt abdominal cresce muito rápido em escolar, sem opsoclonia."
       ],
@@ -68760,17 +68760,17 @@
       "prio": "alta",
       "frente": "RN a termo com RCIU, hepatoesplenomegalia e icterícia; a equipe suspeita de infecção congênita. Assinale a associação INCORRETA entre agente e manifestação:",
       "opcoes": [
-        "Rubéola → catarata, surdez neurossensorial e persistência do canal arterial",
+        "Citomegalovírus → calcificações periventriculares, coriorretinite e persistência do canal arterial",
         "Sífilis → rinite serossanguinolenta, pênfigo palmoplantar e pseudoparalisia de Parrot",
         "Parvovírus B19 → anemia fetal grave e hidropisia",
-        "Citomegalovírus → calcificações periventriculares, coriorretinite e persistência do canal arterial"
+        "Rubéola → catarata, surdez neurossensorial e persistência do canal arterial"
       ],
-      "certa": 3,
+      "certa": 0,
       "comentarios": [
-        "Correta: é a tríade de Gregg; a PCA é a cardiopatia mais comum da rubéola congênita (retinopatia sal e pimenta também é típica).",
+        "INCORRETA (gabarito): CMV dá calcificação periventricular, microcefalia, surdez e coriorretinite, mas a PCA não é típica do CMV — é da rubéola.",
         "Correta: são achados clássicos da sífilis congênita precoce, junto com osteocondrite/periostite e hepatoesplenomegalia.",
         "Correta: o B19 infecta precursores eritroides → anemia grave → hidropisia fetal (miocardite também pode ocorrer).",
-        "INCORRETA (gabarito): CMV dá calcificação periventricular, microcefalia, surdez e coriorretinite, mas a PCA não é típica do CMV — é da rubéola."
+        "Correta: é a tríade de Gregg; a PCA é a cardiopatia mais comum da rubéola congênita (retinopatia sal e pimenta também é típica)."
       ],
       "macete": "Viu PCA → pense em Rubéola (Gregg: olho, ouvido e coração).",
       "pegadinha": "A alternativa errada mistura achados verdadeiros do CMV com um achado de outra infecção (PCA da rubéola).",
@@ -69058,16 +69058,16 @@
       "prio": "alta",
       "frente": "Homem de 68 anos com esclerose lateral amiotrófica, restrito ao leito, usa BiPAP domiciliar e precisa de aspiração de vias aéreas várias vezes por semana. Está estável e tem a esposa como cuidadora. Segundo as regras da atenção domiciliar no SUS, qual a modalidade e a equipe responsável?",
       "opcoes": [
-        "AD1, sob responsabilidade da equipe de Saúde da Família",
-        "AD2, sob responsabilidade exclusiva da equipe de Saúde da Família",
         "AD3, sob responsabilidade da EMAD, com apoio da EMAP e corresponsabilidade da APS",
+        "AD2, sob responsabilidade exclusiva da equipe de Saúde da Família",
+        "AD1, sob responsabilidade da equipe de Saúde da Família",
         "Não é elegível para atenção domiciliar; deve permanecer internado"
       ],
-      "certa": 2,
+      "certa": 0,
       "comentarios": [
-        "Errada: AD1 é para condição estável com cuidado espaçado, sem equipamento de suporte ventilatório.",
-        "Errada: a aspiração frequente seria critério de AD2, mas AD2 e AD3 são do SAD (EMAD/EMAP), não só da eSF; e aqui há equipamento (BiPAP).",
         "Correta: tem critério de AD2 (aspiração frequente) + suporte ventilatório não invasivo → AD3, conduzida pelo SAD (Melhor em Casa) com a APS corresponsável.",
+        "Errada: a aspiração frequente seria critério de AD2, mas AD2 e AD3 são do SAD (EMAD/EMAP), não só da eSF; e aqui há equipamento (BiPAP).",
+        "Errada: AD1 é para condição estável com cuidado espaçado, sem equipamento de suporte ventilatório.",
         "Errada: está estável e tem cuidador; ventilação domiciliar não impede a AD — inelegível seria instabilidade ou necessidade de profissional presencial permanente."
       ],
       "macete": "Tem máquina (BiPAP, diálise, paracentese) + cuidado de AD2 → AD3.",

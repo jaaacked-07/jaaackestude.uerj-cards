@@ -82,6 +82,15 @@ for k, cs in deck.items():
         if re.search(r'\b' + re.escape(s) + r'\b', txt):
             tem = any(isinstance(c.get('visual'), (dict, list)) and 'pont' in json.dumps(c.get('visual'), ensure_ascii=False).lower() for c in cs) or re.search(r'(1 ponto|pontos?\b)', txt)
             if not tem: E(nome, f'escore "{s}" citado sem destrinchar (itens, pontos, total e faixas)')
+# letra da resposta certa dos quizzes tem que variar (nada de tudo "B")
+qz = [c for c in cards if c.get('tipo') == 'quiz' and isinstance(c.get('certa'), int)]
+if len(qz) >= 8:
+    cnt = collections.Counter(c['certa'] for c in qz)
+    for i, n in sorted(cnt.items()):
+        if n / len(qz) > 0.35: E('quizzes', f'{n} de {len(qz)} com a certa na letra {"ABCDE"[i]} (máx. 35%) — varie a posição da alternativa certa (A, B, C e D)')
+novos_q = [c for c in qz if c.get('add') == max((x.get('add') or '') for x in qz)]
+if len(novos_q) >= 4 and len({c['certa'] for c in novos_q}) == 1:
+    E('quizzes novos', f'todos os {len(novos_q)} quizzes de {novos_q[0].get("add")} têm a certa na letra {"ABCDE"[novos_q[0]["certa"]]} — distribua entre A, B, C e D')
 print('\n'.join(erros + avisos) or 'Tudo certo.')
 print(f'\n{len(cards)} cards · {len(deck)} baralhos · {len(erros)} erro(s) · {len(avisos)} aviso(s)')
 sys.exit(1 if erros else 0)
