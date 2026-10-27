@@ -50418,7 +50418,8 @@
         ]
       },
       "fonte": "Ministério da Saúde — Caderno de Atenção ao Pré-Natal de Baixo Risco e Manual de Gestação de Alto Risco (2022); FEBRASGO — Protocolos (toxoplasmose, GBS); PNI — Calendário da gestante",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "pn-01",
@@ -69691,5 +69692,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793115715217
+  "rev": 1793115766568
 }
