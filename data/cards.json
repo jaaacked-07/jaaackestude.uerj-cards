@@ -44154,7 +44154,8 @@
         ]
       },
       "fonte": "ESC 2023 — Endocardite infecciosa (critérios de Duke-ISCVID); AHA 2021 — profilaxia",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "ei-q1",
@@ -69697,5 +69698,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793119401351
+  "rev": 1793119439184
 }
