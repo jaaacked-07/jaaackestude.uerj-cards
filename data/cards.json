@@ -60402,7 +60402,8 @@
       },
       "macete": "Retic alto = medula \"PERDEU e corre atrás\": Perda por sangue ou hemólise.",
       "pegadinha": "Sangramento agudo leva alguns dias para elevar os reticulócitos.",
-      "add": "2026-10-27"
+      "add": "2026-10-27",
+      "minha": "@@nota|0|🧠 Macete · Retic alto = medula \"PERDEU e corre atrás\": Perd\n**Reticulocito {v}alto {/v}-> perda {v}AGUDA {/v}(__da tempo de medula agir)**__\n**Reticulocito {v}baixo {/v}-> perda {v}CRONICA {/v}(__MO tentou agir tanto que cansou) - ferropriva, B12 etc**__"
     },
     {
       "area": "Clínica Médica",
@@ -69687,5 +69688,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793114461689
+  "rev": 1793114730497
 }
