@@ -26841,7 +26841,8 @@
         ]
       },
       "fonte": "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "den-q1",
@@ -46966,5 +46967,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793069457819
+  "rev": 1793070047489
 }
