@@ -46486,7 +46486,8 @@
         }
       ],
       "fonte": "Diretriz Brasileira de Valvopatias (SBC 2020); ACC/AHA 2020 Valvular Heart Disease; ESC 2023 Cardiomiopatias",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "adr-q1",
@@ -69693,5 +69694,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793116762776
+  "rev": 1793117014028
 }
