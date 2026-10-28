@@ -410,6 +410,20 @@ details.sent summary{cursor:pointer;color:var(--mute);font-size:14px;margin-top:
 #lbx.z2 .lbw{display:block}
 #lbx.z2 img{width:auto;height:auto;min-width:192vw;max-width:none;object-fit:initial;cursor:zoom-out}
 #lbx .lbx{position:fixed;top:max(12px,env(safe-area-inset-top));right:14px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:26px;line-height:1;border:0}
+/* Material */
+.mtop{display:flex;align-items:center;gap:10px;margin:-6px 0 14px}.mtop .b{flex:1;height:6px;border-radius:4px;background:var(--line);overflow:hidden}.mtop .b i{display:block;height:100%;background:var(--ok)}.mtop .v{font-size:13px;color:var(--mute)}
+.rowi .pc{font-size:12px;color:var(--mute);flex:none;min-width:38px;text-align:right}.rowi .pc.cheio{color:var(--ok);font-weight:600}
+.rowi.mt2 .tx{white-space:normal}
+.rowi .mck{flex:none;width:28px;height:28px;border-radius:50%;border:1.6px solid var(--line);color:transparent;font-size:15px;line-height:25px;text-align:center;background:var(--card)}
+.rowi.lido{background:var(--ok-soft)!important}.rowi.lido .tx{color:var(--ok)}.rowi.lido .mck{background:var(--ok);border-color:var(--ok);color:var(--card)}
+#mat{position:fixed;inset:0;z-index:12;background:rgba(20,10,12,.45);display:flex;justify-content:center;animation:fd .15s}
+#mat .mpn{background:var(--bg);width:100%;max-width:780px;height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#mat .mbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+#mat .mvolta{flex:none;width:38px;height:38px;border-radius:50%;font-size:22px;line-height:36px;color:var(--wine);background:var(--card);border:1px solid var(--line)}
+#mat .mtt{flex:1;min-width:0}#mat .mtt small{display:block;font-size:11.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#mat .mtt b{display:block;font-size:16px;line-height:1.25}
+#mat .mlido{flex:none;border:1.5px solid var(--line);border-radius:20px;padding:7px 12px;font-size:13px;background:var(--card);color:var(--ink)}#mat .mlido.on{background:var(--ok);border-color:var(--ok);color:var(--card)}
+body.matab .mtfab .sfab,body.matab .mtfab .nfab{display:none!important}
+#mat .mbody{padding:14px 16px 120px}#mat .mbody .ctx{margin-top:0}
 .lv3{padding-left:58px!important;font-size:14.5px!important;background:color-mix(in srgb,var(--card) 15%,var(--bg))}
 .opi.l1{padding-left:24px}.opi.l2{padding-left:48px}
 .opi .lab{flex:1;display:flex;align-items:center;gap:10px;text-align:left;min-width:0}
@@ -510,6 +524,7 @@ mark.hl-y{background:rgba(250,214,80,.55)}mark.hl-g{background:rgba(120,200,140,
 <nav id="nav">
   <button data-p="home" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="13" height="15" rx="2.5"/><path d="M8 3h10a2 2 0 0 1 2 2v12"/></svg>Hoje</button>
   <button data-p="estudar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>Estudar</button>
+  <button data-p="material"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5z"/><path d="M12 6.5v13"/></svg>Material</button>
   <button data-p="erros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M9 11h6M9 15h4"/></svg>Erros<i class="dot hide" id="dotE"></i></button>
   <button data-p="pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M5 15l4-4 4 3 6-7"/></svg>Porcentagem</button>
   <button data-p="criar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg>Criar</button>
@@ -541,7 +556,7 @@ const DEV=(()=>{try{let d=localStorage.getItem(LS+'.dev');if(!d){d=Math.random()
 function fixS(){ (S.notas||[]).forEach(n=>(n.imgs||[]).forEach(im=>{ if(im&&im.path&&im.local) delete im.local; }));S.srs=S.srs||{}; S.xp=S.xp||0; S.streak=S.streak||{n:0,last:null}; S.notas=S.notas||[]; S.extra=S.extra||[]; S.plan=S.plan||null; S.fav=S.fav||{}; S.minha=S.minha||{}; S.ren=S.ren||{tema:{},sub:{}}; S.ren.area=S.ren.area||{}; S.edit=S.edit||{}; S.oculto=S.oculto||{}; migrarRet();
   S.xpDev=S.xpDev||{}; if(S.xp&&!Object.keys(S.xpDev).length) S.xpDev[DEV]=S.xp;
   S.dias=S.dias||{}; if(S.streak&&S.streak.last&&!Object.keys(S.dias).length) for(let i=0;i<S.streak.n;i++) S.dias[addD(S.streak.last,-i)]=1;
-  S.notasDel=S.notasDel||{}; S.sim=S.sim||[]; S.simDel=S.simDel||{}; S.decks=S.decks||[]; S.decksDel=S.decksDel||{}; S.marks=S.marks||{};
+  S.notasDel=S.notasDel||{}; S.sim=S.sim||[]; S.simDel=S.simDel||{}; S.decks=S.decks||[]; S.decksDel=S.decksDel||{}; S.marks=S.marks||{}; S.lido=S.lido||{};
   if(typeof recalc==='function') recalc();}
 fixS();
 /* se o armazenamento do aparelho lotar (fotos em cache), libera o cache de fotos e tenta de novo — o progresso nunca deixa de ser salvo */
@@ -878,7 +893,7 @@ function render(){
   $('#dotE').classList.toggle('hide',!e);
   const y=scrollY, ae=document.activeElement, ak=curKey(ae), am=ak&&{s:ae.selectionStart,e:ae.selectionEnd,t:ae.scrollTop,v:ae.value};
   if(ak) curGuardar(ae);
-  ({home:pHome,estudar:pEstudar,erros:pErros,pct:pPct,anotar:pAnotar,criar:pCriar})[PAG]();
+  ({home:pHome,estudar:pEstudar,material:pMaterial,erros:pErros,pct:pPct,anotar:pAnotar,criar:pCriar})[PAG]();
   /* o campo em que ela escrevia volta com o cursor e a rolagem no mesmo lugar */
   if(ak){ const n=qSeg(ak); if(n&&n!==ae&&n.value===am.v){ n.focus({preventScroll:true}); try{n.setSelectionRange(am.s,am.e)}catch(e){} n.scrollTop=am.t; } }
   curRolagens();
@@ -1074,6 +1089,54 @@ function pEstudar(){
   ligarArvore($('#lst'),ABERTO,pEstudar); ligarDrag($('#lst'));
   const oc=$('#oc'); if(oc) oc.onclick=verOcultos;
 }
+/* ===== Material: o contexto (resumão) de cada baralho para ler antes dos cards ===== */
+const MAT={busca:''}, ABERTO_M=new Set();
+const matChave=c=>ctxKey(c);
+/* conta como lido: ela marcou ✓, ou (se nunca marcou/desmarcou) o contexto já tem anotação ou marca-texto dela */
+function matAnot(c){ const k=matChave(c), n=S.marks['an:'+k], m=S.marks[k];
+  return !!((n&&String(n.txt||'').trim())||(m&&m.l&&m.l.length)||/Minha anota[cç][aã]o/i.test(c.contexto||'')); }
+const matLido=c=>{ const v=S.lido[matChave(c)]; return v?!!v.v:matAnot(c); };
+function matAlternar(c){ const k=matChave(c), on=!matLido(c); S.lido[k]={v:on?1:0,u:Date.now()}; save(); vib(8); return on; }
+/* um item por baralho que tem contexto */
+function matItens(){ const m=new Map(); CARDS.forEach(c0=>{ const k=kSub(c0); if(m.has(k)) return; const c=ctxDoBaralho(c0); if(c.contexto) m.set(k,{area:c0.area,tema:c0.tema,sub:c0.sub,contexto:c.contexto,ctxvisual:c.ctxvisual,id:c0.id}); }); return [...m.values()]; }
+function pMaterial(){
+  const todos=matItens(), nb=norm(MAT.busca.trim());
+  const lista=nb?todos.filter(x=>norm(x.area+' '+x.tema+' '+x.sub+' '+x.contexto).includes(nb)):todos;
+  const pc=xs=>{ const n=xs.filter(matLido).length; return {n,t:xs.length,p:xs.length?Math.round(n/xs.length*100):0}; };
+  const g=pc(todos), A={};
+  lista.forEach(x=>{ ((A[x.area]=A[x.area]||{})[x.tema]=A[x.area][x.tema]||[]).push(x); });
+  const forcar=!!nb, cel=o=>`<span class="pc ${o.p===100?'cheio':''}" title="${o.n} de ${o.t} lidos">${o.p}%</span>`;
+  const linhas=Object.keys(A).sort(abc).map(a=>{ const ka='a:'+a, oa=forcar||ABERTO_M.has(ka), xa=todos.filter(x=>x.area===a);
+    return `<div class="rowi ${oa?'op':''}" role="button" data-k="${esc(ka)}"><span class="chv">▶</span><span class="tx">${esc(a)}</span>${cel(pc(xa))}</div>`+(oa?Object.keys(A[a]).sort(abc).map(t=>{
+      const km='m:'+a+'|'+t, om=forcar||ABERTO_M.has(km), xm=todos.filter(x=>x.area===a&&x.tema===t);
+      return `<div class="rowi lv1 ${om?'op':''}" role="button" data-k="${esc(km)}"><span class="chv">▶</span><span class="tx">${esc(t)}</span>${cel(pc(xm))}</div>`+(om?A[a][t].sort((p,q)=>abc(p.sub,q.sub)).map(x=>{ const l=matLido(x);
+        return `<div class="rowi lv2 mt2 ${l?'lido':''}" role="button" data-mat="${esc(x.id)}"><span class="tx">${esc(x.sub)}</span><span class="mck" role="button" data-mck="${esc(x.id)}" aria-label="${l?'Desmarcar como lido':'Marcar como lido'}" title="${l?'Lido — toque para desmarcar':'Marcar como lido'}">✓</span></div>`; }).join(''):''); }).join(''):''); }).join('');
+  $('#app').innerHTML=`<div class="wrap">
+    <h2 class="serif">Material</h2>
+    <p class="mute small" style="margin-top:-10px;margin-bottom:12px">O resumão de cada tema para ler antes dos cards. Toque no ✓ quando terminar.</p>
+    <div class="mtop"><span class="b"><i style="width:${g.p}%"></i></span><span class="v">${g.n} de ${g.t} temas lidos · ${g.p}%</span></div>
+    <input class="srch" id="ms" placeholder="Buscar tema ou palavra do resumo…" value="${esc(MAT.busca)}">
+    <div id="lstM">${linhas?'<div class="rows">'+linhas+'</div>':'<p class="mute small">Nada encontrado.</p>'}</div>
+  </div>`;
+  const ms=$('#ms'); ms.oninput=()=>{ MAT.busca=ms.value; const p=ms.selectionStart; pMaterial(); const m2=$('#ms'); m2.focus(); m2.setSelectionRange(p,p); };
+  $('#lstM').onclick=e=>{
+    const ck=e.target.closest('[data-mck]'); if(ck){ e.stopPropagation(); const x=todos.find(y=>y.id===ck.dataset.mck); if(x){ const on=matAlternar(x); toast(on?'Lido ✓':'Desmarcado'); pMaterial(); } return; }
+    const it=e.target.closest('[data-mat]'); if(it){ const x=todos.find(y=>y.id===it.dataset.mat); if(x) abrirMat(x); return; }
+    const k=e.target.closest('[data-k]'); if(k){ const v=k.dataset.k; ABERTO_M.has(v)?ABERTO_M.delete(v):ABERTO_M.add(v); pMaterial(); }
+  };
+}
+/* contexto em tela cheia: ← em cima, toque fora (no PC) ou Esc volta */
+function abrirMat(x){
+  fecharMat(true);
+  const d=document.createElement('div'); d.id='mat';
+  const bt=()=>{ const l=matLido(x); return `<button class="mlido ${l?'on':''}" id="mlido">${l?'✓ Lido':'Marcar como lido'}</button>`; };
+  d.innerHTML=`<div class="mpn"><div class="mbar"><button class="mvolta" id="mvolta" aria-label="Voltar" title="Voltar (Esc)">←</button><div class="mtt"><small>${esc(x.area)} › ${esc(x.tema)}</small><b>${esc(x.sub)}</b></div>${bt()}</div><div class="mbody">${ctxHTML(x)}</div></div>`;
+  d.onclick=e=>{ if(e.target===d) fecharMat(); };
+  document.body.appendChild(d); document.body.style.overflow='hidden'; document.body.classList.add('matab');
+  $('#mvolta').onclick=()=>fecharMat();
+  const liga=()=>{ $('#mlido').onclick=()=>{ matAlternar(x); $('#mlido').outerHTML=bt(); liga(); }; }; liga();
+}
+function fecharMat(semRender){ const d=$('#mat'); if(!d) return; d.remove(); document.body.style.overflow=''; document.body.classList.remove('matab'); if(!semRender&&PAG==='material') pMaterial(); }
 /* Seletor de temas: grande área → matéria → assunto, abrindo conforme toca */
 function escolherTemas(){
   const arv0=arv3(CARDS), tmp=new Set(DECK.subs), ab=new Set(); let q='', arv=arv0;
@@ -1631,12 +1694,13 @@ async function syncNotas(){
 /* ===== Sincronizar progresso entre aparelhos ===== */
 const GH_PROG=GH_API.replace('notas.json','progresso.json');
 const notasSync=()=>S.notas.map(n=>n.imgs?{...n,imgs:n.imgs.filter(i=>i.path).map(i=>({path:i.path}))}:n);
-const progSnap=()=>({marks:S.marks,decks:S.decks,decksDel:S.decksDel,sim:S.sim,simDel:S.simDel,srs:S.srs,xpDev:S.xpDev,dias:S.dias,notas:notasSync(),notasDel:S.notasDel,plan:S.plan,hoje:S.hoje,extra:S.extra,rets:S.rets,retsDel:S.retsDel});
+const progSnap=()=>({marks:S.marks,decks:S.decks,decksDel:S.decksDel,sim:S.sim,simDel:S.simDel,srs:S.srs,xpDev:S.xpDev,dias:S.dias,notas:notasSync(),notasDel:S.notasDel,plan:S.plan,hoje:S.hoje,extra:S.extra,rets:S.rets,retsDel:S.retsDel,lido:S.lido});
 function mergeProg(R){
   if(!R) return false; const antes=JSON.stringify(progSnap());
   for(const id in R.srs||{}){const a=S.srs[id],b=R.srs[id]; if(!a||(b.t||0)>(a.t||0)) S.srs[id]=b;}
   for(const d in R.xpDev||{}) S.xpDev[d]=Math.max(S.xpDev[d]||0,R.xpDev[d]);
   Object.assign(S.dias,R.dias||{}); Object.assign(S.notasDel,R.notasDel||{}); Object.assign(S.simDel,R.simDel||{}); Object.assign(S.decksDel,R.decksDel||{});
+  for(const k in R.lido||{}){ const a=S.lido[k],b=R.lido[k]; if(!a||(b.u||0)>(a.u||0)) S.lido[k]=b; }
   for(const id in R.marks||{}){ const a=S.marks[id],b=R.marks[id]; if(!a||(b.u||0)>(a.u||0)) S.marks[id]=b; }
   { const m={}; [...S.decks,...(R.decks||[])].forEach(x=>{m[x.id]=x}); S.decks=Object.values(m).filter(x=>!S.decksDel[x.id]); }
   { const m={}; [...S.sim,...(R.sim||[])].forEach(x=>{const o=m[x.id]; if(!o||(x.u||0)>(o.u||0)) m[x.id]=x;}); S.sim=Object.values(m).filter(x=>!S.simDel[x.id]).sort((a,b)=>a.id-b.id); }
@@ -2657,6 +2721,7 @@ document.addEventListener('keydown',e=>{
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape'||e.defaultPrevented) return;
   if($('#sheet')){ e.preventDefault(); fecharFolha(); return; }
+  if($('#mat')){ const a=document.activeElement; if(a&&a.closest('#mat')&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)){ a.blur(); return; } e.preventDefault(); fecharMat(); return; }
   if(PAG==='criar'&&VOLTA&&!SS&&!$('#end')){ e.preventDefault(); sairCriarRevisao(); return; }   // Criar aberto pelo N: Esc volta direto à revisão
   const a=document.activeElement; if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)){ a.blur(); return; }
   if($('#end')){ e.preventDefault(); fecharFim(); ir('home'); return; }
