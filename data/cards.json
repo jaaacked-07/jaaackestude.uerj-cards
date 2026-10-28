@@ -22563,7 +22563,8 @@
         "fonte": "Wikimedia Commons · licença livre (ver página do arquivo)"
       },
       "add": "2026-10-24",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "cush-02",
@@ -69706,5 +69707,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793156637602
+  "rev": 1793156893778
 }
