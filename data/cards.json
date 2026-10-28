@@ -57684,7 +57684,8 @@
       "pegadinha": "Na questão da UERJ, mulher com sobrepeso + HAS deve ser rastreada para DM2; a banca colocou \"discutir a necessidade\", mas pela SBD a indicação é absoluta.",
       "uerj": "UERJ usou o Tratado de MFC como referência: rastrear DM2 em adultos de 40–70 anos com sobrepeso/obesidade; não rastrear câncer de ovário nem hipotireoidismo.",
       "add": "2026-10-26",
-      "fonte": "Diretriz da Sociedade Brasileira de Diabetes 2024; USPSTF 2021 — Prediabetes and Type 2 Diabetes Screening; Tratado de MFC (Gusso, 2ª ed.)"
+      "fonte": "Diretriz da Sociedade Brasileira de Diabetes 2024; USPSTF 2021 — Prediabetes and Type 2 Diabetes Screening; Tratado de MFC (Gusso, 2ª ed.)",
+      "minha": "@@nota|0|FonteFonteQuem rastrearTratado MFC / USPSTF 201540–70 anos +\nSBD:"
     },
     {
       "id": "l3-dm-d1",
@@ -69704,5 +69705,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793154023442
+  "rev": 1793155913180
 }
