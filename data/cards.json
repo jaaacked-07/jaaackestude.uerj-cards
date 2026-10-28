@@ -46563,7 +46563,7 @@
       "tema": "Endocrinologia",
       "sub": "Adrenal — hiperaldosteronismo, insuficiência adrenal e incidentaloma",
       "frente": "Incidentaloma adrenal: o que investigar em TODOS os pacientes?",
-      "verso": "**Duas perguntas: produz hormônio? É maligno?**\n\nFunção:\n- Supressão com 1 mg de dexametasona → Cushing subclínico (cortisol > 1,8 µg/dL)\n- Metanefrinas plasmáticas ou urinárias → feocromocitoma\n- Aldosterona/renina → se hipertenso ou hipocalêmico\n\nMalignidade:\n- Tamanho > 4 cm\n- Densidade > 10 UH na TC sem contraste\n- Washout lento do contraste ou crescimento\n\nConduta:\n- Funcionante ou suspeito → adrenalectomia.\n- Benigno e não funcionante → sem seguimento de rotina.",
+      "verso": "**FUNÇÃO E MALIGNIDADE!\nDuas perguntas: produz hormônio? É maligno?**\n\nFunção:\n- Supressão com 1 mg de dexametasona → Cushing subclínico (cortisol > 1,8 µg/dL)\n- Metanefrinas plasmáticas ou urinárias → feocromocitoma\n- Aldosterona/renina → se hipertenso ou hipocalêmico\n\nMalignidade:\n- Tamanho > 4 cm\n- Densidade > 10 UH na TC sem contraste\n- Washout lento do contraste ou crescimento\n\nConduta:\n- Funcionante ou suspeito → adrenalectomia.\n- Benigno e não funcionante → sem seguimento de rotina.",
       "macete": "Incidentaloma: \"funciona? é feio?\".",
       "uerj": "Caso de massa adrenal achada na TC de abdome por cólica renal.",
       "prio": "alta",
@@ -69706,5 +69706,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793156545706
+  "rev": 1793156637602
 }
