@@ -42491,7 +42491,8 @@
       ],
       "fonte": "Caderno de Atenção Básica nº 19 — Envelhecimento e saúde da pessoa idosa (MS) / AGS Beers Criteria 2023",
       "add": "2026-10-25",
-      "minha": "@@nota|0|Antipsicótico pode causar piora grave.\n__**FLUTUAÇÃO COGNITIVA (LEWY):**__\n- **{v}Variações espontâneas e imprevisíveis na atenção, no estado de alerta e no funcionamento mental do paciente ao longo do dia ou de um dia para o outro*{/v}*.\n- Ao c__ontrário da doença de Alzheimer, onde o declínio da memória é contínuo e linear__, na demência de Lewy o **paciente pode parecer extremamente lúcido em um momento e, poucas horas depois, apresentar confusão mental severa**."
+      "minha": "@@nota|0|Antipsicótico pode causar piora grave.\n__**FLUTUAÇÃO COGNITIVA (LEWY):**__\n- **{v}Variações espontâneas e imprevisíveis na atenção, no estado de alerta e no funcionamento mental do paciente ao longo do dia ou de um dia para o outro*{/v}*.\n- Ao c__ontrário da doença de Alzheimer, onde o declínio da memória é contínuo e linear__, na demência de Lewy o **paciente pode parecer extremamente lúcido em um momento e, poucas horas depois, apresentar confusão mental severa**.",
+      "fav": true
     },
     {
       "id": "aga-q3",
@@ -69708,5 +69709,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793203317650
+  "rev": 1793203345883
 }
