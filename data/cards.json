@@ -54599,7 +54599,8 @@
         ]
       },
       "fonte": "SBEM/ABEM — Consenso brasileiro de hipertireoidismo (2013); ATA 2016 — Guidelines for Hyperthyroidism and Other Causes of Thyrotoxicosis",
-      "add": "2026-10-26"
+      "add": "2026-10-26",
+      "minha": "@@nota|0|Confirma → tireoglobulina sérica BAIXA\nDiferença para Tireoidite:\nTireoidite também tem captação baixa, mas a {v}**glândula inflamada libera tireoglobulina (alta)**{/v} e costuma {v}**doer ou aumentar**{/v}."
     },
     {
       "id": "l2-tir-d1",
@@ -69705,5 +69706,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793156031825
+  "rev": 1793156545706
 }
