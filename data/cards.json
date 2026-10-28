@@ -46660,7 +46660,8 @@
         ]
       },
       "fonte": "Endocrine Society — Primary Aldosteronism 2016/2025, Adrenal Insufficiency 2016, Pheochromocytoma 2014; ESE/ENSAT Incidentaloma 2023",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "minha": "@@nota|0|Alfabloqueador (doxazosina ou fenoxibenzamina) por 10–14 dia\nA vem antes do B\nPrimeiro: Alfabloqueador \nDepois: Betabloqueador"
     },
     {
       "id": "adr-d2",
@@ -69699,5 +69700,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793150905868
+  "rev": 1793150963909
 }
