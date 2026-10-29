@@ -99,6 +99,12 @@ html:has(body>.sess),html:has(body>.sess) body{overflow:hidden!important;height:
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pega{margin-top:16px;background:var(--mid-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 .pega b{color:var(--mid)}
+.base{margin-top:14px;background:color-mix(in srgb,var(--card) 70%,#DCEBF5);border:1.5px solid color-mix(in srgb,var(--line) 50%,#9CC3DD);border-radius:14px;padding:11px 14px 12px;font-size:15px}
+.base .lbl,.ans .base p.lbl{font-family:Inter,system-ui,sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#2F6A8F;margin:10px 0 2px}
+.base ul{margin:2px 0 0;padding-left:20px}.base li{margin:2px 0}.base p{margin:0}
+@media (prefers-color-scheme:dark){.base .lbl,.ans .base p.lbl{color:#8EC3E6}}
+.base .bh{font-weight:600;color:#2F6A8F;margin-bottom:4px;font-size:14px}
+@media (prefers-color-scheme:dark){.base{background:#1B2833;border-color:#34536A}.base .bh{color:#8EC3E6}}
 .mac{margin-top:14px;background:#FFF4D6;border:1.5px dashed #E2B53E;border-radius:14px;padding:11px 14px;font-size:15px;color:#4A3A10}
 .mac b{color:#9A6B00}
 @media (prefers-color-scheme:dark){.mac{background:#3A3018;color:#F3E6C4;border-color:#8A6D25}.mac b{color:#F2C960}}
@@ -791,7 +797,9 @@ const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 /* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
 const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
 const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}" data-an="an:${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
-const macHTML=c=>c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'';
+const macHTML=c=>(c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'')+baseHTML(c);
+/* base do tema: o que é + por quê (fisiopatologia/raciocínio), para não precisar pesquisar fora do card */
+const baseHTML=c=>c.base?`<div class="base"><div class="bh">🧩 Entenda o porquê</div>${paras(c.base)}${c.basevis?visual(c.basevis):''}</div>`:'';
 /* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
 /* ===== correção do card de digitar (tolerante) =====
    - ignora acento, maiúscula, pontuação e palavras de ligação (de, da, o, e…)

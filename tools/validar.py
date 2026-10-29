@@ -82,6 +82,11 @@ for k, cs in deck.items():
         if re.search(r'\b' + re.escape(s) + r'\b', txt):
             tem = any(isinstance(c.get('visual'), (dict, list)) and 'pont' in json.dumps(c.get('visual'), ensure_ascii=False).lower() for c in cs) or re.search(r'(1 ponto|pontos?\b)', txt)
             if not tem: E(nome, f'escore "{s}" citado sem destrinchar (itens, pontos, total e faixas)')
+# base (porquê) nos temas de raciocínio — só para cards novos
+RACIOCINIO = {'Endocrinologia','Nefrologia','Hematologia','Cardiologia','Gastroenterologia','Pneumologia','Reumatologia','Neurologia','Radiologia','Endocrinologia ginecológica','Vitalidade fetal','Síndromes hipertensivas','Nefrologia pediátrica','Endocrinologia pediátrica','Hematologia pediátrica','Trauma','Vias biliares','Pâncreas'}
+for c in cards:
+    if c.get('tipo') in ('flash', 'quiz') and c.get('tema') in RACIOCINIO and (c.get('add') or '') >= '2026-10-29' and not c.get('base'):
+        W(c.get('id', '?'), 'tema de raciocínio sem "base" (explicação breve do porquê/fisiopatologia) — ver regra 5b')
 # letra da resposta certa dos quizzes tem que variar (nada de tudo "B")
 qz = [c for c in cards if c.get('tipo') == 'quiz' and isinstance(c.get('certa'), int)]
 if len(qz) >= 8:

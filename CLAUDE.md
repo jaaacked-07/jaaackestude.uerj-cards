@@ -21,6 +21,14 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
    - **1ª linha:** a resposta OBJETIVA e fácil de lembrar, trazendo imediatamente o que a frente pergunta (curta: idealmente ≤ ~8 palavras). Cria a associação rápida pergunta → informação essencial.
    - **Linhas seguintes da caixinha:** só os detalhes que fazem parte da resposta principal (ex.: adulto × criança, os itens da lista pedida). Explicação, porquê, conduta geral e pegadinha ficam FORA da caixinha, no jeito de sempre.
    - **UM conceito por linha** na caixinha: nada de "A. B.", "A; B", "A · B" nem lista separada por vírgula na mesma linha. Lista = título em negrito (`**Manter:**`) + um item por linha (`- item`) dentro do mesmo bloco.
+5b. **Base do tema + o PORQUÊ (campo `base`, e `basevis` opcional) — ela não quer pesquisar fora do card.** Sempre que o card exigir raciocínio (eixos hormonais, distúrbios hidroeletrolíticos e ácido-base, padrões de exame, fisiopatologia, mecanismo de droga, hemodinâmica, imagem…), escreva no `base` uma explicação BREVE que dê a base para chegar na resposta:
+   - 1ª linha em negrito: o que é a doença/o exame em 1 frase simples.
+   - Blocos com rótulo terminando em `:` (ex.: `Por que…:`, `Raciocínio:`) e tópicos `- ` curtos, uma ideia por linha.
+   - **Nunca só o resultado:** ✗ "Hipotireoidismo: TSH alto + T4 baixo". ✓ explique o porquê (a tireoide produz pouco T4 → a hipófise aumenta o TSH para estimular). Exame (ex.: TC trifásica) → explique por que o achado aparece (o CHC é irrigado pela artéria → brilha na fase arterial e lava na portal).
+   - `basevis` (fluxo, tabela, vs ou SVG) quando um esquema ajudar a entender o mecanismo.
+   - Cards do mesmo conceito podem compartilhar a mesma base. Não precisa em card de pura memorização (número, nome) nem em card de digitar.
+   - O app mostra num quadro azul "🧩 Entenda o porquê" logo abaixo da resposta e do macete.
+   - Isso vale também para o `verso`: depois da resposta direta, a explicação traz o PORQUÊ, não só o que é.
 6. **Explicação só em tópicos:** depois de uma linha em branco, rótulo curto terminando em `:` + tópicos `- ` (subtópico com 2 espaços). **Proibido texto corrido.**
 7. **Nada repetido** entre verso e visual (ver "Qualidade").
 8. **Escores destrinchados:** itens, pontos, total e faixas, em tabela.
