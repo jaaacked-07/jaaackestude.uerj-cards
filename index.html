@@ -99,10 +99,10 @@ html:has(body>.sess),html:has(body>.sess) body{overflow:hidden!important;height:
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pega{margin-top:16px;background:var(--mid-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 .pega b{color:var(--mid)}
-.base{margin:4px 0 14px;background:color-mix(in srgb,var(--card) 70%,#DCEBF5);border:1.5px solid color-mix(in srgb,var(--line) 50%,#9CC3DD);border-radius:14px;padding:11px 14px 12px;font-size:15px}
-.base .lbl,.ans .base p.lbl{font-family:Inter,system-ui,sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#2F6A8F;margin:10px 0 2px}
+.base{margin:8px 0 14px;background:color-mix(in srgb,var(--card) 70%,#DCEBF5);border:1.5px solid color-mix(in srgb,var(--line) 50%,#9CC3DD);border-radius:14px;padding:11px 14px 12px;font-size:15px}
+.base .lbl,.ans .base p.lbl,.ctx .base .lbl{font-family:Inter,system-ui,sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#2F6A8F;margin:10px 0 2px}
 .base ul{margin:2px 0 0;padding-left:20px}.base li{margin:2px 0}.base p{margin:0}
-@media (prefers-color-scheme:dark){.base .lbl,.ans .base p.lbl{color:#8EC3E6}}
+@media (prefers-color-scheme:dark){.base .lbl,.ans .base p.lbl,.ctx .base .lbl{color:#8EC3E6}}
 .base .bh{font-weight:600;color:#2F6A8F;margin-bottom:4px;font-size:14px}
 @media (prefers-color-scheme:dark){.base{background:#1B2833;border-color:#34536A}.base .bh{color:#8EC3E6}}
 .mac{margin-top:14px;background:#FFF4D6;border:1.5px dashed #E2B53E;border-radius:14px;padding:11px 14px;font-size:15px;color:#4A3A10}
@@ -796,10 +796,11 @@ const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}};
 /* ===== Visuais ===== */
 /* marcações do contexto ficam no contexto (não no card): mesmo contexto em vários cards = mesmas marcações */
 const ctxKey=c=>{ const t=String(c.contexto||'').split('\n')[0].replace(/\*\*/g,'').trim(); let h=5381; for(let i=0;i<t.length;i++) h=((h<<5)+h+t.charCodeAt(i))|0; return 'ctx-'+(h>>>0).toString(36); };
-const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}" data-an="an:${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
+const ctxHTML=c0=>{const c=ctxDoBaralho(c0); return c.contexto?`<div class="ctx hlz" data-hl="${ctxKey(c)}" data-an="an:${ctxKey(c)}"><div class="ctxh">Contexto do tema</div>${baseHTML(c0)}${paras(c.contexto)}${visual(c.ctxvisual)}</div>`:'';};
 const macHTML=c=>(c.macete?`<div class="mac"><b>🧠 Macete · </b>${inlBr(c.macete)}</div>`:'');
 /* base do tema: o que é + por quê (fisiopatologia/raciocínio), para não precisar pesquisar fora do card */
-const baseHTML=c=>c.base?`<div class="base"><div class="bh">🧩 Entenda o porquê</div>${paras(c.base)}${c.basevis?visual(c.basevis):''}</div>`:'';
+const baseUm=(b,v)=>{ const k='base-'+hashT(String(b).split('\n')[0]); return `<div class="base hlz" data-hl="${k}" data-an="an:${k}"><div class="bh">🧩 Entenda o porquê</div>${paras(b)}${v?visual(v):''}</div>`; };
+const baseHTML=c=>c.bases?c.bases.map(x=>baseUm(x.base,x.basevis)).join(''):c.base?baseUm(c.base,c.basevis):'';
 /* card "digitar": compara a resposta digitada (sem acento, maiúscula, pontuação; tolera erro de digitação) */
 /* ===== correção do card de digitar (tolerante) =====
    - ignora acento, maiúscula, pontuação e palavras de ligação (de, da, o, e…)
@@ -880,8 +881,8 @@ function visual(v){
 function cardCompleto(c){
   let h=tagHTML(c)+(ehFrenteOculta(c)?'':frenteHTML(c));
   if(c.tipo==='quiz') h+=`<div class="opts">${c.opcoes.map((o,i)=>`<div class="opt ${i===c.certa?'ok':''}"><span class="k">${'ABCDE'[i]}</span><span>${esc(o)}<span class="c">${inlBr((c.comentarios||[])[i]||'')}</span></span></div>`).join('')}</div>`;
-  else h+=`<div class="ans">${baseHTML(c)}${respHTML(c)}${macHTML(c)}</div>`;
-  if(c.tipo==='quiz') h+=baseHTML(c)+macHTML(c);
+  else h+=`<div class="ans">${respHTML(c)}${macHTML(c)}</div>`;
+  if(c.tipo==='quiz') h+=macHTML(c);
   h+=`<div class="ans">${ctxHTML(c)}</div>`;
   h+=minhaHTML(c.id);
   h+=extrasUERJ(c);
@@ -1106,7 +1107,9 @@ function matAnot(c){ const k=matChave(c), n=S.marks['an:'+k], m=S.marks[k];
 const matLido=c=>{ const v=S.lido[matChave(c)]; return v?!!v.v:matAnot(c); };
 function matAlternar(c){ const k=matChave(c), on=!matLido(c); S.lido[k]={v:on?1:0,u:Date.now()}; save(); vib(8); return on; }
 /* um item por baralho que tem contexto */
-function matItens(){ const m=new Map(); CARDS.forEach(c0=>{ const k=kSub(c0); if(m.has(k)) return; const c=ctxDoBaralho(c0); if(c.contexto) m.set(k,{area:c0.area,tema:c0.tema,sub:c0.sub,contexto:c.contexto,ctxvisual:c.ctxvisual,id:c0.id}); }); return [...m.values()]; }
+function matItens(){ const m=new Map(); CARDS.forEach(c0=>{ const k=kSub(c0); if(m.has(k)) return; const c=ctxDoBaralho(c0); if(c.contexto) m.set(k,{area:c0.area,tema:c0.tema,sub:c0.sub,contexto:c.contexto,ctxvisual:c.ctxvisual,id:c0.id,bases:[]}); });
+  CARDS.forEach(c=>{ const x=m.get(kSub(c)); if(x&&c.base&&!x.bases.some(b=>b.base===c.base)) x.bases.push({base:c.base,basevis:c.basevis}); });
+  return [...m.values()]; }
 function pMaterial(){
   const todos=matItens(), nb=norm(MAT.busca.trim());
   const lista=nb?todos.filter(x=>norm(x.area+' '+x.tema+' '+x.sub+' '+x.contexto).includes(nb)):todos;
@@ -2420,7 +2423,7 @@ function proximoCard(){
       const i=+b.dataset.i, ok=i===c.certa;
       document.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;x.querySelector('.c').classList.remove('hide');if(j===c.certa)x.classList.add('ok');else if(j===i)x.classList.add('bad')});
       vib(ok?12:[20,40,20]);
-      $('#ar').insertAdjacentHTML('beforeend',baseHTML(c)+macHTML(c)+`<div class="ans">${ctxHTML(c)}</div>`+extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
+      $('#ar').insertAdjacentHTML('beforeend',macHTML(c)+`<div class="ans">${ctxHTML(c)}</div>`+extrasUERJ(c)+minhaHTML(c.id)); $('#ar').classList.add('hlz'); $('#ar').dataset.hl=c.id; delete $('#ar').dataset.ok; aplicarZonas();
       if(ok) f.innerHTML=`<button class="btn" id="nx">Continuar</button>`, $('#nx').onclick=()=>responder(c,2);
       else pedirMotivo(c);
     });
@@ -2434,7 +2437,7 @@ function proximoCard(){
       let res='', sug=-1;
       if(dg){ const v=($('#dg')||{}).value||'', ok=conferirDig(c,v); sug=ok?2:0; if(document.activeElement) document.activeElement.blur();
         res=`<div class="dgr ${ok?'ok':'bad'}">${v.trim()?`${ok?'✓':'✗'} Você: <b>${esc(v.trim())}</b>`:'✗ Em branco'}</div>`; }
-      $('#ar').innerHTML=res+`<div class="ans hlz" data-hl="${c.id}">${baseHTML(c)}${respHTML(c)}${macHTML(c)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
+      $('#ar').innerHTML=res+`<div class="ans hlz" data-hl="${c.id}">${respHTML(c)}${macHTML(c)}${ctxHTML(c)}${extrasUERJ(c)}${minhaHTML(c.id)}</div>`;
       f.innerHTML=`<div class="rate"><button class="r0${sug===0?' sug':''}" data-r="0">Errei</button><button class="r1" data-r="1">Quase</button><button class="r2${sug===2?' sug':''}" data-r="2">Sabia</button></div>`;
       f.querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=+b.dataset.r; if(r===0) pedirMotivo(c); else {vib(10);responder(c,r)}});
     };
