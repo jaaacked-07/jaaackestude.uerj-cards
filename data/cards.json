@@ -49402,7 +49402,8 @@
         ]
       },
       "fonte": "Endocrine Society — Primary Aldosteronism 2016/2025, Adrenal Insufficiency 2016, Pheochromocytoma 2014; ESE/ENSAT Incidentaloma 2023",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "dm-q1",
@@ -72866,5 +72867,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793272674559
+  "rev": 1793297381167
 }
