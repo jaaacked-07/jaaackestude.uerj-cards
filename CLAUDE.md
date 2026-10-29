@@ -27,7 +27,7 @@ Publicado via GitHub Pages: https://jaaacked-07.github.io/jaaackestude.uerj-card
    - **Nunca só o resultado:** ✗ "Hipotireoidismo: TSH alto + T4 baixo". ✓ explique o porquê (a tireoide produz pouco T4 → a hipófise aumenta o TSH para estimular). Exame (ex.: TC trifásica) → explique por que o achado aparece (o CHC é irrigado pela artéria → brilha na fase arterial e lava na portal).
    - `basevis` (fluxo, tabela, vs ou SVG) quando um esquema ajudar a entender o mecanismo.
    - Cards do mesmo conceito podem compartilhar a mesma base. Não precisa em card de pura memorização (número, nome) nem em card de digitar.
-   - O app mostra num quadro azul "🧩 Entenda o porquê" logo abaixo da resposta e do macete.
+   - O app mostra num quadro azul "🧩 Entenda o porquê" NO INÍCIO, antes da resposta (no quiz, logo depois das alternativas), como introdução.
    - Isso vale também para o `verso`: depois da resposta direta, a explicação traz o PORQUÊ, não só o que é.
 6. **Explicação só em tópicos:** depois de uma linha em branco, rótulo curto terminando em `:` + tópicos `- ` (subtópico com 2 espaços). **Proibido texto corrido.**
 7. **Nada repetido** entre verso e visual (ver "Qualidade").
