@@ -51440,7 +51440,8 @@
         }
       ],
       "fonte": "Diretriz Brasileira de PAC (SBPT 2018); ATS/IDSA 2019 CAP; Fleischner Society 2017; USPSTF 2021 rastreamento de câncer de pulmão",
-      "add": "2026-10-25"
+      "add": "2026-10-25",
+      "fav": true
     },
     {
       "id": "pac-q1",
@@ -72876,5 +72877,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793325476303
+  "rev": 1793325530113
 }
