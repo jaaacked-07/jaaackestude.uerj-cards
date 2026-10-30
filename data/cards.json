@@ -56997,7 +56997,8 @@
             "Atrofia + hiper-reflexia, sem déficit sensitivo"
           ]
         ]
-      }
+      },
+      "fav": true
     },
     {
       "id": "l2-neu-d1",
@@ -72874,5 +72875,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793325110176
+  "rev": 1793325192498
 }
