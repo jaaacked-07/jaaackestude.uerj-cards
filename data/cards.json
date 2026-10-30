@@ -71475,7 +71475,8 @@
       "pegadinha": "Calcificação na TC sugere neuroblastoma; no Wilms é rara.",
       "uerj": "A UERJ cobrou neuroblastoma pelo achado de opsoclono-mioclono.",
       "prio": "alta",
-      "add": "2026-10-27"
+      "add": "2026-10-27",
+      "fav": true
     },
     {
       "id": "f-tab-02",
@@ -72887,5 +72888,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793403180673
+  "rev": 1793403658002
 }
