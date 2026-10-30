@@ -70546,7 +70546,8 @@
             "BAIXO → falta produção: ferro, B12, folato, EPO, medula"
           ]
         ]
-      }
+      },
+      "fav": true
     },
     {
       "id": "e-g6pd-d1",
@@ -72870,5 +72871,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793319205493
+  "rev": 1793319338378
 }
