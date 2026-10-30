@@ -39727,7 +39727,8 @@
       "fonte": "SBC — Diretrizes Brasileiras para o Diagnóstico, Tratamento e Prevenção da Febre Reumática (2009) / AHA — Revision of the Jones Criteria (Gewitz, Circulation 2015) / SBP — Tratado de Pediatria 5ª ed. (2022)",
       "add": "2026-10-25",
       "prio": "alta",
-      "base": "**Febre reumática = depois de uma faringite por estreptococo do grupo A, os anticorpos contra a bactéria atacam o próprio corpo (mimetismo molecular).**\n\nPor que acontece:\n- Proteínas do estreptococo são parecidas com proteínas do coração, articulação, cérebro e pele\n- Os anticorpos \"confundem\" e atacam esses tecidos 2–4 semanas após a faringite\n\nPor que cada manifestação:\n- **Articulação** → artrite migratória de grandes articulações, sem sequela\n- **Coração** → cardite → valvas inflamadas (mitral) → é a única que deixa sequela\n- **Cérebro** (gânglios da base) → coreia de Sydenham (aparece mais tarde, meses)\n- **Pele** → eritema marginado, nódulos subcutâneos\n\nPor que a profilaxia:\n- **Primária** → tratar a faringite estreptocócica (até 9 dias) evita a febre reumática\n- **Secundária** → penicilina benzatina a cada 21 dias, por anos → cada nova faringite reativa e piora a lesão valvar"
+      "base": "**Febre reumática = depois de uma faringite por estreptococo do grupo A, os anticorpos contra a bactéria atacam o próprio corpo (mimetismo molecular).**\n\nPor que acontece:\n- Proteínas do estreptococo são parecidas com proteínas do coração, articulação, cérebro e pele\n- Os anticorpos \"confundem\" e atacam esses tecidos 2–4 semanas após a faringite\n\nPor que cada manifestação:\n- **Articulação** → artrite migratória de grandes articulações, sem sequela\n- **Coração** → cardite → valvas inflamadas (mitral) → é a única que deixa sequela\n- **Cérebro** (gânglios da base) → coreia de Sydenham (aparece mais tarde, meses)\n- **Pele** → eritema marginado, nódulos subcutâneos\n\nPor que a profilaxia:\n- **Primária** → tratar a faringite estreptocócica (até 9 dias) evita a febre reumática\n- **Secundária** → penicilina benzatina a cada 21 dias, por anos → cada nova faringite reativa e piora a lesão valvar",
+      "fav": true
     },
     {
       "id": "fr-q1",
@@ -72889,5 +72890,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793403864987
+  "rev": 1793404283644
 }
