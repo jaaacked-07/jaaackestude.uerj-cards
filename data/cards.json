@@ -65385,7 +65385,8 @@
       "uerj": "Caso clínico de mulher com Raynaud + esclerodactilia + disfagia para reconhecer a doença ou escolher o anticorpo/complicação.",
       "fonte": "ACR/EULAR 2013 (classificação) / EULAR 2023 (recomendações de tratamento da esclerose sistêmica)",
       "add": "2026-10-27",
-      "base": "**Esclerose sistêmica = lesão dos pequenos vasos + fibrose (excesso de colágeno) na pele e nos órgãos.**\n\nPor que cada achado:\n- Vasos lesados que contraem demais → **Raynaud** (quase sempre o 1º sinal)\n- Fibrose na pele → pele dura e espessa, dedos afilados\n- Fibrose no esôfago → refluxo e disfagia; no pulmão → doença intersticial\n\nPor que a crise renal se trata com IECA:\n- Vasos do rim estreitados → rim hipoperfundido → libera muita RENINA → HAS maligna + lesão renal\n- O IECA bloqueia esse sistema → é o tratamento (corticoide em dose alta pode desencadear)"
+      "base": "**Esclerose sistêmica = lesão dos pequenos vasos + fibrose (excesso de colágeno) na pele e nos órgãos.**\n\nPor que cada achado:\n- Vasos lesados que contraem demais → **Raynaud** (quase sempre o 1º sinal)\n- Fibrose na pele → pele dura e espessa, dedos afilados\n- Fibrose no esôfago → refluxo e disfagia; no pulmão → doença intersticial\n\nPor que a crise renal se trata com IECA:\n- Vasos do rim estreitados → rim hipoperfundido → libera muita RENINA → HAS maligna + lesão renal\n- O IECA bloqueia esse sistema → é o tratamento (corticoide em dose alta pode desencadear)",
+      "fav": true
     },
     {
       "area": "Clínica Médica",
@@ -72877,5 +72878,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793325530113
+  "rev": 1793327249845
 }
