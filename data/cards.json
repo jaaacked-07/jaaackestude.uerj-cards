@@ -16243,7 +16243,8 @@
         "legenda": "RX: TB pulmonar avançada com infiltrado bilateral e cavitação no ápice direito",
         "fonte": "Wikimedia Commons · CDC (autor desconhecido) · Domínio público"
       },
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "tb-03",
@@ -72871,5 +72872,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793319338378
+  "rev": 1793320013974
 }
