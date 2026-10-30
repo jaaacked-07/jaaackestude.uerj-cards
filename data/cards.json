@@ -50120,7 +50120,8 @@
       },
       "fonte": "International Classification of Headache Disorders (ICHD-3); Consenso da Sociedade Brasileira de Cefaleia; AAN/Bárány Society — vertigem e HINTS",
       "add": "2026-10-25",
-      "base": "**Vertigem aguda: o labirinto (periférico) e o cerebelo/tronco (central) dão sintomas parecidos, mas os reflexos dos olhos diferem.**\n\nPor que o HINTS separa:\n- **Impulso cefálico (Head Impulse)** → testa o reflexo vestíbulo-ocular, que passa pelo nervo vestibular\n  - Alterado (olho \"corre atrás\") → nervo/labirinto doente → periférico\n  - NORMAL num paciente com vertigem → o labirinto está bem → suspeitar de AVC (central)\n- **Nistagmo** → periférico bate sempre para o mesmo lado; mudar de direção com o olhar → central\n- **Skew (desvio vertical)** → presente → lesão de tronco\n\nRegra: HINTS \"INFARCT\" (Impulso normal, Nistagmo que muda, Teste de skew alterado) → central"
+      "base": "**Vertigem aguda: o labirinto (periférico) e o cerebelo/tronco (central) dão sintomas parecidos, mas os reflexos dos olhos diferem.**\n\nPor que o HINTS separa:\n- **Impulso cefálico (Head Impulse)** → testa o reflexo vestíbulo-ocular, que passa pelo nervo vestibular\n  - Alterado (olho \"corre atrás\") → nervo/labirinto doente → periférico\n  - NORMAL num paciente com vertigem → o labirinto está bem → suspeitar de AVC (central)\n- **Nistagmo** → periférico bate sempre para o mesmo lado; mudar de direção com o olhar → central\n- **Skew (desvio vertical)** → presente → lesão de tronco\n\nRegra: HINTS \"INFARCT\" (Impulso normal, Nistagmo que muda, Teste de skew alterado) → central",
+      "fav": true
     },
     {
       "id": "cef-d1",
@@ -72873,5 +72874,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793321123195
+  "rev": 1793325110176
 }
