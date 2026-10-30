@@ -66127,7 +66127,8 @@
       "uerj": "Caso de pancreatite grave há semanas, febre e gás na TC → escolher drenagem guiada por imagem.",
       "fonte": "IAP/APA 2013 / PANTER (NEJM 2010) / TENSION (Lancet 2018) / AGA Clinical Practice Update 2020",
       "add": "2026-10-27",
-      "base": "**Pancreatite = as enzimas do pâncreas ativam DENTRO dele e começam a digerir a própria glândula.**\n\nPor que acontece:\n- Cálculo bloqueia a saída (biliar) ou o álcool lesa a célula → enzimas ativadas antes da hora → autodigestão → inflamação\n\nPor que a gravidade depende de falência de órgão:\n- A inflamação local vira sistêmica (SIRS) → vasos permeáveis → pulmão, rim, choque\n- Falência > 48 h = grave; o que define é a resposta do corpo, não o tamanho do pâncreas\n\nPor que a necrose infectada se trata com \"step-up\":\n- Necrose recente é mole e misturada com tecido vivo → operar cedo sangra e mata\n- Esperar ~4 semanas → a necrose fica delimitada (encapsulada) → drenar percutânea/endoscópica primeiro, cirurgia só se não melhorar\n- Pista de infecção → gás na necrose na TC ou piora clínica após 7–10 dias"
+      "base": "**Pancreatite = as enzimas do pâncreas ativam DENTRO dele e começam a digerir a própria glândula.**\n\nPor que acontece:\n- Cálculo bloqueia a saída (biliar) ou o álcool lesa a célula → enzimas ativadas antes da hora → autodigestão → inflamação\n\nPor que a gravidade depende de falência de órgão:\n- A inflamação local vira sistêmica (SIRS) → vasos permeáveis → pulmão, rim, choque\n- Falência > 48 h = grave; o que define é a resposta do corpo, não o tamanho do pâncreas\n\nPor que a necrose infectada se trata com \"step-up\":\n- Necrose recente é mole e misturada com tecido vivo → operar cedo sangra e mata\n- Esperar ~4 semanas → a necrose fica delimitada (encapsulada) → drenar percutânea/endoscópica primeiro, cirurgia só se não melhorar\n- Pista de infecção → gás na necrose na TC ou piora clínica após 7–10 dias",
+      "fav": true
     },
     {
       "area": "Cirurgia",
@@ -72879,5 +72880,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793328629758
+  "rev": 1793328763980
 }
