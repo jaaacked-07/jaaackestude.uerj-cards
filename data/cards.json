@@ -26419,7 +26419,8 @@
       ],
       "add": "2026-10-24",
       "prio": "alta",
-      "base": "**DRGE = o conteúdo do estômago volta para o esôfago porque a barreira entre eles (esfíncter inferior + diafragma) falha.**\n\nPor que a hérnia de hiato piora o refluxo:\n- O esfíncter sobe para dentro do tórax → perde o \"abraço\" do diafragma → barreira fraca\n\nPor que o IBP trata a esofagite, mas não o refluxo:\n- O IBP tira a ACIDEZ (o que lesa a mucosa) → a esofagite cicatriza\n- O refluxo continua acontecendo (só que menos ácido) → por isso a cirurgia é a opção para quem responde ao IBP mas não quer usar para sempre\n\nPor que a fundoplicatura funciona:\n- Envolve o esôfago com o fundo do estômago → cria uma nova \"válvula\"\n- Nissen = 360° (mais forte); Toupet = 270° (menos disfagia) → escolha pela manometria (peristalse fraca → parcial)\n\nPor que operam melhor quem responde ao IBP:\n- Responde ao IBP = os sintomas são mesmo do refluxo ácido → a cirurgia resolve\n- Não responde → pode ser outra coisa (esofagite eosinofílica, distúrbio motor, pirose funcional)"
+      "base": "**DRGE = o conteúdo do estômago volta para o esôfago porque a barreira entre eles (esfíncter inferior + diafragma) falha.**\n\nPor que a hérnia de hiato piora o refluxo:\n- O esfíncter sobe para dentro do tórax → perde o \"abraço\" do diafragma → barreira fraca\n\nPor que o IBP trata a esofagite, mas não o refluxo:\n- O IBP tira a ACIDEZ (o que lesa a mucosa) → a esofagite cicatriza\n- O refluxo continua acontecendo (só que menos ácido) → por isso a cirurgia é a opção para quem responde ao IBP mas não quer usar para sempre\n\nPor que a fundoplicatura funciona:\n- Envolve o esôfago com o fundo do estômago → cria uma nova \"válvula\"\n- Nissen = 360° (mais forte); Toupet = 270° (menos disfagia) → escolha pela manometria (peristalse fraca → parcial)\n\nPor que operam melhor quem responde ao IBP:\n- Responde ao IBP = os sintomas são mesmo do refluxo ácido → a cirurgia resolve\n- Não responde → pode ser outra coisa (esofagite eosinofílica, distúrbio motor, pirose funcional)",
+      "fav": true
     },
     {
       "id": "hern-01",
@@ -33380,7 +33381,8 @@
       },
       "fonte": "Diretriz Europeia de Hiponatremia (ESE/ESICM/ERA, 2014) / Recomendações do painel de especialistas (Verbalis, 2013) / Harrison 21ª ed.",
       "add": "2026-10-24",
-      "prio": "alta"
+      "prio": "alta",
+      "fav": true
     },
     {
       "id": "na-d4",
@@ -72881,5 +72883,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793366430994
+  "rev": 1793368979726
 }
