@@ -49817,7 +49817,8 @@
             "Atrofia + hiper-reflexia, sem déficit sensitivo"
           ]
         ]
-      }
+      },
+      "fav": true
     },
     {
       "id": "nmus-01",
@@ -72872,5 +72873,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793320519649
+  "rev": 1793321123195
 }
