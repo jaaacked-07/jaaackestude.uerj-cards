@@ -58115,7 +58115,8 @@
         }
       ],
       "fonte": "The Bethesda System for Reporting Thyroid Cytopathology, 3ª ed. (2023); ATA 2015 — Thyroid Nodules and DTC",
-      "add": "2026-10-26"
+      "add": "2026-10-26",
+      "fav": true
     },
     {
       "id": "l2-cat-d1",
@@ -72879,5 +72880,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793327574597
+  "rev": 1793327983035
 }
