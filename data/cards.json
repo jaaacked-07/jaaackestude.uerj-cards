@@ -40293,7 +40293,8 @@
       "fonte": "AHA Scientific Statement — Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease (McCrindle, Circulation 2017; atualização 2024 AHA/ACC) / SBP — Documento científico Doença de Kawasaki (2019) / Nelson 22ª ed.",
       "add": "2026-10-25",
       "prio": "alta",
-      "base": "**Kawasaki = vasculite aguda de vasos médios na criança pequena; o grande risco é inflamar as CORONÁRIAS.**\n\nPor que os sinais:\n- Inflamação sistêmica → febre alta ≥ 5 dias\n- Vasos inflamados na pele e mucosas → conjuntivite sem secreção, lábios rachados, língua em framboesa, exantema, edema de mãos e pés (depois descamam)\n- Linfonodo cervical aumentado\n\nPor que imunoglobulina EV cedo:\n- Reduz a inflamação da parede das coronárias → diminui o risco de aneurisma (melhor nos primeiros 10 dias)\n- AAS → anti-inflamatório no início e antiagregante depois\n\nPor que o eco:\n- A complicação que mata é o aneurisma coronariano (trombose, IAM) → eco no diagnóstico e no seguimento"
+      "base": "**Kawasaki = vasculite aguda de vasos médios na criança pequena; o grande risco é inflamar as CORONÁRIAS.**\n\nPor que os sinais:\n- Inflamação sistêmica → febre alta ≥ 5 dias\n- Vasos inflamados na pele e mucosas → conjuntivite sem secreção, lábios rachados, língua em framboesa, exantema, edema de mãos e pés (depois descamam)\n- Linfonodo cervical aumentado\n\nPor que imunoglobulina EV cedo:\n- Reduz a inflamação da parede das coronárias → diminui o risco de aneurisma (melhor nos primeiros 10 dias)\n- AAS → anti-inflamatório no início e antiagregante depois\n\nPor que o eco:\n- A complicação que mata é o aneurisma coronariano (trombose, IAM) → eco no diagnóstico e no seguimento",
+      "minha": "@@nota|0|Febre ≥ 5 dias (obrigatória)Conjuntivite bilateral NÃO exsud\n__{v}**CRASH and BURN: **{/v}__\n**{v}C{/v}onjuntivite,** \n**{v}R{/v}ash (exantema),** \n**{v}A{/v}denopatia,** \n**{v}S{/v}trawberry tongue (boca),** \n**{v}H{/v}ands/feet** \n**+** \n**{v}B{/v}urn (febre ≥ 5 dias).**"
     },
     {
       "id": "kaw-02",
@@ -72886,5 +72887,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793402377163
+  "rev": 1793403180673
 }
