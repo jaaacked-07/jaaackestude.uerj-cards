@@ -17978,7 +17978,7 @@
         "legenda": "Hiponatremia aguda incha o neurônio; correção rápida da crônica faz o neurônio adaptado murchar"
       },
       "fav": true,
-      "minha": "@@nota|0|1º passo → osmolaridade sérica (excluir pseudo e hiperglicem\nVR: 285 - 295\n\n@@nota|0|3º passo → volemia + sódio urinário\nver se tem MUITO ou POUCO calcio no xixi \n(VR: 30 - vide tabela acima)",
+      "minha": "@@nota|0|1º passo → osmolaridade sérica (excluir pseudo e hiperglicem\nVR: 285 - 295\n\n@@nota|0|3º passo → volemia + sódio urinário\nver se tem MUITO ou POUCO calcio no xixi \n(VR: 30 - vide tabela acima)\n\n@@nota|0|VolemiaVolemiaNa urinárioCausaHipovolêmica< 30Perdas extrarr\n**NA URINARIO (OSMOLARIDADE URINARIA):**\n**VR: __**30***__*******\n\n****< 30 -> HIPERVOLÊMICA** (pouco sodio no xixi, é pq tem mt sódio dentro da pessoa)**\n=30 -> EUVOLEMICA\n****>30 -> HIPOVOLÊMICA **(sódio saindo mt no xixi = hipovolemica)**\n",
       "prio": "alta",
       "base": "**O sódio do exame é uma CONCENTRAÇÃO: quase sempre o problema é de água, não de sal.**\n\nRegra da água:\n- A água atravessa as membranas e vai para onde tem mais soluto (osmolaridade)\n- Hiponatremia = água demais em relação ao sódio → a água entra no neurônio → **edema cerebral** (cefaleia, convulsão)\n\nQuem controla a água: o ADH\n- ADH alto → rim segura água livre → urina concentrada\n- Na hiponatremia o ADH deveria estar DESLIGADO (urina diluída, Uosm < 100)\n- Se a urina está concentrada (Uosm > 100) → tem ADH agindo → SIADH, hipovolemia, IC, cirrose…\n\nPor que os passos da abordagem:\n- **Osmolaridade sérica** → confirma que o sangue está realmente diluído\n- **Uosm** → diz se o ADH está ligado\n- **Volemia + Na urinário** → diz POR QUE o ADH está ligado (falta de volume × ADH autônomo)\n\nPor que corrigir devagar:\n- Em 48 h o neurônio se adapta perdendo solutos → subir o sódio rápido \"puxa\" água de dentro dele → desmielinização osmótica",
       "basevis": {
@@ -72872,5 +72872,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793320369797
+  "rev": 1793320519649
 }
