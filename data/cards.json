@@ -51780,7 +51780,8 @@
       },
       "fonte": "ASH Education Program; Guia de Uso de Hemocomponentes (MS 2015); AABB 2023 transfusion thresholds; NHLBI von Willebrand 2021",
       "add": "2026-10-25",
-      "base": "**B12 e folato são necessárias para fabricar o DNA da célula que se divide.**\n\nPor que dá macrocitose:\n- Sem B12/folato o núcleo não consegue se dividir, mas o citoplasma continua crescendo → célula grande (megaloblasto)\n- Neutrófilo com núcleo hipersegmentado = mesma falha na divisão\n\nPor que só a B12 dá sintoma neurológico:\n- A B12 também participa da produção de mielina → falta → lesão de cordão posterior e lateral (parestesia, perda de propriocepção)\n- O folato não tem esse papel\n\nPor que dosar ácido metilmalônico:\n- Só a B12 converte o metilmalônico → falta de B12 = metilmalônico alto\n- Homocisteína sobe nas duas"
+      "base": "**B12 e folato são necessárias para fabricar o DNA da célula que se divide.**\n\nPor que dá macrocitose:\n- Sem B12/folato o núcleo não consegue se dividir, mas o citoplasma continua crescendo → célula grande (megaloblasto)\n- Neutrófilo com núcleo hipersegmentado = mesma falha na divisão\n\nPor que só a B12 dá sintoma neurológico:\n- A B12 também participa da produção de mielina → falta → lesão de cordão posterior e lateral (parestesia, perda de propriocepção)\n- O folato não tem esse papel\n\nPor que dosar ácido metilmalônico:\n- Só a B12 converte o metilmalônico → falta de B12 = metilmalônico alto\n- Homocisteína sobe nas duas",
+      "fav": true
     },
     {
       "id": "anem-d1",
@@ -72884,5 +72885,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793369450577
+  "rev": 1793369540675
 }
