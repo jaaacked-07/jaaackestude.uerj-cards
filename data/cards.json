@@ -56456,7 +56456,8 @@
       "prio": "alta",
       "fonte": "ASH/ISTH/NHF/WFH 2021 — Guidelines on the diagnosis and management of von Willebrand disease; Ministério da Saúde — Manual de diagnóstico e tratamento da doença de von Willebrand (2008)",
       "add": "2026-10-26",
-      "pegadinha": "Por proteger o fator VIII, a von Willebrand pode alargar o TTPa e imitar hemofilia A."
+      "pegadinha": "Por proteger o fator VIII, a von Willebrand pode alargar o TTPa e imitar hemofilia A.",
+      "minha": "@@nota|0|🧠 Macete · FvW é o guarda-costas do VIII.\nPrimária: Plaqueta"
     },
     {
       "area": "Clínica Médica",
@@ -72868,5 +72869,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793318162920
+  "rev": 1793318734135
 }
