@@ -24765,7 +24765,6 @@
         "fonte": "Print da questão anotada pela Jacke"
       },
       "add": "2026-10-24",
-      "minha": "@@nota|0|Tromboflebite migratória (sinal de Trousseau)\nO sinal de Trousseau é um sinal de que a pessoa pode estar com cálcio baixo no sangue.\n\nComo acontece?\n1. O médico coloca o aparelho de medir pressão no braço e aperta a braçadeira por alguns minutos.\n2. Se o cálcio estiver baixo, os nervos e músculos ficam mais irritáveis.\n3. A mão pode se contrair sozinha, ficando com o punho dobrado, os dedos encolhidos e o polegar puxado para dentro.\n\nPor que isso acontece? \nO cálcio ajuda a controlar a atividade dos nervos e músculos. Quando está baixo, eles ficam mais propensos a se contrair involuntariamente.",
       "prio": "alta",
       "base": "**O colédoco passa por dentro da cabeça do pâncreas antes de chegar ao duodeno.**\n\nPor que o câncer de cabeça de pâncreas dá icterícia indolor:\n- O tumor cresce devagar e aperta o colédoco por fora → icterícia progressiva, sem dor e sem febre\n- Bile não chega ao intestino → fezes claras (acolia); bilirrubina vai para a urina → colúria; sais no sangue → prurido\n\nPor que a vesícula fica palpável (Courvoisier):\n- Obstrução lenta e abaixo do cístico → a vesícula, saudável, vai dilatando sem dor\n- No cálculo a vesícula costuma ser fibrosada (inflamações repetidas) → não dilata\n\nPor que a TC define ressecabilidade:\n- O pâncreas encosta em vasos grandes (artéria mesentérica superior, tronco celíaco, veia porta)\n- Se o tumor envolve esses vasos, não dá para retirar tudo com margem"
     },
@@ -72880,5 +72879,5 @@
       "add": "2026-10-27"
     }
   ],
-  "rev": 1793327983035
+  "rev": 1793328629758
 }
